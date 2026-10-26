@@ -1,0 +1,168 @@
+import React from "react";
+import { interpolate, useCurrentFrame } from "remotion";
+import { makeDraftEdit } from "../../edit";
+import { Body, LOOKS, Starfield, Tag } from "../../scenes/space";
+import type { Short } from "../types";
+
+// A short with no cast. The subject is scale, so the frame holds objects and the numbers that
+// make them land — the pipeline's figure machinery is simply not involved.
+//
+// DRAFT: no voice-over exists, so the word timings are estimated from the script at 170 wpm.
+// Every beat still hangs off a spoken word, so recording the VO later means swapping
+// makeDraftEdit for makeEdit and re-running the alignment; none of the choreography moves.
+const SCRIPT = `Jupiter is the biggest planet in the solar system.
+Two and a half times the mass of every other planet combined.
+But hold Jupiter up next to the Sun, and it disappears.
+You could pour a thousand Jupiters into the Sun and still have room left over.
+And here is the part that gets people.
+Our Sun is not a big star. It is not even average.
+It is heavier and brighter than about ninety percent of the stars in our galaxy,
+because most stars are red dwarfs: small, dim, and everywhere.
+The Sun only looks ordinary because we have never stood next to anything else.`;
+
+const edit = makeDraftEdit({
+  script: SCRIPT,
+  keyPhrases: [["biggest"], ["combined."], ["disappears."], ["thousand"], ["average."], ["ninety", "percent"], ["ordinary"]],
+  breakAfter: ["system.", "combined.", "disappears.", "over.", "people.", "star.", "galaxy,", "everywhere."],
+});
+
+const F = {
+  biggest: edit.at("biggest"),
+  combined: edit.at("combined."),
+  disappears: edit.at("disappears."),
+  thousand: edit.at("thousand"),
+  average: edit.at("average."),
+  ninety: edit.at("ninety"),
+  ordinary: edit.at("ordinary"),
+  voEnd: edit.voEnd,
+};
+
+const ramp = (f: number, a: number, b: number, from = 0, to = 1) =>
+  interpolate(f, [a, b], [from, to], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+
+// Exactly n points spread evenly over a disc, so "a thousand" on screen really is a thousand.
+const phyllotaxis = (n: number, radius: number) => {
+  const golden = Math.PI * (3 - Math.sqrt(5));
+  return Array.from({ length: n }, (_, i) => {
+    const rr = radius * Math.sqrt((i + 0.5) / n);
+    return [rr * Math.cos(i * golden), rr * Math.sin(i * golden)] as const;
+  });
+};
+
+const THOUSAND = phyllotaxis(1000, 470);
+
+// The other seven planets at their true radii relative to Jupiter, laid out touching-but-for-a-gap
+// so the row is as wide as the planets are rather than as wide as a fixed grid. Saturn really is
+// four fifths of Jupiter, which is the whole reason the row reads the way it does.
+const ROW_BASE = 96;
+const ROW = (() => {
+  const rel: { k: "saturn" | "earth" | "rocky"; v: number }[] = [
+    { k: "saturn", v: 0.83 }, { k: "earth", v: 0.089 }, { k: "rocky", v: 0.085 },
+    { k: "earth", v: 0.047 }, { k: "rocky", v: 0.036 }, { k: "rocky", v: 0.034 }, { k: "rocky", v: 0.062 },
+  ];
+  const gap = 16;
+  const sized = rel.map((o) => ({ k: o.k, r: Math.max(3.5, ROW_BASE * o.v) }));
+  const width = sized.reduce((n, o) => n + o.r * 2, 0) + gap * (sized.length - 1);
+  let cursor = 960 - width / 2;
+  return sized.map((o) => {
+    const x = cursor + o.r;
+    cursor += o.r * 2 + gap;
+    return { ...o, x };
+  });
+})();
+
+// Ninety of a hundred stars smaller and redder than ours. The ten are scattered rather than
+// lined up in a column, because the claim is "one in ten anywhere", not "the last column".
+const BRIGHT = new Set([3, 17, 24, 38, 41, 56, 62, 75, 88, 93]);
+const GRID = 44;
+const HUNDRED = Array.from({ length: 100 }, (_, i) => ({
+  x: 960 - (GRID * 9) / 2 + (i % 10) * GRID,
+  y: Math.floor(i / 10) * GRID,
+  big: BRIGHT.has(i),
+}));
+
+const SolarScene: React.FC = () => {
+  const f = useCurrentFrame();
+
+  // Jupiter: owns the frame, then collapses to a speck once the Sun turns up.
+  const jr = interpolate(f, [0, F.biggest, F.disappears - 6, F.disappears + 16], [138, 208, 208, 26], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const jx = ramp(f, F.disappears - 6, F.disappears + 16, 960, 650);
+  const jy = ramp(f, F.disappears - 6, F.disappears + 16, 420, 300);
+  const jFade = 1 - ramp(f, F.thousand - 8, F.thousand + 6);
+
+  // The Sun arrives from below, swallows the frame, then shrinks to show how ordinary it is.
+  const sr = interpolate(f, [F.disappears - 6, F.disappears + 18, F.average, F.average + 22], [0, 520, 520, 96], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const sy = interpolate(f, [F.disappears - 6, F.disappears + 18, F.average, F.average + 22], [1500, 760, 760, 300], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const dots = ramp(f, F.thousand, F.thousand + 20);
+  const field = ramp(f, F.ninety, F.ninety + 20);
+
+  const row = ramp(f, F.combined, F.combined + 14);
+
+  return (
+    <>
+      {sr > 1 ? (
+        <>
+          <Body x={960} y={sy} r={sr} look={LOOKS.sun} />
+          {dots > 0 && f < F.average ? (
+            <div style={{ position: "absolute", left: 960, top: sy, opacity: dots * 0.9 }}>
+              {THOUSAND.map(([dx, dy], i) => (
+                <div key={i} style={{ position: "absolute", left: dx - 4, top: dy - 4, width: 8, height: 8, borderRadius: "50%", background: "#6b4526" }} />
+              ))}
+            </div>
+          ) : null}
+        </>
+      ) : null}
+
+      {jFade > 0 ? <Body x={jx} y={jy} r={jr} look={LOOKS.jupiter} opacity={jFade} /> : null}
+
+      {row > 0 && f < F.disappears + 10 ? (
+        <div style={{ position: "absolute", left: 0, top: 860, opacity: row }}>
+          {ROW.map((o, i) => (
+            <Body key={i} x={o.x} y={0} r={o.r} look={LOOKS[o.k]} />
+          ))}
+        </div>
+      ) : null}
+
+      {field > 0 ? (
+        <div style={{ position: "absolute", left: 0, top: 548, opacity: field }}>
+          {HUNDRED.map((s, i) => (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                left: s.x - (s.big ? 11 : 5.5),
+                top: s.y - (s.big ? 11 : 5.5),
+                width: s.big ? 22 : 11,
+                height: s.big ? 22 : 11,
+                borderRadius: "50%",
+                background: s.big ? "#ffe9a8" : "#c4502a",
+                boxShadow: s.big ? "0 0 16px rgba(255,200,90,0.7)" : "0 0 8px rgba(200,70,30,0.5)",
+              }}
+            />
+          ))}
+        </div>
+      ) : null}
+
+      <Tag x={700} y={120} text="JUPITER" sub="2.5× every other planet" from={F.biggest} to={F.disappears + 6} />
+      <Tag x={640} y={96} text="≈ 1,000 JUPITERS" sub="and room left over" from={F.thousand + 6} to={F.average} />
+      <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} />
+    </>
+  );
+};
+
+export const scaleOfTheSun: Short = {
+  slug: "scale-of-the-sun",
+  title: "The Sun is not an average star",
+  edit,
+  looks: [{ id: "Space", Set: Starfield, cast: () => [] }],
+  props: () => <SolarScene />,
+};

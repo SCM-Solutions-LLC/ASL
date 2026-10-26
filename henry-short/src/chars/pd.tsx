@@ -50,3 +50,18 @@ export const pdAnne: PartDef = part("anne", "skirt", null, {
 
 // Source pixels → stage units, chosen so the two paintings' faces come out the same size.
 export const PD_SCALE = { henry: 0.65, anne: 0.325 };
+
+// Her portrait above the waist, with no invented gown below it. A bust framing never shows the
+// hem, so the stretched lower skirt — the worst artefact of this method — simply stops existing.
+export const pdAnneBust: PartDef = part("anne", "body", null, {
+  children: [
+    part("anne", "head", "body", {
+      z: 1,
+      art: { default: img("anne", "head"), closed: img("anne", "head_closed"), wink: img("anne", "head_wink") },
+    }),
+  ],
+});
+
+// Painted figures held close, chest-up. Larger than the full-length staging because the frame
+// crops them rather than containing them.
+export const BUST_SCALE = { henry: 0.78, anne: 0.75 };

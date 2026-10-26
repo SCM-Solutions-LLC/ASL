@@ -3,11 +3,16 @@ import { Badge, Banner, Prize, Stamp, TitleCard } from "../../ui/Callouts";
 import type { Beats } from "./beats";
 
 // Props sit in the scene, in stage units, so the camera moves them with the set.
+const PRIZES = (L: Layout): { palace: [number, number]; castle: [number, number] } =>
+  L.vertical
+    ? { palace: [1240, 190], castle: [1000, 170] }
+    : { palace: [1620, 330], castle: [960, 340] };
+
 export const props = (F: Beats) => (L: Layout) => (
   <>
     <Badge from={F.fourth} to={F.wife4 - 4} x={1150} y={250} text="4TH" />
-    <Prize from={F.palace} x={L.prizes.palace[0]} y={L.prizes.palace[1]} icon="palace" label="Richmond Palace" />
-    <Prize from={F.castle} x={L.prizes.castle[0]} y={L.prizes.castle[1]} icon="castle" label="Hever Castle" />
+    <Prize from={F.palace} x={PRIZES(L).palace[0]} y={PRIZES(L).palace[1]} icon="palace" label="Richmond Palace" />
+    <Prize from={F.castle} x={PRIZES(L).castle[0]} y={PRIZES(L).castle[1]} icon="castle" label="Hever Castle" />
   </>
 );
 

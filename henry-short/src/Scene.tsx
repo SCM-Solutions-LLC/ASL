@@ -64,9 +64,14 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
       <Camera L={L} zoom={zoom} shake={shake}>
         <Set />
         <Figures>
-          {cast.map((s, i) => (
-            <Figure key={s.actor.name} staged={s} seed={i + 1} mark={s.mark} debug={debug} />
-          ))}
+          {cast.map((s, i) => {
+            const Frame = s.frame ?? React.Fragment;
+            return (
+              <Frame key={s.actor.name}>
+                <Figure staged={s} seed={i + 1} mark={s.mark} debug={debug} />
+              </Frame>
+            );
+          })}
         </Figures>
         {short.props?.(L)}
       </Camera>
@@ -75,11 +80,14 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
       )}
       {short.ui?.(L)}
       <Captions words={edit.words} />
-      {edit.segments.map((s) => (
-        <Sequence key={s.from} from={s.at} durationInFrames={s.to - s.from} layout="none">
-          <Audio src={staticFile(edit.audio)} trimBefore={s.from} trimAfter={s.to} />
-        </Sequence>
-      ))}
+      {/* A drafted short has no VO yet; its timings are estimated and there is nothing to play. */}
+      {edit.audio
+        ? edit.segments.map((s) => (
+            <Sequence key={s.from} from={s.at} durationInFrames={s.to - s.from} layout="none">
+              <Audio src={staticFile(edit.audio)} trimBefore={s.from} trimAfter={s.to} />
+            </Sequence>
+          ))
+        : null}
       {short.sfx?.map((s, i) => (
         <Sfx key={i} at={s.at} name={s.name} volume={s.volume} />
       ))}

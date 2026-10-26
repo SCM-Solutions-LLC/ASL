@@ -10,8 +10,7 @@ export type Layout = {
   zoom: number; // stage units → output px
   center: [number, number]; // stage point shown at the middle of the frame
   left: number; // left edge of the visible stage, for off-screen entrances
-  marks: { henry: number; anne: number }; // where each character stands (stage x)
-  prizes: { palace: [number, number]; castle: [number, number] };
+  marks: { left: number; right: number }; // the two standing positions on the set (stage x)
   ui: { top: number; scale: number }; // title cards and banners
   stampTop: number;
   captions: { top: number; fontSize: number; maxWidth: number };
@@ -23,8 +22,7 @@ const VERTICAL: Layout = {
   zoom: 1.22,
   center: [960, 577],
   left: 960 - 540 / 1.22,
-  marks: { henry: 760, anne: 1180 },
-  prizes: { palace: [1240, 190], castle: [1000, 170] },
+  marks: { left: 760, right: 1180 },
   ui: { top: 150, scale: 1 },
   stampTop: 700,
   captions: { top: 1480, fontSize: 72, maxWidth: 940 },
@@ -36,8 +34,7 @@ const WIDE: Layout = {
   zoom: 1,
   center: [960, 540],
   left: 0,
-  marks: { henry: 640, anne: 1300 },
-  prizes: { palace: [1620, 330], castle: [960, 340] },
+  marks: { left: 640, right: 1300 },
   ui: { top: 40, scale: 0.8 },
   stampTop: 330,
   captions: { top: 955, fontSize: 54, maxWidth: 1600 },

@@ -1,0 +1,45 @@
+{
+  "_README": "Every file under public/ must appear here, matched by exact path or by a glob. `npm run lint` fails on any file that does not. `ship: false` marks an asset that may not be published — the licence check run with --publish fails while any of those are still in the tree. This file exists because the project already lost a full voice-over to a licence nobody checked.",
+
+  "public/vo/six-wives.wav": {
+    "source": "Generated with ElevenLabs on the free plan",
+    "licence": "none",
+    "ship": false,
+    "note": "Free-plan ElevenLabs grants no commercial licence, and it is not retroactively fixable. Must be regenerated on a paid tier with a GA model — Beta Services are carved out of the commercial licence on every paid tier. See docs/vo-licensing.md. Regenerating moves every word timing, so re-run `npm run align -- six-wives` after."
+  },
+
+  "public/sfx/*.wav": {
+    "source": "Generated with ElevenLabs on the free plan",
+    "licence": "none",
+    "ship": false,
+    "note": "Same finding as the voice-over. Regenerate on a paid tier with a GA model."
+  },
+
+  "public/henry_vo_v3.mp3": {
+    "source": "Generated with ElevenLabs on the free plan",
+    "licence": "none",
+    "ship": false,
+    "note": "Unreferenced by any short. Safe to delete outright — nothing imports it."
+  },
+
+  "public/kit/pd/henry/*.png": {
+    "source": "Henry VIII, full length, after Hans Holbein the Younger, Walker Art Gallery — via Wikimedia Commons",
+    "licence": "public-domain",
+    "ship": true,
+    "note": "Cut into rig parts by tools/cut.py. The painter died in 1543; a faithful photograph of a two-dimensional public-domain work carries no new copyright."
+  },
+
+  "public/kit/pd/anne/*.png": {
+    "source": "Anne of Cleves, Hans Holbein the Younger, Louvre — via Wikimedia Commons",
+    "licence": "public-domain",
+    "ship": true,
+    "note": "Cut into rig parts by tools/cut.py."
+  },
+
+  "public/kit/pd/*.jpg": {
+    "source": "Tiled from the background of the Henry VIII painting above",
+    "licence": "public-domain",
+    "ship": true,
+    "note": "Set dressing derived from the same public-domain scan."
+  }
+}

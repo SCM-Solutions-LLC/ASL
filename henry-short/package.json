@@ -27,9 +27,10 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "node tools/check-alignment.mjs && eslint src && tsc",
+    "lint": "node tools/check-alignment.mjs && node tools/check-licences.mjs && eslint src && tsc",
     "align": "python3 -I tools/align.py",
-    "new-short": "node tools/new-short.mjs"
+    "new-short": "node tools/new-short.mjs",
+    "publishable": "node tools/check-licences.mjs --publish"
   },
   "allowScripts": {
     "esbuild": false

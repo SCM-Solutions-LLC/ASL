@@ -10,8 +10,10 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 |---|---|---|
 | `anne-of-cleves` | `Illustrated`, `Holbein` | the hook plus the Anne of Cleves beat, 14.5s |
 | `catherine-of-aragon` | `Illustrated` | wife one, 7.4s — built on `src/moves` as a pipeline test |
+| `scale-of-the-sun` | `Space` | 40.7s, no cast at all — drafted against an estimated read, no VO yet |
 
-Both are cut from the same `six-wives` VO: one recording can carry several shorts.
+The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
+`scale-of-the-sun` has no VO — see **Drafting before a voice-over exists** below.
 
 ## Run
 
@@ -20,10 +22,40 @@ npm i
 npx remotion studio                       # preview every short in every look
 npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
 npm run new-short -- <slug>               # scaffold a new short
-npm run lint                              # typecheck, and refuse a cut built on stale word timings
+npm run lint                              # typecheck, licences, and refuse a cut built on stale word timings
+npm run publishable                       # refuse to call the project shippable while an asset has no licence
 npm run align -- <vo-slug>                # regenerate word timings after a new VO (needs ELEVENLABS_API_KEY, requests)
 python3 tools/cut.py                      # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
+
+## Drafting before a voice-over exists
+
+`makeDraftEdit` builds the same `Edit` from a script and a words-per-minute pace, with estimated
+timings and no audio, so a short can be written, choreographed and previewed before anything is
+recorded. `Scene` plays nothing when `edit.audio` is empty.
+
+Recording later means swapping `makeDraftEdit` for `makeEdit` and running `npm run align`. No beat
+moves, because every beat hangs off a spoken word rather than a frame number.
+
+## Cadence, and why
+
+Monetisation has two separate ladders, and they do not combine:
+
+- 1,000 subscribers **+ 4,000 long-form watch hours** in 12 months, or
+- 1,000 subscribers **+ 10 million Shorts views** in 90 days.
+
+Shorts views do not count toward the watch-hours threshold. Ten million views in ninety days is
+roughly 111,000 a day, which a new niche channel will not reach; 4,000 watch hours is about 60,000
+views of a ten-minute video watched halfway, which it can. So **long-form is the monetisation path
+and the shorts are the funnel that feeds it** — roughly one 8–12 minute piece a week, and about two
+shorts, rather than the other way round. Eight minutes is also the floor for mid-roll ads.
+
+Length does not affect eligibility: padding a 40-second short to 60 buys nothing. What matters is
+that anything over three minutes stops being a Short and starts banking watch hours.
+
+(Checked October 2026 against secondary guides, not YouTube's own page — confirm in YouTube Studio
+before betting on it. Several report a tightening to 8,000 hours / 20M views for new applicants
+from February 2027.)
 
 ## Making a short
 
@@ -47,6 +79,8 @@ python3 tools/cut.py                      # re-cut the portraits in kit_src/ int
 - `src/rig/cast.ts` — **roles and expressions**. Figures rigged different ways do not share joints, so moves are written against roles (`root`, `head`, `armL`…) and each figure maps what it has. A move that reaches for a joint a figure lacks performs the part of itself that it can.
 - `src/moves/` — named gestures (`doubleTake`, `point`, `bob`, `cheer`, `hop`, `twirl`…) that any figure can perform. The point of the role layer.
 - `src/chars/figure.tsx` — a gowned figure from a palette and a silhouette, so a new person is a few colours rather than a new rig.
+- `src/chars/kit/` — the illustrated cast as configuration: `shapes.ts` is the silhouette vocabulary, `styles.tsx` renders it, `build.tsx` holds the geometry, `roster.ts` is the cast. `kit-soft` renders the whole cast as a sheet.
+- `src/scenes/` — scene pieces for shorts with no cast at all, e.g. the starfield and bodies behind `scale-of-the-sun`.
 - `src/chars/actors.ts` — who can appear, and what their joints and faces are called. Short-agnostic.
 - `src/chars/pd.tsx` + `src/kit_pd.json` — Holbein rigs built from the parts `tools/cut.py` produces.
 - `src/chars/henry.tsx`, `anne.tsx` — the hand-built illustrated rigs the first short was cut on.
@@ -54,11 +88,18 @@ python3 tools/cut.py                      # re-cut the portraits in kit_src/ int
 
 ## Sources and licences
 
-- Henry VIII, full length, after Hans Holbein the Younger (Walker Art Gallery) — public domain, Wikimedia Commons.
-- Anne of Cleves, Hans Holbein the Younger (Louvre) — public domain, Wikimedia Commons.
-- VO and SFX were generated with ElevenLabs on the free plan, which grants no commercial
-  licence. **Do not publish on the current audio** — see [docs/vo-licensing.md](docs/vo-licensing.md)
-  for the finding, what has to be regenerated, and why that moves every word-synced beat.
+Every file under `public/` is declared in [`public/SOURCES.json`](public/SOURCES.json) with its
+source, its licence, and whether it may be published. `npm run lint` fails on any file that is not
+declared; `npm run publishable` fails while anything undeclared or unpublishable is still there.
+
+This exists because the project lost a complete voice-over to a licence nobody checked before
+generating it, which is not fixable after the fact.
+
+Currently blocked for publishing: the VO and every SFX, generated with ElevenLabs on the free plan,
+which grants no commercial licence. They must be regenerated on a paid tier with a **GA** model —
+Beta Services are carved out of the commercial licence on every paid tier. See
+[docs/vo-licensing.md](docs/vo-licensing.md) for the finding and why regenerating moves every
+word-synced beat.
 
 ## Known issues
 

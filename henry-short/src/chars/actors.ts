@@ -1,6 +1,6 @@
 import { anne, anneRest } from "./anne";
 import { henry, henryRest } from "./henry";
-import { PD_SCALE, pdAnne, pdHenry } from "./pd";
+import { BUST_SCALE, PD_SCALE, pdAnne, pdAnneBust, pdHenry } from "./pd";
 import { CHAR_SCALE as S, STAGE } from "../layout";
 import type { Actor } from "../rig/cast";
 
@@ -8,7 +8,7 @@ import type { Actor } from "../rig/cast";
 // short-agnostic on purpose: the same Henry walks into whichever short needs him.
 
 // Illustrated figures pose eyes, brows and mouth separately, so each expression is a combination.
-const drawnFaces = {
+export const drawnFaces = {
   neutral: { eyes: { v: "default" }, brows: { v: "default" }, mouth: { v: "default" } },
   shocked: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" } },
   unimpressed: { eyes: { v: "side" }, brows: { v: "raised" } },
@@ -19,7 +19,7 @@ const drawnFaces = {
   wink: { eyes: { v: "wink" } },
 };
 
-const drawnRoles = {
+export const drawnRoles = {
   root: "torso",
   body: "torso",
   head: "head",
@@ -89,6 +89,39 @@ export const paintedAnne: Actor = {
   scale: PD_SCALE.anne,
   floor: STAGE.floor,
   roles: { root: "skirt", body: "body", head: "head" },
+  faces: {
+    neutral: { head: { v: "default" } },
+    delighted: { head: { v: "closed" } },
+    wink: { head: { v: "wink" } },
+  },
+  rest: {},
+};
+
+// ---------------------------------------------------------------- bust framing
+
+// Held chest-up, the painted figures stop pretending to be whole bodies: no floor to stand on, no
+// gown to invent. What they can still do — turn a head, drop a jaw, close an eye — is exactly what
+// reads at this distance, so the method's weakness stops mattering.
+export const bustHenry: Actor = {
+  name: "henry",
+  def: pdHenry,
+  scale: BUST_SCALE.henry,
+  floor: 978, // his feet, far below the frame
+  roles: { root: "body", head: "head", jaw: "jaw", foreL: "foreL", foreR: "foreR" },
+  faces: {
+    neutral: { jaw: { y: 0 }, head: { v: "default" } },
+    shocked: { jaw: { y: 22 } },
+    delighted: { head: { v: "closed" } },
+  },
+  rest: {},
+};
+
+export const bustAnne: Actor = {
+  name: "anne",
+  def: pdAnneBust,
+  scale: BUST_SCALE.anne,
+  floor: 1148, // her waist, where the painting ends
+  roles: { root: "body", body: "body", head: "head" },
   faces: {
     neutral: { head: { v: "default" } },
     delighted: { head: { v: "closed" } },

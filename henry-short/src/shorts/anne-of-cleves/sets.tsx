@@ -1,5 +1,6 @@
 import React from "react";
 import { Img, staticFile } from "remotion";
+import { STAGE } from "../../layout";
 
 // Placeholder set, in stage units. Drawn wider and taller than 16:9 so the vertical crop never runs out.
 export const DrawnHall: React.FC = () => (
@@ -28,3 +29,43 @@ export const PaintedHall: React.FC = () => (
 export const PaperCutout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div style={{ position: "absolute", inset: 0, filter: "drop-shadow(7px 9px 0 rgba(0,0,0,0.38))" }}>{children}</div>
 );
+
+// A hung gallery rather than a room: no floor, because a bust framing never shows one. The damask
+// runs full height behind both sitters and the vignette pulls the eye to the faces.
+export const PortraitGallery: React.FC = () => (
+  <div style={{ position: "absolute", inset: 0 }}>
+    <Img src={staticFile("kit/pd/wall.jpg")} style={{ position: "absolute", left: -400, top: -600, width: 2720, height: 2400, filter: "blur(6px) brightness(0.2) saturate(0.55)" }} />
+    <Img src={staticFile("kit/pd/damask.jpg")} style={{ position: "absolute", left: 430, top: -600, width: 1060, height: 2400, filter: "blur(5px) brightness(0.26) saturate(0.6)", borderLeft: "12px solid #241607", borderRight: "12px solid #241607" }} />
+    <div style={{ position: "absolute", left: -400, right: -400, top: -600, height: 2400, background: "radial-gradient(ellipse at 50% 42%, transparent 30%, rgba(0,0,0,0.82) 86%)" }} />
+  </div>
+);
+
+// Held close, the cut-outs want a soft cast shadow rather than the hard paper offset.
+export const Hung: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div style={{ position: "absolute", inset: 0, filter: "drop-shadow(14px 18px 22px rgba(0,0,0,0.55))" }}>{children}</div>
+);
+
+// A hanging frame, in stage units, that crops whatever is put in it. This is what makes the method
+// honest: a Tudor portrait stops below the chest because that is where the painter stopped, so the
+// cut edge belongs to a picture rather than to a figure with no legs. The inner div undoes the
+// frame's own offset, so the rig inside still positions itself in stage coordinates.
+export const framed = (x: number, y: number, w: number, h: number): React.FC<{ children: React.ReactNode }> => {
+  const Framed: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <div
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        width: w,
+        height: h,
+        overflow: "hidden",
+        background: "#120c06",
+        boxShadow: "inset 0 0 0 9px #b9933f, inset 0 0 0 20px #3c2a12, inset 0 0 70px rgba(0,0,0,0.75), 0 26px 46px rgba(0,0,0,0.6)",
+      }}
+    >
+      <div style={{ position: "absolute", left: -x, top: -y, width: STAGE.w, height: STAGE.h }}>{children}</div>
+    </div>
+  );
+  Framed.displayName = `framed(${x},${y})`;
+  return Framed;
+};
