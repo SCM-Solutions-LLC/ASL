@@ -42,7 +42,7 @@ const draw = (s: Shape, i: number, extra: Record<string, string | number | undef
 
 // ---------------------------------------------------------------- flat
 
-const WEIGHT = 5;
+const WEIGHT = 3.4;
 
 const flat: Style = {
   id: "flat",

@@ -10,7 +10,7 @@ export const KITS: Kit[] = [
   {
     id: "henry",
     build: "doublet",
-    palette: { cloth: "#9b1d2a", trim: "#d8a93b", skin: "#f0c9a0", hair: "#b5562b", metal: "#f1c74f", drape: "#f2ede4" },
+    palette: { cloth: "#7e2b2e", trim: "#b8933f", skin: "#dcb294", hair: "#8a4a2c", metal: "#c9a84c", drape: "#f2ede4" },
     headwear: "flatcap",
     collar: "fur",
     sleeve: "puff",
@@ -20,7 +20,7 @@ export const KITS: Kit[] = [
   {
     id: "catherine-of-aragon",
     build: "gown",
-    palette: { cloth: "#8e1b2a", trim: "#d8a93b", skin: "#f3d2b3", hair: "#6b4226", metal: "#f1c74f", drape: "#2b2b3a" },
+    palette: { cloth: "#6f2730", trim: "#b8933f", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#2b2b3a" },
     headwear: "gable",
     collar: "square",
     sleeve: "bell",
@@ -30,7 +30,7 @@ export const KITS: Kit[] = [
   {
     id: "anne-boleyn",
     build: "gown",
-    palette: { cloth: "#1f2a24", trim: "#c9a227", skin: "#eccba8", hair: "#2e1d14", metal: "#e8d7a0", drape: "#131815" },
+    palette: { cloth: "#232e28", trim: "#9c8540", skin: "#d9b393", hair: "#2a1d15", metal: "#bfae87", drape: "#131815" },
     headwear: "french",
     collar: "square",
     sleeve: "bell",
@@ -40,7 +40,7 @@ export const KITS: Kit[] = [
   {
     id: "jane-seymour",
     build: "gown",
-    palette: { cloth: "#7d1f1a", trim: "#e0bb6c", skin: "#f6dcc0", hair: "#c9a86a", metal: "#f1c74f", drape: "#efe8dc" },
+    palette: { cloth: "#6d2b24", trim: "#b89a5e", skin: "#e3c3a4", hair: "#a98f5f", metal: "#c9a84c", drape: "#efe8dc" },
     headwear: "gable",
     collar: "square",
     sleeve: "fitted",
@@ -50,7 +50,7 @@ export const KITS: Kit[] = [
   {
     id: "anne-of-cleves",
     build: "gown",
-    palette: { cloth: "#8c2f3a", trim: "#d9a441", skin: "#f3d2b3", hair: "#6b4226", metal: "#f1c74f", drape: "#efe3cf" },
+    palette: { cloth: "#733039", trim: "#b08c44", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#efe3cf" },
     headwear: "bonnet",
     collar: "high",
     sleeve: "puff",
@@ -60,7 +60,7 @@ export const KITS: Kit[] = [
   {
     id: "katherine-howard",
     build: "gown",
-    palette: { cloth: "#9d5f73", trim: "#dcd3c2", skin: "#f7dcc4", hair: "#8a5a32", metal: "#e8d7a0", drape: "#3a2f3d" },
+    palette: { cloth: "#8a5c69", trim: "#c4bba9", skin: "#e2c4a8", hair: "#6d4a2e", metal: "#bfae87", drape: "#3a2f3d" },
     headwear: "french",
     collar: "square",
     sleeve: "bell",
@@ -70,7 +70,7 @@ export const KITS: Kit[] = [
   {
     id: "katherine-parr",
     build: "gown",
-    palette: { cloth: "#6d2436", trim: "#c08a3e", skin: "#f2d0b0", hair: "#9a6a3a", metal: "#f1c74f", drape: "#2a2a33" },
+    palette: { cloth: "#5e2a35", trim: "#9c7b43", skin: "#dcb797", hair: "#775235", metal: "#c9a84c", drape: "#2a2a33" },
     headwear: "coronet",
     collar: "high",
     sleeve: "fitted",

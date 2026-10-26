@@ -19,10 +19,16 @@ const VELVET = "#262430";
 const LEATHER = "#241c17";
 const WHITE = "#fdfbf6";
 
-const face = (p: ShapeCtx["kit"]["palette"], w: number, h: number): Shape => ({
-  d: at(w, h, "M X0.5 Y0.09 Q X0.96 Y0.09 X0.96 Y0.53 Q X0.96 Y0.86 X0.5 Y0.98 Q X0.04 Y0.86 X0.04 Y0.53 Q X0.04 Y0.09 X0.5 Y0.09 Z"),
-  fill: p.skin,
-});
+// A narrower skull and a real jaw. A head as wide as the shoulders, which is what this was, is the
+// single strongest cue that a figure is meant for children.
+const face = (p: ShapeCtx["kit"]["palette"], w: number, h: number): Shape[] => [
+  {
+    d: at(w, h, "M X0.5 Y0.07 Q X0.9 Y0.07 X0.9 Y0.48 Q X0.89 Y0.73 X0.74 Y0.89 Q X0.61 Y0.99 X0.5 Y0.99 Q X0.39 Y0.99 X0.26 Y0.89 Q X0.11 Y0.73 X0.1 Y0.48 Q X0.1 Y0.07 X0.5 Y0.07 Z"),
+    fill: p.skin,
+  },
+  // Nose and the shadow under the brow: two strokes, but they are what stop a face reading as a toy.
+  { d: at(w, h, "M X0.51 Y0.52 Q X0.57 Y0.68 X0.46 Y0.71"), width: 0.5 },
+];
 
 // Hair frames the face from behind the hairline, so it reads at thumbnail size without detail.
 const hair = (k: ShapeCtx["kit"], w: number, h: number): Shape[] => {
@@ -125,23 +131,26 @@ const eyeSet = (p: ShapeCtx["kit"]["palette"], w: number, h: number): Record<str
   const gap = w * 0.48;
   const l = w / 2 - gap / 2;
   const r = w / 2 + gap / 2;
-  const rx = w * 0.115;
-  const ry = h * 0.43;
+  const rx = w * 0.105;
+  const ry = h * 0.27;
   const almond = (cx: number, s: number) =>
-    `M ${cx - rx * s} ${cy} Q ${cx} ${cy - ry * s * 1.15} ${cx + rx * s} ${cy} Q ${cx} ${cy + ry * s * 1.15} ${cx - rx * s} ${cy} Z`;
+    `M ${cx - rx * s} ${cy} Q ${cx} ${cy - ry * s * 1.3} ${cx + rx * s} ${cy} Q ${cx} ${cy + ry * s} ${cx - rx * s} ${cy} Z`;
   const open = (dx: number, s = 1): Drawing => [
-    { d: almond(l, s), fill: WHITE, flat: true },
-    { d: almond(r, s), fill: WHITE, flat: true },
-    { d: dot(l + dx, cy + h * 0.04, w * 0.057 * s), fill: p.hair, width: 0, flat: true },
-    { d: dot(r + dx, cy + h * 0.04, w * 0.057 * s), fill: p.hair, width: 0, flat: true },
+    { d: almond(l, s), fill: WHITE, flat: true, width: 0.5 },
+    { d: almond(r, s), fill: WHITE, flat: true, width: 0.5 },
+    { d: dot(l + dx, cy, w * 0.036 * s), fill: p.hair, width: 0, flat: true },
+    { d: dot(r + dx, cy, w * 0.036 * s), fill: p.hair, width: 0, flat: true },
+    // Upper lid, drawn over the eye — the line that gives an adult face its weight.
+    { d: `M ${l - rx * s} ${cy} Q ${l} ${cy - ry * s * 1.35} ${l + rx * s} ${cy}`, width: 0.65 },
+    { d: `M ${r - rx * s} ${cy} Q ${r} ${cy - ry * s * 1.35} ${r + rx * s} ${cy}`, width: 0.65 },
   ];
   const shut = (cx: number): Shape => ({ d: `M ${cx - rx} ${cy} Q ${cx} ${cy + ry * 0.6} ${cx + rx} ${cy}` });
   return {
     default: open(0),
     side: open(w * 0.05),
-    wide: open(0, 1.3),
+    wide: open(0, 1.22),
     closed: [shut(l), shut(r)],
-    wink: [...open(w * 0.03).slice(0, 1), ...open(w * 0.03).slice(2, 3), shut(r)],
+    wink: [open(w * 0.03)[0], open(w * 0.03)[2], open(w * 0.03)[4], shut(r)],
   };
 };
 
@@ -157,7 +166,7 @@ const browSet = (p: ShapeCtx["kit"]["palette"], w: number, h: number): Record<st
   const line = (cx: number, lift: number, tilt: number): Shape => ({
     d: `M ${cx - e} ${cy + lift + tilt} Q ${cx} ${cy + lift - h * 0.3} ${cx + e} ${cy + lift - tilt}`,
     stroke: p.hair,
-    width: 1.5,
+    width: 1.05,
   });
   return {
     default: [line(l, 0, 0), line(r, 0, 0)],
@@ -214,7 +223,7 @@ const gown = (slot: Slot, { kit: k, w, h }: ShapeCtx): Record<string, Drawing> =
         ],
       };
     case "head":
-      return { default: [face(p, w, h), ...hair(k, w, h)] };
+      return { default: [...face(p, w, h), ...hair(k, w, h)] };
     case "veil":
       return { default: [{ d: at(w, h, "M X0.14 Y0.03 Q X0.5 Y-0.03 X0.86 Y0.03 L X0.98 Y0.96 Q X0.5 Y1.03 X0.02 Y0.96 Z"), fill: p.drape ?? p.trim }] };
     case "headwear":
@@ -266,7 +275,7 @@ const doublet = (slot: Slot, { kit: k, w, h }: ShapeCtx): Record<string, Drawing
         ],
       };
     case "head":
-      return { default: [face(p, w, h), ...hair(k, w, h)] };
+      return { default: [...face(p, w, h), ...hair(k, w, h)] };
     case "jaw": {
       const beard =
         k.beard === "full"

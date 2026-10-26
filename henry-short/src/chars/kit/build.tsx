@@ -76,24 +76,24 @@ const gown = (kit: Kit, style: Style): PartDef => ({
     { id: "skirt", w: 460, h: 580, pivot: [230, 0], at: [95, 232], z: -1, art: art("skirt", kit, style, 460, 580, "skirt") },
     {
       id: "head",
-      w: 140,
-      h: 175,
-      pivot: [70, 168],
+      w: 112,
+      h: 140,
+      pivot: [56, 134],
       at: [95, 24],
       z: 1,
-      art: art("head", kit, style, 140, 175, "head"),
+      art: art("head", kit, style, 112, 140, "head"),
       children: [
         ...(kit.palette.drape
-          ? [{ id: "veil", w: 200, h: 230, pivot: [100, 30] as [number, number], at: [70, 40] as [number, number], z: -1, art: art("veil", kit, style, 200, 230, "veil") }]
+          ? [{ id: "veil", w: 160, h: 184, pivot: [80, 24] as [number, number], at: [56, 32] as [number, number], z: -1, art: art("veil", kit, style, 160, 184, "veil") }]
           : []),
         ...faceParts(kit, style, [
-          { slot: "eyes", box: [96, 30], at: [70, 98] },
-          { slot: "brows", box: [100, 22], at: [70, 74] },
-          { slot: "mouth", box: [50, 26], at: [70, 138] },
+          { slot: "eyes", box: [77, 24], at: [56, 78] },
+          { slot: "brows", box: [80, 18], at: [56, 59] },
+          { slot: "mouth", box: [40, 21], at: [56, 110] },
         ]),
         ...(kit.headwear === "none"
           ? []
-          : [{ id: "haube", w: 250, h: 160, pivot: [125, 150] as [number, number], at: [70, 50] as [number, number], z: 1, art: art("headwear", kit, style, 250, 160, "headwear") }]),
+          : [{ id: "haube", w: 200, h: 128, pivot: [100, 120] as [number, number], at: [56, 40] as [number, number], z: 1, art: art("headwear", kit, style, 200, 128, "headwear") }]),
       ],
     },
     arm(kit, style, "L", 26, GOWN_ARM),
@@ -124,29 +124,29 @@ const doublet = (kit: Kit, style: Style): PartDef => ({
     })),
     {
       id: "head",
-      w: 170,
-      h: 200,
-      pivot: [85, 190],
+      w: 136,
+      h: 160,
+      pivot: [68, 152],
       at: [200, 44],
       z: 1,
-      art: art("head", kit, style, 170, 200, "head"),
+      art: art("head", kit, style, 136, 160, "head"),
       children: [
         {
           id: "jaw",
-          w: 150,
-          h: 95,
-          pivot: [75, 10],
-          at: [85, 132],
-          art: art("jaw", kit, style, 150, 95, "jaw"),
-          children: [{ id: "mouth", w: 60, h: 34, pivot: [30, 17], at: [75, 30], art: art("mouth", kit, style, 60, 34, "mouth") }],
+          w: 120,
+          h: 76,
+          pivot: [60, 8],
+          at: [68, 106],
+          art: art("jaw", kit, style, 120, 76, "jaw"),
+          children: [{ id: "mouth", w: 48, h: 27, pivot: [24, 14], at: [60, 24], art: art("mouth", kit, style, 48, 27, "mouth") }],
         },
         ...faceParts(kit, style, [
-          { slot: "eyes", box: [110, 34], at: [85, 96] },
-          { slot: "brows", box: [120, 26], at: [85, 68] },
+          { slot: "eyes", box: [88, 27], at: [68, 77] },
+          { slot: "brows", box: [96, 21], at: [68, 54] },
         ]),
         ...(kit.headwear === "none"
           ? []
-          : [{ id: "haube", w: 230, h: 90, pivot: [115, 70] as [number, number], at: [85, 36] as [number, number], art: art("headwear", kit, style, 230, 90, "headwear") }]),
+          : [{ id: "haube", w: 184, h: 72, pivot: [92, 56] as [number, number], at: [68, 29] as [number, number], art: art("headwear", kit, style, 184, 72, "headwear") }]),
       ],
     },
     arm(kit, style, "L", 36, DOUBLET_ARM),
