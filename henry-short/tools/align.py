@@ -5,8 +5,11 @@ hand-edited: regenerate the VO and these must be regenerated too, or every beat 
 output records the VO's SHA-256 so `npm run lint` can refuse an edit built on stale timings.
 
 Run (from the project root, needs `requests` for --align):
-  python3 -I tools/align.py --align                     # align public/vo.wav via the ElevenLabs API
-  python3 -I tools/align.py --from-words response.json  # convert a saved alignment response instead
+  python3 -I tools/align.py anne-of-cleves --align                    # align via the ElevenLabs API
+  python3 -I tools/align.py anne-of-cleves --from-words response.json # convert a saved response instead
+
+A short's files are found by its slug: script/<slug>.txt, public/vo/<slug>.wav, and the timings
+are written to src/generated/<slug>.alignment.json.
 """
 import argparse
 import hashlib
@@ -16,9 +19,8 @@ import re
 import sys
 from pathlib import Path
 
-SCRIPT = Path("script/anne-of-cleves.txt")
-AUDIO = Path("public/vo.wav")
-OUT = Path("src/generated/alignment.json")
+def paths(slug):
+    return Path(f"script/{slug}.txt"), Path(f"public/vo/{slug}.wav"), Path(f"src/generated/{slug}.alignment.json")
 
 # GA endpoint. The commercial licence on paid plans carves out Beta Services, so the VO itself
 # must come from a GA model too — see docs/vo-licensing.md.
@@ -61,14 +63,14 @@ def words_from(payload):
     ]
 
 
-def check_against_script(words, text):
+def check_against_script(words, text, script):
     """A VO read from a different script would silently move every beat; fail loudly instead."""
     got, want = [clean(w["text"]) for w in words], tokens(text)
     if got == want:
         return
     first = next((i for i, (a, b) in enumerate(zip(got, want)) if a != b), min(len(got), len(want)))
     sys.exit(
-        f"The timings do not match {SCRIPT}: {len(got)} words aligned, {len(want)} in the script, "
+        f"The timings do not match {script}: {len(got)} words aligned, {len(want)} in the script, "
         f"first difference at word {first + 1} ({got[first:first + 4]} vs {want[first:first + 4]}). "
         "Update the script to what was actually spoken, or re-align the right audio."
     )
@@ -76,31 +78,33 @@ def check_against_script(words, text):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("slug", help="the short's slug, e.g. anne-of-cleves")
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--align", action="store_true", help="align the VO through the ElevenLabs API")
     src.add_argument("--from-words", type=Path, metavar="FILE", help="use a saved alignment/STT response")
     args = p.parse_args()
 
-    text = SCRIPT.read_text()
-    payload = align_via_api(AUDIO, text) if args.align else json.loads(args.from_words.read_text())
+    script, audio, out = paths(args.slug)
+    text = script.read_text()
+    payload = align_via_api(audio, text) if args.align else json.loads(args.from_words.read_text())
     words = words_from(payload)
-    check_against_script(words, text)
+    check_against_script(words, text, script)
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(
         json.dumps(
             {
                 "generated_by": "tools/align.py",
-                "script": str(SCRIPT),
-                "audio": str(AUDIO),
-                "sha256": sha256(AUDIO),
+                "script": str(script),
+                "audio": str(audio),
+                "sha256": sha256(audio),
                 "words": words,
             },
             indent=1,
         )
         + "\n"
     )
-    print(f"{OUT}: {len(words)} words, {words[-1]['end']:.2f}s, {AUDIO} sha256 {sha256(AUDIO)[:12]}")
+    print(f"{out}: {len(words)} words, {words[-1]['end']:.2f}s, {audio} sha256 {sha256(audio)[:12]}")
 
 
 if __name__ == "__main__":

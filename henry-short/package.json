@@ -28,7 +28,8 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "node tools/check-alignment.mjs && eslint src && tsc",
-    "align": "python3 -I tools/align.py --align"
+    "align": "python3 -I tools/align.py",
+    "new-short": "node tools/new-short.mjs"
   },
   "allowScripts": {
     "esbuild": false

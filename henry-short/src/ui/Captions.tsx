@@ -1,19 +1,19 @@
 import React from "react";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { WORDS } from "../edit";
+import type { CutWord } from "../edit";
 import { useLayout } from "../layout";
 
 const GOLD = "#f1c74f";
 
 // Phrase-at-a-time captions in the lower quarter; key words get a gold pill as they are spoken.
-export const Captions: React.FC = () => {
+export const Captions: React.FC<{ words: CutWord[] }> = ({ words: WORDS }) => {
   const frame = useCurrentFrame();
   const { width } = useVideoConfig();
   const { captions: c } = useLayout();
   const pages = [...new Set(WORDS.map((w) => w.page))];
   const current = pages.filter((p) => WORDS.find((w) => w.page === p)!.start - 3 <= frame).pop();
   if (current === undefined) return null;
-  const words = WORDS.filter((w) => w.page === current);
+  const page = WORDS.filter((w) => w.page === current);
 
   return (
     <div
@@ -33,7 +33,7 @@ export const Captions: React.FC = () => {
         textTransform: "uppercase",
       }}
     >
-      {words.map((w, i) => {
+      {page.map((w, i) => {
         const on = frame >= w.start;
         const lit = w.key && on;
         return (

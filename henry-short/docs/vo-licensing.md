@@ -71,9 +71,9 @@ Assets generated on the free plan, all of which are affected:
 
 | Asset | Used by |
 |---|---|
-| `public/vo.wav` | `AnneHolbein`, `AnneCutout` (the whole cut) |
+| `public/vo/six-wives.wav` | every `anne-of-cleves-*` and `catherine-of-aragon-*` composition |
 | `public/henry_vo_v3.mp3` | not currently referenced in `src/` |
-| `public/sfx/*.wav` (7 files) | `AnneCutout` beat hits |
+| `public/sfx/*.wav` (7 files) | beat hits in both shorts |
 
 The non-obvious cost was in the edit, not the audio. `src/words.json` held absolute
 timings measured against one specific render of `vo.wav`, and `SEGMENTS` in `src/edit.ts`
@@ -107,7 +107,7 @@ So regenerating the VO now costs one `npm run align`, not a re-measured edit.
    a generally-available model and voice — not a beta one, or the commercial licence does
    not attach. Do not publish on the current files, with or without attribution.
 3. ~~Make alignment a build step in the same pass, so regenerating the VO is cheap.~~ Done —
-   run `npm run align` after the new VO lands. The one untested path is the ElevenLabs API
+   run `npm run align -- six-wives` after the new VO lands. The one untested path is the ElevenLabs API
    call itself; `--from-words` converts a saved response if the key route misbehaves.
 4. Keep the current audio for style tests, but do not post them publicly. Free-plan
    audio needs the `elevenlabs.io` title credit even when shared non-commercially. Private
