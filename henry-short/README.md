@@ -31,7 +31,9 @@ python3 tools/cut.py           # re-cut the portraits in kit_src/ into public/ki
 
 - Henry VIII, full length, after Hans Holbein the Younger (Walker Art Gallery) — public domain, Wikimedia Commons.
 - Anne of Cleves, Hans Holbein the Younger (Louvre) — public domain, Wikimedia Commons.
-- VO and SFX were generated with ElevenLabs (free plan at the time); check the licence terms before monetising.
+- VO and SFX were generated with ElevenLabs on the free plan, which grants no commercial
+  licence. **Do not publish on the current audio** — see [docs/vo-licensing.md](docs/vo-licensing.md)
+  for the finding, what has to be regenerated, and why that moves every word-synced beat.
 
 ## Known issues
 
