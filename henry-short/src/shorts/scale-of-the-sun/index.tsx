@@ -7,9 +7,13 @@ import type { Short } from "../types";
 // A short with no cast. The subject is scale, so the frame holds objects and the numbers that
 // make them land — the pipeline's figure machinery is simply not involved.
 //
-// DRAFT: no voice-over exists, so the word timings are estimated from the script at 170 wpm.
+// DRAFT: no voice-over exists yet, so the word timings are estimated from the script at 170 wpm.
 // Every beat still hangs off a spoken word, so recording the VO later means swapping
-// makeDraftEdit for makeEdit and re-running the alignment; none of the choreography moves.
+// makeDraftEdit for makeEdit; none of the choreography moves.
+//
+// The spoken text also lives in script/scale-of-the-sun.txt, which is what `npm run tts` reads.
+// `npm run lint` fails if the two drift apart. The duplication is temporary: once a VO exists this
+// const goes away and the short reads the generated alignment instead.
 const SCRIPT = `Jupiter is the biggest planet in the solar system.
 Two and a half times the mass of every other planet combined.
 But hold Jupiter up next to the Sun, and it disappears.

@@ -41,6 +41,11 @@ moves, because every beat hangs off a spoken word rather than a frame number.
 
 ## Voice-over
 
+Scripts live in `script/<slug>.txt` — one file per voice-over, named after the VO rather than the
+short, since one recording can carry several shorts. A drafted short also holds its script inline,
+where `makeDraftEdit` estimates timings from it; `npm run lint` fails if the two drift apart,
+because the voice would then say one thing while every beat was keyed to another.
+
 `npm run tts -- <slug>` reads `script/<slug>.txt`, speaks it with
 [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M), and writes both `public/vo/<slug>.wav` and
 the word timings in one pass. Kokoro is **Apache-2.0** and runs locally, which is the whole reason
