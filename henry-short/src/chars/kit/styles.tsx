@@ -2,8 +2,8 @@ import React from "react";
 import type { Art } from "../../rig/types";
 import type { Shape, Style } from "./types";
 
-// Three renderings of the same vocabulary. A style never knows what it is drawing — it is handed
-// paths and colours and decides how ink and fill behave — so every figure gains a new style free.
+// How the shape vocabulary is drawn. A style never knows what it is drawing — it is handed paths
+// and colours and decides how ink and fill behave — so every figure gains a new style for free.
 
 const hex = (c: string): [number, number, number] => {
   const v = c.replace("#", "");
@@ -19,11 +19,8 @@ const shift = (c: string, k: number) => {
   return k >= 0 ? rgb([r + (255 - r) * k, g + (255 - g) * k, b + (255 - b) * k]) : rgb([r * (1 + k), g * (1 + k), b * (1 + k)]);
 };
 
-/** 0 = black, 1 = white. Drives how hard the woodcut hatches a colour. */
-const luma = (c: string) => {
-  const [r, g, b] = hex(c);
-  return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-};
+// Outline weight at a part's own scale. 5 was a storybook line; this is an editorial one.
+const WEIGHT = 3.4;
 
 const wrap = (w: number, h: number, defs: React.ReactNode, body: React.ReactNode, base: Record<string, string | number>): Art => ({
   node: (
@@ -39,25 +36,6 @@ const wrap = (w: number, h: number, defs: React.ReactNode, body: React.ReactNode
 const draw = (s: Shape, i: number, extra: Record<string, string | number | undefined> = {}) => (
   <path key={i} d={s.d} {...extra} />
 );
-
-// ---------------------------------------------------------------- flat
-
-const WEIGHT = 3.4;
-
-const flat: Style = {
-  id: "flat",
-  label: "Flat cut-paper",
-  ink: "#2a1a12",
-  paper: "#efe3cf",
-  render: (drawing, w, h) =>
-    wrap(w, h, null, drawing.map((s, i) =>
-      draw(s, i, {
-        fill: s.fill ?? "none",
-        stroke: s.width === 0 ? undefined : (s.stroke ?? "#2a1a12"),
-        strokeWidth: s.width === 0 ? undefined : WEIGHT * (s.width ?? 1),
-      }),
-    ), { }),
-};
 
 // ---------------------------------------------------------------- soft
 
@@ -87,41 +65,7 @@ const soft: Style = {
   },
 };
 
-// ---------------------------------------------------------------- woodcut
-
-// Tone is carried by hatch density rather than colour, the way a period block print carries it:
-// a dark cloth gets tight heavy lines, a pale one almost none. Colour survives only as a tint, so
-// this look trades the palette — which is how figures are told apart — for period texture.
-const PAPER = "#efe4cc";
-
-const woodcut: Style = {
-  id: "woodcut",
-  label: "Woodcut",
-  ink: "#1d1711",
-  paper: "#e4d7bb",
-  render: (drawing, w, h, key) => {
-    const fills = [...new Set(drawing.filter((s) => s.fill).map((s) => s.fill as string))];
-    const defs = fills.map((c) => {
-      const t = 1 - luma(c); // 0 pale, 1 dark
-      const step = 14 - 9 * t;
-      const weight = 0.8 + 3.4 * t;
-      return (
-        <pattern key={c} id={`h-${key}-${c.slice(1)}`} width={step} height={step} patternUnits="userSpaceOnUse" patternTransform="rotate(38)">
-          <rect width={step} height={step} fill={shift(c, 0.62)} />
-          <line x1={0} y1={0} x2={0} y2={step} stroke={shift(c, -0.45)} strokeWidth={weight} />
-        </pattern>
-      );
-    });
-    return wrap(w, h, defs, drawing.map((s, i) =>
-      draw(s, i, {
-        fill: s.fill ? (s.flat ? shift(s.fill, 0.3) : `url(#h-${key}-${s.fill.slice(1)})`) : "none",
-        stroke: s.width === 0 ? undefined : (s.stroke ?? "#1d1711"),
-        strokeWidth: s.width === 0 ? undefined : WEIGHT * 1.35 * (s.width ?? 1),
-      }),
-    ), {});
-  },
-};
-
-export const STYLES: Style[] = [flat, soft, woodcut];
-export const styleById = (id: string): Style => STYLES.find((s) => s.id === id) ?? flat;
-export { PAPER };
+// One style ships. The split between shapes and renderers is still what makes that cheap to
+// change: another look is one object in this file, and the whole cast gains it.
+export const STYLES: Style[] = [soft];
+export const styleById = (id: string): Style => STYLES.find((s) => s.id === id) ?? soft;

@@ -5,6 +5,11 @@ import type { Kit } from "./types";
 //
 // Headwear is chosen for silhouette first and accuracy second where the two disagree: Catherine
 // and Jane both wore the English gable, so the rest of their kit has to carry the difference.
+//
+// Palettes are separated on value and on the second colour rather than on hue. Tudor court dress
+// really was mostly crimson, black and gold, so giving each wife her own rainbow would be a lie;
+// crimson-and-pearl, rose-and-cream, copper-and-gold and plum-and-silver all read apart at
+// thumbnail size without leaving the dyes of the period.
 
 export const KITS: Kit[] = [
   {
@@ -20,7 +25,7 @@ export const KITS: Kit[] = [
   {
     id: "catherine-of-aragon",
     build: "gown",
-    palette: { cloth: "#6f2730", trim: "#b8933f", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#2b2b3a" },
+    palette: { cloth: "#7a1f2b", trim: "#d8cdb5", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#2b2b3a" },
     headwear: "gable",
     collar: "square",
     sleeve: "bell",
@@ -40,7 +45,7 @@ export const KITS: Kit[] = [
   {
     id: "jane-seymour",
     build: "gown",
-    palette: { cloth: "#6d2b24", trim: "#b89a5e", skin: "#e3c3a4", hair: "#a98f5f", metal: "#c9a84c", drape: "#efe8dc" },
+    palette: { cloth: "#9d6a58", trim: "#f0e6d2", skin: "#e3c3a4", hair: "#a98f5f", metal: "#c9a84c", drape: "#efe8dc" },
     headwear: "gable",
     collar: "square",
     sleeve: "fitted",
@@ -50,7 +55,7 @@ export const KITS: Kit[] = [
   {
     id: "anne-of-cleves",
     build: "gown",
-    palette: { cloth: "#733039", trim: "#b08c44", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#efe3cf" },
+    palette: { cloth: "#a85f2e", trim: "#c9a84c", skin: "#dfbb9c", hair: "#4e3322", metal: "#c9a84c", drape: "#efe3cf" },
     headwear: "bonnet",
     collar: "high",
     sleeve: "puff",
@@ -70,7 +75,7 @@ export const KITS: Kit[] = [
   {
     id: "katherine-parr",
     build: "gown",
-    palette: { cloth: "#5e2a35", trim: "#9c7b43", skin: "#dcb797", hair: "#775235", metal: "#c9a84c", drape: "#2a2a33" },
+    palette: { cloth: "#2f2535", trim: "#aab0bd", skin: "#dcb797", hair: "#775235", metal: "#c9a84c", drape: "#2a2a33" },
     headwear: "coronet",
     collar: "high",
     sleeve: "fitted",
