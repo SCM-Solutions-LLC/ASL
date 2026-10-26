@@ -8,3 +8,6 @@ out
 
 # Python tooling caches
 __pycache__
+
+# Local Python virtualenv for tools/
+.venv
