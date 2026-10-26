@@ -44,11 +44,11 @@ export const catherineOfAragon: Short = {
       cast: (L) => [
         {
           actor: drawnHenry,
-          mark: L.marks.henry,
+          mark: L.marks.left,
           // He is not there for the marriage; he arrives to break it, and points the blame her way.
           keys: [
-            hal.rest(0, { root: { x: (L.left - 300 - L.marks.henry) / drawnHenry.scale } }),
-            ...enter(hal, F.henry - 10, { from: (L.left - 300 - L.marks.henry) / drawnHenry.scale, over: 16 }),
+            hal.rest(0, { root: { x: (L.left - 300 - L.marks.left) / drawnHenry.scale } }),
+            ...enter(hal, F.henry - 10, { from: (L.left - 300 - L.marks.left) / drawnHenry.scale, over: 16 }),
             ...point(hal, F.broke, { side: "R", hold: 26 }),
             ...knock(hal, F.rome, { deg: -6 }),
             ...relax(hal, F.end),
@@ -56,16 +56,16 @@ export const catherineOfAragon: Short = {
         },
         {
           actor: catherine,
-          mark: L.marks.anne,
+          mark: L.marks.right,
           keys: [
-            kate.rest(0, { root: { x: (1920 / 2 - L.marks.anne) / catherine.scale } }),
+            kate.rest(0, { root: { x: (1920 / 2 - L.marks.right) / catherine.scale } }),
             ...settle(kate, 0),
             ...bob(kate, F.name + 10, { dip: 18, tilt: -7 }),
             // 24 years of it, and then the double take when it is taken away.
             ...cheer(kate, F.years),
             ...relax(kate, F.years + 26),
             // She steps aside to make room for him.
-            kate.rest(F.henry - 8, { root: { x: (1920 / 2 - L.marks.anne) / catherine.scale } }, { ease: "hold" }),
+            kate.rest(F.henry - 8, { root: { x: (1920 / 2 - L.marks.right) / catherine.scale } }, { ease: "hold" }),
             kate.key(F.henry + 10, { root: { x: 0 } }),
             ...doubleTake(kate, F.annulled),
             ...eyeRoll(kate, F.rome + 6, { over: 16 }),
@@ -75,7 +75,7 @@ export const catherineOfAragon: Short = {
       ],
     },
   ],
-  props: (L) => <Badge from={F.years} to={F.annulled - 4} x={L.marks.anne - 40} y={210} text="24" />,
+  props: (L) => <Badge from={F.years} to={F.annulled - 4} x={L.marks.right - 40} y={210} text="24" />,
   ui: () => (
     <>
       <TitleCard from={F.name} to={F.years - 6} kicker="WIFE #1 · 1509" title="CATHERINE OF ARAGON" />

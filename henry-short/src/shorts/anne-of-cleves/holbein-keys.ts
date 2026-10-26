@@ -12,7 +12,7 @@ const SA = PD_SCALE.anne;
 
 export const holbeinKeys = (F: Beats) => ({
   henry: (L: Layout): Key[] => {
-    const off = (L.left - 220 - L.marks.henry) / SH;
+    const off = (L.left - 220 - L.marks.left) / SH;
     return [
       { f: 0, pose: { body: { x: off } } },
       { f: F.henry - 10, pose: { body: { x: off, r: 0 } }, ease: "hold" },
@@ -37,7 +37,7 @@ export const holbeinKeys = (F: Beats) => ({
   },
 
   anne: (L: Layout): Key[] => {
-    const centre = (STAGE.w / 2 - L.marks.anne) / SA;
+    const centre = (STAGE.w / 2 - L.marks.right) / SA;
     const hop = (f: number, h = 140): Key[] => [
       { f, pose: { skirt: { sy: 0.94, y: 0 } }, ease: "out" },
       { f: f + 5, pose: { skirt: { sy: 1.03, y: -h } }, ease: "out" },

@@ -41,13 +41,13 @@ export const anneOfCleves: Short = {
       cast: (L) => [
         {
           actor: drawnHenry,
-          mark: L.marks.henry,
+          mark: L.marks.left,
           keys: drawn.henry(L),
           flip: (f) => f >= F.wanted && f < F.walked + 8,
         },
         {
           actor: drawnAnne,
-          mark: L.marks.anne,
+          mark: L.marks.right,
           keys: drawn.anne(L),
           extra: (f) => ({ torso: { y: walkBob(12)(f) } }),
         },
@@ -60,13 +60,13 @@ export const anneOfCleves: Short = {
       cast: (L) => [
         {
           actor: paintedHenry,
-          mark: L.marks.henry,
+          mark: L.marks.left,
           keys: painted.henry(L),
           flip: (f) => f >= F.wanted && f < F.walked + 8,
         },
         {
           actor: paintedAnne,
-          mark: L.marks.anne,
+          mark: L.marks.right,
           keys: painted.anne(L),
           extra: (f) => ({ skirt: { y: walkBob(40)(f) } }),
         },

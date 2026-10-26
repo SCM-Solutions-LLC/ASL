@@ -80,11 +80,14 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
       )}
       {short.ui?.(L)}
       <Captions words={edit.words} />
-      {edit.segments.map((s) => (
-        <Sequence key={s.from} from={s.at} durationInFrames={s.to - s.from} layout="none">
-          <Audio src={staticFile(edit.audio)} trimBefore={s.from} trimAfter={s.to} />
-        </Sequence>
-      ))}
+      {/* A drafted short has no VO yet; its timings are estimated and there is nothing to play. */}
+      {edit.audio
+        ? edit.segments.map((s) => (
+            <Sequence key={s.from} from={s.at} durationInFrames={s.to - s.from} layout="none">
+              <Audio src={staticFile(edit.audio)} trimBefore={s.from} trimAfter={s.to} />
+            </Sequence>
+          ))
+        : null}
       {short.sfx?.map((s, i) => (
         <Sfx key={i} at={s.at} name={s.name} volume={s.volume} />
       ))}

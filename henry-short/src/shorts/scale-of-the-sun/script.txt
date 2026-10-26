@@ -1,0 +1,35 @@
+Jupiter is the biggest planet in the solar system.
+Two and a half times the mass of every other planet combined.
+But hold Jupiter up next to the Sun, and it disappears.
+You could pour a thousand Jupiters into the Sun and still have room left over.
+And here is the part that gets people.
+Our Sun is not a big star. It is not even average.
+It is heavier and brighter than about ninety percent of the stars in our galaxy,
+because most stars are red dwarfs: small, dim, and everywhere.
+The Sun only looks ordinary because we have never stood next to anything else.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+1. "Two and a half times the mass of every other planet combined."
+   Jupiter 1.898e27 kg; all other planets together ~7.5e26 kg. Ratio ~2.5.
+   NASA Jupiter and planetary fact sheets.
+
+2. "A thousand Jupiters into the Sun."
+   Sun volume 1.41e18 km^3; Jupiter volume 1.43e15 km^3. Ratio ~986.
+   Volume, not mass — the Sun is ~1,048 Jupiter MASSES, which is a different
+   (and coincidentally similar) number. The script says "pour into", i.e. volume.
+
+3. "Heavier and brighter than about ninety percent of the stars in our galaxy."
+   Weakest number in the script. M-dwarfs are ~73-75% of stars in the Milky Way;
+   adding K-dwarfs puts stars smaller than the Sun at roughly 90%. Figures of
+   85-95% are all quoted in the literature depending on the sample and the cutoff.
+   If a tighter claim is wanted: "smaller than about three quarters of the stars
+   in the galaxy are red dwarfs" is safe and uncontested.
+
+4. "Most stars are red dwarfs: small, dim, and everywhere."
+   Uncontested.
+
+NOTE: timings in this short are ESTIMATED at 170 wpm, not measured. Recording a
+VO means swapping makeDraftEdit for makeEdit and running `npm run align`; the
+choreography does not move, because every beat hangs off a spoken word.

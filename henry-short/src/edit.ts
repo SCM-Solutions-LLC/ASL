@@ -39,6 +39,32 @@ export type EditSpec = {
   breakAfter?: string[];
 };
 
+// Key words and caption pages, shared by a cut of a real VO and a draft with no audio yet.
+const paginate = (
+  kept: { text: string; start: number; end: number }[],
+  keyPhrases: string[][],
+  breakAfter: string[],
+): CutWord[] => {
+  const breaks = new Set(breakAfter.map(clean));
+  const keys = new Set<number>();
+  for (const phrase of keyPhrases)
+    for (let i = 0; i <= kept.length - phrase.length; i++)
+      if (phrase.every((p, j) => clean(kept[i + j].text) === clean(p))) phrase.forEach((_, j) => keys.add(i + j));
+
+  let page = 0;
+  return kept.map((w, i) => {
+    const out = { ...w, key: keys.has(i), page };
+    if (/[.:]$/.test(w.text) || breaks.has(clean(w.text))) page++;
+    return out;
+  });
+};
+
+const wordClock = (words: CutWord[]): Edit["at"] => (word, nth = 0) => {
+  const hits = words.filter((w) => clean(w.text) === clean(word));
+  if (!hits[nth]) throw new Error(`Word "${word}" #${nth} is not in this cut`);
+  return hits[nth].start;
+};
+
 export const makeEdit = ({
   alignment,
   cut,
@@ -76,26 +102,57 @@ export const makeEdit = ({
     return [{ text: w.text, start: map(w.start), end: map(w.end) }];
   });
 
-  const breaks = new Set(breakAfter.map(clean));
-  const keys = new Set<number>();
-  for (const phrase of keyPhrases)
-    for (let i = 0; i <= kept.length - phrase.length; i++)
-      if (phrase.every((p, j) => clean(kept[i + j].text) === clean(p))) phrase.forEach((_, j) => keys.add(i + j));
-
-  let page = 0;
-  const words: CutWord[] = kept.map((w, i) => {
-    const out = { ...w, key: keys.has(i), page };
-    if (/[.:]$/.test(w.text) || breaks.has(clean(w.text))) page++;
-    return out;
-  });
-
-  const at = (word: string, nth = 0): number => {
-    const hits = words.filter((w) => clean(w.text) === clean(word));
-    if (!hits[nth]) throw new Error(`Word "${word}" #${nth} is not in this cut`);
-    return hits[nth].start;
-  };
+  const words = paginate(kept, keyPhrases, breakAfter);
+  const at = wordClock(words);
 
   // The alignment records the VO's real path so its hash can be checked; staticFile wants it
   // relative to public/.
   return { fps, audio: alignment.audio.replace(/^public\//, ""), segments, voEnd, duration: voEnd + outro, words, at };
+};
+
+// ---------------------------------------------------------------- drafting without a VO
+
+export type DraftSpec = {
+  /** The script as it will be spoken. */
+  script: string;
+  fps?: number;
+  /** Narration pace. 165 is an unhurried read; shorts are often cut nearer 185. */
+  wpm?: number;
+  outro?: number;
+  keyPhrases?: string[][];
+  breakAfter?: string[];
+};
+
+// A short before its voice-over exists. Word timings are estimated from the script at a chosen
+// pace, so beats can be written and the whole thing previewed; recording the VO later means
+// swapping makeDraftEdit for makeEdit and nothing else, because every beat hangs off a spoken
+// word rather than a frame number.
+//
+// `audio` is empty, which is how Scene knows there is nothing to play yet.
+export const makeDraftEdit = ({
+  script,
+  fps = 30,
+  wpm = 170,
+  outro = 24,
+  keyPhrases = [],
+  breakAfter = [],
+}: DraftSpec): Edit => {
+  const spoken = script.split(/\s+/).filter(Boolean);
+  const perWord = 60 / wpm;
+
+  let t = 0;
+  const kept = spoken.map((text) => {
+    // Longer words take longer to say, and punctuation buys a beat of room after them.
+    const dur = perWord * (0.62 + 0.38 * Math.min(2.2, text.replace(/[^A-Za-z0-9']/g, "").length / 4.5));
+    const pause = /[.!?]$/.test(text) ? 0.34 : /[,;:—]$/.test(text) ? 0.17 : 0;
+    const start = Math.round(t * fps);
+    t += dur;
+    const end = Math.round(t * fps);
+    t += pause;
+    return { text, start, end };
+  });
+
+  const words = paginate(kept, keyPhrases, breakAfter);
+  const voEnd = words.length ? words[words.length - 1].end : 0;
+  return { fps, audio: "", segments: [], voEnd, duration: voEnd + outro, words, at: wordClock(words) };
 };

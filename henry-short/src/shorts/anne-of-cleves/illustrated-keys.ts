@@ -10,7 +10,7 @@ import type { Beats } from "./beats";
 // is gained by making a finished short re-derive them.
 export const illustratedKeys = (F: Beats) => ({
   henry: (L: Layout): Key[] => {
-    const off = (L.left - 260 - L.marks.henry) / S;
+    const off = (L.left - 260 - L.marks.left) / S;
     return [
       { f: 0, pose: { ...henryRest, torso: { x: off } } },
       { f: F.henry - 10, pose: { torso: { x: off, r: 0 } }, ease: "hold" },
@@ -36,7 +36,7 @@ export const illustratedKeys = (F: Beats) => ({
   },
 
   anne: (L: Layout): Key[] => {
-    const centre = (STAGE.w / 2 - L.marks.anne) / S;
+    const centre = (STAGE.w / 2 - L.marks.right) / S;
     return [
       { f: 0, pose: { ...anneRest, torso: { x: centre, sy: 0.92 }, brows: { v: "smug" } } },
       { f: 6, pose: { torso: { x: centre, sy: 1 } }, ease: "back" },
