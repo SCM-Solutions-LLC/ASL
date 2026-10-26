@@ -27,7 +27,8 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "node tools/check-alignment.mjs && eslint src && tsc",
+    "align": "python3 -I tools/align.py --align"
   },
   "allowScripts": {
     "esbuild": false

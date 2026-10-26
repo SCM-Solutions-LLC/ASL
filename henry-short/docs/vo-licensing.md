@@ -75,18 +75,26 @@ Assets generated on the free plan, all of which are affected:
 | `public/henry_vo_v3.mp3` | not currently referenced in `src/` |
 | `public/sfx/*.wav` (7 files) | `AnneCutout` beat hits |
 
-The non-obvious cost is in the edit, not the audio. `src/words.json` holds absolute
+The non-obvious cost was in the edit, not the audio. `src/words.json` held absolute
 timings measured against one specific render of `vo.wav`, and `SEGMENTS` in `src/edit.ts`
-hardcodes source frame ranges into that same render. A regenerated VO — even from an
-identical script and voice — will not land on the same frames, so **every `at("word")`
-beat in the edit moves.**
+hardcoded source frame ranges into that same render. A regenerated VO — even from an
+identical script and voice — would not land on the same frames, so **every `at("word")`
+beat in the edit moved.**
 
-That is worth treating as a design finding rather than a one-off chore: the pipeline
-couples the edit to a single audio artefact that is going to be regenerated repeatedly,
-for licensing now and for every script revision later. Word alignment should be a
-regenerable build step keyed to the current VO file, not a hand-committed `words.json`.
-This should be folded into the pipeline templating work rather than fixed by re-measuring
-the timings by hand.
+**Fixed.** Alignment is now a build step, not a committed measurement:
+
+- `script/anne-of-cleves.txt` is the spoken script, the input to both the VO and alignment.
+- `tools/align.py` aligns the current `public/vo.wav` against it and writes
+  `src/generated/alignment.json`, stamped with the VO's SHA-256. It refuses to write
+  timings whose words disagree with the script.
+- `SEGMENTS` in `src/edit.ts` names its slices by what is spoken — `"Wife four"` through
+  `"beloved sister."` — so a new VO re-resolves the same cut at new frames. Verified: against
+  a simulated re-render (1.4s later, 3% slower) the segments relocate from 0–65 and 842–1188
+  to 38–109 and 909–1266 with the same 39 words and every beat intact.
+- `npm run lint` hashes `public/vo.wav` and fails if it has changed without `npm run align`
+  being re-run, so stale timings cannot reach a render silently.
+
+So regenerating the VO now costs one `npm run align`, not a re-measured edit.
 
 ## Recommendation
 
@@ -98,8 +106,9 @@ the timings by hand.
 2. Regenerate `vo.wav` and the SFX on the paid plan before anything is published, using
    a generally-available model and voice — not a beta one, or the commercial licence does
    not attach. Do not publish on the current files, with or without attribution.
-3. Make alignment a build step in the same pass, so regenerating the VO is cheap. Until
-   then, treat the current `words.json` as valid only for the existing `vo.wav`.
+3. ~~Make alignment a build step in the same pass, so regenerating the VO is cheap.~~ Done —
+   run `npm run align` after the new VO lands. The one untested path is the ElevenLabs API
+   call itself; `--from-words` converts a saved response if the key route misbehaves.
 4. Keep the current audio for style tests, but do not post them publicly. Free-plan
    audio needs the `elevenlabs.io` title credit even when shared non-commercially. Private
    style tests are unaffected, which is all these files are used for today.

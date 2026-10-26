@@ -15,13 +15,17 @@ The cut is the hook ("The fourth wife beat them all") plus the Anne of Cleves be
 npm i
 npx remotion studio            # preview
 npx remotion render AnneHolbein out/anne_holbein_9x16.mp4
+npm run lint                   # typecheck, and refuse a cut built on stale word timings
+npm run align                  # regenerate word timings after a new VO (needs ELEVENLABS_API_KEY, requests)
 python3 tools/cut.py           # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
 
 ## Layout
 
 - `src/rig/` — cut-out rig engine: parts with pivots, keyframed poses, idle breathing/blinks.
-- `src/edit.ts` — which slices of `public/vo.wav` are used; word timings (`src/words.json`) remapped to the cut. Every animation beat is keyed to a spoken word via `at("word")`.
+- `script/anne-of-cleves.txt` — the spoken script: the input to both the VO and the alignment.
+- `tools/align.py` → `src/generated/alignment.json` — word timings for the current `public/vo.wav`, stamped with its SHA-256. Generated, never hand-edited; `npm run lint` fails if the VO has moved on without them.
+- `src/edit.ts` — which slices of `public/vo.wav` are used, named by what is spoken (`"Wife four"` … `"beloved sister."`) rather than by source frame, so regenerating the VO re-resolves the cut instead of breaking it. Every animation beat is keyed to a spoken word via `at("word")`.
 - `src/layout.ts` — scenes are staged once on a wide set; 9:16 and 16:9 are camera framings plus their own caption/title placement.
 - `src/chars/pd.tsx` + `src/kit_pd.json` — Holbein rigs built from the parts `tools/cut.py` produces.
 - `src/chars/henry.tsx`, `anne.tsx` — placeholder rigs (neutral A-pose part spec for an illustrated kit).
