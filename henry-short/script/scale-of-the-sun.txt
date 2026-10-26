@@ -6,6 +6,12 @@ And here is the part that gets people.
 Our Sun is not a big star. It is not even average.
 It is heavier and brighter than about ninety percent of the stars in our galaxy,
 because most stars are red dwarfs: small, dim, and everywhere.
+So look at the nearest star to our own.
+Proxima Centauri, just over four light years away.
+The closest star there is, and you have never seen it.
+It is too faint for your eyes, and too faint for most binoculars.
+You need a telescope to find the star next door.
+That is what most of the galaxy looks like.
 The Sun only looks ordinary because we have never stood next to anything else.
 
 ---
@@ -30,6 +36,17 @@ SOURCES (for approval — every claim in the script, with the number behind it)
 4. "Most stars are red dwarfs: small, dim, and everywhere."
    Uncontested.
 
-NOTE: timings in this short are ESTIMATED at 170 wpm, not measured. Recording a
-VO means swapping makeDraftEdit for makeEdit and running `npm run align`; the
-choreography does not move, because every beat hangs off a spoken word.
+5. "The nearest star to our own. Proxima Centauri, just over four light years away."
+   4.2465 light years. Nearest known star to the Sun; part of the Alpha Centauri
+   system. Uncontested.
+
+6. "You have never seen it. Too faint for your eyes, and too faint for most
+   binoculars. You need a telescope."
+   Apparent magnitude ~11.1. Naked-eye limit is about 6 under a dark sky, so it
+   is roughly 100x too faint to see unaided. Typical 10x50 binoculars reach about
+   magnitude 9.5-10.5, which is why the line says MOST binoculars rather than all:
+   large 15x70s under a genuinely dark sky can reach ~11, but Proxima is a hard
+   target even then. A small telescope is the honest answer.
+
+7. "That is what most of the galaxy looks like."
+   Rests on claim 3 and claim 4, not a new number.
