@@ -30,7 +30,8 @@
     "lint": "node tools/check-alignment.mjs && node tools/check-licences.mjs && eslint src && tsc",
     "align": "python3 -I tools/align.py",
     "new-short": "node tools/new-short.mjs",
-    "publishable": "node tools/check-licences.mjs --publish"
+    "publishable": "node tools/check-licences.mjs --publish",
+    "tts": "python3 -I tools/tts.py"
   },
   "allowScripts": {
     "esbuild": false

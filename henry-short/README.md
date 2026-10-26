@@ -24,7 +24,9 @@ npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
 npm run new-short -- <slug>               # scaffold a new short
 npm run lint                              # typecheck, licences, and refuse a cut built on stale word timings
 npm run publishable                       # refuse to call the project shippable while an asset has no licence
-npm run align -- <vo-slug>                # regenerate word timings after a new VO (needs ELEVENLABS_API_KEY, requests)
+npm run tts -- <slug>                     # speak a script with Kokoro and write its word timings
+npm run tts -- --self-test                # check the timing/WAV code with no model downloaded
+npm run align -- <vo-slug>                # word timings for a VO recorded elsewhere
 python3 tools/cut.py                      # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
 
@@ -36,6 +38,23 @@ recorded. `Scene` plays nothing when `edit.audio` is empty.
 
 Recording later means swapping `makeDraftEdit` for `makeEdit` and running `npm run align`. No beat
 moves, because every beat hangs off a spoken word rather than a frame number.
+
+## Voice-over
+
+`npm run tts -- <slug>` reads `script/<slug>.txt`, speaks it with
+[Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M), and writes both `public/vo/<slug>.wav` and
+the word timings in one pass. Kokoro is **Apache-2.0** and runs locally, which is the whole reason
+it is here: no per-character cost, and no terms page that can change under a published video.
+
+    pip install kokoro soundfile     # once; Kokoro also wants espeak-ng on the system
+
+Each sentence is synthesised separately, so every sentence boundary is a *measured* time. Within a
+sentence, words are spread across the voiced audio by the same length weighting `makeDraftEdit`
+uses, so error never accumulates past one sentence. That is the accuracy a word-anchored beat
+needs, without a forced aligner and the model weights one brings with it.
+
+`tools/align.py` stays for audio recorded elsewhere — a human read, say — where the timings have to
+be recovered from the audio rather than generated with it.
 
 ## Cadence, and why
 

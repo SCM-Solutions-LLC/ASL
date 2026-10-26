@@ -34,7 +34,8 @@ const undeclared = [];
 const blocked = [];
 
 for (const file of files) {
-  const hit = rules.find(([pattern]) => matches(pattern, file));
+  // An exact path always wins over a glob, so one blocked file among a cleared folder stays blocked.
+  const hit = rules.find(([pattern]) => pattern === file) ?? rules.find(([pattern]) => matches(pattern, file));
   if (!hit) {
     undeclared.push(file);
     continue;
