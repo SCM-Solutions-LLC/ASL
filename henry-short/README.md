@@ -53,6 +53,11 @@ it is here: no per-character cost, and no terms page that can change under a pub
 
     pip install kokoro soundfile     # once; Kokoro also wants espeak-ng on the system
 
+Kokoro samples, so the generator is seeded (`--seed`, default 0): the same script, voice, speed and
+seed give the same audio every time. Without that the hash recorded in the alignment would describe
+one lucky render rather than the script, and re-running the tool would silently invalidate a
+committed voice-over. Found by running it twice and getting two different hashes.
+
 Each sentence is synthesised separately, so every sentence boundary is a *measured* time. Within a
 sentence, words are spread across the voiced audio by the same length weighting `makeDraftEdit`
 uses, so error never accumulates past one sentence. That is the accuracy a word-anchored beat

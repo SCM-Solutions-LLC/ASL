@@ -13,6 +13,10 @@ Run (from the project root):
 Writes public/vo/<slug>.wav and src/generated/<slug>.alignment.json, the same format tools/align.py
 produces, so `npm run lint` checks it the same way and makeEdit consumes it unchanged.
 
+Kokoro samples, so the generator is seeded: the same script, voice, speed and seed give the same
+audio every time. Without that the recorded hash would describe one lucky render rather than the
+script, and re-running the tool would silently invalidate a committed voice-over.
+
 Timing: each sentence is synthesised separately, so every sentence boundary is a MEASURED time
 rather than an estimate. Within a sentence, words are spread across the voiced audio by the same
 length weighting src/edit.ts uses for drafts. So error never accumulates past one sentence — which
@@ -106,12 +110,20 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def synthesise(lines, voice, speed):
+def synthesise(lines, voice, speed, seed):
     """The only part that needs the model. Everything above it is pure and tested by --self-test."""
     try:
+        import torch
         from kokoro import KPipeline
     except ImportError:
         sys.exit("kokoro is not installed. `pip install kokoro soundfile` (and espeak-ng on the system).")
+
+    # Kokoro samples, so two runs of the same script produce different audio unless the generator
+    # is pinned. Found by running it twice and getting two different file hashes. That matters
+    # here: the alignment records the WAV's hash so a stale edit can be refused, and a voice-over
+    # nobody can reproduce makes that hash a record of one lucky render rather than of the script.
+    torch.manual_seed(seed)
+
     pipeline = KPipeline(lang_code=voice[0])
     chunks = []
     for line in lines:
@@ -164,6 +176,7 @@ def main():
     p.add_argument("slug", nargs="?", help="the short's slug, e.g. scale-of-the-sun")
     p.add_argument("--voice", default="af_heart", help="Kokoro voice id (default: af_heart)")
     p.add_argument("--speed", type=float, default=1.0)
+    p.add_argument("--seed", type=int, default=0, help="pins Kokoro's sampling so a re-run is identical")
     p.add_argument("--self-test", action="store_true", help="check the timing and WAV code with no model")
     args = p.parse_args()
 
@@ -176,14 +189,14 @@ def main():
     if not script.exists():
         sys.exit(f"{script} does not exist. Write the script first.")
     lines = sentences(read_script(script))
-    audio, words = assemble(synthesise(lines, args.voice, args.speed))
+    audio, words = assemble(synthesise(lines, args.voice, args.speed, args.seed))
     write_wav(audio_path, audio)
 
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
         json.dumps(
             {
-                "generated_by": f"tools/tts.py --voice {args.voice} --speed {args.speed}",
+                "generated_by": f"tools/tts.py --voice {args.voice} --speed {args.speed} --seed {args.seed}",
                 "script": str(script),
                 "audio": str(audio_path),
                 "sha256": sha256(audio_path),
