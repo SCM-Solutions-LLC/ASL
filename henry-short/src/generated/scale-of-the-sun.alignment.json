@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/scale-of-the-sun.txt",
  "audio": "public/vo/scale-of-the-sun.wav",
- "sha256": "d80f605c0e4853f498be7f880b870f65811d325e13c42a188aa3e4b6f0e3291d",
+ "sha256": "652f727afc3a70d31c293f933d439f201840b858cde11c7d23dbf2fab44c13e4",
  "words": [
   {
    "text": "Jupiter",
@@ -465,74 +465,374 @@
    "end": 33.183
   },
   {
-   "text": "The",
+   "text": "So",
    "start": 33.905,
-   "end": 34.179
+   "end": 34.102
   },
   {
-   "text": "Sun",
-   "start": 34.179,
-   "end": 34.453
+   "text": "look",
+   "start": 34.102,
+   "end": 34.341
   },
   {
-   "text": "only",
-   "start": 34.453,
-   "end": 34.754
+   "text": "at",
+   "start": 34.341,
+   "end": 34.538
   },
   {
-   "text": "looks",
-   "start": 34.754,
-   "end": 35.081
+   "text": "the",
+   "start": 34.538,
+   "end": 34.756
   },
   {
-   "text": "ordinary",
-   "start": 35.081,
-   "end": 35.488
+   "text": "nearest",
+   "start": 34.756,
+   "end": 35.058
   },
   {
-   "text": "because",
-   "start": 35.488,
-   "end": 35.868
-  },
-  {
-   "text": "we",
-   "start": 35.868,
-   "end": 36.116
-  },
-  {
-   "text": "have",
-   "start": 36.116,
-   "end": 36.417
-  },
-  {
-   "text": "never",
-   "start": 36.417,
-   "end": 36.744
-  },
-  {
-   "text": "stood",
-   "start": 36.744,
-   "end": 37.071
-  },
-  {
-   "text": "next",
-   "start": 37.071,
-   "end": 37.372
+   "text": "star",
+   "start": 35.058,
+   "end": 35.297
   },
   {
    "text": "to",
-   "start": 37.372,
-   "end": 37.619
+   "start": 35.297,
+   "end": 35.494
+  },
+  {
+   "text": "our",
+   "start": 35.494,
+   "end": 35.712
+  },
+  {
+   "text": "own.",
+   "start": 35.712,
+   "end": 35.93
+  },
+  {
+   "text": "Proxima",
+   "start": 36.59,
+   "end": 37.039
+  },
+  {
+   "text": "Centauri,",
+   "start": 37.039,
+   "end": 37.52
+  },
+  {
+   "text": "just",
+   "start": 37.52,
+   "end": 37.875
+  },
+  {
+   "text": "over",
+   "start": 37.875,
+   "end": 38.23
+  },
+  {
+   "text": "four",
+   "start": 38.23,
+   "end": 38.585
+  },
+  {
+   "text": "light",
+   "start": 38.585,
+   "end": 38.972
+  },
+  {
+   "text": "years",
+   "start": 38.972,
+   "end": 39.359
+  },
+  {
+   "text": "away.",
+   "start": 39.359,
+   "end": 39.714
+  },
+  {
+   "text": "The",
+   "start": 40.4,
+   "end": 40.644
+  },
+  {
+   "text": "closest",
+   "start": 40.644,
+   "end": 40.983
+  },
+  {
+   "text": "star",
+   "start": 40.983,
+   "end": 41.251
+  },
+  {
+   "text": "there",
+   "start": 41.251,
+   "end": 41.542
+  },
+  {
+   "text": "is,",
+   "start": 41.542,
+   "end": 41.763
+  },
+  {
+   "text": "and",
+   "start": 41.763,
+   "end": 42.007
+  },
+  {
+   "text": "you",
+   "start": 42.007,
+   "end": 42.251
+  },
+  {
+   "text": "have",
+   "start": 42.251,
+   "end": 42.519
+  },
+  {
+   "text": "never",
+   "start": 42.519,
+   "end": 42.81
+  },
+  {
+   "text": "seen",
+   "start": 42.81,
+   "end": 43.078
+  },
+  {
+   "text": "it.",
+   "start": 43.078,
+   "end": 43.299
+  },
+  {
+   "text": "It",
+   "start": 43.935,
+   "end": 44.173
+  },
+  {
+   "text": "is",
+   "start": 44.173,
+   "end": 44.411
+  },
+  {
+   "text": "too",
+   "start": 44.411,
+   "end": 44.674
+  },
+  {
+   "text": "faint",
+   "start": 44.674,
+   "end": 44.988
+  },
+  {
+   "text": "for",
+   "start": 44.988,
+   "end": 45.252
+  },
+  {
+   "text": "your",
+   "start": 45.252,
+   "end": 45.541
+  },
+  {
+   "text": "eyes,",
+   "start": 45.541,
+   "end": 45.829
+  },
+  {
+   "text": "and",
+   "start": 45.829,
+   "end": 46.093
+  },
+  {
+   "text": "too",
+   "start": 46.093,
+   "end": 46.356
+  },
+  {
+   "text": "faint",
+   "start": 46.356,
+   "end": 46.67
+  },
+  {
+   "text": "for",
+   "start": 46.67,
+   "end": 46.934
+  },
+  {
+   "text": "most",
+   "start": 46.934,
+   "end": 47.223
+  },
+  {
+   "text": "binoculars.",
+   "start": 47.223,
+   "end": 47.662
+  },
+  {
+   "text": "You",
+   "start": 48.295,
+   "end": 48.535
+  },
+  {
+   "text": "need",
+   "start": 48.535,
+   "end": 48.797
+  },
+  {
+   "text": "a",
+   "start": 48.797,
+   "end": 48.991
+  },
+  {
+   "text": "telescope",
+   "start": 48.991,
+   "end": 49.369
+  },
+  {
+   "text": "to",
+   "start": 49.369,
+   "end": 49.586
+  },
+  {
+   "text": "find",
+   "start": 49.586,
+   "end": 49.848
+  },
+  {
+   "text": "the",
+   "start": 49.848,
+   "end": 50.088
+  },
+  {
+   "text": "star",
+   "start": 50.088,
+   "end": 50.351
+  },
+  {
+   "text": "next",
+   "start": 50.351,
+   "end": 50.613
+  },
+  {
+   "text": "door.",
+   "start": 50.613,
+   "end": 50.876
+  },
+  {
+   "text": "That",
+   "start": 51.555,
+   "end": 51.835
+  },
+  {
+   "text": "is",
+   "start": 51.835,
+   "end": 52.067
+  },
+  {
+   "text": "what",
+   "start": 52.067,
+   "end": 52.347
+  },
+  {
+   "text": "most",
+   "start": 52.347,
+   "end": 52.628
+  },
+  {
+   "text": "of",
+   "start": 52.628,
+   "end": 52.859
+  },
+  {
+   "text": "the",
+   "start": 52.859,
+   "end": 53.114
+  },
+  {
+   "text": "galaxy",
+   "start": 53.114,
+   "end": 53.444
+  },
+  {
+   "text": "looks",
+   "start": 53.444,
+   "end": 53.749
+  },
+  {
+   "text": "like.",
+   "start": 53.749,
+   "end": 54.03
+  },
+  {
+   "text": "The",
+   "start": 54.665,
+   "end": 54.939
+  },
+  {
+   "text": "Sun",
+   "start": 54.939,
+   "end": 55.213
+  },
+  {
+   "text": "only",
+   "start": 55.213,
+   "end": 55.514
+  },
+  {
+   "text": "looks",
+   "start": 55.514,
+   "end": 55.841
+  },
+  {
+   "text": "ordinary",
+   "start": 55.841,
+   "end": 56.248
+  },
+  {
+   "text": "because",
+   "start": 56.248,
+   "end": 56.628
+  },
+  {
+   "text": "we",
+   "start": 56.628,
+   "end": 56.876
+  },
+  {
+   "text": "have",
+   "start": 56.876,
+   "end": 57.177
+  },
+  {
+   "text": "never",
+   "start": 57.177,
+   "end": 57.504
+  },
+  {
+   "text": "stood",
+   "start": 57.504,
+   "end": 57.831
+  },
+  {
+   "text": "next",
+   "start": 57.831,
+   "end": 58.132
+  },
+  {
+   "text": "to",
+   "start": 58.132,
+   "end": 58.379
   },
   {
    "text": "anything",
-   "start": 37.619,
-   "end": 38.026
+   "start": 58.379,
+   "end": 58.786
   },
   {
    "text": "else.",
-   "start": 38.026,
-   "end": 38.327
+   "start": 58.786,
+   "end": 59.087
   }
  ]
 }
