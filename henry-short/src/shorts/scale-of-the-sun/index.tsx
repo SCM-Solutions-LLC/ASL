@@ -14,11 +14,12 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   cut: [{ from: "Jupiter is the biggest", to: "anything else.", tail: 0.4 }],
-  keyPhrases: [["biggest"], ["combined."], ["disappears."], ["thousand"], ["average."], ["ninety", "percent"], ["ordinary"]],
+  keyPhrases: [["biggest"], ["combined."], ["disappears."], ["thousand"], ["average."], ["ninety", "percent"],
+    ["Proxima", "Centauri,"], ["telescope"], ["ordinary"]],
   // Sentence ends alone leave three pages at five lines, which overflows the 1080×1920 caption
   // block. The extra breaks split those three on a phrase boundary, keeping each key phrase whole.
   breakAfter: ["system.", "combined.", "disappears.", "Jupiters", "over.", "people.", "star.",
-    "than", "galaxy,", "everywhere.", "ordinary"],
+    "than", "galaxy,", "everywhere.", "eyes,", "ordinary"],
 });
 
 const F = {
