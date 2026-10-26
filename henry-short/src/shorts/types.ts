@@ -12,6 +12,8 @@ export type Staged = {
   flip?: (f: number) => boolean;
   /** Procedural motion layered on top of the keyed pose, e.g. a walk bob. */
   extra?: (f: number) => Pose;
+  /** Wraps this figure alone — a picture frame that crops it, say. */
+  frame?: React.FC<{ children: React.ReactNode }>;
 };
 
 // The same short rendered a different way: its own set, its own figures, its own choreography.

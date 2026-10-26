@@ -3,10 +3,11 @@ import alignment from "../../generated/six-wives.alignment.json";
 import { makeEdit } from "../../edit";
 import type { Short } from "../types";
 import { beats } from "./beats";
-import { drawnAnne, drawnHenry, paintedAnne, paintedHenry } from "../../chars/actors";
+import { bustAnne, bustHenry, drawnAnne, drawnHenry, paintedAnne, paintedHenry } from "../../chars/actors";
 import { holbeinKeys } from "./holbein-keys";
 import { illustratedKeys } from "./illustrated-keys";
-import { DrawnHall, PaintedHall, PaperCutout } from "./sets";
+import { portraitKeys } from "./portrait-keys";
+import { DrawnHall, framed, Hung, PaintedHall, PaperCutout, PortraitGallery } from "./sets";
 import { props, ui } from "./ui";
 
 const edit = makeEdit({
@@ -23,6 +24,7 @@ const edit = makeEdit({
 const F = beats(edit);
 const drawn = illustratedKeys(F);
 const painted = holbeinKeys(F);
+const portrait = portraitKeys(F);
 
 // She walks off with the settlement; a bob per step while she is crossing.
 const walkBob = (scale: number) => (f: number) =>
@@ -68,6 +70,15 @@ export const anneOfCleves: Short = {
           keys: painted.anne(L),
           extra: (f) => ({ skirt: { y: walkBob(40)(f) } }),
         },
+      ],
+    },
+    {
+      id: "Portrait",
+      Set: PortraitGallery,
+      Figures: Hung,
+      cast: () => [
+        { actor: bustHenry, mark: 742, keys: portrait.henry(), frame: framed(560, 214, 364, 470) },
+        { actor: bustAnne, mark: 1155, keys: portrait.anne(), frame: framed(962, 300, 386, 430) },
       ],
     },
   ],

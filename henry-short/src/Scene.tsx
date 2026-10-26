@@ -64,9 +64,14 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
       <Camera L={L} zoom={zoom} shake={shake}>
         <Set />
         <Figures>
-          {cast.map((s, i) => (
-            <Figure key={s.actor.name} staged={s} seed={i + 1} mark={s.mark} debug={debug} />
-          ))}
+          {cast.map((s, i) => {
+            const Frame = s.frame ?? React.Fragment;
+            return (
+              <Frame key={s.actor.name}>
+                <Figure staged={s} seed={i + 1} mark={s.mark} debug={debug} />
+              </Frame>
+            );
+          })}
         </Figures>
         {short.props?.(L)}
       </Camera>
