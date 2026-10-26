@@ -13,7 +13,10 @@ export type Layout = {
   marks: { left: number; right: number }; // the two standing positions on the set (stage x)
   ui: { top: number; scale: number }; // title cards and banners
   stampTop: number;
-  captions: { top: number; fontSize: number; maxWidth: number };
+  // 9:16 has a tall empty lower third, so a fixed top keeps the first line at the same height on
+  // every page. 16:9 has about 125px under the artwork — barely two lines — so its block hangs
+  // from the bottom instead and grows upward only when a page needs the room.
+  captions: { anchor: "top" | "bottom"; y: number; fontSize: number; maxWidth: number };
 };
 
 // 1080×1920: a ~885-unit-wide slice of the set; the set must extend above and below the 16:9 area.
@@ -25,7 +28,7 @@ const VERTICAL: Layout = {
   marks: { left: 760, right: 1180 },
   ui: { top: 150, scale: 1 },
   stampTop: 700,
-  captions: { top: 1480, fontSize: 72, maxWidth: 940 },
+  captions: { anchor: "top", y: 1480, fontSize: 72, maxWidth: 940 },
 };
 
 // 1920×1080: the whole set, characters spread wider, captions on one line at the bottom.
@@ -37,7 +40,7 @@ const WIDE: Layout = {
   marks: { left: 640, right: 1300 },
   ui: { top: 40, scale: 0.8 },
   stampTop: 330,
-  captions: { top: 955, fontSize: 54, maxWidth: 1600 },
+  captions: { anchor: "bottom", y: 24, fontSize: 54, maxWidth: 1600 },
 };
 
 export const useLayout = (): Layout => {

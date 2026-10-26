@@ -21,7 +21,7 @@ export const Captions: React.FC<{ words: CutWord[] }> = ({ words: WORDS }) => {
         position: "absolute",
         left: (width - c.maxWidth) / 2,
         right: (width - c.maxWidth) / 2,
-        top: c.top,
+        [c.anchor]: c.y,
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
