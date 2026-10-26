@@ -31,7 +31,8 @@
     "align": "python3 -I tools/align.py",
     "new-short": "node tools/new-short.mjs",
     "publishable": "node tools/check-licences.mjs --publish",
-    "tts": "python3 -I tools/tts.py"
+    "tts": "python3 -I tools/tts.py",
+    "sfx": "python3 -I tools/sfx.py"
   },
   "allowScripts": {
     "esbuild": false
