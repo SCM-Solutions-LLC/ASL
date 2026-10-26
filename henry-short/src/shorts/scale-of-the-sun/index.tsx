@@ -16,10 +16,12 @@ const edit = makeEdit({
   cut: [{ from: "Jupiter is the biggest", to: "anything else.", tail: 0.4 }],
   keyPhrases: [["biggest"], ["combined."], ["disappears."], ["thousand"], ["average."], ["ninety", "percent"],
     ["Proxima", "Centauri,"], ["telescope"], ["ordinary"]],
-  // Sentence ends alone leave three pages at five lines, which overflows the 1080×1920 caption
-  // block. The extra breaks split those three on a phrase boundary, keeping each key phrase whole.
-  breakAfter: ["system.", "combined.", "disappears.", "Jupiters", "over.", "people.", "star.",
-    "than", "galaxy,", "everywhere.", "eyes,", "ordinary"],
+  // Sentence ends alone leave pages at five lines, which overflows the 1080×1920 caption block.
+  // These break the long ones on a phrase boundary, keeping each key phrase whole. Only words that
+  // are NOT already a sentence end belong here, and a word that occurs twice breaks at both: an
+  // earlier list carried "star." and "over.", which were harmless at one occurrence each and
+  // shredded four sentences once the Proxima lines added more.
+  breakAfter: ["Jupiters", "than", "galaxy,", "eyes,", "ordinary"],
 });
 
 const F = {
@@ -29,6 +31,9 @@ const F = {
   thousand: edit.at("thousand"),
   average: edit.at("average."),
   ninety: edit.at("ninety"),
+  proxima: edit.at("proxima"),
+  telescope: edit.at("telescope"),
+  like: edit.at("like."),
   ordinary: edit.at("ordinary"),
   voEnd: edit.voEnd,
 };
@@ -77,6 +82,13 @@ const HUNDRED = Array.from({ length: 100 }, (_, i) => ({
   big: BRIGHT.has(i),
 }));
 
+// Proxima is one of the ninety, not a new object: the dot that flies out is slot 55 of the grid,
+// keeping its colour. Its radius is 0.154 of the Sun's, so against the Sun's 96 it is 15 — the
+// same real ratio the rest of the short trades in.
+const PROXIMA_SLOT = 55;
+const PROXIMA_FROM = { x: HUNDRED[PROXIMA_SLOT].x, y: 548 + HUNDRED[PROXIMA_SLOT].y, r: 5.5 };
+const PROXIMA_TO = { x: 1255, y: 300, r: 15 };
+
 const SolarScene: React.FC = () => {
   const f = useCurrentFrame();
 
@@ -102,6 +114,12 @@ const SolarScene: React.FC = () => {
   const field = ramp(f, F.ninety, F.ninety + 20);
 
   const row = ramp(f, F.combined, F.combined + 14);
+
+  // The nearest star leaves the grid, then needs magnifying, then the nine-in-ten that are not
+  // like it go out, which is what "most of the galaxy" means.
+  const fly = ramp(f, F.proxima, F.proxima + 26);
+  const scope = ramp(f, F.telescope, F.telescope + 18);
+  const dim = 1 - ramp(f, F.like, F.like + 22);
 
   return (
     <>
@@ -142,15 +160,43 @@ const SolarScene: React.FC = () => {
                 borderRadius: "50%",
                 background: s.big ? "#ffe9a8" : "#c4502a",
                 boxShadow: s.big ? "0 0 16px rgba(255,200,90,0.7)" : "0 0 8px rgba(200,70,30,0.5)",
+                opacity: i === PROXIMA_SLOT ? 1 - fly : s.big ? dim : 1,
               }}
             />
           ))}
         </div>
       ) : null}
 
+      {fly > 0 ? (
+        <>
+          <Body
+            x={PROXIMA_FROM.x + (PROXIMA_TO.x - PROXIMA_FROM.x) * fly}
+            y={PROXIMA_FROM.y + (PROXIMA_TO.y - PROXIMA_FROM.y) * fly}
+            r={PROXIMA_FROM.r + (PROXIMA_TO.r - PROXIMA_FROM.r) * fly}
+            look={LOOKS.dwarf}
+          />
+          {scope > 0 ? (
+            <div
+              style={{
+                position: "absolute",
+                left: PROXIMA_TO.x - 58,
+                top: PROXIMA_TO.y - 58,
+                width: 116,
+                height: 116,
+                borderRadius: "50%",
+                border: "2px solid rgba(196,210,240,0.55)",
+                opacity: scope,
+                scale: 1.4 - 0.4 * scope,
+              }}
+            />
+          ) : null}
+        </>
+      ) : null}
+
       <Tag x={700} y={120} text="JUPITER" sub="2.5× every other planet" from={F.biggest} to={F.disappears + 6} />
       <Tag x={640} y={96} text="≈ 1,000 JUPITERS" sub="and room left over" from={F.thousand + 6} to={F.average} />
       <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} />
+      <Tag x={600} y={96} text="PROXIMA CENTAURI" sub="0.15× the Sun's radius" from={F.proxima + 12} />
     </>
   );
 };
