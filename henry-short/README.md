@@ -1,34 +1,55 @@
-# Henry VIII "six wives" short — style test
+# History/STEM shorts — pipeline
 
-Remotion project for the history/STEM shorts channel. One VO, one edit, rendered in two looks and two formats.
+Remotion project for the shorts channel. A script and a VO go in; a short comes out in every look
+it defines, at 9:16 and 16:9.
 
-| Composition | Look | Format |
+A **short** is one module under `src/shorts/`. Listing it in `src/shorts/index.ts` registers its
+compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
+
+| Short | Looks | Cut from |
 |---|---|---|
-| `AnneHolbein` / `AnneHolbeinWide` | $0: Holbein's public-domain portraits as cut-outs | 9:16 / 16:9 |
-| `AnneCutout` / `AnneCutoutWide` | Placeholder shapes for an illustrated kit (style B route) | 9:16 / 16:9 |
+| `anne-of-cleves` | `Illustrated`, `Holbein` | the hook plus the Anne of Cleves beat, 14.5s |
+| `catherine-of-aragon` | `Illustrated` | wife one, 7.4s — built on `src/moves` as a pipeline test |
 
-The cut is the hook ("The fourth wife beat them all") plus the Anne of Cleves beat, 14.5s.
+Both are cut from the same `six-wives` VO: one recording can carry several shorts.
 
 ## Run
 
 ```bash
 npm i
-npx remotion studio            # preview
-npx remotion render AnneHolbein out/anne_holbein_9x16.mp4
-npm run lint                   # typecheck, and refuse a cut built on stale word timings
-npm run align                  # regenerate word timings after a new VO (needs ELEVENLABS_API_KEY, requests)
-python3 tools/cut.py           # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
+npx remotion studio                       # preview every short in every look
+npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
+npm run new-short -- <slug>               # scaffold a new short
+npm run lint                              # typecheck, and refuse a cut built on stale word timings
+npm run align -- <vo-slug>                # regenerate word timings after a new VO (needs ELEVENLABS_API_KEY, requests)
+python3 tools/cut.py                      # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
+
+## Making a short
+
+1. `npm run new-short -- <slug>` scaffolds `src/shorts/<slug>/`.
+2. Name the slices of the VO by what is **spoken**, never by source frame.
+3. Hang every beat off a spoken word with `edit.at("word")`.
+4. Write the choreography out of `src/moves`, dropping to raw keyframes where a beat needs it.
+5. List the short in `src/shorts/index.ts`.
 
 ## Layout
 
-- `src/rig/` — cut-out rig engine: parts with pivots, keyframed poses, idle breathing/blinks.
-- `script/anne-of-cleves.txt` — the spoken script: the input to both the VO and the alignment.
-- `tools/align.py` → `src/generated/alignment.json` — word timings for the current `public/vo.wav`, stamped with its SHA-256. Generated, never hand-edited; `npm run lint` fails if the VO has moved on without them.
-- `src/edit.ts` — which slices of `public/vo.wav` are used, named by what is spoken (`"Wife four"` … `"beloved sister."`) rather than by source frame, so regenerating the VO re-resolves the cut instead of breaking it. Every animation beat is keyed to a spoken word via `at("word")`.
+### Pipeline
+- `script/<vo>.txt` — the spoken script: the input to both the VO and the alignment.
+- `tools/align.py` → `src/generated/<vo>.alignment.json` — word timings for `public/vo/<vo>.wav`, stamped with its SHA-256. Generated, never hand-edited; `npm run lint` fails if the VO has moved on without them.
+- `src/edit.ts` — `makeEdit` turns an alignment plus a list of spoken anchors into frames, captions and `at("word")`. One VO can feed several shorts.
+- `src/Scene.tsx` — renders any short in any look. `src/Root.tsx` registers short × look × format.
 - `src/layout.ts` — scenes are staged once on a wide set; 9:16 and 16:9 are camera framings plus their own caption/title placement.
+
+### Figures
+- `src/rig/` — cut-out rig engine: parts with pivots, keyframed poses, idle breathing/blinks.
+- `src/rig/cast.ts` — **roles and expressions**. Figures rigged different ways do not share joints, so moves are written against roles (`root`, `head`, `armL`…) and each figure maps what it has. A move that reaches for a joint a figure lacks performs the part of itself that it can.
+- `src/moves/` — named gestures (`doubleTake`, `point`, `bob`, `cheer`, `hop`, `twirl`…) that any figure can perform. The point of the role layer.
+- `src/chars/figure.tsx` — a gowned figure from a palette and a silhouette, so a new person is a few colours rather than a new rig.
+- `src/chars/actors.ts` — who can appear, and what their joints and faces are called. Short-agnostic.
 - `src/chars/pd.tsx` + `src/kit_pd.json` — Holbein rigs built from the parts `tools/cut.py` produces.
-- `src/chars/henry.tsx`, `anne.tsx` — placeholder rigs (neutral A-pose part spec for an illustrated kit).
+- `src/chars/henry.tsx`, `anne.tsx` — the hand-built illustrated rigs the first short was cut on.
 - `src/ui/` — captions with key-word highlights, title card, stamp, prizes, banner.
 
 ## Sources and licences
