@@ -1,6 +1,8 @@
 import React from "react";
 import { Composition } from "remotion";
 import { Scene } from "./Scene";
+import { SHEET, Sheet } from "./chars/kit/Sheet";
+import { STYLES } from "./chars/kit/styles";
 import { SHORTS } from "./shorts";
 import type { Short } from "./shorts/types";
 
@@ -32,6 +34,19 @@ const ENTRIES = SHORTS.flatMap((short) =>
 
 export const RemotionRoot: React.FC = () => (
   <>
+    {/* One still per style: the whole cast side by side, for choosing a look. */}
+    {STYLES.map((s) => (
+      <Composition
+        key={`kit-${s.id}`}
+        id={`kit-${s.id}`}
+        component={Sheet}
+        durationInFrames={1}
+        fps={30}
+        width={SHEET.width}
+        height={SHEET.height}
+        defaultProps={{ styleId: s.id }}
+      />
+    ))}
     {ENTRIES.map((e) => (
       <Composition
         key={e.id}

@@ -8,7 +8,7 @@ import type { Actor } from "../rig/cast";
 // short-agnostic on purpose: the same Henry walks into whichever short needs him.
 
 // Illustrated figures pose eyes, brows and mouth separately, so each expression is a combination.
-const drawnFaces = {
+export const drawnFaces = {
   neutral: { eyes: { v: "default" }, brows: { v: "default" }, mouth: { v: "default" } },
   shocked: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" } },
   unimpressed: { eyes: { v: "side" }, brows: { v: "raised" } },
@@ -19,7 +19,7 @@ const drawnFaces = {
   wink: { eyes: { v: "wink" } },
 };
 
-const drawnRoles = {
+export const drawnRoles = {
   root: "torso",
   body: "torso",
   head: "head",
