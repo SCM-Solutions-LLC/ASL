@@ -56,14 +56,15 @@ export const TitleCard: React.FC<{ from: number; to: number; kicker: string; tit
 
 export const Stamp: React.FC<{ from: number; to: number; text: string }> = ({ from, to, text }) => {
   const frame = useCurrentFrame();
-  const s = interpolate(frame, [from, from + 5], [2.4, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
+  // The overshoot is capped so the word is still inside the frame on the thud, not a red blur.
+  const s = interpolate(frame, [from, from + 5], [1.45, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
   const o = interpolate(frame, [from, from + 3, to, to + 6], [0, 1, 1, 0], clamp);
-  const { stampTop } = useLayout();
+  const { stamp } = useLayout();
   return (
     <div
       style={{
         position: "absolute",
-        top: stampTop,
+        top: stamp.top,
         left: 0,
         right: 0,
         display: "flex",
@@ -80,7 +81,7 @@ export const Stamp: React.FC<{ from: number; to: number; text: string }> = ({ fr
           padding: "0 30px",
           background: "rgba(255,240,220,0.75)",
           rotate: "-12deg",
-          scale: `${s}`,
+          scale: `${s * stamp.scale}`,
         }}
       >
         {text}

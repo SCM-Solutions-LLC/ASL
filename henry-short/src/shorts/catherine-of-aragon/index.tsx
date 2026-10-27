@@ -79,7 +79,8 @@ export const catherineOfAragon: Short = {
   ui: () => (
     <>
       <TitleCard from={F.name} to={F.years - 6} kicker="WIFE #1 · 1509" title="CATHERINE OF ARAGON" />
-      <Stamp from={F.annulled} to={F.broke + 10} text="ANNULLED" />
+      {/* Out before Henry is on his mark: it punctuates the word, it does not sit on the scene. */}
+      <Stamp from={F.annulled} to={F.henry - 12} text="ANNULLED" />
     </>
   ),
   camera: {

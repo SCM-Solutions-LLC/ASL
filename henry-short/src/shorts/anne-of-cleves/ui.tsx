@@ -5,7 +5,7 @@ import type { Beats } from "./beats";
 // Props sit in the scene, in stage units, so the camera moves them with the set.
 const PRIZES = (L: Layout): { palace: [number, number]; castle: [number, number] } =>
   L.vertical
-    ? { palace: [1240, 190], castle: [1000, 170] }
+    ? { palace: [1200, 95], castle: [880, 95] }
     : { palace: [1620, 330], castle: [960, 340] };
 
 export const props = (F: Beats) => (L: Layout) => (
