@@ -72,7 +72,6 @@ Assets generated on the free plan, all of which are affected:
 | Asset | Used by |
 |---|---|
 | `public/vo/six-wives.wav` | every `anne-of-cleves-*` and `catherine-of-aragon-*` composition |
-| `public/henry_vo_v3.mp3` | not currently referenced in `src/` |
 | `public/sfx/*.wav` (7 files) | beat hits in both shorts |
 
 The non-obvious cost was in the edit, not the audio. `src/words.json` held absolute
@@ -112,8 +111,9 @@ So regenerating the VO now costs one `npm run align`, not a re-measured edit.
 4. Keep the current audio for style tests, but do not post them publicly. Free-plan
    audio needs the `elevenlabs.io` title credit even when shared non-commercially. Private
    style tests are unaffected, which is all these files are used for today.
-5. Delete `public/henry_vo_v3.mp3` unless it is needed. Nothing in `src/` references it,
-   and it is a non-commercially-licensed file sitting in the repo.
+5. ~~Delete `public/henry_vo_v3.mp3` unless it is needed.~~ Done — nothing in `src/` referenced
+   it, and it was a non-commercially-licensed file sitting in the repo. Its `public/SOURCES.json`
+   entry went with it, so `npm run publishable` now passes.
 
 ## Note for future sessions
 

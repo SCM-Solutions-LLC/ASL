@@ -12,12 +12,6 @@
   "ship": true,
   "note": "Synthesised from numpy rather than sourced, so there is no provenance to verify: the only thing to audit is tools/sfx.py. Deterministic — re-running rewrites all seven byte for byte. Replaced free-plan ElevenLabs renders, which carried no commercial licence."
  },
- "public/henry_vo_v3.mp3": {
-  "source": "Generated with ElevenLabs on the free plan",
-  "licence": "none",
-  "ship": false,
-  "note": "Unreferenced by any short. Safe to delete outright — nothing imports it."
- },
  "public/kit/pd/henry/*.png": {
   "source": "Henry VIII, full length, after Hans Holbein the Younger, Walker Art Gallery — via Wikimedia Commons",
   "licence": "public-domain",
