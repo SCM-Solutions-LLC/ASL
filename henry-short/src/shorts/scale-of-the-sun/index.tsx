@@ -75,7 +75,10 @@ const ROW = (() => {
 // Ninety of a hundred stars smaller and redder than ours. The ten are scattered rather than
 // lined up in a column, because the claim is "one in ten anywhere", not "the last column".
 const BRIGHT = new Set([3, 17, 24, 38, 41, 56, 62, 75, 88, 93]);
-const GRID = 44;
+// 16:9 shows the set 1:1 with its captions hanging from the bottom, so nothing here may sit below
+// about y 850 or a two-line page covers it. The grid is sized to end above that line.
+const GRID = 35;
+const FIELD_TOP = 516;
 const HUNDRED = Array.from({ length: 100 }, (_, i) => ({
   x: 960 - (GRID * 9) / 2 + (i % 10) * GRID,
   y: Math.floor(i / 10) * GRID,
@@ -86,7 +89,7 @@ const HUNDRED = Array.from({ length: 100 }, (_, i) => ({
 // keeping its colour. Its radius is 0.154 of the Sun's, so against the Sun's 96 it is 15 — the
 // same real ratio the rest of the short trades in.
 const PROXIMA_SLOT = 55;
-const PROXIMA_FROM = { x: HUNDRED[PROXIMA_SLOT].x, y: 548 + HUNDRED[PROXIMA_SLOT].y, r: 5.5 };
+const PROXIMA_FROM = { x: HUNDRED[PROXIMA_SLOT].x, y: FIELD_TOP + HUNDRED[PROXIMA_SLOT].y, r: 5.5 };
 const PROXIMA_TO = { x: 1255, y: 300, r: 15 };
 
 const SolarScene: React.FC = () => {
@@ -139,7 +142,7 @@ const SolarScene: React.FC = () => {
       {jFade > 0 ? <Body x={jx} y={jy} r={jr} look={LOOKS.jupiter} opacity={jFade} /> : null}
 
       {row > 0 && f < F.disappears + 10 ? (
-        <div style={{ position: "absolute", left: 0, top: 860, opacity: row }}>
+        <div style={{ position: "absolute", left: 0, top: 730, opacity: row }}>
           {ROW.map((o, i) => (
             <Body key={i} x={o.x} y={0} r={o.r} look={LOOKS[o.k]} />
           ))}
@@ -147,7 +150,7 @@ const SolarScene: React.FC = () => {
       ) : null}
 
       {field > 0 ? (
-        <div style={{ position: "absolute", left: 0, top: 548, opacity: field }}>
+        <div style={{ position: "absolute", left: 0, top: FIELD_TOP, opacity: field }}>
           {HUNDRED.map((s, i) => (
             <div
               key={i}
@@ -196,7 +199,8 @@ const SolarScene: React.FC = () => {
       <Tag x={700} y={120} text="JUPITER" sub="2.5× every other planet" from={F.biggest} to={F.disappears + 6} />
       <Tag x={640} y={96} text="≈ 1,000 JUPITERS" sub="and room left over" from={F.thousand + 6} to={F.average} />
       <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} />
-      <Tag x={600} y={96} text="PROXIMA CENTAURI" sub="0.15× the Sun's radius" from={F.proxima + 12} />
+      {/* Over Proxima, not the Sun: one line is too wide to sit right of the Sun in the 9:16 crop. */}
+      <Tag x={1110} y={96} text={"PROXIMA\nCENTAURI"} sub="0.15× the Sun's radius" from={F.proxima + 12} />
     </>
   );
 };
