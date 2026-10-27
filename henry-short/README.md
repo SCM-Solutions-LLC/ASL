@@ -124,11 +124,11 @@ declared; `npm run publishable` fails while anything undeclared or unpublishable
 This exists because the project lost a complete voice-over to a licence nobody checked before
 generating it, which is not fixable after the fact.
 
-Currently blocked for publishing: the VO and every SFX, generated with ElevenLabs on the free plan,
-which grants no commercial licence. They must be regenerated on a paid tier with a **GA** model —
-Beta Services are carved out of the commercial licence on every paid tier. See
-[docs/vo-licensing.md](docs/vo-licensing.md) for the finding and why regenerating moves every
-word-synced beat.
+Nothing is currently blocked. The VO and SFX were originally generated with ElevenLabs on the free
+plan, which grants no commercial licence and never grants one retroactively; both were replaced with
+locally-generated audio — Kokoro-82M for the read, numpy synthesis for the SFX. See
+[docs/vo-licensing.md](docs/vo-licensing.md) for the terms behind that and why regenerating a VO
+moves every word-synced beat.
 
 ## Known issues
 
