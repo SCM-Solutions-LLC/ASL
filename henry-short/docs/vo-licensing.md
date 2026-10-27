@@ -1,13 +1,15 @@
-# VO and SFX licensing — can this channel publish on ElevenLabs free-plan audio?
+# VO and SFX licensing — why this channel does not use ElevenLabs
 
-Status: **confirmed against ElevenLabs' own terms, decision pending Saawan.** Verified 2026-10-26.
+Status: **resolved, nothing outstanding.** ElevenLabs terms verified 2026-10-26. The audio those
+terms applied to has since been replaced. Kept as the reference behind that decision, and as the
+terms to re-read if anyone reconsiders ElevenLabs.
 
 ## Short answer
 
-No. The audio currently in `public/` cannot ship on a monetised channel, and upgrading
-later does not fix the files that already exist — they have to be regenerated on a paid
-plan. Budget impact is small ($6/month); the schedule impact is the part worth planning
-for, because regenerating the VO invalidates the word timings this edit is built on.
+Nothing under `public/` is licence-blocked. `npm run publishable` passes — 23 files declared, all
+clear. The free-plan ElevenLabs audio this doc was written about is gone: the voice-over is now
+Kokoro-82M (Apache-2.0, run locally) and the seven SFX are synthesised from numpy, both declared
+`ship: true` in `public/SOURCES.json`.
 
 ## Source
 
@@ -36,9 +38,10 @@ Verbatim, from that article:
 
 What that settles:
 
-- **No retroactive licence, explicitly.** "Before or after" is their wording. The audio in
-  `public/` was generated on the free plan and can never be used commercially, however
-  long the account is paid afterwards. It has to be regenerated during a paid subscription.
+- **No retroactive licence, explicitly.** "Before or after" is their wording. The audio that was in
+  `public/` had been generated on the free plan, so it could never be used commercially however long
+  the account was paid afterwards — regenerating it was the only route, and that is the finding this
+  whole decision turned on.
 - **Rights survive cancellation.** Anything generated *while* paid stays commercially
   usable "indefinitely". Paying continuously is not required to keep using audio already
   made — only to make more.
@@ -56,64 +59,75 @@ What that settles:
   Terms, so sound effects and music are not automatically covered on the same footing as
   TTS. Check those before relying on generated SFX commercially. Eleven Music additionally
   carries its own free-plan attribution string ("Eleven Music") rather than `elevenlabs.io`.
-- **Pricing, from elevenlabs.io/pricing:** Free is $0. Starter is **$6/month**, currently
-  advertised with a first month at 83% off ($1) under a promo marked "Until Nov 1".
-  Every paid tier carries the commercial licence, so Starter is sufficient.
+- **Pricing, as of 2026-10-26:** Free is $0. Starter was **$6/month**, advertised with a first
+  month at 83% off ($1) under a promo marked "Until Nov 1". Every paid tier carries the commercial
+  licence, so Starter would have been enough. Both the prices and the tiers move — re-read the
+  pricing page rather than this bullet.
 
 Unrelated worry, checked and cleared: ElevenLabs watermarks their generated audio, but per
 [their own article](https://elevenlabs.io/docs/help-center/legal/audio-detector/will-watermarks-cause-my-content-to-be-flagged-downranked-or-demonetized-on-you-tube-or-other-platforms)
 no other platform can currently detect those watermarks, and they are not tied to any
 platform's monetisation or content policy. The watermark is not a demonetisation risk.
 
-## What this means for this repo
+## What was affected, and what replaced it
 
-Assets generated on the free plan, all of which are affected:
+| Asset | Was | Is now |
+|---|---|---|
+| `public/vo/six-wives.wav` | free-plan ElevenLabs read | Kokoro-82M, `npm run tts -- six-wives` |
+| `public/sfx/*.wav` (7 files) | free-plan ElevenLabs renders | numpy synthesis, `npm run sfx` |
 
-| Asset | Used by |
-|---|---|
-| `public/vo/six-wives.wav` | every `anne-of-cleves-*` and `catherine-of-aragon-*` composition |
-| `public/sfx/*.wav` (7 files) | beat hits in both shorts |
+`six-wives.wav` is the read for every `anne-of-cleves-*` and `catherine-of-aragon-*` composition;
+the SFX carry the beat hits in both. `public/vo/scale-of-the-sun.wav` was never an ElevenLabs file
+— Kokoro from the start.
 
-The non-obvious cost was in the edit, not the audio. `src/words.json` held absolute
-timings measured against one specific render of `vo.wav`, and `SEGMENTS` in `src/edit.ts`
-hardcoded source frame ranges into that same render. A regenerated VO — even from an
-identical script and voice — would not land on the same frames, so **every `at("word")`
-beat in the edit moved.**
+The non-obvious cost was in the edit, not the audio. `src/words.json` held absolute timings measured
+against one specific render of the VO, and the cut hardcoded source frame ranges into that same
+render. A regenerated VO — even from an identical script and voice — would not land on the same
+frames, so **every `at("word")` beat in the edit moved.**
 
-**Fixed.** Alignment is now a build step, not a committed measurement:
+That is structural now, not a committed measurement:
 
-- `script/anne-of-cleves.txt` is the spoken script, the input to both the VO and alignment.
-- `tools/align.py` aligns the current `public/vo.wav` against it and writes
-  `src/generated/alignment.json`, stamped with the VO's SHA-256. It refuses to write
-  timings whose words disagree with the script.
-- `SEGMENTS` in `src/edit.ts` names its slices by what is spoken — `"Wife four"` through
-  `"beloved sister."` — so a new VO re-resolves the same cut at new frames. Verified: against
-  a simulated re-render (1.4s later, 3% slower) the segments relocate from 0–65 and 842–1188
-  to 38–109 and 909–1266 with the same 39 words and every beat intact.
-- `npm run lint` hashes `public/vo.wav` and fails if it has changed without `npm run align`
-  being re-run, so stale timings cannot reach a render silently.
+- `script/<slug>.txt` is the spoken script, the input to both the VO and its timings.
+- `tools/tts.py` speaks it with Kokoro and writes `public/vo/<slug>.wav` and
+  `src/generated/<slug>.alignment.json` in one pass, stamped with the WAV's SHA-256. Seeded, so the
+  same script, voice, speed and seed reproduce the same audio.
+- `tools/align.py` stays for audio recorded elsewhere — a human read — where the timings have to be
+  measured rather than generated alongside the audio.
+- A short's `cut` names its slices by what is spoken rather than by frame:
+  `{ from: "Wife four", to: "beloved sister." }` in `src/shorts/anne-of-cleves/index.ts`. A new read
+  re-resolves the same cut at new frames. Verified: against a simulated re-render (1.4s later, 3%
+  slower) the segments relocate from 0–65 and 842–1188 to 38–109 and 909–1266 with the same 39
+  words and every beat intact.
+- `npm run lint` hashes the audio each `alignment.json` names and fails if the WAV has moved on
+  without its timings, so stale timings cannot reach a render silently.
 
-So regenerating the VO now costs one `npm run align`, not a re-measured edit.
+So regenerating a VO costs one `npm run tts -- <slug>` and a look at the beats, not a re-measured edit.
 
-## Recommendation
+## What was decided
 
-1. Take the Starter tier, $6/month. It is the cheapest thing that makes the problem go
-   away, it is well inside budget, and the alternatives cost more than they save —
-   recording your own voice costs you time on every one of 3–5 shorts a week, and a
-   self-hosted open-source TTS model costs setup plus quality for a licence that costs
-   about one coffee a month. The first-month promo expires Nov 1 if that matters.
-2. Regenerate `vo.wav` and the SFX on the paid plan before anything is published, using
-   a generally-available model and voice — not a beta one, or the commercial licence does
-   not attach. Do not publish on the current files, with or without attribution.
-3. ~~Make alignment a build step in the same pass, so regenerating the VO is cheap.~~ Done —
-   run `npm run align -- six-wives` after the new VO lands. The one untested path is the ElevenLabs API
-   call itself; `--from-words` converts a saved response if the key route misbehaves.
-4. Keep the current audio for style tests, but do not post them publicly. Free-plan
-   audio needs the `elevenlabs.io` title credit even when shared non-commercially. Private
-   style tests are unaffected, which is all these files are used for today.
-5. ~~Delete `public/henry_vo_v3.mp3` unless it is needed.~~ Done — nothing in `src/` referenced
-   it, and it was a non-commercially-licensed file sitting in the repo. Its `public/SOURCES.json`
-   entry went with it, so `npm run publishable` now passes.
+Kokoro-82M, self-hosted, over the $6/month ElevenLabs Starter tier.
+
+This doc originally recommended the opposite — take Starter, since it costs "about one coffee a
+month" against a self-hosted model that "costs setup plus quality." Worth recording why that was
+wrong, because the mistake is easy to repeat: it priced the licence and ignored the exposure. A
+hosted terms page can change under a video that is already published, and the Beta Services
+carve-out above means a paid tier is not even a blanket grant — every model switch has to be
+re-checked for GA status. An Apache-2.0 model on our own machine has no per-character cost, no terms
+page, and nothing to re-check. The quality gap turned out to be acceptable for a narrated history
+short.
+
+What is still true and worth keeping:
+
+- **Free-plan ElevenLabs audio is never publishable**, with or without attribution. The commercial
+  licence is not retroactive — "before or after" is their wording — so nothing generated on the
+  free plan becomes usable by paying later. This is what cost the project its first voice-over.
+- **If ElevenLabs is ever reconsidered**, confirm the model and voice are generally available, not
+  beta, and re-confirm on every model switch. The Beta carve-out covers "any production
+  environment", not just monetisation.
+- **`tools/align.py` still calls `api.elevenlabs.io`** for forced alignment and needs
+  `ELEVENLABS_API_KEY`. It is the last ElevenLabs dependency in the repo, unused by the Kokoro path
+  since `tools/tts.py` writes its own timings. It returns word timings rather than audio, but check
+  the Service-Specific Terms before leaning on it for anything publishable.
 
 ## Note for future sessions
 
