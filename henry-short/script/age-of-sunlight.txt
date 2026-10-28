@@ -14,18 +14,40 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    which is where the light we actually see leaves.
 
 2. "A hundred thousand years old."
-   The time energy takes to cross the radiative zone, from the fusing core to the
-   base of the convective zone. This is the softest number in the script, and the
-   published figures disagree by more than an order of magnitude. Mitalas & Sills
-   (1992), "On the photon diffusion time scale for the Sun", ApJ 401, 759, compute
-   ~1.7e5 years; other treatments give ~1e4 to ~1e5; and the naive random walk with
-   a millimetre mean free path over-estimates into the millions because it ignores
-   how the opacity falls off outward. "A hundred thousand" is a round figure inside
-   the accepted range, not a measured value.
-   Tighter alternatives if one is wanted: "tens of thousands of years" is safe and
-   uncontested, and "about a hundred and seventy thousand years" is the usual
-   citable figure. Confirm the Mitalas & Sills volume and page against the journal
-   before this goes out — it is quoted here from memory, not from the paper.
+   The softest number in the script, and the one to read before changing a word of
+   it: what the answer is depends on which quantity is being timed.
+
+   As a photon random walk out of the core: Mitalas & Sills, "On the Photon
+   Diffusion Time Scale for the Sun", ApJ 401, 759 (December 1992),
+   doi:10.1086/172103, bibcode 1992ApJ...401..759M, get 1.7e5 years. Their actual
+   contribution is the step length. Earlier work assumed 0.5-1.0 cm, which makes
+   the diffusion time an order of magnitude too SHORT; a solar model gives 0.090 cm
+   instead, and the shorter step is what pushes the time up to 1.7e5. Note the
+   direction: the millimetre-scale step is the corrected figure, not the naive one.
+   An earlier draft of this file had that backwards.
+
+   As the time for the Sun's energy to get out: Stix (2003, Solar Physics) argues
+   the photon diffusion time is not the quantity people mean, because most of the
+   interior's thermal energy sits in the random motions of electrons and ions
+   rather than in photons. Allowing for that heat capacity puts the thermal
+   adjustment time at order 1e7 years, and he quotes 3e7 as the right order of
+   magnitude. So the published answers span 1.7e5 to ~1.7e7 depending on the
+   question.
+
+   This short is making the photon claim — its whole turn is that no photon
+   survives the climb — so Mitalas & Sills is the figure it rests on, and "a
+   hundred thousand" is a round number a little under their 1.7e5. What is NOT
+   safe is to gloss this as the time for the Sun's energy to escape, full stop:
+   that is the reading Stix objects to, and the script's "the rest was getting
+   out" sits closer to it than is comfortable. If a citable number is wanted,
+   "about a hundred and seventy thousand years" is it, and it would mean
+   re-recording the line and re-cutting the ≈100,000 YEARS tag with it.
+
+   Provenance: the Mitalas & Sills entry is confirmed against ADS and Semantic
+   Scholar (page range given as 759-760 by Semantic Scholar, 759-761 elsewhere);
+   the abstract's own wording is the source for the step lengths and for the
+   "too short by an order of magnitude" direction. The Stix figures are from
+   secondary reports of that paper, not from the paper itself.
 
 3. "The rest was getting out."
    Core out to ~0.7 solar radii is the radiative zone, where the energy diffuses
