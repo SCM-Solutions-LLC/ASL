@@ -11,6 +11,7 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 | `anne-of-cleves` | `Illustrated`, `Holbein` | the hook plus the Anne of Cleves beat, 14.5s |
 | `catherine-of-aragon` | `Illustrated` | wife one, 7.4s — built on `src/moves` as a pipeline test |
 | `scale-of-the-sun` | `Space` | its own Kokoro VO, 60.3s, no cast at all |
+| `age-of-sunlight` | `Space` | drafted from its script, 19.1s, no VO recorded yet, no cast at all |
 
 The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
 
