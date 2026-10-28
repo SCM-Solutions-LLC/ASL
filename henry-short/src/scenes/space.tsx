@@ -1,5 +1,6 @@
 import React from "react";
 import { useCurrentFrame } from "remotion";
+import { SERIF } from "../fonts";
 
 // Scene pieces for space shorts. Nothing here is a figure: the subject is the object and its
 // scale, so the short composes bodies and a starfield instead of staging a cast.
@@ -164,8 +165,8 @@ export const Tag: React.FC<{
   if (t <= 0) return null;
   return (
     <div style={{ position: "absolute", left: x, top: y, opacity: t, translate: `0 ${(1 - t) * 14}px`, textAlign: align, transform: align === "right" ? "translateX(-100%)" : undefined }}>
-      <div style={{ fontFamily: "Georgia, serif", fontSize: 44, letterSpacing: 3, whiteSpace: "pre-line", color: "#f4ecd8", textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{text}</div>
-      {sub ? <div style={{ fontFamily: "Georgia, serif", fontSize: 28, color: "#c3b48f", marginTop: 4, textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{sub}</div> : null}
+      <div style={{ fontFamily: SERIF, fontSize: 44, letterSpacing: 3, whiteSpace: "pre-line", color: "#f4ecd8", textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{text}</div>
+      {sub ? <div style={{ fontFamily: SERIF, fontSize: 28, color: "#c3b48f", marginTop: 4, textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{sub}</div> : null}
     </div>
   );
 };

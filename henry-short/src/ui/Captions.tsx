@@ -1,6 +1,7 @@
 import React from "react";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import type { CutWord } from "../edit";
+import { CAPTION } from "../fonts";
 import { useLayout } from "../layout";
 
 const GOLD = "#f1c74f";
@@ -26,7 +27,7 @@ export const Captions: React.FC<{ words: CutWord[] }> = ({ words: WORDS }) => {
         flexWrap: "wrap",
         justifyContent: "center",
         gap: "10px 18px",
-        fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif",
+        fontFamily: CAPTION,
         fontWeight: 900,
         fontSize: c.fontSize,
         lineHeight: 1.15,
