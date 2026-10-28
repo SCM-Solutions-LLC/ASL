@@ -1,0 +1,52 @@
+The sunlight on your skin is a hundred thousand years old.
+Eight minutes of that was the trip from the Sun.
+The rest was getting out.
+But it is not the same light.
+No photon survives the climb.
+The energy is ancient. The light is eight minutes old.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+1. "Eight minutes of that was the trip from the Sun."
+   1 AU = 149,597,870.7 km; c = 299,792.458 km/s, so 499.0 s = 8 min 19 s from the
+   photosphere to Earth. Uncontested. "From the Sun" means its visible surface,
+   which is where the light we actually see leaves.
+
+2. "A hundred thousand years old."
+   The time energy takes to cross the radiative zone, from the fusing core to the
+   base of the convective zone. This is the softest number in the script, and the
+   published figures disagree by more than an order of magnitude. Mitalas & Sills
+   (1992), "On the photon diffusion time scale for the Sun", ApJ 401, 759, compute
+   ~1.7e5 years; other treatments give ~1e4 to ~1e5; and the naive random walk with
+   a millimetre mean free path over-estimates into the millions because it ignores
+   how the opacity falls off outward. "A hundred thousand" is a round figure inside
+   the accepted range, not a measured value.
+   Tighter alternatives if one is wanted: "tens of thousands of years" is safe and
+   uncontested, and "about a hundred and seventy thousand years" is the usual
+   citable figure. Confirm the Mitalas & Sills volume and page against the journal
+   before this goes out — it is quoted here from memory, not from the paper.
+
+3. "The rest was getting out."
+   Core out to ~0.7 solar radii is the radiative zone, where the energy diffuses
+   and claim 2's time is spent. From 0.7 R to the surface is the convective zone,
+   which carries energy by bulk motion of plasma in weeks to months — negligible
+   against the radiative-zone figure. That is why the short animates a long grind
+   and then a fast break-out, rather than one uniform crawl.
+
+4. "But it is not the same light. No photon survives the climb."
+   Fusion in the core emits gamma rays. Those are absorbed and re-emitted by the
+   plasma countless times on the way out, each interaction degrading the energy,
+   and what leaves the photosphere is a ~5,772 K blackbody spectrum: mostly visible
+   light. One core gamma photon's energy ends up spread over of order a million
+   visible photons (~1 MeV divided by ~2 eV). So no individual photon makes the
+   trip, which is exactly the part the popular version of this fact drops. It is
+   in the script because without it the hook is false.
+
+5. "The energy is ancient. The light is eight minutes old."
+   Rests on claims 1, 2 and 4. No new number.
+
+6. Zone fractions used by the animation, not spoken.
+   Fusion is essentially all inside 0.25 R; the radiative/convective boundary is at
+   ~0.7 R; core ~15.7 million K against a ~5,772 K photosphere. Standard solar
+   model figures, uncontested at this precision.
