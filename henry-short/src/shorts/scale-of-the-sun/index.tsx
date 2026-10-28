@@ -35,22 +35,31 @@ const F = {
   telescope: edit.at("telescope"),
   like: edit.at("like."),
   ordinary: edit.at("ordinary"),
-  voEnd: edit.voEnd,
 };
 
 const ramp = (f: number, a: number, b: number, from = 0, to = 1) =>
   interpolate(f, [a, b], [from, to], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
 
-// Exactly n points spread evenly over a disc, so "a thousand" on screen really is a thousand.
-const phyllotaxis = (n: number, radius: number) => {
+// Exactly n points spread evenly over a unit disc. The field is drawn as a fraction of whatever
+// radius the Sun has at that frame, so it fills the Sun instead of holding a size of its own.
+const phyllotaxis = (n: number) => {
   const golden = Math.PI * (3 - Math.sqrt(5));
   return Array.from({ length: n }, (_, i) => {
-    const rr = radius * Math.sqrt((i + 0.5) / n);
+    const rr = Math.sqrt((i + 0.5) / n);
     return [rr * Math.cos(i * golden), rr * Math.sin(i * golden)] as const;
   });
 };
 
-const THOUSAND = phyllotaxis(1000, 470);
+const THOUSAND = phyllotaxis(1000);
+// "and still have room left over" is the line, so the gap between the outermost Jupiters and the
+// Sun's limb has to be on screen too, not just the Jupiters.
+const FILL = 0.886;
+
+// Where the Sun settles to be counted. Its arrival overshoots to a frame-swallowing 520 — that is
+// the "Jupiter disappears" beat and it is meant to spill past both crops — but the counting beat
+// cannot: at 330 the whole limb and the whole thousand sit inside the 9:16 window (885 units wide)
+// and above the 16:9 caption line. A field you cannot see the edge of is a claim, not a picture.
+const HOLD = { y: 470, r: 330 };
 
 // The other seven planets at their true radii relative to Jupiter, laid out touching-but-for-a-gap
 // so the row is as wide as the planets are rather than as wide as a fixed grid. Saturn really is
@@ -92,6 +101,13 @@ const PROXIMA_SLOT = 55;
 const PROXIMA_FROM = { x: HUNDRED[PROXIMA_SLOT].x, y: FIELD_TOP + HUNDRED[PROXIMA_SLOT].y, r: 5.5 };
 const PROXIMA_TO = { x: 1255, y: 300, r: 15 };
 
+// The closing line puts the Sun back among the stars it was measured against, so it flies into the
+// grid and becomes one of the ten bright dots — slot 56, next door to the hole Proxima left. Same
+// hand-off Proxima makes, run the other way: slot 56's own dot is never relit, because from here
+// on the Sun is that dot.
+const SUN_SLOT = 56;
+const SUN_TO = { x: HUNDRED[SUN_SLOT].x, y: FIELD_TOP + HUNDRED[SUN_SLOT].y, r: 11 };
+
 const SolarScene: React.FC = () => {
   const f = useCurrentFrame();
 
@@ -104,35 +120,47 @@ const SolarScene: React.FC = () => {
   const jy = ramp(f, F.disappears - 6, F.disappears + 16, 420, 300);
   const jFade = 1 - ramp(f, F.thousand - 8, F.thousand + 6);
 
-  // The Sun arrives from below, swallows the frame, then shrinks to show how ordinary it is.
-  const sr = interpolate(f, [F.disappears - 6, F.disappears + 18, F.average, F.average + 22], [0, 520, 520, 96], {
+  // The Sun arrives from below and swallows the frame, pulls back far enough to be counted,
+  // shrinks to show how ordinary it is, and finally joins the field it was measured against.
+  const sunKeys = [F.disappears - 6, F.disappears + 18, F.thousand - 10, F.thousand + 12,
+    F.average, F.average + 22, F.ordinary, F.ordinary + 34];
+  const sr = interpolate(f, sunKeys, [0, 520, 520, HOLD.r, HOLD.r, 96, 96, SUN_TO.r], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const sy = interpolate(f, [F.disappears - 6, F.disappears + 18, F.average, F.average + 22], [1500, 760, 760, 300], {
+  const sy = interpolate(f, sunKeys, [1500, 760, 760, HOLD.y, HOLD.y, 300, 300, SUN_TO.y], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
+  const sx = ramp(f, F.ordinary, F.ordinary + 34, 960, SUN_TO.x);
   const dots = ramp(f, F.thousand, F.thousand + 20);
   const field = ramp(f, F.ninety, F.ninety + 20);
 
   const row = ramp(f, F.combined, F.combined + 14);
 
-  // The nearest star leaves the grid, then needs magnifying, then the nine-in-ten that are not
-  // like it go out, which is what "most of the galaxy" means.
+  // The nearest star leaves the grid, then needs magnifying, then the one-in-ten that are NOT like
+  // Proxima go out, leaving the ninety that are — which is what "most of the galaxy" means.
   const fly = ramp(f, F.proxima, F.proxima + 26);
   const scope = ramp(f, F.telescope, F.telescope + 18);
   const dim = 1 - ramp(f, F.like, F.like + 22);
+
+  // On "ordinary" the Sun drops into the grid and the nine it belongs with come back up around it.
+  // The line is that the Sun only LOOKS ordinary, so it has to land among the ten, not the ninety.
+  const join = ramp(f, F.ordinary, F.ordinary + 34);
+  // The landing itself: the Sun hands over to slot 56's own dot and the nine light with it. Short,
+  // and only once it is down — a long fade-up leaves ten grey smudges beside the descending Sun,
+  // and a Sun still wearing its own gradient reads as an eleventh thing rather than one of ten.
+  const land = ramp(f, F.ordinary + 26, F.ordinary + 34);
 
   return (
     <>
       {sr > 1 ? (
         <>
-          <Body x={960} y={sy} r={sr} look={LOOKS.sun} />
+          <Body x={sx} y={sy} r={sr} look={LOOKS.sun} opacity={1 - land} />
           {dots > 0 && f < F.average ? (
-            <div style={{ position: "absolute", left: 960, top: sy, opacity: dots * 0.9 }}>
+            <div style={{ position: "absolute", left: sx, top: sy, opacity: dots * 0.9 }}>
               {THOUSAND.map(([dx, dy], i) => (
-                <div key={i} style={{ position: "absolute", left: dx - 4, top: dy - 4, width: 8, height: 8, borderRadius: "50%", background: "#6b4526" }} />
+                <div key={i} style={{ position: "absolute", left: dx * sr * FILL - 4, top: dy * sr * FILL - 4, width: 8, height: 8, borderRadius: "50%", background: "#6b4526" }} />
               ))}
             </div>
           ) : null}
@@ -163,7 +191,11 @@ const SolarScene: React.FC = () => {
                 borderRadius: "50%",
                 background: s.big ? "#ffe9a8" : "#c4502a",
                 boxShadow: s.big ? "0 0 16px rgba(255,200,90,0.7)" : "0 0 8px rgba(200,70,30,0.5)",
-                opacity: i === PROXIMA_SLOT ? 1 - fly : s.big ? dim : 1,
+                opacity:
+                  i === PROXIMA_SLOT ? 1 - fly
+                    : i === SUN_SLOT ? Math.max(dim * (1 - join), land)
+                      : s.big ? Math.max(dim, land)
+                        : 1,
               }}
             />
           ))}
@@ -197,10 +229,14 @@ const SolarScene: React.FC = () => {
       ) : null}
 
       <Tag x={700} y={120} text="JUPITER" sub="2.5× every other planet" from={F.biggest} to={F.disappears + 6} />
-      <Tag x={640} y={96} text="≈ 1,000 JUPITERS" sub="and room left over" from={F.thousand + 6} to={F.average} />
-      <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} />
+      {/* Above the settled limb rather than beside it: at 885 units wide, the 9:16 crop has no
+          "beside" left once the Sun is big enough to pour a thousand Jupiters into. */}
+      <Tag x={740} y={18} text="≈ 1,000 JUPITERS" sub="and room left over" from={F.thousand + 6} to={F.average} />
+      <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} to={F.ordinary + 6} />
       {/* Over Proxima, not the Sun: one line is too wide to sit right of the Sun in the 9:16 crop. */}
       <Tag x={1110} y={96} text={"PROXIMA\nCENTAURI"} sub="0.15× the Sun's radius" from={F.proxima + 12} />
+      {/* The same label re-hung on the dot the Sun became, so the last shot says which one is ours. */}
+      <Tag x={1140} y={666} text="THE SUN" sub="one of the ten" from={F.ordinary + 34} />
     </>
   );
 };
