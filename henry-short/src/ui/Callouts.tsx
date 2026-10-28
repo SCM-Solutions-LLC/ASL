@@ -1,5 +1,6 @@
 import React from "react";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
+import { SANS, SERIF } from "../fonts";
 import { useLayout } from "../layout";
 
 const INK = "#1d1208";
@@ -29,7 +30,7 @@ export const Badge: React.FC<{ from: number; to: number; x: number; y: number; t
         border: `8px solid ${INK}`,
         display: "grid",
         placeItems: "center",
-        font: "900 64px 'Arial Black', Arial, sans-serif",
+        font: `900 64px ${SANS}`,
         color: INK,
         scale: `${s}`,
         rotate: "-8deg",
@@ -47,16 +48,20 @@ export const TitleCard: React.FC<{ from: number; to: number; kicker: string; tit
   return (
     <div style={{ position: "absolute", top: ui.top, left: 0, right: 0, display: "flex", justifyContent: "center", translate: `0px ${y}px`, scale: `${ui.scale}`, transformOrigin: "50% 0%" }}>
       <div style={{ background: INK, color: "#fff", padding: "18px 40px 22px", borderRadius: 18, border: `6px solid ${GOLD}`, textAlign: "center" }}>
-        <div style={{ font: "800 38px Arial, sans-serif", color: GOLD, letterSpacing: 4 }}>{kicker}</div>
-        <div style={{ font: "900 72px 'Arial Black', Arial, sans-serif" }}>{title}</div>
+        <div style={{ font: `800 38px ${SANS}`, color: GOLD, letterSpacing: 4 }}>{kicker}</div>
+        <div style={{ font: `900 72px ${SANS}` }}>{title}</div>
       </div>
     </div>
   );
 };
 
-export const Stamp: React.FC<{ from: number; to: number; text: string }> = ({ from, to, text }) => {
+// Slams down to land on `at`, the beat its thud and camera shake are keyed to, and fades out at `to`.
+// The slam starts before the beat so the oversized, frame-clipped part of the fall is over by then.
+const SLAM = 5;
+export const Stamp: React.FC<{ at: number; to: number; text: string }> = ({ at, to, text }) => {
   const frame = useCurrentFrame();
-  const s = interpolate(frame, [from, from + 5], [2.4, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
+  const from = at - SLAM;
+  const s = interpolate(frame, [from, at], [2.4, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
   const o = interpolate(frame, [from, from + 3, to, to + 6], [0, 1, 1, 0], clamp);
   const { stampTop } = useLayout();
   return (
@@ -73,7 +78,7 @@ export const Stamp: React.FC<{ from: number; to: number; text: string }> = ({ fr
     >
       <div
         style={{
-          font: "900 150px 'Arial Black', Arial, sans-serif",
+          font: `900 150px ${SANS}`,
           color: "#c4161c",
           border: "14px solid #c4161c",
           borderRadius: 20,
@@ -113,7 +118,7 @@ export const Prize: React.FC<{ from: number; x: number; y: number; icon: "palace
           )}
         </g>
       </svg>
-      <div style={{ font: "900 40px 'Arial Black', Arial, sans-serif", color: "#fff", WebkitTextStroke: `8px ${INK}`, paintOrder: "stroke fill" }}>{label}</div>
+      <div style={{ font: `900 40px ${SANS}`, color: "#fff", WebkitTextStroke: `8px ${INK}`, paintOrder: "stroke fill" }}>{label}</div>
     </div>
   );
 };
@@ -131,7 +136,7 @@ export const Banner: React.FC<{ from: number; text: string }> = ({ from, text })
           border: `7px solid ${INK}`,
           borderRadius: 12,
           padding: "22px 44px",
-          font: "900 62px Georgia, 'Times New Roman', serif",
+          font: `900 62px ${SERIF}`,
           color: "#7a1420",
           textAlign: "center",
           maxWidth: 900,

@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill } from "remotion";
+import { SERIF } from "../../fonts";
 import { buildFigure } from "./build";
 import { KITS } from "./roster";
 import { styleById } from "./styles";
@@ -19,7 +20,7 @@ const label = (text: string): string => text.replace(/-/g, " ");
 export const Sheet: React.FC<{ styleId: string }> = ({ styleId }) => {
   const style = styleById(styleId);
   return (
-    <AbsoluteFill style={{ background: style.paper, fontFamily: "Georgia, serif", color: style.ink }}>
+    <AbsoluteFill style={{ background: style.paper, fontFamily: SERIF, color: style.ink }}>
       <div style={{ position: "absolute", top: 38, left: FIRST, fontSize: 50, letterSpacing: 1 }}>
         {style.label}
       </div>

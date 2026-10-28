@@ -35,5 +35,11 @@
   "licence": "apache-2.0",
   "ship": true,
   "note": "Apache-2.0 model run on our own machine: no per-character cost and no terms page that can change under a published video. The exact entry for six-wives.wav above overrides this one until that file is replaced."
+ },
+ "public/fonts/*": {
+  "source": "Copied unmodified from the Debian fonts-liberation (Liberation 2.1) and fonts-inter (Inter 4.0) packages, with each package's copyright file as LICENSE-*.txt beside them",
+  "licence": "ofl-1.1",
+  "ship": true,
+  "note": "The faces the cloud renderer was already substituting for Arial Black, Arial, Georgia and Helvetica Neue, pinned so that every machine draws what QA measured. OFL allows bundling with the project; only selling the fonts on their own, or a modified copy under the reserved names, is ruled out. See src/fonts.ts."
  }
 }

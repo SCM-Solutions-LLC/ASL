@@ -20,7 +20,7 @@ export const props = (F: Beats) => (L: Layout) => (
 export const ui = (F: Beats) => () => (
   <>
     <TitleCard from={F.wife4} to={F.henry + 20} kicker="WIFE #4 · 1540" title="ANNE OF CLEVES" />
-    <Stamp from={F.annulled} to={F.walked + 6} text="ANNULLED" />
+    <Stamp at={F.annulled} to={F.walked + 6} text="ANNULLED" />
     <Banner from={F.kings - 6} text={"“The King’s Beloved Sister”"} />
   </>
 );
