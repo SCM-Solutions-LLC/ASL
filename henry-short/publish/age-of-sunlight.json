@@ -1,0 +1,15 @@
+{
+  "look": "Space",
+  "title": "The sunlight on your skin is 100,000 years old",
+  "caption": "The light hitting you left the Sun 8 minutes ago. The energy in it started the trip about 100,000 years earlier.",
+  "description": "Light crosses from the Sun's surface to Earth in 8 minutes 19 seconds. Getting from the core to the surface takes far longer: energy is absorbed and re-emitted so many times on the way out that no single photon survives the climb. 100,000 years is a round figure under the published 170,000.",
+  "sources": [
+    "Mitalas & Sills, \"On the Photon Diffusion Time Scale for the Sun\", ApJ 401, 759 (1992), doi:10.1086/172103",
+    "1 AU = 149,597,870.7 km (IAU 2012); c = 299,792.458 km/s"
+  ],
+  "hashtags": {
+    "tiktok": ["space", "sun", "physics", "learnontiktok"],
+    "youtube": ["Shorts", "space", "sun", "physics"],
+    "instagram": ["space", "sun", "physics", "science", "astronomy"]
+  }
+}
