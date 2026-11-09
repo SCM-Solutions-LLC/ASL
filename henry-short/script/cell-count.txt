@@ -14,9 +14,15 @@ the Number of Human and Bacteria Cells in the Body", PLoS Biology 14(8): e100253
 (20-30 years old, 70 kg, 170 cm) and the authors put the uncertainty at roughly
 25%, with person-to-person variation on top (they quote ~50%). Every figure in
 the script is therefore a round number for one standard body, not a measurement
-of the viewer. The figures below are quoted from memory of the paper and were
-not re-fetched for this draft: check them against the paper's abstract and
-Table 3 before publishing.
+of the viewer.
+
+Provenance (checked 9 Nov 2026): 3.0e13, 3.8e13 and 0.2 kg are in the paper's
+abstract. The 84% red-blood-cell share, the ~75% muscle-and-fat share of cell
+mass, the 25% uncertainty, the ~52-53% person-to-person variation and the
+defecation remark were confirmed against the BioNumbers entry for the paper
+(ID 113005) and Science News / Weizmann coverage of it. The paper's own full
+text and Table 3 were not opened: the PLoS and PMC hosts were not reachable
+from the session that did the check. No figure in the script changed.
 
 1. "By cell count, you are less than half human."
    3.0e13 human cells against 3.8e13 bacteria: 30 of 68 trillion is 44%. This is

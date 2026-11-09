@@ -12,14 +12,23 @@ Provenance for the whole file: these figures were written from the standard
 published account of the Kola Superdeep Borehole (Kozlovsky, ed., "The Superdeep
 Well of the Kola Peninsula", Springer 1987; Kozlovsky, "The World's Deepest
 Well", Scientific American 251(6), December 1984) as it is commonly reported.
-Nothing here was re-checked against those sources in this session. The depth,
-the dates and the Earth's radius are uncontested; the two soft numbers are
-flagged where they appear.
+The depth, the dates and the Earth's radius are uncontested; the soft numbers
+are flagged where they appear.
+
+Checked 9 Nov 2026 against secondary sources (the Wikipedia article as returned
+by search, HowStuffWorks, Works in Progress, EarthDate), not against Kozlovsky:
+confirmed are the 24 May 1970 start, 12,262 m, the 23 cm bore, 180 °C against
+an expected 100 °C, the 1992 stop, the 6 June 1979 passing of Bertha Rogers at
+9,583 m, 12,000 m in 1983, and that it is still the deepest hole by true
+vertical depth. Not confirmed: the 35 km crust figure (claim 5) and the 300 °C
+projection (claim 7). No spoken line changed.
 
 1. "The deepest hole humans have ever dug..."
    Kola Superdeep Borehole, branch SG-3, Kola Peninsula, USSR (now Russia):
    12,262 m true vertical depth, reached in 1989. Still the deepest point ever
-   reached by drilling.
+   reached by drilling. Most sources say 1989; at least one Russian-authored
+   account says 1990. The script does not speak the year, but "nineteen years"
+   (claim 3) leans on it.
 
    "Deepest", not "longest", and the difference is real: several oil wells are
    longer measured along the bore — Sakhalin-I extended-reach wells and Qatar's
@@ -50,11 +59,16 @@ flagged where they appear.
    SOFT: 35 km is a round figure for the local Moho depth; published estimates
    for the area run to about 40 km. The claim in the script — that it did not
    get through — holds anywhere in that range; only the "a third of the crust"
-   tag moves, to "under a third".
+   tag moves, to "under a third". The check found "about one-third of the
+   Baltic Shield's crust" in secondary sources but no measured Moho depth for
+   the site, so 35 km is still a recalled figure.
 
 6. "At the bottom, the rock was a hundred and eighty degrees."
    About 180 °C at 12 km, against roughly 100 °C predicted when the well was
-   planned. Celsius; the tag says so, the voice does not.
+   planned. Celsius; the tag says so, the voice does not. Wikipedia attaches
+   the 180 °C reading to 11,882 m, where the last branch was abandoned in 1992,
+   not to the 12,262 m record branch; both are "the bottom" at the rounding the
+   script uses.
 
 7. "Too hot to keep drilling."
    The reason given for stopping: at that temperature the rock behaved more
@@ -71,8 +85,9 @@ flagged where they appear.
 9. Figures used by the animation, not spoken.
    Depth against year: 9,583 m in 1979 (passing the Bertha Rogers well in
    Oklahoma, the previous record), 12,000 m in 1983, 12,262 m in 1989. The
-   counter follows those, which is why it races and then crawls. SOFT: recalled
-   milestones, and the curve between them is a straight-line interpolation.
+   counter follows those, which is why it races and then crawls. The milestones
+   are confirmed (see the provenance note); SOFT only in that the curve between
+   them is a straight-line interpolation.
 
    Earth's layers by radius: inner core to 1,221 km, outer core to 3,480 km,
    mantle above that, crust drawn at the 35 km of claim 5. Standard PREM
