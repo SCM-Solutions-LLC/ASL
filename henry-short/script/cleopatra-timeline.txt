@@ -7,6 +7,11 @@ To Cleopatra, the pyramids were already ancient history.
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
+Checked 9 Nov 2026: c. 2560 BC and Khufu's c. 2589-2566 BC are the conventional
+dates in general reference works (World History Encyclopedia, New World
+Encyclopedia); the arithmetic in 3, 4, 5 and 7 was recomputed and is right.
+Cleopatra's dates and Apollo 11's were not re-fetched; they are not in doubt.
+
 1. "The pyramid was finished around twenty-five sixty BC."
    The Great Pyramid of Giza was built for Khufu, whose reign is conventionally
    given as c. 2589-2566 BC; c. 2560 BC is the usual round figure for its
