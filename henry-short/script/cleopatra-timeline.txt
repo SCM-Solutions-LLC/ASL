@@ -1,0 +1,49 @@
+Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.
+The pyramid was finished around twenty-five sixty BC.
+Cleopatra was born in sixty-nine BC. Two and a half thousand years later.
+From her to Apollo eleven is only two thousand.
+To Cleopatra, the pyramids were already ancient history.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+1. "The pyramid was finished around twenty-five sixty BC."
+   The Great Pyramid of Giza was built for Khufu, whose reign is conventionally
+   given as c. 2589-2566 BC; c. 2560 BC is the usual round figure for its
+   completion. This is the softest number in the script: Old Kingdom chronology
+   carries an uncertainty of several decades, and published dates for Khufu
+   differ by that much between chronologies. "Around" is in the line for that
+   reason. The uncertainty is tens of years against a margin of about 450, so
+   it cannot change the comparison.
+
+2. "Cleopatra was born in sixty-nine BC."
+   Cleopatra VII Philopator: born early 69 BC (some reconstructions put it in
+   late 70), died August 30 BC. Uncontested at this precision. She was the last
+   ruler of the Ptolemaic dynasty and Macedonian Greek by descent, which is why
+   the title card says "Queen of Egypt" rather than "Egyptian queen".
+
+3. "Two and a half thousand years later."
+   2560 BC to 69 BC is 2,491 years. Rounded up in the read; the on-screen count
+   is the unrounded 2,491.
+
+4. "From her to Apollo eleven is only two thousand."
+   Apollo 11 landed on 20 July 1969. From 69 BC to AD 1969 is 2,037 years —
+   68 + 1,969, because there is no year zero. The on-screen count is 2,037.
+   Measured from her death in 30 BC instead, it is 1,998.
+
+5. "Cleopatra lived closer to the Moon landing than to the building of the
+   Great Pyramid."
+   Rests on 1-4: 2,491 years back against 2,037 forward from her birth, a
+   difference of 454, which is the figure on the closing label. From her death
+   the gap is wider still (2,530 against 1,998). The claim holds on either
+   reckoning and for any defensible date for the pyramid.
+
+6. "To Cleopatra, the pyramids were already ancient history."
+   Follows from 3. No new number. The pyramids were standing, famous and
+   visited in her time — "ancient history", not ruins.
+
+7. Scale used by the animation, not spoken.
+   The three markers are placed along the line in proportion to the years
+   (astronomical year numbering: -2559, -68, 1969), so Cleopatra stands 55.0%
+   of the way from the pyramid to the Moon. The positions are computed from the
+   dates in the code, not placed by eye.

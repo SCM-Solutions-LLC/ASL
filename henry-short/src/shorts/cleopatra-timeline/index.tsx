@@ -1,0 +1,301 @@
+import React from "react";
+import { Easing, interpolate, useCurrentFrame } from "remotion";
+import { makeDraftEdit } from "../../edit";
+import { SANS } from "../../fonts";
+import type { Layout } from "../../layout";
+import { STAGE } from "../../layout";
+import { bob, doubleTake, eyeRoll, face, hop, knock, point, relax, settle } from "../../moves";
+import { bind } from "../../rig/cast";
+import { TitleCard } from "../../ui/Callouts";
+import type { Short } from "../types";
+import { cleopatra } from "./cast";
+import { DesertDusk } from "./set";
+
+// A history short with one figure and a ruler. The claim is a comparison of two lengths of time, so
+// the frame is a timeline drawn to scale with Cleopatra standing on her own year: the viewer can
+// see which end she is nearer before the numbers arrive.
+//
+// Drafted with makeDraftEdit: word timings are estimated from SCRIPT and there is nothing to play
+// yet. Recording it means `npm run tts -- cleopatra-timeline` and swapping makeDraftEdit for
+// makeEdit against the generated alignment. No beat below moves when that happens, because every
+// one of them hangs off a spoken word rather than a frame number.
+//
+// `npm run lint` checks SCRIPT against script/cleopatra-timeline.txt, which also carries the
+// sources for every number here.
+const SCRIPT = `Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.
+The pyramid was finished around twenty-five sixty BC.
+Cleopatra was born in sixty-nine BC. Two and a half thousand years later.
+From her to Apollo eleven is only two thousand.
+To Cleopatra, the pyramids were already ancient history.`;
+
+const edit = makeDraftEdit({
+  script: SCRIPT,
+  keyPhrases: [["closer"], ["twenty-five", "sixty", "BC."], ["sixty-nine", "BC."], ["only", "two", "thousand."], ["ancient", "history."]],
+  // The hook is fifteen words, which sets five lines at 9:16; breaking it at the comparison's hinge
+  // gives two pages of three.
+  breakAfter: ["landing"],
+});
+
+// Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
+const F = {
+  closer: edit.at("closer"),
+  moon: edit.at("moon"),
+  than: edit.at("than"),
+  building: edit.at("building"),
+  great: edit.at("great"),
+  pyramid: edit.at("pyramid", 1),
+  finished: edit.at("finished"),
+  built: edit.at("twenty-five"),
+  born: edit.at("born"),
+  bornYear: edit.at("sixty-nine"),
+  back: edit.at("two"),
+  later: edit.at("later."),
+  from: edit.at("from"),
+  apollo: edit.at("apollo"),
+  only: edit.at("only"),
+  twoThousand: edit.at("two", 1),
+  to: edit.at("cleopatra", 2),
+  already: edit.at("already"),
+  ancient: edit.at("ancient"),
+  voEnd: edit.voEnd,
+};
+
+// The dates, in astronomical year numbering so the arithmetic is honest across the missing year
+// zero: 2560 BC is -2559, 69 BC is -68. Everything on screen — where she stands, how long each
+// span is, the counts on the labels — is computed from these three numbers.
+const YEAR = { pyramid: -2559, cleopatra: -68, apollo: 1969 };
+const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,491
+const FORWARD = YEAR.apollo - YEAR.cleopatra; // 2,037
+const SHARE = BACK / (YEAR.apollo - YEAR.pyramid); // 0.550: how far along the line she stands
+
+// The line has to fit whichever crop is showing. 9:16 is an 885-unit window (x 517–1403), less
+// what the slow push-in takes off each side, so its line is 600 long; 16:9 has the whole set.
+const line = (L: Layout) => {
+  const [x0, x1] = L.vertical ? [690, 1290] : [380, 1540];
+  // 16:9 has barely a caption line of room under the floor, so its dates sit on the hem instead.
+  return { x0, x1, cleo: x0 + (x1 - x0) * SHARE, k: L.vertical ? 1 : 1.25, pillY: L.vertical ? FLOOR + 12 : FLOOR - 26 };
+};
+
+const FLOOR = STAGE.floor;
+const INK = "#1d1208";
+const GOLD = "#f1c74f";
+const PAPER = "#f6e7c1";
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const ramp = (f: number, a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+const pop = (f: number, at: number) => interpolate(f, [at, at + 8], [0, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
+const fmt = (n: number) => n.toLocaleString("en-US");
+
+// The Great Pyramid as flat shapes: a lit face, a shaded face, a few courses. It rises out of the
+// sand rather than popping, because it is the oldest thing on screen and should feel planted.
+const Pyramid: React.FC<{ x: number; k: number; t: number }> = ({ x, k, t }) => {
+  const w = 220 * k;
+  const h = 170 * k;
+  return (
+    <div style={{ position: "absolute", left: x - w / 2, top: FLOOR - h, width: w, height: h, overflow: "hidden" }}>
+      <svg width={w} height={h} viewBox="0 0 220 170" style={{ translate: `0 ${(1 - t) * h}px` }}>
+        <path d="M110 4 L216 170 L4 170 Z" fill="#e2b46a" />
+        <path d="M110 4 L216 170 L140 170 Z" fill="#a8733a" />
+        {[50, 90, 130].map((y) => (
+          <path key={y} d={`M${110 - (y - 4) * 0.638} ${y} L${110 + (y - 4) * 0.638} ${y}`} stroke="#8a5a2b" strokeWidth={3} opacity={0.55} />
+        ))}
+      </svg>
+    </div>
+  );
+};
+
+// The Moon with a flag in it: the one detail that says 1969 rather than just "the Moon".
+const Moon: React.FC<{ x: number; y: number; k: number; t: number }> = ({ x, y, k, t }) => {
+  const r = 66 * k;
+  return (
+    <div style={{ position: "absolute", left: x - r, top: y - r, width: r * 2, height: r * 2, scale: `${t}` }}>
+      <svg width={r * 2} height={r * 2} viewBox="-80 -110 160 190" style={{ overflow: "visible" }}>
+        <circle r={78} fill="rgba(240,236,220,0.16)" />
+        <circle r={64} fill="#e9e5d6" />
+        <path d="M0 -64 A64 64 0 0 1 0 64 A40 64 0 0 0 0 -64 Z" fill="#c9c4b2" opacity={0.7} />
+        <circle cx={-24} cy={-14} r={13} fill="#cfcabb" />
+        <circle cx={14} cy={26} r={9} fill="#cfcabb" />
+        <circle cx={-12} cy={32} r={6} fill="#cfcabb" />
+        <path d="M-6 -62 L-6 -104" stroke={INK} strokeWidth={5} strokeLinecap="round" />
+        <path d="M-4 -104 L30 -98 L-4 -84 Z" fill="#c4161c" stroke={INK} strokeWidth={3} strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+};
+
+// A date on the line. Centred on the floor so all three read as marks on one ruler.
+const Pill: React.FC<{ x: number; y: number; text: string; t: number; hot?: boolean }> = ({ x, y, text, t, hot }) =>
+  t <= 0 ? null : (
+    <div style={{ position: "absolute", left: x, top: y, width: 0, height: 0, scale: `${t}` }}>
+      <div
+        style={{
+          position: "absolute",
+          translate: "-50% -50%",
+          whiteSpace: "nowrap",
+          padding: "4px 16px 6px",
+          borderRadius: 14,
+          background: hot ? GOLD : PAPER,
+          border: `5px solid ${INK}`,
+          font: `900 32px ${SANS}`,
+          color: INK,
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+
+// A measured stretch of the line: a bracket that draws from `a` toward `b`, and the count over it.
+const Span: React.FC<{ a: number; b: number; y: number; years: number; draw: number; label: number; hot?: boolean; dim?: number }> = ({
+  a,
+  b,
+  y,
+  years,
+  draw,
+  label,
+  hot,
+  dim = 1,
+}) => {
+  if (draw <= 0) return null;
+  const end = a + (b - a) * draw;
+  const [l, r] = [Math.min(a, end), Math.max(a, end)];
+  const c = hot ? GOLD : PAPER;
+  const tick = (x: number) => (
+    <div style={{ position: "absolute", left: x - 4, top: y - 18, width: 8, height: 36, borderRadius: 4, background: c, boxShadow: `0 0 0 3px ${INK}` }} />
+  );
+  return (
+    <div style={{ opacity: dim }}>
+      <div style={{ position: "absolute", left: l, top: y - 4, width: r - l, height: 8, background: c, boxShadow: `0 0 0 3px ${INK}` }} />
+      {tick(a)}
+      {draw >= 1 ? tick(b) : null}
+      {label > 0 ? (
+        <div style={{ position: "absolute", left: (a + b) / 2, top: y - 30, width: 0, height: 0, scale: `${label}` }}>
+          <div style={{ position: "absolute", translate: "-50% -100%", textAlign: "center", whiteSpace: "nowrap" }}>
+            <div style={{ font: `900 ${hot ? 64 : 54}px ${SANS}`, lineHeight: 1, color: hot ? GOLD : "#fff", WebkitTextStroke: `9px ${INK}`, paintOrder: "stroke fill" }}>
+              {fmt(years)}
+            </div>
+            <div style={{ font: `900 26px ${SANS}`, letterSpacing: 3, color: "#fff", WebkitTextStroke: `7px ${INK}`, paintOrder: "stroke fill" }}>YEARS</div>
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+};
+
+const Timeline: React.FC<{ L: Layout }> = ({ L }) => {
+  const f = useCurrentFrame();
+  const { x0, x1, cleo, k, pillY } = line(L);
+  // The spans sit above her diadem and below the title card, which is the only clear band both
+  // crops share. Her hands never go that high: the reveal is a double take, not a cheer.
+  // 16:9 starts at y 0 and loses a little more to the push-in, so its band sits lower.
+  const spanY = L.vertical ? 215 : 238;
+  const tagY = L.vertical ? 44 : 64;
+  const moonY = 430;
+
+  const drawn = ramp(f, F.closer, F.than + 6);
+  const reveal = ramp(f, F.only, F.twoThousand + 4);
+
+  return (
+    <>
+      {/* The ruler itself, drawn left to right under the hook so the frame is never still. */}
+      {drawn > 0 ? (
+        <div style={{ position: "absolute", left: x0, top: FLOOR + 8, width: (x1 - x0) * drawn, height: 8, borderRadius: 4, background: PAPER, boxShadow: `0 0 0 3px ${INK}` }} />
+      ) : null}
+
+      <Pyramid x={x0} k={k} t={ramp(f, F.building, F.great + 12)} />
+      <Moon x={x1} y={moonY} k={k} t={pop(f, F.moon)} />
+      {/* The Moon hangs over its end of the line; a thread ties it to the year it stands for. */}
+      <div
+        style={{
+          position: "absolute",
+          left: x1 - 2,
+          top: moonY + 66 * k,
+          width: 4,
+          height: (FLOOR - moonY - 66 * k) * ramp(f, F.apollo - 4, F.apollo + 8),
+          background: "rgba(246,231,193,0.55)",
+        }}
+      />
+
+      <Span a={x0} b={cleo} y={spanY} years={BACK} draw={ramp(f, F.back, F.later)} label={pop(f, F.later - 6)} dim={1 - reveal * 0.35} />
+      <Span a={cleo} b={x1} y={spanY} years={FORWARD} draw={ramp(f, F.from + 4, F.only)} label={pop(f, F.twoThousand)} hot />
+
+      <Pill x={x0} y={pillY} text="c. 2560 BC" t={pop(f, F.built)} />
+      <Pill x={cleo} y={pillY} text="69 BC" t={pop(f, F.bornYear)} hot />
+      <Pill x={x1} y={pillY} text="AD 1969" t={pop(f, F.apollo)} />
+
+      {/* The difference, computed rather than typed, as the line that the close lands on. */}
+      {f >= F.already ? (
+        <div style={{ position: "absolute", left: (x0 + x1) / 2, top: tagY, width: 0, height: 0, scale: `${pop(f, F.already)}` }}>
+          <div
+            style={{
+              position: "absolute",
+              translate: "-50% -50%",
+              whiteSpace: "nowrap",
+              padding: "8px 24px 10px",
+              borderRadius: 16,
+              background: INK,
+              border: `5px solid ${GOLD}`,
+              font: `900 36px ${SANS}`,
+              color: "#fff",
+            }}
+          >
+            CLOSER TO APOLLO BY <span style={{ color: GOLD }}>{fmt(BACK - FORWARD)} YEARS</span>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+};
+
+const cleo = bind(cleopatra);
+
+export const cleopatraTimeline: Short = {
+  slug: "cleopatra-timeline",
+  title: "Cleopatra and the Moon landing",
+  edit,
+  looks: [
+    {
+      id: "Illustrated",
+      Set: DesertDusk,
+      cast: (L) => [
+        {
+          actor: cleopatra,
+          // She stands on her own year. That is the whole picture.
+          mark: line(L).cleo,
+          keys: [
+            ...settle(cleo, 0),
+            ...bob(cleo, 8, { dip: 16, tilt: -6 }),
+            // A look up at the Moon as it appears, then an arm thrown back at the pyramid.
+            ...face(cleo, F.moon + 2, { show: "glance", until: F.than }),
+            ...point(cleo, F.building, { side: "L", hold: F.pyramid - F.building - 8 }),
+            ...knock(cleo, F.finished, { deg: -6 }),
+            ...relax(cleo, F.built + 6),
+            ...hop(cleo, F.bornYear, { height: 60 }),
+            ...face(cleo, F.back + 6, { show: "unimpressed", until: F.later + 8 }),
+            ...doubleTake(cleo, F.twoThousand),
+            ...face(cleo, F.twoThousand + 22, { show: "delighted", until: F.to }),
+            // Old news, to her.
+            ...eyeRoll(cleo, F.ancient, { over: 18 }),
+            ...bob(cleo, F.ancient + 20, { dip: 12, tilt: 5 }),
+            ...face(cleo, F.voEnd - 4, { show: "smug" }),
+          ],
+        },
+      ],
+    },
+  ],
+  props: (L) => <Timeline L={L} />,
+  ui: () => <TitleCard from={2} to={F.than - 4} kicker="QUEEN OF EGYPT · 69–30 BC" title="CLEOPATRA" />,
+  camera: {
+    zoom: (f) => interpolate(f, [0, F.voEnd], [1, 1.04], { extrapolateRight: "clamp", easing: Easing.inOut(Easing.sin) }),
+    shake: (f) => (f >= F.twoThousand && f < F.twoThousand + 8 ? Math.sin(f * 2.7) * 7 * (1 - (f - F.twoThousand) / 8) : 0),
+  },
+  sfx: [
+    { at: F.moon, name: "pop" },
+    { at: F.building, name: "rumble", volume: 0.3 },
+    { at: F.built, name: "pop" },
+    { at: F.bornYear, name: "pop" },
+    { at: F.back, name: "whoosh", volume: 0.35 },
+    { at: F.apollo, name: "pop" },
+    { at: F.twoThousand, name: "thud", volume: 0.6 },
+    { at: F.already, name: "sparkle", volume: 0.4 },
+  ],
+};

@@ -1,0 +1,294 @@
+import React from "react";
+import { interpolate, useCurrentFrame } from "remotion";
+import { makeDraftEdit } from "../../edit";
+import { SANS } from "../../fonts";
+import { EarthSection, NightSky } from "../../scenes/earth";
+import { Tag } from "../../scenes/space";
+import type { Short } from "../types";
+
+// A short with no cast. The subject is the Kola Superdeep Borehole and how little of the Earth it
+// got through, so the frame holds a cross-section of the ground and then of the whole planet.
+//
+// Drafted with makeDraftEdit: the word timings are estimated from SCRIPT at a narration pace and
+// there is nothing to play yet. Recording it means `npm run tts -- deepest-hole` and then swapping
+// makeDraftEdit for makeEdit against the generated alignment. No beat below moves when that
+// happens, because every one of them hangs off a spoken word rather than a frame number.
+//
+// `npm run lint` checks SCRIPT against script/deepest-hole.txt, which also holds the sources.
+const SCRIPT = `The deepest hole humans have ever dug is as wide as a dinner plate.
+It took the Soviet Union nineteen years.
+It goes down twelve kilometres.
+And it never made it through the crust.
+At the bottom, the rock was a hundred and eighty degrees. Too hot to keep drilling.
+Twelve kilometres down. The centre of the Earth is six thousand more.`;
+
+const edit = makeDraftEdit({
+  script: SCRIPT,
+  keyPhrases: [["dinner", "plate."], ["nineteen", "years."], ["twelve", "kilometres"], ["crust."],
+    ["hundred", "and", "eighty"], ["six", "thousand"]],
+  // The hook is fourteen words, which is five lines in the 9:16 caption block against the four it
+  // has room for. "dug" occurs once, so it breaks nothing else.
+  breakAfter: ["dug"],
+});
+
+// Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
+const F = {
+  wide: edit.at("wide"),
+  took: edit.at("took"),
+  nineteen: edit.at("nineteen"),
+  kilometres: edit.at("kilometres"),
+  never: edit.at("never"),
+  crust: edit.at("crust."),
+  bottom: edit.at("bottom,"),
+  hundred: edit.at("hundred"),
+  too: edit.at("too"),
+  // The pull back to the whole planet starts on the second "twelve kilometres", so the Earth has
+  // arrived by the time the line about its centre is spoken.
+  back: edit.at("twelve", 1) - 4,
+  centre: edit.at("centre"),
+  six: edit.at("six"),
+  voEnd: edit.voEnd,
+};
+
+const ramp = (f: number, a: number, b: number, from = 0, to = 1) =>
+  interpolate(f, [a, b], [from, to], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+const ease = (t: number) => t * t * (3 - 2 * t);
+
+// Shot A: the ground in section. The well head is at (X, SURF) and depth is drawn downward at a
+// number of stage units per kilometre, which is the only thing the pull-out on "never made it
+// through the crust" changes — so the strata, the shaft and the Moho all move together because
+// they are all the same ruler.
+const X = 960;
+const SURF = 250;
+const DEPTH_KM = 12.262;
+const CRUST_KM = 35;
+// Near: the hole fills the frame, bottoming out at y 716. Far: the whole crust fits above the
+// 16:9 caption line, with the Moho at y 758 and a strip of mantle under it.
+const NEAR = 38;
+const FAR = 14.5;
+
+// Depth against the calendar, 1970–1989, as fractions of the nineteen years: 9,583 m in 1979,
+// 12,000 m in 1983, 12,262 m in 1989. The last 262 metres took six years, and a counter that ran
+// evenly would hide the one thing about this hole that explains why it stopped.
+const depthAt = (p: number) =>
+  interpolate(p, [0, 9 / 19, 13 / 19, 1], [0, 9.583, 12, DEPTH_KM], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+
+// Wide enough to cover both crops with room for the camera shake.
+const SPAN = { left: -500, width: 2920 };
+
+const Derrick: React.FC<{ lamp: number }> = ({ lamp }) => (
+  <div style={{ position: "absolute", left: X - 60, top: SURF - 150, width: 120, height: 150 }}>
+    <svg width={120} height={150} viewBox="0 0 120 150">
+      <g stroke="#d9cdb2" strokeWidth={4} fill="none" strokeLinecap="round">
+        <path d="M60 8 L22 150 M60 8 L98 150" />
+        <path d="M50 46 L70 46 M41 80 L79 80 M31 116 L89 116" />
+        <path d="M50 46 L79 80 M70 46 L41 80 M41 80 L89 116 M79 80 L31 116" strokeWidth={2.5} />
+      </g>
+      <rect x={4} y={132} width={34} height={18} fill="#6f6654" />
+      <circle cx={60} cy={8} r={6} fill="#ff5a3c" opacity={lamp} />
+    </svg>
+  </div>
+);
+
+// The hole seen from above, next to the thing it is as wide as. A loupe rather than a label on the
+// shaft, because at any scale that shows twelve kilometres a 23 cm bore has no width to point at.
+const Loupe: React.FC<{ t: number; plate: number }> = ({ t, plate }) =>
+  t <= 0 ? null : (
+    <div style={{ position: "absolute", left: 740, top: 455, scale: `${t}`, opacity: Math.min(1, t * 2) }}>
+      <div
+        style={{
+          position: "absolute",
+          left: -105,
+          top: -105,
+          width: 210,
+          height: 210,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, #6a5846 0%, #3d3026 100%)",
+          border: "5px solid #f4ecd8",
+          boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", left: 50, top: 50, width: 100, height: 100, borderRadius: "50%", background: "#050403", boxShadow: "inset 0 0 14px 4px #000" }} />
+        {/* The plate drops over the hole and covers it, which is the whole comparison. */}
+        <div
+          style={{
+            position: "absolute",
+            left: 44,
+            top: 44,
+            width: 112,
+            height: 112,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, #ece6d8 0%, #fbf8f0 52%, #d9d2c2 56%, #fbf8f0 60%, #f1ecdf 100%)",
+            boxShadow: "0 6px 16px rgba(0,0,0,0.55)",
+            opacity: plate,
+            scale: `${1.5 - 0.5 * plate}`,
+          }}
+        />
+      </div>
+    </div>
+  );
+
+const Ground: React.FC = () => {
+  const f = useCurrentFrame();
+
+  // The pull back: Shot A shrinks toward the well head and fades while the planet arrives.
+  const back = ease(ramp(f, F.back, F.back + 30));
+  const gone = ramp(f, F.back, F.back + 12);
+  if (gone >= 1) return null;
+
+  const kpu = NEAR + (FAR - NEAR) * ease(ramp(f, F.never - 4, F.crust + 6));
+  // A first bite during the hook so the shaft is moving from the start, then the nineteen years.
+  const p = ramp(f, 10, F.took, 0, 0.05) + ramp(f, F.took, F.kilometres + 6, 0, 0.95);
+  const depth = depthAt(p);
+  const bottom = SURF + depth * kpu;
+  const moho = SURF + CRUST_KM * kpu;
+  // The glow starts building on "at the bottom", so the number lands on rock that is already hot.
+  const hot = ramp(f, F.bottom, F.hundred + 10);
+  const pulse = 0.75 + 0.25 * Math.sin(f * 0.35);
+  const drilling = p > 0 && p < 1;
+
+  return (
+    <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `${X}px ${SURF}px`, scale: `${1 - 0.94 * back}`, opacity: 1 - gone }}>
+      {/* Dusk over the tundra, thin enough at the top that the set's stars show through. */}
+      <div style={{ position: "absolute", left: SPAN.left, width: SPAN.width, top: SURF - 500, height: 500, background: "linear-gradient(transparent 0%, rgba(58,74,110,0.55) 70%, rgba(146,120,120,0.6) 100%)" }} />
+      <Derrick lamp={Math.sin(f * 0.21) > 0 ? 1 : 0.2} />
+
+      {/* Crust. */}
+      <div style={{ position: "absolute", left: SPAN.left, width: SPAN.width, top: SURF, height: 1800, background: "linear-gradient(#5b4a3a 0px, #46382c 500px, #2f251e 1100px)", borderTop: "6px solid #d8d2c4" }} />
+      {/* Strata every two kilometres, labelled every ten: the ruler the pull-out compresses. */}
+      {Array.from({ length: 17 }, (_, i) => (i + 1) * 2).map((km) => (
+        <div key={km} style={{ position: "absolute", left: SPAN.left, width: SPAN.width, top: SURF + km * kpu, height: km % 10 === 0 ? 3 : 2, background: "#1c1510", opacity: km % 10 === 0 ? 0.6 : 0.28 }} />
+      ))}
+      {[10, 20, 30].map((km) => (
+        <div key={km} style={{ position: "absolute", left: 535, whiteSpace: "nowrap", top: SURF + km * kpu - 32, font: `700 24px ${SANS}`, color: "#cbbd9f", opacity: 0.7 * ramp(f, F.took - 20, F.took) }}>
+          {km} km
+        </div>
+      ))}
+      {/* Mantle, under the Moho. Off the bottom of the frame until the pull-out brings it up. */}
+      <div style={{ position: "absolute", left: SPAN.left, width: SPAN.width, top: moho, height: 1800, background: "linear-gradient(#b5481c 0px, #7c2a10 260px, #4a170a 900px)", borderTop: "4px solid #ffb469" }} />
+
+      {/* The heat at the bottom. */}
+      {hot > 0 ? (
+        <div
+          style={{
+            position: "absolute",
+            left: X - 130,
+            top: bottom - 130,
+            width: 260,
+            height: 260,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(255,120,40,0.85) 0%, rgba(255,70,20,0.35) 40%, transparent 68%)",
+            opacity: hot * pulse,
+          }}
+        />
+      ) : null}
+
+      {/* The shaft: a pale line, since a dark hole in dark rock is a hole nobody can see. */}
+      <div style={{ position: "absolute", left: X - 3, top: SURF, width: 6, height: Math.max(0, bottom - SURF), background: "#f4ecd8", boxShadow: "0 0 10px 2px rgba(244,236,216,0.35)" }} />
+      <div
+        style={{
+          position: "absolute",
+          left: X - 9,
+          top: bottom - 9 + (drilling ? Math.sin(f * 1.9) * 1.5 : 0),
+          width: 18,
+          height: 18,
+          borderRadius: "50%",
+          background: hot > 0.5 ? "#ff6a2a" : "#fff",
+          boxShadow: `0 0 18px 6px ${hot > 0.5 ? "rgba(255,110,40,0.8)" : "rgba(255,255,255,0.55)"}`,
+        }}
+      />
+
+      <Loupe t={Math.min(ramp(f, F.wide - 6, F.wide + 4), 1 - ramp(f, F.nineteen - 8, F.nineteen))} plate={ease(ramp(f, F.wide + 6, F.wide + 20))} />
+      <Tag x={630} y={585} text="23 CM WIDE" sub="about a dinner plate" from={F.wide + 8} to={F.nineteen - 8} />
+
+      {/* In the sky beside the derrick: the only clear ground while the shaft is still short. */}
+      <Tag x={590} y={70} text={`${Math.round(1970 + 19 * ramp(f, F.took, F.kilometres + 6))}`} sub="drilling since 1970" from={F.took} to={F.never - 6} />
+      {/* Rides the drill head down, so the number and the thing it measures stay together. */}
+      <Tag
+        x={X + 40}
+        y={bottom - 34}
+        text={`${Math.round(depth * 1000).toLocaleString("en-US")} M`}
+        sub={f >= F.crust ? "a third of the crust" : undefined}
+        from={F.took}
+      />
+      <Tag x={X - 40} y={bottom - 34} align="right" text="180 °C" sub="predicted: 100 °C" from={F.hundred} />
+      <Tag x={640} y={570} text="CRUST" sub="≈35 km thick here" from={F.crust - 4} />
+      <Tag x={640} y={moho + 18} text="MANTLE" from={F.crust + 4} />
+    </div>
+  );
+};
+
+// Shot B: the whole planet in section, to scale. It arrives by shrinking from far too big for the
+// frame with its top edge on the well head, so the cut reads as the same ground pulling away.
+const B = { y: 440, r: 310 };
+
+const Planet: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = ease(ramp(f, F.back, F.back + 30));
+  const seen = ramp(f, F.back + 2, F.back + 14);
+  if (seen <= 0) return null;
+
+  // Radius on a log scale, or the first frame eats the whole move.
+  const r = Math.exp(Math.log(6000) + (Math.log(B.r) - Math.log(6000)) * t);
+  const top = SURF + (B.y - B.r - SURF) * t;
+  const line = ease(ramp(f, F.six - 4, F.six + 22));
+  const blip = 0.6 + 0.4 * Math.sin(f * 0.3);
+
+  return (
+    <>
+      <EarthSection x={X} y={top + r} r={r} opacity={seen} labels={ramp(f, F.back + 26, F.back + 38)} />
+
+      {/* Surface to centre: the distance the hole was a fifth of a percent of. */}
+      {line > 0 ? (
+        <>
+          <div style={{ position: "absolute", left: X - 2, top: B.y - B.r, width: 4, height: B.r * line, background: "#fff", boxShadow: "0 0 10px 2px rgba(255,255,255,0.6)" }} />
+          <div style={{ position: "absolute", left: X - 8, top: B.y - B.r + B.r * line - 8, width: 16, height: 16, borderRadius: "50%", background: "#fff" }} />
+        </>
+      ) : null}
+
+      {/* Where the hole is. Not the hole: at this size it would be a third of a pixel deep, so it
+          is marked and labelled rather than drawn at a depth it does not have. */}
+      {t >= 1 ? (
+        <div
+          style={{
+            position: "absolute",
+            left: X - 11,
+            top: B.y - B.r - 11,
+            width: 22,
+            height: 22,
+            borderRadius: "50%",
+            border: "3px solid #fff",
+            opacity: ramp(f, F.back + 30, F.back + 38) * blip,
+          }}
+        />
+      ) : null}
+      <Tag x={610} y={14} text="THE HOLE: 12 KM" sub="0.2% of the way. Too thin to draw." from={F.back + 30} />
+      <Tag x={830} y={B.y + B.r + 14} text="6,371 KM" sub="surface to centre" from={F.six + 8} />
+    </>
+  );
+};
+
+export const deepestHole: Short = {
+  slug: "deepest-hole",
+  title: "The deepest hole ever dug",
+  edit,
+  looks: [{ id: "Earth", Set: NightSky, cast: () => [] }],
+  props: () => (
+    <>
+      <Planet />
+      <Ground />
+    </>
+  ),
+  camera: {
+    // A slow settle back from the well head under the hook, so the frame is moving before the drill is.
+    zoom: (f) => 1.14 - 0.14 * ease(ramp(f, 0, F.took)),
+    // The drill gives up: one short knock on "too hot".
+    shake: (f) => (f >= F.too && f < F.too + 10 ? Math.sin(f * 2.7) * 9 * (1 - (f - F.too) / 10) : 0),
+  },
+  sfx: [
+    { at: F.took, name: "rumble", volume: 0.3 },
+    { at: F.too, name: "thud", volume: 0.6 },
+    { at: F.back, name: "whoosh", volume: 0.35 },
+  ],
+};

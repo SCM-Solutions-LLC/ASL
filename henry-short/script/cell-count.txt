@@ -1,0 +1,63 @@
+By cell count, you are less than half human.
+About thirty trillion of your cells are yours.
+Thirty-eight trillion are bacteria.
+But put them all on a scale, and those bacteria weigh about two hundred grams.
+And your own cells are not what you picture. Eighty-four percent are red blood cells.
+By count, your cells are mostly blood. And they are outnumbered by their passengers.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Everything here rests on one paper: Sender, Fuchs & Milo, "Revised Estimates for
+the Number of Human and Bacteria Cells in the Body", PLoS Biology 14(8): e1002533
+(2016), doi:10.1371/journal.pbio.1002533. Its numbers are for a "reference man"
+(20-30 years old, 70 kg, 170 cm) and the authors put the uncertainty at roughly
+25%, with person-to-person variation on top (they quote ~50%). Every figure in
+the script is therefore a round number for one standard body, not a measurement
+of the viewer. The figures below are quoted from memory of the paper and were
+not re-fetched for this draft: check them against the paper's abstract and
+Table 3 before publishing.
+
+1. "By cell count, you are less than half human."
+   3.0e13 human cells against 3.8e13 bacteria: 30 of 68 trillion is 44%. This is
+   the soft one. The ratio is 1.3:1, and the paper's own point is that this is
+   close enough to 1:1 that a single bowel movement — which sheds a large share
+   of the colon's bacteria — can tip it back to humans being the majority. So
+   "less than half" is true of the reference estimate and within its error bar
+   of not being true. What is NOT soft is the direction of the correction: the
+   old "bacteria outnumber you ten to one" figure is the myth this paper
+   retired, and the short must never be captioned or titled with it.
+   The count is of bacteria only, which is what the paper counts; archaea, fungi
+   and viruses are not in the 38 trillion.
+
+2. "About thirty trillion of your cells are yours."
+   3.0e13 human cells in the reference man.
+
+3. "Thirty-eight trillion are bacteria."
+   3.8e13, nearly all of them in the colon. The animation scatters them through
+   the figure because it is a count, not a map; it does not claim they live
+   everywhere.
+
+4. "Those bacteria weigh about two hundred grams."
+   Total bacterial mass ~0.2 kg, about 0.3% of a 70 kg body. They are that light
+   because a bacterium is of order a thousand times smaller by volume than a
+   typical human cell — which is why the animation shrinks them as they land on
+   the scale. This also replaces an older folk figure of 1-2 kg.
+
+5. "Eighty-four percent are red blood cells."
+   ~2.5e13 red blood cells of 3.0e13 human cells, by COUNT. The unit chart shows
+   25 of 30 dots, which is 83%; the label carries the paper's 84%.
+
+6. "By count, your cells are mostly blood."
+   True by count only, and the line says so. By MASS it is the other way round:
+   muscle and fat cells are about three quarters of the body's cell mass, and
+   red blood cells only a few percent, because they are among the smallest
+   cells there are. An earlier draft said "You are mostly blood", which is false
+   without the qualifier and was changed for that reason.
+
+7. "And they are outnumbered by their passengers."
+   Claim 1 again, with the same caveat.
+
+8. The unit chart, not spoken.
+   68 dots, one per trillion cells: 30 human (25 of them red blood cells) and 38
+   bacteria. The picture is exact to the rounding of the numbers above.
