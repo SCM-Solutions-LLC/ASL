@@ -1,14 +1,30 @@
 {
   "look": "Lab",
   "title": "By cell count, you are less than half human",
-  "caption": "30 trillion of your cells are yours. 38 trillion are bacteria. All of those bacteria together weigh about 200 grams.",
+  "caption": "30 trillion of your cells are yours. 38 trillion are bacteria, and together they weigh about 200 grams.",
   "description": "For a 70 kg reference adult the best estimate is about 30 trillion human cells and 38 trillion bacteria, a ratio near 1.3 to 1 and not the 10 to 1 once quoted. The estimates carry roughly 25% uncertainty, so the split is close to even. By count, about 84% of human cells are red blood cells; by mass, muscle and fat dominate.",
   "sources": [
     "Sender, Fuchs & Milo, \"Revised Estimates for the Number of Human and Bacteria Cells in the Body\", PLoS Biology 14(8): e1002533 (2016), doi:10.1371/journal.pbio.1002533"
   ],
   "hashtags": {
-    "tiktok": ["biology", "science", "humanbody", "learnontiktok"],
-    "youtube": ["Shorts", "biology", "science", "humanbody"],
-    "instagram": ["biology", "science", "humanbody", "microbiome", "stem"]
+    "tiktok": [
+      "biology",
+      "science",
+      "humanbody",
+      "learnontiktok"
+    ],
+    "youtube": [
+      "Shorts",
+      "biology",
+      "science",
+      "humanbody"
+    ],
+    "instagram": [
+      "biology",
+      "science",
+      "humanbody",
+      "microbiome",
+      "stem"
+    ]
   }
 }

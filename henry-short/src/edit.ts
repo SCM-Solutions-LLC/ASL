@@ -27,7 +27,11 @@ export const clean = (t: string) => t.toLowerCase().replace(/[^a-z0-9']/g, "");
 
 export type EditSpec = {
   alignment: Alignment;
-  cut: Cut[];
+  /** Which slices of the VO to keep. Leave it out to take the whole read, which is the usual
+   *  case for a short with its own voice-over and needs no anchor to be unique. */
+  cut?: Cut[];
+  /** Seconds held after the last word when the whole read is taken. */
+  tail?: number;
   fps?: number;
   /** Seconds of room left before the first word of a slice, so a cut never clips an onset. */
   lead?: number;
@@ -68,6 +72,7 @@ const wordClock = (words: CutWord[]): Edit["at"] => (word, nth = 0) => {
 export const makeEdit = ({
   alignment,
   cut,
+  tail = 0.4,
   fps = 30,
   lead = 0.13,
   outro = 24,
@@ -85,10 +90,14 @@ export const makeEdit = ({
     return { first: hits[0], last: hits[0] + want.length - 1 };
   };
 
-  const segments: Segment[] = cut
+  const slices = cut
+    ? cut.map((s) => ({ first: anchor(s.from).first, last: anchor(s.to).last, tail: s.tail }))
+    : [{ first: 0, last: alignment.words.length - 1, tail }];
+
+  const segments: Segment[] = slices
     .map((s) => ({
-      from: Math.max(0, Math.round((alignment.words[anchor(s.from).first].start - lead) * fps)),
-      to: Math.round((alignment.words[anchor(s.to).last].end + s.tail) * fps),
+      from: Math.max(0, Math.round((alignment.words[s.first].start - lead) * fps)),
+      to: Math.round((alignment.words[s.last].end + s.tail) * fps),
     }))
     .map((s, i, all) => ({ ...s, at: all.slice(0, i).reduce((n, p) => n + p.to - p.from, 0) }));
 

@@ -1,0 +1,273 @@
+{
+ "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "script": "script/cleopatra-timeline.txt",
+ "audio": "public/vo/cleopatra-timeline.wav",
+ "sha256": "28ca4a6915c41bd8fc5e73538bcc1c625e53870b6d076b03cf1f79567bfbfae4",
+ "words": [
+  {
+   "text": "Cleopatra",
+   "start": 0.0,
+   "end": 0.434
+  },
+  {
+   "text": "lived",
+   "start": 0.434,
+   "end": 0.762
+  },
+  {
+   "text": "closer",
+   "start": 0.762,
+   "end": 1.117
+  },
+  {
+   "text": "to",
+   "start": 1.117,
+   "end": 1.365
+  },
+  {
+   "text": "the",
+   "start": 1.365,
+   "end": 1.64
+  },
+  {
+   "text": "Moon",
+   "start": 1.64,
+   "end": 1.941
+  },
+  {
+   "text": "landing",
+   "start": 1.941,
+   "end": 2.322
+  },
+  {
+   "text": "than",
+   "start": 2.322,
+   "end": 2.623
+  },
+  {
+   "text": "to",
+   "start": 2.623,
+   "end": 2.872
+  },
+  {
+   "text": "the",
+   "start": 2.872,
+   "end": 3.146
+  },
+  {
+   "text": "building",
+   "start": 3.146,
+   "end": 3.554
+  },
+  {
+   "text": "of",
+   "start": 3.554,
+   "end": 3.802
+  },
+  {
+   "text": "the",
+   "start": 3.802,
+   "end": 4.077
+  },
+  {
+   "text": "Great",
+   "start": 4.077,
+   "end": 4.405
+  },
+  {
+   "text": "Pyramid.",
+   "start": 4.405,
+   "end": 4.786
+  },
+  {
+   "text": "The",
+   "start": 5.485,
+   "end": 5.802
+  },
+  {
+   "text": "pyramid",
+   "start": 5.802,
+   "end": 6.241
+  },
+  {
+   "text": "was",
+   "start": 6.241,
+   "end": 6.558
+  },
+  {
+   "text": "finished",
+   "start": 6.558,
+   "end": 7.028
+  },
+  {
+   "text": "around",
+   "start": 7.028,
+   "end": 7.436
+  },
+  {
+   "text": "twenty-five",
+   "start": 7.436,
+   "end": 7.964
+  },
+  {
+   "text": "sixty",
+   "start": 7.964,
+   "end": 8.342
+  },
+  {
+   "text": "BC.",
+   "start": 8.342,
+   "end": 8.628
+  },
+  {
+   "text": "Cleopatra",
+   "start": 9.345,
+   "end": 9.914
+  },
+  {
+   "text": "was",
+   "start": 9.914,
+   "end": 10.274
+  },
+  {
+   "text": "born",
+   "start": 10.274,
+   "end": 10.669
+  },
+  {
+   "text": "in",
+   "start": 10.669,
+   "end": 10.994
+  },
+  {
+   "text": "sixty-nine",
+   "start": 10.994,
+   "end": 11.563
+  },
+  {
+   "text": "BC.",
+   "start": 11.563,
+   "end": 11.888
+  },
+  {
+   "text": "Two",
+   "start": 12.605,
+   "end": 12.858
+  },
+  {
+   "text": "and",
+   "start": 12.858,
+   "end": 13.11
+  },
+  {
+   "text": "a",
+   "start": 13.11,
+   "end": 13.314
+  },
+  {
+   "text": "half",
+   "start": 13.314,
+   "end": 13.591
+  },
+  {
+   "text": "thousand",
+   "start": 13.591,
+   "end": 13.966
+  },
+  {
+   "text": "years",
+   "start": 13.966,
+   "end": 14.268
+  },
+  {
+   "text": "later.",
+   "start": 14.268,
+   "end": 14.57
+  },
+  {
+   "text": "From",
+   "start": 15.265,
+   "end": 15.596
+  },
+  {
+   "text": "her",
+   "start": 15.596,
+   "end": 15.897
+  },
+  {
+   "text": "to",
+   "start": 15.897,
+   "end": 16.17
+  },
+  {
+   "text": "Apollo",
+   "start": 16.17,
+   "end": 16.559
+  },
+  {
+   "text": "eleven",
+   "start": 16.559,
+   "end": 16.948
+  },
+  {
+   "text": "is",
+   "start": 16.948,
+   "end": 17.22
+  },
+  {
+   "text": "only",
+   "start": 17.22,
+   "end": 17.551
+  },
+  {
+   "text": "two",
+   "start": 17.551,
+   "end": 17.852
+  },
+  {
+   "text": "thousand.",
+   "start": 17.852,
+   "end": 18.3
+  },
+  {
+   "text": "To",
+   "start": 18.95,
+   "end": 19.254
+  },
+  {
+   "text": "Cleopatra,",
+   "start": 19.254,
+   "end": 19.785
+  },
+  {
+   "text": "the",
+   "start": 19.785,
+   "end": 20.121
+  },
+  {
+   "text": "pyramids",
+   "start": 20.121,
+   "end": 20.62
+  },
+  {
+   "text": "were",
+   "start": 20.62,
+   "end": 20.989
+  },
+  {
+   "text": "already",
+   "start": 20.989,
+   "end": 21.455
+  },
+  {
+   "text": "ancient",
+   "start": 21.455,
+   "end": 21.921
+  },
+  {
+   "text": "history.",
+   "start": 21.921,
+   "end": 22.387
+  }
+ ]
+}
