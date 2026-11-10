@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Rebuilds public/music/ from the CC0 originals: one bed per category.
+# Rebuilds public/music/ from the CC0 originals: one bed per category, plus the playful bed the
+# card-deck shorts use.
 #
 #   npm run music
 #
@@ -22,3 +23,4 @@ bed space   "https://opengameart.org/sites/default/files/Out%20in%20Space_0.ogg"
 bed geology "https://opengameart.org/sites/default/files/song18_0.mp3"
 bed science "https://opengameart.org/sites/default/files/The%20Cogs.mp3"
 bed history "https://opengameart.org/sites/default/files/Exploration_0.mp3"
+bed playful "https://opengameart.org/sites/default/files/Of%20Far%20Different%20Nature%20-%20Recorder%20Jam%20%28CC0%29_0.mp3"
