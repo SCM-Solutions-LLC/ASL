@@ -280,6 +280,7 @@ export const cleopatraTimeline: Short = {
     zoom: (f) => interpolate(f, [0, F.voEnd], [1, 1.04], { extrapolateRight: "clamp", easing: Easing.inOut(Easing.sin) }),
     shake: (f) => (f >= F.twoThousand && f < F.twoThousand + 8 ? Math.sin(f * 2.7) * 7 * (1 - (f - F.twoThousand) / 8) : 0),
   },
+  music: "history",
   sfx: [
     { at: F.moon, name: "pop" },
     { at: F.building, name: "rumble", volume: 0.3 },

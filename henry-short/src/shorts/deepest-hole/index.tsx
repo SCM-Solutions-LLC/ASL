@@ -278,6 +278,7 @@ export const deepestHole: Short = {
     // The drill gives up: one short knock on "too hot".
     shake: (f) => (f >= F.too && f < F.too + 10 ? Math.sin(f * 2.7) * 9 * (1 - (f - F.too) / 10) : 0),
   },
+  music: "geology",
   sfx: [
     { at: F.took, name: "rumble", volume: 0.3 },
     { at: F.too, name: "thud", volume: 0.6 },

@@ -339,4 +339,5 @@ export const ageOfSunlight: Short = {
   edit,
   looks: [{ id: "Space", Set: Starfield, cast: () => [] }],
   props: () => <SunScene />,
+  music: "space",
 };

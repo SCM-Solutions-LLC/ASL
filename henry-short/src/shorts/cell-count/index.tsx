@@ -269,6 +269,7 @@ export const cellCount: Short = {
   edit,
   looks: [{ id: "Lab", Set: Slide, cast: () => [] }],
   props: () => <CellScene />,
+  music: "science",
   sfx: [
     { at: F.thirty, name: "pop", volume: 0.35 },
     { at: F.thirtyEight, name: "pop", volume: 0.35 },
