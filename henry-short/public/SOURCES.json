@@ -233,5 +233,53 @@
   "licence": "public-domain",
   "ship": true,
   "note": "NASA photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/vitruvian.jpg": {
+  "source": "\"Vitruvian Man\", Leonardo da Vinci, c. 1490, Gallerie dell'Accademia, Venice — https://commons.wikimedia.org/wiki/File:Uomo_Vitruviano.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Leonardo died in 1519; a faithful photograph of a two-dimensional public-domain work carries no new copyright. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/cheek.jpg": {
+  "source": "\"Human cheek cells from science class\", photograph through a microscope by Commons user Kyreb — https://commons.wikimedia.org/wiki/File:Human_cheek_cells_from_science_class.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the photographer. A stained human cheek cell, as the file's page describes it; the black wedge is the eyepiece pointer. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/ecoli.jpg": {
+  "source": "\"E. coli at 10000x\", low-temperature electron micrograph of a cluster of E. coli by Eric Erbe, digital colorization by Christopher Pooley, USDA Agricultural Research Service (ID K11077-1) — https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A USDA ARS image, in the public domain as a work of the US federal government. The colour was added digitally and is not the bacteria's own; no card says otherwise. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/balance.jpg": {
+  "source": "Balance scale, Henry N. Hooper and Company and O.P. Drake, Metropolitan Museum of Art DP318014 (Open Access) — https://commons.wikimedia.org/wiki/File:Balance_scale_MET_DP318014.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Met. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/kitchen.jpg": {
+  "source": "\"Kitchen scale 20101110\", photograph by Commons user Batholith — https://commons.wikimedia.org/wiki/File:Kitchen_scale_20101110.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the photographer. The scale is photographed empty, its needle at zero; the needle at 200 g is drawn on in marker by the short and is not part of the photograph. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/diagram.jpg": {
+  "source": "\"Animal cell structure, numbered version\", diagram by LadyofHats (Mariana Ruiz) — https://commons.wikimedia.org/wiki/File:Animal_cell_structure_numbered_version.svg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the author. Commons' 1280px PNG rendering of the SVG, flattened onto white and saved as JPEG; nothing else changed. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/sem.jpg": {
+  "source": "\"SEM blood cells\", scanning electron micrograph of normal circulating human blood by Bruce Wetzel and Harry Schaefer, National Cancer Institute — https://commons.wikimedia.org/wiki/File:SEM_blood_cells.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A National Cancer Institute image, in the public domain as a work of the US federal government. Greyscale as published. The card crops to a part of the frame that is almost all red blood cells; the full frame also shows white cells and platelets. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/blood.jpg": {
+  "source": "\"Red Blood Cells Illustration\", Donald Bliss, National Cancer Institute (NCI Visuals Online ID 3696) — https://commons.wikimedia.org/wiki/File:Red_blood_cells_illustration.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A National Cancer Institute image, in the public domain as a work of the US federal government. An illustration, not a micrograph, and no card calls it one. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  }
 }
