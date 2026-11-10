@@ -197,5 +197,41 @@
   "licence": "public-domain",
   "ship": true,
   "note": "NASA astronaut photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/stamp.jpg": {
+  "source": "USSR postage stamp \"Kola superdeep borehole\" (Кольская сверхглубокая скважина), 10 kopecks, \"Science in the USSR\" issue of 25 November 1987, designer A. Kernosov, CPA 5892; scan by Mariluna — https://commons.wikimedia.org/wiki/File:1987_CPA_5892.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Soviet postage stamps are official state signs and not subject to copyright (Commons tag PD-RU-exempt, which also covers the USSR's). The only picture in the deck that shows the Kola well itself, and the only one labelled as it. 560×800, the full size of the Commons file. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/plate.jpg": {
+  "source": "Dinner plate, Meissen Porcelain Factory, Germany, 1903–05, 26 cm across, Cooper Hewitt, Smithsonian Design Museum 1995-82-1 (object 18669073), the museum's catalogue photograph — https://commons.wikimedia.org/wiki/File:Dinner_Plate_(Germany),_1903%E2%80%9305_(CH_18669073).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Marked public domain on Commons (PD-old-70-1923). CHECK BEFORE RELYING ON IT: that tag is about the plate, which is from 1903–05; the photograph is the museum's own and the page gives no separate statement for it. The Smithsonian publishes its open-access collection images as CC0, which would cover it, but that was not confirmed from the museum's site. The 26 cm is the museum's measurement, and the deck draws the 23 cm hole against it to scale. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/map.jpg": {
+  "source": "\"Soviet Union Administrative Divisions, 1981\", US Central Intelligence Agency, 1982, from the Perry-Castañeda Library Map Collection — https://commons.wikimedia.org/wiki/File:Soviet_union_admin_1981.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A CIA map, in the public domain as a work of the US federal government. 1280px rendition; the library's accession stamps are on the sheet and are left in. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/bit.jpg": {
+  "source": "Tricone drill bit, type T, for hard-rock boreholes 208 mm across, in the Museum of Technology, Warsaw; photograph by Commons user Olaf — https://commons.wikimedia.org/wiki/File:%C5%9Awider_tr%C3%B3jgryzowy_typu_T.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the photographer. A bit of the kind used in hard rock, not a bit from the Kola well; the card calls it only \"a drill bit\". 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/wornbit.jpg": {
+  "source": "A worn tricone drill bit, US Geological Survey photograph from its drill-hole pages (quake.wr.usgs.gov/drillhole) — https://commons.wikimedia.org/wiki/File:Drill_bit_tricone_worn.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A USGS photograph, in the public domain as a work of the US federal government (PD-USGov-USGS). A worn bit from a USGS drill hole, not one from the Kola well, and the card does not say otherwise. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/earth.jpg": {
+  "source": "\"The Blue Marble\", the Earth from Apollo 17, 7 December 1972, NASA AS17-148-22727 — https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  }
 }
