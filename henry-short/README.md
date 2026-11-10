@@ -15,6 +15,7 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 | `deepest-hole` | `Earth` | its own Kokoro VO, 24.7s, no cast — the Kola borehole against the crust, then the planet |
 | `cell-count` | `Lab` | its own Kokoro VO, 26.3s, no cast — a 68-dot unit chart of human and bacterial cells |
 | `cleopatra-timeline` | `Illustrated` | its own Kokoro VO, 23.6s, one figure on a timeline drawn to scale |
+| `cleopatra-doodle` | `Doodle` | PILOT of the doodle look: the Cleopatra read as a deck of cards, a new picture about every 2.5s and one keyword each. Its artwork is `ship: false` — not cleared for posting |
 
 The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
 

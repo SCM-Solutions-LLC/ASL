@@ -11,6 +11,7 @@ const FACES = [
   { family: "Liberation Serif", file: "LiberationSerif-Regular.ttf", weight: "400" },
   { family: "Liberation Serif", file: "LiberationSerif-Bold.ttf", weight: "700" },
   { family: "Inter", file: "Inter-Black.otf", weight: "900" },
+  { family: "Permanent Marker", file: "PermanentMarker-Regular.woff2", weight: "400" },
 ];
 
 for (const { family, file, weight } of FACES) loadFont({ family, url: staticFile(`fonts/${file}`), weight });
@@ -19,3 +20,5 @@ for (const { family, file, weight } of FACES) loadFont({ family, url: staticFile
 export const SANS = "'Liberation Sans', sans-serif";
 export const SERIF = "'Liberation Serif', serif";
 export const CAPTION = "Inter, sans-serif";
+// The hand-lettered face for the doodle look: keywords and numbers written as if with a marker.
+export const MARKER = "'Permanent Marker', cursive";

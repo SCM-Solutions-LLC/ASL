@@ -65,5 +65,29 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "Listed CC0 by its author. Bed for History shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/fonts/PermanentMarker-Regular.woff2": {
+  "source": "Permanent Marker by Font Diner, from the @fontsource/permanent-marker npm package (latin subset, unmodified)",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "The marker face for the doodle look. Apache-2.0; the licence text is LICENSE-PermanentMarker.txt beside it. See src/fonts.ts."
+ },
+ "public/fonts/LICENSE-PermanentMarker.txt": {
+  "source": "The LICENSE file from the @fontsource/permanent-marker npm package",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "Licence text for PermanentMarker-Regular.woff2."
+ },
+ "public/music/playful.mp3": {
+  "source": "\"Recorder Jam\" by Of Far Different Nature, https://opengameart.org/content/recorder-jam",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author, and the file name carries (CC0). Bed for the doodle-look shorts. Levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/doodle/cleopatra/*.jpg": {
+  "source": "Generated with Canva's AI image generator on a free plan, 2026-11-10, from prompts written for this short",
+  "licence": "canva-free-plan-unverified",
+  "ship": false,
+  "note": "PILOT ARTWORK, NOT CLEARED FOR PUBLISHING. Made on a free plan to test the doodle look; the terms for commercial use of free-plan output have not been read and confirmed. Regenerate on a plan whose terms allow commercial use, or confirm these terms, before cleopatra-doodle is posted."
  }
 }
