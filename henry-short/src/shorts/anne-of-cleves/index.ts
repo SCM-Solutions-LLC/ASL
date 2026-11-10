@@ -4,6 +4,7 @@ import { makeEdit } from "../../edit";
 import type { Short } from "../types";
 import { beats } from "./beats";
 import { bustAnne, bustHenry, drawnAnne, drawnHenry, paintedAnne, paintedHenry } from "../../chars/actors";
+import { comicStills } from "./comic";
 import { holbeinKeys } from "./holbein-keys";
 import { illustratedKeys } from "./illustrated-keys";
 import { portraitKeys } from "./portrait-keys";
@@ -72,6 +73,8 @@ export const anneOfCleves: Short = {
         },
       ],
     },
+    // Generated panels instead of rigs: the set is the whole picture, so nobody is cast.
+    { id: "Comic", Set: comicStills(F), cast: () => [], props: false },
     {
       id: "Portrait",
       Set: PortraitGallery,
