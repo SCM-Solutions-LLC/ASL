@@ -78,11 +78,11 @@
   "ship": true,
   "note": "Licence text for PermanentMarker-Regular.woff2."
  },
- "public/music/playful.mp3": {
-  "source": "\"Recorder Jam\" by Of Far Different Nature, https://opengameart.org/content/recorder-jam",
+ "public/music/egypt.mp3": {
+  "source": "\"Desert Mystic 2\" by PolygonDan, from the Desert_mystic pack, https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0",
   "licence": "cc0-1.0",
   "ship": true,
-  "note": "Listed CC0 by its author, and the file name carries (CC0). Bed for the card-deck shorts. Levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+  "note": "Listed CC0 by its author; the pack's own read-me says the songs are free to use with no licence restriction. Bed for the Cleopatra card-deck short, chosen by ear from four candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
  },
  "public/cutout/cleopatra/cleopatra.jpg": {
   "source": "\"Cleopatra\", John William Waterhouse, 1888 — https://commons.wikimedia.org/wiki/File:Cleopatra_-_John_William_Waterhouse.jpg",

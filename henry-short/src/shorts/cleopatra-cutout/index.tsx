@@ -987,7 +987,7 @@ export const cleopatraCutout: Short = {
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "playful",
+  music: "egypt",
   sfx: [
     { at: 0, name: "pop" },
     { at: F.moon - 2, name: "pop" },
