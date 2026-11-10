@@ -8,6 +8,7 @@ export const beats = (e: Edit) => ({
   henry: e.at("henry"),
   once: e.at("once"),
   wanted: e.at("wanted"),
+  six: e.at("six"),
   annulled: e.at("annulled,"),
   walked: e.at("walked"),
   palace: e.at("palace,"),

@@ -73,7 +73,7 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
             );
           })}
         </Figures>
-        {short.props?.(L)}
+        {chosen.props === false ? null : short.props?.(L)}
       </Camera>
       {short.scrim === false ? null : (
         <AbsoluteFill style={{ background: L.vertical ? "linear-gradient(transparent 72%, rgba(20,12,6,0.75) 76%)" : "linear-gradient(transparent 80%, rgba(20,12,6,0.7) 92%)" }} />

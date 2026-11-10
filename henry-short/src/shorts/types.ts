@@ -23,6 +23,8 @@ export type Look = {
   /** Wraps the figures only — the paper cut-out drop shadow, say. */
   Figures?: React.FC<{ children: React.ReactNode }>;
   cast: (L: Layout) => Staged[];
+  /** The short's stage props are placed around its rigs; a look with no rigs can drop them. */
+  props?: false;
 };
 
 export type Short = {
