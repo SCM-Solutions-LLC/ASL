@@ -65,5 +65,77 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "Listed CC0 by its author. Bed for History shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/fonts/PermanentMarker-Regular.woff2": {
+  "source": "Permanent Marker by Font Diner, from the @fontsource/permanent-marker npm package (latin subset, unmodified)",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "The marker face for the card-deck looks. Apache-2.0; the licence text is LICENSE-PermanentMarker.txt beside it. See src/fonts.ts."
+ },
+ "public/fonts/LICENSE-PermanentMarker.txt": {
+  "source": "The LICENSE file from the @fontsource/permanent-marker npm package",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "Licence text for PermanentMarker-Regular.woff2."
+ },
+ "public/music/playful.mp3": {
+  "source": "\"Recorder Jam\" by Of Far Different Nature, https://opengameart.org/content/recorder-jam",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author, and the file name carries (CC0). Bed for the card-deck shorts. Levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/cutout/cleopatra/cleopatra.jpg": {
+  "source": "\"Cleopatra\", John William Waterhouse, 1888 — https://commons.wikimedia.org/wiki/File:Cleopatra_-_John_William_Waterhouse.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The painter died in 1917; a faithful photograph of a two-dimensional public-domain work carries no new copyright. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/second.jpg": {
+  "source": "\"The Meeting of Antony and Cleopatra\", Lawrence Alma-Tadema, 1885 — https://commons.wikimedia.org/wiki/File:Sir_Lawrence_Alma-Tadema_-_The_Meeting_of_Antony_and_Cleopatra.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The painter died in 1912. 1920px rendition of the Commons file. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/aldrin.jpg": {
+  "source": "Buzz Aldrin on the Moon, Apollo 11, photographed by Neil Armstrong, NASA AS11-40-5903 — https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA photograph, in the public domain as a work of the US federal government. It shows a real, living person: fine for editorial use like this, not for implying he endorses anything. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/flag.jpg": {
+  "source": "Aldrin salutes the flag, Apollo 11, NASA AS11-40-5874 — https://commons.wikimedia.org/wiki/File:Buzz_salutes_the_U.S._Flag.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/bootprint.jpg": {
+  "source": "Aldrin's bootprint, Apollo 11, NASA AS11-40-5877 — https://commons.wikimedia.org/wiki/File:Apollo_11_bootprint.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/launch.jpg": {
+  "source": "Apollo 11 launch, 16 July 1969, NASA GPN-2000-000630 — https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/frith.jpg": {
+  "source": "\"The Great Pyramid and the Great Sphinx\", Francis Frith, 1858, Metropolitan Museum of Art (Open Access) — https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_and_The_Great_Sphinx_MET_DP132062.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Met; the photographer died in 1898. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/geezeh.jpg": {
+  "source": "\"Pyramids of Geezeh\", lithograph by Louis Haghe after David Roberts, 1846-49 — https://commons.wikimedia.org/wiki/File:Pyramids_of_Geezeh.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Roberts died in 1864 and Haghe in 1885. 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/sphinx.jpg": {
+  "source": "\"The Great Sphinx, Pyramids of Gizeh\", lithograph by Louis Haghe after David Roberts, 1839, Cleveland Museum of Art 1953.503 (Open Access) — https://commons.wikimedia.org/wiki/File:Louis_Haghe_-_Egypt_and_Nubia-_Volume_I_-_No._18,_The_Great_Sphinx,_Pyramids_of_Gizeh,_F_-_1953.503_-_Cleveland_Museum_of_Art.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Cleveland Museum of Art. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  }
 }
