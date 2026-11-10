@@ -137,5 +137,65 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "Released CC0 by the Cleveland Museum of Art. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/rays.jpg": {
+  "source": "\"Dramatic crepuscular rays in Australian suburbs\", photograph by Commons user JaredMcKenzie, New South Wales, 6 February 2026 — https://commons.wikimedia.org/wiki/File:Dramatic_crepuscular_rays_in_Australian_suburbs.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "The photographer's own work, released CC0 on upload. A recent upload by an individual, so the dedication rests on the uploader's word alone. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/hand.jpg": {
+  "source": "\"Man in hood stretching hand\", photograph by Sandeep Swarnkar, published on Unsplash 9 April 2017 — https://commons.wikimedia.org/wiki/File:Man_in_hood_stretching_hand_(Unsplash).jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Commons records it as CC0: it went up on Unsplash in April 2017, before Unsplash replaced CC0 with its own licence that June. Only the hand is cut out and used. It is a real person's hand, face not shown: fine for editorial use like this. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/sun304.jpg": {
+  "source": "The Sun at 304 angstroms (extreme ultraviolet, false colour), Atmospheric Imaging Assembly of NASA's Solar Dynamics Observatory, 19 August 2010, NASA/SDO (AIA) — https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, in the public domain as a work of the US federal government. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/stereo.jpg": {
+  "source": "The Sun with an erupting prominence at 304 angstroms (extreme ultraviolet, false colour), NASA's STEREO Ahead spacecraft, 29 September 2008 — https://commons.wikimedia.org/wiki/File:Solar_prominence_from_STEREO_spacecraft_September_29,_2008.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. Only the disc is cut out and used. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/earth.jpg": {
+  "source": "\"The Blue Marble\": the Earth seen from Apollo 17, 7 December 1972, NASA AS17-148-22727, taken by Harrison Schmitt or Ron Evans — https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/disc.jpg": {
+  "source": "The Sun in visible light with the sunspot group of October 2014, HMI continuum image from NASA's Solar Dynamics Observatory, 23 October 2014, NASA Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:NASA%27s_SDO_Observes_Largest_Sunspot_of_the_Solar_Cycle_(15430820129).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. The marker path drawn over it in the short is a diagram, not part of the picture. 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/wheel.jpg": {
+  "source": "Collage of the Sun in different wavelengths from NASA's Solar Dynamics Observatory, from \"Sun Primer: Why NASA Scientists Observe the Sun in Different Wavelengths\", January 2013, NASA/SDO/Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:Sun_Primer-_Why_NASA_Scientists_Observe_the_Sun_in_Different_Wavelengths_(8407508991).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA collage of its own SDO images (it also includes magnetic and Doppler maps), US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/prominence.jpg": {
+  "source": "A giant prominence on the Sun before it erupted, 31 August 2012, NASA's Solar Dynamics Observatory, NASA/SDO/AIA/Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:Giant_prominence_on_the_sun_erupted.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. Commons also holds the same frame under another title tagged CC BY 2.0 from NASA Goddard's Flickr; this is the copy sourced from nasa.gov and tagged public domain. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/skylab.jpg": {
+  "source": "The Sun with a loop prominence, photographed in extreme ultraviolet from Skylab, 19 December 1973, NASA S74-23458 — https://commons.wikimedia.org/wiki/File:Skylab_Solar_flare.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Shown with a sepia tone in the short. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/sunrise.jpg": {
+  "source": "Orbital sunrise above Earth's limb, photographed from the International Space Station during Expedition 47, 2 June 2016, NASA ISS047-E-138450 — https://commons.wikimedia.org/wiki/File:ISS047-E-138450_-_View_of_Earth.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA astronaut photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  }
 }
