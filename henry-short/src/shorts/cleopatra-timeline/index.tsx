@@ -55,7 +55,7 @@ const F = {
 // The dates, in astronomical year numbering so the arithmetic is honest across the missing year
 // zero: 2560 BC is -2559, 69 BC is -68. Everything on screen — where she stands, how long each
 // span is, the counts on the labels — is computed from these three numbers.
-const YEAR = { pyramid: -2559, cleopatra: -68, apollo: 1969 };
+export const YEAR = { pyramid: -2559, cleopatra: -68, apollo: 1969 };
 const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,491
 const FORWARD = YEAR.apollo - YEAR.cleopatra; // 2,037
 const SHARE = BACK / (YEAR.apollo - YEAR.pyramid); // 0.550: how far along the line she stands
@@ -280,6 +280,7 @@ export const cleopatraTimeline: Short = {
     zoom: (f) => interpolate(f, [0, F.voEnd], [1, 1.04], { extrapolateRight: "clamp", easing: Easing.inOut(Easing.sin) }),
     shake: (f) => (f >= F.twoThousand && f < F.twoThousand + 8 ? Math.sin(f * 2.7) * 7 * (1 - (f - F.twoThousand) / 8) : 0),
   },
+  music: "history",
   sfx: [
     { at: F.moon, name: "pop" },
     { at: F.building, name: "rumble", volume: 0.3 },

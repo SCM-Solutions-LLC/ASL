@@ -35,6 +35,8 @@ export type Short = {
   /** Drawn over the whole frame, in output px: title cards, stamps, banners. */
   ui?: (L: Layout) => React.ReactNode;
   sfx?: { at: number; name: string; volume?: number }[];
+  /** The category bed under the read: a file in public/music/, without its extension. */
+  music?: "space" | "geology" | "science" | "history" | "egypt";
   camera?: { zoom?: (f: number) => number; shake?: (f: number) => number };
   /** Dark gradient behind the captions. On by default. */
   scrim?: boolean;
