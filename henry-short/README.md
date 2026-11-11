@@ -11,7 +11,11 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 | `anne-of-cleves` | `Illustrated`, `Holbein` | the hook plus the Anne of Cleves beat, 14.5s |
 | `catherine-of-aragon` | `Illustrated` | wife one, 7.4s — built on `src/moves` as a pipeline test |
 | `scale-of-the-sun` | `Space` | its own Kokoro VO, 60.3s, no cast at all |
-| `age-of-sunlight` | `Space` | drafted from its script, 19.1s, no VO recorded yet, no cast at all |
+| `age-of-sunlight` | `Space` | its own Kokoro VO, 19.0s, no cast at all |
+| `deepest-hole` | `Earth` | its own Kokoro VO, 24.7s, no cast — the Kola borehole against the crust, then the planet |
+| `cell-count` | `Lab` | its own Kokoro VO, 26.3s, no cast — a 68-dot unit chart of human and bacterial cells |
+| `cleopatra-timeline` | `Illustrated` | its own Kokoro VO, 23.6s, one figure on a timeline drawn to scale |
+| `cleopatra-cutout` | `Cutout` | PILOT of the cutout look: the Cleopatra read as ten collage cards, a new picture about every 2.5s and one keyword each. Nine public-domain pictures, all cleared to post |
 
 The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
 
@@ -27,6 +31,7 @@ npm run publishable                       # refuse to call the project shippable
 npm run tts -- <slug>                     # speak a script with Kokoro and write its word timings
 npm run tts -- --self-test                # check the timing/WAV code with no model downloaded
 npm run align -- <vo-slug>                # word timings for a VO recorded elsewhere
+npm run kit -- <slug>                     # render the 9:16 MP4 and the post text — see docs/publishing.md
 python3 tools/cut.py                      # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
 
@@ -52,6 +57,9 @@ the word timings in one pass. Kokoro is **Apache-2.0** and runs locally, which i
 it is here: no per-character cost, and no terms page that can change under a published video.
 
     pip install kokoro soundfile     # once; Kokoro also wants espeak-ng on the system
+
+Kokoro does not install on Python 3.13. Use a 3.12 virtualenv (`uv venv --python 3.12 .venv`) and
+run the tool with it: `.venv/bin/python -I tools/tts.py <slug>`.
 
 Kokoro samples, so the generator is seeded (`--seed`, default 0): the same script, voice, speed and
 seed give the same audio every time. Without that the hash recorded in the alignment would describe

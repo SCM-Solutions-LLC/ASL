@@ -1,0 +1,318 @@
+{
+ "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "script": "script/deepest-hole.txt",
+ "audio": "public/vo/deepest-hole.wav",
+ "sha256": "e38eead5baba77fb6e18cb8458d06ade96c9cffed2e3a97a4a1a5150d1301ab0",
+ "words": [
+  {
+   "text": "The",
+   "start": 0.0,
+   "end": 0.273
+  },
+  {
+   "text": "deepest",
+   "start": 0.273,
+   "end": 0.652
+  },
+  {
+   "text": "hole",
+   "start": 0.652,
+   "end": 0.952
+  },
+  {
+   "text": "humans",
+   "start": 0.952,
+   "end": 1.304
+  },
+  {
+   "text": "have",
+   "start": 1.304,
+   "end": 1.604
+  },
+  {
+   "text": "ever",
+   "start": 1.604,
+   "end": 1.903
+  },
+  {
+   "text": "dug",
+   "start": 1.903,
+   "end": 2.176
+  },
+  {
+   "text": "is",
+   "start": 2.176,
+   "end": 2.423
+  },
+  {
+   "text": "as",
+   "start": 2.423,
+   "end": 2.67
+  },
+  {
+   "text": "wide",
+   "start": 2.67,
+   "end": 2.969
+  },
+  {
+   "text": "as",
+   "start": 2.969,
+   "end": 3.216
+  },
+  {
+   "text": "a",
+   "start": 3.216,
+   "end": 3.436
+  },
+  {
+   "text": "dinner",
+   "start": 3.436,
+   "end": 3.789
+  },
+  {
+   "text": "plate.",
+   "start": 3.789,
+   "end": 4.115
+  },
+  {
+   "text": "It",
+   "start": 4.76,
+   "end": 5.018
+  },
+  {
+   "text": "took",
+   "start": 5.018,
+   "end": 5.331
+  },
+  {
+   "text": "the",
+   "start": 5.331,
+   "end": 5.616
+  },
+  {
+   "text": "Soviet",
+   "start": 5.616,
+   "end": 5.984
+  },
+  {
+   "text": "Union",
+   "start": 5.984,
+   "end": 6.325
+  },
+  {
+   "text": "nineteen",
+   "start": 6.325,
+   "end": 6.748
+  },
+  {
+   "text": "years.",
+   "start": 6.748,
+   "end": 7.089
+  },
+  {
+   "text": "It",
+   "start": 7.72,
+   "end": 8.015
+  },
+  {
+   "text": "goes",
+   "start": 8.015,
+   "end": 8.374
+  },
+  {
+   "text": "down",
+   "start": 8.374,
+   "end": 8.732
+  },
+  {
+   "text": "twelve",
+   "start": 8.732,
+   "end": 9.154
+  },
+  {
+   "text": "kilometres.",
+   "start": 9.154,
+   "end": 9.699
+  },
+  {
+   "text": "And",
+   "start": 10.305,
+   "end": 10.527
+  },
+  {
+   "text": "it",
+   "start": 10.527,
+   "end": 10.727
+  },
+  {
+   "text": "never",
+   "start": 10.727,
+   "end": 10.991
+  },
+  {
+   "text": "made",
+   "start": 10.991,
+   "end": 11.235
+  },
+  {
+   "text": "it",
+   "start": 11.235,
+   "end": 11.435
+  },
+  {
+   "text": "through",
+   "start": 11.435,
+   "end": 11.742
+  },
+  {
+   "text": "the",
+   "start": 11.742,
+   "end": 11.964
+  },
+  {
+   "text": "crust.",
+   "start": 11.964,
+   "end": 12.228
+  },
+  {
+   "text": "At",
+   "start": 12.84,
+   "end": 13.076
+  },
+  {
+   "text": "the",
+   "start": 13.076,
+   "end": 13.337
+  },
+  {
+   "text": "bottom,",
+   "start": 13.337,
+   "end": 13.674
+  },
+  {
+   "text": "the",
+   "start": 13.674,
+   "end": 13.935
+  },
+  {
+   "text": "rock",
+   "start": 13.935,
+   "end": 14.221
+  },
+  {
+   "text": "was",
+   "start": 14.221,
+   "end": 14.483
+  },
+  {
+   "text": "a",
+   "start": 14.483,
+   "end": 14.693
+  },
+  {
+   "text": "hundred",
+   "start": 14.693,
+   "end": 15.055
+  },
+  {
+   "text": "and",
+   "start": 15.055,
+   "end": 15.317
+  },
+  {
+   "text": "eighty",
+   "start": 15.317,
+   "end": 15.653
+  },
+  {
+   "text": "degrees.",
+   "start": 15.653,
+   "end": 16.016
+  },
+  {
+   "text": "Too",
+   "start": 16.625,
+   "end": 16.897
+  },
+  {
+   "text": "hot",
+   "start": 16.897,
+   "end": 17.169
+  },
+  {
+   "text": "to",
+   "start": 17.169,
+   "end": 17.415
+  },
+  {
+   "text": "keep",
+   "start": 17.415,
+   "end": 17.713
+  },
+  {
+   "text": "drilling.",
+   "start": 17.713,
+   "end": 18.117
+  },
+  {
+   "text": "Twelve",
+   "start": 18.76,
+   "end": 19.278
+  },
+  {
+   "text": "kilometres",
+   "start": 19.278,
+   "end": 19.947
+  },
+  {
+   "text": "down.",
+   "start": 19.947,
+   "end": 20.387
+  },
+  {
+   "text": "The",
+   "start": 21.045,
+   "end": 21.292
+  },
+  {
+   "text": "centre",
+   "start": 21.292,
+   "end": 21.611
+  },
+  {
+   "text": "of",
+   "start": 21.611,
+   "end": 21.834
+  },
+  {
+   "text": "the",
+   "start": 21.834,
+   "end": 22.081
+  },
+  {
+   "text": "Earth",
+   "start": 22.081,
+   "end": 22.376
+  },
+  {
+   "text": "is",
+   "start": 22.376,
+   "end": 22.599
+  },
+  {
+   "text": "six",
+   "start": 22.599,
+   "end": 22.846
+  },
+  {
+   "text": "thousand",
+   "start": 22.846,
+   "end": 23.212
+  },
+  {
+   "text": "more.",
+   "start": 23.212,
+   "end": 23.483
+  }
+ ]
+}

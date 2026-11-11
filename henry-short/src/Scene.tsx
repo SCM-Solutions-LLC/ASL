@@ -1,6 +1,6 @@
 import React from "react";
 import { Audio } from "@remotion/media";
-import { AbsoluteFill, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import type { Layout } from "./layout";
 import { STAGE, useLayout } from "./layout";
 import { addPose, idle, poseAt } from "./rig/animate";
@@ -24,6 +24,22 @@ export const Sfx: React.FC<{ at: number; name: string; volume?: number }> = ({ a
   <Sequence from={from} layout="none">
     <Audio src={staticFile(`sfx/${name}.wav`)} volume={volume} />
   </Sequence>
+);
+
+// The bed sits well under the read, lifts once the voice is done, and is out by the last frame.
+// Every bed is levelled to the VO's loudness by tools/music.sh, so these two numbers are the mix.
+const UNDER_VOICE = 0.18;
+const AFTER_VOICE = 0.5;
+const Music: React.FC<{ name: string; voEnd: number; duration: number }> = ({ name, voEnd, duration }) => (
+  <Audio
+    src={staticFile(`music/${name}.mp3`)}
+    loop
+    volume={(f) =>
+      interpolate(f, [0, 8], [0, 1], { extrapolateRight: "clamp" }) *
+      interpolate(f, [voEnd, voEnd + 10], [UNDER_VOICE, AFTER_VOICE], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) *
+      interpolate(f, [duration - 14, duration - 1], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
+    }
+  />
 );
 
 // Breathing rides on the upper body where the rig has one, and blinks go through whichever part
@@ -88,6 +104,7 @@ export const Scene: React.FC<{ short: Short; look: string; debug?: boolean }> = 
             </Sequence>
           ))
         : null}
+      {short.music ? <Music name={short.music} voEnd={edit.voEnd} duration={edit.duration} /> : null}
       {short.sfx?.map((s, i) => (
         <Sfx key={i} at={s.at} name={s.name} volume={s.volume} />
       ))}

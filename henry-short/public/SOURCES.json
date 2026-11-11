@@ -41,5 +41,245 @@
   "licence": "ofl-1.1",
   "ship": true,
   "note": "The faces the cloud renderer was already substituting for Arial Black, Arial, Georgia and Helvetica Neue, pinned so that every machine draws what QA measured. OFL allows bundling with the project; only selling the fonts on their own, or a modified copy under the reserved names, is ruled out. See src/fonts.ts."
+ },
+ "public/music/space.mp3": {
+  "source": "\"Out in Space\" by Agecaf, https://opengameart.org/content/out-in-space-0",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "The page carries the author's own notice dedicating the file to the public domain. Bed for Space shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/music/geology.mp3": {
+  "source": "\"Crystal Cave (song18)\" by cynicmusic, https://opengameart.org/content/crystal-cave-song18",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for Geology shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/music/science.mp3": {
+  "source": "\"The Cogs\" by turtletooth, https://opengameart.org/content/the-cogs",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for Science shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/music/history.mp3": {
+  "source": "\"Medieval: Exploration\" by RandomMind, https://opengameart.org/content/medieval-exploration",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for History shorts. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/fonts/PermanentMarker-Regular.woff2": {
+  "source": "Permanent Marker by Font Diner, from the @fontsource/permanent-marker npm package (latin subset, unmodified)",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "The marker face for the card-deck looks. Apache-2.0; the licence text is LICENSE-PermanentMarker.txt beside it. See src/fonts.ts."
+ },
+ "public/fonts/LICENSE-PermanentMarker.txt": {
+  "source": "The LICENSE file from the @fontsource/permanent-marker npm package",
+  "licence": "apache-2.0",
+  "ship": true,
+  "note": "Licence text for PermanentMarker-Regular.woff2."
+ },
+ "public/music/egypt.mp3": {
+  "source": "\"Desert Mystic 2\" by PolygonDan, from the Desert_mystic pack, https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author; the pack's own read-me says the songs are free to use with no licence restriction. Bed for the Cleopatra card-deck short, chosen by ear from four candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
+ },
+ "public/cutout/cleopatra/cleopatra.jpg": {
+  "source": "\"Cleopatra\", John William Waterhouse, 1888 — https://commons.wikimedia.org/wiki/File:Cleopatra_-_John_William_Waterhouse.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The painter died in 1917; a faithful photograph of a two-dimensional public-domain work carries no new copyright. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/second.jpg": {
+  "source": "\"The Meeting of Antony and Cleopatra\", Lawrence Alma-Tadema, 1885 — https://commons.wikimedia.org/wiki/File:Sir_Lawrence_Alma-Tadema_-_The_Meeting_of_Antony_and_Cleopatra.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The painter died in 1912. 1920px rendition of the Commons file. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/aldrin.jpg": {
+  "source": "Buzz Aldrin on the Moon, Apollo 11, photographed by Neil Armstrong, NASA AS11-40-5903 — https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA photograph, in the public domain as a work of the US federal government. It shows a real, living person: fine for editorial use like this, not for implying he endorses anything. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/flag.jpg": {
+  "source": "Aldrin salutes the flag, Apollo 11, NASA AS11-40-5874 — https://commons.wikimedia.org/wiki/File:Buzz_salutes_the_U.S._Flag.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/bootprint.jpg": {
+  "source": "Aldrin's bootprint, Apollo 11, NASA AS11-40-5877 — https://commons.wikimedia.org/wiki/File:Apollo_11_bootprint.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/launch.jpg": {
+  "source": "Apollo 11 launch, 16 July 1969, NASA GPN-2000-000630 — https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/frith.jpg": {
+  "source": "\"The Great Pyramid and the Great Sphinx\", Francis Frith, 1858, Metropolitan Museum of Art (Open Access) — https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_and_The_Great_Sphinx_MET_DP132062.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Met; the photographer died in 1898. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/geezeh.jpg": {
+  "source": "\"Pyramids of Geezeh\", lithograph by Louis Haghe after David Roberts, 1846-49 — https://commons.wikimedia.org/wiki/File:Pyramids_of_Geezeh.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Roberts died in 1864 and Haghe in 1885. 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cleopatra/sphinx.jpg": {
+  "source": "\"The Great Sphinx, Pyramids of Gizeh\", lithograph by Louis Haghe after David Roberts, 1839, Cleveland Museum of Art 1953.503 (Open Access) — https://commons.wikimedia.org/wiki/File:Louis_Haghe_-_Egypt_and_Nubia-_Volume_I_-_No._18,_The_Great_Sphinx,_Pyramids_of_Gizeh,_F_-_1953.503_-_Cleveland_Museum_of_Art.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Cleveland Museum of Art. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/rays.jpg": {
+  "source": "\"Dramatic crepuscular rays in Australian suburbs\", photograph by Commons user JaredMcKenzie, New South Wales, 6 February 2026 — https://commons.wikimedia.org/wiki/File:Dramatic_crepuscular_rays_in_Australian_suburbs.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "The photographer's own work, released CC0 on upload. A recent upload by an individual, so the dedication rests on the uploader's word alone. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/hand.jpg": {
+  "source": "\"Man in hood stretching hand\", photograph by Sandeep Swarnkar, published on Unsplash 9 April 2017 — https://commons.wikimedia.org/wiki/File:Man_in_hood_stretching_hand_(Unsplash).jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Commons records it as CC0: it went up on Unsplash in April 2017, before Unsplash replaced CC0 with its own licence that June. Only the hand is cut out and used. It is a real person's hand, face not shown: fine for editorial use like this. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/sun304.jpg": {
+  "source": "The Sun at 304 angstroms (extreme ultraviolet, false colour), Atmospheric Imaging Assembly of NASA's Solar Dynamics Observatory, 19 August 2010, NASA/SDO (AIA) — https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, in the public domain as a work of the US federal government. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/stereo.jpg": {
+  "source": "The Sun with an erupting prominence at 304 angstroms (extreme ultraviolet, false colour), NASA's STEREO Ahead spacecraft, 29 September 2008 — https://commons.wikimedia.org/wiki/File:Solar_prominence_from_STEREO_spacecraft_September_29,_2008.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. Only the disc is cut out and used. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/earth.jpg": {
+  "source": "\"The Blue Marble\": the Earth seen from Apollo 17, 7 December 1972, NASA AS17-148-22727, taken by Harrison Schmitt or Ron Evans — https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/disc.jpg": {
+  "source": "The Sun in visible light with the sunspot group of October 2014, HMI continuum image from NASA's Solar Dynamics Observatory, 23 October 2014, NASA Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:NASA%27s_SDO_Observes_Largest_Sunspot_of_the_Solar_Cycle_(15430820129).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. The marker path drawn over it in the short is a diagram, not part of the picture. 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/wheel.jpg": {
+  "source": "Collage of the Sun in different wavelengths from NASA's Solar Dynamics Observatory, from \"Sun Primer: Why NASA Scientists Observe the Sun in Different Wavelengths\", January 2013, NASA/SDO/Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:Sun_Primer-_Why_NASA_Scientists_Observe_the_Sun_in_Different_Wavelengths_(8407508991).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA collage of its own SDO images (it also includes magnetic and Doppler maps), US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/prominence.jpg": {
+  "source": "A giant prominence on the Sun before it erupted, 31 August 2012, NASA's Solar Dynamics Observatory, NASA/SDO/AIA/Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:Giant_prominence_on_the_sun_erupted.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A NASA image, US federal government work. Commons also holds the same frame under another title tagged CC BY 2.0 from NASA Goddard's Flickr; this is the copy sourced from nasa.gov and tagged public domain. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/skylab.jpg": {
+  "source": "The Sun with a loop prominence, photographed in extreme ultraviolet from Skylab, 19 December 1973, NASA S74-23458 — https://commons.wikimedia.org/wiki/File:Skylab_Solar_flare.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. Shown with a sepia tone in the short. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/sunlight/sunrise.jpg": {
+  "source": "Orbital sunrise above Earth's limb, photographed from the International Space Station during Expedition 47, 2 June 2016, NASA ISS047-E-138450 — https://commons.wikimedia.org/wiki/File:ISS047-E-138450_-_View_of_Earth.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA astronaut photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/stamp.jpg": {
+  "source": "USSR postage stamp \"Kola superdeep borehole\" (Кольская сверхглубокая скважина), 10 kopecks, \"Science in the USSR\" issue of 25 November 1987, designer A. Kernosov, CPA 5892; scan by Mariluna — https://commons.wikimedia.org/wiki/File:1987_CPA_5892.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Soviet postage stamps are official state signs and not subject to copyright (Commons tag PD-RU-exempt, which also covers the USSR's). The only picture in the deck that shows the Kola well itself, and the only one labelled as it. 560×800, the full size of the Commons file. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/plate.jpg": {
+  "source": "Dinner plate, Meissen Porcelain Factory, Germany, 1903–05, 26 cm across, Cooper Hewitt, Smithsonian Design Museum 1995-82-1 (object 18669073), the museum's catalogue photograph — https://commons.wikimedia.org/wiki/File:Dinner_Plate_(Germany),_1903%E2%80%9305_(CH_18669073).jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Marked public domain on Commons (PD-old-70-1923). CHECK BEFORE RELYING ON IT: that tag is about the plate, which is from 1903–05; the photograph is the museum's own and the page gives no separate statement for it. The Smithsonian publishes its open-access collection images as CC0, which would cover it, but that was not confirmed from the museum's site. The 26 cm is the museum's measurement, and the deck draws the 23 cm hole against it to scale. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/map.jpg": {
+  "source": "\"Soviet Union Administrative Divisions, 1981\", US Central Intelligence Agency, 1982, from the Perry-Castañeda Library Map Collection — https://commons.wikimedia.org/wiki/File:Soviet_union_admin_1981.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A CIA map, in the public domain as a work of the US federal government. 1280px rendition; the library's accession stamps are on the sheet and are left in. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/bit.jpg": {
+  "source": "Tricone drill bit, type T, for hard-rock boreholes 208 mm across, in the Museum of Technology, Warsaw; photograph by Commons user Olaf — https://commons.wikimedia.org/wiki/File:%C5%9Awider_tr%C3%B3jgryzowy_typu_T.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the photographer. A bit of the kind used in hard rock, not a bit from the Kola well; the card calls it only \"a drill bit\". 960px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/wornbit.jpg": {
+  "source": "A worn tricone drill bit, US Geological Survey photograph from its drill-hole pages (quake.wr.usgs.gov/drillhole) — https://commons.wikimedia.org/wiki/File:Drill_bit_tricone_worn.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A USGS photograph, in the public domain as a work of the US federal government (PD-USGov-USGS). A worn bit from a USGS drill hole, not one from the Kola well, and the card does not say otherwise. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/hole/earth.jpg": {
+  "source": "\"The Blue Marble\", the Earth from Apollo 17, 7 December 1972, NASA AS17-148-22727 — https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA photograph, US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/vitruvian.jpg": {
+  "source": "\"Vitruvian Man\", Leonardo da Vinci, c. 1490, Gallerie dell'Accademia, Venice — https://commons.wikimedia.org/wiki/File:Uomo_Vitruviano.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Leonardo died in 1519; a faithful photograph of a two-dimensional public-domain work carries no new copyright. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/cheek.jpg": {
+  "source": "\"Human cheek cells from science class\", photograph through a microscope by Commons user Kyreb — https://commons.wikimedia.org/wiki/File:Human_cheek_cells_from_science_class.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the photographer. A stained human cheek cell, as the file's page describes it; the black wedge is the eyepiece pointer. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/ecoli.jpg": {
+  "source": "\"E. coli at 10000x\", low-temperature electron micrograph of a cluster of E. coli by Eric Erbe, digital colorization by Christopher Pooley, USDA Agricultural Research Service (ID K11077-1) — https://commons.wikimedia.org/wiki/File:E_coli_at_10000x,_original.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A USDA ARS image, in the public domain as a work of the US federal government. The colour was added digitally and is not the bacteria's own; no card says otherwise. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/balance.jpg": {
+  "source": "Balance scale, Henry N. Hooper and Company and O.P. Drake, Metropolitan Museum of Art DP318014 (Open Access) — https://commons.wikimedia.org/wiki/File:Balance_scale_MET_DP318014.jpg",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Released CC0 by the Met. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/kitchen.jpg": {
+  "source": "\"Kitchen scale 20101110\", photograph by Commons user Batholith — https://commons.wikimedia.org/wiki/File:Kitchen_scale_20101110.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the photographer. The scale is photographed empty, its needle at zero; the needle at 200 g is drawn on in marker by the short and is not part of the photograph. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/diagram.jpg": {
+  "source": "\"Animal cell structure, numbered version\", diagram by LadyofHats (Mariana Ruiz) — https://commons.wikimedia.org/wiki/File:Animal_cell_structure_numbered_version.svg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "Released into the public domain by the author. Commons' 1280px PNG rendering of the SVG, flattened onto white and saved as JPEG; nothing else changed. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/sem.jpg": {
+  "source": "\"SEM blood cells\", scanning electron micrograph of normal circulating human blood by Bruce Wetzel and Harry Schaefer, National Cancer Institute — https://commons.wikimedia.org/wiki/File:SEM_blood_cells.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A National Cancer Institute image, in the public domain as a work of the US federal government. Greyscale as published. The card crops to a part of the frame that is almost all red blood cells; the full frame also shows white cells and platelets. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/cutout/cells/blood.jpg": {
+  "source": "\"Red Blood Cells Illustration\", Donald Bliss, National Cancer Institute (NCI Visuals Online ID 3696) — https://commons.wikimedia.org/wiki/File:Red_blood_cells_illustration.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "A National Cancer Institute image, in the public domain as a work of the US federal government. An illustration, not a micrograph, and no card calls it one. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  }
 }

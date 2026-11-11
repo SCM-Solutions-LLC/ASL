@@ -33,7 +33,9 @@
     "new-short": "node tools/new-short.mjs",
     "publishable": "node tools/check-licences.mjs --publish",
     "tts": "python3 -I tools/tts.py",
-    "sfx": "python3 -I tools/sfx.py"
+    "sfx": "python3 -I tools/sfx.py",
+    "music": "bash tools/music.sh",
+    "kit": "node tools/publish-kit.mjs"
   },
   "allowScripts": {
     "esbuild": false

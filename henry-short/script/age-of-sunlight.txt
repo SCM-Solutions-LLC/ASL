@@ -46,8 +46,11 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Provenance: the Mitalas & Sills entry is confirmed against ADS and Semantic
    Scholar (page range given as 759-760 by Semantic Scholar, 759-761 elsewhere);
    the abstract's own wording is the source for the step lengths and for the
-   "too short by an order of magnitude" direction. The Stix figures are from
-   secondary reports of that paper, not from the paper itself.
+   "too short by an order of magnitude" direction. The Stix paper is "On the
+   Time Scale of Energy Transport in the Sun", Solar Physics 212, 3-6 (2003),
+   doi:10.1023/A:1022952621810; its abstract gives the Kelvin-Helmholtz value
+   of about 3e7 years (checked 9 Nov 2026 via the Springer abstract as returned
+   by search). The 1.7e7 figure is from a review citing Stix, not from Stix.
 
 3. "The rest was getting out."
    Core out to ~0.7 solar radii is the radiative zone, where the energy diffuses
