@@ -5,7 +5,7 @@ to find seven CC0 files and hope their provenance holds: it is to stop having a 
 question at all. Everything here is generated from numpy, so the output is the project's own work
 and the only thing to audit is this file.
 
-That also makes the sounds reproducible. `npm run sfx` rewrites all seven byte for byte, so a
+That also makes the sounds reproducible. `npm run sfx` rewrites every sound byte for byte, so a
 change to one of them is a diff rather than a mystery.
 
 The palette is deliberately synthetic. These accent a flat cut-out animation, not a documentary,
@@ -82,7 +82,7 @@ def fade_edges(x: np.ndarray, ms: float = 4.0) -> np.ndarray:
     return x
 
 
-# ---------------------------------------------------------------- the seven
+# ---------------------------------------------------------------- the sounds
 
 
 def pop(d=1.0):
@@ -158,6 +158,22 @@ def ring_snap(d=2.0):
     return (body + strike * 0.7) * gate
 
 
+def flick(d=0.5):
+    """A card flicked onto the pile: a short rush of paper, pitched up as it lands."""
+    n = int(SR * d)
+    rush = bandpass(noise(d, 7), 900, 5200, poles=2)
+    shape = np.minimum(np.arange(n) / (SR * 0.03), 1.0) * decay(n, 0.05)
+    return rush * shape
+
+
+def tap(d=0.5):
+    """A card set down on the table: a soft wooden knock, lower and rounder than the pop."""
+    n = int(SR * d)
+    body = sweep(n, 420, 210, curve=0.4) * decay(n, 0.03)
+    knock = bandpass(noise(d, 8), 300, 1800) * decay(n, 0.008)
+    return body + knock * 0.8
+
+
 SOUNDS = {
     "pop": pop,
     "whoosh": whoosh,
@@ -166,6 +182,8 @@ SOUNDS = {
     "rumble": rumble,
     "sparkle": sparkle,
     "ring_snap": ring_snap,
+    "flick": flick,
+    "tap": tap,
 }
 
 

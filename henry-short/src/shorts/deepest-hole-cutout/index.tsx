@@ -88,9 +88,9 @@ const F = {
 // The numbers on screen, each from script/deepest-hole.txt.
 const DEPTH_M = 12262;
 const BORE_CM = 23;
-// The plate in the picture is 26 cm across by its museum's record, so the hole can be drawn against
+// The plate in the picture is 25.6 cm across by its museum's record, so the hole can be drawn against
 // it to scale: a little smaller, as the script's notes say a dinner plate is.
-const PLATE_CM = 26;
+const PLATE_CM = 25.6;
 const STARTED = 1970;
 const REACHED = 1989;
 const ROCK_C = 180;
@@ -112,7 +112,7 @@ const CREAM = "#fffdf6";
 // The pictures in public/cutout/hole/, with their pixel sizes.
 const PICS = {
   stamp: [560, 800],
-  plate: [1280, 843],
+  plate: [960, 896],
   map: [1280, 930],
   bit: [960, 1280],
   wornbit: [1280, 1034],
@@ -126,6 +126,7 @@ const ellipse = (cx: number, cy: number, rx: number, ry = rx, n = 48) =>
     return [cx + Math.cos(a) * rx, cy + Math.sin(a) * ry] as const;
   });
 
+const PLATE_R = 398;
 // Outlines cut around a subject, in the picture's pixels.
 const OUTLINE = {
   // The disc of the Earth, without the black of space around it.
@@ -134,11 +135,11 @@ const OUTLINE = {
     box: [73, 74, 1132, 1132],
     pts: ellipse(639, 640, 566),
   },
-  // The plate is photographed at an angle, so its rim is an ellipse: 358 by 190 pixels.
+  // The plate is photographed face on: a circle PLATE_R pixels in radius round its scalloped rim.
   plate: {
     pic: "plate",
-    box: [262, 232, 728, 392],
-    pts: ellipse(626, 428, 358, 190),
+    box: [83, 60, 804, 804],
+    pts: ellipse(485, 462, PLATE_R),
   },
   // The three toothed cones of the bit, without the museum case and the gloved hands around it.
   bit: {
@@ -270,10 +271,10 @@ const derrick = (x: number, y: number, h: number) =>
 // over it, and then a real dinner plate dropped on top, which covers it.
 const Hole: React.FC = () => {
   const f = useCurrentFrame();
-  const [x, y] = [540, 700];
-  const w = 800;
+  const [x, y] = [540, 730];
+  const w = 700;
   const k = (w / OUTLINE.plate.box[2]) * (BORE_CM / PLATE_CM);
-  const [rx, ry] = [358 * k, 190 * k];
+  const [rx, ry] = [PLATE_R * k, PLATE_R * k];
   const lineY = y - ry - 78;
   const covered = f >= F.dinner + 5;
   return (
@@ -922,21 +923,21 @@ export const deepestHoleCutout: Short = {
   music: "geology",
   sfx: [
     { at: 0, name: "pop" },
-    { at: F.wide - 2, name: "pop" },
-    { at: F.sentence2 - 2, name: "pop" },
+    { at: F.wide - 2, name: "flick" },
+    { at: F.sentence2 - 2, name: "tap" },
     { at: F.nineteen - 2, name: "pop" },
     { at: F.years, name: "thud", volume: 0.4 },
     { at: F.sentence3 - 2, name: "whoosh", volume: 0.35 },
     { at: F.goes, name: "rumble", volume: 0.3 },
     { at: F.kilometres + 8, name: "thud", volume: 0.5 },
-    { at: F.sentence4 - 2, name: "pop" },
-    { at: F.sentence5 - 2, name: "pop" },
+    { at: F.sentence4 - 2, name: "flick" },
+    { at: F.sentence5 - 2, name: "tap" },
     { at: F.hundred - 2, name: "pop" },
     { at: F.eighty, name: "thud", volume: 0.5 },
-    { at: F.too - 2, name: "pop" },
+    { at: F.too - 2, name: "flick" },
     { at: F.too + 1, name: "thud", volume: 0.6 },
     { at: F.again - 2, name: "whoosh", volume: 0.35 },
-    { at: F.sentence7 - 2, name: "pop" },
+    { at: F.sentence7 - 2, name: "tap" },
     { at: F.six, name: "thud", volume: 0.6 },
     { at: F.more + 6, name: "sparkle", volume: 0.4 },
   ],

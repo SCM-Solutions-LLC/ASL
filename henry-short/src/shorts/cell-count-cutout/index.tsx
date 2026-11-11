@@ -30,7 +30,8 @@ import type { Short } from "../types";
 //
 // Every number on a card is one of the script's own (script/cell-count.txt carries the paper behind
 // them): 30 trillion human cells, 38 trillion bacteria, about 200 g, 84% red blood cells BY COUNT,
-// and the 44% that 30 of 68 comes to. Every picture is a real public-domain or CC0 one and is
+// The first card splits its figure at 30 of 68 and puts no percentage on it: the paper's error
+// margin does not carry one. Every picture is a real public-domain or CC0 one and is
 // labelled as what its Commons page says it is; public/SOURCES.json carries where each came from.
 const edit = makeEdit({
   alignment,
@@ -98,7 +99,6 @@ const PICS = {
   kitchen: [1280, 1707],
   diagram: [1280, 1038],
   sem: [1280, 1592],
-  blood: [1280, 960],
 } as const;
 export const Cut = makeCut("cells", PICS);
 
@@ -400,13 +400,10 @@ const onScale = (px: number, py: number) => {
     SCALE.y - (SCALE.box[3] * k) / 2 + (py - SCALE.box[1]) * k,
   ] as const;
 };
-// The dial reads clockwise to 2 kg, so 200 g is a tenth of the way round from the top. The photograph
-// shows the scale empty, its own needle at zero; the marker needle is where 200 g would put it.
-const HUB = onScale(628, 955);
-const TICK = onScale(
-  628 + Math.sin(Math.PI / 5) * 318,
-  955 - Math.cos(Math.PI / 5) * 318,
-);
+// The dial reads clockwise to 2 kg, so 200 g is a tenth of the way round from the top (about 40° as photographed). The photograph
+// shows the scale empty, its needle at zero; marker rings the 200 g mark and draws no second needle.
+const TICK = onScale(628 + Math.sin(0.7) * 258, 955 - Math.cos(0.7) * 258);
+const RING = 58;
 
 // Where the figure sits on the first card, and its outline there, so the tissue over the part of
 // him that is not human can be trimmed to the paper he is cut from.
@@ -464,15 +461,6 @@ const Deck: React.FC = () => (
         size={104}
       />
       <Word text="LESS THAN HALF" at={F.less - 1} size={108} tilt={3} />
-      <Burst at={F.human} x={300} y={245} r={130} colour={CORAL} n={11} />
-      <Scrap
-        text={`${Math.round(SHARE * 100)}% HUMAN`}
-        at={F.human}
-        x={300}
-        y={245}
-        size={68}
-        tilt={-6}
-      />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
@@ -564,11 +552,11 @@ const Deck: React.FC = () => (
       />
       <Marker>
         <Stroke
-          d={`M${HUB[0]} ${HUB[1]} L${TICK[0]} ${TICK[1]}`}
+          d={`M${TICK[0] - RING} ${TICK[1]} a${RING} ${RING} 0 1 1 ${RING * 2} 0 a${RING} ${RING} 0 1 1 ${-RING * 2} 0`}
           from={F.two - 3}
-          to={F.two + 3}
+          to={F.two + 5}
           colour={TEAL}
-          width={22}
+          width={16}
         />
       </Marker>
       <Burst at={F.two} x={540} y={1190} r={125} colour={CORAL} n={12} />
@@ -649,24 +637,26 @@ const Deck: React.FC = () => (
       />
     </Shot>
 
-    {/* 8. By count, your cells are mostly blood. */}
-    <Shot from={F.sentence6 - 2} to={F.sentence7 - 2} tilt={1.5} sheet={YELLOW}>
-      <Cut
-        pic="blood"
-        x={540}
-        y={590}
-        w={850}
-        box={[90, 0, 830, 690]}
-        tilt={2}
-        tone="saturate(1.25) contrast(1.12)"
-        punch={F.mostly}
-        by={1.08}
-      />
+    {/* 8. By count, your cells are mostly blood. The claim as the count it is: a dot for each of
+        the 30 trillion, the 25 that are red blood cells in red. Card 9 sets the bacteria beside it. */}
+    <Shot from={F.sentence6 - 2} to={F.sentence7 - 2}>
+      <Marker>
+        <g transform="translate(540 1050) scale(1.85) translate(-540 -1050)">
+          <Tally
+            x={540}
+            base={1050}
+            n={HUMAN}
+            from={F.sentence6}
+            over={F.mostly - F.sentence6}
+            colour={(i) => (i < RED ? CORAL : YELLOW)}
+          />
+        </g>
+      </Marker>
       <Scrap
         text="BY COUNT"
         at={F.byCount - 4}
-        x={330}
-        y={270}
+        x={300}
+        y={150}
         size={96}
         tilt={-6}
       />
@@ -715,24 +705,24 @@ export const cellCountCutout: Short = {
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "science",
+  music: "cells",
   sfx: [
     { at: 0, name: "pop" },
     { at: F.half, name: "whoosh", volume: 0.3 },
-    { at: F.sentence2 - 2, name: "pop" },
-    { at: F.thirtyEight - 2, name: "pop" },
+    { at: F.sentence2 - 2, name: "flick" },
+    { at: F.thirtyEight - 2, name: "tap" },
     { at: F.sentence4 - 2, name: "pop" },
-    { at: F.those - 2, name: "pop" },
+    { at: F.those - 2, name: "flick" },
     { at: F.two, name: "thud", volume: 0.6 },
-    { at: F.sentence5 - 2, name: "pop" },
+    { at: F.sentence5 - 2, name: "tap" },
     { at: F.not - 1, name: "whoosh", volume: 0.35 },
     { at: F.eightyFour - 2, name: "pop" },
     { at: F.red, name: "thud", volume: 0.4 },
-    { at: F.sentence6 - 2, name: "pop" },
+    { at: F.sentence6 - 2, name: "flick" },
     { at: F.mostly, name: "thud", volume: 0.4 },
     { at: F.sentence7 - 2, name: "whoosh", volume: 0.35 },
     { at: F.outnumbered, name: "thud", volume: 0.6 },
-    { at: F.their - 2, name: "pop" },
+    { at: F.their - 2, name: "tap" },
     { at: F.passengers, name: "sparkle", volume: 0.4 },
   ],
 };
