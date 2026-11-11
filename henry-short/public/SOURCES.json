@@ -275,5 +275,17 @@
   "licence": "public-domain",
   "ship": true,
   "note": "A National Cancer Institute image, in the public domain as a work of the US federal government. Greyscale as published. The card crops to a part of the frame that is almost all red blood cells; the full frame also shows white cells and platelets. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+ },
+ "public/music/sun.mp3": {
+  "source": "Gustav Holst, \"The Planets\", Op. 32: 7. \"Neptune, the Mystic\", performed by \"The President's Own\" United States Marine Band — https://commons.wikimedia.org/wiki/File:HOLST_%22The_Planets,_Op._32_7._Neptune,_the_Mystic%22_-_%22The_President%27s_Own%22_U.S._Marine_Band.opus",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The performance is a work of the US Marine Corps (Commons tag PD-USMC); Holst died in 1934 and the composition is out of copyright. Bed for the age-of-sunlight card deck, chosen by ear from two candidates. 45 s from 0:40, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`) from Commons' MP3 rendition. Licence read on the file's page on 2026-11-10."
+ },
+ "public/music/cells.mp3": {
+  "source": "J.S. Bach, Goldberg Variations, BWV 988: Variatio 1, performed by Kimiko Ishizaka (Open Goldberg Variations, 2012) — https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_J.S._Bach-_-Open-_Goldberg_Variations,_BWV_988_(Piano)_-_02_Variatio_1_a_1_Clav.mp3",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "The Open Goldberg Variations recording was released CC0 by the performer. Bed for the cell-count card deck, chosen by ear from two candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`) from Commons' Ogg rendition. Licence read on the file's page on 2026-11-10."
  }
 }

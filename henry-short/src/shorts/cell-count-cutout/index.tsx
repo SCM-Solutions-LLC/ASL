@@ -705,7 +705,7 @@ export const cellCountCutout: Short = {
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "science",
+  music: "cells",
   sfx: [
     { at: 0, name: "pop" },
     { at: F.half, name: "whoosh", volume: 0.3 },

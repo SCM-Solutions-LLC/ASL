@@ -665,7 +665,7 @@ export const ageOfSunlightCutout: Short = {
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "space",
+  music: "sun",
   sfx: [
     { at: 0, name: "pop" },
     { at: F.hundred - 2, name: "thud", volume: 0.5 },
