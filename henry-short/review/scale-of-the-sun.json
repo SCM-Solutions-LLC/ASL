@@ -1,10 +1,18 @@
 {
   "slug": "scale-of-the-sun",
   "file": "out/release/scale-of-the-sun.mp4",
-  "mp4_sha256": "",
+  "mp4_sha256": "2da62dd83aff49b0843bbf8ab17ebe29b27061dd6f0c355363ad29572a55ff47",
   "title": "The Sun is not an average star",
   "description": "Jupiter is the biggest planet, but it would take nearly a thousand Jupiters to fill the Sun (by volume). And the Sun is no average star: it is bigger and brighter than over 90% of the stars near us, because most of them are small, dim red dwarfs, like our nearest neighbour, Proxima Centauri.\n\nSources:\n- NASA Planetary Fact Sheets: nssdc.gsfc.nasa.gov/planetary/factsheet/\n- Reylé et al. 2021, \"The 10 parsec sample in the Gaia era\", A&A 650, A201. doi:10.1051/0004-6361/202140985\n- Boyajian et al. 2012, ApJ 757, 112. doi:10.1088/0004-637X/757/2/112\n- Giammichele, Bergeron & Dufour 2012, ApJS 199, 29. doi:10.1088/0067-0049/199/2/29\n- Thévenin et al. 2005, A&A 436, 253. doi:10.1051/0004-6361:20042075\n- Anglada-Escudé et al. 2016, Nature 536, 437. doi:10.1038/nature19106\n- Kervella et al. 2017, A&A 598, L7. doi:10.1051/0004-6361/201629930\n- Howard et al. 2018, ApJL 860, L30. doi:10.3847/2041-8213/aacaf3\n- NASA Exoplanet Archive (Proxima Cen)\n\nNarration: Kokoro-82M synthetic voice. Illustrated animation; marked shots are not to scale.\n\n#shorts #space #astronomy",
-  "tags": ["sun", "stars", "red dwarf", "proxima centauri", "jupiter", "astronomy", "space"],
+  "tags": [
+    "sun",
+    "stars",
+    "red dwarf",
+    "proxima centauri",
+    "jupiter",
+    "astronomy",
+    "space"
+  ],
   "categoryId": "28",
   "selfDeclaredMadeForKids": false,
   "privacyStatus": "private",

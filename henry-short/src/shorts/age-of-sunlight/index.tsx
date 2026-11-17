@@ -15,10 +15,10 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   cut: [{ from: "The energy in the sunlight", to: "were the trip to you.", tail: 0.4 }],
-  keyPhrases: [["hundred", "thousand"], ["eight", "minutes"], ["gamma", "rays"], ["ancient"]],
+  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["gamma", "rays"], ["ancient"]],
   // The 19-word hook would overflow the 9:16 caption block as one page, so it breaks after "skin".
   // Both occurrences of "eight minutes" light up on purpose: the closing line hands the number back.
-  breakAfter: ["skin"],
+  breakAfter: ["skin", "years,"],
 });
 
 // Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
@@ -349,10 +349,10 @@ const SunScene: React.FC = () => {
       <Tag x={850} y={150} text="8 MINUTES" sub={"surface to your skin\nnot to scale"} from={F.minutes + 8} to={F.rest + 6} />
       {/* Above the disc, not on it: at 320 units of radius there is no clear ground beside it in
           the 9:16 crop, and the first pass had the sub-line unreadable against the limb. */}
-      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.rest} to={F.ancient + 48} />
+      <Tag x={600} y={30} text="10,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.rest} to={F.ancient + 48} />
       {/* The two answers side by side on the last line, stacked rather than abreast because the
           vertical crop has the height to spare and not the width. */}
-      <Tag x={600} y={110} text="THE ENERGY" sub="100,000+ years getting out" from={F.close - 2} />
+      <Tag x={600} y={110} text="THE ENERGY" sub="10,000+ years getting out" from={F.close - 2} />
       <Tag x={600} y={640} text="THE TRIP" sub={"8 minutes to you\nnot to scale"} from={F.close + 10} />
     </>
   );
@@ -360,7 +360,7 @@ const SunScene: React.FC = () => {
 
 export const ageOfSunlight: Short = {
   slug: "age-of-sunlight",
-  title: "The energy in sunlight took 100,000+ years to get out of the Sun",
+  title: "The energy in sunlight took tens of thousands of years to get out of the Sun",
   edit,
   looks: [{ id: "Space", Set: Starfield, cast: () => [] }],
   props: () => <SunScene />,

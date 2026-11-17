@@ -2,357 +2,367 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/age-of-sunlight.txt",
  "audio": "public/vo/age-of-sunlight.wav",
- "sha256": "7f928f2a4f22cfef00140d9a00e69781c0f5a0d4cb682a0ec87c9509a2cf4792",
+ "sha256": "4a7633d9d5cd14401d78a8fa75d61c0ed74a14bd93233af258b5f53dd238565a",
  "words": [
   {
    "text": "The",
    "start": 0.0,
-   "end": 0.26
+   "end": 0.267
   },
   {
    "text": "energy",
-   "start": 0.26,
-   "end": 0.595
+   "start": 0.267,
+   "end": 0.612
   },
   {
    "text": "in",
-   "start": 0.595,
-   "end": 0.83
+   "start": 0.612,
+   "end": 0.854
   },
   {
    "text": "the",
-   "start": 0.83,
-   "end": 1.09
+   "start": 0.854,
+   "end": 1.121
   },
   {
    "text": "sunlight",
-   "start": 1.09,
-   "end": 1.475
+   "start": 1.121,
+   "end": 1.517
   },
   {
    "text": "on",
-   "start": 1.475,
-   "end": 1.71
+   "start": 1.517,
+   "end": 1.759
   },
   {
    "text": "your",
-   "start": 1.71,
-   "end": 1.995
+   "start": 1.759,
+   "end": 2.052
   },
   {
    "text": "skin",
-   "start": 1.995,
-   "end": 2.28
+   "start": 2.052,
+   "end": 2.345
   },
   {
    "text": "spent",
-   "start": 2.28,
-   "end": 2.59
+   "start": 2.345,
+   "end": 2.664
   },
   {
-   "text": "more",
-   "start": 2.59,
-   "end": 2.875
-  },
-  {
-   "text": "than",
-   "start": 2.875,
-   "end": 3.16
-  },
-  {
-   "text": "a",
-   "start": 3.16,
-   "end": 3.37
-  },
-  {
-   "text": "hundred",
-   "start": 3.37,
-   "end": 3.73
-  },
-  {
-   "text": "thousand",
-   "start": 3.73,
-   "end": 4.115
-  },
-  {
-   "text": "years",
-   "start": 4.115,
-   "end": 4.426
-  },
-  {
-   "text": "getting",
-   "start": 4.426,
-   "end": 4.786
-  },
-  {
-   "text": "out",
-   "start": 4.786,
-   "end": 5.046
+   "text": "tens",
+   "start": 2.664,
+   "end": 2.957
   },
   {
    "text": "of",
-   "start": 5.046,
-   "end": 5.28
+   "start": 2.957,
+   "end": 3.199
   },
   {
-   "text": "the",
-   "start": 5.28,
-   "end": 5.54
+   "text": "thousands",
+   "start": 3.199,
+   "end": 3.621
   },
   {
-   "text": "Sun.",
-   "start": 5.54,
-   "end": 5.8
+   "text": "of",
+   "start": 3.621,
+   "end": 3.862
   },
   {
-   "text": "The",
-   "start": 6.485,
-   "end": 6.699
+   "text": "years,",
+   "start": 3.862,
+   "end": 4.181
   },
   {
-   "text": "trip",
-   "start": 6.699,
-   "end": 6.933
+   "text": "maybe",
+   "start": 4.181,
+   "end": 4.5
   },
   {
-   "text": "from",
-   "start": 6.933,
-   "end": 7.168
+   "text": "far",
+   "start": 4.5,
+   "end": 4.768
   },
   {
-   "text": "the",
-   "start": 7.168,
-   "end": 7.382
+   "text": "more,",
+   "start": 4.768,
+   "end": 5.061
   },
   {
-   "text": "Sun",
-   "start": 7.382,
-   "end": 7.596
-  },
-  {
-   "text": "to",
-   "start": 7.596,
-   "end": 7.789
-  },
-  {
-   "text": "you",
-   "start": 7.789,
-   "end": 8.003
-  },
-  {
-   "text": "took",
-   "start": 8.003,
-   "end": 8.237
-  },
-  {
-   "text": "eight",
-   "start": 8.237,
-   "end": 8.492
-  },
-  {
-   "text": "minutes.",
-   "start": 8.492,
-   "end": 8.789
-  },
-  {
-   "text": "Getting",
-   "start": 9.395,
-   "end": 9.777
+   "text": "getting",
+   "start": 5.061,
+   "end": 5.432
   },
   {
    "text": "out",
-   "start": 9.777,
-   "end": 10.053
+   "start": 5.432,
+   "end": 5.699
   },
   {
-   "text": "was",
-   "start": 10.053,
-   "end": 10.329
-  },
-  {
-   "text": "the",
-   "start": 10.329,
-   "end": 10.605
-  },
-  {
-   "text": "slow",
-   "start": 10.605,
-   "end": 10.907
-  },
-  {
-   "text": "part.",
-   "start": 10.907,
-   "end": 11.21
-  },
-  {
-   "text": "But",
-   "start": 11.855,
-   "end": 12.077
-  },
-  {
-   "text": "it",
-   "start": 12.077,
-   "end": 12.278
-  },
-  {
-   "text": "is",
-   "start": 12.278,
-   "end": 12.479
-  },
-  {
-   "text": "not",
-   "start": 12.479,
-   "end": 12.701
+   "text": "of",
+   "start": 5.699,
+   "end": 5.94
   },
   {
    "text": "the",
-   "start": 12.701,
-   "end": 12.924
+   "start": 5.94,
+   "end": 6.208
   },
   {
-   "text": "same",
-   "start": 12.924,
-   "end": 13.167
-  },
-  {
-   "text": "light.",
-   "start": 13.167,
-   "end": 13.433
-  },
-  {
-   "text": "Deep",
-   "start": 14.04,
-   "end": 14.418
-  },
-  {
-   "text": "inside,",
-   "start": 14.418,
-   "end": 14.862
-  },
-  {
-   "text": "it",
-   "start": 14.862,
-   "end": 15.173
-  },
-  {
-   "text": "travels",
-   "start": 15.173,
-   "end": 15.651
-  },
-  {
-   "text": "mostly",
-   "start": 15.651,
-   "end": 16.096
-  },
-  {
-   "text": "as",
-   "start": 16.096,
-   "end": 16.407
-  },
-  {
-   "text": "gamma",
-   "start": 16.407,
-   "end": 16.818
-  },
-  {
-   "text": "rays",
-   "start": 16.818,
-   "end": 17.196
-  },
-  {
-   "text": "and",
-   "start": 17.196,
-   "end": 17.54
-  },
-  {
-   "text": "X-rays.",
-   "start": 17.54,
-   "end": 17.951
-  },
-  {
-   "text": "It",
-   "start": 18.575,
-   "end": 18.852
-  },
-  {
-   "text": "leaves",
-   "start": 18.852,
-   "end": 19.249
-  },
-  {
-   "text": "as",
-   "start": 19.249,
-   "end": 19.526
-  },
-  {
-   "text": "sunlight.",
-   "start": 19.526,
-   "end": 19.982
+   "text": "Sun.",
+   "start": 6.208,
+   "end": 6.475
   },
   {
    "text": "The",
-   "start": 20.585,
-   "end": 20.924
-  },
-  {
-   "text": "energy",
-   "start": 20.924,
-   "end": 21.36
-  },
-  {
-   "text": "is",
-   "start": 21.36,
-   "end": 21.666
-  },
-  {
-   "text": "ancient.",
-   "start": 21.666,
-   "end": 22.135
-  },
-  {
-   "text": "Its",
-   "start": 22.77,
-   "end": 22.989
-  },
-  {
-   "text": "last",
-   "start": 22.989,
-   "end": 23.229
-  },
-  {
-   "text": "eight",
-   "start": 23.229,
-   "end": 23.49
-  },
-  {
-   "text": "minutes",
-   "start": 23.49,
-   "end": 23.794
-  },
-  {
-   "text": "were",
-   "start": 23.794,
-   "end": 24.034
-  },
-  {
-   "text": "the",
-   "start": 24.034,
-   "end": 24.253
+   "start": 7.16,
+   "end": 7.374
   },
   {
    "text": "trip",
-   "start": 24.253,
-   "end": 24.493
+   "start": 7.374,
+   "end": 7.608
+  },
+  {
+   "text": "from",
+   "start": 7.608,
+   "end": 7.843
+  },
+  {
+   "text": "the",
+   "start": 7.843,
+   "end": 8.057
+  },
+  {
+   "text": "Sun",
+   "start": 8.057,
+   "end": 8.271
   },
   {
    "text": "to",
-   "start": 24.493,
-   "end": 24.691
+   "start": 8.271,
+   "end": 8.464
+  },
+  {
+   "text": "you",
+   "start": 8.464,
+   "end": 8.678
+  },
+  {
+   "text": "took",
+   "start": 8.678,
+   "end": 8.912
+  },
+  {
+   "text": "eight",
+   "start": 8.912,
+   "end": 9.167
+  },
+  {
+   "text": "minutes.",
+   "start": 9.167,
+   "end": 9.464
+  },
+  {
+   "text": "Getting",
+   "start": 10.07,
+   "end": 10.452
+  },
+  {
+   "text": "out",
+   "start": 10.452,
+   "end": 10.728
+  },
+  {
+   "text": "was",
+   "start": 10.728,
+   "end": 11.004
+  },
+  {
+   "text": "the",
+   "start": 11.004,
+   "end": 11.28
+  },
+  {
+   "text": "slow",
+   "start": 11.28,
+   "end": 11.582
+  },
+  {
+   "text": "part.",
+   "start": 11.582,
+   "end": 11.885
+  },
+  {
+   "text": "But",
+   "start": 12.53,
+   "end": 12.752
+  },
+  {
+   "text": "it",
+   "start": 12.752,
+   "end": 12.953
+  },
+  {
+   "text": "is",
+   "start": 12.953,
+   "end": 13.154
+  },
+  {
+   "text": "not",
+   "start": 13.154,
+   "end": 13.376
+  },
+  {
+   "text": "the",
+   "start": 13.376,
+   "end": 13.599
+  },
+  {
+   "text": "same",
+   "start": 13.599,
+   "end": 13.842
+  },
+  {
+   "text": "light.",
+   "start": 13.842,
+   "end": 14.108
+  },
+  {
+   "text": "Deep",
+   "start": 14.715,
+   "end": 15.093
+  },
+  {
+   "text": "inside,",
+   "start": 15.093,
+   "end": 15.537
+  },
+  {
+   "text": "it",
+   "start": 15.537,
+   "end": 15.848
+  },
+  {
+   "text": "travels",
+   "start": 15.848,
+   "end": 16.326
+  },
+  {
+   "text": "mostly",
+   "start": 16.326,
+   "end": 16.771
+  },
+  {
+   "text": "as",
+   "start": 16.771,
+   "end": 17.082
+  },
+  {
+   "text": "gamma",
+   "start": 17.082,
+   "end": 17.493
+  },
+  {
+   "text": "rays",
+   "start": 17.493,
+   "end": 17.871
+  },
+  {
+   "text": "and",
+   "start": 17.871,
+   "end": 18.215
+  },
+  {
+   "text": "X-rays.",
+   "start": 18.215,
+   "end": 18.626
+  },
+  {
+   "text": "It",
+   "start": 19.25,
+   "end": 19.527
+  },
+  {
+   "text": "leaves",
+   "start": 19.527,
+   "end": 19.923
+  },
+  {
+   "text": "as",
+   "start": 19.923,
+   "end": 20.201
+  },
+  {
+   "text": "sunlight.",
+   "start": 20.201,
+   "end": 20.656
+  },
+  {
+   "text": "The",
+   "start": 21.26,
+   "end": 21.599
+  },
+  {
+   "text": "energy",
+   "start": 21.599,
+   "end": 22.035
+  },
+  {
+   "text": "is",
+   "start": 22.035,
+   "end": 22.341
+  },
+  {
+   "text": "ancient.",
+   "start": 22.341,
+   "end": 22.81
+  },
+  {
+   "text": "Its",
+   "start": 23.445,
+   "end": 23.664
+  },
+  {
+   "text": "last",
+   "start": 23.664,
+   "end": 23.904
+  },
+  {
+   "text": "eight",
+   "start": 23.904,
+   "end": 24.165
+  },
+  {
+   "text": "minutes",
+   "start": 24.165,
+   "end": 24.469
+  },
+  {
+   "text": "were",
+   "start": 24.469,
+   "end": 24.709
+  },
+  {
+   "text": "the",
+   "start": 24.709,
+   "end": 24.928
+  },
+  {
+   "text": "trip",
+   "start": 24.928,
+   "end": 25.168
+  },
+  {
+   "text": "to",
+   "start": 25.168,
+   "end": 25.366
   },
   {
    "text": "you.",
-   "start": 24.691,
-   "end": 24.91
+   "start": 25.366,
+   "end": 25.585
   }
  ]
 }
