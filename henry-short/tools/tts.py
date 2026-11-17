@@ -5,10 +5,10 @@ asset this channel cannot afford another licence surprise on. It runs locally, s
 per-character cost and no terms page that can change under a published video.
 
 Run (from the project root):
-  pip install kokoro soundfile          # once; Kokoro also wants espeak-ng on the system
-  python3 -I tools/tts.py scale-of-the-sun
-  python3 -I tools/tts.py scale-of-the-sun --voice am_michael --speed 0.95
-  python3 -I tools/tts.py --self-test   # exercises the timing and WAV code with no model at all
+  npm run setup                         # once: the pinned Python 3.12 venv in .venv
+  npm run tts -- scale-of-the-sun
+  npm run tts -- scale-of-the-sun --voice am_michael --speed 0.95
+  npm run tts -- --self-test            # exercises the timing and WAV code with no model at all
 
 Writes public/vo/<slug>.wav and src/generated/<slug>.alignment.json, the same format tools/align.py
 produces, so `npm run lint` checks it the same way and makeEdit consumes it unchanged.
@@ -26,6 +26,7 @@ of model weights one brings with it.
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import wave
@@ -112,11 +113,13 @@ def sha256(path):
 
 def synthesise(lines, voice, speed, seed):
     """The only part that needs the model. Everything above it is pure and tested by --self-test."""
+    # huggingface_hub's Xet transfer hangs fetching the Kokoro weights behind a proxy; plain HTTPS works.
+    os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
     try:
         import torch
         from kokoro import KPipeline
     except ImportError:
-        sys.exit("kokoro is not installed. `pip install kokoro soundfile` (and espeak-ng on the system).")
+        sys.exit("kokoro is not installed in this interpreter. Run `npm run setup`, then `npm run tts`.")
 
     # Kokoro samples, so two runs of the same script produce different audio unless the generator
     # is pinned. Found by running it twice and getting two different file hashes. That matters
@@ -168,7 +171,7 @@ def self_test():
         assert len(sha256(out)) == 64
 
     print(f"self-test ok: {len(lines)} sentences, {len(words)} words, {len(audio) / SR:.2f}s, WAV and hash verified")
-    print("NOT tested here: the Kokoro call itself — this container cannot reach the model weights.")
+    print("NOT tested here: the Kokoro call itself.")
 
 
 def main():
