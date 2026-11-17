@@ -5,7 +5,7 @@ It would take nearly a thousand Jupiters to fill the Sun.
 And here is the part that gets people.
 Our Sun is not an average star. It is an unusually big one.
 It is bigger and brighter than over ninety percent of the stars in our part of the galaxy,
-because most stars are red dwarfs: small, dim, and everywhere.
+because most of them are red dwarfs: small, dim, and everywhere.
 So look at the nearest star to our own.
 Proxima Centauri, just over four light years away.
 The closest star to the Sun, and you have almost certainly never seen it.
@@ -50,7 +50,7 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Bergeron & Dufour, "Know Your Neighborhood: A Detailed Model Atmosphere
    Analysis of Nearby White Dwarfs", ApJS 199, 29 (2012),
    doi:10.1088/0067-0049/199/2/29 (arXiv:1202.5581), Table 2 gives Teff and
-   log L/L_sun for all 165 white dwarfs within 20 pc. The brightest is log L =
+   log L/L_sun for 165 nearby white dwarfs (the 20 pc sample plus a few just beyond). The brightest is log L =
    -1.12 (0.08 L_sun); within 10 pc the brightest is Sirius B (WD 0642-166),
    log L = -1.53 (0.03 L_sun). Radius from those two columns by Stefan-Boltzmann,
    R = sqrt(L) x (5772 K / Teff)^2: none exceeds 0.022 R_sun. Even counting
@@ -65,7 +65,8 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    says "our part of the galaxy" rather than "the galaxy".
    On screen: "THE SUN / bigger than 9 in 10 nearby stars".
 
-5. "Because most stars are red dwarfs: small, dim, and everywhere."
+5. "Because most of them are red dwarfs: small, dim, and everywhere." ("them" is
+   the stars in our part of the galaxy, the scope of the census.)
    Reylé et al. 2021, as above: 249 M dwarfs of 337 typed stars, 74%. Small and
    dim: Boyajian et al. 2012 Table 6 (claim 4), M dwarfs 0.14-0.58 R_sun and
    0.0016-0.07 L_sun. The paper's
@@ -111,7 +112,7 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    (Demory et al. 2009, as given in Kervella et al., A&A 598, L7 (2017),
    doi:10.1051/0004-6361/201629930), and Anglada-Escudé et al. 2016 quote a
    "measured radius of 0.14". Model-based: Kervella 2017 adopt 0.1542 ± 0.0045
-   from a mass-radius relation. NASA Exoplanet Archive: 0.141 ± 0.021 (Suárez
+   from a radius-K-magnitude relation. NASA Exoplanet Archive: 0.141 ± 0.021 (Suárez
    Mascareño et al. 2025, 2025A&A...700A..11M). The label uses the measured value,
    1/7 = 0.143, inside the measured and Archive ranges; Proxima is drawn at 13.7
    against the Sun's 96.

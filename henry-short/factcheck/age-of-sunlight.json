@@ -1,6 +1,6 @@
 {
   "script": "script/age-of-sunlight.txt",
-  "sha256": "6e7a1fd409aac18ff53e3e0c852bfa273376a43e1b13ce9519c9226c312e1b25",
+  "sha256": "397bb3374753edb4b77e5d2e68ea4970e799fd967752b5e052ed1b77a065ded7",
   "checked": "2026-11-17",
   "claims": [
     {
@@ -8,136 +8,128 @@
       "claim": "The energy in the sunlight on your skin spent more than a hundred thousand years getting out of the Sun.",
       "where": "spoken",
       "verdict": "fix",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (read, Last Updated January 14, 2025); api.crossref.org/works/10.1086/172103 and /10.1023/A:1022952621810 (metadata only, no abstract); ADS (ui.adsabs.harvard.edu, articles.adsabs.harvard.edu, doi.org->adsabs.harvard.edu) and link.springer.com unreachable (DNS fail / proxy 403); Firecrawl out of credits",
-      "note": "The wording is true per an A2 source I did read: NASA MSFC says the core's energy is carried by photons through the radiative zone and 'an individual photon takes about a million years to finally reach the interface layer', so >1e5 years holds. But SOURCES entry 2 is not acceptable as written: (a) its cited figures (Mitalas & Sills 1.7e5 yr and the 0.090 cm step; Stix Kelvin-Helmholtz ~3e7 yr) could not be opened in this pass, only their Crossref metadata (titles, ApJ 401, 759, 1992; Sol. Phys. 212, 3-6, 2003) matches; (b) it says the Stix abstract was 'read at the publisher by the 2026-11-17 fact-check'. This 2026-11-17 pass could not reach the publisher, so SOURCES must not claim that. Cite who actually read it, or drop the claim; (c) A3: NASA MSFC, already cited in entries 4 and 6, gives ~1e6 years, a figure that differs from Mitalas & Sills' 1.7e5, and entry 2 does not record it. Change: add MSFC's 'about a million years' to entry 2 as an A2 source for the hook, record the disagreement with Mitalas & Sills, and fix the Stix provenance line. Also have Mitalas & Sills and Stix read where ADS/Springer are reachable, or rest the hook on MSFC alone. No change to the spoken line is needed."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (read); https://svs.gsfc.nasa.gov/11084 (read); Crossref metadata for doi:10.1086/172103 and doi:10.1023/A:1022952621810 (bibliographic data only, no abstract); ADS abstract pages for 1992ApJ...401..759M and 2003SoPh..212....3S and the Springer page for Stix returned bot walls; neither paper is on arXiv",
+      "note": "The two NASA pages cited in SOURCES disagree on the side of the hook's threshold. MSFC: an individual photon 'takes about a million years to finally reach the interface layer' (0.7 R), which supports >1e5 years. SVS 'Origin of Light': 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface', which contradicts it. SOURCES entry 2 sets SVS aside as 'an outreach figure with no derivation', but the MSFC page is equally an outreach page with no derivation; the only thing that breaks the tie is Mitalas & Sills (1.7e5 yr) and Stix (~3e7 yr), and SOURCES itself says those were not read at source (I could not reach them either). So on the sources actually read, a pedant can quote NASA saying 40,000 years and the hook fails A3/A4. Change one of: (a) read Mitalas & Sills 1992 (and ideally Stix 2003) at source, quote the figure as read in SOURCES entry 2, and re-run the check; or (b) narrow the hook to what both NASA pages support, e.g. 'spent more than ten thousand years getting out of the Sun' (on screen '10,000+ YEARS'), keeping the MSFC/SVS disagreement in SOURCES. If neither is possible, stop and ask the owner (F4). A4: the first sentence alone carries this claim, so it is the line that must be fixed."
     },
     {
       "n": 2,
-      "claim": "A4: a viewer who swipes after the first sentence leaves believing the energy reaching their skin took over 100,000 years to leave the Sun (and is not told the light itself is that old).",
-      "where": "spoken (hook, first sentence alone)",
-      "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "The first sentence is about the energy, not the light. It does not repeat the popular false form ('this sunlight is 100,000 years old'). Its content is true per MSFC (~1e6 yr radiative crossing, see claim 1). Nothing false is left at second two."
-    },
-    {
-      "n": 3,
       "claim": "The trip from the Sun to you took eight minutes.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://physics.nist.gov/cgi-bin/cuu/Value?c (c = 299 792 458 m/s, exact); https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (semimajor axis 149.598e6 km, perihelion 147.095e6 km, aphelion 152.100e6 km). IAU 2012 Resolution B2: the PDF is hosted on drive.google.com (proxy 403) and the old iau.org/static URL returns 404, so it was not opened. NASA SVS 11084 unreachable.",
-      "note": "149.598e6 km / c = 499.0 s (8.32 min); perihelion 490.7 s (8.18 min); aphelion 507.4 s (8.46 min); ±1.67% variation, matching SOURCES' ±1.7% and 8.2-8.5 min. 'Eight minutes' is a fair rounding. Measuring from the photosphere rather than the Sun's centre shortens it by ~2.3 s, which does not matter. The 1 AU exact value was checked against the NASA fact sheet (149.598e6 km), not against the IAU text itself."
+      "source_checked": "https://physics.nist.gov/cgi-bin/cuu/Value?c (c = 299 792 458 m/s exact, 2022 CODATA); https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html (semimajor axis 149.598e6 km, perihelion 147.095e6 km, aphelion 152.100e6 km, eccentricity 0.0167); https://svs.gsfc.nasa.gov/11084 ('Light takes eight minutes to travel the 93 million miles from the sun to Earth'); IAU 2012 Resolution B2 PDF not reachable (IAU list links to Google Drive, blocked by proxy)",
+      "note": "1 AU / c = 499.0 s = 8.32 min; perihelion 8.18 min, aphelion 8.46 min, matching SOURCES' 8.2-8.5 min and +/-1.7%. 'Eight minutes' is a rounding down of 8 min 19 s, the same rounding NASA SVS uses. The IAU AU value itself was not opened, but NSSDC's semimajor axis gives the same result and SVS (cited in SOURCES entry 5) states the figure directly."
     },
     {
-      "n": 4,
+      "n": 3,
       "claim": "Getting out was the slow part.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; NIST c; NSSDC Earth fact sheet",
-      "note": "This is about 8 minutes against ~1e6 years (MSFC) for the radiative crossing. It brings no new figure."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "Holds under either NASA figure (40,000 years or about a million years) against eight minutes, so it does not depend on how claim 1 is resolved."
     },
     {
-      "n": 5,
+      "n": 4,
       "claim": "But it is not the same light.",
       "where": "spoken",
       "verdict": "confirmed",
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "SVS: each photon is 'absorbed by other atoms and emitted repeatedly until reaching the sun's surface'. MSFC: radiation in the radiative zone is 'mostly gamma-rays and x-rays' and the energy 'ultimately leaves the surface as visible light'. Both support 'not the same light' (absorbed and re-emitted, and a different kind of radiation)."
+    },
+    {
+      "n": 5,
+      "claim": "It starts as gamma rays and leaves as sunlight.",
+      "where": "spoken",
+      "verdict": "confirmed",
       "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: in the radiative zone the energy travels as 'radiation (mostly gamma-rays and x-rays)', and the core's energy 'ultimately leaves the surface as visible light'. Light of a different kind leaves the surface, which supports 'not the same light'."
+      "note": "MSFC: the pp chain's second step produces 'a helium-3 nucleus and a gamma ray'; the reactions 'release the energy that ultimately leaves the surface as visible light'. Supports the wording as spoken. Caveat for the author, not a blocker: MSFC describes the radiation inside as 'mostly gamma-rays and x-rays', and the script's own animation note says it is still X-ray at 0.7 R; 'starts as' (origin in fusion) is what the source supports, so do not extend it to 'travels as gamma rays'."
     },
     {
       "n": 6,
-      "claim": "No photon survives the climb.",
-      "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (read); NASA SVS https://svs.gsfc.nasa.gov/11084, the source SOURCES cites for absorption/re-emission, was unreachable (curl TLS failure; WebFetch DNS failure; Firecrawl out of credits)",
-      "note": "This is an absolute claim, and the only source that states the mechanism (SVS: photons absorbed and re-emitted repeatedly) could not be read. MSFC does not say it. Its own wording, 'an individual photon takes about a million years to finally reach the interface layer', could be read by a pedant as the same photon crossing the radiative zone. SOURCES' 'hand-off at 0.7 R' argument ('no photon from the core can be the one that leaves') is the author's inference, not a sentence in MSFC. MSFC says the convection zone is opaque and heat is carried by convection, not that radiation is absent there. To pass: get SVS 11084 (or a textbook with edition stating absorption/re-emission/thermalisation) read and quoted in SOURCES. Or narrow the line to what MSFC supports, e.g. 'The light that leaves is not the light that was made' (gamma/X-rays inside, visible light at the surface)."
-    },
-    {
-      "n": 7,
       "claim": "The energy is ancient.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "~1e6 years (MSFC) is fairly called ancient on a human scale. The figure is the same one as in claim 1."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "Qualitative; true under either NASA figure (40,000 years or about a million years), so it stands whichever way claim 1 is fixed."
+    },
+    {
+      "n": 7,
+      "claim": "Its last eight minutes were the trip to you.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "note": "Same figure as claim 2 (8.2-8.5 min, rounded to eight)."
     },
     {
       "n": 8,
-      "claim": "The light is eight minutes old.",
-      "where": "spoken",
+      "claim": "8 MINUTES / surface to your skin / not to scale (Sun-Earth shot with a pulse crossing the gap)",
+      "where": "on-screen: tag over Sun-Earth shot",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; NIST c; NSSDC Earth fact sheet",
-      "note": "The age counts from the visible surface. MSFC says the energy leaves the surface as visible light, and the travel time is 8.2-8.5 min (claim 3). This does not depend on claim 6: whatever happens inside, the visible light we see leaves at the photosphere."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "note": "As claim 2; 'surface' matches 1 AU being measured to the photosphere-level light time. The shot is labelled not to scale, satisfying A6."
     },
     {
       "n": 9,
-      "claim": "Tag '8 MINUTES' / sub 'surface to your skin' + 'not to scale', over Sun and Earth with a pulse crossing the gap",
-      "where": "on-screen: 8 MINUTES",
-      "verdict": "confirmed",
-      "source_checked": "NIST c; NSSDC Earth fact sheet",
-      "note": "Same figure as claim 3, measured from the surface. The shot is labelled not to scale (A6), as it must be, since Earth is drawn far too big and too close."
+      "claim": "100,000+ YEARS / energy, core to surface / not to scale",
+      "where": "on-screen: tag over Sun cutaway",
+      "verdict": "fix",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "Same number as claim 1, so same problem: NASA SVS gives 40,000 years to the surface and the papers that would settle it were not read at source. Change together with claim 1 (e.g. '10,000+ YEARS'), or keep it only once Mitalas & Sills is read at source and quoted in SOURCES."
     },
     {
       "n": 10,
-      "claim": "Tag '100,000+ YEARS' / sub 'energy, core to surface' + 'not one photon · not to scale'",
-      "where": "on-screen: 100,000+ YEARS",
-      "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: ~1e6 years from the core to the interface layer, then convection carries heat 'quite rapidly to the surface', so core to surface is more than 1e5 years. 'not one photon' matches the energy framing. The SOURCES fix in claim 1 applies to this tag's sourcing too."
+      "claim": "THE ENERGY / 100,000+ years getting out",
+      "where": "on-screen: tag",
+      "verdict": "fix",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "Same number as claim 1; same fix (e.g. '10,000+ years getting out'), or keep only after the primary paper is read at source."
     },
     {
       "n": 11,
-      "claim": "Tag 'THE ENERGY' / sub '100,000+ years getting out'",
-      "where": "on-screen: THE ENERGY",
+      "claim": "THE TRIP / 8 minutes to you / not to scale (back on the Sun-Earth shot)",
+      "where": "on-screen: tag over Sun-Earth shot",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "Same as claims 1 and 10, with the same SOURCES fix (claim 1)."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "note": "As claim 2; labelled not to scale."
     },
     {
       "n": 12,
-      "claim": "Tag 'THE LIGHT' / sub '8 minutes old' + 'not to scale', on the Sun-Earth shot",
-      "where": "on-screen: THE LIGHT",
+      "claim": "Sun cutaway with rings at 0.25 R and 0.7 R (core / radiative zone / convection zone)",
+      "where": "on-screen: animation",
       "verdict": "confirmed",
-      "source_checked": "NIST c; NSSDC Earth fact sheet; NASA MSFC interior page",
-      "note": "Same as claim 8. Labelled not to scale."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; Crossref metadata for doi:10.1086/170441 (title/authors/volume only)",
+      "note": "MSFC: core is 'the innermost 25%'; radiative zone 'from 25% of the distance to the surface to 70%'; convection zone 'the outermost 30%' and 'from a depth of about 200,000 km' (about 0.71 R). The 0.713 R helioseismic value from Christensen-Dalsgaard et al. was not read at source (only Crossref metadata), but MSFC alone supports the 0.7 ring."
     },
     {
       "n": 13,
-      "claim": "Cutaway of the Sun with rings at 0.25 R (core edge) and 0.7 R (base of convection zone)",
-      "where": "on-screen: photon-path animation",
+      "claim": "Random-walk path from the centre to the 0.7 ring with side-stubs (photons bouncing through the radiative zone)",
+      "where": "on-screen: animation",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; api.crossref.org/works/10.1086/170441 (metadata only)",
-      "note": "MSFC: core is 'the innermost 25%', radiative zone 'from 25% ... to 70%', convection zone 'the outermost 30%'. SOURCES' extra 0.713 R (Christensen-Dalsgaard, Gough & Thompson 1991) was not verified: Crossref confirms title/journal/volume/page but has no abstract, and ADS was unreachable. It is not needed for a 0.7 ring."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "MSFC: energy 'is carried by light (photons) that bounces from particle to particle through the radiative zone'; SVS: 'absorbed by other atoms and emitted repeatedly'. The walk stops at 0.7 R where MSFC switches to convection. Step size is schematic and the sequence carries a 'not to scale' label."
     },
     {
       "n": 14,
-      "claim": "Random-walk path from the centre to the 0.7 ring (radiative transport), then convection above",
-      "where": "on-screen: photon-path animation",
+      "claim": "Path colour violet to pale yellow by log temperature from 15 MK (r=0), 7 MK (0.25 R), 2 MK (0.7 R), 5,700 K (surface); about 10% of the way to yellow at 0.25 R and 26% at 0.7 R",
+      "where": "on-screen: animation",
       "verdict": "confirmed",
       "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: energy generated in the core is carried by photons that bounce 'from particle to particle through the radiative zone' to the interface layer, and by convection above it. The animation is labelled not to scale and 'not one photon'."
+      "note": "MSFC: centre 'about 15,000,000 deg C'; radiative zone temperature 'falls from 7,000,000 deg C to about 2,000,000 deg C'; base of convection zone 'about 2,000,000 deg C'; surface '5,700 K'. (MSFC also says the core edge is 'half its central value', i.e. 7.5 MK; the 7 MK used is MSFC's own radiative-zone figure, and the difference is invisible in the colour.) Recomputed: ln(15/7)/ln(15e6/5700) = 9.7% and ln(15/2)/ln(15e6/5700) = 25.6%, matching 10% and 26%. Hue is schematic (high-energy radiation inside, visible at the surface), consistent with MSFC."
     },
     {
       "n": 15,
-      "claim": "Path colour by log temperature from 15 MK (r=0), 7 MK (0.25 R), 2 MK (0.7 R), 5,700 K (surface): ~10% of the way to yellow at 0.25 R, ~26% at 0.7 R",
-      "where": "on-screen: photon-path animation (colour)",
+      "claim": "Rotating convection cells fill the shell from 0.7 R to the surface",
+      "where": "on-screen: animation",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-      "note": "MSFC: centre about 15,000,000 °C, radiative zone 7,000,000 °C falling to about 2,000,000 °C, visible surface 5,700 K (NSSDC: central 1.571e7 K, effective 5772 K). At MK scale °C vs K does not matter. MSFC also says the core edge is 'half its central value' (7.5 MK). Using that would give 8.8% instead of 9.7%, still about 10%. Recomputed: (log 15e6 - log 7e6)/(log 15e6 - log 5700) = 9.7%; for 2e6 = 25.6%. Violet for MSFC's gamma/X-ray radiation and yellow for visible light at the surface is consistent with the source. The hue is schematic, as SOURCES says."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "MSFC: energy moves 'by convective fluid flows (boiling motion) through the convection zone, the outermost 30%' and 'convective motions carry heat quite rapidly to the surface'."
     },
     {
       "n": 16,
-      "claim": "Rotating convection cells fill the shell between 0.7 R and the surface",
-      "where": "on-screen: photon-path animation",
-      "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: convection zone extends from ~200,000 km depth 'right up to the visible surface', and 'convective motions carry heat quite rapidly to the surface'."
-    },
-    {
-      "n": 17,
       "claim": "A fan of five short yellow light rays leaves the surface",
-      "where": "on-screen: photon-path animation",
+      "where": "on-screen: animation",
       "verdict": "confirmed",
       "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: the energy 'ultimately leaves the surface as visible light'. Yellow is the conventional, schematic colour for sunlight, not a claim about its spectrum."
+      "note": "MSFC: the energy 'ultimately leaves the surface as visible light'. Schematic; the ray count carries no claim."
     }
   ]
 }
