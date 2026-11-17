@@ -28,12 +28,13 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
+    "setup": "bash tools/setup.sh",
     "lint": "node tools/check-alignment.mjs && node tools/check-scripts.mjs && node tools/check-licences.mjs && eslint src && tsc",
     "align": "python3 -I tools/align.py",
     "new-short": "node tools/new-short.mjs",
     "publishable": "node tools/check-licences.mjs --publish",
-    "tts": "python3 -I tools/tts.py",
-    "sfx": "python3 -I tools/sfx.py"
+    "tts": ".venv/bin/python -I tools/tts.py",
+    "sfx": ".venv/bin/python -I tools/sfx.py"
   },
   "allowScripts": {
     "esbuild": false

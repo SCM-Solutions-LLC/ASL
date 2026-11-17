@@ -18,7 +18,7 @@ The two Tudor shorts are cut from the same `six-wives` VO: one recording can car
 ## Run
 
 ```bash
-npm i
+npm run setup                             # once: npm ci + the pinned Python 3.12 venv the tools run in
 npx remotion studio                       # preview every short in every look
 npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
 npm run new-short -- <slug>               # scaffold a new short
@@ -51,7 +51,10 @@ because the voice would then say one thing while every beat was keyed to another
 the word timings in one pass. Kokoro is **Apache-2.0** and runs locally, which is the whole reason
 it is here: no per-character cost, and no terms page that can change under a published video.
 
-    pip install kokoro soundfile     # once; Kokoro also wants espeak-ng on the system
+`npm run setup` builds `.venv` from `requirements.txt` (Python 3.12: Kokoro's spaCy dependency does
+not build on 3.13). Versions are pinned because Kokoro's output depends on them: re-running
+`scale-of-the-sun`, recorded on an older stack, gives the same word timings but different samples,
+while `age-of-sunlight` re-runs byte-for-byte. Don't `pip install` into it by hand.
 
 Kokoro samples, so the generator is seeded (`--seed`, default 0): the same script, voice, speed and
 seed give the same audio every time. Without that the hash recorded in the alignment would describe
@@ -87,6 +90,9 @@ before betting on it. Several report a tightening to 8,000 hours / 20M views for
 from February 2027.)
 
 ## Making a short
+
+Editorial rules — accuracy, sourcing, uniqueness, content limits, approval — are in
+[GUARDRAILS.md](GUARDRAILS.md). Read them before writing a script.
 
 1. `npm run new-short -- <slug>` scaffolds `src/shorts/<slug>/`.
 2. Name the slices of the VO by what is **spoken**, never by source frame.
