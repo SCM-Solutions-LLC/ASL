@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/age-of-sunlight.txt",
  "audio": "public/vo/age-of-sunlight.wav",
- "sha256": "4a7633d9d5cd14401d78a8fa75d61c0ed74a14bd93233af258b5f53dd238565a",
+ "sha256": "e445d7650fb698ee1683422d76b5a953529f72db646cb8e36c0cc48361eefce0",
  "words": [
   {
    "text": "The",
@@ -232,137 +232,122 @@
   {
    "text": "Deep",
    "start": 14.715,
-   "end": 15.093
+   "end": 15.135
   },
   {
    "text": "inside,",
-   "start": 15.093,
-   "end": 15.537
+   "start": 15.135,
+   "end": 15.629
   },
   {
    "text": "it",
-   "start": 15.537,
-   "end": 15.848
+   "start": 15.629,
+   "end": 15.974
   },
   {
    "text": "travels",
-   "start": 15.848,
-   "end": 16.326
+   "start": 15.974,
+   "end": 16.505
   },
   {
    "text": "mostly",
-   "start": 16.326,
-   "end": 16.771
+   "start": 16.505,
+   "end": 16.999
   },
   {
    "text": "as",
-   "start": 16.771,
-   "end": 17.082
-  },
-  {
-   "text": "gamma",
-   "start": 17.082,
-   "end": 17.493
-  },
-  {
-   "text": "rays",
-   "start": 17.493,
-   "end": 17.871
-  },
-  {
-   "text": "and",
-   "start": 17.871,
-   "end": 18.215
+   "start": 16.999,
+   "end": 17.345
   },
   {
    "text": "X-rays.",
-   "start": 18.215,
-   "end": 18.626
+   "start": 17.345,
+   "end": 17.801
   },
   {
    "text": "It",
-   "start": 19.25,
-   "end": 19.527
+   "start": 18.425,
+   "end": 18.702
   },
   {
    "text": "leaves",
-   "start": 19.527,
-   "end": 19.923
+   "start": 18.702,
+   "end": 19.098
   },
   {
    "text": "as",
-   "start": 19.923,
-   "end": 20.201
+   "start": 19.098,
+   "end": 19.376
   },
   {
    "text": "sunlight.",
-   "start": 20.201,
-   "end": 20.656
+   "start": 19.376,
+   "end": 19.831
   },
   {
    "text": "The",
-   "start": 21.26,
-   "end": 21.599
+   "start": 20.435,
+   "end": 20.773
   },
   {
    "text": "energy",
-   "start": 21.599,
-   "end": 22.035
+   "start": 20.773,
+   "end": 21.21
   },
   {
    "text": "is",
-   "start": 22.035,
-   "end": 22.341
+   "start": 21.21,
+   "end": 21.516
   },
   {
    "text": "ancient.",
-   "start": 22.341,
-   "end": 22.81
+   "start": 21.516,
+   "end": 21.985
   },
   {
    "text": "Its",
-   "start": 23.445,
-   "end": 23.664
+   "start": 22.62,
+   "end": 22.839
   },
   {
    "text": "last",
-   "start": 23.664,
-   "end": 23.904
+   "start": 22.839,
+   "end": 23.079
   },
   {
    "text": "eight",
-   "start": 23.904,
-   "end": 24.165
+   "start": 23.079,
+   "end": 23.34
   },
   {
    "text": "minutes",
-   "start": 24.165,
-   "end": 24.469
+   "start": 23.34,
+   "end": 23.644
   },
   {
    "text": "were",
-   "start": 24.469,
-   "end": 24.709
+   "start": 23.644,
+   "end": 23.884
   },
   {
    "text": "the",
-   "start": 24.709,
-   "end": 24.928
+   "start": 23.884,
+   "end": 24.103
   },
   {
    "text": "trip",
-   "start": 24.928,
-   "end": 25.168
+   "start": 24.103,
+   "end": 24.343
   },
   {
    "text": "to",
-   "start": 25.168,
-   "end": 25.366
+   "start": 24.343,
+   "end": 24.541
   },
   {
    "text": "you.",
-   "start": 25.366,
-   "end": 25.585
+   "start": 24.541,
+   "end": 24.76
   }
  ]
 }

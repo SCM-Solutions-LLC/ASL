@@ -15,7 +15,7 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   cut: [{ from: "The energy in the sunlight", to: "were the trip to you.", tail: 0.4 }],
-  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["gamma", "rays"], ["ancient"]],
+  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["X-rays."], ["ancient"]],
   // The 19-word hook would overflow the 9:16 caption block as one page, so it breaks after "skin".
   // Both occurrences of "eight minutes" light up on purpose: the closing line hands the number back.
   breakAfter: ["skin", "years,"],
@@ -27,7 +27,7 @@ const F = {
   minutes: edit.at("minutes"),
   rest: edit.at("slow"),
   out: edit.at("part"),
-  photon: edit.at("gamma"),
+  photon: edit.at("x-rays."),
   climb: edit.at("sunlight", 1),
   ancient: edit.at("ancient"),
   close: edit.at("eight", 1),
@@ -360,7 +360,7 @@ const SunScene: React.FC = () => {
 
 export const ageOfSunlight: Short = {
   slug: "age-of-sunlight",
-  title: "The energy in sunlight took tens of thousands of years to get out of the Sun",
+  title: "The energy in sunlight took at least tens of thousands of years to get out of the Sun",
   edit,
   looks: [{ id: "Space", Set: Starfield, cast: () => [] }],
   props: () => <SunScene />,

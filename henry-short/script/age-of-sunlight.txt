@@ -2,7 +2,7 @@ The energy in the sunlight on your skin spent tens of thousands of years, maybe 
 The trip from the Sun to you took eight minutes.
 Getting out was the slow part.
 But it is not the same light.
-Deep inside, it travels mostly as gamma rays and X-rays. It leaves as sunlight.
+Deep inside, it travels mostly as X-rays. It leaves as sunlight.
 The energy is ancient. Its last eight minutes were the trip to you.
 
 ---
@@ -57,8 +57,8 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Follows from claims 1 and 2: 8 minutes against more than 1e5 years. No new
    number.
 
-4. "But it is not the same light. Deep inside, it travels mostly as gamma rays and
-   X-rays. It leaves as sunlight."
+4. "But it is not the same light. Deep inside, it travels mostly as X-rays. It
+   leaves as sunlight."
    NASA Marshall Space Flight Center, "The Solar Interior"
    (https://solarscience.msfc.nasa.gov/interior.shtml): the pp chain's second step
    produces "a helium-3 nucleus and a gamma ray"; the energy crosses the radiative
@@ -69,13 +69,14 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    "The light is eight minutes old"): no source this pipeline could open states
    that, and NASA SVS "Origin of Light" (https://svs.gsfc.nasa.gov/11084) describes
    each photon being "absorbed by other atoms and emitted repeatedly until reaching
-   the sun's surface". The script now says only what both NASA pages support: the
-   radiation deep inside is "mostly gamma-rays and x-rays" (MSFC's words, for the
-   radiative zone; the outer 30% is crossed by convection), and what leaves is
-   visible light. Caveat (A3): by Wien's law the thermal radiation at MSFC's own
-   15 MK, 7 MK and 2 MK peaks at roughly 6, 3 and 0.9 keV, i.e. X-rays; gamma rays
-   come from the fusion reactions themselves. The script keeps MSFC's "mostly
-   gamma-rays and x-rays" rather than this narrower physics reading.
+   the sun's surface". The script now says only what the sources support:
+   what leaves is visible light (MSFC), and deep inside (the radiative zone; the
+   outer 30% is crossed by convection) the radiation is mostly X-rays. MSFC says
+   "mostly gamma-rays and x-rays"; the narrower reading (A3) comes from MSFC's own
+   temperatures and Wien's displacement law, b = 2.897771955e-3 m K (CODATA 2022,
+   https://physics.nist.gov/cgi-bin/cuu/Value?bwien): peak photon energy hc/(b/T)
+   at 15 MK, 7 MK and 2 MK is about 6.4, 3.0 and 0.86 keV, all X-ray energies.
+   Gamma rays come from the fusion reactions themselves (MSFC's pp chain).
 
 5. "The energy is ancient. Its last eight minutes were the trip to you."
    Rests on claims 1 and 2. NASA SVS (above) also gives "Light takes eight minutes
