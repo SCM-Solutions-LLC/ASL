@@ -32,8 +32,9 @@
     "lint": "node tools/check-alignment.mjs && node tools/check-scripts.mjs && node tools/check-licences.mjs && eslint src && tsc",
     "align": "python3 -I tools/align.py",
     "new-short": "node tools/new-short.mjs",
-    "publishable": "node tools/check-licences.mjs --publish",
+    "publishable": "node tools/check-licences.mjs --publish && node tools/check-factcheck.mjs",
     "tts": ".venv/bin/python -I tools/tts.py",
+    "sheet": ".venv/bin/python -I tools/sheet.py",
     "sfx": ".venv/bin/python -I tools/sfx.py"
   },
   "allowScripts": {

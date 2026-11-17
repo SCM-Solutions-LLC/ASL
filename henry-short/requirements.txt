@@ -213,6 +213,8 @@ packaging==26.3
     #   weasel
 phonemizer-fork==3.3.2
     # via misaki
+pillow==13.0.0
+    # via -r requirements.in
 preshed==3.0.15
     # via
     #   spacy

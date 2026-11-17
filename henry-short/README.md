@@ -23,7 +23,8 @@ npx remotion studio                       # preview every short in every look
 npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
 npm run new-short -- <slug>               # scaffold a new short
 npm run lint                              # typecheck, licences, and refuse a cut built on stale word timings
-npm run publishable                       # refuse to call the project shippable while an asset has no licence
+npm run publishable                       # refuse to ship while an asset has no licence or a VO has no current fact-check
+npm run sheet -- <slug>                   # render a short end to end; contact sheet per format in out/review/
 npm run tts -- <slug>                     # speak a script with Kokoro and write its word timings
 npm run tts -- --self-test                # check the timing/WAV code with no model downloaded
 npm run align -- <vo-slug>                # word timings for a VO recorded elsewhere
@@ -99,6 +100,9 @@ Editorial rules — accuracy, sourcing, uniqueness, content limits, approval —
 3. Hang every beat off a spoken word with `edit.at("word")`.
 4. Write the choreography out of `src/moves`, dropping to raw keyframes where a beat needs it.
 5. List the short in `src/shorts/index.ts`.
+6. Run the `fact-check` skill on the VO (GUARDRAILS A7): a fresh agent checks every claim against its
+   cited source and writes `factcheck/<vo>.json`; `npm run publishable` refuses a missing or stale one.
+7. `npm run sheet -- <slug>` and review every tile against the checklist in `tools/sheet.py`.
 
 ## Layout
 
