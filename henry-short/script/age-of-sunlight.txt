@@ -21,6 +21,16 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    two orders of magnitude depending on what is timed (A3: the script makes the
    narrower claim that every source supports).
 
+   Agency figure, the one this line rests on: NASA Marshall Space Flight Center,
+   "The Solar Interior" (https://solarscience.msfc.nasa.gov/interior.shtml): "about
+   a million years" to reach the interface layer at ~0.7 R. More than a hundred
+   thousand years.
+
+   The two papers below give the published range. Their bibliographic details are
+   checked against Crossref; their abstracts could not be reached from this
+   pipeline's network on 2026-11-17 (ADS and Springer refused), so the figures
+   below are as reported in the literature and not yet re-read at source.
+
    Photon random walk out of the core: Mitalas & Sills, "On the Photon Diffusion
    Time Scale for the Sun", ApJ 401, 759 (1992), doi:10.1086/172103, bibcode
    1992ApJ...401..759M, get 1.7e5 years. Their contribution is the step length:
@@ -29,14 +39,16 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    the time up to 1.7e5.
 
    Energy transport: Stix, "On the time scale of energy transport in the Sun",
-   Solar Physics 212, 3 (2003), doi:10.1023/A:1022952621810. Its abstract, as read
-   at the publisher by the 2026-11-17 fact-check (not by this script's author): the time
+   Solar Physics 212, 3 (2003), doi:10.1023/A:1022952621810: the time
    scale of energy transport is the Kelvin-Helmholtz time scale, of order 3e7
    years, roughly 100 times the Mitalas & Sills photon-diffusion time, because most
    of the interior's thermal energy is in the particles, not the photons.
 
-   So the range is 1.7e5 to ~3e7 years. "More than a hundred thousand years" is
-   true under both readings, and the script never says which. That is why the hook
+   Disagreement (A3): NASA MSFC's ~1e6 years sits between Mitalas & Sills' 1.7e5
+   (photon diffusion) and Stix's ~3e7 (energy transport); they time different
+   things with different step lengths. The range is 1.7e5 to ~3e7 years. "More
+   than a hundred thousand years" is true under every one of them, and the script
+   never says which. That is why the hook
    is about the energy, not the light: the light is the part that is eight minutes
    old (claim 4), and a viewer who swipes after the first sentence leaves with
    nothing false.

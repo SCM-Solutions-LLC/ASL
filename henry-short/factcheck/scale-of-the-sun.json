@@ -1,151 +1,21 @@
-{
-  "script": "script/scale-of-the-sun.txt",
-  "sha256": "2113b9ad04cf806ad2943479df2cbd3d6b4347a197cb21c20cfb78a8ff2cb1cb",
-  "checked": "2026-11-17",
-  "claims": [
-    {
-      "n": 1,
-      "claim": "Jupiter is the biggest planet in the solar system.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/ (Planetary Fact Sheet)",
-      "note": "Jupiter has the largest diameter (142,984 km) and mass (1898e24 kg) of the eight planets. Hook (A4): true as stated at second two."
-    },
-    {
-      "n": 2,
-      "claim": "Two and a half times the mass of every other planet combined.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/ and per-planet sheets https://nssdc.gsfc.nasa.gov/planetary/factsheet/<planet>fact.html",
-      "note": "Jupiter 1898.13e24 kg; other seven 0.33010+4.8673+5.9722+0.64169+568.32+86.811+102.409 = 769.35e24 kg; ratio 2.47, rounds to 2.5."
-    },
-    {
-      "n": 3,
-      "claim": "JUPITER / 2.5× the other planets / combined, by mass",
-      "where": "on-screen: Jupiter tag",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
-      "note": "Same as claim 2: 2.47."
-    },
-    {
-      "n": 4,
-      "claim": "Row of the other seven planets at Jupiter's scale: Saturn 0.833, Uranus 0.363, Neptune 0.352, Earth 0.091, Venus 0.087, Mars 0.0485, Mercury 0.035 of Jupiter's radius",
-      "where": "on-screen: planet row",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/{jupiter,saturn,uranus,neptune,earth,venus,mars,mercury}fact.html (volumetric mean radius)",
-      "note": "Radii 69,911 / 58,232 / 25,362 / 24,622 / 6,371 / 6,051.8 / 3,389.5 / 2,439.7 km give 0.8329, 0.3628, 0.3522, 0.0911, 0.0866, 0.0485, 0.0349: all match to the drawn precision."
-    },
-    {
-      "n": 5,
-      "claim": "But hold Jupiter up next to the Sun, and it looks tiny. (Jupiter drawn at radius 52 beside the Sun at 520)",
-      "where": "spoken + on-screen: Jupiter beside the Sun",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html, https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
-      "note": "Volumetric mean radius 695,700 km vs 69,911 km, ratio 9.95; drawn ratio 10.0 (0.5% off). 'Tiny' is fair at a tenth of the width."
-    },
-    {
-      "n": 6,
-      "claim": "It would take nearly a thousand Jupiters to fill the Sun.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (volume 1,412,000e12 km^3), https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html (volume 143,128e10 km^3)",
-      "note": "Volume ratio 986.5: 'nearly a thousand' is right. Solid spheres would pack fewer; the on-screen 'by volume' carries that reading."
-    },
-    {
-      "n": 7,
-      "claim": "≈ 1,000 JUPITERS / to fill it, by volume / dots not to scale (1,000 dots spread across the Sun's disc)",
-      "where": "on-screen: 1,000-Jupiter field",
-      "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html, jupiterfact.html",
-      "note": "986.5 ≈ 1,000. The dot count is labelled approximate and the dot size is labelled not to scale (A6). A Jupiter-sized disc would fit only ~99 times (radius ratio 9.95 squared), so the label is needed and present."
-    },
-    {
-      "n": 8,
-      "claim": "Our Sun is not an average star. It is an unusually big one.",
-      "where": "spoken",
-      "verdict": "fix",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy",
-      "note": "Rests entirely on claim 9; fix with claim 9. Table 3 counts check, but the step that makes them a size ranking is not sourced (see claim 9)."
-    },
-    {
-      "n": 9,
-      "claim": "It is bigger and brighter than over ninety percent of the stars in our part of the galaxy,",
-      "where": "spoken",
-      "verdict": "fix",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy; Kervella et al. arXiv:1611.03495 (alpha Cen A 1.2234 R_sun, B 0.8632 R_sun) as a spot check",
-      "note": "Table 3 confirmed exactly (A 4, F 8, G 18, K 38, M 249, D 20, N/A 41; Sun excluded), and the paper says the 41 untyped are 36 possible M, 4 possible L, 1 possible WD. The arithmetic holds: 307/337 = 91.1% counting all A/F/G against the Sun, 306/337 = 90.8% with delta Eri. But the margin is under one percent (three more counter-examples drop it below 90%), and two premises have no A2 citation in SOURCES: (a) that every K and M star and white dwarf in the sample is both smaller and dimmer than the Sun. Table 3 gives spectral class, not size or luminosity class, and the paper text never states sizes. (b) 'Reylé also lists four subgiants... delta Eridani (K0 IV) is larger and brighter than the Sun.' The paper text (arXiv source) does not mention subgiants. This would be in catalogue Table A.1 (CDS), which could not be reached, and delta Eri's radius and luminosity have no citation at all. Change needed: in SOURCES 4, cite a standard reference for main-sequence radius and luminosity by spectral type (e.g. Pecaut & Mamajek 2013, ApJS 208, 9, with its table), cite the Reylé catalogue rows (CDS J/A+A/650/A201) that name the subgiants and show no other evolved K star, and cite a paper for delta Eri's radius and luminosity. Otherwise soften to 'bigger than most stars near us'. The claim is very likely true, but it cannot be confirmed as sourced."
-    },
-    {
-      "n": 10,
-      "claim": "THE SUN / bigger than 9 stars in 10",
-      "where": "on-screen: Sun tag",
-      "verdict": "fix",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy",
-      "note": "Same dependency and same fix as claim 9. 9 in 10 is exactly the threshold that the 90.8% worst case only just clears."
-    },
-    {
-      "n": 11,
-      "claim": "because most stars are red dwarfs: small, dim, and everywhere.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy; Anglada-Escudé et al. arXiv:1609.03449",
-      "note": "M 249 of 337 typed stars = 74% (285/337 = 85% with the 36 possible M among the untyped); the paper's own figure is 58.9 ± 5.8% of 423 typed objects including brown dwarfs (61.3% with estimated types). Every reading is a majority. Scoped by the preceding 'in our part of the galaxy'. 'Small, dim' is what M dwarf means (Reylé's 'low-mass stars' category). Anglada-Escudé gives Proxima ~0.1% solar luminosity and 0.14 R_sun as the example."
-    },
-    {
-      "n": 12,
-      "claim": "10×10 grid: 8 large bright yellow (G or hotter), 10 orange (K), 5 tiny white (white dwarfs), 77 red (M or untyped)",
-      "where": "on-screen: star grid",
-      "verdict": "fix",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy",
-      "note": "The counts are right: 31/379 = 8.2%, 38/379 = 10.0%, 20/379 = 5.3%, 290/379 = 76.5%, total 100. The red group includes 4 possible L (brown) dwarfs among the untyped, which rounding absorbs. But the dots are drawn at different sizes (large, tiny), and SOURCES 9 says 'the dots show class, not size' while nothing on screen says so. A viewer reads the dot sizes as star sizes (A6). Change needed: put a 'not to scale' / 'dots show type, not size' note on screen, or give all dots one size. The 'large' encoding also inherits claim 9's unsourced size premise."
-    },
-    {
-      "n": 13,
-      "claim": "So look at the nearest star to our own. Proxima Centauri, just over four light years away.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "NASA Exoplanet Archive TAP pscomppars (hostname Proxima Cen): sy_dist 1.30119 +0.00034/-0.00035 pc; Anglada-Escudé et al. arXiv:1609.03449 = Nature 536, 437 (2016), doi:10.1038/nature19106 (Crossref checked)",
-      "note": "1.30119 pc = 4.244 ly, which is 'just over four'. Anglada-Escudé: 'At a distance of 1.295 parsecs... Proxima Centauri... is the Sun's closest stellar neighbour'."
-    },
-    {
-      "n": 14,
-      "claim": "The closest star to the Sun,",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Anglada-Escudé et al. arXiv:1609.03449 (opening paragraph)",
-      "note": "'the Sun's closest stellar neighbour', verbatim support."
-    },
-    {
-      "n": 15,
-      "claim": "and you have almost certainly never seen it. It is almost always too faint for your eyes.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "NASA Exoplanet Archive pscomppars sy_vmag 11.01 ± 0.10; Howard et al. arXiv:1804.02001 = ApJL 860, L30 (2018), doi:10.3847/2041-8213/aacaf3 (Crossref checked)",
-      "note": "V = 11.01. Howard: 'no M-dwarfs are usually visible to the naked-eye'. The March 2016 superflare brightened it ~68× at human-eye cadence, to g' = 6.8, 'at the limit of visibility to trained observers at very dark sites'. That one event is what justifies the 'almost' hedges."
-    },
-    {
-      "n": 16,
-      "claim": "PROXIMA CENTAURI / ≈ 0.15× the Sun's radius (drawn at 14.4 against the Sun's 96)",
-      "where": "on-screen: Proxima tag",
-      "verdict": "fix",
-      "source_checked": "Kervella et al. arXiv:1611.03495 = A&A 598, L7 (2017), doi:10.1051/0004-6361/201629930 (Crossref checked); NASA Exoplanet Archive ps/pscomppars st_rad (default ref Suárez Mascareño et al. 2025, 2025A&A...700A..11M per the archive's own link); Anglada-Escudé et al. arXiv:1609.03449",
-      "note": "The figures cited are right: Kervella adopts 0.1542 ± 0.0045 R_sun (Table, from the Mann et al. radius-M_K relation), and the archive gives 0.141 ± 0.021. But SOURCES 10 records the disagreement incompletely (A3). Kervella's own text gives the interferometrically measured radius, 0.141 ± 0.007 R_sun (Demory et al. 2009), which excludes 0.15, and Anglada-Escudé also states 'a measured radius of 0.14 R_sun'. Two of the three readings round to 0.14, not 0.15. Change needed: label '≈ 0.14–0.15×' (or '≈ 1/7', 0.143, which is within 8% of every value) and draw at ~13.7 against 96. Otherwise SOURCES 10 must record the 0.141 ± 0.007 measurement and say why the Mann relation value is preferred."
-    },
-    {
-      "n": 17,
-      "claim": "That is what most of the stars around us look like. (the 8 bright G-or-hotter dots fade out)",
-      "where": "spoken + on-screen: grid fade",
-      "verdict": "confirmed",
-      "source_checked": "NASA Exoplanet Archive pscomppars st_spectype 'M5.5 V'; arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy; Howard et al. arXiv:1804.02001",
-      "note": "Proxima is M5.5 V, and M dwarfs are 74% of typed stars within 10 pc (claim 11). Implied reading after the previous line, that most are too faint to see: Howard, 'no M-dwarfs are usually visible to the naked-eye'. Note: the 92 dots left after the fade include 10 orange K dots, and some K stars (e.g. eps Eri) are naked-eye stars. The spoken 'most' still holds on the 77 red dots alone."
-    },
-    {
-      "n": 18,
-      "claim": "The star we call ordinary is one of the rare big ones. (Sun shrinks into the grid as one of the 8; THE SUN / one of the few)",
-      "where": "spoken + on-screen: Sun tag",
-      "verdict": "confirmed",
-      "source_checked": "arXiv:2104.14972 (LaTeX source, Table 3 'Summary of the 10 pc sample' and Sect. 4 text), = Reylé et al., A&A 650, A201 (2021), doi:10.1051/0004-6361/202140985 (Crossref metadata checked). CDS catalogue J/A+A/650/A201 (Table A.1) refused by the network proxy",
-      "note": "G-or-hotter (A 4 + F 8 + G 18 + the Sun) = 31 of 379 = 8.2%, so 'rare', 'one of the few' and 1 of 8 per 100 hold from Table 3 alone. Even adding delta Eri (32/379) it stays ~8%. 'Big' is relative to the M/K/WD majority. When claim 9's size citation is added, reference it here too."
-    }
-  ]
-}
+{"script":"script/scale-of-the-sun.txt","sha256":"b99bd982a7e0cae8a00e01f870f5eba44df04511a0a6916bc37e83871b0a6642","checked":"2026-11-17","claims":[
+{"n":1,"claim":"Jupiter is the biggest planet in the solar system.","where":"spoken","verdict":"confirmed","source_checked":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/ (index table); https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html","note":"Jupiter has the largest mass (1898e24 kg) and diameter (142,984 km) of the eight planets. A4: the opening sentence is true on its own, so a viewer who swipes at second two leaves with nothing false."},
+{"n":2,"claim":"Two and a half times the mass of every other planet combined.","where":"spoken","verdict":"confirmed","source_checked":"NASA per-planet fact sheets (mercury/venus/earth/mars/saturn/uranus/neptune/jupiterfact.html at nssdc.gsfc.nasa.gov/planetary/factsheet/)","note":"Jupiter 1898.13e24 kg; the other seven: 0.33010 + 4.8673 + 5.9722 + 0.64169 + 568.32 + 86.811 + 102.409 = 769.35e24 kg. Ratio 2.467, which rounds to 2.5. The index-table values give the same result: 768.6 and 2.47."},
+{"n":3,"claim":"JUPITER / 2.5× the other planets / combined, by mass","where":"on-screen: Jupiter tag","verdict":"confirmed","source_checked":"Same NASA fact sheets as claim 2","note":"Ratio 2.467 shown as 2.5×, with the 'by mass' scope stated on screen."},
+{"n":4,"claim":"Row of the other seven planets drawn to Jupiter's scale: Saturn 0.833, Uranus 0.363, Neptune 0.352, Earth 0.091, Venus 0.087, Mars 0.0485, Mercury 0.035 of Jupiter's radius","where":"on-screen: planet row","verdict":"confirmed","source_checked":"NASA per-planet fact sheets, volumetric mean radius (nssdc.gsfc.nasa.gov/planetary/factsheet/<planet>fact.html)","note":"Jupiter 69,911 km. Saturn 58,232 (0.833), Uranus 25,362 (0.3628), Neptune 24,622 (0.3522), Earth 6,371.0 (0.0911), Venus 6,051.8 (0.0866), Mars 3,389.5 (0.0485), Mercury 2,439.7 (0.0349). All seven match at the precision drawn."},
+{"n":5,"claim":"But hold Jupiter up next to the Sun, and it looks tiny. (Jupiter drawn at radius 52 beside the Sun at 520)","where":"spoken + on-screen: Jupiter beside Sun","verdict":"confirmed","source_checked":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; .../jupiterfact.html","note":"Volumetric mean radius: Sun 695,700 km, Jupiter 69,911 km. Ratio 9.95; the drawing uses 10.0, an error of 0.5%."},
+{"n":6,"claim":"It would take nearly a thousand Jupiters to fill the Sun.","where":"spoken","verdict":"confirmed","source_checked":"https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (volume 1,412,000e12 km^3); .../jupiterfact.html (volume 143,128e10 km^3)","note":"Volume ratio 986.5, so 'nearly a thousand' is accurate. The line is a volume statement; the on-screen sub 'by volume' carries the scope."},
+{"n":7,"claim":"≈ 1,000 JUPITERS / to fill it, by volume / dots not to scale (1,000 dots across the Sun's disc)","where":"on-screen: 1,000 Jupiters field","verdict":"confirmed","source_checked":"Same NASA Sun and Jupiter fact sheets as claim 6","note":"986.5 is shown as ≈ 1,000 with 1,000 dots. The 'by volume' and 'dots not to scale' labels meet A6 for a visual that is deliberately not to scale."},
+{"n":8,"claim":"Our Sun is not an average star. It is an unusually big one.","where":"spoken","verdict":"fix","source_checked":"arXiv:2104.14972 (Reylé et al. 2021, A&A 650, A201, doi:10.1051/0004-6361/202140985), Table 3; arXiv:1307.2657 (Pecaut & Mamajek 2013, doi:10.1088/0067-0049/208/1/9), Tables 2-8","note":"This rests on claim 9's evidence that K and M dwarfs are smaller than the Sun. The cited Pecaut & Mamajek paper does not contain that evidence (see claim 9). Same fix as claim 9."},
+{"n":9,"claim":"It is bigger and brighter than over ninety percent of the stars in our part of the galaxy","where":"spoken","verdict":"fix","source_checked":"arXiv:2104.14972 (Reylé et al. 2021), Table 3 and section 3.5; arXiv:1307.2657 (Pecaut & Mamajek 2013), all tables; arXiv:astro-ph/0501420 (Thévenin et al. 2005, doi:10.1051/0004-6361:20042075), Table 1; Crossref record for doi:10.1086/305238 (Provencal et al. 1998: metadata only). Not reachable: the CDS/VizieR catalogue J/A+A/650/A201 (proxy 403; the Firecrawl call failed because the account is out of credits) and the Provencal text (iopscience and ADS return 403).","note":"Census arithmetic checks out. Reylé Table 3 (Sun excluded): A 4, F 8, G 18, K 38, M 249, D 20, N/A 41, so 337 typed stars. Section 3.5 lists only four evolved stars within 10 pc (β Hyi, μ Her Aa, δ Pav, δ Eri) and no giants. Thévenin Table 1 gives δ Eri as K0 IV with R = 2.33 R_sun and L = 3.19 L_sun, so it is bigger and brighter than the Sun. Worst case: 306/337 = 90.8%. That figure holds whether δ Eri is typed K or G in the catalogue, but I could not check its catalogue type because CDS was unreachable. FIX (A1/A3): SOURCES says Pecaut & Mamajek 2013 has a 'main-sequence table of radius and luminosity by spectral type'. It does not. Its dwarf table (Table 4 in the arXiv version) lists only Teff, bolometric corrections and colours; no table in the paper gives R or L. The radius and luminosity columns are in Mamajek's separate online 'Modern Mean Dwarf Stellar Color and Effective Temperature Sequence' (pas.rochester.edu, which returned 403 here). Change: cite a source that actually tabulates radius and luminosity for K/M dwarfs, giving its edition or version date (for example that online table if the owner accepts it as A2, or a standard reference with edition). Then quote the K0 V radius and luminosity from it. Also: the white-dwarf radius citation (Provencal 1998) could not be opened. Without white dwarfs counted as smaller, the worst case falls to 286/337 = 85%, so that citation is load-bearing and has to be checked. The scope 'our part of the galaxy' rests on a 10 pc census; SOURCES records this."},
+{"n":10,"claim":"THE SUN / bigger than 9 stars in 10 / dots: star type, not size","where":"on-screen: Sun tag over the 100-dot grid","verdict":"fix","source_checked":"As claim 9","note":"Same evidence and gap as claim 9: the census gives 90.8% at worst, but the 'smaller than the Sun' step for K, M and white dwarfs cites a source that does not contain radii or luminosities. Fix the SOURCES citation as in claim 9."},
+{"n":11,"claim":"because most stars are red dwarfs","where":"spoken","verdict":"confirmed","source_checked":"arXiv:2104.14972 (Reylé et al. 2021), Table 3 and section 3.5","note":"249 M of 337 typed stars is 74%. The paper's own figures: 249 M among 423 objects with a measured spectral type, including brown dwarfs, is 58.9 ± 5.8%; with estimated types for unresolved companions, 61.3 ± 5.9%. A majority under every reading, within the 10 pc sample that the previous line scopes as 'our part of the galaxy'."},
+{"n":12,"claim":"(red dwarfs:) small, dim, and everywhere","where":"spoken","verdict":"fix","source_checked":"Claim 5 in SOURCES cites only Reylé et al. 2021 (arXiv:2104.14972), which counts stars but gives no radii or luminosities. Pecaut & Mamajek 2013 (arXiv:1307.2657), cited in claim 4, has no R or L columns. Anglada-Escudé et al. 2016 (arXiv:1609.03449) gives these for Proxima alone.","note":"'Small, dim' is true for red dwarfs, but SOURCES has no cited source that states radius or luminosity for M dwarfs as a class (A1). Add the same R/L-by-spectral-type source as in claim 9 to SOURCES entry 5. 'Everywhere' is rhetorical; the 74% share (claim 11) supports it."},
+{"n":13,"claim":"100-dot grid: 8 large bright yellow (G or hotter), 10 orange (K), 5 tiny white (white dwarfs), 77 red (M or untyped)","where":"on-screen: 10x10 star-type grid","verdict":"confirmed","source_checked":"arXiv:2104.14972 (Reylé et al. 2021), Table 3 and section 3.5","note":"Per 100 of 379 (337 typed + 41 untyped + the Sun): G-or-hotter 31 gives 8.2, K 38 gives 10.0, D 20 gives 5.3, M 249 + N/A 41 = 290 gives 76.5. Rounded these are 8/10/5/77, summing to 100. Reylé estimates the 41 untyped as 36 possible M, 4 possible L and 1 possible white dwarf, so red is about 1 dot generous. That is within the grid's rounding, and red is not labelled as M on screen. 'dots: star type, not size' is on screen (A6)."},
+{"n":14,"claim":"So look at the nearest star to our own. Proxima Centauri ... The closest star to the Sun","where":"spoken + on-screen: PROXIMA CENTAURI tag","verdict":"confirmed","source_checked":"arXiv:1609.03449 (Anglada-Escudé et al. 2016, Nature 536, 437, doi:10.1038/nature19106), introduction","note":"The paper says: 'At a distance of 1.295 parsecs, the red-dwarf Proxima Centauri ... is the Sun's closest stellar neighbour'."},
+{"n":15,"claim":"just over four light years away","where":"spoken","verdict":"confirmed","source_checked":"NASA Exoplanet Archive TAP, pscomppars where hostname='Proxima Cen' (exoplanetarchive.ipac.caltech.edu/TAP/sync)","note":"sy_dist 1.30119 (+0.00034/-0.00035) pc, which is 4.244 ly. Anglada-Escudé gives 1.295 pc, which is 4.22 ly. Both are 'just over four'."},
+{"n":16,"claim":"and you have almost certainly never seen it. It is almost always too faint for your eyes.","where":"spoken","verdict":"confirmed","source_checked":"NASA Exoplanet Archive pscomppars (sy_vmag 11.01); arXiv:1804.02001 (Howard et al. 2018, ApJL 860, L30, doi:10.3847/2041-8213/aacaf3), sections 1-2","note":"V = 11.01. Howard et al.: 'no M-dwarfs are usually visible to the naked-eye'. During the March 2016 superflare Proxima reached 68× its flux and 'briefly became a g′=6.8 star, at the limit of visibility to trained observers at very dark sites'. That flare makes both 'almost' hedges accurate."},
+{"n":17,"claim":"PROXIMA CENTAURI / ≈ 1/7 the Sun's radius (drawn at 13.7 against the Sun's 96)","where":"on-screen: Proxima tag","verdict":"confirmed","source_checked":"arXiv:1611.03495 (Kervella et al. 2017, A&A 598, L7, doi:10.1051/0004-6361/201629930), section 3; arXiv:1609.03449 (Anglada-Escudé 2016), introduction; NASA Exoplanet Archive pscomppars st_rad","note":"1/7 = 0.143 and 13.7/96 = 0.1427. Measured radius: 0.141 ± 0.007 R_sun (Demory et al. 2009, as quoted by Kervella; Demory itself not opened). Anglada-Escudé: 'measured radius of 0.14 R_sun'. Archive: 0.141 ± 0.021 (Suárez Mascareño et al. 2025). Kervella's adopted model value is 0.1542 ± 0.0045, about 1/6.5. SOURCES records this disagreement and gives the reason for using the measured value (A3)."},
+{"n":18,"claim":"That is what most of the stars around us look like. (Proxima as one red dot; the 8 bright dots fade out)","where":"spoken + on-screen: grid","verdict":"confirmed","source_checked":"NASA Exoplanet Archive pscomppars (st_spectype M5.5 V); arXiv:2104.14972 (Reylé et al. 2021), Table 3","note":"Proxima is an M5.5 V red dwarf, and M dwarfs are 74% of typed stars within 10 pc, so 'most of the stars around us' are of its kind. The fade leaves K stars and white dwarfs visible too, but the spoken claim is only 'most', which holds."},
+{"n":19,"claim":"The star we call ordinary is one of the rare big ones. (Sun returns into the grid as one of the 8; THE SUN / one of the few)","where":"spoken + on-screen: final grid tag","verdict":"fix","source_checked":"arXiv:2104.14972 (Reylé et al. 2021), Table 3; arXiv:1307.2657 (Pecaut & Mamajek 2013)","note":"The count checks out: A 4 + F 8 + G 18 + the Sun = 31 of 379, about 8%. But calling this group 'the big ones', and everything else smaller, rests on the same K/M/white-dwarf size evidence as claim 9. Its cited source (Pecaut & Mamajek 2013) has no radius or luminosity table, and Provencal 1998 could not be opened. Same SOURCES fix as claim 9."}
+]}
