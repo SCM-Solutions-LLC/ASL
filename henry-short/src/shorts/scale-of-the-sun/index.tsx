@@ -102,11 +102,11 @@ const HUNDRED = Array.from({ length: 100 }, (_, i) => ({
 }));
 
 // Proxima is one of the dim majority, not a new object: the dot that flies out is slot 55 of the grid,
-// keeping its colour. Its radius is about 0.15 of the Sun's, so against the Sun's 96 it is 14.4 — the
+// keeping its colour. Its measured radius is about 1/7 of the Sun's, so against the Sun's 96 it is 13.7 — the
 // same real ratio the rest of the short trades in.
 const PROXIMA_SLOT = 55;
 const PROXIMA_FROM = { x: HUNDRED[PROXIMA_SLOT].x, y: FIELD_TOP + HUNDRED[PROXIMA_SLOT].y, r: 5.5 };
-const PROXIMA_TO = { x: 1255, y: 300, r: 14.4 };
+const PROXIMA_TO = { x: 1255, y: 300, r: 13.7 };
 
 // The closing line puts the Sun back among the stars it was measured against, so it flies into the
 // grid and becomes one of the few bright dots — slot 56, next door to the hole Proxima left. Same
@@ -227,9 +227,9 @@ const SolarScene: React.FC = () => {
       {/* Above the settled limb rather than beside it: at 885 units wide, the 9:16 crop has no
           "beside" left once the Sun is big enough to pour a thousand Jupiters into. */}
       <Tag x={740} y={18} text="≈ 1,000 JUPITERS" sub={"to fill it, by volume\ndots not to scale"} from={F.thousand + 6} to={F.average} />
-      <Tag x={620} y={412} text="THE SUN" sub="bigger than 9 stars in 10" from={F.ninety + 8} to={F.ordinary + 6} />
+      <Tag x={620} y={412} text="THE SUN" sub={"bigger than 9 stars in 10\ndots: star type, not size"} from={F.ninety + 8} to={F.ordinary + 6} />
       {/* Over Proxima, not the Sun: one line is too wide to sit right of the Sun in the 9:16 crop. */}
-      <Tag x={1110} y={96} text={"PROXIMA\nCENTAURI"} sub="≈ 0.15× the Sun's radius" from={F.proxima + 12} />
+      <Tag x={1110} y={96} text={"PROXIMA\nCENTAURI"} sub="≈ 1/7 the Sun's radius" from={F.proxima + 12} />
       {/* The same label re-hung on the dot the Sun became, so the last shot says which one is ours. */}
       <Tag x={1140} y={666} text="THE SUN" sub="one of the few" from={F.ordinary + 34} />
     </>

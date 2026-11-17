@@ -40,11 +40,17 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Reylé et al., "The 10 parsec sample in the Gaia era", A&A 650, A201 (2021),
    doi:10.1051/0004-6361/202140985, Table 3 (Sun excluded): A 4, F 8, G 18, K 38,
    M 249, white dwarfs 20, plus 41 untyped (36 of them possible M dwarfs). K and M
-   dwarfs and white dwarfs are all smaller and dimmer than the Sun. Even counting
+   dwarfs are all smaller and dimmer than the Sun: Pecaut & Mamajek, ApJS 208, 9
+   (2013), doi:10.1088/0067-0049/208/1/9 (arXiv:1307.2657), main-sequence table of
+   radius and luminosity by spectral type, below 1 R_sun and 1 L_sun from K0 V
+   down. White dwarfs are about a hundredth of the Sun's radius: Provencal et al.,
+   ApJ 494, 759 (1998), doi:10.1086/305238. Even counting
    every G star as at least as big as the Sun (they are not; Tau Ceti and others
    are late G), the Sun is bigger than about 91% of the typed stars; counting only
-   the G0-G2 and evolved G stars, about 95%. Reylé also lists four subgiants
-   within 10 pc; delta Eridani (K0 IV) is larger and brighter than the Sun, and
+   the G0-G2 and evolved G stars, about 95%. The exception among the K stars is
+   the subgiant delta Eridani (K0 IV, in the Reylé catalogue, CDS
+   J/A+A/650/A201), whose interferometric radius is larger than the Sun's
+   (Thévenin et al., A&A 436, 253 (2005), doi:10.1051/0004-6361:20042075);
    counting it as well the worst case is 306 of 337, 90.8%. "Over ninety percent"
    holds under every reading, with that thin margin. The census is of the solar neighbourhood, which is why the script
    says "our part of the galaxy" rather than "the galaxy".
@@ -86,14 +92,18 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    On screen: a grid of 100 dots by spectral class, per 100 of the 379: 8 large
    bright (G or hotter, 31), 10 orange (K, 38), 5 tiny white (white dwarfs, 20),
    77 red (M 249 + 41 untyped, 36 of which Reylé lists as possible M dwarfs).
-   The dots show class, not size; then "THE SUN / one of the few".
+   The dots show class, not size, and the screen says so ("dots: star type, not
+   size"); then "THE SUN / one of the few".
 
-10. Not spoken: "PROXIMA CENTAURI / ≈ 0.15× the Sun's radius".
-   Sources disagree (A3): Kervella et al., A&A 598, L7 (2017),
-   doi:10.1051/0004-6361/201629930, adopt 0.1542 ± 0.0045 R_sun (0.150-0.159); the
-   NASA Exoplanet Archive adopts 0.141 ± 0.021 R_sun (0.120-0.162; Suárez Mascareño
-   et al. 2025, 2025A&A...700A..11M). 0.15 sits inside both ranges, so the label
-   uses it and Proxima is drawn at 0.15 of the Sun's drawn radius.
+10. Not spoken: "PROXIMA CENTAURI / ≈ 1/7 the Sun's radius".
+   Sources disagree (A3). Measured: the interferometric radius 0.141 ± 0.007 R_sun
+   (Demory et al. 2009, as given in Kervella et al., A&A 598, L7 (2017),
+   doi:10.1051/0004-6361/201629930), and Anglada-Escudé et al. 2016 quote a
+   "measured radius of 0.14". Model-based: Kervella 2017 adopt 0.1542 ± 0.0045
+   from a mass-radius relation. NASA Exoplanet Archive: 0.141 ± 0.021 (Suárez
+   Mascareño et al. 2025, 2025A&A...700A..11M). The label uses the measured value,
+   1/7 = 0.143, inside the measured and Archive ranges; Proxima is drawn at 13.7
+   against the Sun's 96.
 
 11. Not spoken: the row of the other seven planets beside Jupiter, and Jupiter
    beside the Sun.
