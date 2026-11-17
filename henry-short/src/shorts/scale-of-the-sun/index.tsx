@@ -227,7 +227,7 @@ const SolarScene: React.FC = () => {
       {/* Above the settled limb rather than beside it: at 885 units wide, the 9:16 crop has no
           "beside" left once the Sun is big enough to pour a thousand Jupiters into. */}
       <Tag x={740} y={18} text="≈ 1,000 JUPITERS" sub={"to fill it, by volume\ndots not to scale"} from={F.thousand + 6} to={F.average} />
-      <Tag x={620} y={412} text="THE SUN" sub={"bigger than 9 stars in 10\ndots: star type, not size"} from={F.ninety + 8} to={F.ordinary + 6} />
+      <Tag x={620} y={412} text="THE SUN" sub={"bigger than 9 in 10 nearby stars\ndots: star type, not size"} from={F.ninety + 8} to={F.ordinary + 6} />
       {/* Over Proxima, not the Sun: one line is too wide to sit right of the Sun in the 9:16 crop. */}
       <Tag x={1110} y={96} text={"PROXIMA\nCENTAURI"} sub="≈ 1/7 the Sun's radius" from={F.proxima + 12} />
       {/* The same label re-hung on the dot the Sun became, so the last shot says which one is ours. */}

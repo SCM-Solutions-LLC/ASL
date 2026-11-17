@@ -2,8 +2,8 @@ The energy in the sunlight on your skin spent more than a hundred thousand years
 The trip from the Sun to you took eight minutes.
 Getting out was the slow part.
 But it is not the same light.
-No photon survives the climb.
-The energy is ancient. The light is eight minutes old.
+It starts as gamma rays and leaves as sunlight.
+The energy is ancient. Its last eight minutes were the trip to you.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -44,7 +44,11 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    years, roughly 100 times the Mitalas & Sills photon-diffusion time, because most
    of the interior's thermal energy is in the particles, not the photons.
 
-   Disagreement (A3): NASA MSFC's ~1e6 years sits between Mitalas & Sills' 1.7e5
+   Disagreement (A3): NASA SVS "Origin of Light" (claim 4) gives a shorter
+   "40,000 years" for the photons' journey to the surface, an outreach figure with
+   no derivation; the script follows the peer-reviewed lower bound (Mitalas &
+   Sills, 1.7e5) and the agency figure it rests on (MSFC, ~1e6), not SVS.
+   NASA MSFC's ~1e6 years sits between Mitalas & Sills' 1.7e5
    (photon diffusion) and Stix's ~3e7 (energy transport); they time different
    things with different step lengths. The range is 1.7e5 to ~3e7 years. "More
    than a hundred thousand years" is true under every one of them, and the script
@@ -57,21 +61,23 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Follows from claims 1 and 2: 8 minutes against more than 1e5 years. No new
    number.
 
-4. "But it is not the same light. No photon survives the climb."
+4. "But it is not the same light. It starts as gamma rays and leaves as sunlight."
    NASA Marshall Space Flight Center, "The Solar Interior"
-   (https://solarscience.msfc.nasa.gov/interior.shtml): energy crosses the
-   radiative zone as radiation, mostly gamma rays and X-rays; the outer ~30% is
-   crossed by convective fluid flows; and the energy "ultimately leaves the surface
-   as visible light". NASA SVS, "Origin of Light" (https://svs.gsfc.nasa.gov/11084):
-   photons are absorbed and re-emitted repeatedly on the way out. So the light that
-   leaves the surface is not the light made in the core, which is the part the
-   popular version of this fact drops. The strongest support for "no photon" is
-   the hand-off at 0.7 R: above it the energy is carried by moving plasma, not by
-   radiation, so no photon from the core can be the one that leaves.
+   (https://solarscience.msfc.nasa.gov/interior.shtml): the pp chain's second step
+   produces "a helium-3 nucleus and a gamma ray"; the energy crosses the radiative
+   zone as radiation, "mostly gamma-rays and x-rays", and the outer ~30% by
+   convective fluid flows; and the reactions release "the energy that ultimately
+   leaves the surface as visible light".
+   Deliberately narrower than an earlier draft ("No photon survives the climb",
+   "The light is eight minutes old"): no source this pipeline could open states
+   that, and NASA SVS "Origin of Light" (https://svs.gsfc.nasa.gov/11084) describes
+   each photon being "absorbed by other atoms and emitted repeatedly until reaching
+   the sun's surface". The script now says only what both NASA pages support: the
+   radiation inside is gamma and X-ray, what leaves is visible light.
 
-5. "The energy is ancient. The light is eight minutes old."
-   Rests on claims 1, 2 and 4. NASA SVS (above) also gives the eight minutes from
-   the Sun to Earth. No new number.
+5. "The energy is ancient. Its last eight minutes were the trip to you."
+   Rests on claims 1 and 2. NASA SVS (above) also gives "Light takes eight minutes
+   to travel" from the Sun to Earth. No new number.
 
 6. Not spoken: the photon-path animation.
    Zones: NASA MSFC (above) puts the core in the innermost 25% of the radius, the
@@ -85,6 +91,5 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    the way to yellow at 0.7 R, where the radiation is still X-ray, and reaches
    visible light only at the surface. The hue is schematic. Then rising convection cells above 0.7 R, where NASA MSFC
    says "convective motions carry heat quite rapidly to the surface". It is labelled
-   on screen as not to scale and as energy rather than one photon: a 0.09 cm step
-   across 700,000 km cannot be drawn. The Sun-Earth shot is also labelled not to
+   on screen as not to scale: a 0.09 cm step across 700,000 km cannot be drawn. The Sun-Earth shot is also labelled not to
    scale (Earth is drawn far too big and far too close).

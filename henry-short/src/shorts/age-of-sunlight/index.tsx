@@ -13,8 +13,8 @@ import type { Short } from "../types";
 // number, so re-reading the script re-resolves the cut instead of breaking it.
 const edit = makeEdit({
   alignment,
-  cut: [{ from: "The energy in the sunlight", to: "the light is eight minutes old.", tail: 0.4 }],
-  keyPhrases: [["hundred", "thousand"], ["eight", "minutes"], ["photon"], ["ancient"]],
+  cut: [{ from: "The energy in the sunlight", to: "were the trip to you.", tail: 0.4 }],
+  keyPhrases: [["hundred", "thousand"], ["eight", "minutes"], ["gamma", "rays"], ["ancient"]],
   // The 19-word hook would overflow the 9:16 caption block as one page, so it breaks after "skin".
   // Both occurrences of "eight minutes" light up on purpose: the closing line hands the number back.
   breakAfter: ["skin"],
@@ -26,8 +26,8 @@ const F = {
   minutes: edit.at("minutes"),
   rest: edit.at("slow"),
   out: edit.at("part"),
-  photon: edit.at("photon"),
-  climb: edit.at("climb"),
+  photon: edit.at("gamma"),
+  climb: edit.at("sunlight", 1),
   ancient: edit.at("ancient"),
   close: edit.at("eight", 1),
   voEnd: edit.voEnd,
@@ -341,11 +341,11 @@ const SunScene: React.FC = () => {
       <Tag x={850} y={150} text="8 MINUTES" sub={"surface to your skin\nnot to scale"} from={F.minutes + 8} to={F.rest + 6} />
       {/* Above the disc, not on it: at 320 units of radius there is no clear ground beside it in
           the 9:16 crop, and the first pass had the sub-line unreadable against the limb. */}
-      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot one photon · not to scale"} from={F.out + 12} to={F.ancient + 30} />
+      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.out + 12} to={F.ancient + 30} />
       {/* The two answers side by side on the last line, stacked rather than abreast because the
           vertical crop has the height to spare and not the width. */}
       <Tag x={600} y={110} text="THE ENERGY" sub="100,000+ years getting out" from={F.close - 2} />
-      <Tag x={600} y={640} text="THE LIGHT" sub={"8 minutes old\nnot to scale"} from={F.close + 10} />
+      <Tag x={600} y={640} text="THE TRIP" sub={"8 minutes to you\nnot to scale"} from={F.close + 10} />
     </>
   );
 };

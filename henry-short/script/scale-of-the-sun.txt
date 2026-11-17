@@ -42,10 +42,11 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    M 249, white dwarfs 20, plus 41 untyped (36 of them possible M dwarfs). K and M
    dwarfs are all smaller and dimmer than the Sun: Boyajian et al., "Stellar
    Diameters and Temperatures II. Main Sequence K & M Stars", ApJ 757, 112 (2012),
-   doi:10.1088/0004-637X/757/2/112 (arXiv:1208.2431), Table 3: interferometric
-   radii and luminosities of K0 V to M4 V dwarfs, the largest the K0 V stars
-   GJ 702A (0.831 R_sun, 0.53 L_sun), GJ 75 (0.819, 0.52) and GJ 631 (0.759,
-   0.42); every M dwarf in the table is under 0.58 R_sun and 0.07 L_sun. White dwarfs are all far smaller and dimmer than the Sun: Giammichele,
+   doi:10.1088/0004-637X/757/2/112 (arXiv:1208.2431), Table 6 ("Fundamental
+   Parameters"): interferometric radii and luminosities of K0 V to M5.5 V dwarfs,
+   the largest GJ 702A (K0 V, 0.831 R_sun, 0.53 L_sun), GJ 75 (K0 V, 0.819, 0.52)
+   and GJ 166A (K1 V, 0.806, 0.41); every M dwarf in the table is under 0.58 R_sun
+   and 0.07 L_sun. White dwarfs are all far smaller and dimmer than the Sun: Giammichele,
    Bergeron & Dufour, "Know Your Neighborhood: A Detailed Model Atmosphere
    Analysis of Nearby White Dwarfs", ApJS 199, 29 (2012),
    doi:10.1088/0067-0049/199/2/29 (arXiv:1202.5581), Table 2 gives Teff and
@@ -62,12 +63,12 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    counting it as well the worst case is 306 of 337, 90.8%. "Over ninety percent"
    holds under every reading, with that thin margin. The census is of the solar neighbourhood, which is why the script
    says "our part of the galaxy" rather than "the galaxy".
-   On screen: "THE SUN / bigger than 9 stars in 10".
+   On screen: "THE SUN / bigger than 9 in 10 nearby stars".
 
 5. "Because most stars are red dwarfs: small, dim, and everywhere."
    Reylé et al. 2021, as above: 249 M dwarfs of 337 typed stars, 74%. Small and
-   dim: Boyajian et al. 2012 Table 3 (claim 4), M dwarfs 0.19-0.58 R_sun and
-   0.003-0.07 L_sun. The paper's
+   dim: Boyajian et al. 2012 Table 6 (claim 4), M dwarfs 0.14-0.58 R_sun and
+   0.0016-0.07 L_sun. The paper's
    own figure is 58.9 ± 5.8% of all typed objects including brown dwarfs. Every
    reading is a majority.
 
