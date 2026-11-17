@@ -2,8 +2,9 @@
 # Python 3.12 only: Kokoro's spaCy dependency does not build on 3.13.
 # Pinned because Kokoro's output depends on the torch/kokoro versions: a VO recorded on an older
 # stack (scale-of-the-sun, Oct 2026) keeps its word timings but not its bytes when re-run today.
-# Regenerate: printf 'kokoro\nsoundfile\n' > req.in && uv pip compile --python-version 3.12 req.in --no-header
-# then re-append the en-core-web-sm line, re-run `npm run tts` on a short and confirm its hash.
+# Universal (platform markers), so CUDA wheels install only on Linux and setup works on macOS too.
+# Regenerate: uv pip compile --universal --python-version 3.12 --no-header requirements.in -o requirements.txt
+# (keeping this file as -o makes uv prefer the current pins), then re-run `npm run tts` on a short and confirm its hash.
 addict==2.4.0
     # via misaki
 annotated-doc==0.0.6
@@ -46,6 +47,12 @@ cloudpathlib==0.26.0
     # via weasel
 cloudpickle==3.1.2
     # via joblib
+colorama==0.4.6 ; sys_platform == 'win32'
+    # via
+    #   loguru
+    #   tqdm
+    #   typer
+    #   wasabi
 confection==1.3.4
     # via
     #   spacy
@@ -53,11 +60,11 @@ confection==1.3.4
     #   weasel
 csvw==4.2.0
     # via segments
-cuda-bindings==13.5.0
+cuda-bindings==13.5.0 ; python_full_version < '3.15' and sys_platform == 'linux'
     # via torch
-cuda-pathfinder==1.9.0
+cuda-pathfinder==1.9.0 ; python_full_version < '3.15' and sys_platform == 'linux'
     # via cuda-bindings
-cuda-toolkit==13.2.2
+cuda-toolkit==13.2.2 ; sys_platform == 'linux'
     # via torch
 curated-tokenizers==0.0.10
     # via spacy-curated-transformers
@@ -72,6 +79,8 @@ dlinfo==2.0.0
     # via phonemizer-fork
 docopt==0.6.2
     # via num2words
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+    # via -r requirements.in
 espeakng-loader==0.2.4
     # via misaki
 filelock==4.2.10
@@ -86,16 +95,18 @@ h11==0.16.0
     # via
     #   httpcore
     #   httpcore2
-hf-xet==1.8.0
+hf-xet==1.8.0 ; platform_machine == 'AMD64' or platform_machine == 'ARM64' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'arm64' or platform_machine == 'x86_64'
     # via huggingface-hub
 httpcore==1.0.9
     # via httpx
-httpcore2==2.16.2
+httpcore2==2.16.2 ; sys_platform != 'emscripten'
     # via httpx2
 httpx==0.28.1
     # via weasel
 httpx2==2.16.2
     # via huggingface-hub
+httpx2-jsfetch==1.0 ; sys_platform == 'emscripten'
+    # via httpx2
 huggingface-hub==2.4.0
     # via
     #   kokoro
@@ -120,7 +131,7 @@ jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
     # via jsonschema
 kokoro==0.9.4
-    # via -r /tmp/claude-0/-home-user-ASL/54f7e9b0-30cf-509f-a4b1-754ba84f6bc4/scratchpad/req.in
+    # via -r requirements.in
 language-tags==1.3.2
     # via csvw
 loguru==0.8.0
@@ -152,46 +163,46 @@ numpy==2.5.5
     #   spacy
     #   thinc
     #   transformers
-nvidia-cublas==13.4.1.3
+nvidia-cublas==13.4.1.3 ; sys_platform == 'linux'
     # via
     #   cuda-toolkit
     #   nvidia-cudnn-cu13
     #   nvidia-cusolver
-nvidia-cuda-cccl==13.3.5.0.6
+nvidia-cuda-cccl==13.3.5.0.6 ; sys_platform == 'linux'
     # via nvidia-nvshmem-cu13
-nvidia-cuda-cupti==13.2.86
+nvidia-cuda-cupti==13.2.86 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
-nvidia-cuda-nvrtc==13.2.86
+nvidia-cuda-nvrtc==13.2.86 ; sys_platform == 'linux'
     # via
     #   cuda-toolkit
     #   nvidia-cublas
-nvidia-cuda-runtime==13.2.86
+nvidia-cuda-runtime==13.2.86 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
-nvidia-cudnn-cu13==9.26.0.51
+nvidia-cudnn-cu13==9.26.0.51 ; sys_platform == 'linux'
     # via torch
-nvidia-cufft==12.2.0.57
+nvidia-cufft==12.2.0.57 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
-nvidia-cufile==1.17.1.22
+nvidia-cufile==1.17.1.22 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
-nvidia-cusolver==12.2.0.11
+nvidia-cusolver==12.2.0.11 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
-nvidia-cusparse==12.7.10.12
+nvidia-cusparse==12.7.10.12 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via
     #   cuda-toolkit
     #   nvidia-cusolver
-nvidia-cusparselt-cu13==0.8.1
+nvidia-cusparselt-cu13==0.8.1 ; sys_platform == 'linux'
     # via torch
-nvidia-nccl-cu13==2.30.7
+nvidia-nccl-cu13==2.30.7 ; sys_platform == 'linux'
     # via torch
-nvidia-nvjitlink==13.5.37
+nvidia-nvjitlink==13.5.37 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via
     #   cuda-toolkit
     #   nvidia-cufft
     #   nvidia-cusolver
     #   nvidia-cusparse
-nvidia-nvshmem-cu13==3.7.2
+nvidia-nvshmem-cu13==3.7.2 ; sys_platform == 'linux'
     # via torch
-nvidia-nvtx==13.2.86
+nvidia-nvtx==13.2.86 ; (platform_machine == 'aarch64' and sys_platform == 'linux') or (platform_machine == 'x86_64' and sys_platform == 'linux')
     # via cuda-toolkit
 packaging==26.3
     # via
@@ -206,7 +217,7 @@ preshed==3.0.15
     # via
     #   spacy
     #   thinc
-pycparser==3.12
+pycparser==3.12 ; implementation_name != 'PyPy'
     # via cffi
 pydantic==2.14.3
     # via
@@ -264,7 +275,7 @@ shellingham==1.5.4
 smart-open==9.0.4
     # via weasel
 soundfile==0.14.0
-    # via -r /tmp/claude-0/-home-user-ASL/54f7e9b0-30cf-509f-a4b1-754ba84f6bc4/scratchpad/req.in
+    # via -r requirements.in
 spacy==3.8.18
     # via misaki
 spacy-curated-transformers==0.3.1
@@ -298,9 +309,9 @@ tqdm==4.70.1
     #   transformers
 transformers==5.23.0
     # via kokoro
-triton==3.9.0
+triton==3.9.0 ; python_full_version < '3.16' and sys_platform == 'linux'
     # via torch
-truststore==0.10.5
+truststore==0.10.5 ; sys_platform != 'emscripten'
     # via
     #   httpcore2
     #   httpx2
@@ -336,7 +347,7 @@ wasabi==1.1.3
     #   weasel
 weasel==1.0.1
     # via spacy
+win32-setctime==1.2.1 ; sys_platform == 'win32'
+    # via loguru
 wrapt==2.5.2
     # via smart-open
-# misaki downloads this at first run if absent; pinned here so a fresh setup needs no runtime install.
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
