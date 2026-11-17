@@ -1,52 +1,101 @@
 Jupiter is the biggest planet in the solar system.
 Two and a half times the mass of every other planet combined.
-But hold Jupiter up next to the Sun, and it disappears.
-You could pour a thousand Jupiters into the Sun and still have room left over.
+But hold Jupiter up next to the Sun, and it looks tiny.
+It would take nearly a thousand Jupiters to fill the Sun.
 And here is the part that gets people.
-Our Sun is not a big star. It is not even average.
-It is heavier and brighter than about ninety percent of the stars in our galaxy,
+Our Sun is not an average star. It is an unusually big one.
+It is bigger and brighter than over ninety percent of the stars in our part of the galaxy,
 because most stars are red dwarfs: small, dim, and everywhere.
 So look at the nearest star to our own.
 Proxima Centauri, just over four light years away.
-The closest star there is, and you have never seen it.
-It is too faint for your eyes, and too faint for most binoculars.
-You need a telescope to find the star next door.
-That is what most of the galaxy looks like.
-The Sun only looks ordinary because we have never stood next to anything else.
+The closest star to the Sun, and you have almost certainly never seen it.
+It is almost always too faint for your eyes.
+That is what most of the stars around us look like.
+The star we call ordinary is one of the rare big ones.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-1. "Two and a half times the mass of every other planet combined."
-   Jupiter 1.898e27 kg; all other planets together ~7.5e26 kg. Ratio ~2.5.
-   NASA Jupiter and planetary fact sheets.
+1. "Jupiter is the biggest planet in the solar system. Two and a half times the
+   mass of every other planet combined."
+   NASA Planetary Fact Sheet (https://nssdc.gsfc.nasa.gov/planetary/factsheet/):
+   Jupiter 1898e24 kg, the largest mass and diameter of the eight planets. The other
+   seven: 0.330 + 4.87 + 5.97 + 0.642 + 568 + 86.8 + 102 = 768.6e24 kg. Ratio 2.47.
+   On screen: "2.5× the other planets combined, by mass".
 
-2. "A thousand Jupiters into the Sun."
-   Sun volume 1.41e18 km^3; Jupiter volume 1.43e15 km^3. Ratio ~986.
-   Volume, not mass — the Sun is ~1,048 Jupiter MASSES, which is a different
-   (and coincidentally similar) number. The script says "pour into", i.e. volume.
+2. "Hold Jupiter up next to the Sun, and it looks tiny."
+   NASA Sun and Jupiter fact sheets (.../factsheet/sunfact.html,
+   .../factsheet/jupiterfact.html): mean radius 695,700 km against 69,911 km, so
+   Jupiter is about a tenth of the Sun's width.
 
-3. "Heavier and brighter than about ninety percent of the stars in our galaxy."
-   Weakest number in the script. M-dwarfs are ~73-75% of stars in the Milky Way;
-   adding K-dwarfs puts stars smaller than the Sun at roughly 90%. Figures of
-   85-95% are all quoted in the literature depending on the sample and the cutoff.
-   If a tighter claim is wanted: "smaller than about three quarters of the stars
-   in the galaxy are red dwarfs" is safe and uncontested.
+3. "It would take nearly a thousand Jupiters to fill the Sun."
+   Same fact sheets: Sun volume 1,412,000e12 km^3, Jupiter 1,431.28e12 km^3. Ratio
+   986.5, so "nearly a thousand", and a full thousand would overflow it. This is
+   volume (melted down and poured in); solid spheres pack worse. By mass the Sun is
+   ~1,048 Jupiters, a different and coincidentally similar number.
+   On screen: "≈ 1,000 JUPITERS / to fill it".
 
-4. "Most stars are red dwarfs: small, dim, and everywhere."
-   Uncontested.
+4. "Our Sun is not an average star. It is an unusually big one. It is bigger and
+   brighter than over ninety percent of the stars in our part of the galaxy."
+   Reylé et al., "The 10 parsec sample in the Gaia era", A&A 650, A201 (2021),
+   doi:10.1051/0004-6361/202140985, Table 3 (Sun excluded): A 4, F 8, G 18, K 38,
+   M 249, white dwarfs 20, plus 41 untyped (36 of them possible M dwarfs). K and M
+   dwarfs and white dwarfs are all smaller and dimmer than the Sun. Even counting
+   every G star as at least as big as the Sun (they are not; Tau Ceti and others
+   are late G), the Sun is bigger than about 91% of the typed stars; counting only
+   the G0-G2 and evolved G stars, about 95%. "Over ninety percent" holds under
+   every reading. The census is of the solar neighbourhood, which is why the script
+   says "our part of the galaxy" rather than "the galaxy".
+   On screen: "THE SUN / bigger than 9 stars in 10".
 
-5. "The nearest star to our own. Proxima Centauri, just over four light years away."
-   4.2465 light years. Nearest known star to the Sun; part of the Alpha Centauri
-   system. Uncontested.
+5. "Because most stars are red dwarfs: small, dim, and everywhere."
+   Reylé et al. 2021, as above: 249 M dwarfs of 337 typed stars, 74%. The paper's
+   own figure is 58.9 ± 5.8% of all typed objects including brown dwarfs. Every
+   reading is a majority.
 
-6. "You have never seen it. Too faint for your eyes, and too faint for most
-   binoculars. You need a telescope."
-   Apparent magnitude ~11.1. Naked-eye limit is about 6 under a dark sky, so it
-   is roughly 100x too faint to see unaided. Typical 10x50 binoculars reach about
-   magnitude 9.5-10.5, which is why the line says MOST binoculars rather than all:
-   large 15x70s under a genuinely dark sky can reach ~11, but Proxima is a hard
-   target even then. A small telescope is the honest answer.
+6. "So look at the nearest star to our own. Proxima Centauri, just over four light
+   years away. The closest star to the Sun."
+   Anglada-Escudé et al., Nature 536, 437 (2016), doi:10.1038/nature19106:
+   Proxima Centauri, at 1.295 pc, "is the Sun's closest stellar neighbour". NASA
+   Exoplanet Archive (pscomppars, Proxima Cen): 1.30119 ± 0.00034 pc = 4.244 ly.
+   Gaia DR3 (doi:10.1051/0004-6361/202243940) gives 4.2465 ly. Either way, "just
+   over four light years". The script says "closest star to the Sun", not "closest
+   star there is", because the closest star to us is the Sun.
 
-7. "That is what most of the galaxy looks like."
-   Rests on claim 3 and claim 4, not a new number.
+7. "You have almost certainly never seen it. It is almost always too faint for
+   your eyes."
+   NASA Exoplanet Archive: V = 11.01. Howard et al., ApJL 860, L30 (2018),
+   doi:10.3847/2041-8213/aacaf3, report "the first naked-eye-brightness superflare
+   detected from Proxima Centauri" (March 2016, a 68x brightening), which is only
+   remarkable because its normal brightness is far below what the eye can see.
+   Naked-eye limit: about magnitude 6 under a dark sky (Schaefer, "Astronomy and
+   the limits of vision", Vistas in Astronomy 36, 311 (1993),
+   doi:10.1016/0083-6656(93)90113-X), so V = 11 is about 100 times too faint.
+   That flare is why both lines are hedged with "almost". A viewer with a telescope
+   may have seen it, hence "almost certainly".
+
+8. "That is what most of the stars around us look like."
+   Proxima is M5.5 V (NASA Exoplanet Archive). Reylé et al. 2021: M dwarfs are 74%
+   of the typed stars within 10 pc, and "more than half of the M dwarfs (57.0 ±
+   7.3%) have spectral types M3.0 V to M5.0 V", so a mid-M dwarf is the typical
+   star. Scoped to "around us" because the census is of the solar neighbourhood.
+
+9. "The star we call ordinary is one of the rare big ones."
+   Reylé et al. 2021, as in claim 4: A 4 + F 8 + about a third of the 18 G stars,
+   plus the Sun, is about 19 of ~375 stars, about 5%.
+   On screen: a grid of 100 dots in census proportion: 5 large bright (at least
+   the Sun's size), ~10 orange (K), ~3 smaller yellow (G), ~5 tiny white (white
+   dwarfs), ~77 red (M); then "THE SUN / one of the five".
+
+10. Not spoken: "PROXIMA CENTAURI / ≈ 0.15× the Sun's radius".
+   Sources disagree (A3): Kervella et al., A&A 598, L7 (2017),
+   doi:10.1051/0004-6361/201629930, adopt 0.1542 ± 0.0045 R_sun (0.150-0.159); the
+   NASA Exoplanet Archive adopts 0.141 ± 0.021 R_sun (0.120-0.162; Suárez Mascareño
+   et al. 2025, 2025A&A...700A..11M). 0.15 sits inside both ranges, so the label
+   uses it and Proxima is drawn at 0.15 of the Sun's drawn radius.
+
+11. Not spoken: the row of the other seven planets beside Jupiter.
+   Drawn to one scale with Jupiter, at volumetric mean radii over Jupiter's
+   69,911 km (NASA Planetary Fact Sheet, same page as claim 1): Saturn 58,232 km
+   (0.833), Uranus 25,362 (0.363), Neptune 24,622 (0.352), Earth 6,371 (0.091),
+   Venus 6,051.8 (0.087), Mars 3,389.5 (0.0485), Mercury 2,439.7 (0.035).

@@ -13,20 +13,19 @@ import type { Short } from "../types";
 // number, so re-reading the script re-resolves the cut instead of breaking it.
 const edit = makeEdit({
   alignment,
-  cut: [{ from: "The sunlight on your skin", to: "the light is eight minutes old.", tail: 0.4 }],
+  cut: [{ from: "The energy in the sunlight", to: "the light is eight minutes old.", tail: 0.4 }],
   keyPhrases: [["hundred", "thousand"], ["eight", "minutes"], ["photon"], ["ancient"]],
-  // No breakAfter: the longest page is the opening sentence at 11 words, which sets three lines in
-  // the 9:16 caption block against the four it has room for. Both occurrences of "eight minutes"
-  // light up on purpose — the closing line is the hook's own number handed back.
+  // The 19-word hook would overflow the 9:16 caption block as one page, so it breaks after "skin".
+  // Both occurrences of "eight minutes" light up on purpose: the closing line hands the number back.
+  breakAfter: ["skin"],
 });
 
 // Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
 const F = {
-  eight: edit.at("eight"),
+  trip: edit.at("trip"),
   minutes: edit.at("minutes"),
-  sun: edit.at("sun"),
-  rest: edit.at("rest"),
-  out: edit.at("out"),
+  rest: edit.at("slow"),
+  out: edit.at("part"),
   photon: edit.at("photon"),
   climb: edit.at("climb"),
   ancient: edit.at("ancient"),
@@ -51,8 +50,8 @@ const TRAVEL = { from: A.sun.x + A.sun.r, to: A.earth.x - A.earth.r };
 const B = { x: 960, y: 470, r: 320 };
 
 // The interior by fraction of the Sun's radius: fusing core to 0.25, radiative zone to 0.7, and
-// the convective zone above that. The hundred thousand years is spent in the radiative zone, which
-// is why the walk lives there and the break-out above 0.7 is quick.
+// the convective zone above that. The slow part is the radiative zone, which is why the walk lives
+// there; above 0.7 the plasma convects, drawn as rising cells rather than a photon's path.
 const CORE = 0.25;
 const RADIATIVE = 0.7;
 
@@ -112,13 +111,18 @@ const STUBS = Array.from({ length: 12 }, (_, i) => {
   return { at, x: WALK[at][0], y: WALK[at][1], dx: Math.cos(th) * 0.085, dy: Math.sin(th) * 0.085 };
 });
 
+// Convection cells around the shell between 0.7 and the surface, one every 18 degrees.
+const CELLS = Array.from({ length: 20 }, (_, i) => (i / 20) * Math.PI * 2);
+
 // Gamma out of the core, visible light by the surface. The path is tinted by how far out each leg
 // is, because the energy is degraded on the way rather than carried intact — which is the whole
 // reason the script says it is not the same light.
 const GAMMA = [214, 198, 255];
 const VISIBLE = [255, 233, 168];
+// Ramped over the whole radius, not to 0.7: at the radiative boundary it is still X-ray (~2 MK),
+// and only light leaving the surface is visible.
 const tint = (r: number) => {
-  const t = Math.min(1, Math.max(0, r / RADIATIVE));
+  const t = Math.min(1, Math.max(0, r));
   const v = GAMMA.map((a, i) => Math.round(a + (VISIBLE[i] - a) * t));
   return `rgb(${v[0]},${v[1]},${v[2]})`;
 };
@@ -195,7 +199,7 @@ const SunScene: React.FC = () => {
       {/* Three crossings: one to establish the gap under the hook, one on the line that measures
           it, and one on the closing line that hands the number back. */}
       <Pulse t={ramp(f, 6, 106)} />
-      <Pulse t={ramp(f, F.eight - 6, F.sun + 9)} />
+      <Pulse t={ramp(f, F.trip - 6, F.minutes + 9)} />
       <Pulse t={ramp(f, F.close - 4, F.voEnd + 16)} />
 
       {cross > 0.02 ? (
@@ -263,8 +267,8 @@ const SunScene: React.FC = () => {
                 width: leg * 4,
                 height: leg * 4,
                 borderRadius: "50%",
-                background: "#fff",
-                boxShadow: `0 0 ${leg * 6}px ${leg * 2}px rgba(220,205,255,0.7)`,
+                background: tint(Math.hypot(WALK[shown][0], WALK[shown][1])),
+                boxShadow: `0 0 ${leg * 6}px ${leg * 2}px rgba(255,230,190,0.6)`,
               }}
             />
           ) : null}
@@ -285,18 +289,26 @@ const SunScene: React.FC = () => {
               ))
             : null}
 
-          {/* Above 0.7 the plasma convects and the energy is carried out in weeks, not millennia,
-              so the last stretch is one straight leg rather than another walk. */}
-          {burst > 0 ? (
-            <Leg
-              x1={EXIT.ux * RADIATIVE * sr}
-              y1={EXIT.uy * RADIATIVE * sr}
-              x2={EXIT.ux * (RADIATIVE + (1 - RADIATIVE) * burst) * sr}
-              y2={EXIT.uy * (RADIATIVE + (1 - RADIATIVE) * burst) * sr}
-              w={leg * 1.3}
-              color="#fff3c4"
-            />
-          ) : null}
+          {/* Above 0.7 no photon carries the energy: the plasma convects. So the shell fills with
+              turning cells, not a path — a straight leg here read as one photon finishing the trip. */}
+          {burst > 0
+            ? CELLS.map((th, i) => (
+                <div
+                  key={`cell-${i}`}
+                  style={{
+                    position: "absolute",
+                    left: (Math.cos(th) * 0.85 - 0.12) * sr,
+                    top: (Math.sin(th) * 0.85 - 0.12) * sr,
+                    width: 0.24 * sr,
+                    height: 0.24 * sr,
+                    borderRadius: "50%",
+                    border: `${Math.max(2, leg * 0.8)}px dashed rgba(255,214,140,0.7)`,
+                    opacity: burst,
+                    rotate: `${(i % 2 ? -1 : 1) * (f - F.climb) * 4}deg`,
+                  }}
+                />
+              ))
+            : null}
 
           {/* What leaves is not what set out: one path in, a spray of ordinary light out. */}
           {fan > 0
@@ -321,14 +333,14 @@ const SunScene: React.FC = () => {
 
       {/* Over the gap rather than beside the Sun: at 885 units wide the 9:16 crop has no "beside"
           once the Sun and the Earth are both in it. */}
-      <Tag x={850} y={150} text="8 MINUTES" sub="surface to your skin" from={F.minutes + 8} to={F.rest + 6} />
+      <Tag x={850} y={150} text="8 MINUTES" sub={"surface to your skin\nnot to scale"} from={F.minutes + 8} to={F.rest + 6} />
       {/* Above the disc, not on it: at 320 units of radius there is no clear ground beside it in
           the 9:16 crop, and the first pass had the sub-line unreadable against the limb. */}
-      <Tag x={600} y={30} text="≈100,000 YEARS" sub="core to surface" from={F.out + 12} to={F.ancient + 30} />
+      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot one photon · not to scale"} from={F.out + 12} to={F.ancient + 30} />
       {/* The two answers side by side on the last line, stacked rather than abreast because the
           vertical crop has the height to spare and not the width. */}
-      <Tag x={600} y={110} text="THE ENERGY" sub="≈100,000 years getting out" from={F.close - 2} />
-      <Tag x={600} y={640} text="THE LIGHT" sub="8 minutes old" from={F.close + 10} />
+      <Tag x={600} y={110} text="THE ENERGY" sub="100,000+ years getting out" from={F.close - 2} />
+      <Tag x={600} y={640} text="THE LIGHT" sub={"8 minutes old\nnot to scale"} from={F.close + 10} />
     </>
   );
 };

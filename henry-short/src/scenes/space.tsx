@@ -166,7 +166,7 @@ export const Tag: React.FC<{
   return (
     <div style={{ position: "absolute", left: x, top: y, opacity: t, translate: `0 ${(1 - t) * 14}px`, textAlign: align, transform: align === "right" ? "translateX(-100%)" : undefined }}>
       <div style={{ fontFamily: SERIF, fontSize: 44, letterSpacing: 3, whiteSpace: "pre-line", color: "#f4ecd8", textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{text}</div>
-      {sub ? <div style={{ fontFamily: SERIF, fontSize: 28, color: "#c3b48f", marginTop: 4, textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{sub}</div> : null}
+      {sub ? <div style={{ fontFamily: SERIF, fontSize: 28, whiteSpace: "pre-line", color: "#c3b48f", marginTop: 4, textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>{sub}</div> : null}
     </div>
   );
 };
