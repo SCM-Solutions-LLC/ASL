@@ -352,7 +352,7 @@ const SunScene: React.FC = () => {
 
 export const ageOfSunlight: Short = {
   slug: "age-of-sunlight",
-  title: "Sunlight is older than the light",
+  title: "The energy in sunlight took 100,000+ years to get out of the Sun",
   edit,
   looks: [{ id: "Space", Set: Starfield, cast: () => [] }],
   props: () => <SunScene />,

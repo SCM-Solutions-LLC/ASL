@@ -43,7 +43,8 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    dwarfs are all smaller and dimmer than the Sun: Boyajian et al., "Stellar
    Diameters and Temperatures II. Main Sequence K & M Stars", ApJ 757, 112 (2012),
    doi:10.1088/0004-637X/757/2/112 (arXiv:1208.2431), Table 6 ("Fundamental
-   Parameters"): interferometric radii and luminosities of K0 V to M5.5 V dwarfs,
+   Parameters"): interferometric radii and luminosities of K0 V to M5.5 V dwarfs (plus one
+   G5 star, GJ 53A),
    the largest GJ 702A (K0 V, 0.831 R_sun, 0.53 L_sun), GJ 75 (K0 V, 0.819, 0.52)
    and GJ 166A (K1 V, 0.806, 0.41); every M dwarf in the table is under 0.58 R_sun
    and 0.07 L_sun. White dwarfs are all far smaller and dimmer than the Sun: Giammichele,
