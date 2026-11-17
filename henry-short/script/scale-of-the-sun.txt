@@ -43,8 +43,10 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    dwarfs and white dwarfs are all smaller and dimmer than the Sun. Even counting
    every G star as at least as big as the Sun (they are not; Tau Ceti and others
    are late G), the Sun is bigger than about 91% of the typed stars; counting only
-   the G0-G2 and evolved G stars, about 95%. "Over ninety percent" holds under
-   every reading. The census is of the solar neighbourhood, which is why the script
+   the G0-G2 and evolved G stars, about 95%. Reylé also lists four subgiants
+   within 10 pc; delta Eridani (K0 IV) is larger and brighter than the Sun, and
+   counting it as well the worst case is 306 of 337, 90.8%. "Over ninety percent"
+   holds under every reading, with that thin margin. The census is of the solar neighbourhood, which is why the script
    says "our part of the galaxy" rather than "the galaxy".
    On screen: "THE SUN / bigger than 9 stars in 10".
 
@@ -57,9 +59,8 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    years away. The closest star to the Sun."
    Anglada-Escudé et al., Nature 536, 437 (2016), doi:10.1038/nature19106:
    Proxima Centauri, at 1.295 pc, "is the Sun's closest stellar neighbour". NASA
-   Exoplanet Archive (pscomppars, Proxima Cen): 1.30119 ± 0.00034 pc = 4.244 ly.
-   Gaia DR3 (doi:10.1051/0004-6361/202243940) gives 4.2465 ly. Either way, "just
-   over four light years". The script says "closest star to the Sun", not "closest
+   Exoplanet Archive (pscomppars, Proxima Cen): 1.30119 ± 0.00034 pc = 4.244 ly,
+   so "just over four light years". The script says "closest star to the Sun", not "closest
    star there is", because the closest star to us is the Sun.
 
 7. "You have almost certainly never seen it. It is almost always too faint for
@@ -68,24 +69,24 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    doi:10.3847/2041-8213/aacaf3, report "the first naked-eye-brightness superflare
    detected from Proxima Centauri" (March 2016, a 68x brightening), which is only
    remarkable because its normal brightness is far below what the eye can see.
-   Naked-eye limit: about magnitude 6 under a dark sky (Schaefer, "Astronomy and
-   the limits of vision", Vistas in Astronomy 36, 311 (1993),
-   doi:10.1016/0083-6656(93)90113-X), so V = 11 is about 100 times too faint.
    That flare is why both lines are hedged with "almost". A viewer with a telescope
    may have seen it, hence "almost certainly".
 
 8. "That is what most of the stars around us look like."
-   Proxima is M5.5 V (NASA Exoplanet Archive). Reylé et al. 2021: M dwarfs are 74%
-   of the typed stars within 10 pc, and "more than half of the M dwarfs (57.0 ±
-   7.3%) have spectral types M3.0 V to M5.0 V", so a mid-M dwarf is the typical
-   star. Scoped to "around us" because the census is of the solar neighbourhood.
+   Proxima is M5.5 V (NASA Exoplanet Archive), an M dwarf. Reylé et al. 2021: M
+   dwarfs are 74% of the typed stars within 10 pc, so "most of the stars around
+   us" are M dwarfs like it. Scoped to "around us" because the census is of the
+   solar neighbourhood.
 
 9. "The star we call ordinary is one of the rare big ones."
-   Reylé et al. 2021, as in claim 4: A 4 + F 8 + about a third of the 18 G stars,
-   plus the Sun, is about 19 of ~375 stars, about 5%.
-   On screen: a grid of 100 dots in census proportion: 5 large bright (at least
-   the Sun's size), ~10 orange (K), ~3 smaller yellow (G), ~5 tiny white (white
-   dwarfs), ~77 red (M); then "THE SUN / one of the five".
+   Reylé et al. 2021, as in claim 4. K and M dwarfs and white dwarfs are all
+   smaller than the Sun (claim 4); everything else, the Sun's own class G and the
+   hotter A and F stars, is A 4 + F 8 + G 18 + the Sun = 31 of 379 stars (337
+   typed + 41 untyped + the Sun), about 8%. "Rare big ones" means that group.
+   On screen: a grid of 100 dots by spectral class, per 100 of the 379: 8 large
+   bright (G or hotter, 31), 10 orange (K, 38), 5 tiny white (white dwarfs, 20),
+   77 red (M 249 + 41 untyped, 36 of which Reylé lists as possible M dwarfs).
+   The dots show class, not size; then "THE SUN / one of the few".
 
 10. Not spoken: "PROXIMA CENTAURI / ≈ 0.15× the Sun's radius".
    Sources disagree (A3): Kervella et al., A&A 598, L7 (2017),
@@ -94,8 +95,14 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    et al. 2025, 2025A&A...700A..11M). 0.15 sits inside both ranges, so the label
    uses it and Proxima is drawn at 0.15 of the Sun's drawn radius.
 
-11. Not spoken: the row of the other seven planets beside Jupiter.
+11. Not spoken: the row of the other seven planets beside Jupiter, and Jupiter
+   beside the Sun.
    Drawn to one scale with Jupiter, at volumetric mean radii over Jupiter's
-   69,911 km (NASA Planetary Fact Sheet, same page as claim 1): Saturn 58,232 km
+   69,911 km (NASA per-planet fact sheets,
+   https://nssdc.gsfc.nasa.gov/planetary/factsheet/<planet>fact.html): Saturn 58,232 km
    (0.833), Uranus 25,362 (0.363), Neptune 24,622 (0.352), Earth 6,371 (0.091),
    Venus 6,051.8 (0.087), Mars 3,389.5 (0.0485), Mercury 2,439.7 (0.035).
+   Beside the Sun, Jupiter is drawn at 52 against the Sun's 520 (true ratio 9.95,
+   claim 2). The 1,000-Jupiter field is labelled "by volume" and "dots not to
+   scale": a flat disc holds only ~99 Jupiter-sized discs, so the dots are drawn
+   smaller than Jupiter to show a volume count.

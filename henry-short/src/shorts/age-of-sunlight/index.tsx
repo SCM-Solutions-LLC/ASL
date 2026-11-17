@@ -119,10 +119,15 @@ const CELLS = Array.from({ length: 20 }, (_, i) => (i / 20) * Math.PI * 2);
 // reason the script says it is not the same light.
 const GAMMA = [214, 198, 255];
 const VISIBLE = [255, 233, 168];
-// Ramped over the whole radius, not to 0.7: at the radiative boundary it is still X-ray (~2 MK),
-// and only light leaving the surface is visible.
+// Hue follows log temperature (NASA MSFC: 15 MK centre, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K
+// surface), so the path is ~10% of the way to visible at 0.25 R and ~26% at 0.7 R.
+const PROFILE: [number, number][] = [[0, 15e6], [0.25, 7e6], [0.7, 2e6], [1, 5700]];
 const tint = (r: number) => {
-  const t = Math.min(1, Math.max(0, r));
+  const logT = interpolate(r, PROFILE.map((p) => p[0]), PROFILE.map((p) => Math.log(p[1])), {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const t = (Math.log(15e6) - logT) / (Math.log(15e6) - Math.log(5700));
   const v = GAMMA.map((a, i) => Math.round(a + (VISIBLE[i] - a) * t));
   return `rgb(${v[0]},${v[1]},${v[2]})`;
 };

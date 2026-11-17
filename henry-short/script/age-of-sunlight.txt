@@ -29,7 +29,8 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    the time up to 1.7e5.
 
    Energy transport: Stix, "On the time scale of energy transport in the Sun",
-   Solar Physics 212, 3 (2003), doi:10.1023/A:1022952621810. His abstract: the time
+   Solar Physics 212, 3 (2003), doi:10.1023/A:1022952621810. Its abstract, as read
+   at the publisher by the 2026-11-17 fact-check (not by this script's author): the time
    scale of energy transport is the Kelvin-Helmholtz time scale, of order 3e7
    years, roughly 100 times the Mitalas & Sills photon-diffusion time, because most
    of the interior's thermal energy is in the particles, not the photons.
@@ -66,10 +67,11 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Helioseismology puts the base of the convection zone at 0.713 R
    (Christensen-Dalsgaard, Gough & Thompson, ApJ 378, 413 (1991),
    doi:10.1086/170441). The animation shows a random walk through the radiative
-   zone, its colour shifting from violet (high-energy: gamma rays from fusion and
-   the core's thermal X-rays, ~15 MK) toward yellow only gradually, reaching
-   visible-light yellow at the surface, not at 0.7 R where the radiation is still
-   X-ray (~2 MK). Then rising convection cells above 0.7 R, where NASA MSFC
+   zone, its colour set by log temperature from the NASA MSFC profile (15 MK at
+   the centre, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at the surface): violet for
+   high-energy radiation, yellow for visible light. So the path is only ~26% of
+   the way to yellow at 0.7 R, where the radiation is still X-ray, and reaches
+   visible light only at the surface. The hue is schematic. Then rising convection cells above 0.7 R, where NASA MSFC
    says "convective motions carry heat quite rapidly to the surface". It is labelled
    on screen as not to scale and as energy rather than one photon: a 0.09 cm step
    across 700,000 km cannot be drawn. The Sun-Earth shot is also labelled not to
