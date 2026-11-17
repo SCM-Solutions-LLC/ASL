@@ -209,9 +209,9 @@ const SunScene: React.FC = () => {
         </div>
       ) : null}
 
-      {/* Three crossings: one to establish the gap under the hook, one on the line that measures
-          it, and one on the closing line that hands the number back. */}
-      <Pulse t={ramp(f, 6, 106)} />
+      {/* Two crossings: on the line that measures the gap, and on the closing line that hands the
+          number back. None under the hook: a pulse crossing while "tens of thousands of years" is
+          spoken reads as the trip to Earth taking that long (A4). */}
       <Pulse t={ramp(f, F.trip - 6, F.minutes + 9)} />
       <Pulse t={ramp(f, F.close - 4, F.voEnd + 16)} />
 

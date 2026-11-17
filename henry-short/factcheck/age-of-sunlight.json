@@ -1,28 +1,231 @@
-{"script":"script/age-of-sunlight.txt","sha256":"e201bdf8d81751f484384e04dc6a876392ec886707469067584ce9ad0e8dd1df","checked":"2026-11-17","claims":[
-{"n":1,"claim":"The energy in the sunlight on your skin spent tens of thousands of years, maybe far more, getting out of the Sun.","where":"spoken","verdict":"confirmed","source_checked":"NASA SVS 11084 'Origin of Light' (svs.gsfc.nasa.gov/11084, fetched); Mitalas & Sills 1992, ApJ 401, 759 (ADS scan, both pages read; DOI 10.1086/172103 checked on Crossref); NASA MSFC 'The Solar Interior' (solarscience.msfc.nasa.gov/interior.shtml, fetched)","note":"SVS: 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface' and 'Over tens of thousands of years, the photons travel a \"drunken walk\"'. MS92: t_d = 1.7 x 10^5 yr to the inner edge of the convection zone; the common 3e3-3e4 yr estimates are 'much too short'. MSFC: 'about a million years to finally reach the interface layer'. Every cited figure is >= 4e4 yr, so 'tens of thousands, maybe far more' holds as a lower bound; the MS92/MSFC figures stop at ~0.7 R, and the convective remainder only adds time. Stix 2003 not read, but nothing rests on it."},
-{"n":2,"claim":"Hook as heard by a viewer who swipes at second two: 'The energy in the sunlight on your skin...' over the Sun-Earth shot (Earth labelled 'not to scale', pulse crossing the gap).","where":"spoken + on-screen: opening Sun-Earth shot (A4)","verdict":"confirmed","source_checked":"src/generated/age-of-sunlight.alignment.json (word timings), src/shorts/age-of-sunlight/index.tsx; sources as claim 1","note":"By 2.0 s the VO has reached 'The energy in the sunlight on your'; 'skin' ends 2.35 s, the full sentence 6.5 s. Nothing false is stated or implied at that point, and the full first sentence is a lower bound every cited source supports. The script avoids the popular false form ('the light/photon is 100,000 years old'). No numeric tag is on screen in the first two seconds."},
-{"n":3,"claim":"The trip from the Sun to you took eight minutes.","where":"spoken","verdict":"confirmed","source_checked":"NASA NSSDC Sun Fact Sheet (fetched: mean distance 149.6e6 km, min 147.1, max 152.1; radius 695,700 km); CODATA 2022 c via physics.nist.gov/cgi-bin/cuu/Value?c (fetched: 299 792 458 m/s exact); NASA SVS 11084","note":"(149.6e6 - 0.6957e6) km / c = 496.7 s = 8 min 17 s; perihelion/aphelion give 488-505 s (8.1-8.4 min), +/-1.7% as stated. SVS: 'Light takes eight minutes to travel the 93 million miles from the sun to Earth.' IAU 2012 B2 not reachable, but the NSSDC mean distance suffices."},
-{"n":4,"claim":"Getting out was the slow part.","where":"spoken","verdict":"confirmed","source_checked":"as claims 1 and 3","note":"8 minutes against >= 40,000 years. Minor: SOURCES entry 3 says '8 minutes against more than 1e5 years', which conflicts with its own SVS lower figure of 4e4; suggest '>= 4e4 years' there. Does not affect the spoken line."},
-{"n":5,"claim":"But it is not the same light.","where":"spoken","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'; NASA SVS 11084","note":"Read with the next two lines it means a different kind of light: MSFC says the energy diffuses outward 'by radiation (mostly gamma-rays and x-rays)' and 'ultimately leaves the surface as visible light'; the outer 30% is crossed by convective flows, not radiation. SVS: photons 'absorbed by other atoms and emitted repeatedly'. Supported either way it is read."},
-{"n":6,"claim":"Deep inside, it travels mostly as X-rays.","where":"spoken","verdict":"fix","source_checked":"NASA MSFC 'The Solar Interior' (fetched); CODATA 2022 Wien constant via physics.nist.gov/cgi-bin/cuu/Value?bwien (fetched: 2.897 771 955e-3 m K); recomputed SOURCES' figures","note":"The cited source says 'mostly gamma-rays and x-rays', not 'mostly X-rays'. The narrowing rests on a derivation whose arithmetic checks (hc/(b/T) = 6.4, 3.0, 0.86 keV at 15, 7, 2 MK; 2.82 kT = 3.6, 1.7, 0.49 keV) and the physics is right, but two premises have no A2 citation: (a) that ~0.5-6 keV photons are X-rays (the X-ray band edges), and (b) that the interior radiation field is near-blackbody at the local temperature. A1/A3 fail as written. Fix either way: (1) add to SOURCES entry 4 an A2 citation (agency page or textbook with edition) stating the X-ray energy range (~0.1-100 keV) and the near-blackbody interior radiation field, and have it re-checked; or (2) change the line to match MSFC, e.g. 'Deep inside, it travels as X-rays and gamma rays.' (requires re-render/re-align)."},
-{"n":7,"claim":"It leaves as sunlight.","where":"spoken","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'","note":"MSFC: the core reactions 'release the energy that ultimately leaves the surface as visible light'."},
-{"n":8,"claim":"The energy is ancient.","where":"spoken","verdict":"confirmed","source_checked":"as claim 1","note":"Qualitative; >= 40,000 years (SVS) to ~1e6 years (MSFC) fairly reads as ancient."},
-{"n":9,"claim":"Its last eight minutes were the trip to you.","where":"spoken","verdict":"confirmed","source_checked":"as claim 3 (NSSDC, CODATA c, NASA SVS)","note":"~8.3 min photosphere to Earth; SVS 'Light takes eight minutes to travel ... from the sun to Earth'."},
-{"n":10,"claim":"Sun-Earth shot (start and end): Earth labelled 'not to scale' while visible; a bright pulse crosses the gap.","where":"on-screen: Sun-Earth shot","verdict":"confirmed","source_checked":"src/shorts/age-of-sunlight/index.tsx; NASA NSSDC Sun Fact Sheet","note":"Drawn: Sun r 110, Earth r 24, 600 units apart. Real: Sun/Earth radius ratio 109.2 (drawn 4.6, so Earth ~24x too big); distance ~215 solar radii (drawn 5.5, ~39x too close). Code comment '~25x too big, ~40x too close' is right, and the label is tied to Earth's opacity, so A6 is met. The pulse makes no timed or numeric claim."},
-{"n":11,"claim":"8 MINUTES / surface to your skin / not to scale","where":"on-screen: tag '8 MINUTES'","verdict":"confirmed","source_checked":"as claim 3","note":"Photosphere to Earth 496.7 s mean (8.1-8.4 min over the year); 'surface' is the right endpoint."},
-{"n":12,"claim":"10,000+ YEARS / energy, core to surface / not to scale (shown while the interior cutaway is up)","where":"on-screen: tag '10,000+ YEARS'","verdict":"confirmed","source_checked":"as claim 1; index.tsx timing (tag from 'slow' to 'ancient'+48 frames, same as the cutaway)","note":"A true lower bound under every cited figure (SVS 4e4 core to surface; MS92 1.7e5; MSFC ~1e6). Conservative relative to the spoken 'tens of thousands', not contradictory. The cutaway's 'not to scale' is on screen for its whole duration."},
-{"n":13,"claim":"THE ENERGY / 10,000+ years getting out","where":"on-screen: tag 'THE ENERGY'","verdict":"confirmed","source_checked":"as claim 1","note":"Same lower bound as claim 12."},
-{"n":14,"claim":"THE TRIP / 8 minutes to you / not to scale","where":"on-screen: tag 'THE TRIP'","verdict":"confirmed","source_checked":"as claim 3","note":"Shown over the Sun-Earth shot, whose Earth also carries 'not to scale'."},
-{"n":15,"claim":"Cutaway zones: rings at 0.25 and 0.7 of the Sun's radius; rotating dashed convection cells between 0.7 and the surface.","where":"on-screen: interior cutaway","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'","note":"MSFC: core is 'the innermost 25%'; radiative zone 'from 25% of the distance to the surface to 70%'; convection zone 'the outermost 30%', where 'convective motions carry heat quite rapidly to the surface'. Christensen-Dalsgaard et al. 1991 (0.713 R) only checked on Crossref (doi:10.1086/170441, title/authors/volume match); nothing on screen depends on it."},
-{"n":16,"claim":"A random-walk path from the centre to the 0.7 ring, with short sideways strokes along it (re-emission).","where":"on-screen: interior cutaway","verdict":"confirmed","source_checked":"NASA SVS 11084; NASA MSFC; Mitalas & Sills 1992; index.tsx","note":"SVS: photons 'travel a \"drunken walk,\" zigzagging their way from atom to atom', 'absorbed ... and emitted repeatedly'. MSFC: photons 'bounce from particle to particle through the radiative zone'. Code scales the walk by its furthest excursion so no leg passes 0.7 R. Step size and count are schematic and labelled not to scale (MS92 mean step 0.090 cm, 1.0e25 steps)."},
-{"n":17,"claim":"Path colour from violet toward pale yellow by log temperature: 15 MK at r=0, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at surface; ~10% of the way at 0.25 R, ~26% at 0.7 R.","where":"on-screen: interior cutaway","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'; index.tsx tint(); recomputed","note":"MSFC: centre 'about 15,000,000 C', radiative zone 'falls from 7,000,000 C to about 2,000,000 C', surface '5,700 K'. ln(15/7)/ln(15e6/5700) = 0.097; ln(7.5)/ln(2632) = 0.256. Matches. Hue is schematic and makes no numeric claim on screen."},
-{"n":18,"claim":"A fan of five yellow rays leaving the surface.","where":"on-screen: interior cutaway","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'","note":"Energy 'ultimately leaves the surface as visible light'. Shown on 'It leaves as sunlight.'"},
-{"n":19,"claim":"The energy in sunlight took at least tens of thousands of years to get out of the Sun","where":"metadata: title","verdict":"confirmed","source_checked":"as claim 1","note":"Lowest cited figure 40,000 yr (SVS); MS92 (peer-reviewed) explicitly rejects the 3e3-3e4 yr estimates as 'much too short'. 'At least tens of thousands' is supported. Matches index.tsx title."},
-{"n":20,"claim":"Sunlight reaches you about eight minutes after leaving the Sun's surface.","where":"metadata: description","verdict":"confirmed","source_checked":"as claim 3","note":"496.7 s mean from the photosphere."},
-{"n":21,"claim":"But the energy it carries spent tens of thousands of years, maybe far more, getting out.","where":"metadata: description","verdict":"confirmed","source_checked":"as claim 1","note":"Same as the spoken hook."},
-{"n":22,"claim":"Estimates include about 40,000 years (NASA SVS), 170,000 (Mitalas & Sills 1992) and about a million (NASA Marshall).","where":"metadata: description","verdict":"confirmed","source_checked":"NASA SVS 11084; Mitalas & Sills 1992 (ADS scan); NASA MSFC 'The Solar Interior'","note":"SVS '40,000 years'; MS92 't_d = 1.7 x 10^5 yr'; MSFC 'about a million years'. All three quoted figures match their sources."},
-{"n":23,"claim":"The slow part is diffusing out through the Sun's dense interior; near the surface, convection carries it up quickly.","where":"metadata: description","verdict":"confirmed","source_checked":"NASA MSFC 'The Solar Interior'; Mitalas & Sills 1992","note":"MSFC: energy 'diffuses outward by radiation' through the radiative zone (20 to 0.2 g/cm3) and convection carries heat 'quite rapidly to the surface'; MS92: convective crossing time 'very much shorter' than diffusion. 'Near the surface' is loose for a zone 30% of the radius (~200,000 km) deep; optional tightening: 'in the outer 30%'."},
-{"n":24,"claim":"Deep inside, it travels mostly as X-rays. It leaves as sunlight.","where":"metadata: description","verdict":"fix","source_checked":"as claim 6","note":"Same issue as claim 6: MSFC says 'mostly gamma-rays and x-rays'; the narrowing to 'mostly X-rays' rests on an uncited X-ray band definition and blackbody assumption. Apply the same fix as claim 6 (add the A2 citation, or change to 'as X-rays and gamma rays'). 'It leaves as sunlight' is confirmed (claim 7)."},
-{"n":25,"claim":"Description source list: Mitalas & Sills 1992 (doi:10.1086/172103); NASA Marshall Solar Interior; NASA SVS Origin of Light; NASA Sun Fact Sheet; CODATA 2022 speed of light.","where":"metadata: description","verdict":"confirmed","source_checked":"Crossref record for 10.1086/172103 (title, authors, ApJ 401, 759, 1992 match); each URL fetched","note":"All are A2 (peer-reviewed with DOI, NASA agency pages, CODATA). Covers every figure in the description. If claim 6/24 is fixed by adding a citation, add it here too (E4)."},
-{"n":26,"claim":"Illustrated animation; marked shots are not to scale.","where":"metadata: description","verdict":"confirmed","source_checked":"index.tsx","note":"Both non-to-scale shots (Sun-Earth, cutaway) carry 'not to scale' on screen for their whole duration."}
-]}
+{
+  "script": "script/age-of-sunlight.txt",
+  "sha256": "7b47892885802030e58673e6c5ab2d1cc74b20546c9e95eefa76698e95c102fe",
+  "checked": "2026-11-17",
+  "claims": [
+    {
+      "n": 1,
+      "claim": "The energy in the sunlight on your skin spent tens of thousands of years, maybe far more, getting out of the Sun.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "NASA SVS 11084 'Origin of Light' (svs.gsfc.nasa.gov/11084, fetched with the SVS CA bundle); Mitalas & Sills 1992, ApJ 401, 759-760 (NASA ADS scan 1992ApJ...401..759M, both pages read; DOI 10.1086/172103 checked on Crossref); NASA MSFC 'The Solar Interior' (solarscience.msfc.nasa.gov/interior.shtml, last updated 2025-01-14)",
+      "note": "SVS: 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface' (caption: 'Over tens of thousands of years'). MS92: 't_d = 1.7 x 10^5 yr' to 'reach the inner edge of the solar convective zone', and the common 3x10^3-3x10^4 yr is 'much too short'; convective crossing 'very much shorter'. MSFC: 'about a million years to finally reach the interface layer', then convection carries heat 'quite rapidly to the surface'. Lowest cited figure 4e4 (and MS92 with the suspect factor 3 in eq. 2 removed, ~5.7e4) is tens of thousands; 1.7e5 and 1e6 are 'far more'. MSFC frames it as energy ('This energy diffuses outward by radiation'), so 'the energy' is the source's wording. Stix 2003 (~3e7) not read (Springer unreachable); nothing spoken depends on it."
+    },
+    {
+      "n": 2,
+      "claim": "A4: what the hook leaves with a viewer who swipes at second two (and at the end of the first sentence)",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Word timings in src/generated/age-of-sunlight.alignment.json; same sources as claim 1",
+      "note": "By 2.0 s the viewer has heard only 'The energy in the sunlight on your skin' - no claim yet. The full first sentence (ends 6.5 s) is true as stated: it is about the energy and says 'getting out of the Sun', not the trip. It does not rest on the popular 'a photon takes N years' form, and its floor (tens of thousands) is the lowest A2 figure, so the popular 3e3-3e4 textbook figure that MS92 rejects is not asserted."
+    },
+    {
+      "n": 3,
+      "claim": "The trip from the Sun to you took eight minutes.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "NASA Sun Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html: radius 695,700 km; distance from Earth mean 149.6, min 147.1, max 152.1 x 10^6 km); CODATA 2022 c = 299 792 458 m/s exact (physics.nist.gov/cgi-bin/cuu/Value?c); NASA SVS 11084",
+      "note": "Photosphere to Earth: mean (149.6e9 - 0.6957e9)/c = 496.7 s = 8.28 min; range 488.4-505.0 s = 8.14-8.42 min, matching SOURCES' 8.1-8.4 min and +/-1.7%. 'Eight minutes' is a fair rounding. SVS: 'Light takes eight minutes to travel the 93 million miles from the sun to Earth.' IAU 2012 B2 (AU exact value) not opened (IAU site unreachable); not needed, the fact-sheet distance gives the same result."
+    },
+    {
+      "n": 4,
+      "claim": "Getting out was the slow part.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "As claims 1 and 3",
+      "note": "~8 min against >= 4e4 yr. Within 'getting out', MSFC and MS92 both put the slow part in radiative diffusion and call convection rapid, consistent with the script."
+    },
+    {
+      "n": 5,
+      "claim": "But it is not the same light.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'; NASA SVS 11084",
+      "note": "MSFC: energy crosses the radiative zone as 'radiation (mostly gamma-rays and x-rays)' and the outermost 30% 'by convective fluid flows'; the core reactions release 'the energy that ultimately leaves the surface as visible light'. SVS: each photon is 'absorbed by other atoms and emitted repeatedly'. Both support that the radiation inside is not the light that leaves. One SVS caption is looser ('The light created deep in the sun's core eventually emerges on the surface'); it is popular phrasing that SVS's own absorption/re-emission text and MSFC's gamma/X-ray vs visible statement override, so not treated as a contradiction. Optional: SOURCES 4 could record that caption under A3."
+    },
+    {
+      "n": 6,
+      "claim": "It leaves as sunlight.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'",
+      "note": "MSFC: 'the energy that ultimately leaves the surface as visible light'."
+    },
+    {
+      "n": 7,
+      "claim": "The energy is ancient.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "At least ~4e4 years by every cited A2 source; 'ancient' is a fair description of tens of thousands of years or more."
+    },
+    {
+      "n": 8,
+      "claim": "Its last eight minutes were the trip to you.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "As claim 3 (Sun Fact Sheet, CODATA c, NASA SVS)",
+      "note": "Surface to Earth 8.1-8.4 min; SVS 'Light takes eight minutes to travel ... from the sun to Earth'."
+    },
+    {
+      "n": 9,
+      "claim": "Sun-Earth shot with 'not to scale' under Earth for as long as Earth is visible",
+      "where": "on-screen: Sun-Earth shot",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/age-of-sunlight/index.tsx (A = sun r 110 at x 700, earth r 24 at x 1300; label opacity tied to Earth's); NASA Sun Fact Sheet (radius ratio 109.2, distance 149.6e6 km)",
+      "note": "Drawn Sun/Earth radius ratio 4.6 vs real 109.2 (Earth ~24x too big); gap 5.5 Sun radii vs real ~215 (~39x too close). The label is rendered whenever Earth is (same opacity term), so the non-to-scale shot is marked (A6)."
+    },
+    {
+      "n": 10,
+      "claim": "Bright pulse crossing the Sun-Earth gap (frames 6-106 under the hook, again on 'The trip ... eight minutes', and on the closing line)",
+      "where": "on-screen: Sun-Earth shot",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/age-of-sunlight/index.tsx (Pulse ramps); alignment.json; NASA SVS 11084",
+      "note": "Depicts light travelling from the Sun to Earth, which SVS states; marked not to scale. Editorial observation, not a source failure: the first pulse lands at Earth (~3.5 s) while 'tens of thousands of years' is being spoken, before 'getting out of the Sun' (5.1-6.5 s). A viewer who leaves at ~4 s could pair the number with the crossing. The spoken sentence itself is true; the owner may want the first pulse to finish before 'spent' or start after 'Sun.'."
+    },
+    {
+      "n": 11,
+      "claim": "8 MINUTES / surface to your skin / not to scale",
+      "where": "on-screen: tag '8 MINUTES'",
+      "verdict": "confirmed",
+      "source_checked": "As claim 3",
+      "note": "Photosphere to Earth 8.14-8.42 min (mean 8.28). 'Surface to your skin' is the right endpoint (photosphere, not centre)."
+    },
+    {
+      "n": 12,
+      "claim": "10,000+ YEARS / energy, core to surface / not to scale (shown during the interior cutaway)",
+      "where": "on-screen: tag '10,000+ YEARS'",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Every cited A2 figure (4e4 SVS, 1.7e5 MS92, ~1e6 MSFC) exceeds 10,000 years; '10,000+' is weaker than the spoken 'tens of thousands' and true. 'Energy, core to surface' matches SVS (to the surface) and MSFC/MS92 (to the convective boundary plus a rapid convective leg). The cutaway it labels is marked not to scale."
+    },
+    {
+      "n": 13,
+      "claim": "THE ENERGY / 10,000+ years getting out",
+      "where": "on-screen: tag 'THE ENERGY'",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Same figure and framing as claim 12."
+    },
+    {
+      "n": 14,
+      "claim": "THE TRIP / 8 minutes to you / not to scale",
+      "where": "on-screen: tag 'THE TRIP'",
+      "verdict": "confirmed",
+      "source_checked": "As claim 3",
+      "note": "8.1-8.4 min surface to Earth."
+    },
+    {
+      "n": 15,
+      "claim": "Cutaway rings at 0.25 R (core edge) and 0.7 R (radiative/convective boundary)",
+      "where": "on-screen: interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'",
+      "note": "MSFC: core 'the innermost 25%' ('about 25% of the distance to the surface or 175,000 km'); radiative zone 'from 25% ... to 70%'; convection zone 'the outermost 30%'. Christensen-Dalsgaard, Gough & Thompson 1991 (0.713 R) checked only bibliographically on Crossref (doi:10.1086/170441, ApJ 378, 413); its text was not read (ADS scan not approved for this paper). The drawn 0.7 rests on MSFC alone, which suffices."
+    },
+    {
+      "n": 16,
+      "claim": "Random-walk path from the centre to the 0.7 ring, with short sideways strokes (absorption and re-emission) along it; nothing walks above 0.7",
+      "where": "on-screen: interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'; NASA SVS 11084; Mitalas & Sills 1992",
+      "note": "MSFC: photons 'bounce from particle to particle through the radiative zone'; SVS: 'absorbed by other atoms and emitted repeatedly', 'drunken walk'. MS92 step ~0.09 cm (so ~1e25 steps) cannot be drawn; shown schematically under the 'not to scale' tag. Path ending at 0.7 matches MSFC/MS92 (convection above)."
+    },
+    {
+      "n": 17,
+      "claim": "Path colour from violet toward pale yellow by log temperature: 15 MK at r=0, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at the surface; ~10% of the way at 0.25 R, ~26% at 0.7 R",
+      "where": "on-screen: interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'; CODATA 2022 Wien constant b = 2.897 771 955e-3 m K (physics.nist.gov/cgi-bin/cuu/Value?bwien); code tint() in index.tsx",
+      "note": "MSFC: centre 'about 15,000,000 C'; radiative zone 'falls from 7,000,000 C to about 2,000,000 C'; surface '5,700 K' (MSFC also says 'half its central value' at 0.25, i.e. 7.5 MK; 7 MK is within that). Fractions recomputed: ln(15/7)/ln(15e6/5700) = 0.097; ln(15/2)/ln(15e6/5700) = 0.256. Wien peaks 6.4/3.0/0.86 keV at 15/7/2 MK recomputed and correct (SOURCES only). The hue is schematic and makes no on-screen wavelength claim."
+    },
+    {
+      "n": 18,
+      "claim": "Rotating dashed convection cells between 0.7 R and the surface",
+      "where": "on-screen: interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'",
+      "note": "MSFC: 'convective fluid flows (boiling motion) through the convection zone, the outermost 30%'; 'These convective motions carry heat quite rapidly to the surface.'"
+    },
+    {
+      "n": 19,
+      "claim": "Fan of five yellow rays leaving the surface",
+      "where": "on-screen: interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'; NASA SVS 11084",
+      "note": "MSFC: energy 'ultimately leaves the surface as visible light'; SVS: 'Once there, the photons stream out'."
+    },
+    {
+      "n": 20,
+      "claim": "The energy in sunlight took at least tens of thousands of years to get out of the Sun",
+      "where": "metadata: title",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Lowest A2 figure is SVS's 40,000 years (MS92 1.7e5, or ~5.7e4 with its eq. 2 factor removed; MSFC ~1e6). 'At least tens of thousands' holds for every cited source; the 3e3-3e4 textbook range is rejected by MS92 and is not an A2 figure here. Also matches the short (index.tsx title is identical)."
+    },
+    {
+      "n": 21,
+      "claim": "Sunlight reaches you about eight minutes after leaving the Sun's surface.",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "As claim 3",
+      "note": "8.14-8.42 min."
+    },
+    {
+      "n": 22,
+      "claim": "But the energy it carries spent tens of thousands of years, maybe far more, getting out.",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Same as the spoken hook."
+    },
+    {
+      "n": 23,
+      "claim": "Estimates include about 40,000 years (NASA SVS), 170,000 (Mitalas & Sills 1992) and about a million (NASA Marshall).",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "NASA SVS 11084; Mitalas & Sills 1992 (ADS scan); NASA MSFC 'The Solar Interior'",
+      "note": "SVS 'Over the course of 40,000 years'; MS92 't_d = 1.7 x 10^5 yr'; MSFC 'about a million years'. MS92 and MSFC measure to the base of the convection zone, not the surface; the next sentence of the description says the outer 30% is crossed quickly by convection, which both sources state, so 'estimates' of the getting-out time is fair."
+    },
+    {
+      "n": 24,
+      "claim": "The slow part is diffusing out through the Sun's dense interior; in the outer 30%, convection carries it up quickly.",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'; Mitalas & Sills 1992",
+      "note": "MSFC: 'This energy diffuses outward by radiation ... through the radiative zone and by convective fluid flows ... through the convection zone, the outermost 30%'; photons 'bounce so many times through this dense material'; convection carries heat 'quite rapidly'. MS92: convective crossing 'very much shorter' than diffusion."
+    },
+    {
+      "n": 25,
+      "claim": "It leaves as sunlight.",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "NASA MSFC 'The Solar Interior'",
+      "note": "As claim 6."
+    },
+    {
+      "n": 26,
+      "claim": "Description source list: Mitalas & Sills 1992 (doi:10.1086/172103), NASA Marshall Solar Interior, NASA SVS 11084, NASA Sun Fact Sheet, CODATA 2022",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "Crossref api.crossref.org/works/10.1086/172103 (title, ApJ 401, 759, Dec 1992, Mitalas & Sills); each URL fetched",
+      "note": "All five are A2 (peer-reviewed with DOI, or NASA/NIST agency pages), all reachable, and each supports what the description uses it for. Covers every figure in the description (E4)."
+    },
+    {
+      "n": 27,
+      "claim": "Narration: Kokoro-82M synthetic voice. Illustrated animation; marked shots are not to scale.",
+      "where": "metadata: description",
+      "verdict": "confirmed",
+      "source_checked": "tools/tts.py, docs/vo-licensing.md, src/shorts/age-of-sunlight/index.tsx",
+      "note": "VO is generated by Kokoro-82M (tools/tts.py); the non-to-scale shots (Sun-Earth shot, cutaway) carry on-screen 'not to scale' labels."
+    },
+    {
+      "n": 28,
+      "claim": "SOURCES block covers every spoken and on-screen claim with an A2 source (A1)",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "script/age-of-sunlight.txt SOURCES entries 1-6, against each source above",
+      "note": "Entries 1-5 cover all six spoken sentences; entry 6 covers the animation, zones, temperatures and not-to-scale labels. Quotes checked verbatim against SVS, MSFC, MS92, NIST and the Sun Fact Sheet; MS92's 3e3-3e4 'much too short' and the inner-edge-of-convective-zone wording are accurate, and the eq. 2 criticism is sound (3<r^2>=N<l^2> overcounts steps by 3 for a 3-D walk, giving ~5.7e4). Not opened: IAU 2012 B2 (unreachable; fact-sheet distance gives the same result), Stix 2003 (Springer unreachable; SOURCES says so and nothing rests on it alone), CDGT 1991 text (bibliographic data only; on-screen 0.7 rests on MSFC)."
+    }
+  ]
+}
