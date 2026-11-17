@@ -1,0 +1,13 @@
+{
+  "slug": "age-of-sunlight",
+  "file": "out/release/age-of-sunlight.mp4",
+  "mp4_sha256": "",
+  "title": "The energy in sunlight took 100,000+ years to get out of the Sun",
+  "description": "Sunlight reaches you about eight minutes after leaving the Sun's surface. But the energy it carries spent more than 100,000 years getting out: about 170,000 years diffusing through the radiative zone (Mitalas & Sills 1992), then carried to the surface by convection. Inside, it travels as gamma rays and X-rays. It leaves as sunlight.\n\nSources:\n- Mitalas & Sills 1992, \"On the Photon Diffusion Time Scale for the Sun\", ApJ 401, 759. doi:10.1086/172103\n- NASA Marshall, The Solar Interior: solarscience.msfc.nasa.gov/interior.shtml\n- NASA SVS, Origin of Light: svs.gsfc.nasa.gov/11084\n- Stix 2003, Solar Physics 212, 3. doi:10.1023/A:1022952621810\n- Christensen-Dalsgaard, Gough & Thompson 1991, ApJ 378, 413. doi:10.1086/170441\n- IAU 2012 Resolution B2 (astronomical unit); CODATA 2022 (speed of light)\n\nNarration: Kokoro-82M synthetic voice. Illustrated animation; marked shots are not to scale.\n\n#shorts #sun #physics",
+  "tags": ["sun", "sunlight", "photons", "solar interior", "physics", "astronomy", "space"],
+  "categoryId": "28",
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "alteredOrSyntheticContent": false,
+  "notes": "privacyStatus and schedule are the owner's call at approval (F2). E3: illustrated animation with a stock synthetic narrator, not realistic; re-check YouTube's rule at upload."
+}
