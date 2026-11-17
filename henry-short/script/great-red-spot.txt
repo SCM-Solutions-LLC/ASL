@@ -1,0 +1,71 @@
+In 1665, the astronomer Cassini saw a dark oval on Jupiter. It was probably not the Great Red Spot.
+Astronomers kept reporting his spot until 1713.
+Then, for about a hundred and eighteen years, nobody recorded it at all.
+The storm we call the Great Red Spot first shows up in drawings in 1831.
+And Cassini's spot was only a third to a half as long as the Great Red Spot was in 1879.
+To be the same storm, it would have had to keep growing for more than a century, unseen.
+No storm on Jupiter has ever been seen to grow like that.
+So the Great Red Spot is nearly two hundred years old. Cassini's spot was most likely a different storm, long gone.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Primary paper, read at the publisher on 2026-11-17 (agupubs.onlinelibrary.wiley.com,
+fetched through the Firecrawl scraper because this sandbox cannot reach it
+directly): Sánchez-Lavega, García-Melendo, Legarreta, Miró, Soria &
+Ahrens-Velásquez, "The Origin of Jupiter's Great Red Spot", Geophysical Research
+Letters 51(12), e2024GL108993 (2024), doi:10.1029/2024GL108993. Called "SL24"
+below.
+
+1. "In 1665, the astronomer Cassini saw a dark oval on Jupiter."
+   SL24, abstract: "Cassini discovered in 1665 the presence of a dark oval at
+   the GRS latitude, known as the 'Permanent Spot' (PS)". Body: observed by
+   "D. Cassini and other astronomers in July-September 1665".
+
+2. "It was probably not the Great Red Spot."
+   SL24, abstract: "PS is unlikely to correspond to the current GRS". "Probably
+   not" carries the paper's "unlikely"; the script does not say "was not".
+
+3. "Astronomers kept reporting his spot until 1713."
+   SL24: "PS was subsequently observed by Cassini and others in 1667, 1672,
+   1677, 1685-1687, 1690-1691, 1694, 1708, and was last reported in 1713 by
+   M. Maraldi".
+
+4. "Then, for about a hundred and eighteen years, nobody recorded it at all."
+   SL24: "No reports of PS or any sign of its presence exists in the available
+   observations of Jupiter between 1713 and 1831, a long period of ~118 years".
+   "Nobody recorded it" = no report in the surviving observations, which is
+   what the paper says; it does not say nobody looked.
+
+5. "The storm we call the Great Red Spot first shows up in drawings in 1831."
+   SL24: "The first drawings showing the signature of the current GRS, recorded
+   by its Hollow, date back to 1831". Abstract: "the current GRS, that was first
+   observed in 1831".
+
+6. "Cassini's spot was only a third to a half as long as the Great Red Spot was
+   in 1879."
+   SL24: "The length of PS is 2-3 times smaller than that of the 1879 GRS."
+   2-3 times smaller = one third to one half the length.
+
+7. "To be the same storm, it would have had to keep growing for more than a
+   century, unseen. No storm on Jupiter has ever been seen to grow like that."
+   SL24: "PS would have had to grow steadily from 1713 to 1879 at a rate of
+   ~+0.14°/year (160 km/year) to be the GRS. This is highly unlikely since ...
+   no reports of PS or GRS exist during this long period and, in addition, no
+   continuously sustained grow in size has been never reported in Jupiter's
+   vortices". 1713 to 1879 is 166 years, so "more than a century".
+
+8. "So the Great Red Spot is nearly two hundred years old."
+   SL24: "The current GRS has therefore certainly been in existence for 193
+   years" (written in 2024, counting from 1831). From 1831 to 2026 is 195
+   years: "nearly two hundred". This is a minimum (first record), and the
+   script calls it the age because that is the recorded age; it does not claim
+   the storm formed in 1831.
+
+9. "Cassini's spot was most likely a different storm, long gone."
+   SL24: "it is most likely that this lack of observations during such a large
+   period means that PS disappeared."
+
+Not used: a 1711 painting showing the PS "with a red tint" (SL24). It is an
+interesting wrinkle but does not change the conclusion, and the paper only
+calls it intriguing.
