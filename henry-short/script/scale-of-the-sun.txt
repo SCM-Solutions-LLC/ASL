@@ -40,10 +40,12 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    Reylé et al., "The 10 parsec sample in the Gaia era", A&A 650, A201 (2021),
    doi:10.1051/0004-6361/202140985, Table 3 (Sun excluded): A 4, F 8, G 18, K 38,
    M 249, white dwarfs 20, plus 41 untyped (36 of them possible M dwarfs). K and M
-   dwarfs are all smaller and dimmer than the Sun: Pecaut & Mamajek, ApJS 208, 9
-   (2013), doi:10.1088/0067-0049/208/1/9 (arXiv:1307.2657), main-sequence table of
-   radius and luminosity by spectral type, below 1 R_sun and 1 L_sun from K0 V
-   down. White dwarfs are about a hundredth of the Sun's radius: Provencal et al.,
+   dwarfs are all smaller and dimmer than the Sun: Boyajian et al., "Stellar
+   Diameters and Temperatures II. Main Sequence K & M Stars", ApJ 757, 112 (2012),
+   doi:10.1088/0004-637X/757/2/112 (arXiv:1208.2431), Table 3: interferometric
+   radii and luminosities of K0 V to M4 V dwarfs, the largest the K0 V stars
+   GJ 702A (0.831 R_sun, 0.53 L_sun), GJ 75 (0.819, 0.52) and GJ 631 (0.759,
+   0.42); every M dwarf in the table is under 0.58 R_sun and 0.07 L_sun. White dwarfs are about a hundredth of the Sun's radius: Provencal et al.,
    ApJ 494, 759 (1998), doi:10.1086/305238. Even counting
    every G star as at least as big as the Sun (they are not; Tau Ceti and others
    are late G), the Sun is bigger than about 91% of the typed stars; counting only
@@ -57,7 +59,9 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    On screen: "THE SUN / bigger than 9 stars in 10".
 
 5. "Because most stars are red dwarfs: small, dim, and everywhere."
-   Reylé et al. 2021, as above: 249 M dwarfs of 337 typed stars, 74%. The paper's
+   Reylé et al. 2021, as above: 249 M dwarfs of 337 typed stars, 74%. Small and
+   dim: Boyajian et al. 2012 Table 3 (claim 4), M dwarfs 0.19-0.58 R_sun and
+   0.003-0.07 L_sun. The paper's
    own figure is 58.9 ± 5.8% of all typed objects including brown dwarfs. Every
    reading is a majority.
 
