@@ -1,9 +1,9 @@
 In Pompeii, a victim found wearing a gold bracelet, beside a small child, was long described as a mother.
 Ancient DNA says it was a man, with no sign he was related to the child.
-Two victims found in an embrace were imagined as sisters, or a mother and daughter.
+Two victims found close together, read as an embrace, were imagined as sisters, or a mother and daughter.
 One of them was genetically male.
 The casts were made from 1863 on, by pouring plaster into the hollows the bodies left in the ash.
-Over the years, restorers reworked some of them, possibly to tell those very stories.
+Over the years, restorers reworked some casts, possibly to make them tell a story.
 The DNA does not tell us who these people were. It tells us the old stories were guesses.
 
 ---
@@ -43,8 +43,11 @@ doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
    was related" is that finding, worded so it does not claim more than "up to
    the third degree".
 
-3. "Two victims found in an embrace were imagined as sisters, or a mother and
-   daughter."
+3. "Two victims found close together, read as an embrace, were imagined as
+   sisters, or a mother and daughter."
+   The embrace is itself an interpretation (the paper's "interpreted as an
+   embrace"), so the script reports it as a reading, not as how they were
+   found.
    Pilli, House of the Cryptoporticus (excavated 1914): "two (Individuals 21 and
    22) were found close to each other in what was interpreted as an embrace ...
    the archaeologists hypothesized that they could be two sisters, mother and
@@ -65,8 +68,11 @@ doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
    into the voids left by decay of the victims' soft tissue". The two casts in
    this script were made after the 1914 and 1974 finds, hence "from 1863 on".
 
-6. "Over the years, restorers reworked some of them, possibly to tell those very
-   stories."
+6. "Over the years, restorers reworked some casts, possibly to make them tell a
+   story."
+   The paper speaks of the casts in general; it does not say these two casts
+   were reworked, or reworked to tell the mother or sisters stories. So the
+   line says "some casts" and "a story", not "them" and "those stories".
    Pilli, Introduction: "The casts had been considerably manipulated and likely
    creatively restored in the past". Discussion: "it is possible that the
    exploitation of the casts as vehicles for storytelling led to the
