@@ -74,8 +74,10 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    outer 30% is crossed by convection) the radiation is mostly X-rays. MSFC says
    "mostly gamma-rays and x-rays"; the narrower reading (A3) comes from MSFC's own
    temperatures and Wien's displacement law, b = 2.897771955e-3 m K (CODATA 2022,
-   https://physics.nist.gov/cgi-bin/cuu/Value?bwien): peak photon energy hc/(b/T)
-   at 15 MK, 7 MK and 2 MK is about 6.4, 3.0 and 0.86 keV, all X-ray energies.
+   https://physics.nist.gov/cgi-bin/cuu/Value?bwien): the photon energy at the
+   wavelength peak, hc/(b/T), at 15 MK, 7 MK and 2 MK is about 6.4, 3.0 and 0.86
+   keV (the frequency peak, 2.82 kT, is about 3.6, 1.7 and 0.49 keV); all X-ray
+   energies either way.
    Gamma rays come from the fusion reactions themselves (MSFC's pp chain).
 
 5. "The energy is ancient. Its last eight minutes were the trip to you."
