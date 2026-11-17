@@ -2,6 +2,7 @@ import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { makeEdit } from "../../edit";
 import alignment from "../../generated/age-of-sunlight.alignment.json";
+import { SERIF } from "../../fonts";
 import { Body, LOOKS, Starfield, Tag } from "../../scenes/space";
 import type { Short } from "../types";
 
@@ -200,6 +201,13 @@ const SunScene: React.FC = () => {
     <>
       <Body x={sx} y={sy} r={sr} look={LOOKS.sun} />
       {earth > 0 ? <Body x={A.earth.x} y={A.earth.y} r={A.earth.r} look={LOOKS.earth} opacity={earth} /> : null}
+      {/* Tied to the shot, not to a tag: Earth is drawn ~25x too big and ~40x too close (A6). */}
+      {earth > 0 ? (
+        <div style={{ position: "absolute", left: A.earth.x - 90, top: A.earth.y + 40, width: 180, textAlign: "center",
+          fontFamily: SERIF, fontSize: 26, color: "#c3b48f", opacity: earth, textShadow: "0 3px 14px rgba(0,0,0,0.9)" }}>
+          not to scale
+        </div>
+      ) : null}
 
       {/* Three crossings: one to establish the gap under the hook, one on the line that measures
           it, and one on the closing line that hands the number back. */}
@@ -341,7 +349,7 @@ const SunScene: React.FC = () => {
       <Tag x={850} y={150} text="8 MINUTES" sub={"surface to your skin\nnot to scale"} from={F.minutes + 8} to={F.rest + 6} />
       {/* Above the disc, not on it: at 320 units of radius there is no clear ground beside it in
           the 9:16 crop, and the first pass had the sub-line unreadable against the limb. */}
-      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.out + 12} to={F.ancient + 30} />
+      <Tag x={600} y={30} text="100,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.rest} to={F.ancient + 48} />
       {/* The two answers side by side on the last line, stacked rather than abreast because the
           vertical crop has the height to spare and not the width. */}
       <Tag x={600} y={110} text="THE ENERGY" sub="100,000+ years getting out" from={F.close - 2} />
