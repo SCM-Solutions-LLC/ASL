@@ -2,8 +2,8 @@ Only one spacecraft has ever visited Uranus, and it arrived at an unusual time.
 Voyager 2 flew past in January 1986.
 In the days before, the solar wind had picked up and squeezed the magnetic bubble around the planet.
 Researchers estimate it is squeezed that hard only about four percent of the time.
-Had Voyager arrived a few days earlier, the solar wind pressing on it would have been about twenty times weaker.
-So the extreme Uranus we have described for forty years may just be what one unusual few days looked like.
+Had Voyager arrived about a week earlier, the solar wind pushing on that bubble would have been about twenty times weaker.
+So the extreme magnetic bubble we have described for forty years may just be what one unusual week looked like.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -49,15 +49,22 @@ doi:10.1038/s41550-024-02389-3. Called "Jasinski" below.
    is expected to occur only 4% of the time at Uranus." The abstract rounds it
    to "less than 5% of the time". Both support "about four percent".
 
-6. "Had Voyager arrived a few days earlier, the solar wind pressing on it would
-   have been about twenty times weaker."
-   Jasinski, abstract: "If the spacecraft had arrived only a few days earlier,
-   the upstream solar wind dynamic pressure would have been ~20 times lower".
-   Body: the earlier values were "~18 to ~23 times lower than during the
-   Uranus flyby itself". "Weaker" stands for "lower dynamic pressure".
+6. "Had Voyager arrived about a week earlier, the solar wind pushing on that
+   bubble would have been about twenty times weaker."
+   Jasinski, body: the low values (0.001 nPa eight days before the flyby, and
+   a 0.00078 nPa minimum on day 13, 11 days before) are "~18 to ~23 times
+   lower than during the Uranus flyby itself". Conclusions: "Had Voyager 2
+   arrived at Uranus a week earlier", the solar wind dynamic pressure would
+   have been much weaker. The abstract's looser wording ("only a few days
+   earlier ... ~20 times lower") is NOT followed: two days before the flyby
+   the pressure was only about four times lower (~0.005 against 0.018 nPa,
+   "an almost fourfold increase from day 22"). Per A3 the script takes the
+   data-backed pairing: a week, twenty times. "Weaker" stands for "lower
+   dynamic pressure"; "that bubble" names what it pushes on, so the line
+   cannot be heard as the wind pushing on the spacecraft.
 
-7. "So the extreme Uranus we have described for forty years may just be what one
-   unusual few days looked like."
+7. "So the extreme magnetic bubble we have described for forty years may just be
+   what one unusual week looked like."
    Jasinski, abstract: the flyby "has been the basis of our interpretation of
    Uranus's magnetosphere as the canonical extreme magnetosphere of the solar
    system; with inexplicably intense electron radiation belts and a severely
@@ -65,6 +72,12 @@ doi:10.1038/s41550-024-02389-3. Called "Jasinski" below.
    magnetosphere as being extreme may simply be a product of a flyby that
    occurred under extreme upstream solar wind conditions." The script keeps
    the paper's "may". Forty years: 1986 to 2026.
-   Scope: "extreme Uranus" means its magnetosphere, which is what the paper is
-   about. Visuals must not imply the planet's atmosphere, rings or moons were
-   affected.
+   Scope: the line says "magnetic bubble" (the magnetosphere), which is all the
+   paper is about. Uranus's sideways spin and its tilted, off-centre magnetic
+   FIELD are real and untouched by this paper, which says its result is
+   unlikely to change the conclusions of Connerney et al. about the field.
+   Neither the words nor the visuals may suggest those are flukes, or that the
+   atmosphere, rings or moons were affected.
+   "One unusual week": the paper describes the magnetosphere "continuously
+   compressed (from ~28 to ~17 R_U) for the days leading up to the Voyager 2
+   flyby", and claim 6 puts the weak wind about a week earlier.

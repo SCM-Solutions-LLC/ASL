@@ -5,7 +5,7 @@ The storm we call the Great Red Spot first shows up in drawings in 1831.
 And Cassini's spot was only a third to a half as long as the Great Red Spot was in 1879.
 To be the same storm, it would have had to keep growing for more than a century, unseen.
 No storm on Jupiter has ever been seen to grow like that.
-So the Great Red Spot is nearly two hundred years old. Cassini's spot was most likely a different storm, long gone.
+So the Great Red Spot has been on record for nearly two hundred years. Cassini's spot was most likely a different storm, long gone.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -55,12 +55,15 @@ below.
    continuously sustained grow in size has been never reported in Jupiter's
    vortices". 1713 to 1879 is 166 years, so "more than a century".
 
-8. "So the Great Red Spot is nearly two hundred years old."
+8. "So the Great Red Spot has been on record for nearly two hundred years."
    SL24: "The current GRS has therefore certainly been in existence for 193
    years" (written in 2024, counting from 1831). From 1831 to 2026 is 195
-   years: "nearly two hundred". This is a minimum (first record), and the
-   script calls it the age because that is the recorded age; it does not claim
-   the storm formed in 1831.
+   years: "nearly two hundred". That is a lower bound from the first drawing,
+   not a formation date (the paper's simulations describe a faint proto-GRS
+   before it), so the script says "on record", not "old".
+   Visuals: the 1831 sign is the Hollow; the oval became reddish only in
+   ~1872-1876 (SL24), so a red spot must not be drawn at 1831. No on-screen
+   label may call Cassini's oval the Great Red Spot.
 
 9. "Cassini's spot was most likely a different storm, long gone."
    SL24: "it is most likely that this lack of observations during such a large
