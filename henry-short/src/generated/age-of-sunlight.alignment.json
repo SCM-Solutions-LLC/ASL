@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/age-of-sunlight.txt",
  "audio": "public/vo/age-of-sunlight.wav",
- "sha256": "e445d7650fb698ee1683422d76b5a953529f72db646cb8e36c0cc48361eefce0",
+ "sha256": "c55eee27dba1549968cca197b18462dda0b8419aa61483c9e8b3353b73a08f69",
  "words": [
   {
    "text": "The",
@@ -230,124 +230,89 @@
    "end": 14.108
   },
   {
-   "text": "Deep",
-   "start": 14.715,
-   "end": 15.135
-  },
-  {
-   "text": "inside,",
-   "start": 15.135,
-   "end": 15.629
-  },
-  {
-   "text": "it",
-   "start": 15.629,
-   "end": 15.974
-  },
-  {
-   "text": "travels",
-   "start": 15.974,
-   "end": 16.505
-  },
-  {
-   "text": "mostly",
-   "start": 16.505,
-   "end": 16.999
-  },
-  {
-   "text": "as",
-   "start": 16.999,
-   "end": 17.345
-  },
-  {
-   "text": "X-rays.",
-   "start": 17.345,
-   "end": 17.801
-  },
-  {
    "text": "It",
-   "start": 18.425,
-   "end": 18.702
+   "start": 14.715,
+   "end": 14.992
   },
   {
    "text": "leaves",
-   "start": 18.702,
-   "end": 19.098
+   "start": 14.992,
+   "end": 15.389
   },
   {
    "text": "as",
-   "start": 19.098,
-   "end": 19.376
+   "start": 15.389,
+   "end": 15.666
   },
   {
    "text": "sunlight.",
-   "start": 19.376,
-   "end": 19.831
+   "start": 15.666,
+   "end": 16.122
   },
   {
    "text": "The",
-   "start": 20.435,
-   "end": 20.773
+   "start": 16.725,
+   "end": 17.063
   },
   {
    "text": "energy",
-   "start": 20.773,
-   "end": 21.21
+   "start": 17.063,
+   "end": 17.5
   },
   {
    "text": "is",
-   "start": 21.21,
-   "end": 21.516
+   "start": 17.5,
+   "end": 17.806
   },
   {
    "text": "ancient.",
-   "start": 21.516,
-   "end": 21.985
+   "start": 17.806,
+   "end": 18.275
   },
   {
    "text": "Its",
-   "start": 22.62,
-   "end": 22.839
+   "start": 18.91,
+   "end": 19.129
   },
   {
    "text": "last",
-   "start": 22.839,
-   "end": 23.079
+   "start": 19.129,
+   "end": 19.369
   },
   {
    "text": "eight",
-   "start": 23.079,
-   "end": 23.34
+   "start": 19.369,
+   "end": 19.63
   },
   {
    "text": "minutes",
-   "start": 23.34,
-   "end": 23.644
+   "start": 19.63,
+   "end": 19.934
   },
   {
    "text": "were",
-   "start": 23.644,
-   "end": 23.884
+   "start": 19.934,
+   "end": 20.174
   },
   {
    "text": "the",
-   "start": 23.884,
-   "end": 24.103
+   "start": 20.174,
+   "end": 20.393
   },
   {
    "text": "trip",
-   "start": 24.103,
-   "end": 24.343
+   "start": 20.393,
+   "end": 20.633
   },
   {
    "text": "to",
-   "start": 24.343,
-   "end": 24.541
+   "start": 20.633,
+   "end": 20.831
   },
   {
    "text": "you.",
-   "start": 24.541,
-   "end": 24.76
+   "start": 20.831,
+   "end": 21.05
   }
  ]
 }

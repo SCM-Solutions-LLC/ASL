@@ -15,7 +15,7 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   cut: [{ from: "The energy in the sunlight", to: "were the trip to you.", tail: 0.4 }],
-  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["X-rays."], ["ancient"]],
+  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["same", "light."], ["ancient"]],
   // The 19-word hook would overflow the 9:16 caption block as one page, so it breaks after "skin".
   // Both occurrences of "eight minutes" light up on purpose: the closing line hands the number back.
   breakAfter: ["skin", "years,"],
@@ -27,7 +27,7 @@ const F = {
   minutes: edit.at("minutes"),
   rest: edit.at("slow"),
   out: edit.at("part"),
-  photon: edit.at("x-rays."),
+  photon: edit.at("leaves"),
   climb: edit.at("sunlight", 1),
   ancient: edit.at("ancient"),
   close: edit.at("eight", 1),
