@@ -45,8 +45,14 @@ SOURCES (for approval — every claim in the script, with the number behind it)
    doi:10.1088/0004-637X/757/2/112 (arXiv:1208.2431), Table 3: interferometric
    radii and luminosities of K0 V to M4 V dwarfs, the largest the K0 V stars
    GJ 702A (0.831 R_sun, 0.53 L_sun), GJ 75 (0.819, 0.52) and GJ 631 (0.759,
-   0.42); every M dwarf in the table is under 0.58 R_sun and 0.07 L_sun. White dwarfs are about a hundredth of the Sun's radius: Provencal et al.,
-   ApJ 494, 759 (1998), doi:10.1086/305238. Even counting
+   0.42); every M dwarf in the table is under 0.58 R_sun and 0.07 L_sun. White dwarfs are all far smaller and dimmer than the Sun: Giammichele,
+   Bergeron & Dufour, "Know Your Neighborhood: A Detailed Model Atmosphere
+   Analysis of Nearby White Dwarfs", ApJS 199, 29 (2012),
+   doi:10.1088/0067-0049/199/2/29 (arXiv:1202.5581), Table 2 gives Teff and
+   log L/L_sun for all 165 white dwarfs within 20 pc. The brightest is log L =
+   -1.12 (0.08 L_sun); within 10 pc the brightest is Sirius B (WD 0642-166),
+   log L = -1.53 (0.03 L_sun). Radius from those two columns by Stefan-Boltzmann,
+   R = sqrt(L) x (5772 K / Teff)^2: none exceeds 0.022 R_sun. Even counting
    every G star as at least as big as the Sun (they are not; Tau Ceti and others
    are late G), the Sun is bigger than about 91% of the typed stars; counting only
    the G0-G2 and evolved G stars, about 95%. The exception among the K stars is
