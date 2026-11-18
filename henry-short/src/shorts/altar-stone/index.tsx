@@ -324,7 +324,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
       </Layer>
 
       <Layer o={vis(f, SHOTS.study)}>
-        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={L.vertical ? 60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer) : 0}>
+        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + (L.vertical ? 0.08 * beat(f, F.closer) : 0)} y={L.vertical ? 60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer) : 0}>
           <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, L.vertical ? F.closer - 6 : F.three, F.closer + 24)} />
         </Push>
         <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />

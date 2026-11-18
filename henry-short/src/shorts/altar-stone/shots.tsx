@@ -108,7 +108,7 @@ export const Boat: React.FC<{ f: number; ghost: number }> = ({ f, ghost }) => {
 // Body text bars: two paragraphs, the last line of each short.
 const BODY = [570, 540, 560, 500, 555, 530, 565, 310, 560, 545, 520, 565, 535, 380];
 export const Study: React.FC<{ t: number; lens: number; L: Layout }> = ({ t, lens, L }) => {
-  const cy = L.vertical ? 400 : 440;
+  const cy = L.vertical ? 400 : 460;
   const lx = 960 - 120 + 240 * ease(lens);
   const ly = cy + 90 - 40 * ease(lens);
   return (
