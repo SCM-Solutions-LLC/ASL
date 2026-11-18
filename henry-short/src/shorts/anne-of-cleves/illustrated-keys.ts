@@ -16,9 +16,9 @@ export const illustratedKeys = (F: Beats) => ({
       { f: F.henry - 10, pose: { torso: { x: off, r: 0 } }, ease: "hold" },
       { f: F.henry - 4, pose: { torso: { x: -120, r: 10 } }, ease: "in" },
       { f: F.henry + 6, pose: { torso: { x: 0, r: 0 } }, ease: "back" },
-      // double take on "once"
-      { f: F.once, pose: { eyes: { v: "side" }, head: { r: 4 } }, ease: "out" },
-      { f: F.once + 5, pose: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" }, torso: { r: -7 }, head: { r: -6 }, upperL: { r: 34 }, upperR: { r: -34 }, foreL: { r: -50 }, foreR: { r: 50 } }, ease: "back" },
+      // double take on "met"
+      { f: F.met, pose: { eyes: { v: "side" }, head: { r: 4 } }, ease: "out" },
+      { f: F.met + 5, pose: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" }, torso: { r: -7 }, head: { r: -6 }, upperL: { r: 34 }, upperR: { r: -34 }, foreL: { r: -50 }, foreR: { r: 50 } }, ease: "back" },
       // "wanted out": turned away (flip), jerks a thumb back at her
       { f: F.wanted, pose: { eyes: { v: "default" }, brows: { v: "angry" }, mouth: { v: "frown" }, torso: { r: 0 }, head: { r: 0 }, ...henryRest }, ease: "out" },
       { f: F.wanted + 8, pose: { upperL: { r: 105 }, foreL: { r: -30 }, handL: { v: "point" }, head: { r: -5 } }, ease: "back" },
@@ -28,7 +28,7 @@ export const illustratedKeys = (F: Beats) => ({
       // turns back to watch her leave with the loot
       { f: F.walked + 8, pose: { eyes: { v: "side" }, brows: { v: "default" }, mouth: { v: "default" } }, ease: "hold" },
       { f: F.palace + 2, pose: { head: { r: 5 }, brows: { v: "raised" } }, ease: "back" },
-      { f: F.castle + 2, pose: { head: { r: -4 } }, ease: "back" },
+      { f: F.manor + 2, pose: { head: { r: -4 } }, ease: "back" },
       // jaw drop on the title
       { f: F.kings + 2, pose: { eyes: { v: "wide" }, mouth: { v: "open" }, jaw: { y: 0 }, torso: { sy: 1 } }, ease: "hold" },
       { f: F.kings + 8, pose: { jaw: { y: 24 }, head: { r: 0 }, torso: { sy: 0.96 } }, ease: "back" },
@@ -56,7 +56,7 @@ export const illustratedKeys = (F: Beats) => ({
       { f: F.walked, pose: { torso: { x: 0 } } },
       { f: F.palace - 2, pose: { torso: { x: -40 } }, ease: "linear" },
       { f: F.palace, pose: { upperR: { r: -140 }, foreR: { r: -20 } }, ease: "back" },
-      { f: F.castle, pose: { upperL: { r: 140 }, foreL: { r: 20 } }, ease: "back" },
+      { f: F.manor, pose: { upperL: { r: 140 }, foreL: { r: 20 } }, ease: "back" },
       { f: F.kings, pose: { upperL: { r: 158 }, foreL: { r: 0 }, upperR: { r: -158 }, foreR: { r: 0 }, mouth: { v: "smile" }, eyes: { v: "closed" } }, ease: "back" },
       { f: F.sister, pose: {}, ease: "hold" },
       { f: F.sister + 10, pose: { ...anneHipsHands, mouth: { v: "smirk" }, eyes: { v: "default" } }, ease: "back" },

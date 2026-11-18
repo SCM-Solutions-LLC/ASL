@@ -15,9 +15,9 @@ const edit = makeEdit({
   // The hook, then the Anne of Cleves beat.
   cut: [
     { from: "The fourth wife", to: "beat them all.", tail: 0.21 },
-    { from: "Wife four", to: "beloved sister.", tail: 0.08 },
+    { from: "Wife four", to: "king's sister.", tail: 0.08 },
   ],
-  keyPhrases: [["fourth"], ["anne", "of", "cleves"], ["annulled"], ["palace"], ["castle"], ["king's", "beloved", "sister"]],
+  keyPhrases: [["fourth"], ["anne", "of", "cleves"], ["annulled"], ["palace"], ["manor"], ["king's", "sister"]],
   breakAfter: ["annulled", "palace"],
 });
 
@@ -95,7 +95,7 @@ export const anneOfCleves: Short = {
     { at: F.henry - 10, name: "whoosh" },
     { at: F.annulled, name: "thud", volume: 0.7 },
     { at: F.palace, name: "pop" },
-    { at: F.castle, name: "pop" },
+    { at: F.manor, name: "pop" },
     { at: F.kings - 6, name: "sparkle", volume: 0.4 },
   ],
 };

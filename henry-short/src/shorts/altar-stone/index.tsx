@@ -17,15 +17,15 @@ import { Boat, clamp01, Credit, ease, FilmGrain, Grains, LightLeak, Photo, ramp,
 const edit = makeEdit({
   alignment,
   cut: [{ from: "In 2024, Stonehenge's", to: "got there?", tail: 0.8 }],
-  keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
+  keyPhrases: [["traced", "to", "Scotland."], ["can't", "agree"], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
   // "?" does not end a caption page on its own, and the long lines need one break each.
-  breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
+  breakAfter: ["grains", "kilometres?", "Britain,", "colleagues", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
 });
 
 const F = {
   traced: edit.at("traced"),
   scotland: edit.at("Scotland."),
-  now: edit.at("Exactly"),
+  now: edit.at("Two"),
   exactly: edit.at("still"),
   ages: edit.at("ages"),
   tiny: edit.at("tiny"),
@@ -46,6 +46,7 @@ const F = {
   part: edit.at("part"),
   most: edit.at("most."),
   then: edit.at("Then,"),
+  pirrie: edit.at("Pirrie"),
   three: edit.at("three"),
   closer: edit.at("closer."),
   many: edit.at("Many"),
@@ -148,6 +149,9 @@ const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size
 
 // Tag positions per crop: the 9:16 slice is only x 517–1403, so tags sit in the sea beside Britain;
 // the 16:9 frame has room to the right of the map.
+const Plate: React.FC<{ x: number; y: number; w: number; h: number; opacity: number }> = ({ x, y, w, h, opacity }) => (
+  <div style={{ position: "absolute", left: x, top: y, width: w, height: h, borderRadius: 8, background: "rgba(14,11,9,0.78)", opacity }} />
+);
 const at = (L: Layout, v: [number, number], w: [number, number]) => (L.vertical ? { x: v[0], y: v[1] } : { x: w[0], y: w[1] });
 
 const Pin: React.FC<{ P: Project; at: [number, number]; o: number; color?: string }> = ({ P, at: ll, o, color = INKC }) => {
@@ -248,27 +252,28 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       {unknown > 0 ? (
         <div style={{ position: "absolute", left: nx - 40, top: ny - 78, fontFamily: SERIF, fontSize: 130, color: INKC, opacity: unknown, textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>?</div>
       ) : null}
+      {inRecap && unknown > 0 ? <Note x={nx + 50} y={ny - 20} text={"2024 area\ndisputed"} opacity={unknown} size={26} /> : null}
       {!inMap4 ? <Note x={sx + 18} y={sy + 6} text="Stonehenge (approx.)" opacity={1} /> : null}
       {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank (approx.)" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
 
       {/* map1: the hook. */}
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"2024 · NE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="EXACT SOURCE" sub="unknown" from={F.exactly} to={SHOTS.map1[1]} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"Clarke et al.\nNature, 2024\nNE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="SOURCE?" sub={"2026 study questions\nNE Scotland"} from={F.exactly} to={SHOTS.map1[1]} />
       {/* map2: grain ages, distance, sea. */}
       <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland\n(area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
       <Tag {...at(L, [1090, 210], [1300, 240])} text="6 TONNES" from={F.six} to={F.suggested} />
       <Tag {...at(L, [1090, 300], [1300, 340])} text="700+ KM" sub={"if from\nNE Scotland"} from={F.seven} to={F.suggested} />
-      <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub="route not known" from={F.suggested + 10} to={SHOTS.map2[1]} />
+      <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub={"route not known\nClarke et al. 2024"} from={F.suggested + 10} to={SHOTS.map2[1]} />
       {/* map3: the ice model. */}
-      <Tag {...at(L, [545, 640], [200, 80])} text="ICE MODEL" sub={"part of the way,\nat most"} from={F.part} to={SHOTS.map3[1]} />
+      <Tag {...at(L, [545, 600], [200, 80])} text="ICE MODEL" sub={"Clarke et al. 2026\npart of the way, at most"} from={F.part} to={SHOTS.map3[1]} />
       {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={34} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
-      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} to={SHOTS.map4[1]} />
+      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nsource not pinned down"} from={F.match} to={SHOTS.map4[1]} />
       {/* recap: the three proposals, none shown to be the one. */}
-      <Tag {...at(L, [1090, 200], [1300, 200])} text="SEA?" sub="2024 team" from={F.sea} />
-      <Tag {...at(L, [1090, 330], [1300, 330])} text="SLEDGE?" sub="2024 study" from={F.sledge} />
-      <Tag {...at(L, [1090, 460], [1300, 460])} text="ICE?" sub={"2026 model:\npart of the way"} from={F.ice} />
+      <Tag {...at(L, [1090, 130], [1300, 130])} text="SEA?" sub={"Clarke et al.\n2024"} from={F.sea} />
+      <Tag {...at(L, [1090, 310], [1300, 310])} text="SLEDGE?" sub={"Parker Pearson\net al. 2024"} from={F.sledge} />
+      <Tag {...at(L, [1090, 490], [1300, 490])} text="ICE?" sub={"Clarke et al.\n2026: part\nof the way"} from={F.ice} />
       {inRecap ? <Note {...at(L, [545, 870], [200, 860])} text="routes illustrative" opacity={ramp(f, F.sea + 6, F.sea + 16)} size={34} /> : null}
       {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={34} /> : null}
     </div>
@@ -300,8 +305,11 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
         <Push s={1}>
           <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} zoom={ease(ramp(f, F.tiny, F.sandstone - 8))} />
         </Push>
-        <Tag {...tagL} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
-        <Note {...at(L, [545, 700], [480, 700])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
+        {/* Dark plates: the zoom fills the frame with the figure, and the credit must stay legible. */}
+        <Plate {...at(L, [525, -166], [14, 44])} w={L.vertical ? 500 : 480} h={124} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} />
+        <Plate {...at(L, [531, 692], [456, 772])} w={370} h={86} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} />
+        <Tag {...at(L, [545, -150], [34, 60])} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
+        <Note {...at(L, [545, 700], [470, 780])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
@@ -309,7 +317,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Boat f={f} ghost={ramp(f, F.boat - 4, F.boat + 10)} />
         </Push>
         <Tag {...tagL} text="NO BOAT FOUND" sub="from the late Stone Age, in Britain" from={F.boat + 4} />
-        <Tag {...tagL2} text="A 2024 STUDY" sub={"boats of the time: unlikely\nto carry six tonnes"} from={F.doubts + 2} />
+        <Tag {...tagL2} text="A 2024 STUDY" sub={"Parker Pearson et al.\nArchaeology International\nboats of the time: unlikely\nto carry six tonnes"} from={F.doubts + 2} />
         <FilmGrain f={f} opacity={0.12} />
       </Layer>
 
@@ -317,16 +325,16 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
         <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: L.vertical ? "820px 700px" : "960px 640px", scale: `${pull}`, translate: L.vertical ? "0 -150px" : undefined }}>
           <Haul f={f - SHOTS.haul[0]} />
         </div>
-        <Tag {...tagL} text="~8 MONTHS" sub="overland estimate, 2024 study" from={F.eight} />
+        <Tag {...tagL} text="~8 MONTHS" sub={"overland estimate\nParker Pearson et al. 2024"} from={F.eight} />
         <Note {...at(L, [545, 880], [160, 810])} text={"illustration of a hypothesis\ncrew size not known"} opacity={ramp(f, SHOTS.haul[0] + 6, SHOTS.haul[0] + 16)} size={34} />
         <FilmGrain f={f} opacity={0.16} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.study)}>
         <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
-          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} />
         </Push>
-        <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
+        <Tag {...at(L, [545, -170], [120, 120])} text="A 2026 STUDY" sub="led by Duncan Pirrie" from={F.pirrie} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />
@@ -339,7 +347,7 @@ const Backdrop: React.FC = () => <div style={{ position: "absolute", left: -600,
 
 export const altarStone: Short = {
   slug: "altar-stone",
-  title: "Stonehenge's Altar Stone was traced to Scotland in 2024. Where exactly it came from is still unknown",
+  title: "Stonehenge's Altar Stone was traced to Scotland in 2024. Scientists still can't agree where it came from",
   edit,
   looks: [{ id: "Illustrated", Set: Backdrop, cast: () => [] }],
   props: (L) => <AltarScene L={L} />,

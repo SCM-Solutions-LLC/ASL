@@ -1,13 +1,13 @@
-In 2024, Stonehenge's Altar Stone was traced to Scotland. Exactly where it came from is still unknown.
+In 2024, Stonehenge's Altar Stone was traced to Scotland. Two years on, scientists still can't agree where it came from.
 The ages of tiny mineral grains inside it matched sandstone in the northeast.
 If so, how did six tonnes travel more than seven hundred kilometres?
-The 2024 team suggested it went by sea.
-But no late Stone Age boat has been found in Britain, and another study doubts one could carry six tonnes.
-Overland, on a sledge, that study estimates about eight months of hauling.
-A glacier? A 2026 ice model says ice could have carried it part of the way, at most.
-Then, months later, a new study, including three of the 2024 team, looked closer.
+Clarke and colleagues, who traced it, suggested it went by sea.
+But no late Stone Age boat has been found in Britain, and a study by Parker Pearson and colleagues doubts one could carry six tonnes.
+Overland, on a sledge, they estimate about eight months of hauling.
+A glacier? A 2026 ice model by Clarke and colleagues says ice could have carried it part of the way, at most.
+Then, months later, a 2026 study by Pirrie and colleagues, including three of the 2024 team, looked closer.
 Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far has been shown to match it in every way.
-Six tonnes, from a spot no one has pinned down, by a route no one knows. Sea, sledge or ice: how do you think it got there?
+Six tonnes, from a spot no one has pinned down, by a route no one knows. By sea or by sledge, maybe helped part of the way by ice: how do you think it got there?
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -27,43 +27,59 @@ Four papers. Called below by first author:
 - Clarke 2026: Clarke, Veness, Kirkland, Clark, Gandy, Emery, Bradley, Ely &
   Ádám, "From Highlands to Henge: Refining the Provenance and Transport
   Pathways of Stonehenge's Altar Stone", Journal of Quaternary Science
-  (online 4 June 2026), doi:10.1002/jqs.70080. ONLY THE ABSTRACT WAS READ (the
-  publisher's own abstract, as deposited with Crossref, read on 2026-11-18;
-  the Wiley full text sits behind a bot challenge this sandbox cannot pass).
+  (online 4 June 2026), doi:10.1002/jqs.70080. Open access (CC BY 4.0). Full
+  text (HTML at onlinelibrary.wiley.com, fetched through Firecrawl) read on
+  2026-11-18.
 - Pirrie 2026: Pirrie, Bevins, Ixer, Pearce, Turner, Power, Hillier, Morton,
   Saunders, Andò, Barbarano, Horbury & Price, "Searching for the origin of the
   Stonehenge Altar Stone: new sedimentological, petrographical, mineralogical,
   geochemical and isotopic constraints", Journal of the Geological Society
-  (November 2026), doi:10.1144/jgs2026-090. ONLY THE ABSTRACT WAS READ (the
-  same way, on 2026-11-18; the Lyell Collection full text sits behind the same
-  kind of bot challenge).
+  (November 2026), doi:10.1144/jgs2026-090. Full text (HTML at
+  lyellcollection.org, fetched through Firecrawl) read on 2026-11-18. Its
+  figures are under the Lyell Collection user licence, not CC BY, so none is
+  reused on screen.
 
-The two 2026 papers disagree about how strong the Scottish match is. Clarke
-2026 calls Caithness sandstone "the closest match"; Pirrie 2026 says "the exact
-provenance of the Altar Stone is as yet unknown". Per GUARDRAILS A3 the script
-makes only the claim both support: the exact source is not known. Clarke 2026
-agrees on that point: "its source location within this large basin remains
-unresolved". The script does not say the stone is not from Scotland, which
-neither paper claims.
+Pirrie 2026 also notes (Discussion) that the 2024 grain ages "do not exclude
+a potential source for the Altar Stone from the Carboniferous", but adds that
+the isotope data "indicate an ORS provenance is more likely than a
+Carboniferous source". The script names no rock unit beyond what claims 1, 2
+and 9 say, so neither reading is contradicted.
 
-1. "In 2024, Stonehenge's Altar Stone was traced to Scotland. Exactly where
-   it came from is still unknown."
-   The hook (A4). Both halves are true as stated, and together they leave a
-   viewer who swipes away with the short's real point: the 2024 result named a
-   region, not a spot, and the spot is still not known. First half: Clarke 2024, abstract: "Detrital age comparisons ...
-   reveal a remarkable similarity to the Old Red Sandstone of the Orcadian
-   Basin in northeast Scotland"; title, "A Scottish provenance for the Altar
-   Stone of Stonehenge". Second half: Pirrie 2026
-   says "the exact provenance of the Altar Stone is as yet unknown"; Clarke
-   2026, the authors who favour Scotland, say "its source location within this
-   large basin remains unresolved". "Exactly ... still unknown" covers both,
-   and it does not say the stone is not from Scotland. "Still" is accurate
-   because the exact outcrop was never known: Clarke 2024 named a basin, and
-   Parker Pearson 2024 (p.129) wrote "As yet, the actual outcrop from which the
-   Altar Stone was extracted is unknown". (An earlier wording, "Now nobody can
-   say exactly", implied the spot had once been known, and failed the
-   fact-check for it.) Not said: the name "Altar Stone" is conventional (Stone 80). No one
-   knows it was an altar.
+The two 2026 papers disagree about the Scottish attribution itself. Clarke
+2026 still favours northeast Scotland: Caithness sandstone gives "the closest
+match in zircon age structure", though "its source location within this large
+basin remains unresolved". Pirrie 2026 (three of whose authors wrote Clarke
+2024) questions it: its Introduction says "detailed multi-proxy
+characterization of the Altar Stone raises questions over this
+interpretation" (the Orcadian Basin source); its Discussion, that scarce chrome
+spinel "may indicate that an origin from this part of NE Scotland needs
+re-evaluating", that ORS areas "from the Scottish Midland Valley to the
+Anglo-Welsh borderland ... remain possible source areas from a heavy mineral
+standpoint", and that the 2024 grain ages do "not exclude a potential source
+for the Altar Stone from the Carboniferous" (while isotopes make "an ORS
+provenance ... more likely than a Carboniferous source"); its Conclusions,
+"the provenance of the Altar Stone has yet to be determined with confidence".
+Per GUARDRAILS A3 the script makes only the claim both support: the source is
+not settled, and the experts disagree. It does not say the stone is not from
+Scotland (neither paper says so), and it does not say it is.
+
+1. "In 2024, Stonehenge's Altar Stone was traced to Scotland. Two years on,
+   scientists still can't agree where it came from."
+   The hook (A4). Both sentences are true as stated, and a viewer who swipes
+   away at the second leaves knowing the 2024 result is disputed, not settled.
+   First: Clarke 2024, abstract, "Detrital age comparisons ... reveal a
+   remarkable similarity to the Old Red Sandstone of the Orcadian Basin in
+   northeast Scotland"; title, "A Scottish provenance for the Altar Stone of
+   Stonehenge" (published 14 August 2024). Second: the disagreement above,
+   between Clarke 2026 (June 2026) and Pirrie 2026 (November 2026), about two
+   years after Clarke 2024. "Still" is accurate because no source has been
+   agreed at any point: Parker Pearson 2024 (p.129), "As yet, the actual
+   outcrop from which the Altar Stone was extracted is unknown"; Clarke 2026,
+   "remains unresolved"; Pirrie 2026, "yet to be determined with confidence".
+   (Earlier wordings, "Now nobody can say exactly" and "Exactly where it came
+   from is still unknown", failed fact-checks: the first implied the spot had
+   once been known, the second that Scotland was settled.) Not said: the name
+   "Altar Stone" is conventional (Stone 80). No one knows it was an altar.
 
 2. "The ages of tiny mineral grains inside it matched sandstone in the
    northeast."
@@ -87,13 +103,15 @@ neither paper claims.
    was transported to the site, is unknown". So the script gives no date for
    the journey.
 
-4. "The 2024 team suggested it went by sea." The 2024 team = Clarke 2024.
+4. "Clarke and colleagues, who traced it, suggested it went by sea."
+   "Clarke and colleagues" = Clarke 2024 (first author Anthony J. I. Clarke,
+   per Crossref); "who traced it" = claim 1.
    Clarke 2024, abstract: "The difficulty of long-distance overland transport
    of such massive cargo from Scotland, navigating topographic barriers,
    suggests that it was transported by sea."
 
-5. "But no late Stone Age boat has been found in Britain, and another study
-   doubts one could carry six tonnes."
+5. "But no late Stone Age boat has been found in Britain, and a study by
+   Parker Pearson and colleagues doubts one could carry six tonnes."
    Parker Pearson 2024, "How was the Altar Stone transported?": "Although no
    boats are known from the Late Neolithic in Britain or Europe ..."; "The
    earliest known boats in Britain have been found ... at Ferriby. The earliest
@@ -103,12 +121,13 @@ neither paper claims.
    carry a 6-tonne stone in coastal waters." "One" = a boat of that period
    (the Early Bronze Age boats "and their Late Neolithic precursors"). "Late Stone Age" is the plain
    rendering of "Late Neolithic" (Neolithic = New Stone Age). "Doubts" matches
-   "unlikely". "Another study" is accurate as a description of the paper, but
-   note that three of its six authors (Bevins, Ixer, Pearce) also wrote Clarke
-   2024.
+   "unlikely". "Parker Pearson and colleagues" = Parker Pearson 2024 (first
+   author Mike Parker Pearson); three of its six authors (Bevins, Ixer,
+   Pearce) also wrote Clarke 2024, and the script does not call it
+   independent.
 
-6. "Overland, on a sledge, that study estimates about eight months of
-   hauling."
+6. "Overland, on a sledge, they estimate about eight months of hauling."
+   "They" = Parker Pearson and colleagues (claim 5).
    Parker Pearson 2024: "necessitating the use of a suitably robust wooden
    sledge ... sliding on wooden 'rails'"; "such a journey with a large and
    heavy sledge could take perhaps four times today's time of under two months
@@ -116,8 +135,10 @@ neither paper claims.
    Stonehenge." "About" stands for "perhaps ... or so": it is an estimate, and
    the script says so.
 
-7. "A glacier? A 2026 ice model says ice could have carried it part of the
-   way, at most."
+7. "A glacier? A 2026 ice model by Clarke and colleagues says ice could have
+   carried it part of the way, at most."
+   "Clarke and colleagues" = Clarke 2026, whose first author (Anthony J. I.
+   Clarke, same ORCID per Crossref) also led Clarke 2024.
    Clarke 2026, abstract: "we combine sandstone provenance analysis with ice
    flow modelling"; "Glacial dispersal to Dogger Bank would reduce the
    anthropogenic transport distance required to Stonehenge from 700 km to 400
@@ -127,15 +148,19 @@ neither paper claims.
    anthropogenic transport would have remained necessary." "Part of the way, at
    most" = "may have provided an intermediate stage ... alone cannot account".
    The abstract adds a further problem (Dogger Bank
-   was flooded before the stone likely arrived); the script leaves that out
+   was flooded before the stone likely arrived); the full text's discussion
+   says the same: glacial transport "provides only an intermediate stage in
+   the stone's history, reducing the overall anthropogenic transport distance
+   but not removing the need for substantial later human agency". The script leaves the flooding out
    because it only weakens the glacier idea further. Parker Pearson 2024 goes
    further, "Clarke et al. (2024) have discussed why theories involving Ice Age
    glacial transport can be rejected", but the script uses the narrower 2026
    wording, which is based on an actual ice model.
 
-8. "Then, months later, a new study, including three of the 2024 team,
-   looked closer."
-   Pirrie 2026 (November 2026) came about five months after Clarke 2026 (4 June
+8. "Then, months later, a 2026 study by Pirrie and colleagues, including
+   three of the 2024 team, looked closer."
+   Pirrie 2026 (Journal of the Geological Society, November 2026; Crossref
+   gives the issue date 2026-11; first author Duncan Pirrie) came about five months after Clarke 2026 (4 June
    2026). Its authors include Bevins, Ixer and Pearce, all three of whom are
    authors of Clarke 2024. "Looked closer" stands for the abstract's "detailed
    multi-proxy characterization of the sedimentology, geochemistry, detrital
@@ -154,12 +179,17 @@ neither paper claims.
    found apatite ages from Caithness and Orkney samples "match those from the
    Altar Stone"), but no outcrop matches the whole set. "That part of Scotland" = the Orcadian
    Basin of northeast Scotland (claim 2). The same abstract says the earlier
-   grain dating "supports a Laurentian source for the heavy minerals", so it
-   narrows the source down rather than overturning the 2024 result. The script
-   says only what is above.
+   grain dating "supports a Laurentian source for the heavy minerals", but the
+   body goes further and questions the NE Scotland source itself (see the
+   disagreement above the claims). The script says only what is above. The full text's Conclusions agree: "To date, no
+   outcrop area of the ORS examined can be shown to have the same suite of
+   lithological characteristics as documented from the Altar Stone", and
+   other ORS areas "can all so far be excluded when all aspects of the
+   multi-proxy analysis are considered".
 
 10. "Six tonnes, from a spot no one has pinned down, by a route no one knows.
-   Sea, sledge or ice: how do you think it got there?"
+   By sea or by sledge, maybe helped part of the way by ice: how do you think
+   it got there?"
    A recap of claims 1, 3 and 4-7; it adds no new fact. "Six tonnes": claim 3.
    "A spot no one has pinned down": claim 1 (Pirrie 2026, "the exact
    provenance of the Altar Stone is as yet unknown"; Clarke 2026, "its source
@@ -168,8 +198,12 @@ neither paper claims.
    none claims to have shown which was used. Clarke 2024 suggests the sea but
    names no route (claim 4); Parker Pearson 2024 doubts the boats of the time
    and estimates the overland haul (claims 5-6); Clarke 2026 allows ice for
-   part of the way at most (claim 7). "Sea, sledge or ice" are exactly those
-   three proposals. The closing question asks for the viewer's view; it is not
+   part of the way at most (claim 7). "By sea or by sledge" are the two
+   whole-journey proposals; "maybe helped part of the way by ice" keeps ice
+   to Clarke 2026's role ("Glacial transport may have provided an
+   intermediate stage ... but alone cannot account for the final
+   emplacement"). (An earlier wording, "Sea, sledge or ice", offered ice as a
+   full alternative and failed the fact-check for it.) The closing question asks for the viewer's view; it is not
    a "comment X" prompt (E2) and states nothing as fact.
 
 ON SCREEN (A6). Every label the cut draws, and what stands behind it. Labels
@@ -190,10 +224,13 @@ that repeat a spoken claim cite its number above.
   it at this map's scale (about 1 km per pixel), and the label says
   "approx.". The same figure draws sea transport south down both coasts,
   which the two dashed routes follow (claim 4).
-- "TRACED HERE / 2024 · NE Scotland (area approx.)": claim 1. The dashed
+- "TRACED HERE / Clarke et al. / Nature, 2024 / NE Scotland (area approx.)":
+  claim 1 (Clarke 2024, Nature 632). The dashed
   ellipse around Caithness, Orkney and the Moray Firth is approximate, as the
   label says; it does not trace the Orcadian Basin's edge.
-- "?" and "EXACT SOURCE / unknown": claim 1.
+- "?" over the 2024 area and "SOURCE? / 2026 study questions NE Scotland":
+  claim 1 and the disagreement above (Pirrie 2026, "an origin from this part
+  of NE Scotland needs re-evaluating").
 - Thin-section image, "THE ALTAR STONE / thin sections, dated grains" and
   the credit "Clarke et al. 2024, Nature / CC BY 4.0 · cropped": claim 2. The
   image is Clarke 2024, Fig. 2 (false colour mineralogy maps of Altar Stone
@@ -206,37 +243,46 @@ that repeat a spoken claim cite its number above.
 - "6 TONNES" and "700+ KM / if from NE Scotland": claim 3. The dashed straight
   line runs from the NE Scotland marker to Stonehenge, about 800 km on this
   map, consistent with "at least 750 km".
-- "BY SEA? / route not known", two dashed routes, east and west coasts: claim
+- "BY SEA? / route not known / Clarke et al. 2024", two dashed routes, east and west coasts: claim
   4. Clarke 2024 suggests sea transport but names no route, so both coasts are
   drawn and the label says the route is not known.
 - "NO BOAT FOUND / from the late Stone Age, in Britain" and "A 2024 STUDY /
-  boats of the time: unlikely to carry six tonnes": claim 5. The dashed boat
+  Parker Pearson et al. / Archaeology International / boats of the time:
+  unlikely to carry six tonnes": claim 5. The dashed boat
   outline is drawn as absent, with a "?".
-- "~8 MONTHS / overland estimate, 2024 study" and "illustration of a
+- "~8 MONTHS / overland estimate / Parker Pearson et al. 2024" and "illustration of a
   hypothesis · crew size not known": claim 6. The slab is drawn at 4.9 m by
   0.5 m against ~1.7 m figures (Clarke 2024 dimensions, claim 3); the sledge
   on timber rails follows Parker Pearson 2024 ("a suitably robust wooden
-  sledge ... sliding on wooden 'rails'"). "2024 study" = Parker Pearson 2024,
+  sledge ... sliding on wooden 'rails'"). "2024" for Parker Pearson 2024: it was
   published 31 December 2024 (the issue is dated January 2025).
-- Ice map, "ICE MODEL / part of the way, at most", "ice extent and path
+- Ice map, "ICE MODEL / Clarke et al. 2026 /
+  part of the way, at most", "ice extent and path
   illustrative", "Dogger Bank (approx.)": claim 7. Clarke 2026 abstract:
   glacial dispersal to Dogger Bank would cut the human leg "from 700 km to
   400 km". The pin is the Marine Regions gazetteer position for Dogger Bank
   (MRGID 2395, 54.833 N 2.333 E, marineregions.org); the bank is far larger
   than a pin, and no distance is drawn to it. The ice outline and path are
   sketches, as the label says.
-- "Journal of the Geological Society / 2026" and "A NEW STUDY / three of the
-  2024 team among its authors": claim 8 (Pirrie 2026).
+- "Journal of the Geological Society / 2026" and "A 2026 STUDY / led by
+  Duncan Pirrie": claim 8 (Pirrie 2026; Crossref lists Duncan Pirrie as first
+  author). The card is a plain stand-in for the paper: the journal name and
+  year, with its text drawn as bars. No figure is drawn on it, because the
+  paper's own figures (Lyell Collection user licence, not CC BY) cannot be
+  reused and a drawn one would pass for them.
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",
-  "NO FULL MATCH / shown in any outcrop examined / exact source unknown":
+  "NO FULL MATCH / shown in any outcrop examined / source not pinned down":
   claim 9 and claim 1. The dots, their number and their positions are
   illustrative, as the label says; the abstract gives no counts. The dots
   left uncrossed carry no mark, because the abstract names no surviving
   candidate.
-- Recap map, "SEA? / 2024 team", "SLEDGE? / 2024 study", "ICE? / 2026 model:
-  part of the way", "routes illustrative", the "?" over NE Scotland and the
+- Recap map, "SEA? / Clarke et al. 2024", "SLEDGE? / Parker Pearson et al.
+  2024", "ICE? / Clarke et al. 2026: part of the way" (ice drawn as a partial
+  path ending at Dogger Bank, with the people path for the rest, as claim 10
+  says), "routes illustrative", the "?" over the 2024 area with
+  the note "2024 area / disputed" (claim 1), and the
   same routes as before (both sea routes, the straight dashed line, the ice
-  and people paths): claim 10, restating claims 1, 4, 6 and 7. "2024 team" =
-  Clarke 2024; "2024 study" = Parker Pearson 2024; "2026 model" = Clarke 2026.
+  and people paths): claim 10, restating claims 1, 4, 6 and 7. Each "et al."
+  label names the paper of claims 4, 6 and 7.
   The lines are the earlier map's lines, drawn again; the label says they are
   illustrative.
