@@ -1,6 +1,6 @@
 {
   "script": "script/altar-stone.txt",
-  "sha256": "3912e0ef7dfa15587ce4fcf86c304a41bc6946964d065c2eec96b9bd292ef97e",
+  "sha256": "a18b30e4e1b0cb15f12ebf7e5df82c75a2c25c0cbc54bde9773a169ccef1fb69",
   "checked": "2026-11-18",
   "claims": [
     {
@@ -8,8 +8,8 @@
       "claim": "Stonehenge's Altar Stone was traced to Scotland in 2024. Where exactly it came from is still unknown",
       "where": "on-screen: video title",
       "verdict": "confirmed",
-      "source_checked": "api.crossref.org/works/10.1038/s41586-024-07652-1 (title, abstract, online 2024-08-14); Clarke 2024 full text via Firecrawl research index (pmcid:PMC11324516); api.crossref.org/works/10.1144/jgs2026-090 (ABSTRACT ONLY); api.crossref.org/works/10.1002/jqs.70080 (ABSTRACT ONLY)",
-      "note": "Clarke 2024 title 'A Scottish provenance for the Altar Stone of Stonehenge', online 14 Aug 2024; body: data 'indicate that the Altar Stone of Stonehenge has a provenance from the ORS in the Orcadian Basin of northeast Scotland'. Pirrie 2026 abstract: 'the exact provenance of the Altar Stone is as yet unknown'; Clarke 2026 abstract: 'its source location within this large basin remains unresolved'. Neither 2026 abstract says the stone is not from Scotland, so the title leaves no false belief (A4)."
+      "source_checked": "api.crossref.org/works/10.1038/s41586-024-07652-1 (title, abstract, published online 2024-08-14); Clarke 2024 full text via the Firecrawl research index (pmcid:PMC11324516); api.crossref.org/works/10.1144/jgs2026-090 (ABSTRACT ONLY); api.crossref.org/works/10.1002/jqs.70080 (ABSTRACT ONLY)",
+      "note": "Clarke 2024, title 'A Scottish provenance for the Altar Stone of Stonehenge', online 14 Aug 2024; body: the isotopic data 'indicate that the Altar Stone of Stonehenge has a provenance from the ORS in the Orcadian Basin of northeast Scotland'. Pirrie 2026 abstract: 'the exact provenance of the Altar Stone is as yet unknown'. Clarke 2026 abstract: 'its source location within this large basin remains unresolved'. Caveat: Pirrie 2026 read as abstract only; the abstract does not say the stone is not Scottish, but if its full text argues against Scotland altogether, 'traced to Scotland' would need a qualifier."
     },
     {
       "n": 2,
@@ -17,239 +17,279 @@
       "where": "spoken",
       "verdict": "confirmed",
       "source_checked": "doi:10.1038/s41586-024-07652-1: Crossref abstract and full text via the research index (pmcid:PMC11324516)",
-      "note": "Abstract: detrital ages 'reveal a remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland'; body states a provenance from the Orcadian Basin ORS. Published online 14 August 2024. A viewer who swipes at second two hears only this hook over a photo of Stonehenge; it states what the 2024 paper found and nothing later contradicts it."
+      "note": "A4: a viewer who swipes at second two hears only this, over a photo of Stonehenge. It is a true statement of what the 2024 paper did (abstract: detrital ages 'reveal a remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland'; body: 'indicate ... a provenance from the ORS in the Orcadian Basin'). 'Traced' matches the paper's own claim; neither 2026 abstract says it is wrong."
     },
     {
       "n": 3,
       "claim": "Exactly where it came from is still unknown.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 and doi:10.1002/jqs.70080: ABSTRACTS ONLY (Crossref; Lyell and Wiley full text behind a bot challenge, 403); doi:10.14324/AI.27.1.13 full text (PDF from journals.uclpress.co.uk/ai/article/3293/galley/18572/download/)",
-      "note": "Pirrie 2026 abstract: 'the exact provenance of the Altar Stone is as yet unknown' (nearly the script's words). Clarke 2026 abstract: 'its source location within this large basin remains unresolved'. 'Still' holds: Parker Pearson 2024: 'As yet, the actual outcrop from which the Altar Stone was extracted is unknown'; Clarke 2024 named a basin, not an outcrop."
+      "source_checked": "doi:10.1144/jgs2026-090 and doi:10.1002/jqs.70080: ABSTRACTS ONLY (Crossref; lyellcollection.org and onlinelibrary.wiley.com return a Cloudflare challenge, 403; not in the research index); doi:10.14324/AI.27.1.13 full text (PDF, journals.uclpress.co.uk/ai/article/3293/galley/18572/download/)",
+      "note": "Pirrie 2026 abstract: 'the exact provenance of the Altar Stone is as yet unknown'. Clarke 2026 abstract: 'its source location within this large basin remains unresolved'. 'Still' holds: Parker Pearson 2024 p.129, 'As yet, the actual outcrop from which the Altar Stone was extracted is unknown'; Clarke 2024 named a basin, not an outcrop."
     },
     {
       "n": 4,
-      "claim": "Stonehenge (approx.) pin at lon -1.826, lat 51.179",
-      "where": "on-screen: map label 'Stonehenge (approx.)'",
-      "verdict": "confirmed",
-      "source_checked": "No gazetteer reachable from this sandbox (UNESCO WHC, Historic England, GeoNames, OS, Wikidata all refused by the proxy). Confirmed by the label's approximate marking, as the brief allows.",
-      "note": "The label says 'approx.'. The coordinate agrees with the commonly published position of Stonehenge (about 51.179 N, 1.826 W); at about 1 km per pixel any error is invisible. Not checked against a citable gazetteer."
+      "claim": "Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0 (opening photo of Stonehenge at sunrise)",
+      "where": "on-screen: photo credit",
+      "verdict": "unverified",
+      "source_checked": "commons.wikimedia.org API for File:Sunrise_at_Stonehenge-_Red_sky_in_the_morning.jpg returned HTTP 429 (rate limited) twice; flickr.com/photos/stonehenge-stone-circle/11774816654 refused by the proxy (403). Viewed public/img/stonehenge-red-sky.jpg itself.",
+      "note": "The image is a silhouette of Stonehenge at sunrise, as described, and nothing in it is labelled as the Altar Stone. The author and licence in the credit could not be read from the Commons or Flickr page in this sandbox. Fix: re-read the Commons file page (or Flickr page) licence and author once reachable and confirm CC BY 2.0 and the attribution name."
     },
     {
       "n": 5,
-      "claim": "TRACED HERE / 2024 · NE Scotland (area approx.); NE Scotland marker at lon -3.4, lat 58.3",
-      "where": "on-screen: tag 'TRACED HERE' and map marker",
-      "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index (pmcid:PMC11324516); src/shorts/altar-stone/coast.json (point-in-polygon test)",
-      "note": "Clarke 2024 sampled Orcadian Basin ORS near Spittal, Caithness (58°28′13.8″N, 3°27′33.6″W) and Cruaday, Orkney; it describes ORS 'around 4 km thick in Caithness'. The marker (58.3 N, 3.4 W) lies on land in Caithness, about 19 km south of the Spittal sample, inside the basin. Label says 'area approx.'."
+      "claim": "Stonehenge (approx.) pin at lon -1.826, lat 51.179",
+      "where": "on-screen: map label 'Stonehenge (approx.)'",
+      "verdict": "unverified",
+      "source_checked": "whc.unesco.org/en/list/373, historicengland.org.uk list entry 1010140, nominatim.openstreetmap.org, wikidata.org: all refused by the proxy (403). Research index: Hudson et al. 2022, doi:10.1371/journal.pone.0266789 (pmcid:PMC9045597) places the Stonehenge World Heritage Site edge on OS tiles SU14SW/SE only.",
+      "note": "The coordinate agrees with the commonly published position of Stonehenge and the label says 'approx.', so it is very probably right, but no source meeting A2 that gives Stonehenge's position was opened (the PLOS paper only puts the World Heritage Site in OS 10 km square SU14). Fix: read one citable gazetteer (Historic England list entry, UNESCO WHC 373 or an OS grid reference such as SU 122 422) and record it."
     },
     {
       "n": 6,
-      "claim": "EXACT SOURCE / unknown",
-      "where": "on-screen: tag 'EXACT SOURCE'",
+      "claim": "TRACED HERE / 2024 · NE Scotland (area approx.); dashed gold ellipse and NE Scotland marker at lon -3.4, lat 58.3; gold line Stonehenge to the marker",
+      "where": "on-screen: tag 'TRACED HERE' and map marker",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY (Crossref); doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref)",
-      "note": "As claim 3: 'the exact provenance of the Altar Stone is as yet unknown' (Pirrie 2026); 'source location within this large basin remains unresolved' (Clarke 2026)."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index (pmcid:PMC11324516); src/shorts/altar-stone/coast.json (point-in-polygon test)",
+      "note": "Clarke 2024 compared Orcadian Basin ORS samples from near Spittal, Caithness (58°28′13.8″N, 3°27′33.6″W) and Cruaday, Orkney (59°04′34.2″N, 3°18′54.6″W) and calls the basin 'northeast Scotland'. The marker is on land in Caithness, about 19 km south of the Spittal sample; the ellipse (about ±1.15° lon, ±0.85° lat) contains both sample sites. Published 2024. Label says 'area approx.'."
     },
     {
       "n": 7,
-      "claim": "The ages of tiny mineral grains inside it matched sandstone in the northeast.",
-      "where": "spoken",
+      "claim": "EXACT SOURCE / unknown, with a '?' over NE Scotland",
+      "where": "on-screen: tag 'EXACT SOURCE'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index (pmcid:PMC11324516): 'Orcadian Basin ORS' section and Methods",
-      "note": "U-Pb/Lu-Hf ages of zircon, apatite and rutile grains 'typically 10–40 µm wide' (dated grains 'usually <30 µm in width'), so 'tiny' is fair. 'The detrital zircon age spectra from Orcadian Basin ORS provides the closest match'; KS test cannot separate them; apatite age components from Spittal (Caithness) and Cruaday (Orkney) 'match those from the Altar Stone'. Svalbard ORS zircon is also statistically indistinguishable, but the line claims a match, not a unique one, and the apatite comparison is with NE Scotland samples."
+      "source_checked": "doi:10.1144/jgs2026-090 and doi:10.1002/jqs.70080 (ABSTRACTS ONLY, Crossref); doi:10.14324/AI.27.1.13 full text",
+      "note": "As claim 3: 'the exact provenance of the Altar Stone is as yet unknown' (Pirrie 2026); 'source location within this large basin remains unresolved' (Clarke 2026)."
     },
     {
       "n": 8,
-      "claim": "MINERAL GRAINS / typically 10–40 µm wide · illustration, not to scale",
-      "where": "on-screen: tag 'MINERAL GRAINS'",
+      "claim": "The ages of tiny mineral grains inside it matched sandstone in the northeast.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 Methods, via research index (pmcid:PMC11324516)",
-      "note": "Methods: 'Resistive heavy mineral bands are dominated by zircon, rutile, and apatite, with grains typically 10–40 µm wide.' The drawing is labelled as an illustration, not to scale (A6)."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index (pmcid:PMC11324516)",
+      "note": "Clarke 2024 dated detrital zircon, apatite and rutile 'from two fragments of the Altar Stone'; heavy mineral grains 'typically 10–40 µm wide', target zircons 'usually <30 µm'. 'The detrital zircon age spectra from Orcadian Basin ORS provides the closest match to the Altar Stone detrital ages' (KS test cannot distinguish them), and apatite ages from Spittal, Caithness and Cruaday, Orkney 'match those from the Altar Stone'. Pirrie 2026 abstract agrees the grain dating 'supports a Laurentian source for the heavy minerals'."
     },
     {
       "n": 9,
+      "claim": "THE ALTAR STONE / thin sections, dated grains (image public/img/altar-stone-thin-sections.jpg; camera closes on the zircon labelled 1,092 ± 18 Ma on 'tiny')",
+      "where": "on-screen: tag 'THE ALTAR STONE' and figure image",
+      "verdict": "confirmed",
+      "source_checked": "Viewed public/img/altar-stone-thin-sections.jpg; Clarke 2024 Fig. 2 caption and methods via research index (pmcid:PMC11324516); public/SOURCES.json entry. The original figure file could not be downloaded for a pixel comparison (pmc.ncbi.nlm.nih.gov serves a reCAPTCHA page; media.springernature.com and nature.com refused, 403).",
+      "note": "Fig. 2 caption: 'False colour automated mineralogy maps from thin sections of the Altar Stone ... U–Pb ablation pits ... shown with age (in millions of years ago, Ma), with uncertainty at the 2σ level.' The image shows sections labelled MS3 and 2010K.240 (the paper's two Altar Stone thin sections), a 1 mm scale bar, '24 µm U–Pb ablations' (methods: spot size ~24 µm), and dated grains: zircon 1,092 ± 18 Ma and 1,026 ± 25 Ma, apatite 462 ± 4 Ma, rutile 451 ± 8 Ma (the paper's Group 1 apatite and rutile lower intercepts are 462 ± 4 and 451 ± 8 Ma). No legend is present, consistent with 'cropped above the mineral legend'. Every detail agrees with Fig. 2; the label says no more than the caption."
+    },
+    {
+      "n": 10,
+      "claim": "Clarke et al. 2024, Nature / CC BY 4.0 · cropped",
+      "where": "on-screen: image credit",
+      "verdict": "confirmed",
+      "source_checked": "api.crossref.org/works/10.1038/s41586-024-07652-1 (license field: creativecommons.org/licenses/by/4.0); Fig. 1 and Fig. 2 captions via research index (pmcid:PMC11324516)",
+      "note": "The article is CC BY 4.0. Fig. 1b carries its own notice ('Historic England archive. Reuse is not permitted'), but Fig. 2, the one used, carries no third-party credit or restriction, so the article licence applies. Authors, year and journal correct. 'cropped' records the change, as CC BY 4.0 requires; the video description must also carry the credit and a licence link (SOURCES.json says so)."
+    },
+    {
+      "n": 11,
       "claim": "AGES MATCH / sandstone of NE Scotland (area approx.)",
       "where": "on-screen: tag 'AGES MATCH'",
       "verdict": "confirmed",
       "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index (pmcid:PMC11324516)",
-      "note": "As claim 7: zircon age spectra closest to Orcadian Basin ORS; apatite ages from Caithness and Orkney samples match."
-    },
-    {
-      "n": 10,
-      "claim": "If so, how did six tonnes travel more than seven hundred kilometres?",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 Crossref abstract and full text (research index); doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref)",
-      "note": "Clarke 2024 abstract: 'a 6 tonne shaped block, was sourced at least 750 km from its current location'; body: 'measuring 4.9 × 1.0 × 0.5 m ... weighing 6 t'; 'a Scottish provenance ... demands a transport distance of at least 750 km'. Clarke 2026: '6000 kg', 'some 700 km'. 'More than seven hundred' fits both. 'If so' keeps the distance conditional on a NE Scotland source, as the papers frame it."
-    },
-    {
-      "n": 11,
-      "claim": "6 TONNES",
-      "where": "on-screen: tag '6 TONNES'",
-      "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 abstract (Crossref) and body (research index)",
-      "note": "'a 6 tonne shaped block'; 'weighing 6 t'."
+      "note": "As claim 8: zircon age spectra of Orcadian Basin ORS are the closest match; apatite ages from Caithness and Orkney samples 'match those from the Altar Stone'."
     },
     {
       "n": 12,
-      "claim": "700+ KM / if from NE Scotland; dashed straight line NE Scotland marker to Stonehenge",
-      "where": "on-screen: tag '700+ KM' and map line",
+      "claim": "If so, how did six tonnes travel more than seven hundred kilometres?",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 abstract (Crossref); great-circle distance computed between the two map points",
-      "note": "'At least 750 km' (Clarke 2024). The drawn line, (-3.4, 58.3) to (-1.826, 51.179), is 798 km great-circle, consistent. Label keeps the condition 'if from NE Scotland'."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 (Crossref abstract; full text via research index); doi:10.1002/jqs.70080 (ABSTRACT ONLY)",
+      "note": "Clarke 2024: the Altar Stone measures '4.9 × 1.0 × 0.5 m ... weighing 6 t'; abstract: 'Such a provenance implies that the Altar Stone, a 6 tonne shaped block, was sourced at least 750 km from its current location'. 'More than seven hundred' sits under 'at least 750 km'; Clarke 2026 gives 'some 700 km'. 'If so' keeps the paper's condition ('Such a provenance implies')."
     },
     {
       "n": 13,
-      "claim": "The 2024 team suggested it went by sea.",
-      "where": "spoken",
+      "claim": "6 TONNES",
+      "where": "on-screen: tag '6 TONNES'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 abstract (Crossref) and full text (research index)",
-      "note": "Abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.' 'Suggested' matches 'suggests'."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index",
+      "note": "'weighing 6 t'; abstract '6 tonne shaped block'; Clarke 2026 abstract '6000 kg'; Parker Pearson 2024 '6-tonne monolith'."
     },
     {
       "n": 14,
-      "claim": "BY SEA? / route not known; two dashed sea routes (east and west coasts) from NE Scotland to the south coast",
-      "where": "on-screen: tag 'BY SEA?' and map routes",
+      "claim": "700+ KM / if from NE Scotland; dashed straight line from the NE Scotland marker to Stonehenge",
+      "where": "on-screen: tag '700+ KM' and map line",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1038/s41586-024-07652-1 full text (research index); doi:10.1002/jqs.70080 ABSTRACT ONLY; src/shorts/altar-stone/coast.json (Natural Earth rings) tested with a segment-intersection and 200-sample point-in-polygon check per segment",
-      "note": "Clarke 2024 says only that geography 'would have permitted sea routes southward from the Orcadian Basin towards southern England' and names no route; Clarke 2026 abstract: 'mode of transport uncertain'. So 'route not known' is right and drawing both coasts is honest. Geometry: all 12 EAST and 16 WEST points are at sea, and all 11 + 15 segments have 0 coastline crossings and 0 land samples against coast.json; closest passes (Portland Bill, Mull of Oa, Mull of Kintyre, Land's End) are a few km offshore."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 (abstract and body); great-circle distances computed from the map's own coordinates",
+      "note": "Body: 'a Scottish provenance for the Altar Stone demands a transport distance of at least 750 km'. The drawn line, (-3.4, 58.3) to (-1.826, 51.179), is 798 km great-circle; Spittal and Cruaday samples are 817 and 883 km from the pin. '700+' is a safe floor and the sub-label keeps the condition."
     },
     {
       "n": 15,
-      "claim": "But no late Stone Age boat has been found in Britain,",
+      "claim": "The 2024 team suggested it went by sea.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF), section 'How was the Altar Stone transported?'",
-      "note": "'Although no boats are known from the Late Neolithic in Britain or Europe'; and 'The earliest known boats in Britain have been found ... at Ferriby. The earliest of these Early Bronze Age sewn-plank boats (Ferriby 3) dates to 2030–1780 cal bc'. So the claim holds whether 'late Stone Age' is read narrowly (Late Neolithic) or broadly (any Stone Age boat): the paper says the earliest known boats in Britain are Early Bronze Age."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 (Crossref abstract; full text via research index)",
+      "note": "Abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.' Body: 'the geography of Britain and Ireland would have permitted sea routes southward from the Orcadian Basin towards southern England'. 'Suggested' matches 'suggests'."
     },
     {
       "n": 16,
-      "claim": "NO BOAT FOUND / from the late Stone Age, in Britain",
-      "where": "on-screen: tag 'NO BOAT FOUND'",
+      "claim": "BY SEA? / route not known; two dashed sea routes (EAST down the North Sea coast to off Selsey, WEST round the north and west coasts to Swanage)",
+      "where": "on-screen: tag 'BY SEA?' and map routes EAST/WEST",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF)",
-      "note": "As claim 15."
+      "source_checked": "doi:10.1038/s41586-024-07652-1 full text via research index; src/shorts/altar-stone/coast.json (every segment of EAST and WEST sampled at 401 points and tested point-in-polygon against all 101 rings)",
+      "note": "No sample point of either route falls on land. Closest approaches: EAST about 3 km off Flamborough Head; WEST about 5 km off the Mull of Oa (Islay) and ends about 0.7 km off the Purbeck shore at Swanage, i.e. at a landing, not inland. Clarke 2024 names no specific route, so 'route not known' with both coasts drawn is accurate."
     },
     {
       "n": 17,
-      "claim": "and another study doubts one could carry six tonnes.",
+      "claim": "But no late Stone Age boat has been found in Britain,",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF)",
-      "note": "'What we know of Early Bronze Age boats ... would suggest that they and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters.' 'Doubts' = 'unlikely'; 'one' = a boat of that period. 'Another study' is literally true (a different paper), though three of its six authors (Bevins, Ixer, Pearce) also wrote Clarke 2024; the script does not call it independent."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF from journals.uclpress.co.uk), p.128",
+      "note": "'Although no boats are known from the Late Neolithic in Britain or Europe ...'; 'The earliest known boats in Britain have been found ... at Ferriby. The earliest of these Early Bronze Age sewn-plank boats (Ferriby 3) dates to 2030–1780 cal bc'. 'Late Stone Age' (lower-case 'late') = Late Neolithic; 'found' = 'known'."
     },
     {
       "n": 18,
-      "claim": "A 2024 STUDY / boats of the time: unlikely to carry six tonnes",
-      "where": "on-screen: tag 'A 2024 STUDY'",
+      "claim": "and another study doubts one could carry six tonnes.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF, first page); article page journals.uclpress.co.uk/ai/article/id/3293/ meta tags; api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "PDF: 'Published: 31 December 2024'; 'How to cite: ... Archaeology International, 2024, 27 (1), pp. 113–37'; page meta citation_publication_date 2024-12-31. (Crossref records published-online 2025-01-22; the publisher's own date is 2024.) Wording as claim 17."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF), p.128; api.crossref.org author lists with ORCIDs",
+      "note": "'What we know of Early Bronze Age boats ... would suggest that they and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters.' 'Doubts' = 'unlikely'. 'Another study' is accurate (a different paper), though three of its six authors (Bevins, Ixer, Pearce, same ORCIDs) also wrote Clarke 2024; the script mentions that overlap only for the 2026 study. Not false, but the owner may want to know."
     },
     {
       "n": 19,
-      "claim": "Overland, on a sledge, that study estimates about eight months of hauling.",
-      "where": "spoken",
+      "claim": "NO BOAT FOUND / from the late Stone Age, in Britain; dashed ghost outline of a sewn-plank hull with the slab and a '?'",
+      "where": "on-screen: tag 'NO BOAT FOUND' and boat drawing",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF, p.128)",
-      "note": "'necessitating the use of a suitably robust wooden sledge ... sliding on wooden ‘rails’'; 'such a journey with a large and heavy sledge could take perhaps four times today’s time of under two months ... needing eight months or so to haul a stone from northern Scotland to Stonehenge.' 'Estimates about' matches 'perhaps ... or so'."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF), p.128",
+      "note": "As claim 17. The boat is drawn as an absent, dashed outline with a '?', so it shows no specific boat or size as fact."
     },
     {
       "n": 20,
-      "claim": "~8 MONTHS / overland estimate, 2024 study",
-      "where": "on-screen: tag '~8 MONTHS'",
+      "claim": "A 2024 STUDY / boats of the time: unlikely to carry six tonnes",
+      "where": "on-screen: tag 'A 2024 STUDY'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF)",
-      "note": "As claim 19; 2024 per the publisher (claim 18)."
+      "source_checked": "doi:10.14324/AI.27.1.13: full text PDF (title page 'Published: 31 December 2024'); article page journals.uclpress.co.uk/ai/article/id/3293/ (citation_publication_date 2024-12-31); api.crossref.org (lists 2025-01-22)",
+      "note": "'Unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters' for Early Bronze Age boats 'and their Late Neolithic precursors' = 'boats of the time'. Publisher dates the article 31 December 2024 and its cite line says 2024; Crossref registers 22 January 2025, which a pedant could raise, but the publisher's own date supports '2024'."
     },
     {
       "n": 21,
-      "claim": "illustration of a hypothesis · crew size not known (sledge on rails, slab drawn 4.9 m x 0.5 m)",
-      "where": "on-screen: note under haul illustration",
+      "claim": "Overland, on a sledge, that study estimates about eight months of hauling.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.14324/AI.27.1.13 full text (UCL Press PDF); doi:10.1038/s41586-024-07652-1 body (research index)",
-      "note": "Parker Pearson 2024 gives no crew size or haulage team (searched for crew/oxen/hauliers/pull: nothing), so 'crew size not known' is fair; the sledge on wooden rails follows its text. Slab dimensions 4.9 × 1.0 × 0.5 m per Clarke 2024 and Parker Pearson 2024 p.117 ('4.9 m (16ft) long by 1 m ... by 0.5 m'). Labelled as an illustration of a hypothesis."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF), p.128",
+      "note": "'necessitating the use of a suitably robust wooden sledge with vegetation-made shock absorbers, sliding on wooden ‘rails’'; 'such a journey with a large and heavy sledge could take perhaps four times today's time of under two months ... needing eight months or so to haul a stone from northern Scotland to Stonehenge.' 'About' = 'perhaps ... or so'; 'estimates' is right."
     },
     {
       "n": 22,
-      "claim": "A glacier? A 2026 ice model says ice could have carried it part of the way, at most.",
-      "where": "spoken",
+      "claim": "~8 MONTHS / overland estimate, 2024 study",
+      "where": "on-screen: tag '~8 MONTHS'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref; online 2026-06-04; Wiley full text behind bot challenge, 403)",
-      "note": "Abstract: 'we combine sandstone provenance analysis with ice flow modelling'; from Caithness 'a localised south-eastward pathway directed towards Dogger Bank'; 'Glacial transport may have provided an intermediate stage in the stone's journey, but alone cannot account for the final emplacement on Salisbury Plain. Even under a glacially assisted scenario, substantial anthropogenic transport would have remained necessary.' 'Part of the way, at most' fits. Note the abstract adds a further problem the script omits (Dogger Bank was inundated before the stone likely arrived), which only weakens the glacier option; older sources (Clarke 2024, Parker Pearson 2024) reject glacial transport outright, so the script's wording is not stronger than any source."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF), p.128",
+      "note": "As claim 21; '2024' as claim 20."
     },
     {
       "n": 23,
-      "claim": "ICE MODEL / part of the way, at most",
-      "where": "on-screen: tag 'ICE MODEL'",
+      "claim": "Hauling scene: a 4.9 m by 0.5 m slab on a wooden sledge on timber rails, pulled by people; 'illustration of a hypothesis / crew size not known'",
+      "where": "on-screen: hauling scene and note",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref)",
-      "note": "As claim 22."
+      "source_checked": "doi:10.14324/AI.27.1.13 full text (PDF), pp.127-128 (searched for any crew or team size); doi:10.1038/s41586-024-07652-1 (dimensions)",
+      "note": "Sledge on wooden rails follows Parker Pearson 2024. Slab drawn at 4.9 m long, 0.5 m thick against ~1.7 m figures (haul.tsx: 70 units per metre), matching Clarke 2024's 4.9 × 1.0 × 0.5 m. Neither paper gives a crew size, so 'crew size not known' is accurate, and the note marks the scene as a hypothesis. Clothing and setting are illustrative."
     },
     {
       "n": 24,
-      "claim": "Dogger Bank (approx.) pin at lon 1.2, lat 54.3",
-      "where": "on-screen: map label 'Dogger Bank (approx.)'",
+      "claim": "A glacier? A 2026 ice model says ice could have carried it part of the way, at most.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref); great-circle distance computed. No gazetteer reachable (Marine Regions, GEBCO/NOAA, JNCC refused by proxy; Natural Earth marine polygons, fetched from raw.githubusercontent.com, have no Dogger Bank feature). Confirmed by the label's approximate marking, as the brief allows.",
-      "note": "Pin to Stonehenge is 402 km great-circle, matching the abstract's remaining human leg 'from 700 km to 400 km'. The label says 'approx.' and the position is in the open North Sea off Yorkshire near the bank's south-western end; the exact extent of the bank was not checked against a gazetteer."
+      "source_checked": "doi:10.1002/jqs.70080: ABSTRACT ONLY (api.crossref.org; online 2026-06-04; Wiley full text behind a Cloudflare challenge, 403; not in the research index)",
+      "note": "Abstract: 'we combine sandstone provenance analysis with ice flow modelling'; 'Glacial dispersal to Dogger Bank would reduce the anthropogenic transport distance required to Stonehenge from 700 km to 400 km'; 'Glacial transport may have provided an intermediate stage in the stone's journey, but alone cannot account for the final emplacement on Salisbury Plain. Even under a glacially assisted scenario, substantial anthropogenic transport would have remained necessary.' 'Could have ... part of the way, at most' fits 'may have provided an intermediate stage ... alone cannot account'. The abstract also raises a timing problem (Dogger Bank flooded before the stone likely arrived) that the script omits; the omission only leaves the glacier idea weaker than it is, not stronger than the source."
     },
     {
       "n": 25,
-      "claim": "ice extent and path illustrative; ice path NE Scotland -> Dogger Bank; people path Dogger Bank -> Stonehenge",
-      "where": "on-screen: ice map drawing and note 'ice extent and path illustrative'",
+      "claim": "ICE MODEL / part of the way, at most",
+      "where": "on-screen: tag 'ICE MODEL'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1002/jqs.70080 ABSTRACT ONLY (Crossref); coast.json point-in-polygon check",
-      "note": "Abstract: modelled transport from Caithness has 'a localised south-eastward pathway directed towards Dogger Bank', after which human transport of about 400 km would remain. The drawn ice path runs SE from the Caithness marker to the Dogger Bank pin and the people path continues to Stonehenge (it crosses land in eastern England, which is expected for an overland leg). Both are sketches and the on-screen note says the ice extent and path are illustrative."
+      "source_checked": "doi:10.1002/jqs.70080: ABSTRACT ONLY",
+      "note": "As claim 24."
     },
     {
       "n": 26,
-      "claim": "Then, months later, a new study, including three of the 2024 team, looked closer.",
-      "where": "spoken",
+      "claim": "Ice sheet outline, ice path from NE Scotland south-east to Dogger Bank, dashed human path from Dogger Bank to Stonehenge; 'ice extent and path illustrative'",
+      "where": "on-screen: map drawings ICE, ICE_PATH, PEOPLE_PATH and note",
       "verdict": "confirmed",
-      "source_checked": "api.crossref.org/works/10.1144/jgs2026-090 (authors, dates, ABSTRACT ONLY); api.crossref.org/works/10.1038/s41586-024-07652-1 (authors); api.crossref.org/works/10.1002/jqs.70080 (date)",
-      "note": "Pirrie 2026 published online 2026-11-05, five months after Clarke 2026 (online 2026-06-04). Pirrie authors include Bevins, Ixer and Pearce; Clarke 2024 authors are Clarke, Kirkland, Bevins, Pearce, Glorie, Ixer: exactly three in common. 'Looked closer' = abstract's 'detailed multi-proxy characterization of the sedimentology, geochemistry, detrital and diagenetic mineralogy of the Altar Stone'."
+      "source_checked": "doi:10.1002/jqs.70080: ABSTRACT ONLY",
+      "note": "Abstract: from Caithness modelled glacial transport is 'predominantly towards the north-east, with a localised south-eastward pathway directed towards Dogger Bank', then 'substantial anthropogenic transport'. The drawn path follows that south-eastward pathway and the human leg; the outline and path are labelled illustrative on screen (A6). The human leg crosses present-day sea off Lincolnshire before reaching land; the abstract specifies no human route, and the recap labels routes illustrative."
     },
     {
       "n": 27,
-      "claim": "A NEW STUDY / three of the 2024 team among its authors; paper card 'Journal of the Geological Society / 2026'",
-      "where": "on-screen: tag 'A NEW STUDY' and study card",
-      "verdict": "confirmed",
-      "source_checked": "api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Crossref: container 'Journal of the Geological Society', vol 183 issue 6, issued November 2026; author overlap as claim 26."
+      "claim": "Dogger Bank (approx.) pin at lon 1.2, lat 54.3",
+      "where": "on-screen: map label 'Dogger Bank (approx.)'",
+      "verdict": "unverified",
+      "source_checked": "doi:10.1002/jqs.70080 ABSTRACT ONLY (no coordinates); marineregions.org and data.jncc.gov.uk refused by the proxy (403); Habibi Motlagh et al. 2025, doi:10.1016/j.dib.2025.111931 (pmcid:PMC12351168) via research index, Table 1 station coordinates",
+      "note": "The pin is 402 km great-circle from the Stonehenge pin, matching Clarke 2026's '400 km'. But no opened source puts the pin on Dogger Bank: the 2024 Senckenberg Dogger Bank monitoring stations all lie at about 54.47–55.66 N, 1.3–4.0 E, and the most south-westerly (DOG24:04, about 54.48 N, 1.86 E) is roughly 45 km east-north-east of the pin, which sits about 86 km off the Yorkshire coast. The pin may be on the bank's south-west margin or just off it. Fix: check the bank's outline against a citable boundary (e.g. JNCC Dogger Bank SAC or Marine Regions) and, if needed, move the pin onto it (e.g. near 54.5 N, 1.8 E, about 440 km from Stonehenge, still 'approx.' for the abstract's 400 km), or cite the source that shows 1.2 E, 54.3 N on the bank."
     },
     {
       "n": 28,
-      "claim": "Many outcrops in that part of Scotland could not have been the source.",
+      "claim": "Then, months later, a new study, including three of the 2024 team, looked closer.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY (Crossref; Lyell full text behind bot challenge, 403)",
-      "note": "Abstract: 'the overall petrology, heavy mineral assemblage, clay mineralogy and geochemistry show that many outcrops of the Old Red Sandstone (ORS) in the Orcadian Basin could not have been the source of the Altar Stone.' 'That part of Scotland' = the northeast named earlier, i.e. the Orcadian Basin."
+      "source_checked": "api.crossref.org/works/10.1144/jgs2026-090 (authors with ORCIDs, published online 2026-11-05, ABSTRACT ONLY); api.crossref.org/works/10.1002/jqs.70080 (online 2026-06-04); api.crossref.org/works/10.1038/s41586-024-07652-1 (authors)",
+      "note": "Pirrie 2026 appeared online 5 Nov 2026, five months after Clarke 2026 (4 Jun 2026). Its authors include Richard E. Bevins, Rob A. Ixer and Nick J. G. Pearce (Pearce's ORCID 0000-0003-3157-9564 identical in both records), all three authors of Clarke 2024. 'Looked closer' = abstract's 'detailed multi-proxy characterization of the sedimentology, geochemistry, detrital and diagenetic mineralogy of the Altar Stone'."
     },
     {
       "n": 29,
-      "claim": "MANY RULED OUT; outcrop dots in NE Scotland, most crossed out; 'outcrops illustrative'",
-      "where": "on-screen: tag 'MANY RULED OUT', outcrop dots and note",
+      "claim": "Paper card 'Journal of the Geological Society / 2026'; A NEW STUDY / three of the 2024 team among its authors",
+      "where": "on-screen: study card and tag 'A NEW STUDY'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY (Crossref)",
-      "note": "Tag matches the abstract's 'many outcrops ... could not have been the source'. The abstract gives no count or locations; the dots (Caithness, Orkney, Moray Firth shore, all Orcadian Basin areas) are labelled illustrative on screen."
+      "source_checked": "api.crossref.org/works/10.1144/jgs2026-090 (container-title, issued 2026-11, authors)",
+      "note": "Journal of the Geological Society, vol. 183, issue 6, November 2026; author overlap as claim 28. The thin section drawn on the card is a stylised drawing with no labels."
     },
     {
       "n": 30,
-      "claim": "No outcrop examined so far has been shown to match it in every way.",
+      "claim": "Many outcrops in that part of Scotland could not have been the source.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY (Crossref)",
-      "note": "Abstract: 'To date, no examined outcrop area of the UK ORS can be shown to have the same suite of lithological and geochemical characteristics as documented for the Altar Stone.' 'So far' = 'to date'; 'has been shown' = 'can be shown'; 'in every way' = 'the same suite of ... characteristics' (grain ages alone still match, claim 7). The abstract's scope is UK ORS outcrop areas; the script's 'no outcrop examined' follows a sentence about NE Scotland and does not claim more than that."
+      "source_checked": "doi:10.1144/jgs2026-090: ABSTRACT ONLY (Crossref; Lyell full text behind a Cloudflare challenge, 403; not in the research index)",
+      "note": "Abstract: 'the overall petrology, heavy mineral assemblage, clay mineralogy and geochemistry show that many outcrops of the Old Red Sandstone (ORS) in the Orcadian Basin could not have been the source of the Altar Stone.' 'That part of Scotland' refers back to 'the northeast', i.e. the Orcadian Basin of NE Scotland (Clarke 2024's wording). In context the outcrops are sandstone outcrops."
     },
     {
       "n": 31,
-      "claim": "NO FULL MATCH / shown in any outcrop examined · exact source unknown",
+      "claim": "MANY RULED OUT; twelve outcrop dots in NE Scotland, nine crossed out; 'outcrops illustrative'",
+      "where": "on-screen: tag 'MANY RULED OUT', outcrop dots and note",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY; src/shorts/altar-stone/coast.json (point-in-polygon)",
+      "note": "'Many' as claim 30. All twelve dots fall on land (Caithness, Orkney, Sutherland/Easter Ross, Moray Firth shore). The abstract gives no counts or sites, and the note marks the dots as illustrative; the uncrossed dots carry no mark suggesting a candidate."
+    },
+    {
+      "n": 32,
+      "claim": "No outcrop examined so far has been shown to match it in every way.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.1144/jgs2026-090: ABSTRACT ONLY",
+      "note": "Abstract: 'To date, no examined outcrop area of the UK ORS can be shown to have the same suite of lithological and geochemical characteristics as documented for the Altar Stone.' 'So far' = 'To date'; 'has been shown to' = 'can be shown to'; 'in every way' = 'the same suite of ... characteristics' (the grain ages still match, claim 8). The spoken line does not limit this to Scotland, matching the abstract's 'UK ORS'."
+    },
+    {
+      "n": 33,
+      "claim": "NO FULL MATCH / shown in any outcrop examined / exact source unknown",
       "where": "on-screen: tag 'NO FULL MATCH'",
       "verdict": "confirmed",
-      "source_checked": "doi:10.1144/jgs2026-090 ABSTRACT ONLY (Crossref)",
-      "note": "As claims 30 and 3."
+      "source_checked": "doi:10.1144/jgs2026-090: ABSTRACT ONLY",
+      "note": "As claims 32 and 3."
+    },
+    {
+      "n": 34,
+      "claim": "Six tonnes, from a spot no one has pinned down, by a route no one knows.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.1038/s41586-024-07652-1 (full text via research index); doi:10.14324/AI.27.1.13 (full text PDF); doi:10.1002/jqs.70080 and doi:10.1144/jgs2026-090 (ABSTRACTS ONLY)",
+      "note": "Six tonnes: claim 13. Spot: claim 3. Route: Clarke 2024 suggests sea, Parker Pearson 2024 doubts the boats and estimates an overland haul, Clarke 2026 allows ice for part of the way; none claims to have shown the route, and the timing is also unknown (Parker Pearson 2024: 'Just when the Altar Stone arrived at Stonehenge is unknown')."
+    },
+    {
+      "n": 35,
+      "claim": "Sea, sledge or ice: how do you think it got there?",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "GUARDRAILS.md E2; sources as claim 34",
+      "note": "States no fact and names the three proposals the cited papers discuss. E2: it is an open question about the content, not 'comment X' bait (no keyword, emoji or reply demanded). 'Ice' is offered as an option although the 2026 model allows it only part of the way, but the line comes right after the script and screen say so ('part of the way, at most'; recap tag 'ICE? / 2026 model: part of the way'), so no viewer who reaches it is misled."
+    },
+    {
+      "n": 36,
+      "claim": "Recap tags 'SEA? / 2024 team', 'SLEDGE? / 2024 study', 'ICE? / 2026 model: part of the way', '?' over NE Scotland, the same routes redrawn, 'routes illustrative'",
+      "where": "on-screen: recap map",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.1038/s41586-024-07652-1; doi:10.14324/AI.27.1.13; doi:10.1002/jqs.70080 (ABSTRACT ONLY); coast.json route test as claim 16",
+      "note": "'2024 team' = Clarke 2024 (sea, claim 15); '2024 study' = Parker Pearson 2024 (sledge estimate, claim 21; dated 31 Dec 2024 by the publisher); '2026 model: part of the way' = Clarke 2026 (claim 24). Routes are the same lines checked in claims 14, 16 and 26 and are labelled illustrative."
     }
   ]
 }
