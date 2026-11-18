@@ -1,6 +1,6 @@
 {
   "script": "script/cleopatra-timeline.txt",
-  "sha256": "ec90d1cb2889cef11b4360a716761ddcabdcf5f11bd85eb73df2669e26f8b1ae",
+  "sha256": "fbd5c4fee782161a2f9faf14494aadd721a197b32bb17c472b783c89245b2be8",
   "checked": "2026-11-18",
   "claims": [
     {
@@ -8,31 +8,31 @@
       "claim": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005); Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289; images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "Holds on every chronology in the cited sources. Birth 69 BC (Rosso: 'Cleopatra VII was born at 69 BC'); landing July 20, 1969 (NASA KSC-as11-40-5877: 'Armstrong and Aldrin landed on the Moon July 20, 1969'), so 2,037 years forward. Back to the pyramid: Khufu's reign ends (Djedefra accession) at medians 2565-2603 BCE in Erdil S2 Table, giving 2,496-2,534 years; even Spence's low dates quoted by Sheisha (Khufu accession '2480 ± 5 BCE', Khafre '2448 ± 5 BCE') give about 2,380. Also holds from her death in 30 BC (1,998 forward against >2,400 back), so 'lived' is true across her whole life."
+      "source_checked": "Sheisha et al. 2022 full text (Europe PMC fullTextXML, PMC9477388); Erdil et al. 2025 article XML (journals.plos.org) and S2 Table PDF (supplementary s005); Rosso 2021 full text (Europe PMC fullTextXML, PMC8042289); images-api.nasa.gov records as11-40-5903, KSC-as11-40-5877",
+      "note": "Birth: Rosso 'Cleopatra VII was born at 69 BC'. Landing: NASA AS11-40-5903 '(20 July 1969)'; KSC-as11-40-5877 'Armstrong and Aldrin landed on the Moon July 20, 1969'. Forward 69 BC to AD 1969 = 2,037 years. Back: Erdil S2 Table Djedefra (successor's accession = end of Khufu's reign) medians 2565/2577/2586/2603/2603 BCE give 2,496-2,534 years. On the lowest date quoted by Sheisha (Spence: Khufu '2480 ± 5 BCE', Khafre '2448 ± 5 BCE') still about 2,379 back against 2,037 forward. From her death ('The queen committed suicide in August 30 BC', Rosso) 1,998 forward against more than 2,400 back. True on every chronology in the cited sources and across her whole life."
     },
     {
       "n": 2,
-      "claim": "Hook as heard and seen at second two: 'Cleopatra lived closer to the Moon landing' (caption page 1 breaks after 'landing'); Look 1 shows the title card CLEOPATRA / QUEEN OF EGYPT · 69-30 BC; Look 2 has cut from the Waterhouse painting to Aldrin on the Moon with 'MOON LANDING' (~1.57 s).",
+      "claim": "Hook at second two: spoken 'Cleopatra lived closer to the Moon landing' ('landing' 1.941-2.322 s), caption page 1 breaks after 'landing'; Look 1 shows title card CLEOPATRA / QUEEN OF EGYPT · 69–30 BC; Look 2 shows the Waterhouse painting (credit 'A LATER PAINTING · IMAGINED') then cuts to Aldrin on the Moon with 'MOON LANDING' at about 1.6 s.",
       "where": "spoken + on-screen: hook (A4)",
       "verdict": "confirmed",
-      "source_checked": "src/generated/cleopatra-timeline.alignment.json ('landing' ends 2.322 s, 'than' starts 2.322 s); src/shorts/cleopatra*/index.tsx",
-      "note": "A viewer who leaves at 2 s takes away only that Cleopatra lived closer to the Moon landing than to something, with her dates 69-30 BC on screen. Nothing false is implied, and the full hook is itself true (claim 1). The popular form of this fact is the true one, so no correction is needed."
+      "source_checked": "src/generated/cleopatra-timeline.alignment.json (word list matches the spoken text above the --- word for word; its stored sha256 is of an earlier version of the file, the spoken text is unchanged); src/shorts/cleopatra-timeline/index.tsx (breakAfter 'landing', TitleCard to F.than-4); src/shorts/cleopatra-cutout/index.tsx (cards 1-2)",
+      "note": "A viewer who leaves at 2 s has only an unfinished comparison ('closer to the Moon landing'), her dates and a picture marked as imagined: nothing false is planted. The completed hook is true (claim 1), and the popular form of this fact is the true form, so no correction is needed."
     },
     {
       "n": 3,
       "claim": "The pyramid was finished around twenty-six hundred BC.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "Sheisha: 'the Great Pyramid of Giza (Khufu Pyramid)'; the Journal of Merer, from 'a Khufu-age port', 'describes the transport of limestone ... to the construction site of the Great Pyramid of Khufu', so it was being built in Khufu's reign. Erdil S2 Table: Djedefra (end of Khufu's reign) medians 2565, 2577, 2586, 2603, 2603 BCE across models P1-P5; Khufu accession medians 2589-2632. Any completion date in or near his reign rounds to 'around 2600 BC'. The sources disagree (Sheisha also quotes von Beckerath 2554 and Spence 2480 ± 5 for Khufu's accession), but Erdil says the Low chronology 'is ruled out at 95% probability' for the Old Kingdom, and Sheisha calls the 14C chronology 'preferable as less subject to interpretation'. The SOURCES entry records the disagreement, as A3 asks. Caveat: no cited source gives a completion year; 'around' carries that."
+      "source_checked": "Sheisha et al. 2022 full text (PMC9477388); Erdil et al. 2025 article XML and S2 Table PDF (s005)",
+      "note": "Sheisha: 'the Great Pyramid of Giza (Khufu Pyramid)'; the Journal of Merer, from 'a Khufu-age port', 'describes the transport of limestone from Toura ... to the construction site of the Great Pyramid of Khufu'. Erdil S2 Table: Khufu accession medians 2589-2632 BCE, Djedefra (next king) medians 2565-2603 BCE across five models. Any completion within Khufu's reign rounds to 'around 2600 BC'. Caveats, both recorded in the SOURCES entry as A3 asks: no cited source states a completion year (the date is inferred from his reign), and lower chronologies quoted by Sheisha (von Beckerath Khufu 2554, Spence 2480 ± 5) would put it 50-150 years later. Erdil: the Low chronological position 'is ruled out at 95% probability' for the Old Kingdom; Sheisha: the 14C chronology 'is preferable as less subject to interpretation'. 'Around' carries the spread."
     },
     {
       "n": 4,
       "claim": "Cleopatra was born in sixty-nine BC.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289",
+      "source_checked": "Rosso 2021 full text (PMC8042289)",
       "note": "Rosso: 'Cleopatra VII was born at 69 BC from an illegitimate union of Ptolemy XII'."
     },
     {
@@ -40,280 +40,264 @@
       "claim": "Two and a half thousand years later.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005); arithmetic",
-      "note": "2600 BC to 69 BC is 2,531 years (astronomical -2599 to -68). On Erdil's Djedefra medians (2565-2603 BCE) it is 2,496-2,534. 'Two and a half thousand' fits both."
+      "source_checked": "Erdil et al. 2025 S2 Table PDF (s005); Rosso 2021 (PMC8042289); arithmetic",
+      "note": "2600 BC to 69 BC = 2,531 years (astronomical -2599 to -68). On Erdil's Djedefra medians (2565-2603 BCE) 2,496-2,534. 'Two and a half thousand' fits every median."
     },
     {
       "n": 6,
       "claim": "From her to Apollo eleven is only two thousand.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289; images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "69 BC to AD 1969 is 2,037 years (no year zero); from her death in 30 BC ('The queen committed suicide in August 30 BC', Rosso) it is 1,998. NASA AS11-40-5903 is dated '(20 July 1969)', and KSC-as11-40-5877 says 'landed on the Moon July 20, 1969'. 'Only two thousand' is a fair rounding."
+      "source_checked": "Rosso 2021 (PMC8042289); images-api.nasa.gov as11-40-5903, KSC-as11-40-5877, ksc-69pc-442",
+      "note": "69 BC to AD 1969 = 2,037 years (no year zero); from her death in 'August 30 BC' (Rosso) = 1,998. NASA: landing 'July 20, 1969'. 'Only two thousand' is a fair round figure either way."
     },
     {
       "n": 7,
       "claim": "To Cleopatra, the pyramids were already ancient history.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "Interpretive framing that rests on dates. Even the youngest Giza pyramid (Menkaure: Sheisha gives accession '2564 to 2524 BCE (1σ)', '2532 BCE (2)', down to '2415 ± 10 BCE (42)') was begun some 2,350 years or more before her birth. 'Ancient history' is fair for anything that old."
+      "source_checked": "Sheisha et al. 2022 full text (PMC9477388)",
+      "note": "Interpretive framing resting on dates. In context 'the pyramids' are those of Giza (preceding lines, 'THE PYRAMIDS?' over a Giza print). Youngest, Menkaure: accession 'ranges from 2564 to 2524 BCE (1σ)' or 'centers on 2532 BCE (2), 2489 BCE (41), or 2415 ± 10 BCE (42)' (Sheisha) — at least ~2,346 years before her birth. 'Ancient history' is fair."
     },
     {
       "n": 8,
       "claim": "CLEOPATRA / QUEEN OF EGYPT · 69–30 BC",
       "where": "on-screen: title card (Look 1)",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289",
-      "note": "Rosso: 'as the last queen of Egypt'; 'born at 69 BC'; 'The queen committed suicide in August 30 BC'."
+      "source_checked": "Rosso 2021 full text (PMC8042289)",
+      "note": "Rosso: 'as the last queen of Egypt'; 'born at 69 BC'; 'The queen committed suicide in August 30 BC'. The dates are life dates, in the usual name-card convention; her reign (from 51 BC) was shorter, but the card does not say 'reigned'."
     },
     {
       "n": 9,
-      "claim": "c. 2600 BC (pill under the pyramid; card 4 after 'FINISHED!'; both timelines)",
+      "claim": "c. 2600 BC (Look 1 pill under the pyramid; card 4 after 'FINISHED!'; both cutout timeline cards)",
       "where": "on-screen: date labels",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "Same basis as claim 3. It carries 'c.', and the spoken line has 'around'."
+      "source_checked": "Sheisha et al. 2022 (PMC9477388); Erdil et al. 2025 S2 Table (s005)",
+      "note": "Same basis as claim 3; every instance carries 'c.'."
     },
     {
       "n": 10,
-      "claim": "69 BC (pill under Cleopatra; card 5; timelines)",
+      "claim": "69 BC (Look 1 pill under Cleopatra; card 5 after 'BORN'; cutout timeline cards)",
       "where": "on-screen: date labels",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289",
-      "note": "'Cleopatra VII was born at 69 BC'."
+      "source_checked": "Rosso 2021 (PMC8042289)",
+      "note": "'Cleopatra VII was born at 69 BC'. Card 5's 'BORN' is her birth, matching the spoken line."
     },
     {
       "n": 11,
-      "claim": "AD 1969 (pill under the Moon; timeline card)",
+      "claim": "AD 1969 (Look 1 pill under the Moon; second cutout timeline card)",
       "where": "on-screen: date labels",
       "verdict": "confirmed",
-      "source_checked": "images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "KSC-as11-40-5877: 'landed on the Moon July 20, 1969'; ksc-69pc-442: lift-off 'July 16, 1969'."
+      "source_checked": "images-api.nasa.gov as11-40-5903, KSC-as11-40-5877, ksc-69pc-442",
+      "note": "NASA: AS11-40-5903 '(20 July 1969)'; launch '9:32 a.m. EDT July 16, 1969'. (In the code card 7 itself shows only 'APOLLO 11'; 'AD 1969' appears on the timeline cards.)"
     },
     {
       "n": 12,
       "claim": "2,531 / YEARS, ROUGHLY (pyramid to her birth)",
-      "where": "on-screen: span count",
+      "where": "on-screen: span count (both looks)",
       "verdict": "confirmed",
-      "source_checked": "Code: YEAR = {pyramid: -2599, cleopatra: -68, apollo: 1969}; BACK = -68 - (-2599); Erdil S2 Table",
-      "note": "2,531 is exact arithmetic from c. 2600 BC to 69 BC, and the 'ROUGHLY' tag carries the uncertainty of the pyramid date (Erdil medians give 2,496-2,534). The count animates up to 2,531."
+      "source_checked": "src/shorts/cleopatra-timeline/index.tsx (YEAR = {pyramid: -2599, cleopatra: -68, apollo: 1969}; BACK = 2,531); Erdil S2 Table (s005)",
+      "note": "Computed in code from -2599 and -68 = 2,531. It inherits the 'c.' of 2600 BC and says 'ROUGHLY'; Erdil's medians give 2,496-2,534."
     },
     {
       "n": 13,
       "claim": "2,037 / YEARS (her birth to Apollo 11)",
-      "where": "on-screen: span count",
+      "where": "on-screen: span count (both looks)",
       "verdict": "confirmed",
-      "source_checked": "Code: FORWARD = 1969 - (-68); Rosso; NASA records",
-      "note": "68 + 1,969 = 2,037 years; both end dates are confirmed (claims 4 and 6)."
+      "source_checked": "src/shorts/cleopatra-timeline/index.tsx (FORWARD = 1969 - (-68)); Rosso 2021; NASA as11-40-5903",
+      "note": "1969 + 68 = 2,037, exact for a 69 BC birth and a 1969 landing. Counter formats with en-US comma (kit Count / fmt)."
     },
     {
       "n": 14,
-      "claim": "CLOSER TO APOLLO BY ABOUT 500 YEARS (Look 1) / ABOUT 500 YEARS CLOSER (Look 2)",
-      "where": "on-screen: closing label",
+      "claim": "CLOSER TO APOLLO BY ABOUT 500 YEARS (Look 1); ABOUT 500 YEARS CLOSER (cutout timeline)",
+      "where": "on-screen: closing labels",
       "verdict": "confirmed",
-      "source_checked": "Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005); Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; arithmetic",
-      "note": "2,531 - 2,037 = 494. On Erdil's five Djedefra medians the margin is 459-497, so 'about 500' holds on the radiocarbon chronology that Erdil (2025) and Sheisha both prefer. Note: on historical chronologies quoted by Sheisha the margin is smaller (Shaw, Khafre at 2558: ~452; von Beckerath, 2522: ~416; Spence, 2448: ~342). Erdil rules the Low chronology out at 95%, so the label stands. If the owner wants it robust to every chronology, 'BY CENTURIES' would be."
+      "source_checked": "Arithmetic on claims 5, 6; Erdil S2 Table (s005)",
+      "note": "2,531 - 2,037 = 494; on Erdil's medians 459-497. 'About 500' fits."
     },
     {
       "n": 15,
-      "claim": "Timelines drawn in proportion to the years (Look 1 markers; Look 2 cards 6 and 8 cutouts and arcs)",
-      "where": "on-screen: timeline scale (A6)",
+      "claim": "Timeline drawn in proportion to the years: Cleopatra stands 55.4% of the way from the pyramid to the Moon",
+      "where": "on-screen: timeline scale (both looks) + SOURCES entry 7",
       "verdict": "confirmed",
-      "source_checked": "src/shorts/cleopatra-timeline/index.tsx lines 55-68; src/shorts/cleopatra-cutout/index.tsx Timeline",
-      "note": "Positions are computed as x0 + (x1 - x0) * SHARE, with SHARE = 2531/4568 = 0.554. In Look 2 the arcs run from x0 to xc-18 and from xc+18 to x1, a ratio of about 1.26 against the true 1.24; the cutout pictures are offset by a few px for layout. Proportional, as shown."
+      "source_checked": "src/shorts/cleopatra-timeline/index.tsx (SHARE, line()); src/shorts/cleopatra-cutout/index.tsx (SHARE, xc = x0 + (x1-x0)*SHARE)",
+      "note": "SHARE = 2,531 / 4,568 = 0.554, computed from the three dates; the pyramid, Cleopatra and Moon/astronaut markers sit at x0, the SHARE point and x1 in both looks. The scale is honest."
     },
     {
       "n": 16,
-      "claim": "Illustrated Cleopatra figure (channel gown, gold diadem), flat-shape Great Pyramid, a Moon with a flag, Giza at dusk",
-      "where": "on-screen: Look 1 illustration",
+      "claim": "Card 1: Waterhouse's painting 'Cleopatra', 'CLEOPATRA', credit 'A LATER PAINTING · IMAGINED'",
+      "where": "on-screen: card 1 picture and credit (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "src/shorts/cleopatra-timeline/cast.ts, set.tsx, index.tsx",
-      "note": "A framing label, not a likeness claim: an obviously cartoon figure in the channel's house style (cast.ts: 'The silhouette is the channel's gown rather than Ptolemaic dress'). The Moon flag stands for 1969 and makes no factual claim."
+      "source_checked": "Image file public/cutout/cleopatra/cleopatra.jpg viewed",
+      "note": "The credit claims only what the picture plainly shows: an oil painting in 19th-century academic style of a woman in an invented Egyptian setting, signed lower right. 'Later' and 'imagined' are evident from the image; the screen names no painter or date, so nothing further needs a source."
     },
     {
       "n": 17,
-      "claim": "Card 1: Waterhouse 'Cleopatra' painting, 'CLEOPATRA', credit 'A LATER PAINTING · IMAGINED'",
-      "where": "on-screen: card 1 picture + credit",
+      "claim": "Card 2: Apollo 11 photographs (Aldrin AS11-40-5903, bootprint AS11-40-5877), 'MOON LANDING'",
+      "where": "on-screen: card 2 pictures and label (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "Looked at public/cutout/cleopatra/cleopatra.jpg",
-      "note": "The credit claims only what the picture plainly shows: a 19th-century oil, signed 'J.W. Waterhouse' lower right, made long after its subject and imagined. Confirmed by looking at the image file. Its 1888 date is not shown on screen, so it is not checked."
+      "source_checked": "images-api.nasa.gov as11-40-5903 and as11-40-5877; images-assets.nasa.gov small renditions compared side by side with aldrin.jpg and bootprint.jpg",
+      "note": "Same frames (aldrin.jpg is a recentred crop of AS11-40-5903). NASA: 'Astronaut Edwin E. Aldrin Jr. ... walks on the surface of the moon ... during the Apollo 11 extravehicular activity'; AS11-40-5877 'an astronaut's bootprint in the lunar soil ... during the Apollo 11 extravehicular activity'. NASA says 'an astronaut's', so public/SOURCES.json's 'Aldrin's bootprint' goes beyond the record, but that wording is not shown on screen."
     },
     {
       "n": 18,
-      "claim": "Card 2: 'MOON LANDING' over Aldrin on the Moon (AS11-40-5903) with a bootprint (AS11-40-5877)",
-      "where": "on-screen: card 2 pictures",
+      "claim": "Card 3: Roberts/Haghe lithograph 'Pyramids of Geezeh', 'GIZA PYRAMIDS' (no credit on card)",
+      "where": "on-screen: card 3 picture and label (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "NASA: AS11-40-5903 '(20 July 1969) --- Astronaut Edwin E. Aldrin Jr. ... walks on the surface of the moon ... during the Apollo 11 extravehicular activity'. AS11-40-5877: 'A close-up view of an astronaut's bootprint in the lunar soil ... during the Apollo 11 extravehicular activity'. The local files match the NASA renditions: the bootprint correlates at 0.99; aldrin.jpg is the same frame recropped, checked by eye. The screen does not say whose bootprint it is."
+      "source_checked": "Image file public/cutout/cleopatra/geezeh.jpg viewed",
+      "note": "The picture plainly shows two large pyramids, a small third and the Sphinx's head, i.e. Giza, drawn as a hand-coloured print with 19th-century figures. It cannot be mistaken for a photograph or an ancient scene, and the label claims only 'Giza pyramids'. A credit like the other cards' ('A 19TH-CENTURY PRINT') would be consistent, but it is not needed for accuracy."
     },
     {
       "n": 19,
-      "claim": "Card 3: 'GIZA PYRAMIDS' over the Roberts/Haghe lithograph 'Pyramids of Geezeh'",
-      "where": "on-screen: card 3 picture",
+      "claim": "Card 4: Frith's photograph, the pyramid cut out, 'FINISHED!' then 'c. 2600 BC', credit 'AS PHOTOGRAPHED BY FRITH, 1858'",
+      "where": "on-screen: card 4 picture and credit (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "Looked at public/cutout/cleopatra/geezeh.jpg",
-      "note": "The label claims only that these are the Giza pyramids. The print plainly shows two large pyramids with the Sphinx's head to the right, which is Giza. Confirmed by looking. No date or credit is shown, so none is checked."
+      "source_checked": "collectionapi.metmuseum.org object 286141 (title 'The Great Pyramid and The Great Sphinx', Francis Frith, 1858, albumen silver print, image DP132062); Met web-large image compared with frith.jpg; OUTLINE.pyramid drawn on frith.jpg",
+      "note": "Met record: 'The Great Pyramid and The Great Sphinx' | 'Francis Frith' | '1858'. Same photograph as frith.jpg. The cut-out outline (pts 880,128 / 1425,640 / 1345,805 / 80,812) traces the large pyramid behind the Sphinx, which the Met title names the Great Pyramid; viewed from south of the Sphinx looking north, that is Khufu's. The credit stops the 1858 weathered state being read as the finished monument."
     },
     {
       "n": 20,
-      "claim": "Card 4: Frith photograph, pyramid cut out, 'FINISHED!' then 'c. 2600 BC', credit 'AS PHOTOGRAPHED BY FRITH, 1858'",
-      "where": "on-screen: card 4 picture + credit",
+      "claim": "Card 5: Alma-Tadema's 'The Meeting of Antony and Cleopatra' (cropped to Cleopatra), 'BORN' then '69 BC', credit 'A LATER PAINTING · IMAGINED'",
+      "where": "on-screen: card 5 picture and credit (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "collectionapi.metmuseum.org object 286141 (accession 2005.100.555) and its image DP132062, compared with public/cutout/cleopatra/frith.jpg",
-      "note": "Met 286141: 'The Great Pyramid and The Great Sphinx', Francis Frith, objectDate 1858. The print is also signed 'Frith 1858' lower left, and the local file matches the Met image (correlation 1.0). Because the Met title names it the Great Pyramid, the cut-out pyramid labelled c. 2600 BC is Khufu's. The credit tells the viewer the stripped, weathered state is how it looked in 1858."
+      "source_checked": "Image file public/cutout/cleopatra/second.jpg viewed; Rosso 2021 (PMC8042289)",
+      "note": "The picture is plainly a 19th-century-style oil painting of an imagined scene, which is all the credit claims. It shows her as an adult (the meeting took place 'In 41 ... in Tarsus', Rosso), not at birth, but the credit marks it as imagined and the label is the spoken date, so nothing false is implied."
     },
     {
       "n": 21,
-      "claim": "Card 5: Alma-Tadema painting, 'BORN' then '69 BC', credit 'A LATER PAINTING · IMAGINED, 41 BC'",
-      "where": "on-screen: card 5 picture + credit",
-      "verdict": "unverified",
-      "source_checked": "Looked at public/cutout/cleopatra/second.jpg; Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289; Met API search (no record); christies.com.cn (not reachable); web search hits were only aggregators and Commons mirrors",
-      "note": "'A LATER PAINTING · IMAGINED' is plain from the image. But '41 BC' says the picture shows the meeting at Tarsus, and that comes only from the painting's title, which no A2 source I could reach states: it is in a private collection, Commons and the aggregators don't count, and the Christie's lot page was not reachable. Rosso confirms the meeting itself ('In 41, the meeting of Antony and Cleopatra ... in Tarsus'), but Rosso's Fig. 21 is a coin, not this painting. Change: drop ', 41 BC' (credit 'A LATER PAINTING · IMAGINED'), or cite a catalogue raisonné or museum/auction record that gives the painting's title or subject."
+      "claim": "Cards 6 and 8 (timeline): cut-outs of the Frith pyramid at c. 2600 BC, the Waterhouse Cleopatra at 69 BC, Aldrin at AD 1969",
+      "where": "on-screen: timeline cut-outs (Look 2)",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-cutout/index.tsx (OUTLINE.pyramid, OUTLINE.queen, OUTLINE.astronaut, Timeline)",
+      "note": "Icons for the three dated events, already credited on their own cards; placed to scale (claim 15)."
     },
     {
       "n": 22,
-      "claim": "Card 7: 'APOLLO 11' over the launch (KSC-69PC-442) and Aldrin beside the flag (AS11-40-5874)",
-      "where": "on-screen: card 7 pictures",
+      "claim": "Card 7: Apollo 11 launch (KSC-69PC-442) and flag photograph (AS11-40-5874), 'APOLLO 11'",
+      "where": "on-screen: card 7 pictures and label (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "ksc-69pc-442: 'The Apollo 11 Saturn V space vehicle lifted off ... at 9:32 a.m. EDT July 16, 1969'. as11-40-5874: '(20 July 1969) --- Astronaut Edwin E. Aldrin Jr. ... poses ... beside the deployed United States flag during Apollo 11 extravehicular activity'. The local files match the NASA renditions (correlation 1.0 and 0.99)."
+      "source_checked": "images-api.nasa.gov ksc-69pc-442 and as11-40-5874; small renditions compared side by side with launch.jpg and flag.jpg",
+      "note": "Same images. NASA: 'The Apollo 11 Saturn V space vehicle lifted off ... at 9:32 a.m. EDT July 16, 1969'; AS11-40-5874 'Aldrin ... poses ... beside the deployed United States flag during Apollo 11 extravehicular activity'."
     },
     {
       "n": 23,
-      "claim": "Card 8: Roberts/Haghe 'Great Sphinx, Pyramids of Gizeh' lithograph with the Waterhouse Cleopatra pasted in, 'THE PYRAMIDS?', credit 'AN 1840s PRINT · COLLAGE'",
-      "where": "on-screen: card 8 picture + credit",
-      "verdict": "unverified",
-      "source_checked": "Looked at public/cutout/cleopatra/sphinx.jpg at full size, cropped and enhanced; Met 591848 (Roberts/Haghe, 'The Holy Land, Syria, Idumea, Arabia, Egypt & Nubia', 1842-49); Cleveland Museum of Art record 1953.503 (openaccess-api.clevelandart.org and www.clevelandart.org not reachable); Commons full-size file (HTTP 429)",
-      "note": "'COLLAGE' is plain from the image. 'PRINT' is plain too, with Roberts's pencilled title and a 'London Published by F.G. Moon ...' line. But the year in that publisher line cannot be read at 1280 px. The only legible date is the drawing inscription 'July 17th 1839', and public/SOURCES.json itself calls the lithograph '1839'. The Met dates the Roberts/Haghe publication 1842-49, but I could not tie this plate to it from an A2 record. Change: either give the credit as something the image proves ('A 19th-CENTURY PRINT · COLLAGE'), or confirm the plate's publication year from the Cleveland record 1953.503 or the full-resolution publisher line, and fix SOURCES.json's '1839' to match."
+      "claim": "Card 9: Roberts/Haghe Sphinx lithograph with the Cleopatra cut-out pasted on, 'THE PYRAMIDS?', credit 'A 19TH-CENTURY PRINT · COLLAGE'",
+      "where": "on-screen: card 9 picture and credit (Look 2; card 8 in the brief's numbering)",
+      "verdict": "confirmed",
+      "source_checked": "Image file public/cutout/cleopatra/sphinx.jpg viewed, margin enlarged",
+      "note": "The print's own margin reads 'The Great Sphinx, Pyramids of Gizeh, July 17th 1839, David Roberts R.A.' and 'London Published by F.G. Moon, 20 Threadneedle St ... 1846', so it is plainly a 19th-century print of Giza. 'COLLAGE' marks the pasted Cleopatra as a composite, not a scene from her life."
     },
     {
       "n": 24,
-      "claim": "Card 9: Frith photograph toned sepia with a drawn cobweb, 'ANCIENT HISTORY', credit 'FRITH, 1858'",
-      "where": "on-screen: card 9 picture + credit",
+      "claim": "Last card: Frith photograph toned sepia with a cobweb, 'ANCIENT HISTORY', credit 'FRITH, 1858'",
+      "where": "on-screen: last card picture and credit (Look 2)",
       "verdict": "confirmed",
-      "source_checked": "collectionapi.metmuseum.org object 286141 (accession 2005.100.555) and its image DP132062, compared with public/cutout/cleopatra/frith.jpg",
-      "note": "Met 286141: Francis Frith, 1858. The sepia tone and cobweb are plainly decorative. The framing label rests on claim 7."
+      "source_checked": "collectionapi.metmuseum.org object 286141",
+      "note": "Met: Francis Frith, 1858. Sepia tone and cobweb are decoration for the spoken framing (claim 7)."
     },
     {
       "n": 25,
       "claim": "Title: 'Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid'",
-      "where": "post text",
+      "where": "post text (both publish files)",
       "verdict": "confirmed",
       "source_checked": "As claim 1",
-      "note": "Same as the hook; holds on every chronology quoted in the sources."
+      "note": "Same as the spoken hook."
     },
     {
       "n": 26,
       "claim": "Caption: 'The Great Pyramid was about 2,500 years old when Cleopatra was born. Apollo 11 came 2,000 years after her.'",
       "where": "post text",
       "verdict": "confirmed",
-      "source_checked": "Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005); Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289; images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "2,531 years (2,496-2,534 on Erdil's medians), so about 2,500. 2,037 years from her birth and 1,998 from her death, so about 2,000."
+      "source_checked": "Erdil S2 Table (s005); Rosso 2021; NASA as11-40-5903",
+      "note": "2,496-2,534 on Erdil's medians, 2,531 on c. 2600 BC: 'about 2,500'. 2,037 from her birth, 1,998 from her death: '2,000' fits."
     },
     {
       "n": 27,
-      "claim": "Description: 'The Great Pyramid of Giza was finished around 2600 BC, by the end of Khufu's reign.'",
-      "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "'Around 2600 BC' is supported (claim 3). 'By the end of Khufu's reign' is a further, specific claim that no cited source makes. Sheisha only places the construction site in Khufu's time (Journal of Merer), and the SOURCES block itself says 'No source states a completion year'. Change: 'The Great Pyramid of Giza was built for Khufu, whose reign ended around 2600 BC.' Or cite a source that says it was completed within his reign."
+      "claim": "'The Great Pyramid of Giza was built for Khufu, whose reign ended around 2600 BC.'",
+      "where": "post text (description)",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022 (PMC9477388); Erdil S2 Table (s005)",
+      "note": "Sheisha: 'Great Pyramid of Giza (Khufu Pyramid)', 'the Great Pyramid of Khufu'. Erdil: Djedefra accession medians 2565-2603 BCE. This wording is narrower than the spoken 'finished' and is fully supported."
     },
     {
       "n": 28,
-      "claim": "Description: 'Cleopatra VII was born in 69 BC, about 2,500 years later. From her birth to the Apollo 11 landing in 1969 is 2,037 years.'",
-      "where": "post text",
+      "claim": "'Cleopatra VII was born in 69 BC, about 2,500 years later. From her birth to the Apollo 11 landing in 1969 is 2,037 years.'",
+      "where": "post text (description)",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289; images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "Same as claims 4-6 and 13."
+      "source_checked": "Rosso 2021 (PMC8042289); Erdil S2 Table; NASA as11-40-5903",
+      "note": "As claims 4-6."
     },
     {
       "n": 29,
-      "claim": "Description: 'Published dates for Khufu differ by more than a century; even the latest still puts the pyramid some 2,400 years before Cleopatra.'",
-      "where": "post text",
+      "claim": "'Published dates for Khufu differ by more than a century; even the latest still puts the pyramid some 2,400 years before Cleopatra.'",
+      "where": "post text (description)",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119; Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "Sheisha: Khufu's accession 'ranges from 2613 to 2577 BCE (1σ)' ... 'or 2480 ± 5 BCE', a spread of up to ~133 years. Erdil: 'Offsets between the two can be as great as a century'. The latest (Spence) puts Khufu at 2480 and Khafre at 2448, so the pyramid falls about 2,380-2,410 years before 69 BC: 'some 2,400'."
+      "source_checked": "Sheisha et al. 2022 (PMC9477388); Erdil et al. 2025 article XML",
+      "note": "Sheisha: Khufu accession 'ranges from 2613 to 2577 BCE (1σ)' (14C) while others give '2589 BCE (2), 2554 BCE (41), or 2480 ± 5 BCE' — 2613 to 2480 is 133 years. Erdil: 'Offsets between the two can be as great as a century'. Latest (Spence via Sheisha): Khafre's accession '2448 ± 5 BCE', so the pyramid was done by then, 2,379 years before 69 BC: 'some 2,400'. 'The latest' is the latest among the dates the cited sources give."
     },
     {
       "n": 30,
-      "claim": "Post sources list: Sheisha 2022 PNAS 119(37) e2202530119; Erdil 2025 PLOS ONE 10.1371/journal.pone.0314612; Rosso 2021 Toxicology Reports 8: 676-695; NASA AS11-40-5903, KSC-69PC-442",
-      "where": "post text",
+      "claim": "Post sources list: Sheisha 2022 PNAS 119(37) e2202530119; Erdil 2025 PLOS ONE doi:10.1371/journal.pone.0314612; Rosso 2021 Toxicology Reports 8: 676-695; NASA AS11-40-5903, KSC-69PC-442",
+      "where": "post text (sources)",
       "verdict": "confirmed",
-      "source_checked": "api.crossref.org works records for the three DOIs; images-api.nasa.gov",
-      "note": "Crossref: PNAS vol 119 issue 37, article e2202530119, 2022; PLOS One vol 20 (5), e0314612, published 2025-05-28; Toxicology Reports vol 8 pp 676-695, 2021. Both NASA IDs exist with matching captions."
+      "source_checked": "api.crossref.org for all three DOIs; images-api.nasa.gov",
+      "note": "Crossref: PNAS 119, issue 37, e2202530119 (2022); PLOS One 20(5) e0314612 (2025); Toxicology Reports 8, 676-695 (2021). NASA IDs resolve to the described photographs."
     },
     {
       "n": 31,
-      "claim": "SOURCES: Sheisha gives Khufu accession 2613-2577 BCE (radiocarbon, 1 sigma), 2589 (Shaw 2000), 2554 (von Beckerath 1997), 2480 +/- 5 (Spence 2000); Khafre 2558 (Shaw) or 2586-2548 (radiocarbon); Menkaure 2564-2524 (radiocarbon) or 2532 (Shaw); Khafre 2448 on Spence",
+      "claim": "SOURCES: Sheisha et al. title, PNAS 119(37): e2202530119; accession dates for Khufu 2613-2577 BCE (radiocarbon, 1 sigma), 2589 (Shaw 2000), 2554 (von Beckerath 1997), 2480 +/- 5 (Spence 2000); Khafre 2558 (Shaw) or 2586-2548 (radiocarbon)",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119",
-      "note": "Verbatim in the text: 'the accession date of Khufu (Fig. 4) ranges from 2613 to 2577 BCE (1σ) according to the 14C-based chronology (33) while other sources place the onset of his reign at 2589 BCE (2), 2554 BCE (41), or 2480 ± 5 BCE based on astronomical observations (42)'. Khafre: '2586 to 2548 BCE (1σ) (33) or ... 2558 BCE (2), 2522 BCE (41), or 2448 ± 5 BCE (42)'. Menkaure: '2564 to 2524 BCE (1σ) (33) with centers on 2532 BCE (2)'. Refs: 2 = Shaw, Oxford History of Ancient Egypt 2000; 33 = Bronk Ramsey et al. 2010; 41 = von Beckerath 1997; 42 = Spence, Nature 2000."
+      "source_checked": "Sheisha et al. 2022 full text (PMC9477388) incl. reference list; api.crossref.org",
+      "note": "Text: 'the accession date of Khufu ... ranges from 2613 to 2577 BCE (1σ) according to the 14 C-based chronology (33) while other sources place the onset of his reign at 2589 BCE (2), 2554 BCE (41), or 2480 ± 5 BCE based on astronomical observations (42)'; 'The accession date of Khafre ranges from 2586 to 2548 BCE (1σ) (33) or is chronologically centered on 2558 BCE (2)'. Refs: 2 = Shaw, Oxford History of Ancient Egypt 2000; 41 = von Beckerath 1997; 42 = Spence, Nature 408 (2000). Title and citation match Crossref."
     },
     {
       "n": 32,
-      "claim": "SOURCES: Sheisha calls it 'the Great Pyramid of Giza (Khufu Pyramid)'; Journal of Merer records limestone taken 'to the construction site of the Great Pyramid of Khufu'",
+      "claim": "SOURCES: Erdil et al. — 'Offsets between the two can be as great as a century'; S2 Table puts the end of Khufu's reign (Djedefra's accession) at a median of 2565-2603 BC across its five models",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119",
-      "note": "Both phrases are verbatim in the Significance section and the introduction. The Merer quote is Sheisha's paraphrase of the papyrus, not the papyrus's own words, which is how the SOURCES entry attributes it."
+      "source_checked": "Erdil et al. 2025 article XML (journals.plos.org); S2 Table PDF (journal.pone.0314612.s005)",
+      "note": "Quotation verbatim in the abstract. S2 Table 'The modelled 95% ranges for OK rulers': Djedefra medians OK-P1 2565, P2 2577, P3 2586, P4 2603, P5 2603. Reading Djedefra's accession as the end of Khufu's reign follows the table's order of succession (Khufu then Djedefra)."
     },
     {
       "n": 33,
-      "claim": "SOURCES: Erdil 2025: 'Offsets between the two can be as great as a century'; S2 Table puts Djedefra's accession at a median of 2565-2603 BC across its five models",
+      "claim": "SOURCES: Rosso — 'Cleopatra VII was born at 69 BC'; 'The queen committed suicide in August 30 BC'; 'the last member of Ptolemaic Dynasty'; 'the last queen of Egypt'; her meeting with Antony at Tarsus in 41 BC",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Erdil et al. 2025 PLOS ONE 20(5) e0314612 article XML (journals.plos.org) and S2 Table PDF (supplementary s005)",
-      "note": "The abstract quote is verbatim. S2 Table ('The modelled 95% ranges for OK rulers'), Djedefra medians: OK-P1 2565, OK-P2 2577, OK-P3 2586, OK-P4 2603, OK-P5 2603."
+      "source_checked": "Rosso 2021 full text (PMC8042289); api.crossref.org",
+      "note": "All four quotations verbatim ('As the last member of Ptolemaic Dynasty, Cleopatra VII inherited the throne'; 'as the last queen of Egypt'). Tarsus: 'In 41, the meeting of Antony and Cleopatra (Fig. 21) in Tarsus' (a paraphrase, BC from context, not a quotation). Title matches Crossref."
     },
     {
       "n": 34,
-      "claim": "SOURCES: Rosso: 'Cleopatra VII was born at 69 BC'; 'The queen committed suicide in August 30 BC'; 'the last member of Ptolemaic Dynasty'; meeting with Antony at Tarsus in 41 BC",
+      "claim": "SOURCES: NASA records — AS11-40-5903, Aldrin on the Moon, 20 July 1969; launch 16 July 1969 (KSC-69PC-442)",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289",
-      "note": "The three quotes are verbatim ('As the last member of Ptolemaic Dynasty, Cleopatra VII inherited the throne'). Tarsus is a paraphrase of 'In 41, the meeting of Antony and Cleopatra (Fig. 21) in Tarsus (Plutarch, Life of Antony 35–36; Cassius Dio 48. 24)'."
+      "source_checked": "images-api.nasa.gov as11-40-5903, ksc-69pc-442",
+      "note": "'AS11-40-5903 (20 July 1969) --- Astronaut Edwin E. Aldrin Jr. ... walks on the surface of the moon'; 'lifted off ... at 9:32 a.m. EDT July 16, 1969'."
     },
     {
       "n": 35,
-      "claim": "SOURCES: NASA records: AS11-40-5903, Aldrin on the Moon, 20 July 1969; launch 16 July 1969 (KSC-69PC-442)",
+      "claim": "SOURCES entry 1 derived figures: on Spence's dates the pyramid would be about 150 years younger; even on the lowest chronology about 2,380 years older than Cleopatra, against 2,037",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "images-api.nasa.gov records as11-40-5903, as11-40-5877, as11-40-5874, ksc-69pc-442, KSC-as11-40-5877; images-assets.nasa.gov medium renditions compared with the files in public/cutout/cleopatra/",
-      "note": "As quoted in claims 18 and 22."
+      "source_checked": "Sheisha et al. 2022 (PMC9477388); arithmetic",
+      "note": "2600 - 2448 = 152; -2447 to -68 = 2,379."
     },
     {
       "n": 36,
-      "claim": "SOURCES 2: 'Cleopatra VII Philopator ... She was the last ruler of the Macedonian Greek Ptolemaic dynasty'",
+      "claim": "SOURCES entries 4-5 derived figures: 68 + 1,969 = 2,037; from her death 1,998; difference 494 (459-497 on Erdil's medians); from her death 2,570 against 1,998",
       "where": "SOURCES",
-      "verdict": "fix",
-      "source_checked": "Rosso 2021 Toxicology Reports 8:676-695 full text, Europe PMC PMC8042289",
-      "note": "Minor, SOURCES prose only, never shown to viewers. Rosso has 'last member of Ptolemaic Dynasty', 'the last queen of Egypt' and a 'Macedonian princess'. The epithet 'Philopator' does not appear for her in Rosso, and 'last ruler' is not Rosso's wording (Caesarion was nominally co-ruler). Change to Rosso's wording ('the last queen of Egypt, last member of the Macedonian Ptolemaic dynasty') or cite a source for 'Philopator'. The on-screen 'QUEEN OF EGYPT' is unaffected."
+      "verdict": "confirmed",
+      "source_checked": "Arithmetic on Rosso and Erdil S2 Table figures",
+      "note": "-29 to 1969 = 1,998; -2599 to -29 = 2,570; 2,531 - 2,037 = 494; 2,496 - 2,037 = 459, 2,534 - 2,037 = 497. All correct."
     },
     {
       "n": 37,
-      "claim": "SOURCES 1/3/4/5: arithmetic: lowest chronology ~2,380 years older; Spence ~150 years younger; 2,496-2,534 on Erdil; 2,037 = 68 + 1,969; 1,998 from death; margin 494 (459-497); 2,570 against 1,998",
+      "claim": "SOURCES entry 6: Menkaure's accession 2564-2524 BC (radiocarbon) or 2532 BC (Shaw), so the three Giza pyramids were built roughly 2,300 to 2,500 years before her birth; later pyramids such as the Nubian ones at Meroe are not the subject",
       "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Arithmetic on the confirmed dates",
-      "note": "2448-69 = 2,379; 2600-2448 = 152; 2565-69 = 2,496 and 2603-69 = 2,534; 68+1969 = 2,037; 29+1969 = 1,998; 2,531-2,037 = 494; 2,496-2,037 = 459 and 2,534-2,037 = 497; -29-(-2599) = 2,570. All correct."
-    },
-    {
-      "n": 38,
-      "claim": "SOURCES 6: the Giza pyramids were built roughly 2,300 to 2,500 years before her birth; Meroe's pyramids are not the subject",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "Sheisha et al. 2022 PNAS full text, Europe PMC PMC9477388 (fullTextXML), doi:10.1073/pnas.2202530119",
-      "note": "Khufu at the high end (2613) is 2,544 years before 69 BC; Menkaure at the low end (Spence '2415 ± 10') is 2,346 years before. Hence 'roughly 2,300 to 2,500'. The Meroe remark is scoping, not a claim made to viewers, and is unsourced."
-    },
-    {
-      "n": 39,
-      "claim": "SOURCES 7: Cleopatra stands 55.4% of the way from the pyramid to the Moon",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "Arithmetic; code SHARE",
-      "note": "2,531 / (1969 + 2599) = 2,531 / 4,568 = 0.554."
+      "source_checked": "Sheisha et al. 2022 (PMC9477388)",
+      "note": "Sheisha: Menkaure 'ranges from 2564 to 2524 BCE (1σ) (33) with centers on 2532 BCE (2), 2489 BCE (41), or 2415 ± 10 BCE (42)'. Span from Spence's Menkaure (≈2,346 years) to radiocarbon Khufu (≈2,544): 'roughly 2,300 to 2,500' holds. The Meroe remark is a scoping note with no cited source; it carries no claim into the script or screen, so it does not block."
     }
   ]
 }
