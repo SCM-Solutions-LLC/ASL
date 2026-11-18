@@ -7,7 +7,6 @@ Overland, on a sledge, that study estimates about eight months of hauling.
 A glacier? A 2026 ice model says ice could have carried it part of the way, at most.
 Then, months later, a new study, including three of the 2024 team, looked closer.
 Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far has been shown to match it in every way.
-Where exactly the Altar Stone came from is, for now, unknown.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -53,7 +52,7 @@ neither paper claims.
    in doubt. First half: Clarke 2024, abstract: "Detrital age comparisons ...
    reveal a remarkable similarity to the Old Red Sandstone of the Orcadian
    Basin in northeast Scotland"; title, "A Scottish provenance for the Altar
-   Stone of Stonehenge". Second half: the same sources as claim 10. Pirrie 2026
+   Stone of Stonehenge". Second half: Pirrie 2026
    says "the exact provenance of the Altar Stone is as yet unknown"; Clarke
    2026, the authors who favour Scotland, say "its source location within this
    large basin remains unresolved". "Nobody can say exactly" covers both, and
@@ -76,7 +75,7 @@ neither paper claims.
    rounder "some 700 km" ("the 6000 kg central sandstone megalith"), which the
    script does not contradict. The distance holds only for an Orcadian Basin
    source, as Clarke 2024 frames it ("Such a provenance implies"); "If so"
-   keeps that condition, since claim 1 and claim 10 say the source is
+   keeps that condition, since claim 1 says the source is
    unresolved. "When" is unknown:
    Parker Pearson 2024, "Just when the Altar Stone arrived at Stonehenge is
    unknown"; Pirrie 2026 abstract, "Its purpose at the monument, and when it
@@ -153,9 +152,3 @@ neither paper claims.
    grain dating "supports a Laurentian source for the heavy minerals", so it
    narrows the source down rather than overturning the 2024 result. The script
    says only what is above.
-
-10. "Where exactly the Altar Stone came from is, for now, unknown."
-    Pirrie 2026, abstract: "this integrated dataset shows that the exact
-    provenance of the Altar Stone is as yet unknown." Clarke 2026, abstract:
-    "its source location within this large basin remains unresolved". Both
-    support it.
