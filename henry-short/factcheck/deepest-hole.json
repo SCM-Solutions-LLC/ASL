@@ -1,447 +1,311 @@
 {
   "script": "script/deepest-hole.txt",
-  "sha256": "3e8c82449a546fc5df6c9e456867890465306393cc22a939c720422c968b0ee3",
+  "sha256": "ef86a179103d9c097f17c26dc5fc4f9fe31bdf3eba566e7c6d27e5e1d48c2975",
   "checked": "2026-11-18",
   "claims": [
     {
       "n": 1,
-      "claim": "The deepest hole humans have ever dug ...",
-      "where": "spoken (hook)",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Lobanov 2021 (read): 'In 1990, the maximum depth was reached — 12262 m, which has not been surpassed so far'; 'This result has been unrivaled for 50 years'; 'the world's deepest scientific well, which reached a record depth of 12.262 m'. That confirms the record up to 2021. The claim is made in the present tense on 2026-11-18, and the SOURCES block rests the 2021-2026 part on Zhu & Huang 2026, which could not be opened. Change needed: read Zhu & Huang (allow idp.nature.com) and confirm it states SG-3 is still the deepest, or cite another A2 source dated after 2021. Note for pedants: Lobanov's figure is the depth of the deepest branch (the third shaft, 'started at a depth of 7010 m, ended at 12 262 m'); longer oil wells (measured length) are not covered by any source read, and the script rightly says 'deepest', not 'longest'."
+      "claim": "The deepest hole humans have ever dug (what a viewer has heard at second two: the Kola well is the deepest hole ever made)",
+      "where": "spoken (hook, 0.0-2.2 s)",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: Russian PDF arcticandnorth.ru/upload/iblock/df4/267_284.pdf and the journal's English edition arcticandnorth.ru/upload/iblock/61f/44_224_239.pdf; Zhu & Huang 2026, nature.com/articles/s43247-026-03246-z",
+      "note": "Lobanov (EN p.231): 'In 1990, the maximum depth was reached — 12262 m, which has not been surpassed so far.' Zhu & Huang (Feb 2026): 'remains the deepest vertical borehole ever attempted' and 'The deepest penetration is the Russia's Kola Superdeep Borehole'; the newer wells they list are shallower (SDTK-1 10,910 m, X-1 11,156 m). 'Dug' for a drilled hole is a framing word. True as stated at second two."
     },
     {
       "n": 2,
-      "claim": "... was drilled with a bit narrower than a dinner plate.",
-      "where": "spoken (hook)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; Met Museum Collection API: v1.1/search?q=51.86.100 -> objectID 201074, v1/objects/201074",
-      "note": "Lobanov: 'a 46 m long multistage turbine at the bottom with a 214 mm drill bit'. Met 51.86.100 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)'; even the Met's smaller dinner plate 51.86.140 is 23.2 cm. 21.4 cm < 23-26 cm, so the wording holds. Popov's 214 mm open-hole figure was not read (see SOURCES items) but is not needed for this line."
+      "claim": "...was drilled with a bit narrower than a dinner plate.",
+      "where": "spoken (hook, first sentence)",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 (EN and RU PDFs), text p.276/EN p.232 and Fig. 5v 'actual well construction' (rendered at 600 dpi); USGS OFR 86-517 (pubs.usgs.gov/of/1986/0517/report.pdf) drilling sections; Met API object 201074",
+      "note": "The 214 mm bit is real (Lobanov: 'a 46 m long multistage turbine at the bottom with a 214 mm drill bit'), and it is narrower than the Met's 25.6 cm dinner plate. But the sentence says the hole was drilled with that bit, and the viewer takes away that the hole is narrower than a plate. Lobanov Fig. 5v gives the actual construction: 'd 720 mm, 40 m' at the top, casing 'd 325 mm, 2000 m', casing 'd 245 mm, 8770 m', and open hole 'd 215,9 mm, 12262 m'. The top 2 km had to be bored wider than the 325 mm casing, and the top 40 m is 72 cm across, so the upper hole is wider than a dinner plate. USGS: 'The predominantly uncased hole (after 2 km)'. The USGS bit list also includes 'reamers (to increase the diameter of the hole)' of 295.3 mm. Fails A3/A4 as worded. Change the line to something like 'The deepest hole humans have ever dug was drilled, for most of its depth, with a bit narrower than a dinner plate.' Or name the bit without the hole: 'its drill bit was narrower than a dinner plate.' Add the casing programme (Lobanov Fig. 5v) to SOURCES item 2."
     },
     {
       "n": 3,
-      "claim": "A4 swipe-at-second-two reading: 'the deepest hole ever is about as narrow as a dinner plate'",
-      "where": "spoken (hook, implied)",
+      "claim": "21 CM BIT / narrower than a dinner plate (tag)",
+      "where": "on-screen: Look 1 tag",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "The hook names the bit, which is true as stated. The impression a swiper may take, that the hole itself is that narrow, is true for most of its length but not everywhere: Lobanov, 'To a depth of about 7 km ... the borehole was flat, almost corresponding to the diameter of the drill bit', but below 7 km 'oval shape, many caverns appeared'; USGS OFR 86-517 p.(geophysics, neutron-gamma log) mentions readings 'where cavity diameter is greater than 40 cm', and the drilling chapter lists a 295.3 mm reamer. The script's choice to name the bit, not the hole, is what keeps the hook true; do not reword it to 'the hole is narrower than a dinner plate'. Also 'dug' for a drilled borehole is colloquial framing, corrected by 'drilled' in the same sentence. The whole hook still depends on claim 1 for 'deepest ever'."
+      "source_checked": "Lobanov 2021 EN p.232; USGS OFR 86-517 bit list (KC-212.7, ISM-214.3); Met API collectionapi.metmuseum.org/public/collection/v1/objects/201074",
+      "note": "The text names the bit, and that holds: 214 mm rounds to 21 cm, and USGS lists coring bits of 212.7 and 214.3 mm. The Met has 51.86.100 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)'. The loupe drawn next to this tag is a separate claim (n 4)."
     },
     {
       "n": 4,
-      "claim": "It took the Soviet Union about twenty years.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'Drilling was started on May 24, 1970'; 'In 1990, the maximum depth was reached — 12262 m'; Kola expedition 'of the USSR Ministry of Geology and Mineral Resources'. 1970 to 1990 = 20 years. If Zhu & Huang's 1989 is right it is 19, still 'about twenty'. Soviet: also the 1987 USSR stamp 'ПОЧТА СССР ... кольская сверхглубокая скважина' (public/cutout/hole/stamp.jpg, viewed)."
+      "claim": "Loupe showing 'the hole seen from above' with a dinner plate dropped over it that covers it",
+      "where": "on-screen: Look 1 loupe (src/shorts/deepest-hole/index.tsx, Loupe)",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 Fig. 5v",
+      "note": "A6: the drawing shows the mouth of the hole as smaller than a dinner plate. The well head is 720 mm across to 40 m, and the bore is wider than the 325 mm casing to 2,000 m (Fig. 5v), so a plate would not cover it. Draw the bit (or a cross-section 'near the bottom') against the plate, not the hole seen from above, or label it so."
     },
     {
       "n": 5,
-      "claim": "It goes down twelve kilometres.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'reached a depth of 12262 m'; 'the third one, started at a depth of 7010 m, ended at 12 262 m'. 12,262 m rounded down to twelve kilometres."
+      "claim": "THE HOLE (label on a 21 cm black disc, 'the mouth of the hole'), then DINNER PLATE dropped over it",
+      "where": "on-screen: Look 2 Hole scene (src/shorts/deepest-hole-cutout/index.tsx, Hole)",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 Fig. 5v",
+      "note": "Same problem as n 4. A disc 21 cm across labelled 'THE HOLE' says the hole is that wide. It is that wide only in the open-hole section (215.9 mm nominal, below 8,770 m per Fig. 5v, and even there oval and caverned). At the top it is 720 mm. Relabel the disc 'THE BIT' (or 'NEAR THE BOTTOM'), or show the bit photo instead. This also makes SOURCES item 2's statement 'the line and the labels name the bit' true, which today it is not."
     },
     {
       "n": 6,
-      "claim": "And it never made it through the crust.",
-      "where": "spoken",
+      "claim": "21 CM BIT / DINNER PLATE (plate 25.6 cm, Met 51.86.100, bit drawn to scale against it)",
+      "where": "on-screen: Look 2 labels; SOURCES item 2",
       "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext); Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "USGS OFR 86-517: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km'; 'The average depth of the Mohorovicic discontinuity on the Kola Peninsula is 37 km with a range of 28 to 40 km'. 12.262 km is well short even of the 28 km minimum. Lobanov: 'The basalt layer was not found at all: up to the record depth, the drill penetrated through the Archean granitoid rocks' (i.e. not even out of the upper crust)."
+      "source_checked": "collectionapi.metmuseum.org/public/collection/v1/objects/201074 (found via v1.1/search?q=51.86.100); Lobanov 2021",
+      "note": "The Met API gives accessionNumber '51.86.100', title 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)'. The code draws BORE_CM 21 against PLATE_CM, which is to scale. The label text is right; the 'THE HOLE' disc under it is n 5."
     },
     {
       "n": 7,
-      "claim": "At the bottom, the rock was over two hundred degrees.",
+      "claim": "It took the Soviet Union about twenty years.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'the real temperature in the borehole at a depth of 10 km reached 180°С, and at a depth of about 12 km, the temperature values reached 212°С, instead of the assumed 120°С'. 212 °C at about 12 km = 'over two hundred'. The voice gives no unit; 212 °C is 414 °F, so the line is true whichever unit a viewer assumes. Lobanov says temperature 'in the borehole'; 'the rock' is a fair reading for a static bottom-hole measurement."
+      "source_checked": "Lobanov 2021 EN pp.227, 228, 231; Zhu & Huang 2026",
+      "note": "Lobanov: 'Drilling was started on May 24, 1970'; 'In 1990, the maximum depth was reached — 12262 m'. Zhu & Huang: 'reaching 12,262 m between 1970 and 1989'. 19-20 years, so 'about twenty' holds. Both dates fall before the USSR ended in Dec 1991. Note: Zhu & Huang cite Lobanov (their ref. 29) for this paragraph, so 1990 has the better footing."
     },
     {
       "n": 8,
-      "claim": "The hot rock kept closing the hole ...",
-      "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Rests only on Zhu & Huang 2026 ('plastic rock flow that repeatedly sealed the hole'), which could not be opened. Lobanov 2021, which was read, does not attribute the hole's trouble to heat: 'less durable, fractured, interbedded Archean rocks ... went deeper than 7 km. Drilling became more difficult, and the borehole took on an oval shape, many caverns appeared, and accidents became more frequent'; 'in the Archean rocks, external influences led to collapse of the borehole walls and significant changes in its radial dimensions'. Caverns are the hole widening, not closing, so the read source gives a different mechanism. Change needed: either get Zhu & Huang read (allow idp.nature.com) and confirm the quoted sentence, or say what Lobanov supports, e.g. 'The rock kept caving in, and the money ran out.' (on screen 'CAVING ROCK' / 'FUNDING CUT'; post text 'the walls kept collapsing')."
+      "claim": "Year counter 1970 -> 1989, then '1989–90'; 'drilling since 1970'; '1970' -> '1989–90' with 'ABOUT 20 YEARS'",
+      "where": "on-screen: Look 1 tag; Look 2 labels",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021; Zhu & Huang 2026",
+      "note": "1970 start (Lobanov). The end is shown as 1989–90, which carries the disagreement between Zhu & Huang (1989) and Lobanov (1990). Lobanov also has 'As of 05/01/1991, the well depth was 12262 m'."
     },
     {
       "n": 9,
-      "claim": "... and the money ran out.",
+      "claim": "It goes down twelve kilometres.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'However, a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992.' and 'in 1995, all scientific work was terminated due to lack of funding, and the well itself was mothballed'."
+      "source_checked": "Lobanov 2021 (abstract and p.231); Zhu & Huang 2026",
+      "note": "12,262 m in both sources; 'twelve kilometres' rounds down."
     },
     {
       "n": 10,
-      "claim": "Twelve kilometres down. The centre of the Earth is over six thousand more.",
-      "where": "spoken",
+      "claim": "Depth counter to '12,262 M' / '12,262 METRES'; '12 KM DOWN'; 'THE HOLE: 12 KM'",
+      "where": "on-screen: Look 1 and Look 2",
       "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html; Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "NSSDC: 'Volumetric mean radius (km) 6371.000' (polar 6356.752, equatorial 6378.137). 6371 - 12.262 = 6358.7 km; even from the polar radius it is 6344 km, so 'over six thousand more' holds at Kola's latitude (69°25'N, Lobanov)."
+      "source_checked": "Lobanov 2021; Zhu & Huang 2026",
+      "note": "12,262 m exactly as in both sources."
     },
     {
       "n": 11,
-      "claim": "THE HOLE: 12 KM",
-      "where": "on-screen: Look 1",
+      "claim": "And it never made it through the crust.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "12,262 m (Lobanov), rounded down."
+      "source_checked": "USGS OFR 86-517 p. ii-iii (text lines 'Crustal thickness...'); Zhu & Huang 2026; Lobanov 2021",
+      "note": "USGS: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km.' Zhu & Huang: 'Despite not penetrating the Moho'. Lobanov: down to 12 km 'the borehole passed through gneisses and amphibolites of the Kola series, i.e. through the \"granite\" layer'. 12.3 km is well short of 40 km."
     },
     {
       "n": 12,
-      "claim": "21 CM BIT / narrower than a dinner plate",
-      "where": "on-screen: Look 1",
+      "claim": "'about a third of the crust' / 'ABOUT A THIRD OF THE WAY' / 'STILL IN THE CRUST'",
+      "where": "on-screen: Look 1 tag; Look 2 labels",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; Met Museum Collection API: v1.1/search?q=51.86.100 -> objectID 201074, v1/objects/201074",
-      "note": "Lobanov '214 mm drill bit' = 21.4 cm, shown as 21 cm. Met dinner plate 25.6 cm."
+      "source_checked": "USGS OFR 86-517",
+      "note": "12.262 / 40 = 31%, so 'about a third'. Against the 37 km peninsula average (USGS: 'average depth of the Mohorovicic discontinuity on the Kola Peninsula is 37 km with a range of 28 to 40 km') it would be 33%, still about a third."
     },
     {
       "n": 13,
-      "claim": "Year counter 1970 -> 1989, then '1989–90'; sub 'drilling since 1970'",
+      "claim": "'CRUST' / '≈40 km thick here', crust drawn 40 km thick; 'MANTLE'",
       "where": "on-screen: Look 1",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "1970 confirmed (Lobanov 'Drilling was started on May 24, 1970'). 1990 confirmed (Lobanov 'In 1990, the maximum depth was reached — 12262 m'; also 'As of 05/01/1991, the well depth was 12262 m'). 1989 rests only on Zhu & Huang ('reaching 12,262 m between 1970 and 1989'), not read. Change needed: read Zhu & Huang to keep '1989–90', or end the counter on '1990' (the read source)."
+      "verdict": "confirmed",
+      "source_checked": "USGS OFR 86-517",
+      "note": "'Crustal thickness in the vicinity of the corehole was shown to be about 40 km.' The code uses CRUST_KM = 40."
     },
     {
       "n": 14,
-      "claim": "Depth counter to 12,262 M",
-      "where": "on-screen: Look 1",
+      "claim": "At the bottom, the rock was over two hundred degrees.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'In 1990, the maximum depth was reached — 12262 m'."
+      "source_checked": "Lobanov 2021 EN p.236 and p.238; Zhu & Huang 2026",
+      "note": "Lobanov: 'the real temperature in the borehole at a depth of 10 km reached 180°С, and at a depth of about 12 km, the temperature values reached 212°С, instead of the assumed 120°С'. Zhu & Huang: 'bottom-hole temperatures of 212 °C'. These are borehole measurements standing in for the rock temperature, which is the ordinary reading; the script uses 'over two hundred', not the 10 km figure. Celsius is shown on screen, not spoken."
     },
     {
       "n": 15,
-      "claim": "a third of the crust",
-      "where": "on-screen: Look 1",
+      "claim": "'212 °C' / 'predicted: 120 °C'; thermometer 'EXPECTED: 120 °C', 'THE ROCK', '212 °C'; 'AT THE BOTTOM'",
+      "where": "on-screen: Look 1 tag; Look 2 labels",
       "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext); Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "12.262 / 40 = 0.307 (USGS 'about 40 km' at the corehole). 31% shown as 'a third' is within A3 rounding, since the 40 km is itself 'about'. Look 2 and the post text say 'about a third', which is safer; consider 'about a third' here too."
+      "source_checked": "Lobanov 2021",
+      "note": "'212°С, instead of the assumed 120°С' (p.236) and 'instead of the expected 120°С' (p.238). Both 'predicted' and 'expected' match."
     },
     {
       "n": 16,
-      "claim": "212 °C / predicted: 120 °C",
-      "where": "on-screen: Look 1",
+      "claim": "Drilling stopped in nineteen ninety-two, when the money ran out.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'at a depth of about 12 km, the temperature values reached 212°С, instead of the assumed 120°С' (conclusion: 'instead of the expected 120°С'). 'predicted' matches 'assumed/expected'."
+      "source_checked": "Lobanov 2021 EN p.231 and p.233; Zhu & Huang 2026 (text and reference list)",
+      "note": "Lobanov: 'However, a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992.' Also p.233: 'In 1992, a unique operation was carried out to install a casing in the SG-3 borehole to continue drilling the well to a depth of 13 km. However, despite this, further drilling was abandoned.' Zhu & Huang give heat instead ('unexpectedly high bottom-hole temperatures of 212 °C induced plastic rock flow that repeatedly sealed the hole'), but their source for that paragraph is ref. 29, which is Lobanov 2021 itself, and Lobanov does not say it. So Lobanov is the better source, and 'the money ran out' is a fair plain rendering of 'a drastic reduction in funding made it impossible to continue'. Confirmed, close to the line: 'when its funding was cut' would match the source word for word."
     },
     {
       "n": 17,
-      "claim": "CRUST / ≈40 km thick here, crust drawn 40 km thick",
-      "where": "on-screen: Look 1",
+      "claim": "'1992' then 'FUNDING CUT' (over a worn USGS bit with a red X)",
+      "where": "on-screen: Look 2",
       "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "USGS OFR 86-517: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km' (deep seismic sounding 1960-63); the three-layer crust model runs 0-40 km."
+      "source_checked": "Lobanov 2021; public/SOURCES.json entry for wornbit.jpg",
+      "note": "Matches Lobanov's 'drastic reduction in funding ... Drilling was stopped in 1992'. The worn bit is a USGS photo, not from Kola, and nothing on screen says it is. Framing."
     },
     {
       "n": 18,
-      "claim": "MANTLE (label below the crust)",
-      "where": "on-screen: Look 1",
+      "claim": "Twelve kilometres down. The centre of the Earth is over six thousand more.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "Framing label: the layer below the Moho is the mantle; USGS gives the Moho on the Kola Peninsula at 37 km (28-40). Confirmed as a label."
+      "source_checked": "nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "note": "NSSDC: 'Volumetric mean radius (km) 6371.000'. 6,371 - 12.262 = 6,359 km. Even at Kola's latitude (69°N), the radius from NSSDC's equatorial 6378.137 and polar 6356.752 km is about 6,360 km, so 'over six thousand more' holds either way."
     },
     {
       "n": 19,
-      "claim": "Earth's layers drawn from PREM radii: inner core 1,221 km, outer core to 3,480 km",
-      "where": "on-screen: Look 1 (drawing)",
-      "verdict": "unverified",
-      "source_checked": "PREM (doi:10.1016/0031-9201(81)90046-7): ds.iris.edu/ds/products/emc-prem/ 301-redirects to data.earthscope.org (proxy 403); ds.iris.edu file path 403 AccessDenied; www.sciencedirect.com not reachable. Not read.; NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "PREM could not be opened. NSSDC gives 'Core radius (km) 3485', which agrees with 3,480 km to 0.15% (invisible at the drawn scale) but is not the cited figure; NSSDC gives no inner-core radius. Change needed: read PREM (or another A2 source for the inner core), or cite NSSDC's 3,485 km for the core and give an A2 source for the inner core."
+      "claim": "'6,371 KM' / 'surface to centre'; 'THE CENTRE'; '6,000+ KM MORE'",
+      "where": "on-screen: Look 1 tag; Look 2 labels",
+      "verdict": "confirmed",
+      "source_checked": "NSSDC Earth Fact Sheet",
+      "note": "6,371 km is NSSDC's volumetric mean radius. It is a mean, not the radius under Kola (about 6,360 km), but as a generic 'surface to centre' label it is the standard figure."
     },
     {
       "n": 20,
-      "claim": "6,371 KM / surface to centre",
-      "where": "on-screen: Look 1",
+      "claim": "'0.2% of the way. Too thin to draw.' / 'THE HOLE: 0.2% OF THE WAY' / 'THE HOLE: TOO SMALL TO DRAW'",
+      "where": "on-screen: Look 1 tag; Look 2 labels; post text caption",
       "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "NSSDC 'Volumetric mean radius (km) 6371.000'. It is the mean; at Kola's latitude the local radius is nearer 6,360 km. Fine as a rounded 'surface to centre' label."
+      "source_checked": "NSSDC Earth Fact Sheet; Lobanov 2021",
+      "note": "12.262 / 6371 = 0.192%, which rounds to 0.2%. At the drawn radius of 310 px the hole would be 0.6 px deep, so 'too thin to draw' is accurate."
     },
     {
       "n": 21,
-      "claim": "0.2% of the way. Too thin to draw.",
-      "where": "on-screen: Look 1",
+      "claim": "Earth's layers drawn from PREM: outer core radius 3,480 km",
+      "where": "on-screen: Look 1 planet section; SOURCES (Dziewonski & Anderson 1981)",
       "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html; Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "12.262 / 6371 = 0.192% -> '0.2%'. 'Too thin to draw' is a statement about the drawing (a deliberately not-drawn hole, A6 satisfied by the label)."
+      "source_checked": "NSSDC Earth Fact Sheet; PREM itself not reachable (data.earthscope.org/ds.iris.edu PREM_1s.csv: 403; sciencedirect: 403; EarthScope EMC-PREM.json has metadata only)",
+      "note": "PREM's own table could not be opened. NSSDC (A2 agency data) gives 'Core radius (km) 3485', within 0.15% of 3,480, which is 0.4 px at the drawn 310 px radius. Confirmed on NSSDC's figure, not PREM's."
     },
     {
       "n": 22,
-      "claim": "DEEPEST HOLE",
-      "where": "on-screen: Look 2",
+      "claim": "Earth's layers drawn from PREM: inner core radius 1,221 km",
+      "where": "on-screen: Look 1 planet section; SOURCES (Dziewonski & Anderson 1981, 'inner core 1,221.5 km')",
       "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Same as claim 1: confirmed to 2021 by Lobanov; the still-true-in-2026 part rests on Zhu & Huang, not read."
+      "source_checked": "Tried: data.earthscope.org/app/products/portal/catalog/emc/model_pages/EMC-PREM.json (metadata only, no radii); data.earthscope.org and ds.iris.edu PREM_1s.csv (403/404); sciencedirect pii 0031920181900467 (403); api.crossref.org (title/pages only); NSSDC fact sheet (no inner core figure)",
+      "note": "No source meeting A2 that gives the inner-core radius could be opened. The figure is the textbook PREM value, but this pass could not confirm it. Fix by giving the checker a reachable copy of the PREM table (for example EarthScope's PREM_1s.csv) or by citing an agency page that states the inner-core radius."
     },
     {
       "n": 23,
-      "claim": "THE KOLA BOREHOLE, USSR / KOLA PENINSULA / SOVIET UNION",
-      "where": "on-screen: Look 2 (over a CIA map of the USSR)",
+      "claim": "'CRUST', 'MANTLE', 'CORE' labels on the layers",
+      "where": "on-screen: Look 2",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'SG-3 was started in the northwestern part of the Kola Peninsula, 10 km west of the city of Zapolyarniy (69°25 N, 30°44 E)'; USSR Ministry of Geology. The labels are confirmed; the rendered position of any map marker was not inspected here and should sit at 69°25'N 30°44'E, near the Norwegian border."
+      "source_checked": "USGS OFR 86-517; NSSDC",
+      "note": "Framing labels for the standard layers."
     },
     {
       "n": 24,
-      "claim": "THE DRILL TOWER (over the 1987 Soviet stamp)",
-      "where": "on-screen: Look 2",
+      "claim": "'DEEPEST HOLE'; 'THE KOLA BOREHOLE, USSR'; 'THE DRILL TOWER' over the 1987 Soviet stamp of the Kola well",
+      "where": "on-screen: Look 2 (stamp)",
       "verdict": "confirmed",
-      "source_checked": "public/cutout/hole/stamp.jpg viewed (USSR 1987 10-kopeck stamp)",
-      "note": "The stamp is captioned 'кольская сверхглубокая скважина' (Kola superdeep well), 'ПОЧТА СССР', '1987', and shows the enclosed rig tower beside a cutaway of the hole. Label matches the primary document."
+      "source_checked": "The stamp itself (public/cutout/hole/stamp.jpg, viewed): printed 'кольская сверхглубокая скважина', 'ПОЧТА СССР', '1987', '10к'; Lobanov 2021 Fig. 2 (the enclosed derrick)",
+      "note": "The stamp names the Kola superdeep well and is dated 1987, USSR post. It shows a tower building and the well in section. The 'DRILL TOWER' label fits the stamp's drawing of the rig."
     },
     {
       "n": 25,
-      "claim": "THE HOLE (label)",
-      "where": "on-screen: Look 2",
+      "claim": "'KOLA PENINSULA' (loop on the CIA map) and 'SOVIET UNION'",
+      "where": "on-screen: Look 2 (map)",
       "verdict": "confirmed",
-      "source_checked": "framing label",
-      "note": "Pure framing label pointing at the hole in the stamp/cutaway; no factual content beyond the stamp."
+      "source_checked": "Lobanov 2021 p.227; public/cutout/hole/map.jpg with the coral loop's path mapped onto it",
+      "note": "Lobanov: SG-3 was laid 'in the north-western part of the Kola Peninsula, 10 km west of Zapolyarny (69°25′ N, 30°44′ E)', in the USSR. The loop drawn on the map surrounds the Kola Peninsula (Murmansk). Placement was checked against the code's coordinates, not a render."
     },
     {
       "n": 26,
-      "claim": "DINNER PLATE (25.6 cm Met plate with a 21 cm circle drawn against it)",
+      "claim": "'A DRILL BIT' (museum tricone bit, 208 mm) then 'AT THE BOTTOM'",
       "where": "on-screen: Look 2",
       "verdict": "confirmed",
-      "source_checked": "Met Museum Collection API: v1.1/search?q=51.86.100 -> objectID 201074, v1/objects/201074; Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Met API object 201074: accessionNumber 51.86.100, objectName 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)', ca. 1740-45. 21 cm circle vs 21.4 cm bit is to scale within 2%. Side note (D1, not a fact claim): public/SOURCES.json cites the Commons file 'Dinner_plate_MET_150793.jpg'; the Met API returns 'ObjectID not found' for 150793 (the object is 201074). The image in public/cutout/hole/plate.jpg was viewed but not matched against the Met's photo (images.metmuseum.org ES1579.jpg); worth checking it is the same plate."
+      "source_checked": "public/SOURCES.json entry for bit.jpg; Lobanov 2021 Fig. 5g",
+      "note": "Framing. The bit is generic ('A DRILL BIT') and not claimed to be from Kola. Kola's coring bits were carbide-tipped and of a similar size (Lobanov Fig. 5g shows one)."
     },
     {
       "n": 27,
-      "claim": "21 CM BIT",
-      "where": "on-screen: Look 2",
+      "claim": "Title: 'The deepest hole ever dug never left the crust'",
+      "where": "post text",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov '214 mm drill bit'."
+      "source_checked": "As n 1 and n 11",
+      "note": "Deepest (Lobanov, Zhu & Huang); stayed in a ~40 km crust (USGS)."
     },
     {
       "n": 28,
-      "claim": "1970 -> 1989–90",
-      "where": "on-screen: Look 2",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "As claim 13: 1970 and 1990 confirmed by Lobanov; 1989 rests on Zhu & Huang, not read. Read it or show '1990'."
+      "claim": "Caption: 'About 20 years of drilling, 12 km down, and it got 0.2% of the way to the centre of the Earth.'",
+      "where": "post text",
+      "verdict": "confirmed",
+      "source_checked": "As n 7, n 9, n 20",
+      "note": "1970-1989/90; 12,262 m; 0.19%."
     },
     {
       "n": 29,
-      "claim": "ABOUT 20 YEARS",
-      "where": "on-screen: Look 2",
+      "claim": "Description: 'The Kola Superdeep Borehole in the Soviet Arctic reached 12,262 metres in 1989-90, the deepest humans have ever drilled.'",
+      "where": "post text",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "1970-1990 (Lobanov) = 20 years."
+      "source_checked": "Lobanov 2021; Zhu & Huang 2026",
+      "note": "Murmansk region, 69°25′N, in the Arctic; 12,262 m; 1989 or 1990; deepest."
     },
     {
       "n": 30,
-      "claim": "Counter to 12,262 METRES; 12 KM DOWN",
-      "where": "on-screen: Look 2",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 12262 m."
+      "claim": "Description: 'It was drilled with a bit about 21 cm across.'",
+      "where": "post text",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 Fig. 5v and p.232",
+      "note": "Same as n 2: the upper 2 km was bored wider than its 325 mm casing, and the top 40 m is 720 mm. Write 'Most of it was drilled with a bit about 21 cm across' or 'Its drill bit was about 21 cm across.'"
     },
     {
       "n": 31,
-      "claim": "STILL IN THE CRUST / ABOUT A THIRD OF THE WAY",
-      "where": "on-screen: Look 2",
+      "claim": "Description: 'The rock at the bottom was over 200 °C, against about 120 °C predicted, and the hole was about a third of the way through the crust beneath it. Funding was drastically cut, and drilling stopped in 1992.'",
+      "where": "post text",
       "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "12.262 / ~40 km = 31% = 'about a third'. USGS: crust 'about 40 km' at the corehole."
+      "source_checked": "Lobanov 2021; USGS OFR 86-517",
+      "note": "212 °C vs 120 °C assumed; 12.3 of ~40 km; 'a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992.'"
     },
     {
       "n": 32,
-      "claim": "CRUST / MANTLE / CORE (labels)",
-      "where": "on-screen: Look 2",
+      "claim": "SOURCES quotes of Lobanov: 'Drilling was started on May 24, 1970'; 'In 1990, the maximum depth was reached - 12262 m'; a '214 mm drill bit'; 'at a depth of 10 km reached 180°C, and at a depth of about 12 km ... 212°C, instead of the assumed 120°C'; 'a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992'",
+      "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "framing labels; USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext); NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "Standard layer names; no figures. Confirmed as labels."
+      "source_checked": "Lobanov 2021, the journal's English edition arcticandnorth.ru/upload/iblock/61f/44_224_239.pdf (same DOI), checked against the Russian original",
+      "note": "All quotes are verbatim in the English edition (lines on its pp.227, 231, 232, 236). The English edition is paginated 224-239, while SOURCES gives the Russian 267-284; the DOI is the same."
     },
     {
       "n": 33,
-      "claim": "A DRILL BIT (over a museum tricone bit)",
-      "where": "on-screen: Look 2",
+      "claim": "SOURCES quotes of Zhu & Huang: 'reaching 12,262 m between 1970 and 1989'; 'temperatures reached 180 °C at 10 km and 212 °C at 12 km'; 'Drilling was abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C induced plastic rock flow that repeatedly sealed the hole.'",
+      "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "public/SOURCES.json entry for public/cutout/hole/bit.jpg read; Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Generic label on a generic image (a 208 mm hard-rock tricone bit, Warsaw museum). It does not claim to be the Kola bit, which Lobanov describes as a 214 mm bit on a turbodrill with a core receiver, so the label is accurate. Keep it 'A DRILL BIT', not 'THE BIT'."
+      "source_checked": "nature.com/articles/s43247-026-03246-z (open access, Commun. Earth Environ. 7:124, online 2026-02-03)",
+      "note": "All three quotes are verbatim. Worth adding to SOURCES item 7: Zhu & Huang's reference for that paragraph is ref. 29, which is Lobanov 2021, and Lobanov gives funding, not heat."
     },
     {
       "n": 34,
-      "claim": "AT THE BOTTOM; thermometer EXPECTED: 120 °C, THE ROCK: 212 °C",
-      "where": "on-screen: Look 2",
+      "claim": "SOURCES quotes of USGS OFR 86-517: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km'; Moho under the Kola Peninsula 37 km (range 28-40); cavities wider than 40 cm",
+      "where": "SOURCES",
       "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'at a depth of about 12 km ... 212°С, instead of the assumed 120°С'."
+      "source_checked": "pubs.usgs.gov/of/1986/0517/report.pdf (pdftotext)",
+      "note": "Verbatim: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km.' and 'The average depth of the Mohorovicic discontinuity on the Kola Peninsula is 37 km with a range of 28 to 40 km'. On cavities, the report says the neutron-gamma log shows 'a sharp drop in intensity ... where cavity diameter is greater than 40 cm', which supports the paraphrase."
     },
     {
       "n": 35,
-      "claim": "HOT ROCK (as a reason the drilling stopped)",
-      "where": "on-screen: Look 2",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Rests only on Zhu & Huang 2026 ('plastic rock flow that repeatedly sealed the hole'), which could not be opened. Lobanov 2021, which was read, does not attribute the hole's trouble to heat: 'less durable, fractured, interbedded Archean rocks ... went deeper than 7 km. Drilling became more difficult, and the borehole took on an oval shape, many caverns appeared, and accidents became more frequent'; 'in the Archean rocks, external influences led to collapse of the borehole walls and significant changes in its radial dimensions'. Caverns are the hole widening, not closing, so the read source gives a different mechanism. Change needed: either get Zhu & Huang read (allow idp.nature.com) and confirm the quoted sentence, or say what Lobanov supports, e.g. 'The rock kept caving in, and the money ran out.' (on screen 'CAVING ROCK' / 'FUNDING CUT'; post text 'the walls kept collapsing')."
+      "claim": "SOURCES item 1: 'Kola Superdeep Borehole, branch SG-3'",
+      "where": "SOURCES",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 EN pp.232-233",
+      "note": "SG-3 is the name of the well, not a branch. The 12,262 m bore is the third shaft: 'the third one, started at a depth of 7010 m, ended at 12 262 m'. Write 'well SG-3 (the 12,262 m bore is its third branch, sidetracked at 7,010 m)'."
     },
     {
       "n": 36,
-      "claim": "FUNDING CUT (over a worn bit with a red X)",
-      "where": "on-screen: Look 2",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992.' The worn bit is a USGS photo not from Kola; the card does not say it is."
+      "claim": "SOURCES item 2: 'The hole is not that width everywhere: below 7 km the bore went oval ... So the line and the labels name the bit'",
+      "where": "SOURCES",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 Fig. 5v; src/shorts/deepest-hole-cutout/index.tsx (Hole) and src/shorts/deepest-hole/index.tsx (Loupe)",
+      "note": "It leaves out that the upper hole is much wider: 720 mm to 40 m, cased at 325 mm to 2,000 m and 245 mm to 8,770 m (Lobanov Fig. 5v). And it is not true that the labels only name the bit: Look 2 labels a 21 cm disc 'THE HOLE', and Look 1 draws 'the hole seen from above' under a plate. Update after fixing n 2, n 4 and n 5."
     },
     {
       "n": 37,
-      "claim": "THE HOLE: TOO SMALL TO DRAW / THE HOLE: 0.2% OF THE WAY",
-      "where": "on-screen: Look 2",
-      "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html; Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "12.262 / 6371 = 0.19%."
+      "claim": "SOURCES item 7: 'Lobanov describes the walls caving in instead'",
+      "where": "SOURCES",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 EN pp.231-233",
+      "note": "This reads as if Lobanov blames the walls caving in for the stop. He does not. He describes wall collapse in the Archean rocks as a drilling difficulty, gives the funding cut as the reason drilling stopped, and records a 1992 casing run meant 'to continue drilling the well to a depth of 13 km'. Reword, and note that Zhu & Huang's heat explanation cites Lobanov (their ref. 29), who does not say it."
     },
     {
       "n": 38,
-      "claim": "THE CENTRE / 6,000+ KM MORE",
-      "where": "on-screen: Look 2",
+      "claim": "SOURCES item 9: 9,584 m in June 1979 passing the US record of 9,583 m; 12,000 m on 27 December 1983; 12,262 m in 1989-90",
+      "where": "SOURCES (animation figures)",
       "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "6371 - 12.3 = 6359 km."
-    },
-    {
-      "n": 39,
-      "claim": "Title: The deepest hole ever dug never left the crust",
-      "where": "post text (title)",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext); doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "'never left the crust' confirmed (USGS ~40 km crust). 'deepest hole ever' as claim 1: confirmed to 2021 only."
-    },
-    {
-      "n": 40,
-      "claim": "Caption: About 20 years of drilling, 12 km down, and it got 0.2% of the way to the centre of the Earth.",
-      "where": "post text (caption)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "1970-1990, 12,262 m (Lobanov); 12.262/6371 = 0.19% (NSSDC)."
-    },
-    {
-      "n": 41,
-      "claim": "The Kola Superdeep Borehole in the Soviet Arctic reached 12,262 metres in 1989-90, the deepest humans have ever drilled.",
-      "where": "post text (description)",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "12,262 m and Soviet Arctic (69°25'N) confirmed; 1990 confirmed (Lobanov), 1989 only in Zhu & Huang (not read); 'deepest ever' confirmed only to 2021 (claim 1). Change: read Zhu & Huang, or say 'in 1990' and fix claim 1's currency."
-    },
-    {
-      "n": 42,
-      "claim": "It was drilled with a bit about 21 cm across.",
-      "where": "post text (description)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov '214 mm drill bit'."
-    },
-    {
-      "n": 43,
-      "claim": "The rock at the bottom was over 200 °C, against about 120 °C predicted, and the hole was about a third of the way through the crust beneath it.",
-      "where": "post text (description)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "Lobanov 212 °C at about 12 km vs 'the assumed 120°С'; USGS crust about 40 km, 12.262/40 = 31%."
-    },
-    {
-      "n": 44,
-      "claim": "Hot rock kept squeezing the hole shut, and funding was drastically cut; drilling stopped in 1992.",
-      "where": "post text (description)",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Funding and 1992 confirmed (Lobanov: 'a drastic reduction in funding ... Drilling was stopped in 1992'). 'Hot rock kept squeezing the hole shut': see claim 8; only Zhu & Huang (not read) says it, Lobanov describes collapse and caverns in fractured rock. Same change as claim 8."
-    },
-    {
-      "n": 45,
-      "claim": "Sources list: Lobanov et al. 2021 Arktika i Sever 44: 267-284; Zhu & Huang 2026 CEE 7: 124; Popov et al. 1999 Tectonophysics 306: 345; Clarke et al. 1986 USGS OFR 86-517; NASA NSSDC Earth Fact Sheet",
-      "where": "post text (sources)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; Crossref records for 10.1038/s43247-026-03246-z and 10.1016/S0040-1951(99)00065-7; USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext); NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "Bibliographic details checked: Lobanov PDF footer 'Arktika i Sever [Arctic and North], 2021, no. 44, pp. 267–284. DOI: 10.37482/issn2221-2698.2021.44.267'; Crossref: Zhu & Huang, Commun. Earth Environ. 7, article 124 (2026); Popov, Pevzner, Pimenov, Romushkevich, Tectonophysics 306, 345-366 (1999); USGS cover 'Open File Report 86-517', Clarke et al., 1986. Citations are accurate; this does not confirm the content of the two unread papers."
-    },
-    {
-      "n": 46,
-      "claim": "SOURCES: Lobanov quotations: 'Drilling was started on May 24, 1970'; 'In 1990, the maximum depth was reached - 12262 m'; '214 mm drill bit'; 'at a depth of 10 km reached 180°C, and at a depth of about 12 km ... 212°C, instead of the assumed 120°C'; 'a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992'; Russian Academy of Sciences authors",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "All five quotations appear verbatim in the journal's English version (pp. 228, 231, 235, 231-232), with the ellipsis standing for ', the temperature values'. Authors at IGEM RAS (Moscow) and Institute of Geology, Karelian RC RAS."
-    },
-    {
-      "n": 47,
-      "claim": "SOURCES: Zhu & Huang quotations: 'reaching 12,262 m between 1970 and 1989'; 'temperatures reached 180 °C at 10 km and 212 °C at 12 km'; 'Drilling was abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C induced plastic rock flow that repeatedly sealed the hole.'",
-      "where": "SOURCES",
-      "verdict": "unverified",
-      "source_checked": "doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "Paper exists with the cited title/volume/article number (Crossref), but none of the three quoted sentences could be checked. Note the third quote assigns the 1992 stop to heat alone, while Lobanov assigns it to funding; the SOURCES entry records this. Needs idp.nature.com allowed, or the PDF supplied by the owner."
-    },
-    {
-      "n": 48,
-      "claim": "SOURCES: Popov et al. 1999: casing 245 mm to 8,278 m, open borehole 214 mm below it",
-      "where": "SOURCES",
-      "verdict": "unverified",
-      "source_checked": "doi:10.1016/S0040-1951(99)00065-7: Crossref record read (Popov, Pevzner, Pimenov, Romushkevich, 'New geothermal data from the Kola superdeep well SG-3', Tectonophysics 306: 345-366, 1999); linkinghub.elsevier.com -> www.sciencedirect.com answered a captcha page (403), and WebFetch could not resolve www.sciencedirect.com. Text NOT read.",
-      "note": "Not readable here. Not load-bearing for any spoken line (the 214 mm bit is confirmed by Lobanov), but it is the only support for entry 2's '245 mm' casing figure. Read it or drop the casing figures from entry 2."
-    },
-    {
-      "n": 49,
-      "claim": "SOURCES: USGS OFR 86-517: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km'; Moho under the Kola Peninsula 37 km (28-40)",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "USGS Open-File Report 86-517, https://pubs.usgs.gov/of/1986/0517/report.pdf (full PDF, pdftotext)",
-      "note": "Verbatim: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km.' and 'The average depth of the Mohorovicic discontinuity on the Kola Peninsula is 37 km with a range of 28 to 40 km'. The report is a USGS summary of Kozlovskiy's 1984 Nedra monograph, as the SOURCES entry says."
-    },
-    {
-      "n": 50,
-      "claim": "SOURCES: NASA NSSDC Earth Fact Sheet: volumetric mean radius 6,371 km",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "NASA NSSDC Earth Fact Sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
-      "note": "'Volumetric mean radius (km) 6371.000'."
-    },
-    {
-      "n": 51,
-      "claim": "SOURCES: PREM: inner core 1,221.5 km, outer core to 3,480 km",
-      "where": "SOURCES",
-      "verdict": "unverified",
-      "source_checked": "PREM (doi:10.1016/0031-9201(81)90046-7): ds.iris.edu/ds/products/emc-prem/ 301-redirects to data.earthscope.org (proxy 403); ds.iris.edu file path 403 AccessDenied; www.sciencedirect.com not reachable. Not read.",
-      "note": "See claim 19. NSSDC core radius 3485 km is consistent with 3,480 km."
-    },
-    {
-      "n": 52,
-      "claim": "SOURCES entry 2: below 7 km the bore went oval with caverns (Lobanov)",
-      "where": "SOURCES",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'deeper than 7 km ... the borehole took on an oval shape, many caverns appeared'; 'At depths of more than 7000 m, the wellbore had an elliptical section.'"
-    },
-    {
-      "n": 53,
-      "claim": "SOURCES entry 9: 9,583 m in June 1979 (passing the previous record)",
-      "where": "SOURCES (animation figure, not spoken)",
-      "verdict": "fix",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'In June 1979, the well broke the record of 9583 meters held by the US well, reaching a depth of 9584 meters.' 9,583 m is the US record it passed; SG-3's own depth was 9,584 m. Change the entry (and the animation's data point, if it is labelled) to 9,584 m in June 1979."
-    },
-    {
-      "n": 54,
-      "claim": "SOURCES entry 9: 12,000 m on 27 December 1983",
-      "where": "SOURCES (animation figure, not spoken)",
-      "verdict": "confirmed",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext",
-      "note": "Lobanov: 'On December 27, 1983, the well depth reached 12000 m'. (Lobanov also says 'In 1983, the well reached a depth of 12066 m'; a straight-line curve through 12,000 m is fine.)"
-    },
-    {
-      "n": 55,
-      "claim": "SOURCES entry 1: Kola SG-3 still the deepest point reached by drilling; some oil wells are longer but not deeper",
-      "where": "SOURCES",
-      "verdict": "unverified",
-      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267: arcticandnorth.ru article pages (RU ELEMENT_ID=359546, EN ELEMENT_ID=360520) and both full-text PDFs (/upload/iblock/df4/267_284.pdf, /upload/iblock/61f/44_224_239.pdf, the journal's own English version, same DOI), read via pdftotext; doi:10.1038/s43247-026-03246-z: Crossref record read (title 'Ultradeep drilling beyond 10 km revealing new insights into Earth systems and resources', Commun. Earth Environ. 7:124, 3 Feb 2026, no abstract); www.nature.com article and PDF both 303-redirect to idp.nature.com, which the session network refuses (proxy 403 / ENOTFOUND). Full text NOT read.",
-      "note": "As claim 1: Lobanov 2021 says 'has not been surpassed so far'; the currency to 2026 and the oil-well comparison are not supported by any source read. The script does not use the oil-well comparison."
+      "source_checked": "Lobanov 2021 RU p.274-275, EN p.228-229",
+      "note": "'In June 1979, the well broke the record of 9583 meters held by the US well, reaching a depth of 9584 meters.' RU: '27 декабря 1983 г. глубина скважины достигла 12 000 м'. The animation's straight-line interpolation between these points is flagged as such in SOURCES."
     }
   ]
 }

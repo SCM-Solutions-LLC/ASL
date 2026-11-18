@@ -368,7 +368,7 @@ const Deck: React.FC = () => (
     <Shot from={0} to={F.moon - 2} tilt={-1.5} sheet={CORAL}>
       <Cut pic="cleopatra" x={540} y={585} w={820} tilt={-2} />
       {/* Paintings are imagined scenes, not likenesses (A5/A6), so each says whose and when. */}
-      <Year x={540} y={1040} text="WATERHOUSE · IMAGINED" at={6} size={38} />
+      <Year x={540} y={1040} text="A LATER PAINTING · IMAGINED" at={6} size={38} />
       <Burst at={2} x={540} y={1190} r={190} colour={YELLOW} n={14} />
       <Word text="CLEOPATRA" at={3} />
     </Shot>
@@ -461,7 +461,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
-      <Year x={540} y={1060} text="ALMA-TADEMA · IMAGINED, 41 BC" at={F.born} size={32} />
+      <Year x={540} y={1060} text="A LATER PAINTING · IMAGINED, 41 BC" at={F.born} size={32} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>
@@ -519,7 +519,7 @@ const Deck: React.FC = () => (
         tilt={3}
       />
       {/* A collage: Cleopatra pasted onto an 1839 view, not a scene from her life (A5/A6). */}
-      <Year x={540} y={150} text="ROBERTS, 1839 · COLLAGE" at={F.toHer + 4} size={34} />
+      <Year x={540} y={150} text="AN 1840s PRINT · COLLAGE" at={F.toHer + 4} size={34} />
     </Shot>
 
     <Shot from={F.ancient - 2} to={F.end} tilt={-1.5} sheet="#d8c9a8">
