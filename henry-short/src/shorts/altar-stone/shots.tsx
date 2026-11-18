@@ -58,50 +58,6 @@ export const Credit: React.FC<{ L: Layout; opacity: number }> = ({ L, opacity })
   </div>
 );
 
-// Sandstone in thin section: packed angular grains. Shared by the microscope shot and the study card.
-const sand = (seed: number, n: number) => {
-  const next = rng(seed);
-  return Array.from({ length: n }, () => {
-    const x = next() * 2 - 1;
-    const y = next() * 2 - 1;
-    const r = 0.035 + next() * 0.05;
-    const sides = 5 + Math.floor(next() * 3);
-    const rot = next() * Math.PI;
-    const pts = Array.from({ length: sides }, (_, k) => {
-      const a = rot + (k / sides) * Math.PI * 2;
-      const rr = r * (0.7 + next() * 0.45);
-      return [x + Math.cos(a) * rr, y + Math.sin(a) * rr * 0.85];
-    });
-    const tone = next();
-    return { x, y, pts, tone };
-  }).filter((g) => Math.hypot(g.x, g.y) < 1.02);
-};
-const SAND = sand(7, 520);
-const TONES = ["#8a5a3c", "#a8744c", "#6e4630", "#b98a5e", "#5d3b2a"];
-// The dated grains: a handful, lit when the line says "tiny mineral grains".
-const DATED = [11, 57, 98, 141, 203, 260].map((i) => SAND[i % SAND.length]);
-
-const Section: React.FC<{ cx: number; cy: number; r: number; lit: number; seedShift?: number }> = ({ cx, cy, r, lit }) => (
-  <svg style={{ position: "absolute", left: cx - r, top: cy - r, overflow: "visible" }} width={r * 2} height={r * 2} viewBox="-1 -1 2 2">
-    <defs>
-      <clipPath id={`lens-${r}`}>
-        <circle r={1} />
-      </clipPath>
-    </defs>
-    <g clipPath={`url(#lens-${r})`}>
-      <circle r={1} fill="#3a2418" />
-      {SAND.map((g, i) => (
-        <polygon key={i} points={g.pts.map((p) => p.join(",")).join(" ")} fill={TONES[Math.floor(g.tone * TONES.length)]} stroke="#2a180f" strokeWidth={0.006} />
-      ))}
-      {DATED.map((g, i) => (
-        <polygon key={`d${i}`} points={g.pts.map((p) => p.join(",")).join(" ")} fill="#ffe08a" opacity={lit} stroke="#fff3c4" strokeWidth={0.01} style={{ filter: `drop-shadow(0 0 0.04px #ffd36a)` }} />
-      ))}
-    </g>
-    <circle r={1} fill="none" stroke="#11090a" strokeWidth={0.06} />
-    <circle r={1.02} fill="none" stroke="#cdb68a" strokeWidth={0.008} opacity={0.6} />
-  </svg>
-);
-
 // The real thing: Clarke 2024, Fig. 2 (Nature, CC BY 4.0), the Altar Stone's two thin sections with
 // dated zircon, apatite and rutile grains. Cropped above the legend; credited on screen. The camera
 // starts on both sections and closes on the 1,092 Ma zircon as the line says "tiny".
@@ -153,12 +109,11 @@ export const Boat: React.FC<{ f: number; ghost: number }> = ({ f, ghost }) => {
   );
 };
 
-// The later study: a paper card with a lens moving over its thin section. Text bars, not text: the
-// only words on the card are the journal and year, which are the source's own.
-export const Study: React.FC<{ t: number; lens: number; L: Layout }> = ({ t, lens, L }) => {
+// The later study: a plain paper card. Text bars, not text: the only words on the card are the
+// journal and year, which are the source's own. No figure: the paper's are not CC BY, and a drawn
+// one would pass for them.
+export const Study: React.FC<{ t: number; L: Layout }> = ({ t, L }) => {
   const cy = L.vertical ? 400 : 440;
-  const lx = 960 - 120 + 240 * ease(lens);
-  const ly = cy + 90 - 40 * ease(lens);
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080 }}>
       <div style={{ position: "absolute", left: -600, top: -700, width: 3120, height: 2600, background: "radial-gradient(circle at 50% 35%, #2a2119 0%, #0b0806 70%)" }} />
@@ -181,20 +136,10 @@ export const Study: React.FC<{ t: number; lens: number; L: Layout }> = ({ t, len
         {[150, 190, 230].map((y, i) => (
           <div key={y} style={{ position: "absolute", left: 44, top: y, width: [560, 520, 330][i], height: 20, borderRadius: 4, background: "#3d2b1e", opacity: 0.85 }} />
         ))}
-        {[300, 330, 360, 390, 420].map((y, i) => (
-          <div key={y} style={{ position: "absolute", left: 44, top: y, width: [570, 540, 560, 500, 420][i], height: 10, borderRadius: 3, background: "#b8a88e" }} />
+        {[300, 330, 360, 390, 420, 470, 500, 530, 560, 590, 640, 670, 700, 730, 760].map((y, i) => (
+          <div key={y} style={{ position: "absolute", left: 44, top: y, width: [570, 540, 560, 500, 420, 570, 550, 560, 530, 380, 560, 570, 540, 555, 300][i], height: 10, borderRadius: 3, background: "#b8a88e" }} />
         ))}
-        <div style={{ position: "absolute", left: 44, top: 470, width: 572, height: 320, overflow: "hidden", borderRadius: 4 }}>
-          <Section cx={286} cy={160} r={330} lit={0} />
-        </div>
       </div>
-      {/* The lens: the same thin section, enlarged under the glass. */}
-      <div style={{ position: "absolute", left: lx - 120, top: ly - 120, width: 240, height: 240, borderRadius: "50%", overflow: "hidden", border: "10px solid #1d1410", boxShadow: "0 12px 40px rgba(0,0,0,0.6)", opacity: clamp01(lens * 4) }}>
-        <div style={{ position: "absolute", left: 120 - 700, top: 120 - 700 }}>
-          <Section cx={700} cy={700} r={700} lit={0} />
-        </div>
-      </div>
-      <div style={{ position: "absolute", left: lx + 70, top: ly + 70, width: 22, height: 120, background: "#1d1410", borderRadius: 8, rotate: "-45deg", transformOrigin: "top", opacity: clamp01(lens * 4) }} />
     </div>
   );
 };

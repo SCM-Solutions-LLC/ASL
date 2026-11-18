@@ -331,10 +331,9 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
 
       <Layer o={vis(f, SHOTS.study)}>
         <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
-          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} />
         </Push>
-        <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
-        <Note {...at(L, [545, -4], [120, 300])} text={L.vertical ? "page and thin section illustrative" : "page and thin section\nillustrative"} opacity={ramp(f, SHOTS.study[0] + 6, SHOTS.study[0] + 16)} size={34} />
+        <Tag {...at(L, [545, -170], [120, 120])} text="A 2026 STUDY" sub="led by Duncan Pirrie" from={F.three} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />

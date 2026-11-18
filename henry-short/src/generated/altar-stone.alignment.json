@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/altar-stone.txt",
  "audio": "public/vo/altar-stone.wav",
- "sha256": "4729e98fa34b7680afd8d084e04a6547ad0becd678d4e3658b346f810dc3aa22",
+ "sha256": "bd90665d0694cf12237a9723931009fe3b0d51cb6f87dddded3d17919e4dab3f",
  "words": [
   {
    "text": "In",
@@ -522,342 +522,342 @@
   {
    "text": "Then,",
    "start": 41.965,
-   "end": 42.338
+   "end": 42.389
   },
   {
    "text": "months",
-   "start": 42.338,
-   "end": 42.777
+   "start": 42.389,
+   "end": 42.888
   },
   {
    "text": "later,",
-   "start": 42.777,
-   "end": 43.182
+   "start": 42.888,
+   "end": 43.35
   },
   {
    "text": "a",
-   "start": 43.182,
-   "end": 43.457
+   "start": 43.35,
+   "end": 43.662
   },
   {
-   "text": "new",
-   "start": 43.457,
-   "end": 43.797
+   "text": "2026",
+   "start": 43.662,
+   "end": 44.086
   },
   {
    "text": "study,",
-   "start": 43.797,
-   "end": 44.203
+   "start": 44.086,
+   "end": 44.548
   },
   {
    "text": "including",
-   "start": 44.203,
-   "end": 44.74
+   "start": 44.548,
+   "end": 45.159
   },
   {
    "text": "three",
-   "start": 44.74,
-   "end": 45.146
+   "start": 45.159,
+   "end": 45.621
   },
   {
    "text": "of",
-   "start": 45.146,
-   "end": 45.453
+   "start": 45.621,
+   "end": 45.971
   },
   {
    "text": "the",
-   "start": 45.453,
-   "end": 45.793
+   "start": 45.971,
+   "end": 46.358
   },
   {
    "text": "2024",
-   "start": 45.793,
-   "end": 46.166
+   "start": 46.358,
+   "end": 46.782
   },
   {
    "text": "team,",
-   "start": 46.166,
-   "end": 46.539
+   "start": 46.782,
+   "end": 47.206
   },
   {
    "text": "looked",
-   "start": 46.539,
-   "end": 46.977
+   "start": 47.206,
+   "end": 47.705
   },
   {
    "text": "closer.",
-   "start": 46.977,
-   "end": 47.416
+   "start": 47.705,
+   "end": 48.204
   },
   {
    "text": "Many",
-   "start": 48.1,
-   "end": 48.382
+   "start": 48.9,
+   "end": 49.182
   },
   {
    "text": "outcrops",
-   "start": 48.382,
-   "end": 48.765
+   "start": 49.182,
+   "end": 49.565
   },
   {
    "text": "in",
-   "start": 48.765,
-   "end": 48.997
+   "start": 49.565,
+   "end": 49.797
   },
   {
    "text": "that",
-   "start": 48.997,
-   "end": 49.28
+   "start": 49.797,
+   "end": 50.08
   },
   {
    "text": "part",
-   "start": 49.28,
-   "end": 49.562
+   "start": 50.08,
+   "end": 50.362
   },
   {
    "text": "of",
-   "start": 49.562,
-   "end": 49.795
+   "start": 50.362,
+   "end": 50.595
   },
   {
    "text": "Scotland",
-   "start": 49.795,
-   "end": 50.177
+   "start": 50.595,
+   "end": 50.977
   },
   {
    "text": "could",
-   "start": 50.177,
-   "end": 50.484
+   "start": 50.977,
+   "end": 51.284
   },
   {
    "text": "not",
-   "start": 50.484,
-   "end": 50.742
+   "start": 51.284,
+   "end": 51.542
   },
   {
    "text": "have",
-   "start": 50.742,
-   "end": 51.025
+   "start": 51.542,
+   "end": 51.825
   },
   {
    "text": "been",
-   "start": 51.025,
-   "end": 51.307
+   "start": 51.825,
+   "end": 52.107
   },
   {
    "text": "the",
-   "start": 51.307,
-   "end": 51.565
+   "start": 52.107,
+   "end": 52.365
   },
   {
    "text": "source.",
-   "start": 51.565,
-   "end": 51.897
+   "start": 52.365,
+   "end": 52.697
   },
   {
    "text": "No",
-   "start": 52.51,
-   "end": 52.77
+   "start": 53.31,
+   "end": 53.57
   },
   {
    "text": "outcrop",
-   "start": 52.77,
-   "end": 53.169
+   "start": 53.57,
+   "end": 53.969
   },
   {
    "text": "examined",
-   "start": 53.169,
-   "end": 53.596
+   "start": 53.969,
+   "end": 54.396
   },
   {
    "text": "so",
-   "start": 53.596,
-   "end": 53.856
+   "start": 54.396,
+   "end": 54.656
   },
   {
    "text": "far",
-   "start": 53.856,
-   "end": 54.144
+   "start": 54.656,
+   "end": 54.944
   },
   {
    "text": "has",
-   "start": 54.144,
-   "end": 54.432
+   "start": 54.944,
+   "end": 55.232
   },
   {
    "text": "been",
-   "start": 54.432,
-   "end": 54.747
+   "start": 55.232,
+   "end": 55.547
   },
   {
    "text": "shown",
-   "start": 54.747,
-   "end": 55.091
+   "start": 55.547,
+   "end": 55.891
   },
   {
    "text": "to",
-   "start": 55.091,
-   "end": 55.351
+   "start": 55.891,
+   "end": 56.151
   },
   {
    "text": "match",
-   "start": 55.351,
-   "end": 55.694
+   "start": 56.151,
+   "end": 56.494
   },
   {
    "text": "it",
-   "start": 55.694,
-   "end": 55.954
+   "start": 56.494,
+   "end": 56.754
   },
   {
    "text": "in",
-   "start": 55.954,
-   "end": 56.214
+   "start": 56.754,
+   "end": 57.014
   },
   {
    "text": "every",
-   "start": 56.214,
-   "end": 56.558
+   "start": 57.014,
+   "end": 57.358
   },
   {
    "text": "way.",
-   "start": 56.558,
-   "end": 56.846
+   "start": 57.358,
+   "end": 57.645
   },
   {
    "text": "Six",
-   "start": 57.545,
-   "end": 57.802
+   "start": 58.345,
+   "end": 58.602
   },
   {
    "text": "tonnes,",
-   "start": 57.802,
-   "end": 58.133
+   "start": 58.602,
+   "end": 58.933
   },
   {
    "text": "from",
-   "start": 58.133,
-   "end": 58.414
+   "start": 58.933,
+   "end": 59.214
   },
   {
    "text": "a",
-   "start": 58.414,
-   "end": 58.621
+   "start": 59.214,
+   "end": 59.421
   },
   {
    "text": "spot",
-   "start": 58.621,
-   "end": 58.903
+   "start": 59.421,
+   "end": 59.703
   },
   {
    "text": "no",
-   "start": 58.903,
-   "end": 59.135
+   "start": 59.703,
+   "end": 59.935
   },
   {
    "text": "one",
-   "start": 59.135,
-   "end": 59.392
+   "start": 59.935,
+   "end": 60.192
   },
   {
    "text": "has",
-   "start": 59.392,
-   "end": 59.648
+   "start": 60.192,
+   "end": 60.448
   },
   {
    "text": "pinned",
-   "start": 59.648,
-   "end": 59.979
+   "start": 60.448,
+   "end": 60.779
   },
   {
    "text": "down,",
-   "start": 59.979,
-   "end": 60.261
+   "start": 60.779,
+   "end": 61.061
   },
   {
    "text": "by",
-   "start": 60.261,
-   "end": 60.493
+   "start": 61.061,
+   "end": 61.293
   },
   {
    "text": "a",
-   "start": 60.493,
-   "end": 60.7
+   "start": 61.293,
+   "end": 61.5
   },
   {
    "text": "route",
-   "start": 60.7,
-   "end": 61.006
+   "start": 61.5,
+   "end": 61.806
   },
   {
    "text": "no",
-   "start": 61.006,
-   "end": 61.238
+   "start": 61.806,
+   "end": 62.038
   },
   {
    "text": "one",
-   "start": 61.238,
-   "end": 61.495
+   "start": 62.038,
+   "end": 62.295
   },
   {
    "text": "knows.",
-   "start": 61.495,
-   "end": 61.801
+   "start": 62.295,
+   "end": 62.601
   },
   {
    "text": "Sea,",
-   "start": 62.43,
-   "end": 62.679
+   "start": 63.23,
+   "end": 63.479
   },
   {
    "text": "sledge",
-   "start": 62.679,
-   "end": 63.0
+   "start": 63.479,
+   "end": 63.8
   },
   {
    "text": "or",
-   "start": 63.0,
-   "end": 63.224
+   "start": 63.8,
+   "end": 64.024
   },
   {
    "text": "ice:",
-   "start": 63.224,
-   "end": 63.473
+   "start": 64.024,
+   "end": 64.273
   },
   {
    "text": "how",
-   "start": 63.473,
-   "end": 63.722
+   "start": 64.273,
+   "end": 64.522
   },
   {
    "text": "do",
-   "start": 63.722,
-   "end": 63.946
+   "start": 64.522,
+   "end": 64.746
   },
   {
    "text": "you",
-   "start": 63.946,
-   "end": 64.195
+   "start": 64.746,
+   "end": 64.995
   },
   {
    "text": "think",
-   "start": 64.195,
-   "end": 64.492
+   "start": 64.995,
+   "end": 65.292
   },
   {
    "text": "it",
-   "start": 64.492,
-   "end": 64.716
+   "start": 65.292,
+   "end": 65.516
   },
   {
    "text": "got",
-   "start": 64.716,
-   "end": 64.965
+   "start": 65.516,
+   "end": 65.765
   },
   {
    "text": "there?",
-   "start": 64.965,
-   "end": 65.262
+   "start": 65.765,
+   "end": 66.062
   }
  ]
 }
