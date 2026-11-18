@@ -46,6 +46,7 @@ const F = {
   part: edit.at("part"),
   most: edit.at("most."),
   then: edit.at("Then,"),
+  pirrie: edit.at("Pirrie"),
   three: edit.at("three"),
   closer: edit.at("closer."),
   many: edit.at("Many"),
@@ -264,15 +265,15 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       <Tag {...at(L, [1090, 300], [1300, 340])} text="700+ KM" sub={"if from\nNE Scotland"} from={F.seven} to={F.suggested} />
       <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub={"route not known\nClarke et al. 2024"} from={F.suggested + 10} to={SHOTS.map2[1]} />
       {/* map3: the ice model. */}
-      <Tag {...at(L, [545, 640], [200, 80])} text="ICE MODEL" sub={"Clarke et al. 2026\nJournal of Quaternary Science\npart of the way, at most"} from={F.part} to={SHOTS.map3[1]} />
+      <Tag {...at(L, [545, 600], [200, 80])} text="ICE MODEL" sub={"Clarke et al. 2026\npart of the way, at most"} from={F.part} to={SHOTS.map3[1]} />
       {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={34} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
-      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nsource unknown"} from={F.match} to={SHOTS.map4[1]} />
+      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nsource not pinned down"} from={F.match} to={SHOTS.map4[1]} />
       {/* recap: the three proposals, none shown to be the one. */}
-      <Tag {...at(L, [1090, 200], [1300, 200])} text="SEA?" sub={"Clarke et al.\n2024"} from={F.sea} />
-      <Tag {...at(L, [1090, 330], [1300, 330])} text="SLEDGE?" sub={"Parker Pearson\net al. 2024"} from={F.sledge} />
-      <Tag {...at(L, [1090, 460], [1300, 460])} text="ICE?" sub={"Clarke et al.\n2026: part\nof the way"} from={F.ice} />
+      <Tag {...at(L, [1090, 130], [1300, 130])} text="SEA?" sub={"Clarke et al.\n2024"} from={F.sea} />
+      <Tag {...at(L, [1090, 310], [1300, 310])} text="SLEDGE?" sub={"Parker Pearson\net al. 2024"} from={F.sledge} />
+      <Tag {...at(L, [1090, 490], [1300, 490])} text="ICE?" sub={"Clarke et al.\n2026: part\nof the way"} from={F.ice} />
       {inRecap ? <Note {...at(L, [545, 870], [200, 860])} text="routes illustrative" opacity={ramp(f, F.sea + 6, F.sea + 16)} size={34} /> : null}
       {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={34} /> : null}
     </div>
@@ -333,7 +334,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
         <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
           <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} />
         </Push>
-        <Tag {...at(L, [545, -170], [120, 120])} text="A 2026 STUDY" sub="led by Duncan Pirrie" from={F.three} />
+        <Tag {...at(L, [545, -170], [120, 120])} text="A 2026 STUDY" sub="led by Duncan Pirrie" from={F.pirrie} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />

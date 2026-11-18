@@ -7,7 +7,7 @@ Overland, on a sledge, they estimate about eight months of hauling.
 A glacier? A 2026 ice model by Clarke and colleagues says ice could have carried it part of the way, at most.
 Then, months later, a 2026 study by Pirrie and colleagues, including three of the 2024 team, looked closer.
 Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far has been shown to match it in every way.
-Six tonnes, from a spot no one has pinned down, by a route no one knows. Sea, sledge or ice: how do you think it got there?
+Six tonnes, from a spot no one has pinned down, by a route no one knows. By sea or by sledge, maybe helped part of the way by ice: how do you think it got there?
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -188,7 +188,8 @@ Scotland (neither paper says so), and it does not say it is.
    multi-proxy analysis are considered".
 
 10. "Six tonnes, from a spot no one has pinned down, by a route no one knows.
-   Sea, sledge or ice: how do you think it got there?"
+   By sea or by sledge, maybe helped part of the way by ice: how do you think
+   it got there?"
    A recap of claims 1, 3 and 4-7; it adds no new fact. "Six tonnes": claim 3.
    "A spot no one has pinned down": claim 1 (Pirrie 2026, "the exact
    provenance of the Altar Stone is as yet unknown"; Clarke 2026, "its source
@@ -197,8 +198,12 @@ Scotland (neither paper says so), and it does not say it is.
    none claims to have shown which was used. Clarke 2024 suggests the sea but
    names no route (claim 4); Parker Pearson 2024 doubts the boats of the time
    and estimates the overland haul (claims 5-6); Clarke 2026 allows ice for
-   part of the way at most (claim 7). "Sea, sledge or ice" are exactly those
-   three proposals. The closing question asks for the viewer's view; it is not
+   part of the way at most (claim 7). "By sea or by sledge" are the two
+   whole-journey proposals; "maybe helped part of the way by ice" keeps ice
+   to Clarke 2026's role ("Glacial transport may have provided an
+   intermediate stage ... but alone cannot account for the final
+   emplacement"). (An earlier wording, "Sea, sledge or ice", offered ice as a
+   full alternative and failed the fact-check for it.) The closing question asks for the viewer's view; it is not
    a "comment X" prompt (E2) and states nothing as fact.
 
 ON SCREEN (A6). Every label the cut draws, and what stands behind it. Labels
@@ -251,7 +256,7 @@ that repeat a spoken claim cite its number above.
   on timber rails follows Parker Pearson 2024 ("a suitably robust wooden
   sledge ... sliding on wooden 'rails'"). "2024" for Parker Pearson 2024: it was
   published 31 December 2024 (the issue is dated January 2025).
-- Ice map, "ICE MODEL / Clarke et al. 2026 / Journal of Quaternary Science /
+- Ice map, "ICE MODEL / Clarke et al. 2026 /
   part of the way, at most", "ice extent and path
   illustrative", "Dogger Bank (approx.)": claim 7. Clarke 2026 abstract:
   glacial dispersal to Dogger Bank would cut the human leg "from 700 km to
@@ -266,13 +271,15 @@ that repeat a spoken claim cite its number above.
   paper's own figures (Lyell Collection user licence, not CC BY) cannot be
   reused and a drawn one would pass for them.
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",
-  "NO FULL MATCH / shown in any outcrop examined / source unknown":
+  "NO FULL MATCH / shown in any outcrop examined / source not pinned down":
   claim 9 and claim 1. The dots, their number and their positions are
   illustrative, as the label says; the abstract gives no counts. The dots
   left uncrossed carry no mark, because the abstract names no surviving
   candidate.
 - Recap map, "SEA? / Clarke et al. 2024", "SLEDGE? / Parker Pearson et al.
-  2024", "ICE? / Clarke et al. 2026: part of the way", "routes illustrative", the "?" over the 2024 area with
+  2024", "ICE? / Clarke et al. 2026: part of the way" (ice drawn as a partial
+  path ending at Dogger Bank, with the people path for the rest, as claim 10
+  says), "routes illustrative", the "?" over the 2024 area with
   the note "2024 area / disputed" (claim 1), and the
   same routes as before (both sea routes, the straight dashed line, the ice
   and people paths): claim 10, restating claims 1, 4, 6 and 7. Each "et al."
