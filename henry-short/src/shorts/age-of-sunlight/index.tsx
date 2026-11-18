@@ -349,10 +349,10 @@ const SunScene: React.FC = () => {
       <Tag x={850} y={150} text="8 MINUTES" sub={"surface to your skin\nnot to scale"} from={F.minutes + 8} to={F.rest + 6} />
       {/* Above the disc, not on it: at 320 units of radius there is no clear ground beside it in
           the 9:16 crop, and the first pass had the sub-line unreadable against the limb. */}
-      <Tag x={600} y={30} text="10,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.rest} to={F.ancient + 48} />
+      <Tag x={600} y={30} text="40,000+ YEARS" sub={"energy, core to surface\nnot to scale"} from={F.rest} to={F.ancient + 48} />
       {/* The two answers side by side on the last line, stacked rather than abreast because the
           vertical crop has the height to spare and not the width. */}
-      <Tag x={600} y={110} text="THE ENERGY" sub="10,000+ years getting out" from={F.close - 2} />
+      <Tag x={600} y={110} text="THE ENERGY" sub="40,000+ years getting out" from={F.close - 2} />
       <Tag x={600} y={640} text="THE TRIP" sub={"8 minutes to you\nnot to scale"} from={F.close + 10} />
     </>
   );

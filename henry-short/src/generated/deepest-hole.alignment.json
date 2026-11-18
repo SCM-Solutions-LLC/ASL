@@ -2,347 +2,372 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/deepest-hole.txt",
  "audio": "public/vo/deepest-hole.wav",
- "sha256": "d1fa06b643d636b661fcd7b40e1f2fdef7d3528a038a6751fd60c08b73d8e5c7",
+ "sha256": "2d8ef9eb6c3c74c173aaa9707ce01b68897ad186c1311dbf775f370aebc16f89",
  "words": [
   {
    "text": "The",
    "start": 0.0,
-   "end": 0.281
+   "end": 0.275
   },
   {
    "text": "deepest",
-   "start": 0.281,
-   "end": 0.67
+   "start": 0.275,
+   "end": 0.656
   },
   {
    "text": "hole",
-   "start": 0.67,
-   "end": 0.978
+   "start": 0.656,
+   "end": 0.958
   },
   {
    "text": "humans",
-   "start": 0.978,
-   "end": 1.341
+   "start": 0.958,
+   "end": 1.312
   },
   {
    "text": "have",
-   "start": 1.341,
-   "end": 1.649
+   "start": 1.312,
+   "end": 1.614
   },
   {
    "text": "ever",
-   "start": 1.649,
-   "end": 1.957
+   "start": 1.614,
+   "end": 1.915
   },
   {
    "text": "dug",
-   "start": 1.957,
-   "end": 2.237
-  },
-  {
-   "text": "is",
-   "start": 2.237,
-   "end": 2.491
-  },
-  {
-   "text": "narrower",
-   "start": 2.491,
-   "end": 2.908
-  },
-  {
-   "text": "than",
-   "start": 2.908,
-   "end": 3.216
-  },
-  {
-   "text": "a",
-   "start": 3.216,
-   "end": 3.442
-  },
-  {
-   "text": "dinner",
-   "start": 3.442,
-   "end": 3.805
-  },
-  {
-   "text": "plate.",
-   "start": 3.805,
-   "end": 4.14
-  },
-  {
-   "text": "It",
-   "start": 4.785,
-   "end": 5.042
-  },
-  {
-   "text": "took",
-   "start": 5.042,
-   "end": 5.354
-  },
-  {
-   "text": "the",
-   "start": 5.354,
-   "end": 5.638
-  },
-  {
-   "text": "Soviet",
-   "start": 5.638,
-   "end": 6.005
-  },
-  {
-   "text": "Union",
-   "start": 6.005,
-   "end": 6.344
-  },
-  {
-   "text": "about",
-   "start": 6.344,
-   "end": 6.683
-  },
-  {
-   "text": "twenty",
-   "start": 6.683,
-   "end": 7.05
-  },
-  {
-   "text": "years.",
-   "start": 7.05,
-   "end": 7.389
-  },
-  {
-   "text": "It",
-   "start": 8.02,
-   "end": 8.315
-  },
-  {
-   "text": "goes",
-   "start": 8.315,
-   "end": 8.674
-  },
-  {
-   "text": "down",
-   "start": 8.674,
-   "end": 9.032
-  },
-  {
-   "text": "twelve",
-   "start": 9.032,
-   "end": 9.454
-  },
-  {
-   "text": "kilometres.",
-   "start": 9.454,
-   "end": 9.999
-  },
-  {
-   "text": "And",
-   "start": 10.605,
-   "end": 10.827
-  },
-  {
-   "text": "it",
-   "start": 10.827,
-   "end": 11.027
-  },
-  {
-   "text": "never",
-   "start": 11.027,
-   "end": 11.291
-  },
-  {
-   "text": "made",
-   "start": 11.291,
-   "end": 11.535
-  },
-  {
-   "text": "it",
-   "start": 11.535,
-   "end": 11.735
-  },
-  {
-   "text": "through",
-   "start": 11.735,
-   "end": 12.042
-  },
-  {
-   "text": "the",
-   "start": 12.042,
-   "end": 12.264
-  },
-  {
-   "text": "crust.",
-   "start": 12.264,
-   "end": 12.528
-  },
-  {
-   "text": "At",
-   "start": 13.14,
-   "end": 13.373
-  },
-  {
-   "text": "the",
-   "start": 13.373,
-   "end": 13.63
-  },
-  {
-   "text": "bottom,",
-   "start": 13.63,
-   "end": 13.963
-  },
-  {
-   "text": "the",
-   "start": 13.963,
-   "end": 14.22
-  },
-  {
-   "text": "rock",
-   "start": 14.22,
-   "end": 14.503
+   "start": 1.915,
+   "end": 2.19
   },
   {
    "text": "was",
-   "start": 14.503,
-   "end": 14.761
+   "start": 2.19,
+   "end": 2.465
   },
   {
-   "text": "over",
-   "start": 14.761,
-   "end": 15.043
+   "text": "drilled",
+   "start": 2.465,
+   "end": 2.847
   },
   {
-   "text": "two",
-   "start": 15.043,
-   "end": 15.301
+   "text": "with",
+   "start": 2.847,
+   "end": 3.148
   },
   {
-   "text": "hundred",
-   "start": 15.301,
-   "end": 15.658
+   "text": "a",
+   "start": 3.148,
+   "end": 3.37
   },
   {
-   "text": "degrees.",
-   "start": 15.658,
-   "end": 16.016
+   "text": "bit",
+   "start": 3.37,
+   "end": 3.645
   },
   {
-   "text": "The",
-   "start": 16.625,
-   "end": 16.88
+   "text": "narrower",
+   "start": 3.645,
+   "end": 4.053
   },
   {
-   "text": "hot",
-   "start": 16.88,
-   "end": 17.135
+   "text": "than",
+   "start": 4.053,
+   "end": 4.354
+  },
+  {
+   "text": "a",
+   "start": 4.354,
+   "end": 4.576
+  },
+  {
+   "text": "dinner",
+   "start": 4.576,
+   "end": 4.931
+  },
+  {
+   "text": "plate.",
+   "start": 4.931,
+   "end": 5.259
+  },
+  {
+   "text": "It",
+   "start": 5.91,
+   "end": 6.167
+  },
+  {
+   "text": "took",
+   "start": 6.167,
+   "end": 6.479
+  },
+  {
+   "text": "the",
+   "start": 6.479,
+   "end": 6.763
+  },
+  {
+   "text": "Soviet",
+   "start": 6.763,
+   "end": 7.13
+  },
+  {
+   "text": "Union",
+   "start": 7.13,
+   "end": 7.469
+  },
+  {
+   "text": "about",
+   "start": 7.469,
+   "end": 7.808
+  },
+  {
+   "text": "twenty",
+   "start": 7.808,
+   "end": 8.175
+  },
+  {
+   "text": "years.",
+   "start": 8.175,
+   "end": 8.514
+  },
+  {
+   "text": "It",
+   "start": 9.145,
+   "end": 9.44
+  },
+  {
+   "text": "goes",
+   "start": 9.44,
+   "end": 9.799
+  },
+  {
+   "text": "down",
+   "start": 9.799,
+   "end": 10.157
+  },
+  {
+   "text": "twelve",
+   "start": 10.157,
+   "end": 10.579
+  },
+  {
+   "text": "kilometres.",
+   "start": 10.579,
+   "end": 11.124
+  },
+  {
+   "text": "And",
+   "start": 11.73,
+   "end": 11.952
+  },
+  {
+   "text": "it",
+   "start": 11.952,
+   "end": 12.152
+  },
+  {
+   "text": "never",
+   "start": 12.152,
+   "end": 12.416
+  },
+  {
+   "text": "made",
+   "start": 12.416,
+   "end": 12.66
+  },
+  {
+   "text": "it",
+   "start": 12.66,
+   "end": 12.86
+  },
+  {
+   "text": "through",
+   "start": 12.86,
+   "end": 13.167
+  },
+  {
+   "text": "the",
+   "start": 13.167,
+   "end": 13.389
+  },
+  {
+   "text": "crust.",
+   "start": 13.389,
+   "end": 13.653
+  },
+  {
+   "text": "At",
+   "start": 14.265,
+   "end": 14.498
+  },
+  {
+   "text": "the",
+   "start": 14.498,
+   "end": 14.755
+  },
+  {
+   "text": "bottom,",
+   "start": 14.755,
+   "end": 15.088
+  },
+  {
+   "text": "the",
+   "start": 15.088,
+   "end": 15.345
   },
   {
    "text": "rock",
-   "start": 17.135,
-   "end": 17.415
+   "start": 15.345,
+   "end": 15.628
   },
   {
-   "text": "kept",
-   "start": 17.415,
-   "end": 17.695
+   "text": "was",
+   "start": 15.628,
+   "end": 15.886
   },
   {
-   "text": "closing",
-   "start": 17.695,
-   "end": 18.049
+   "text": "over",
+   "start": 15.886,
+   "end": 16.168
   },
   {
-   "text": "the",
-   "start": 18.049,
-   "end": 18.304
+   "text": "two",
+   "start": 16.168,
+   "end": 16.426
   },
   {
-   "text": "hole,",
-   "start": 18.304,
-   "end": 18.584
+   "text": "hundred",
+   "start": 16.426,
+   "end": 16.783
   },
   {
-   "text": "and",
-   "start": 18.584,
-   "end": 18.839
-  },
-  {
-   "text": "the",
-   "start": 18.839,
-   "end": 19.095
-  },
-  {
-   "text": "money",
-   "start": 19.095,
-   "end": 19.399
-  },
-  {
-   "text": "ran",
-   "start": 19.399,
-   "end": 19.654
-  },
-  {
-   "text": "out.",
-   "start": 19.654,
-   "end": 19.909
-  },
-  {
-   "text": "Twelve",
-   "start": 20.51,
-   "end": 21.028
-  },
-  {
-   "text": "kilometres",
-   "start": 21.028,
-   "end": 21.697
-  },
-  {
-   "text": "down.",
-   "start": 21.697,
-   "end": 22.137
+   "text": "degrees.",
+   "start": 16.783,
+   "end": 17.141
   },
   {
    "text": "The",
-   "start": 22.795,
-   "end": 23.042
+   "start": 17.75,
+   "end": 18.005
   },
   {
-   "text": "centre",
-   "start": 23.042,
-   "end": 23.361
+   "text": "hot",
+   "start": 18.005,
+   "end": 18.26
   },
   {
-   "text": "of",
-   "start": 23.361,
-   "end": 23.584
+   "text": "rock",
+   "start": 18.26,
+   "end": 18.54
+  },
+  {
+   "text": "kept",
+   "start": 18.54,
+   "end": 18.82
+  },
+  {
+   "text": "closing",
+   "start": 18.82,
+   "end": 19.174
   },
   {
    "text": "the",
-   "start": 23.584,
-   "end": 23.831
+   "start": 19.174,
+   "end": 19.429
+  },
+  {
+   "text": "hole,",
+   "start": 19.429,
+   "end": 19.709
+  },
+  {
+   "text": "and",
+   "start": 19.709,
+   "end": 19.964
+  },
+  {
+   "text": "the",
+   "start": 19.964,
+   "end": 20.219
+  },
+  {
+   "text": "money",
+   "start": 20.219,
+   "end": 20.523
+  },
+  {
+   "text": "ran",
+   "start": 20.523,
+   "end": 20.779
+  },
+  {
+   "text": "out.",
+   "start": 20.779,
+   "end": 21.034
+  },
+  {
+   "text": "Twelve",
+   "start": 21.635,
+   "end": 22.153
+  },
+  {
+   "text": "kilometres",
+   "start": 22.153,
+   "end": 22.821
+  },
+  {
+   "text": "down.",
+   "start": 22.821,
+   "end": 23.262
+  },
+  {
+   "text": "The",
+   "start": 23.92,
+   "end": 24.168
+  },
+  {
+   "text": "centre",
+   "start": 24.168,
+   "end": 24.489
+  },
+  {
+   "text": "of",
+   "start": 24.489,
+   "end": 24.713
+  },
+  {
+   "text": "the",
+   "start": 24.713,
+   "end": 24.961
   },
   {
    "text": "Earth",
-   "start": 23.831,
-   "end": 24.126
+   "start": 24.961,
+   "end": 25.257
   },
   {
    "text": "is",
-   "start": 24.126,
-   "end": 24.349
+   "start": 25.257,
+   "end": 25.482
+  },
+  {
+   "text": "over",
+   "start": 25.482,
+   "end": 25.754
   },
   {
    "text": "six",
-   "start": 24.349,
-   "end": 24.596
+   "start": 25.754,
+   "end": 26.002
   },
   {
    "text": "thousand",
-   "start": 24.596,
-   "end": 24.962
+   "start": 26.002,
+   "end": 26.37
   },
   {
    "text": "more.",
-   "start": 24.962,
-   "end": 25.233
+   "start": 26.37,
+   "end": 26.643
   }
  ]
 }

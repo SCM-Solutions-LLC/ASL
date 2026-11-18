@@ -1,10 +1,10 @@
-The deepest hole humans have ever dug is narrower than a dinner plate.
+The deepest hole humans have ever dug was drilled with a bit narrower than a dinner plate.
 It took the Soviet Union about twenty years.
 It goes down twelve kilometres.
 And it never made it through the crust.
 At the bottom, the rock was over two hundred degrees.
 The hot rock kept closing the hole, and the money ran out.
-Twelve kilometres down. The centre of the Earth is six thousand more.
+Twelve kilometres down. The centre of the Earth is over six thousand more.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
@@ -25,9 +25,11 @@ Sources read (an independent fact-check, 18 Nov 2026):
 - Popov et al., Tectonophysics 306: 345 (1999),
   doi:10.1016/S0040-1951(99)00065-7: casing 245 mm to 8,278 m, open borehole
   214 mm below it.
-- Kozlovsky, "The World's Deepest Well" / "The Superdeep Well of the Kola
-  Peninsula", translated as USGS Open-File Report 86-517: "Crustal thickness
-  in the vicinity of the corehole was shown to be about 40 km."
+- Clarke et al., "The Kola Superdeep Drill Hole by Ye. A. Kozlovskiy (1984): A
+  detailed summary", USGS Open-File Report 86-517 (1986), summarising
+  Kozlovskiy, Kol'skaya sverkhglubokaya (Moscow: Nedra, 1984): "Crustal
+  thickness in the vicinity of the corehole was shown to be about 40 km"; the
+  Moho under the Kola Peninsula as a whole is put at 37 km (range 28-40).
 - NASA NSSDC Earth Fact Sheet: volumetric mean radius 6,371 km.
 - Dziewonski & Anderson 1981, PREM, Phys. Earth Planet. Inter. 25: 297,
   doi:10.1016/0031-9201(81)90046-7: inner core 1,221.5 km, outer core to
@@ -41,11 +43,13 @@ Sources read (an independent fact-check, 18 Nov 2026):
    post text no longer mentions those wells (no primary source was read for
    them).
 
-2. "...is narrower than a dinner plate."
-   The bit and the open hole are 214 mm (Popov; Lobanov); the cased top is
-   245 mm. The plate in the short is 25.6 cm (Met 51.86.100, public/SOURCES.json),
-   so the hole is drawn at 21 cm against it. Below 7 km the bore went oval with
-   caverns (Lobanov), so 21 cm is the drilled width, not a constant.
+2. "...was drilled with a bit narrower than a dinner plate."
+   The bit is 214 mm (Lobanov), and the open hole below the casing 214 mm
+   (Popov). The hole is not that width everywhere: the top is cased at 245 mm
+   (so drilled wider), and below 7 km the bore went oval with caverns
+   (Lobanov). So the line and the labels name the bit ("21 CM BIT"), which is
+   the one fixed number. The plate in the short is 25.6 cm (Met 51.86.100), and
+   the bit's width is drawn against it to scale.
 
 3. "It took the Soviet Union about twenty years."
    Started 24 May 1970 (Lobanov). The sources disagree on the end: 1989 (Zhu &
@@ -71,8 +75,8 @@ Sources read (an independent fact-check, 18 Nov 2026):
    continue". Drilling stopped in 1992 (both).
 
 8. "The centre of the Earth is six thousand more."
-   Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "six
-   thousand more" is a round number on the low side. The hole is 0.19% of the
+   Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "over
+   six thousand more" (on screen "6,000+ KM MORE"). The hole is 0.19% of the
    way to the centre, shown as "0.2%".
 
 9. Figures used by the animation, not spoken.

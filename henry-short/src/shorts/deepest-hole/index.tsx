@@ -192,7 +192,7 @@ const Ground: React.FC = () => {
       />
 
       <Loupe t={Math.min(ramp(f, F.wide - 6, F.wide + 4), 1 - ramp(f, F.nineteen - 8, F.nineteen))} plate={ease(ramp(f, F.wide + 6, F.wide + 20))} />
-      <Tag x={630} y={585} text="21 CM WIDE" sub="narrower than a dinner plate" from={F.wide + 8} to={F.nineteen - 8} />
+      <Tag x={630} y={585} text="21 CM BIT" sub="narrower than a dinner plate" from={F.wide + 8} to={F.nineteen - 8} />
 
       {/* In the sky beside the derrick: the only clear ground while the shaft is still short. */}
       <Tag x={590} y={70} text={((y) => (y >= 1990 ? "1989–90" : `${y}`))(Math.round(1970 + 20 * ramp(f, F.took, F.kilometres + 6)))} sub="drilling since 1970" from={F.took} to={F.never - 6} />

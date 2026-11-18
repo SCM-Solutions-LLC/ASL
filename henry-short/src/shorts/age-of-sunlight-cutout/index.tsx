@@ -280,10 +280,10 @@ const walk = (cx: number, cy: number, r: number) => {
   const [c, s] = [Math.cos(turn), Math.sin(turn)];
   const at = ([px, py]: [number, number]) =>
     `${(cx + (px * c - py * s) * k).toFixed(1)} ${(cy + (px * s + py * c) * k).toFixed(1)}`;
-  // Above 0.7 R convection carries it, so the last leg loops (a prolate trochoid) rather than
-  // flying straight out, which would read as light crossing the convection zone (A6).
+  // Above 0.7 R convection carries it to the surface, so that leg loops (a prolate trochoid); only
+  // at the surface does it leave, as light: a short straight ray (A6).
   const [ux, uy] = [Math.cos(EXIT_ANGLE), Math.sin(EXIT_ANGLE)];
-  const L = (1.13 - RADIATIVE) * r;
+  const L = (1 - RADIATIVE) * r;
   const loops = 3;
   const b = (L / (2 * Math.PI * loops)) * 1.8;
   const loop = Array.from({ length: 73 }, (_, i) => {
@@ -296,6 +296,7 @@ const walk = (cx: number, cy: number, r: number) => {
   return {
     grind: `M${pts.map(at).join(" L")}`,
     out: `M${loop.join(" L")}`,
+    ray: `M${(cx + ux * r).toFixed(1)} ${(cy + uy * r).toFixed(1)} L${(cx + ux * r * 1.15).toFixed(1)} ${(cy + uy * r * 1.15).toFixed(1)}`,
   };
 };
 
@@ -430,7 +431,7 @@ const Deck: React.FC = () => (
       />
       <Tag x={760} y={250} text="MAYBE FAR MORE" at={F.far} size={54} ink={CORAL} tilt={4} />
       <Burst at={F.tens} x={540} y={1190} r={115} colour={YELLOW} n={14} />
-      <Word text="10,000+ YEARS" at={F.tens} size={100} />
+      <Word text="40,000+ YEARS" at={F.tens} size={100} />
     </Shot>
 
     <Shot from={F.sentence2 - 2} to={F.sentence3 - 2} tilt={-1.5} sheet="#22304f">
@@ -497,12 +498,19 @@ const Deck: React.FC = () => (
           colour={CORAL}
           width={14}
         />
+        <Line
+          d={WALK.ray}
+          from={F.part + 9}
+          to={F.part + 12}
+          colour={YELLOW}
+          width={14}
+        />
         {/* Where it starts: the core. */}
         <circle cx={INSIDE.x} cy={INSIDE.y} r={26} fill="#fffdf6" />
         <circle cx={INSIDE.x} cy={INSIDE.y} r={17} fill={INK} />
       </Marks>
       {/* The long number belongs to the slow black walk, so it is inked black and sits by it. */}
-      <Tag x={290} y={205} text="10,000+ YEARS" at={F.slow} size={58} tilt={-4} />
+      <Tag x={290} y={205} text="40,000+ YEARS" at={F.slow} size={58} tilt={-4} />
       <Tag x={840} y={205} text="CONVECTION" at={F.part + 6} size={44} ink={CORAL} tilt={4} />
       <Tag x={250} y={1010} text="NOT TO SCALE" at={F.sentence3 + 4} size={40} tilt={-3} />
       <Word

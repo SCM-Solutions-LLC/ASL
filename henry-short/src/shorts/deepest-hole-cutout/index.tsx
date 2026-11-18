@@ -79,7 +79,7 @@ const F = {
   money: edit.at("money"),
   again: edit.at("twelve", 1),
   downAgain: edit.at("down", 1),
-  sentence7: edit.at("the", 7),
+  sentence7: edit.at("the", 8),
   centre: edit.at("centre"),
   six: edit.at("six"),
   more: edit.at("more."),
@@ -97,9 +97,8 @@ const REACHED = "1989–90"; // 1989 in Zhu & Huang 2026, 1990 in Lobanov 2021
 const ROCK_C = 212; // at about 12 km (Lobanov 2021; Zhu & Huang 2026)
 const EXPECTED_C = 120; // "instead of the assumed 120°C" (Lobanov 2021)
 const EARTH_KM = 6371;
-// The hole stopped about a third of the way through the crust. The script's notes give that
-// fraction and flag the crust's thickness in kilometres as unconfirmed, so the drawing is made
-// from the fraction and no thickness is written on it.
+// The hole stopped about a third of the way through the crust (12.262 of about 40 km, script
+// source 5), so the drawing is made from that fraction and no thickness is written on it.
 const THROUGH_CRUST = 1 / 3;
 const SHARE = (DEPTH_M / 1000 / EARTH_KM) * 100; // 0.19%, shown as 0.2%
 // Where the layers of the Earth change, as fractions of its radius (PREM, from the script's notes).
@@ -324,7 +323,7 @@ const Hole: React.FC = () => {
       <Label
         x={x}
         y={lineY - 118}
-        text={`${BORE_CM} CM WIDE`}
+        text={`${BORE_CM} CM BIT`}
         at={F.as}
         size={124}
         colour={PAPER}
@@ -722,7 +721,7 @@ const Centre: React.FC = () => {
         tilt={-2}
       />
       <Burst at={F.more + 6} x={x} y={128} r={150} colour={CORAL} n={14} />
-      <Word text={`${fmt(6000)} KM MORE`} at={F.six} size={104} />
+      <Word text={`${fmt(6000)}+ KM MORE`} at={F.six} size={100} />
     </>
   );
 };
@@ -843,6 +842,7 @@ const Deck: React.FC = () => (
       <Word
         text="ABOUT 20 YEARS"
         at={F.nineteen}
+        size={108}
         swipe="#ffc9c2"
         tilt={3}
       />
@@ -902,7 +902,7 @@ const Deck: React.FC = () => (
       </Marks>
       <Burst at={F.too + 1} x={540} y={1190} r={190} colour={CORAL} n={14} />
       <Word text="HOT ROCK" at={F.too + 1} until={F.money - 1} size={150} swipe="#ffc9c2" tilt={3} />
-      <Word text="NO MONEY" at={F.money - 1} size={150} swipe="#bfe9e4" tilt={-2} />
+      <Word text="FUNDING CUT" at={F.money - 1} size={150} swipe="#bfe9e4" tilt={-2} />
     </Shot>
 
     <Shot from={F.again - 2} to={F.sentence7 - 2} tilt={1.5} sheet={NIGHT}>
