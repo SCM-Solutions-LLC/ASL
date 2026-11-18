@@ -22,12 +22,13 @@ The two Tudor shorts are cut from the same `six-wives` VO: one recording can car
 ## Run
 
 ```bash
-npm i
+npm run setup                             # once: npm ci + the pinned Python 3.12 venv the tools run in
 npx remotion studio                       # preview every short in every look
 npx remotion render anne-of-cleves-Holbein out/anne_holbein_9x16.mp4
 npm run new-short -- <slug>               # scaffold a new short
 npm run lint                              # typecheck, licences, and refuse a cut built on stale word timings
-npm run publishable                       # refuse to call the project shippable while an asset has no licence
+npm run publishable                       # refuse to ship while an asset has no licence or a VO has no current fact-check
+npm run sheet -- <slug>                   # render a short end to end; contact sheet per format in out/review/
 npm run tts -- <slug>                     # speak a script with Kokoro and write its word timings
 npm run tts -- --self-test                # check the timing/WAV code with no model downloaded
 npm run align -- <vo-slug>                # word timings for a VO recorded elsewhere
@@ -56,10 +57,10 @@ because the voice would then say one thing while every beat was keyed to another
 the word timings in one pass. Kokoro is **Apache-2.0** and runs locally, which is the whole reason
 it is here: no per-character cost, and no terms page that can change under a published video.
 
-    pip install kokoro soundfile     # once; Kokoro also wants espeak-ng on the system
-
-Kokoro does not install on Python 3.13. Use a 3.12 virtualenv (`uv venv --python 3.12 .venv`) and
-run the tool with it: `.venv/bin/python -I tools/tts.py <slug>`.
+`npm run setup` builds `.venv` from `requirements.txt` (Python 3.12: Kokoro's spaCy dependency does
+not build on 3.13). Versions are pinned because Kokoro's output depends on them: re-running
+`scale-of-the-sun`, recorded on an older stack, gives the same word timings but different samples,
+while `age-of-sunlight` re-runs byte-for-byte. Don't `pip install` into it by hand.
 
 Kokoro samples, so the generator is seeded (`--seed`, default 0): the same script, voice, speed and
 seed give the same audio every time. Without that the hash recorded in the alignment would describe
@@ -96,11 +97,17 @@ from February 2027.)
 
 ## Making a short
 
+Editorial rules — accuracy, sourcing, uniqueness, content limits, approval — are in
+[GUARDRAILS.md](GUARDRAILS.md). Read them before writing a script.
+
 1. `npm run new-short -- <slug>` scaffolds `src/shorts/<slug>/`.
 2. Name the slices of the VO by what is **spoken**, never by source frame.
 3. Hang every beat off a spoken word with `edit.at("word")`.
 4. Write the choreography out of `src/moves`, dropping to raw keyframes where a beat needs it.
 5. List the short in `src/shorts/index.ts`.
+6. Run the `fact-check` skill on the VO (GUARDRAILS A7): a fresh agent checks every claim against its
+   cited source and writes `factcheck/<vo>.json`; `npm run publishable` refuses a missing or stale one.
+7. `npm run sheet -- <slug>` and review every tile against the checklist in `tools/sheet.py`.
 
 ## Layout
 

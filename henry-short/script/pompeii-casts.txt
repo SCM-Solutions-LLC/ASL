@@ -1,0 +1,93 @@
+In Pompeii, a victim found wearing a gold bracelet, beside a small child, was long described as a mother.
+Ancient DNA says it was a man, with no sign he was related to the child.
+Two victims found close together, read as an embrace, were imagined as sisters, or a mother and daughter.
+One of them was genetically male.
+The casts were made from 1863 on, by pouring plaster into the hollows the bodies left in the ash.
+Over the years, restorers reworked some casts, possibly to make them tell a story.
+The DNA does not tell us who these people were. It tells us the old stories were guesses.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+GUARDRAILS C1: these are real victims of a disaster. The owner chose this topic
+knowing that (2026-11-17). Visuals must stay symbolic: no casts close up, no
+bodies, nothing that dwells on how they died. Narration names them only as
+"victims" and does not describe the deaths.
+
+Primary paper, full text read on 2026-11-17 through Firecrawl's research index
+(PubMed ID 39515325; cell.com itself returned only metadata to the scraper):
+Pilli, Vai, Moses, Morelli, Lari, Modi, Diroma, Amoretti, Zuchtriegel, Osanna,
+Kennett, George, Krigbaum, Rohland, Mallick, Caramelli, Reich & Mittnik,
+"Ancient DNA challenges prevailing interpretations of the Pompeii plaster
+casts", Current Biology 34(22), 5307-5318.e7 (2024),
+doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
+
+1. "In Pompeii, a victim found wearing a gold bracelet, beside a small child, was
+   long described as a mother."
+   Pilli, House of the Golden Bracelet: in 1974 "two adults (Individuals 50 and
+   52) and a young child (Individual 51), apparently standing on Individual
+   52's hip" were found. "Individual 52 was traditionally interpreted as a
+   woman and mother, due to the association with the child, and an intricate
+   golden bracelet of exceptional weight (6.1 grams) worn on one arm, which also
+   gave the house its name." The script says "beside", not "holding", because
+   the paper says only "apparently standing on" the adult's hip. "Long
+   described": the reading dates from the 1974 discovery, and Pilli says such
+   interpretations were "spread through museal exhibitions and educational and
+   publicity materials".
+
+2. "Ancient DNA says it was a man, with no sign he was related to the child."
+   Pilli: "All individuals were sexed as genetically male, including the
+   presumed female adult (Individual 52)." And: "both the mitochondrial DNA and
+   whole genome data found no evidence of biological relatedness, at least up to
+   the third degree, between any of the individuals". The script's "no sign he
+   was related" is that finding, worded so it does not claim more than "up to
+   the third degree".
+
+3. "Two victims found close together, read as an embrace, were imagined as
+   sisters, or a mother and daughter."
+   The embrace is itself an interpretation (the paper's "interpreted as an
+   embrace"), so the script reports it as a reading, not as how they were
+   found.
+   Pilli, House of the Cryptoporticus (excavated 1914): "two (Individuals 21 and
+   22) were found close to each other in what was interpreted as an embrace ...
+   the archaeologists hypothesized that they could be two sisters, mother and
+   daughter, or lovers". The script leaves out "lovers" for length; it is not
+   needed for the correction.
+
+4. "One of them was genetically male."
+   Pilli: "The nuclear genetic analysis was successful only for Individual 22
+   and revealed he was male, excluding the possibility that the pair of victims
+   were sisters or mother and daughter." The script says "one of them" because
+   only one of the two could be sexed.
+
+5. "The casts were made from 1863 on, by pouring plaster into the hollows the
+   bodies left in the ash."
+   Pilli, Methods: "In 1863 Fiorelli set up a method to realize plaster casts on
+   some of the victims of the eruption, pouring liquid chalk into the voids left
+   by the bodies in the hardened ash." Introduction: "pouring liquid plaster
+   into the voids left by decay of the victims' soft tissue". The two casts in
+   this script were made after the 1914 and 1974 finds, hence "from 1863 on".
+
+6. "Over the years, restorers reworked some casts, possibly to make them tell a
+   story."
+   The paper speaks of the casts in general; it does not say these two casts
+   were reworked, or reworked to tell the mother or sisters stories. So the
+   line says "some casts" and "a story", not "them" and "those stories".
+   Pilli, Introduction: "The casts had been considerably manipulated and likely
+   creatively restored in the past". Discussion: "it is possible that the
+   exploitation of the casts as vehicles for storytelling led to the
+   manipulation of their poses and relative positioning by restorers in the
+   past." The script keeps the paper's "possible" as "possibly".
+
+7. "The DNA does not tell us who these people were. It tells us the old stories
+   were guesses."
+   Pilli: the study tested "interpretations suggested in the absence of genetic
+   data about the identity of the victims and their relations to each other,
+   based on the shape and position of the bodies", and "illustrates how
+   unreliable narratives based on limited evidence can be". The authors also
+   warn against "establishing new narratives that might also misrepresent these
+   people's lived experiences", which is why the script ends without offering a
+   new story.
+
+Not used: the ancestry finding (mostly recent eastern Mediterranean descent).
+It is a second claim, and B1 asks for one core claim per short.

@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/scale-of-the-sun.txt",
  "audio": "public/vo/scale-of-the-sun.wav",
- "sha256": "652f727afc3a70d31c293f933d439f201840b858cde11c7d23dbf2fab44c13e4",
+ "sha256": "8bef153e40fffbc19511db199401a7af0c10e51381f5b46b4309e8c8a6a78cf4",
  "words": [
   {
    "text": "Jupiter",
@@ -112,727 +112,682 @@
   {
    "text": "But",
    "start": 7.82,
-   "end": 8.095
+   "end": 8.072
   },
   {
    "text": "hold",
-   "start": 8.095,
-   "end": 8.396
+   "start": 8.072,
+   "end": 8.347
   },
   {
    "text": "Jupiter",
-   "start": 8.396,
-   "end": 8.777
+   "start": 8.347,
+   "end": 8.696
   },
   {
    "text": "up",
-   "start": 8.777,
-   "end": 9.026
+   "start": 8.696,
+   "end": 8.924
   },
   {
    "text": "next",
-   "start": 9.026,
-   "end": 9.327
+   "start": 8.924,
+   "end": 9.2
   },
   {
    "text": "to",
-   "start": 9.327,
-   "end": 9.575
+   "start": 9.2,
+   "end": 9.427
   },
   {
    "text": "the",
-   "start": 9.575,
-   "end": 9.85
+   "start": 9.427,
+   "end": 9.678
   },
   {
    "text": "Sun,",
-   "start": 9.85,
-   "end": 10.125
+   "start": 9.678,
+   "end": 9.93
   },
   {
    "text": "and",
-   "start": 10.125,
-   "end": 10.4
+   "start": 9.93,
+   "end": 10.182
   },
   {
    "text": "it",
-   "start": 10.4,
-   "end": 10.648
+   "start": 10.182,
+   "end": 10.409
   },
   {
-   "text": "disappears.",
-   "start": 10.648,
-   "end": 11.106
+   "text": "looks",
+   "start": 10.409,
+   "end": 10.709
   },
   {
-   "text": "You",
-   "start": 11.73,
-   "end": 11.991
+   "text": "tiny.",
+   "start": 10.709,
+   "end": 10.985
   },
   {
-   "text": "could",
-   "start": 11.991,
-   "end": 12.302
+   "text": "It",
+   "start": 11.655,
+   "end": 11.876
   },
   {
-   "text": "pour",
-   "start": 12.302,
-   "end": 12.588
+   "text": "would",
+   "start": 11.876,
+   "end": 12.167
+  },
+  {
+   "text": "take",
+   "start": 12.167,
+   "end": 12.435
+  },
+  {
+   "text": "nearly",
+   "start": 12.435,
+   "end": 12.75
   },
   {
    "text": "a",
-   "start": 12.588,
-   "end": 12.798
+   "start": 12.75,
+   "end": 12.947
   },
   {
    "text": "thousand",
-   "start": 12.798,
-   "end": 13.185
+   "start": 12.947,
+   "end": 13.31
   },
   {
    "text": "Jupiters",
-   "start": 13.185,
-   "end": 13.572
+   "start": 13.31,
+   "end": 13.672
   },
   {
-   "text": "into",
-   "start": 13.572,
-   "end": 13.857
+   "text": "to",
+   "start": 13.672,
+   "end": 13.893
+  },
+  {
+   "text": "fill",
+   "start": 13.893,
+   "end": 14.161
   },
   {
    "text": "the",
-   "start": 13.857,
-   "end": 14.118
+   "start": 14.161,
+   "end": 14.405
   },
   {
-   "text": "Sun",
-   "start": 14.118,
-   "end": 14.379
-  },
-  {
-   "text": "and",
-   "start": 14.379,
-   "end": 14.64
-  },
-  {
-   "text": "still",
-   "start": 14.64,
-   "end": 14.951
-  },
-  {
-   "text": "have",
-   "start": 14.951,
-   "end": 15.237
-  },
-  {
-   "text": "room",
-   "start": 15.237,
-   "end": 15.523
-  },
-  {
-   "text": "left",
-   "start": 15.523,
-   "end": 15.808
-  },
-  {
-   "text": "over.",
-   "start": 15.808,
-   "end": 16.094
+   "text": "Sun.",
+   "start": 14.405,
+   "end": 14.65
   },
   {
    "text": "And",
-   "start": 16.815,
-   "end": 17.073
+   "start": 15.34,
+   "end": 15.598
   },
   {
    "text": "here",
-   "start": 17.073,
-   "end": 17.356
+   "start": 15.598,
+   "end": 15.881
   },
   {
    "text": "is",
-   "start": 17.356,
-   "end": 17.588
+   "start": 15.881,
+   "end": 16.113
   },
   {
    "text": "the",
-   "start": 17.588,
-   "end": 17.846
+   "start": 16.113,
+   "end": 16.371
   },
   {
    "text": "part",
-   "start": 17.846,
-   "end": 18.129
+   "start": 16.371,
+   "end": 16.654
   },
   {
    "text": "that",
-   "start": 18.129,
-   "end": 18.412
+   "start": 16.654,
+   "end": 16.937
   },
   {
    "text": "gets",
-   "start": 18.412,
-   "end": 18.695
+   "start": 16.937,
+   "end": 17.22
   },
   {
    "text": "people.",
-   "start": 18.695,
-   "end": 19.027
+   "start": 17.22,
+   "end": 17.552
   },
   {
    "text": "Our",
-   "start": 19.675,
-   "end": 19.929
+   "start": 18.2,
+   "end": 18.468
   },
   {
    "text": "Sun",
-   "start": 19.929,
-   "end": 20.183
+   "start": 18.468,
+   "end": 18.736
   },
   {
    "text": "is",
-   "start": 20.183,
-   "end": 20.413
+   "start": 18.736,
+   "end": 18.977
   },
   {
    "text": "not",
-   "start": 20.413,
-   "end": 20.667
+   "start": 18.977,
+   "end": 19.245
   },
   {
-   "text": "a",
-   "start": 20.667,
-   "end": 20.872
+   "text": "an",
+   "start": 19.245,
+   "end": 19.487
   },
   {
-   "text": "big",
-   "start": 20.872,
-   "end": 21.127
+   "text": "average",
+   "start": 19.487,
+   "end": 19.858
   },
   {
    "text": "star.",
-   "start": 21.127,
-   "end": 21.405
+   "start": 19.858,
+   "end": 20.152
   },
   {
    "text": "It",
-   "start": 22.06,
-   "end": 22.346
+   "start": 20.835,
+   "end": 21.101
   },
   {
    "text": "is",
-   "start": 22.346,
-   "end": 22.633
+   "start": 21.101,
+   "end": 21.366
   },
   {
-   "text": "not",
-   "start": 22.633,
-   "end": 22.95
+   "text": "an",
+   "start": 21.366,
+   "end": 21.632
   },
   {
-   "text": "even",
-   "start": 22.95,
-   "end": 23.297
+   "text": "unusually",
+   "start": 21.632,
+   "end": 22.096
   },
   {
-   "text": "average.",
-   "start": 23.297,
-   "end": 23.737
+   "text": "big",
+   "start": 22.096,
+   "end": 22.39
+  },
+  {
+   "text": "one.",
+   "start": 22.39,
+   "end": 22.684
   },
   {
    "text": "It",
-   "start": 24.345,
-   "end": 24.623
+   "start": 23.345,
+   "end": 23.606
   },
   {
    "text": "is",
-   "start": 24.623,
-   "end": 24.9
+   "start": 23.606,
+   "end": 23.868
   },
   {
-   "text": "heavier",
-   "start": 24.9,
-   "end": 25.326
+   "text": "bigger",
+   "start": 23.868,
+   "end": 24.241
   },
   {
    "text": "and",
-   "start": 25.326,
-   "end": 25.634
+   "start": 24.241,
+   "end": 24.53
   },
   {
    "text": "brighter",
-   "start": 25.634,
-   "end": 26.089
+   "start": 24.53,
+   "end": 24.959
   },
   {
    "text": "than",
-   "start": 26.089,
-   "end": 26.426
-  },
-  {
-   "text": "about",
-   "start": 26.426,
-   "end": 26.793
-  },
-  {
-   "text": "ninety",
-   "start": 26.793,
-   "end": 27.19
-  },
-  {
-   "text": "percent",
-   "start": 27.19,
-   "end": 27.616
-  },
-  {
-   "text": "of",
-   "start": 27.616,
-   "end": 27.893
-  },
-  {
-   "text": "the",
-   "start": 27.893,
-   "end": 28.201
-  },
-  {
-   "text": "stars",
-   "start": 28.201,
-   "end": 28.567
-  },
-  {
-   "text": "in",
-   "start": 28.567,
-   "end": 28.845
-  },
-  {
-   "text": "our",
-   "start": 28.845,
-   "end": 29.152
-  },
-  {
-   "text": "galaxy,",
-   "start": 29.152,
-   "end": 29.549
-  },
-  {
-   "text": "because",
-   "start": 29.549,
-   "end": 29.975
-  },
-  {
-   "text": "most",
-   "start": 29.975,
-   "end": 30.312
-  },
-  {
-   "text": "stars",
-   "start": 30.312,
-   "end": 30.679
-  },
-  {
-   "text": "are",
-   "start": 30.679,
-   "end": 30.986
-  },
-  {
-   "text": "red",
-   "start": 30.986,
-   "end": 31.293
-  },
-  {
-   "text": "dwarfs:",
-   "start": 31.293,
-   "end": 31.69
-  },
-  {
-   "text": "small,",
-   "start": 31.69,
-   "end": 32.056
-  },
-  {
-   "text": "dim,",
-   "start": 32.056,
-   "end": 32.364
-  },
-  {
-   "text": "and",
-   "start": 32.364,
-   "end": 32.671
-  },
-  {
-   "text": "everywhere.",
-   "start": 32.671,
-   "end": 33.183
-  },
-  {
-   "text": "So",
-   "start": 33.905,
-   "end": 34.102
-  },
-  {
-   "text": "look",
-   "start": 34.102,
-   "end": 34.341
-  },
-  {
-   "text": "at",
-   "start": 34.341,
-   "end": 34.538
-  },
-  {
-   "text": "the",
-   "start": 34.538,
-   "end": 34.756
-  },
-  {
-   "text": "nearest",
-   "start": 34.756,
-   "end": 35.058
-  },
-  {
-   "text": "star",
-   "start": 35.058,
-   "end": 35.297
-  },
-  {
-   "text": "to",
-   "start": 35.297,
-   "end": 35.494
-  },
-  {
-   "text": "our",
-   "start": 35.494,
-   "end": 35.712
-  },
-  {
-   "text": "own.",
-   "start": 35.712,
-   "end": 35.93
-  },
-  {
-   "text": "Proxima",
-   "start": 36.59,
-   "end": 37.039
-  },
-  {
-   "text": "Centauri,",
-   "start": 37.039,
-   "end": 37.52
-  },
-  {
-   "text": "just",
-   "start": 37.52,
-   "end": 37.875
+   "start": 24.959,
+   "end": 25.276
   },
   {
    "text": "over",
-   "start": 37.875,
-   "end": 38.23
+   "start": 25.276,
+   "end": 25.593
   },
   {
-   "text": "four",
-   "start": 38.23,
-   "end": 38.585
+   "text": "ninety",
+   "start": 25.593,
+   "end": 25.966
   },
   {
-   "text": "light",
-   "start": 38.585,
-   "end": 38.972
-  },
-  {
-   "text": "years",
-   "start": 38.972,
-   "end": 39.359
-  },
-  {
-   "text": "away.",
-   "start": 39.359,
-   "end": 39.714
-  },
-  {
-   "text": "The",
-   "start": 40.4,
-   "end": 40.644
-  },
-  {
-   "text": "closest",
-   "start": 40.644,
-   "end": 40.983
-  },
-  {
-   "text": "star",
-   "start": 40.983,
-   "end": 41.251
-  },
-  {
-   "text": "there",
-   "start": 41.251,
-   "end": 41.542
-  },
-  {
-   "text": "is,",
-   "start": 41.542,
-   "end": 41.763
-  },
-  {
-   "text": "and",
-   "start": 41.763,
-   "end": 42.007
-  },
-  {
-   "text": "you",
-   "start": 42.007,
-   "end": 42.251
-  },
-  {
-   "text": "have",
-   "start": 42.251,
-   "end": 42.519
-  },
-  {
-   "text": "never",
-   "start": 42.519,
-   "end": 42.81
-  },
-  {
-   "text": "seen",
-   "start": 42.81,
-   "end": 43.078
-  },
-  {
-   "text": "it.",
-   "start": 43.078,
-   "end": 43.299
-  },
-  {
-   "text": "It",
-   "start": 43.935,
-   "end": 44.173
-  },
-  {
-   "text": "is",
-   "start": 44.173,
-   "end": 44.411
-  },
-  {
-   "text": "too",
-   "start": 44.411,
-   "end": 44.674
-  },
-  {
-   "text": "faint",
-   "start": 44.674,
-   "end": 44.988
-  },
-  {
-   "text": "for",
-   "start": 44.988,
-   "end": 45.252
-  },
-  {
-   "text": "your",
-   "start": 45.252,
-   "end": 45.541
-  },
-  {
-   "text": "eyes,",
-   "start": 45.541,
-   "end": 45.829
-  },
-  {
-   "text": "and",
-   "start": 45.829,
-   "end": 46.093
-  },
-  {
-   "text": "too",
-   "start": 46.093,
-   "end": 46.356
-  },
-  {
-   "text": "faint",
-   "start": 46.356,
-   "end": 46.67
-  },
-  {
-   "text": "for",
-   "start": 46.67,
-   "end": 46.934
-  },
-  {
-   "text": "most",
-   "start": 46.934,
-   "end": 47.223
-  },
-  {
-   "text": "binoculars.",
-   "start": 47.223,
-   "end": 47.662
-  },
-  {
-   "text": "You",
-   "start": 48.295,
-   "end": 48.535
-  },
-  {
-   "text": "need",
-   "start": 48.535,
-   "end": 48.797
-  },
-  {
-   "text": "a",
-   "start": 48.797,
-   "end": 48.991
-  },
-  {
-   "text": "telescope",
-   "start": 48.991,
-   "end": 49.369
-  },
-  {
-   "text": "to",
-   "start": 49.369,
-   "end": 49.586
-  },
-  {
-   "text": "find",
-   "start": 49.586,
-   "end": 49.848
-  },
-  {
-   "text": "the",
-   "start": 49.848,
-   "end": 50.088
-  },
-  {
-   "text": "star",
-   "start": 50.088,
-   "end": 50.351
-  },
-  {
-   "text": "next",
-   "start": 50.351,
-   "end": 50.613
-  },
-  {
-   "text": "door.",
-   "start": 50.613,
-   "end": 50.876
-  },
-  {
-   "text": "That",
-   "start": 51.555,
-   "end": 51.835
-  },
-  {
-   "text": "is",
-   "start": 51.835,
-   "end": 52.067
-  },
-  {
-   "text": "what",
-   "start": 52.067,
-   "end": 52.347
-  },
-  {
-   "text": "most",
-   "start": 52.347,
-   "end": 52.628
+   "text": "percent",
+   "start": 25.966,
+   "end": 26.367
   },
   {
    "text": "of",
-   "start": 52.628,
-   "end": 52.859
+   "start": 26.367,
+   "end": 26.629
   },
   {
    "text": "the",
-   "start": 52.859,
-   "end": 53.114
+   "start": 26.629,
+   "end": 26.918
   },
   {
-   "text": "galaxy",
-   "start": 53.114,
-   "end": 53.444
+   "text": "stars",
+   "start": 26.918,
+   "end": 27.263
   },
   {
-   "text": "looks",
-   "start": 53.444,
-   "end": 53.749
+   "text": "in",
+   "start": 27.263,
+   "end": 27.524
   },
   {
-   "text": "like.",
-   "start": 53.749,
-   "end": 54.03
+   "text": "our",
+   "start": 27.524,
+   "end": 27.814
   },
   {
-   "text": "The",
-   "start": 54.665,
-   "end": 54.939
+   "text": "part",
+   "start": 27.814,
+   "end": 28.131
   },
   {
-   "text": "Sun",
-   "start": 54.939,
-   "end": 55.213
+   "text": "of",
+   "start": 28.131,
+   "end": 28.392
   },
   {
-   "text": "only",
-   "start": 55.213,
-   "end": 55.514
+   "text": "the",
+   "start": 28.392,
+   "end": 28.681
   },
   {
-   "text": "looks",
-   "start": 55.514,
-   "end": 55.841
-  },
-  {
-   "text": "ordinary",
-   "start": 55.841,
-   "end": 56.248
+   "text": "galaxy,",
+   "start": 28.681,
+   "end": 29.054
   },
   {
    "text": "because",
-   "start": 56.248,
-   "end": 56.628
+   "start": 29.054,
+   "end": 29.455
   },
   {
-   "text": "we",
-   "start": 56.628,
-   "end": 56.876
+   "text": "most",
+   "start": 29.455,
+   "end": 29.773
   },
   {
-   "text": "have",
-   "start": 56.876,
-   "end": 57.177
+   "text": "of",
+   "start": 29.773,
+   "end": 30.034
   },
   {
-   "text": "never",
-   "start": 57.177,
-   "end": 57.504
+   "text": "them",
+   "start": 30.034,
+   "end": 30.351
   },
   {
-   "text": "stood",
-   "start": 57.504,
-   "end": 57.831
+   "text": "are",
+   "start": 30.351,
+   "end": 30.64
   },
   {
-   "text": "next",
-   "start": 57.831,
-   "end": 58.132
+   "text": "red",
+   "start": 30.64,
+   "end": 30.929
+  },
+  {
+   "text": "dwarfs:",
+   "start": 30.929,
+   "end": 31.302
+  },
+  {
+   "text": "small,",
+   "start": 31.302,
+   "end": 31.648
+  },
+  {
+   "text": "dim,",
+   "start": 31.648,
+   "end": 31.937
+  },
+  {
+   "text": "and",
+   "start": 31.937,
+   "end": 32.226
+  },
+  {
+   "text": "everywhere.",
+   "start": 32.226,
+   "end": 32.708
+  },
+  {
+   "text": "So",
+   "start": 33.43,
+   "end": 33.627
+  },
+  {
+   "text": "look",
+   "start": 33.627,
+   "end": 33.866
+  },
+  {
+   "text": "at",
+   "start": 33.866,
+   "end": 34.063
+  },
+  {
+   "text": "the",
+   "start": 34.063,
+   "end": 34.281
+  },
+  {
+   "text": "nearest",
+   "start": 34.281,
+   "end": 34.583
+  },
+  {
+   "text": "star",
+   "start": 34.583,
+   "end": 34.822
   },
   {
    "text": "to",
-   "start": 58.132,
-   "end": 58.379
+   "start": 34.822,
+   "end": 35.019
   },
   {
-   "text": "anything",
-   "start": 58.379,
-   "end": 58.786
+   "text": "our",
+   "start": 35.019,
+   "end": 35.236
   },
   {
-   "text": "else.",
-   "start": 58.786,
-   "end": 59.087
+   "text": "own.",
+   "start": 35.236,
+   "end": 35.454
+  },
+  {
+   "text": "Proxima",
+   "start": 36.115,
+   "end": 36.564
+  },
+  {
+   "text": "Centauri,",
+   "start": 36.564,
+   "end": 37.045
+  },
+  {
+   "text": "just",
+   "start": 37.045,
+   "end": 37.4
+  },
+  {
+   "text": "over",
+   "start": 37.4,
+   "end": 37.755
+  },
+  {
+   "text": "four",
+   "start": 37.755,
+   "end": 38.11
+  },
+  {
+   "text": "light",
+   "start": 38.11,
+   "end": 38.497
+  },
+  {
+   "text": "years",
+   "start": 38.497,
+   "end": 38.884
+  },
+  {
+   "text": "away.",
+   "start": 38.884,
+   "end": 39.239
+  },
+  {
+   "text": "The",
+   "start": 39.925,
+   "end": 40.163
+  },
+  {
+   "text": "closest",
+   "start": 40.163,
+   "end": 40.493
+  },
+  {
+   "text": "star",
+   "start": 40.493,
+   "end": 40.754
+  },
+  {
+   "text": "to",
+   "start": 40.754,
+   "end": 40.969
+  },
+  {
+   "text": "the",
+   "start": 40.969,
+   "end": 41.207
+  },
+  {
+   "text": "Sun,",
+   "start": 41.207,
+   "end": 41.444
+  },
+  {
+   "text": "and",
+   "start": 41.444,
+   "end": 41.682
+  },
+  {
+   "text": "you",
+   "start": 41.682,
+   "end": 41.92
+  },
+  {
+   "text": "have",
+   "start": 41.92,
+   "end": 42.181
+  },
+  {
+   "text": "almost",
+   "start": 42.181,
+   "end": 42.488
+  },
+  {
+   "text": "certainly",
+   "start": 42.488,
+   "end": 42.864
+  },
+  {
+   "text": "never",
+   "start": 42.864,
+   "end": 43.148
+  },
+  {
+   "text": "seen",
+   "start": 43.148,
+   "end": 43.409
+  },
+  {
+   "text": "it.",
+   "start": 43.409,
+   "end": 43.624
+  },
+  {
+   "text": "It",
+   "start": 44.285,
+   "end": 44.508
+  },
+  {
+   "text": "is",
+   "start": 44.508,
+   "end": 44.731
+  },
+  {
+   "text": "almost",
+   "start": 44.731,
+   "end": 45.05
+  },
+  {
+   "text": "always",
+   "start": 45.05,
+   "end": 45.368
+  },
+  {
+   "text": "too",
+   "start": 45.368,
+   "end": 45.615
+  },
+  {
+   "text": "faint",
+   "start": 45.615,
+   "end": 45.91
+  },
+  {
+   "text": "for",
+   "start": 45.91,
+   "end": 46.157
+  },
+  {
+   "text": "your",
+   "start": 46.157,
+   "end": 46.428
+  },
+  {
+   "text": "eyes.",
+   "start": 46.428,
+   "end": 46.699
+  },
+  {
+   "text": "That",
+   "start": 47.32,
+   "end": 47.589
+  },
+  {
+   "text": "is",
+   "start": 47.589,
+   "end": 47.811
+  },
+  {
+   "text": "what",
+   "start": 47.811,
+   "end": 48.079
+  },
+  {
+   "text": "most",
+   "start": 48.079,
+   "end": 48.348
+  },
+  {
+   "text": "of",
+   "start": 48.348,
+   "end": 48.57
+  },
+  {
+   "text": "the",
+   "start": 48.57,
+   "end": 48.815
+  },
+  {
+   "text": "stars",
+   "start": 48.815,
+   "end": 49.108
+  },
+  {
+   "text": "around",
+   "start": 49.108,
+   "end": 49.424
+  },
+  {
+   "text": "us",
+   "start": 49.424,
+   "end": 49.646
+  },
+  {
+   "text": "look",
+   "start": 49.646,
+   "end": 49.915
+  },
+  {
+   "text": "like.",
+   "start": 49.915,
+   "end": 50.184
+  },
+  {
+   "text": "The",
+   "start": 50.83,
+   "end": 51.091
+  },
+  {
+   "text": "star",
+   "start": 51.091,
+   "end": 51.378
+  },
+  {
+   "text": "we",
+   "start": 51.378,
+   "end": 51.614
+  },
+  {
+   "text": "call",
+   "start": 51.614,
+   "end": 51.9
+  },
+  {
+   "text": "ordinary",
+   "start": 51.9,
+   "end": 52.288
+  },
+  {
+   "text": "is",
+   "start": 52.288,
+   "end": 52.524
+  },
+  {
+   "text": "one",
+   "start": 52.524,
+   "end": 52.785
+  },
+  {
+   "text": "of",
+   "start": 52.785,
+   "end": 53.021
+  },
+  {
+   "text": "the",
+   "start": 53.021,
+   "end": 53.283
+  },
+  {
+   "text": "rare",
+   "start": 53.283,
+   "end": 53.569
+  },
+  {
+   "text": "big",
+   "start": 53.569,
+   "end": 53.83
+  },
+  {
+   "text": "ones.",
+   "start": 53.83,
+   "end": 54.117
   }
  ]
 }

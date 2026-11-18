@@ -1,77 +1,95 @@
-The sunlight on your skin is a hundred thousand years old.
-Eight minutes of that was the trip from the Sun.
-The rest was getting out.
+The energy in the sunlight on your skin spent tens of thousands of years, maybe far more, getting out of the Sun.
+The trip from the Sun to you took eight minutes.
+Getting out was the slow part.
 But it is not the same light.
-No photon survives the climb.
-The energy is ancient. The light is eight minutes old.
+It leaves as sunlight.
+The energy is ancient. Its last eight minutes were the trip to you.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-1. "Eight minutes of that was the trip from the Sun."
-   1 AU = 149,597,870.7 km; c = 299,792.458 km/s, so 499.0 s = 8 min 19 s from the
-   photosphere to Earth. Uncontested. "From the Sun" means its visible surface,
-   which is where the light we actually see leaves.
+1. "The trip from the Sun to you took eight minutes."
+   1 AU = 149,597,870,700 m exactly (IAU 2012 Resolution B2); c = 299,792,458 m/s
+   exactly (CODATA 2022, https://physics.nist.gov/cgi-bin/cuu/Value?c). 1 AU / c =
+   499.0 s centre to centre; from the photosphere (Sun radius 695,700 km, NASA Sun
+   fact sheet, https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html) to
+   Earth it is about 497 s, 8 min 17 s. The Earth-Sun distance varies by about
+   ±1.7% over the year, so the trip is 8.1-8.4 min; "eight minutes" is the
+   rounding. NASA SVS "Origin of Light" (claim 4): "Light takes eight minutes to
+   travel" from the Sun to Earth.
 
-2. "A hundred thousand years old."
-   The softest number in the script, and the one to read before changing a word of
-   it: what the answer is depends on which quantity is being timed.
+2. "The energy ... spent tens of thousands of years, maybe far more, getting out of
+   the Sun."
+   The hook. The published answers disagree by orders of magnitude, so (A3) the
+   script makes the claim every cited source supports: tens of thousands of years
+   at the least, "maybe far more" for the higher estimates.
 
-   As a photon random walk out of the core: Mitalas & Sills, "On the Photon
-   Diffusion Time Scale for the Sun", ApJ 401, 759 (December 1992),
-   doi:10.1086/172103, bibcode 1992ApJ...401..759M, get 1.7e5 years. Their actual
-   contribution is the step length. Earlier work assumed 0.5-1.0 cm, which makes
-   the diffusion time an order of magnitude too SHORT; a solar model gives 0.090 cm
-   instead, and the shorter step is what pushes the time up to 1.7e5. Note the
-   direction: the millimetre-scale step is the corrected figure, not the naive one.
-   An earlier draft of this file had that backwards.
+   Lowest cited figure: NASA SVS, "Origin of Light"
+   (https://svs.gsfc.nasa.gov/11084): "Over the course of 40,000 years it will be
+   absorbed by other atoms and emitted repeatedly until reaching the sun's
+   surface." Tens of thousands.
 
-   As the time for the Sun's energy to get out: Stix (2003, Solar Physics) argues
-   the photon diffusion time is not the quantity people mean, because most of the
-   interior's thermal energy sits in the random motions of electrons and ions
-   rather than in photons. Allowing for that heat capacity puts the thermal
-   adjustment time at order 1e7 years, and he quotes 3e7 as the right order of
-   magnitude. So the published answers span 1.7e5 to ~1.7e7 depending on the
-   question.
+   Peer-reviewed, read at source on 2026-11-17 (NASA ADS scan,
+   https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M): Mitalas & Sills,
+   "On the Photon Diffusion Time Scale for the Sun", ApJ 401, 759-760 (1992),
+   doi:10.1086/172103: "t_d = 1.7 x 10^5 yr", the time "to reach the inner edge of
+   the solar convective zone". They call the 3 x 10^3 to 3 x 10^4 yr that the
+   common 0.5-1.0 cm step gives "much too short". A fact-checker questioned their
+   random-walk factor (eq. 2), which could bring their figure nearer 6e4; either
+   way it is tens of thousands or more.
 
-   This short is making the photon claim — its whole turn is that no photon
-   survives the climb — so Mitalas & Sills is the figure it rests on, and "a
-   hundred thousand" is a round number a little under their 1.7e5. What is NOT
-   safe is to gloss this as the time for the Sun's energy to escape, full stop:
-   that is the reading Stix objects to, and the script's "the rest was getting
-   out" sits closer to it than is comfortable. If a citable number is wanted,
-   "about a hundred and seventy thousand years" is it, and it would mean
-   re-recording the line and re-cutting the ≈100,000 YEARS tag with it.
+   Agency figure: NASA Marshall Space Flight Center, "The Solar Interior"
+   (https://solarscience.msfc.nasa.gov/interior.shtml): "about a million years" to
+   reach the interface layer at ~0.7 R.
 
-   Provenance: the Mitalas & Sills entry is confirmed against ADS and Semantic
-   Scholar (page range given as 759-760 by Semantic Scholar, 759-761 elsewhere);
-   the abstract's own wording is the source for the step lengths and for the
-   "too short by an order of magnitude" direction. The Stix paper is "On the
-   Time Scale of Energy Transport in the Sun", Solar Physics 212, 3-6 (2003),
-   doi:10.1023/A:1022952621810; its abstract gives the Kelvin-Helmholtz value
-   of about 3e7 years (checked 9 Nov 2026 via the Springer abstract as returned
-   by search). The 1.7e7 figure is from a review citing Stix, not from Stix.
+   Upper end, not re-read at source (Springer refused; bibliographic details
+   checked on Crossref): Stix, "On the time scale of energy transport in the Sun",
+   Solar Physics 212, 3 (2003), doi:10.1023/A:1022952621810, argues the energy
+   transport time is the Kelvin-Helmholtz scale, of order 3e7 years. "Maybe far
+   more" covers MSFC and Stix; nothing spoken rests on Stix alone.
 
-3. "The rest was getting out."
-   Core out to ~0.7 solar radii is the radiative zone, where the energy diffuses
-   and claim 2's time is spent. From 0.7 R to the surface is the convective zone,
-   which carries energy by bulk motion of plasma in weeks to months — negligible
-   against the radiative-zone figure. That is why the short animates a long grind
-   and then a fast break-out, rather than one uniform crawl.
+   So "tens of thousands of years, maybe far more" is true at SVS's 4e4, Mitalas &
+   Sills' 1.7e5, MSFC's ~1e6 and Stix's ~3e7. The hook is about the energy, and a
+   viewer who swipes after the first sentence leaves with nothing false.
+   On screen: "10,000+ YEARS".
 
-4. "But it is not the same light. No photon survives the climb."
-   Fusion in the core emits gamma rays. Those are absorbed and re-emitted by the
-   plasma countless times on the way out, each interaction degrading the energy,
-   and what leaves the photosphere is a ~5,772 K blackbody spectrum: mostly visible
-   light. One core gamma photon's energy ends up spread over of order a million
-   visible photons (~1 MeV divided by ~2 eV). So no individual photon makes the
-   trip, which is exactly the part the popular version of this fact drops. It is
-   in the script because without it the hook is false.
+3. "Getting out was the slow part."
+   Follows from claims 1 and 2: 8 minutes against at least tens of thousands of
+   years (4e4 or more). No new
+   number.
 
-5. "The energy is ancient. The light is eight minutes old."
-   Rests on claims 1, 2 and 4. No new number.
+4. "But it is not the same light. It leaves as sunlight."
+   NASA Marshall Space Flight Center, "The Solar Interior"
+   (https://solarscience.msfc.nasa.gov/interior.shtml): the energy crosses the
+   radiative zone as radiation, "mostly gamma-rays and x-rays", and the outer ~30%
+   by convective fluid flows; the reactions release "the energy that ultimately
+   leaves the surface as visible light". So the light inside is not the light
+   that leaves: gamma rays and X-rays in, visible light out.
+   The script deliberately does not name the inside radiation aloud. MSFC says
+   "mostly gamma-rays and x-rays"; MSFC's own temperatures put the thermal peak in
+   X-rays (Wien's law, CODATA b = 2.897771955e-3 m K: about 6.4, 3.0 and 0.86 keV
+   at 15, 7 and 2 MK). Either reading supports "not the same light", so the
+   spoken line rests on what both share. Earlier drafts ("No photon survives the
+   climb", "The light is eight minutes old") were cut: no source this pipeline
+   could open states them, and NASA SVS "Origin of Light"
+   (https://svs.gsfc.nasa.gov/11084) describes each photon being "absorbed by
+   other atoms and emitted repeatedly until reaching the sun's surface".
 
-6. Zone fractions used by the animation, not spoken.
-   Fusion is essentially all inside 0.25 R; the radiative/convective boundary is at
-   ~0.7 R; core ~15.7 million K against a ~5,772 K photosphere. Standard solar
-   model figures, uncontested at this precision.
+5. "The energy is ancient. Its last eight minutes were the trip to you."
+   Rests on claims 1 and 2. NASA SVS (above) also gives "Light takes eight minutes
+   to travel" from the Sun to Earth. No new number.
+
+6. Not spoken: the photon-path animation.
+   Zones: NASA MSFC (above) puts the core in the innermost 25% of the radius, the
+   radiative zone from 25% to 70%, and the convection zone in the outermost 30%.
+   Helioseismology puts the base of the convection zone at 0.713 R
+   (Christensen-Dalsgaard, Gough & Thompson, ApJ 378, 413 (1991),
+   doi:10.1086/170441). The animation shows a random walk through the radiative
+   zone, its colour set by log temperature from the NASA MSFC profile (15 MK at
+   the centre, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at the surface): violet for
+   high-energy radiation, yellow for visible light. So the path is only ~26% of
+   the way to yellow at 0.7 R, where the radiation is still X-ray, and reaches
+   visible light only at the surface. The hue is schematic. Then rising convection cells above 0.7 R, where NASA MSFC
+   says "convective motions carry heat quite rapidly to the surface". It is labelled
+   on screen as not to scale: a 0.09 cm step across 700,000 km cannot be drawn. The Sun-Earth shot is also labelled not to
+   scale (Earth is drawn far too big and far too close).
