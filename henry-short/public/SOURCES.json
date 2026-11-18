@@ -41,5 +41,11 @@
   "licence": "ofl-1.1",
   "ship": true,
   "note": "The faces the cloud renderer was already substituting for Arial Black, Arial, Georgia and Helvetica Neue, pinned so that every machine draws what QA measured. OFL allows bundling with the project; only selling the fonts on their own, or a modified copy under the reserved names, is ruled out. See src/fonts.ts."
+ },
+ "public/img/stonehenge-red-sky.jpg": {
+  "source": "\"Sunrise at Stonehenge- Red sky in the morning\" by Stonehenge Stone Circle (Flickr, https://www.flickr.com/photos/stonehenge-stone-circle/11774816654/), via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Sunrise_at_Stonehenge-_Red_sky_in_the_morning.jpg); the Commons 1920 px rendition, unmodified",
+  "licence": "cc-by-2.0",
+  "ship": true,
+  "note": "CC BY 2.0 requires credit: the altar-stone short shows 'Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0' on screen while the photo is up, and the video description must carry the same line. Licence read from the Commons file page metadata on 2026-11-18."
  }
 }
