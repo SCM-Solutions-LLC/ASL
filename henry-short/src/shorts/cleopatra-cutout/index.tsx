@@ -147,11 +147,12 @@ const OUTLINE = {
 
 const Cut = makeCut("cleopatra", PICS);
 
-const Year: React.FC<{ x: number; y: number; text: string; at: number }> = ({
+const Year: React.FC<{ x: number; y: number; text: string; at: number; size?: number }> = ({
   x,
   y,
   text,
   at,
+  size = 46,
 }) => {
   const f = useCurrentFrame();
   const e = pop(f, at);
@@ -171,7 +172,7 @@ const Year: React.FC<{ x: number; y: number; text: string; at: number }> = ({
         style={{
           position: "absolute",
           translate: "-50% 0",
-          font: `400 46px ${MARKER}`,
+          font: `400 ${size}px ${MARKER}`,
           color: INK,
           whiteSpace: "nowrap",
         }}
@@ -302,7 +303,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
         text="ABOUT 450 YEARS CLOSER"
         at={F.twoThousand + 12}
         y={1225}
-        size={92}
+        size={70}
         swipe={YELLOW}
       />
     </>
@@ -367,7 +368,7 @@ const Deck: React.FC = () => (
     <Shot from={0} to={F.moon - 2} tilt={-1.5} sheet={CORAL}>
       <Cut pic="cleopatra" x={540} y={585} w={820} tilt={-2} />
       {/* Paintings are imagined scenes, not likenesses (A5/A6), so each says whose and when. */}
-      <Year x={540} y={1040} text="WATERHOUSE, 1888 · IMAGINED" at={6} />
+      <Year x={540} y={1040} text="WATERHOUSE, 1888 · IMAGINED" at={6} size={38} />
       <Burst at={2} x={540} y={1190} r={190} colour={YELLOW} n={14} />
       <Word text="CLEOPATRA" at={3} />
     </Shot>
@@ -458,7 +459,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
-      <Year x={540} y={1040} text="ALMA-TADEMA, 1885 · IMAGINED, 41 BC" at={F.born} />
+      <Year x={540} y={150} text="ALMA-TADEMA, 1885 · IMAGINED, 41 BC" at={F.born} size={34} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>

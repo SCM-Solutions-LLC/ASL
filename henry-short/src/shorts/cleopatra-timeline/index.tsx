@@ -229,7 +229,7 @@ const Timeline: React.FC<{ L: Layout }> = ({ L }) => {
               borderRadius: 16,
               background: INK,
               border: `5px solid ${GOLD}`,
-              font: `900 36px ${SANS}`,
+              font: `900 30px ${SANS}`,
               color: "#fff",
             }}
           >
