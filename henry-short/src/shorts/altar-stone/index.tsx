@@ -141,9 +141,10 @@ const GOLD = "#f1c74f";
 const INKC = "#f4ecd8";
 
 // A small label in map space, for place names under the big tags.
-const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size?: number }> = ({ x, y, text, opacity, size = 28 }) =>
+// `boxed` sets the note on a dark plate, for text that must stay legible over an image (a licence credit).
+const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size?: number; boxed?: boolean }> = ({ x, y, text, opacity, size = 28, boxed }) =>
   opacity <= 0 ? null : (
-    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "pre", textShadow: "0 2px 10px rgba(0,0,0,0.95)" }}>{text}</div>
+    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "pre", textShadow: "0 2px 10px rgba(0,0,0,0.95)", ...(boxed ? { background: "rgba(12,9,7,0.82)", padding: "8px 14px", borderRadius: 6 } : {}) }}>{text}</div>
   );
 
 // Tag positions per crop: the 9:16 slice is only x 517–1403, so tags sit in the sea beside Britain;
@@ -301,7 +302,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} zoom={ease(ramp(f, F.tiny, F.sandstone - 8))} />
         </Push>
         <Tag {...tagL} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
-        <Note {...at(L, [545, 700], [480, 700])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
+        <Note {...at(L, [545, 700], [700, 760])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} boxed />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
@@ -323,8 +324,8 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
       </Layer>
 
       <Layer o={vis(f, SHOTS.study)}>
-        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
-          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={L.vertical ? 60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer) : 0}>
+          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, L.vertical ? F.closer - 6 : F.three, F.closer + 24)} />
         </Push>
         <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
       </Layer>
