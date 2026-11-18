@@ -140,7 +140,7 @@ const Ground: React.FC = () => {
   // The glow starts building on "at the bottom", so the number lands on rock that is already hot.
   const hot = ramp(f, F.bottom, F.hundred + 10);
   const pulse = 0.75 + 0.25 * Math.sin(f * 0.35);
-  const drilling = p > 0 && p < 1;
+  const drilling = f >= F.took && year < 1990;
 
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `${X}px ${SURF}px`, scale: `${1 - 0.94 * back}`, opacity: 1 - gone }}>
