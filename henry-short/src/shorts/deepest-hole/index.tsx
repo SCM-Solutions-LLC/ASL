@@ -204,7 +204,7 @@ const Ground: React.FC = () => {
         sub={f >= F.crust ? "a third of the crust" : undefined}
         from={F.took}
       />
-      <Tag x={X - 40} y={bottom - 34} align="right" text="212 °C" sub="predicted: 120 °C" from={F.hundred} />
+      <Tag x={X - 40} y={bottom - 130} align="right" text="212 °C" sub="predicted: 120 °C" from={F.hundred} />
       <Tag x={640} y={570} text="CRUST" sub="≈40 km thick here" from={F.crust - 4} />
       <Tag x={640} y={moho + 18} text="MANTLE" from={F.crust + 4} />
     </div>

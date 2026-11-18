@@ -78,7 +78,7 @@ const F = {
   sentence7: edit.at("and", 2),
   they: edit.at("their"),
   outnumbered: edit.at("match"),
-  their: edit.at("cell", 1),
+  their: edit.at("for"),
   passengers: edit.at("cell.", 2),
   end: edit.duration,
 };
@@ -386,6 +386,7 @@ const Outnumbered: React.FC = () => {
         n={12}
       />
       <Word text="ROUGHLY EVEN" at={F.outnumbered + 3} size={112} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.outnumbered + 3} x={540} y={170} size={46} tilt={-2} paper={YELLOW} />
     </>
   );
 };
@@ -432,7 +433,7 @@ const RIDERS = [
 // Ten cards in twenty-six seconds.
 const Deck: React.FC = () => (
   <Board>
-    {/* 1. By cell count, you are less than half human. */}
+    {/* 1. By the best cell counts we have, a typical man is about half human. */}
     <Shot from={0} to={F.sentence2 - 2} tilt={-1.5} sheet={YELLOW}>
       <Cut {...OUTLINE.man} {...MAN} />
       {/* The figure is split where the count splits it: 30 of 68 is the left 44%. */}
@@ -461,7 +462,7 @@ const Deck: React.FC = () => (
         size={104}
       />
       <Word text="ABOUT HALF" at={F.less - 1} size={120} tilt={3} />
-      <Scrap text="TYPICAL 70 KG MAN" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.half} x={760} y={300} size={50} tilt={4} paper={YELLOW} />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
@@ -696,14 +697,15 @@ const Deck: React.FC = () => (
         colour={YELLOW}
         n={14}
       />
-      <Word text="CELL FOR CELL" at={F.passengers} swipe="#bfe9e4" tilt={3} />
+      <Word text="CELL FOR CELL" at={F.their} size={104} swipe="#bfe9e4" tilt={3} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.their} x={540} y={1060} size={42} tilt={2} paper={YELLOW} />
     </Shot>
   </Board>
 );
 
 export const cellCountCutout: Short = {
   slug: "cell-count-cutout",
-  title: "By cell count, you are less than half human (cutout)",
+  title: "By the best cell counts, a typical man is about half human (cutout)",
   edit,
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,

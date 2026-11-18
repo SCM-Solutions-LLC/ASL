@@ -338,7 +338,7 @@ const FAN = [-1.5, -1.1, -0.7, -0.3, 0.1].map((a) => {
   const [x, y] = LIMB;
   const p = (m: number) =>
     `${(x + Math.cos(a) * m).toFixed(1)} ${(y + Math.sin(a) * m).toFixed(1)}`;
-  return `M${p(40)} L${p(190)}`;
+  return `M${p(30)} L${p(130)}`;
 });
 
 // A cobweb in the corner of the card: old.
@@ -361,8 +361,8 @@ const Cobweb: React.FC<{ at: number }> = ({ at }) => {
     <svg
       style={{
         position: "absolute",
-        left: 30,
-        top: 40,
+        left: 95,
+        top: 240,
         overflow: "visible",
         filter: boil,
       }}

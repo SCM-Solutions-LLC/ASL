@@ -815,14 +815,14 @@ const Deck: React.FC = () => (
       />
       <Marks>
         <Stroke
-          d="M410 905 C 500 895, 580 912, 680 900"
+          d="M410 905 C 470 897, 530 910, 600 900"
           from={F.nineteen + 3}
           to={F.years}
           colour={CORAL}
           width={18}
         />
         <Stroke
-          d="M640 860 L686 900 L642 944"
+          d="M560 862 L606 900 L562 940"
           from={F.years - 3}
           to={F.years + 2}
           colour={CORAL}
@@ -830,15 +830,15 @@ const Deck: React.FC = () => (
         />
       </Marks>
       <Label
-        x={850}
+        x={820}
         y={895}
         text={`${REACHED}`}
         at={F.years}
-        size={130}
+        size={92}
         colour={CORAL}
         tilt={3}
       />
-      <Burst at={F.years} x={850} y={895} r={150} colour={YELLOW} n={12} />
+      <Burst at={F.years} x={820} y={895} r={150} colour={YELLOW} n={12} />
       <Word
         text="ABOUT 20 YEARS"
         at={F.nineteen}
@@ -902,7 +902,7 @@ const Deck: React.FC = () => (
       </Marks>
       <Burst at={F.too + 1} x={540} y={1190} r={190} colour={CORAL} n={14} />
       <Word text="HOT ROCK" at={F.too + 1} until={F.money - 1} size={150} swipe="#ffc9c2" tilt={3} />
-      <Word text="FUNDING CUT" at={F.money - 1} size={150} swipe="#bfe9e4" tilt={-2} />
+      <Word text="FUNDING CUT" at={F.money - 1} size={124} swipe="#bfe9e4" tilt={-2} />
     </Shot>
 
     <Shot from={F.again - 2} to={F.sentence7 - 2} tilt={1.5} sheet={NIGHT}>
