@@ -18,8 +18,9 @@ const edit = makeEdit({
   alignment,
   cut: [{ from: "In 2024, Stonehenge's", to: "got there?", tail: 0.8 }],
   keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
-  // "?" does not end a caption page on its own, and the long lines need one break each.
-  breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
+  // "?" does not end a caption page on its own, and the long lines need one break each; the named
+  // lines break after "colleagues" so no page runs past four lines in 9:16.
+  breakAfter: ["grains", "kilometres?", "Britain,", "colleagues", "sledge,", "glacier?", "later,", "Scotland", "far", "down,", "knows."],
 });
 
 const F = {
@@ -141,9 +142,10 @@ const GOLD = "#f1c74f";
 const INKC = "#f4ecd8";
 
 // A small label in map space, for place names under the big tags.
-const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size?: number }> = ({ x, y, text, opacity, size = 28 }) =>
+// `boxed` sets the note on a dark plate, for text that must stay legible over an image (a licence credit).
+const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size?: number; boxed?: boolean }> = ({ x, y, text, opacity, size = 28, boxed }) =>
   opacity <= 0 ? null : (
-    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "pre", textShadow: "0 2px 10px rgba(0,0,0,0.95)" }}>{text}</div>
+    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "pre", textShadow: "0 2px 10px rgba(0,0,0,0.95)", ...(boxed ? { background: "rgba(12,9,7,0.82)", padding: "8px 14px", borderRadius: 6 } : {}) }}>{text}</div>
   );
 
 // Tag positions per crop: the 9:16 slice is only x 517–1403, so tags sit in the sea beside Britain;
@@ -252,23 +254,23 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank (approx.)" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
 
       {/* map1: the hook. */}
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"2024 · NE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"Clarke et al.\nNature, 2024\nNE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
       <Tag {...at(L, [1010, 40], [1300, 140])} text="EXACT SOURCE" sub="unknown" from={F.exactly} to={SHOTS.map1[1]} />
       {/* map2: grain ages, distance, sea. */}
       <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland\n(area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
       <Tag {...at(L, [1090, 210], [1300, 240])} text="6 TONNES" from={F.six} to={F.suggested} />
       <Tag {...at(L, [1090, 300], [1300, 340])} text="700+ KM" sub={"if from\nNE Scotland"} from={F.seven} to={F.suggested} />
-      <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub="route not known" from={F.suggested + 10} to={SHOTS.map2[1]} />
+      <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub={"route not known\nClarke et al. 2024"} from={F.suggested + 10} to={SHOTS.map2[1]} />
       {/* map3: the ice model. */}
-      <Tag {...at(L, [545, 640], [200, 80])} text="ICE MODEL" sub={"part of the way,\nat most"} from={F.part} to={SHOTS.map3[1]} />
+      <Tag {...at(L, [545, 640], [200, 80])} text="ICE MODEL" sub={"Clarke et al. 2026\nJournal of Quaternary Science\npart of the way, at most"} from={F.part} to={SHOTS.map3[1]} />
       {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={34} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
       <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} to={SHOTS.map4[1]} />
       {/* recap: the three proposals, none shown to be the one. */}
-      <Tag {...at(L, [1090, 200], [1300, 200])} text="SEA?" sub="2024 team" from={F.sea} />
-      <Tag {...at(L, [1090, 330], [1300, 330])} text="SLEDGE?" sub="2024 study" from={F.sledge} />
-      <Tag {...at(L, [1090, 460], [1300, 460])} text="ICE?" sub={"2026 model:\npart of the way"} from={F.ice} />
+      <Tag {...at(L, [1090, 150], [1300, 150])} text="SEA?" sub={"Clarke et al.\n2024"} from={F.sea} />
+      <Tag {...at(L, [1090, 320], [1300, 320])} text="SLEDGE?" sub={"Parker Pearson\net al. 2024"} from={F.sledge} />
+      <Tag {...at(L, [1090, 490], [1300, 490])} text="ICE?" sub={"Clarke et al.\n2026: part\nof the way"} from={F.ice} />
       {inRecap ? <Note {...at(L, [545, 870], [200, 860])} text="routes illustrative" opacity={ramp(f, F.sea + 6, F.sea + 16)} size={34} /> : null}
       {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={34} /> : null}
     </div>
@@ -301,7 +303,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} zoom={ease(ramp(f, F.tiny, F.sandstone - 8))} />
         </Push>
         <Tag {...tagL} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
-        <Note {...at(L, [545, 700], [480, 700])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
+        <Note {...at(L, [545, 700], [700, 760])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} boxed />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
@@ -309,7 +311,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Boat f={f} ghost={ramp(f, F.boat - 4, F.boat + 10)} />
         </Push>
         <Tag {...tagL} text="NO BOAT FOUND" sub="from the late Stone Age, in Britain" from={F.boat + 4} />
-        <Tag {...tagL2} text="A 2024 STUDY" sub={"boats of the time: unlikely\nto carry six tonnes"} from={F.doubts + 2} />
+        <Tag {...tagL2} text="A 2024 STUDY" sub={"Parker Pearson et al.\nArchaeology International\nboats of the time: unlikely\nto carry six tonnes"} from={F.doubts + 2} />
         <FilmGrain f={f} opacity={0.12} />
       </Layer>
 
@@ -317,16 +319,16 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
         <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: L.vertical ? "820px 700px" : "960px 640px", scale: `${pull}`, translate: L.vertical ? "0 -150px" : undefined }}>
           <Haul f={f - SHOTS.haul[0]} />
         </div>
-        <Tag {...tagL} text="~8 MONTHS" sub="overland estimate, 2024 study" from={F.eight} />
+        <Tag {...tagL} text="~8 MONTHS" sub={"overland estimate\nParker Pearson et al. 2024"} from={F.eight} />
         <Note {...at(L, [545, 880], [160, 810])} text={"illustration of a hypothesis\ncrew size not known"} opacity={ramp(f, SHOTS.haul[0] + 6, SHOTS.haul[0] + 16)} size={34} />
         <FilmGrain f={f} opacity={0.16} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.study)}>
-        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
-          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + (L.vertical ? 0.08 * beat(f, F.closer) : 0)} y={L.vertical ? 60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer) : 0}>
+          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.three, F.closer + 24)} />
         </Push>
-        <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
+        <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"Pirrie et al. 2026\nthree of the 2024 team\namong its authors"} from={F.three} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />
