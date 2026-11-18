@@ -9,7 +9,8 @@ England away from Rome to do it.
 Wife two, Anne Boleyn. She gave him a daughter, the future Elizabeth I. Three
 years in, Henry had her executed.
 
-Wife three, Jane Seymour. She finally gave him a son, then died 12 days later.
+Wife three, Jane Seymour. She finally gave him a male heir who lived. She died
+12 days later.
 
 Wife four, Anne of Cleves. Henry met her and wanted out. Six months later,
 annulled, but she walked away with a palace, a manor, and a new title: the
@@ -90,16 +91,19 @@ possible.
    "Had her executed": she was tried and condemned for treason; the script
    makes no claim about the charges.
 
-5. "Wife three, Jane Seymour. She finally gave him a son, then died 12 days
-   later."
+5. "Wife three, Jane Seymour. She finally gave him a male heir who lived. She
+   died 12 days later."
    L&P vol. 12 pt 2, no. 889, Queen Jane's letter announcing "the birth of her
    son ... Hampton Court, 12 Oct." (1537); no. 1060, "Queen Jane, mother of
    Edward VI., who died at Hampton Court, 24 Oct." 12 to 24 October is 12
    days. (Wriothesley's text gives "the 14 of October"; his editor corrects
-   it to the 24th. The script follows L&P.) "Finally" is the script's word
-   for the wait: the son came only with the third wife, after Elizabeth
-   (claim 4). It makes no count of earlier pregnancies and says nothing of
-   his illegitimate son.
+   it to the 24th. The script follows L&P.) "A male heir who lived": Edward,
+   who became king (no. 1060, "Queen Jane, mother of Edward VI."). Catherine
+   of Aragon had borne a son who died in infancy (Wriothesley vol. 1, A.D.
+   1511: "Prince Henrie, the Kings first sonne, was borne at Richmonde on Newe
+   Yeares daye, and on St. Mathie's day after the saide Prince died"); hence
+   "finally" and "who lived". (An earlier wording, "finally gave him a son", failed the
+   fact-check over the 1511 prince.)
 
 6. "Wife four, Anne of Cleves. Henry met her and wanted out. Six months
    later, annulled"

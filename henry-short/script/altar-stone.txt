@@ -1,4 +1,4 @@
-In 2024, Stonehenge's Altar Stone was traced to Scotland. Exactly where it came from is still unknown.
+In 2024, Stonehenge's Altar Stone was traced to Scotland. Two years on, scientists still can't agree where it came from.
 The ages of tiny mineral grains inside it matched sandstone in the northeast.
 If so, how did six tonnes travel more than seven hundred kilometres?
 The 2024 team suggested it went by sea.
@@ -45,32 +45,41 @@ the isotope data "indicate an ORS provenance is more likely than a
 Carboniferous source". The script names no rock unit beyond what claims 1, 2
 and 9 say, so neither reading is contradicted.
 
-The two 2026 papers disagree about how strong the Scottish match is. Clarke
-2026 calls Caithness sandstone "the closest match"; Pirrie 2026 says "the exact
-provenance of the Altar Stone is as yet unknown". Per GUARDRAILS A3 the script
-makes only the claim both support: the exact source is not known. Clarke 2026
-agrees on that point: "its source location within this large basin remains
-unresolved". The script does not say the stone is not from Scotland, which
-neither paper claims.
+The two 2026 papers disagree about the Scottish attribution itself. Clarke
+2026 still favours northeast Scotland: Caithness sandstone gives "the closest
+match in zircon age structure", though "its source location within this large
+basin remains unresolved". Pirrie 2026 (three of whose authors wrote Clarke
+2024) questions it: its Introduction says "detailed multi-proxy
+characterization of the Altar Stone raises questions over this
+interpretation" (the Orcadian Basin source); its Discussion, that scarce chrome
+spinel "may indicate that an origin from this part of NE Scotland needs
+re-evaluating", that ORS areas "from the Scottish Midland Valley to the
+Anglo-Welsh borderland ... remain possible source areas from a heavy mineral
+standpoint", and that the 2024 grain ages do "not exclude a potential source
+for the Altar Stone from the Carboniferous" (while isotopes make "an ORS
+provenance ... more likely than a Carboniferous source"); its Conclusions,
+"the provenance of the Altar Stone has yet to be determined with confidence".
+Per GUARDRAILS A3 the script makes only the claim both support: the source is
+not settled, and the experts disagree. It does not say the stone is not from
+Scotland (neither paper says so), and it does not say it is.
 
-1. "In 2024, Stonehenge's Altar Stone was traced to Scotland. Exactly where
-   it came from is still unknown."
-   The hook (A4). Both halves are true as stated, and together they leave a
-   viewer who swipes away with the short's real point: the 2024 result named a
-   region, not a spot, and the spot is still not known. First half: Clarke 2024, abstract: "Detrital age comparisons ...
-   reveal a remarkable similarity to the Old Red Sandstone of the Orcadian
-   Basin in northeast Scotland"; title, "A Scottish provenance for the Altar
-   Stone of Stonehenge". Second half: Pirrie 2026
-   says "the exact provenance of the Altar Stone is as yet unknown"; Clarke
-   2026, the authors who favour Scotland, say "its source location within this
-   large basin remains unresolved". "Exactly ... still unknown" covers both,
-   and it does not say the stone is not from Scotland. "Still" is accurate
-   because the exact outcrop was never known: Clarke 2024 named a basin, and
-   Parker Pearson 2024 (p.129) wrote "As yet, the actual outcrop from which the
-   Altar Stone was extracted is unknown". (An earlier wording, "Now nobody can
-   say exactly", implied the spot had once been known, and failed the
-   fact-check for it.) Not said: the name "Altar Stone" is conventional (Stone 80). No one
-   knows it was an altar.
+1. "In 2024, Stonehenge's Altar Stone was traced to Scotland. Two years on,
+   scientists still can't agree where it came from."
+   The hook (A4). Both sentences are true as stated, and a viewer who swipes
+   away at the second leaves knowing the 2024 result is disputed, not settled.
+   First: Clarke 2024, abstract, "Detrital age comparisons ... reveal a
+   remarkable similarity to the Old Red Sandstone of the Orcadian Basin in
+   northeast Scotland"; title, "A Scottish provenance for the Altar Stone of
+   Stonehenge" (published 14 August 2024). Second: the disagreement above,
+   between Clarke 2026 (June 2026) and Pirrie 2026 (November 2026), about two
+   years after Clarke 2024. "Still" is accurate because no source has been
+   agreed at any point: Parker Pearson 2024 (p.129), "As yet, the actual
+   outcrop from which the Altar Stone was extracted is unknown"; Clarke 2026,
+   "remains unresolved"; Pirrie 2026, "yet to be determined with confidence".
+   (Earlier wordings, "Now nobody can say exactly" and "Exactly where it came
+   from is still unknown", failed fact-checks: the first implied the spot had
+   once been known, the second that Scotland was settled.) Not said: the name
+   "Altar Stone" is conventional (Stone 80). No one knows it was an altar.
 
 2. "The ages of tiny mineral grains inside it matched sandstone in the
    northeast."
@@ -164,9 +173,9 @@ neither paper claims.
    found apatite ages from Caithness and Orkney samples "match those from the
    Altar Stone"), but no outcrop matches the whole set. "That part of Scotland" = the Orcadian
    Basin of northeast Scotland (claim 2). The same abstract says the earlier
-   grain dating "supports a Laurentian source for the heavy minerals", so it
-   narrows the source down rather than overturning the 2024 result. The script
-   says only what is above. The full text's Conclusions agree: "To date, no
+   grain dating "supports a Laurentian source for the heavy minerals", but the
+   body goes further and questions the NE Scotland source itself (see the
+   disagreement above the claims). The script says only what is above. The full text's Conclusions agree: "To date, no
    outcrop area of the ORS examined can be shown to have the same suite of
    lithological characteristics as documented from the Altar Stone", and
    other ORS areas "can all so far be excluded when all aspects of the
@@ -207,7 +216,9 @@ that repeat a spoken claim cite its number above.
 - "TRACED HERE / 2024 · NE Scotland (area approx.)": claim 1. The dashed
   ellipse around Caithness, Orkney and the Moray Firth is approximate, as the
   label says; it does not trace the Orcadian Basin's edge.
-- "?" and "EXACT SOURCE / unknown": claim 1.
+- "?" over the 2024 area and "SOURCE? / 2026 study questions NE Scotland":
+  claim 1 and the disagreement above (Pirrie 2026, "an origin from this part
+  of NE Scotland needs re-evaluating").
 - Thin-section image, "THE ALTAR STONE / thin sections, dated grains" and
   the credit "Clarke et al. 2024, Nature / CC BY 4.0 · cropped": claim 2. The
   image is Clarke 2024, Fig. 2 (false colour mineralogy maps of Altar Stone
@@ -246,13 +257,14 @@ that repeat a spoken claim cite its number above.
   drawn, not taken from Pirrie 2026, whose licence (Lyell Collection user
   licence, not CC BY) does not allow reuse of its figures.
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",
-  "NO FULL MATCH / shown in any outcrop examined / exact source unknown":
+  "NO FULL MATCH / shown in any outcrop examined / source unknown":
   claim 9 and claim 1. The dots, their number and their positions are
   illustrative, as the label says; the abstract gives no counts. The dots
   left uncrossed carry no mark, because the abstract names no surviving
   candidate.
 - Recap map, "SEA? / 2024 team", "SLEDGE? / 2024 study", "ICE? / 2026 model:
-  part of the way", "routes illustrative", the "?" over NE Scotland and the
+  part of the way", "routes illustrative", the "?" over the 2024 area with
+  the note "2024 area / disputed" (claim 1), and the
   same routes as before (both sea routes, the straight dashed line, the ice
   and people paths): claim 10, restating claims 1, 4, 6 and 7. "2024 team" =
   Clarke 2024; "2024 study" = Parker Pearson 2024; "2026 model" = Clarke 2026.

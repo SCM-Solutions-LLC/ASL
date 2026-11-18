@@ -17,7 +17,7 @@ import { Boat, clamp01, Credit, ease, FilmGrain, Grains, LightLeak, Photo, ramp,
 const edit = makeEdit({
   alignment,
   cut: [{ from: "In 2024, Stonehenge's", to: "got there?", tail: 0.8 }],
-  keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
+  keyPhrases: [["traced", "to", "Scotland."], ["can't", "agree"], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
   // "?" does not end a caption page on its own, and the long lines need one break each.
   breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
 });
@@ -25,7 +25,7 @@ const edit = makeEdit({
 const F = {
   traced: edit.at("traced"),
   scotland: edit.at("Scotland."),
-  now: edit.at("Exactly"),
+  now: edit.at("Two"),
   exactly: edit.at("still"),
   ages: edit.at("ages"),
   tiny: edit.at("tiny"),
@@ -251,12 +251,13 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       {unknown > 0 ? (
         <div style={{ position: "absolute", left: nx - 40, top: ny - 78, fontFamily: SERIF, fontSize: 130, color: INKC, opacity: unknown, textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>?</div>
       ) : null}
+      {inRecap && unknown > 0 ? <Note x={nx + 50} y={ny - 20} text={"2024 area\ndisputed"} opacity={unknown} size={26} /> : null}
       {!inMap4 ? <Note x={sx + 18} y={sy + 6} text="Stonehenge (approx.)" opacity={1} /> : null}
       {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank (approx.)" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
 
       {/* map1: the hook. */}
       <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"2024 · NE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="EXACT SOURCE" sub="unknown" from={F.exactly} to={SHOTS.map1[1]} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="SOURCE?" sub={"2026 study questions\nNE Scotland"} from={F.exactly} to={SHOTS.map1[1]} />
       {/* map2: grain ages, distance, sea. */}
       <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland\n(area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
       <Tag {...at(L, [1090, 210], [1300, 240])} text="6 TONNES" from={F.six} to={F.suggested} />
@@ -267,7 +268,7 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={34} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
-      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} to={SHOTS.map4[1]} />
+      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nsource unknown"} from={F.match} to={SHOTS.map4[1]} />
       {/* recap: the three proposals, none shown to be the one. */}
       <Tag {...at(L, [1090, 200], [1300, 200])} text="SEA?" sub="2024 team" from={F.sea} />
       <Tag {...at(L, [1090, 330], [1300, 330])} text="SLEDGE?" sub="2024 study" from={F.sledge} />
@@ -346,7 +347,7 @@ const Backdrop: React.FC = () => <div style={{ position: "absolute", left: -600,
 
 export const altarStone: Short = {
   slug: "altar-stone",
-  title: "Stonehenge's Altar Stone was traced to Scotland in 2024. Where exactly it came from is still unknown",
+  title: "Stonehenge's Altar Stone was traced to Scotland in 2024. Scientists still can't agree where it came from",
   edit,
   looks: [{ id: "Illustrated", Set: Backdrop, cast: () => [] }],
   props: (L) => <AltarScene L={L} />,

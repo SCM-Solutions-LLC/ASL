@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/six-wives.txt",
  "audio": "public/vo/six-wives.wav",
- "sha256": "681a81648558e93ced13353605776a05d89839aac2fa31253e3206fcb82901cd",
+ "sha256": "7a00733eceb22b558983d8a3316b54af863f2f6af4a84410cfe9bc1308a54a70",
  "words": [
   {
    "text": "The",
@@ -347,432 +347,447 @@
   {
    "text": "She",
    "start": 28.415,
-   "end": 28.703
+   "end": 28.666
   },
   {
    "text": "finally",
-   "start": 28.703,
-   "end": 29.102
+   "start": 28.666,
+   "end": 29.015
   },
   {
    "text": "gave",
-   "start": 29.102,
-   "end": 29.418
+   "start": 29.015,
+   "end": 29.29
   },
   {
    "text": "him",
-   "start": 29.418,
-   "end": 29.706
+   "start": 29.29,
+   "end": 29.541
   },
   {
    "text": "a",
-   "start": 29.706,
-   "end": 29.939
+   "start": 29.541,
+   "end": 29.744
   },
   {
-   "text": "son,",
-   "start": 29.939,
-   "end": 30.227
+   "text": "male",
+   "start": 29.744,
+   "end": 30.019
   },
   {
-   "text": "then",
-   "start": 30.227,
-   "end": 30.543
+   "text": "heir",
+   "start": 30.019,
+   "end": 30.295
   },
   {
-   "text": "died",
-   "start": 30.543,
-   "end": 30.858
+   "text": "who",
+   "start": 30.295,
+   "end": 30.546
   },
   {
-   "text": "12",
-   "start": 30.858,
-   "end": 31.119
-  },
-  {
-   "text": "days",
-   "start": 31.119,
-   "end": 31.435
-  },
-  {
-   "text": "later.",
-   "start": 31.435,
-   "end": 31.778
-  },
-  {
-   "text": "Wife",
-   "start": 32.475,
-   "end": 32.81
-  },
-  {
-   "text": "four,",
-   "start": 32.81,
-   "end": 33.145
-  },
-  {
-   "text": "Anne",
-   "start": 33.145,
-   "end": 33.48
-  },
-  {
-   "text": "of",
-   "start": 33.48,
-   "end": 33.755
-  },
-  {
-   "text": "Cleves.",
-   "start": 33.755,
-   "end": 34.149
-  },
-  {
-   "text": "Henry",
-   "start": 34.76,
-   "end": 35.089
-  },
-  {
-   "text": "met",
-   "start": 35.089,
-   "end": 35.364
-  },
-  {
-   "text": "her",
-   "start": 35.364,
-   "end": 35.639
-  },
-  {
-   "text": "and",
-   "start": 35.639,
-   "end": 35.914
-  },
-  {
-   "text": "wanted",
-   "start": 35.914,
-   "end": 36.269
-  },
-  {
-   "text": "out.",
-   "start": 36.269,
-   "end": 36.545
-  },
-  {
-   "text": "Six",
-   "start": 37.145,
-   "end": 37.421
-  },
-  {
-   "text": "months",
-   "start": 37.421,
-   "end": 37.778
-  },
-  {
-   "text": "later,",
-   "start": 37.778,
-   "end": 38.107
-  },
-  {
-   "text": "annulled,",
-   "start": 38.107,
-   "end": 38.517
-  },
-  {
-   "text": "but",
-   "start": 38.517,
-   "end": 38.794
-  },
-  {
-   "text": "she",
-   "start": 38.794,
-   "end": 39.07
-  },
-  {
-   "text": "walked",
-   "start": 39.07,
-   "end": 39.426
-  },
-  {
-   "text": "away",
-   "start": 39.426,
-   "end": 39.729
-  },
-  {
-   "text": "with",
-   "start": 39.729,
-   "end": 40.032
-  },
-  {
-   "text": "a",
-   "start": 40.032,
-   "end": 40.255
-  },
-  {
-   "text": "palace,",
-   "start": 40.255,
-   "end": 40.611
-  },
-  {
-   "text": "a",
-   "start": 40.611,
-   "end": 40.834
-  },
-  {
-   "text": "manor,",
-   "start": 40.834,
-   "end": 41.164
-  },
-  {
-   "text": "and",
-   "start": 41.164,
-   "end": 41.44
-  },
-  {
-   "text": "a",
-   "start": 41.44,
-   "end": 41.663
-  },
-  {
-   "text": "new",
-   "start": 41.663,
-   "end": 41.939
-  },
-  {
-   "text": "title:",
-   "start": 41.939,
-   "end": 42.269
-  },
-  {
-   "text": "the",
-   "start": 42.269,
-   "end": 42.545
-  },
-  {
-   "text": "King's",
-   "start": 42.545,
-   "end": 42.902
-  },
-  {
-   "text": "sister.",
-   "start": 42.902,
-   "end": 43.258
-  },
-  {
-   "text": "Wife",
-   "start": 43.93,
-   "end": 44.323
-  },
-  {
-   "text": "five,",
-   "start": 44.323,
-   "end": 44.716
-  },
-  {
-   "text": "Catherine",
-   "start": 44.716,
-   "end": 45.283
-  },
-  {
-   "text": "Howard.",
-   "start": 45.283,
-   "end": 45.745
-  },
-  {
-   "text": "Executed.",
-   "start": 46.39,
-   "end": 47.471
-  },
-  {
-   "text": "Wife",
-   "start": 48.125,
-   "end": 48.504
-  },
-  {
-   "text": "six,",
-   "start": 48.504,
-   "end": 48.85
-  },
-  {
-   "text": "Catherine",
-   "start": 48.85,
-   "end": 49.396
-  },
-  {
-   "text": "Parr.",
-   "start": 49.396,
-   "end": 49.776
+   "text": "lived.",
+   "start": 30.546,
+   "end": 30.846
   },
   {
    "text": "She",
-   "start": 50.435,
-   "end": 50.8
+   "start": 31.475,
+   "end": 31.783
   },
   {
-   "text": "outlived",
-   "start": 50.8,
-   "end": 51.342
+   "text": "died",
+   "start": 31.783,
+   "end": 32.121
   },
   {
-   "text": "Henry.",
-   "start": 51.342,
-   "end": 51.778
+   "text": "12",
+   "start": 32.121,
+   "end": 32.4
   },
   {
-   "text": "Divorced,",
-   "start": 52.445,
-   "end": 53.053
+   "text": "days",
+   "start": 32.4,
+   "end": 32.738
   },
   {
-   "text": "beheaded,",
-   "start": 53.053,
-   "end": 53.662
+   "text": "later.",
+   "start": 32.738,
+   "end": 33.105
   },
   {
-   "text": "died.",
-   "start": 53.662,
-   "end": 54.112
+   "text": "Wife",
+   "start": 33.76,
+   "end": 34.096
   },
   {
-   "text": "Divorced,",
-   "start": 54.78,
-   "end": 55.436
-  },
-  {
-   "text": "beheaded,",
-   "start": 55.436,
-   "end": 56.093
-  },
-  {
-   "text": "survived.",
-   "start": 56.093,
-   "end": 56.749
-  },
-  {
-   "text": "But",
-   "start": 57.39,
-   "end": 57.616
-  },
-  {
-   "text": "here's",
-   "start": 57.616,
-   "end": 57.908
-  },
-  {
-   "text": "what",
-   "start": 57.908,
-   "end": 58.157
-  },
-  {
-   "text": "the",
-   "start": 58.157,
-   "end": 58.383
-  },
-  {
-   "text": "rhyme",
-   "start": 58.383,
-   "end": 58.653
-  },
-  {
-   "text": "leaves",
-   "start": 58.653,
-   "end": 58.945
-  },
-  {
-   "text": "out.",
-   "start": 58.945,
-   "end": 59.171
+   "text": "four,",
+   "start": 34.096,
+   "end": 34.431
   },
   {
    "text": "Anne",
-   "start": 59.775,
-   "end": 60.093
+   "start": 34.431,
+   "end": 34.767
   },
   {
    "text": "of",
-   "start": 60.093,
-   "end": 60.355
+   "start": 34.767,
+   "end": 35.043
   },
   {
-   "text": "Cleves",
-   "start": 60.355,
-   "end": 60.729
-  },
-  {
-   "text": "outlived",
-   "start": 60.729,
-   "end": 61.16
+   "text": "Cleves.",
+   "start": 35.043,
+   "end": 35.438
   },
   {
    "text": "Henry",
-   "start": 61.16,
-   "end": 61.506
+   "start": 36.045,
+   "end": 36.374
+  },
+  {
+   "text": "met",
+   "start": 36.374,
+   "end": 36.649
+  },
+  {
+   "text": "her",
+   "start": 36.649,
+   "end": 36.924
   },
   {
    "text": "and",
-   "start": 61.506,
-   "end": 61.796
+   "start": 36.924,
+   "end": 37.199
   },
   {
-   "text": "all",
-   "start": 61.796,
-   "end": 62.086
+   "text": "wanted",
+   "start": 37.199,
+   "end": 37.554
   },
   {
-   "text": "five",
-   "start": 62.086,
-   "end": 62.404
+   "text": "out.",
+   "start": 37.554,
+   "end": 37.83
   },
   {
-   "text": "other",
-   "start": 62.404,
-   "end": 62.751
+   "text": "Six",
+   "start": 38.43,
+   "end": 38.706
   },
   {
-   "text": "wives.",
-   "start": 62.751,
-   "end": 63.097
+   "text": "months",
+   "start": 38.706,
+   "end": 39.063
   },
   {
-   "text": "The",
-   "start": 63.71,
-   "end": 63.998
+   "text": "later,",
+   "start": 39.063,
+   "end": 39.392
   },
   {
-   "text": "wife",
-   "start": 63.998,
-   "end": 64.314
+   "text": "annulled,",
+   "start": 39.392,
+   "end": 39.802
   },
   {
-   "text": "he",
-   "start": 64.314,
-   "end": 64.574
+   "text": "but",
+   "start": 39.802,
+   "end": 40.079
   },
   {
-   "text": "rejected",
-   "start": 64.574,
-   "end": 65.002
+   "text": "she",
+   "start": 40.079,
+   "end": 40.355
   },
   {
-   "text": "was",
-   "start": 65.002,
-   "end": 65.29
+   "text": "walked",
+   "start": 40.355,
+   "end": 40.711
+  },
+  {
+   "text": "away",
+   "start": 40.711,
+   "end": 41.014
+  },
+  {
+   "text": "with",
+   "start": 41.014,
+   "end": 41.317
+  },
+  {
+   "text": "a",
+   "start": 41.317,
+   "end": 41.54
+  },
+  {
+   "text": "palace,",
+   "start": 41.54,
+   "end": 41.896
+  },
+  {
+   "text": "a",
+   "start": 41.896,
+   "end": 42.119
+  },
+  {
+   "text": "manor,",
+   "start": 42.119,
+   "end": 42.449
+  },
+  {
+   "text": "and",
+   "start": 42.449,
+   "end": 42.725
+  },
+  {
+   "text": "a",
+   "start": 42.725,
+   "end": 42.948
+  },
+  {
+   "text": "new",
+   "start": 42.948,
+   "end": 43.224
+  },
+  {
+   "text": "title:",
+   "start": 43.224,
+   "end": 43.554
   },
   {
    "text": "the",
-   "start": 65.29,
-   "end": 65.578
+   "start": 43.554,
+   "end": 43.83
+  },
+  {
+   "text": "King's",
+   "start": 43.83,
+   "end": 44.187
+  },
+  {
+   "text": "sister.",
+   "start": 44.187,
+   "end": 44.543
+  },
+  {
+   "text": "Wife",
+   "start": 45.215,
+   "end": 45.608
+  },
+  {
+   "text": "five,",
+   "start": 45.608,
+   "end": 46.001
+  },
+  {
+   "text": "Catherine",
+   "start": 46.001,
+   "end": 46.568
+  },
+  {
+   "text": "Howard.",
+   "start": 46.568,
+   "end": 47.03
+  },
+  {
+   "text": "Executed.",
+   "start": 47.675,
+   "end": 48.756
+  },
+  {
+   "text": "Wife",
+   "start": 49.41,
+   "end": 49.789
+  },
+  {
+   "text": "six,",
+   "start": 49.789,
+   "end": 50.135
+  },
+  {
+   "text": "Catherine",
+   "start": 50.135,
+   "end": 50.681
+  },
+  {
+   "text": "Parr.",
+   "start": 50.681,
+   "end": 51.061
+  },
+  {
+   "text": "She",
+   "start": 51.72,
+   "end": 52.085
+  },
+  {
+   "text": "outlived",
+   "start": 52.085,
+   "end": 52.627
+  },
+  {
+   "text": "Henry.",
+   "start": 52.627,
+   "end": 53.063
+  },
+  {
+   "text": "Divorced,",
+   "start": 53.73,
+   "end": 54.338
+  },
+  {
+   "text": "beheaded,",
+   "start": 54.338,
+   "end": 54.947
+  },
+  {
+   "text": "died.",
+   "start": 54.947,
+   "end": 55.397
+  },
+  {
+   "text": "Divorced,",
+   "start": 56.065,
+   "end": 56.721
+  },
+  {
+   "text": "beheaded,",
+   "start": 56.721,
+   "end": 57.378
+  },
+  {
+   "text": "survived.",
+   "start": 57.378,
+   "end": 58.034
+  },
+  {
+   "text": "But",
+   "start": 58.675,
+   "end": 58.901
+  },
+  {
+   "text": "here's",
+   "start": 58.901,
+   "end": 59.193
+  },
+  {
+   "text": "what",
+   "start": 59.193,
+   "end": 59.442
+  },
+  {
+   "text": "the",
+   "start": 59.442,
+   "end": 59.668
+  },
+  {
+   "text": "rhyme",
+   "start": 59.668,
+   "end": 59.938
+  },
+  {
+   "text": "leaves",
+   "start": 59.938,
+   "end": 60.23
+  },
+  {
+   "text": "out.",
+   "start": 60.23,
+   "end": 60.456
+  },
+  {
+   "text": "Anne",
+   "start": 61.06,
+   "end": 61.378
+  },
+  {
+   "text": "of",
+   "start": 61.378,
+   "end": 61.64
+  },
+  {
+   "text": "Cleves",
+   "start": 61.64,
+   "end": 62.015
+  },
+  {
+   "text": "outlived",
+   "start": 62.015,
+   "end": 62.445
+  },
+  {
+   "text": "Henry",
+   "start": 62.445,
+   "end": 62.791
+  },
+  {
+   "text": "and",
+   "start": 62.791,
+   "end": 63.081
+  },
+  {
+   "text": "all",
+   "start": 63.081,
+   "end": 63.371
+  },
+  {
+   "text": "five",
+   "start": 63.371,
+   "end": 63.69
+  },
+  {
+   "text": "other",
+   "start": 63.69,
+   "end": 64.036
+  },
+  {
+   "text": "wives.",
+   "start": 64.036,
+   "end": 64.382
+  },
+  {
+   "text": "The",
+   "start": 64.995,
+   "end": 65.283
+  },
+  {
+   "text": "wife",
+   "start": 65.283,
+   "end": 65.599
+  },
+  {
+   "text": "he",
+   "start": 65.599,
+   "end": 65.859
+  },
+  {
+   "text": "rejected",
+   "start": 65.859,
+   "end": 66.287
+  },
+  {
+   "text": "was",
+   "start": 66.287,
+   "end": 66.575
+  },
+  {
+   "text": "the",
+   "start": 66.575,
+   "end": 66.863
   },
   {
    "text": "last",
-   "start": 65.578,
-   "end": 65.894
+   "start": 66.863,
+   "end": 67.179
   },
   {
    "text": "one",
-   "start": 65.894,
-   "end": 66.182
+   "start": 67.179,
+   "end": 67.467
   },
   {
    "text": "standing.",
-   "start": 66.182,
-   "end": 66.609
+   "start": 67.467,
+   "end": 67.894
   }
  ]
 }
