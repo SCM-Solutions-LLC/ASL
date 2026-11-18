@@ -1,6 +1,6 @@
 {
   "script": "script/six-wives.txt",
-  "sha256": "1eaf2d1d894e946c6c366cc1ea9f1e71358f174ebbdce131ff5b865140c6a32e",
+  "sha256": "2878aa9e553e27cb4ce06896e23778a418ac93a2316b2ad1231e5f5937c851ba",
   "checked": "2026-11-18",
   "claims": [
     {
@@ -9,166 +9,166 @@
       "where": "spoken (hook, first line)",
       "verdict": "confirmed",
       "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt",
-      "note": "A4 read: 'beat them all' is vague; a viewer gone at second two learns only that wife #4 came out ahead of the others somehow. It asserts nothing false and is cashed out in the next sentence as 'outlived every single one', which is true (claims 3, 30). Fourth wife = Anne of Cleves: marriages 1509 Catherine of Aragon (Wriothesley vol. 1 p. 6), Jan 1533 Anne Boleyn (L&P 6 no. 661), 20 May 1536 Jane Seymour (Wriothesley vol. 1 p. 43), 6 Jan 1540 Anne of Cleves (p. 111)."
+      "note": "A4: a viewer gone at second two hears only that wife #4 came out ahead of the others. Vague, but nothing false: the next sentence makes it 'outlived every single one', which is true (claims 4 and 31). No other reading of 'beat' makes a factual claim."
     },
     {
       "n": 2,
-      "claim": "Henry VIII had six wives",
-      "where": "spoken (hook)",
-      "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt (p. 1); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
-      "note": "Nash 1789 p. 1: 'Katharine Parr, sixth and last wife of Henry the Eighth'. Wriothesley vol. 1 records the marriages (pp. 6, 43, 111, 121; Boleyn's via L&P 6 no. 661)."
-    },
-    {
-      "n": 3,
-      "claim": "and the one he couldn't wait to get rid of outlived every single one.",
-      "where": "spoken (hook)",
-      "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412 (nos. 823, 825); https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt (vol. 2 p. 138); https://archive.org/stream/henrymachyncit00camduoft/henrymachyncit00camduoft_djvu.txt (p. 145); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 33, 41, 70, 134, 178); https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386 (no. 1060); https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt (p. 2)",
-      "note": "'Couldn't wait to get rid of': L&P 15 no. 825, the King's declaration: at first sight at Rochester 'he liked her so ill he was sorry she had come and he considered if it were possible to break off'; no. 823 (Cromwell, 30 June 1540): 'Nothing so well as she was spoken of', and Henry's continued complaints through Whitsun; annulled within six months. 'Outlived every single one': Anne of Cleves died July 1557 at Chelsea (Wriothesley vol. 2, under A.D. 1557: 'This yeare in Julie died the Ladie Ann of Cleve, at Chelsey'; Machyn, 3 Aug 1557: 'my lade Anne of Cleyff, sumtyme wyff unto kyng Henry the viijth cam from Chelsey to be [buried] unto Westmynster'). The others: Catherine of Aragon d. 7 Jan 1536 (Wriothesley vol. 1 p. 33 with the editor's note quoting the original letter), Anne Boleyn executed 19 May 1536 (p. 41), Jane Seymour d. 24 Oct 1537 (L&P 12 ii no. 1060), Catherine Howard beheaded 13 Feb 1542 (p. 134), Catherine Parr d. 5 Sept 1548 (Nash p. 2). Henry d. 28 Jan 1547 (Wriothesley vol. 1 p. 178)."
-    },
-    {
-      "n": 4,
       "claim": "4TH",
       "where": "on-screen: anne-of-cleves",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 6, 43, 111); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305 (no. 661)",
-      "note": "Anne of Cleves was the fourth wife by marriage date (June 1509, Jan 1533, May 1536, 6 Jan 1540)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305",
+      "note": "Fourth by marriage date: Catherine, June 1509 (Wriothesley vol. 1, 'in June followinge the King was married to Queene Katherin'); Anne Boleyn, about St Paul's day 1533 (L&P 6 no. 661); Jane Seymour, 1536; Anne of Cleves, Twelfth Day 1540 (Wriothesley vol. 1, A.D. 1540)."
+    },
+    {
+      "n": 3,
+      "claim": "Henry VIII had six wives",
+      "where": "spoken (hook)",
+      "verdict": "confirmed",
+      "source_checked": "https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt",
+      "note": "Nash 1789 p. 1: 'Katharine Parr, sixth and last wife of Henry the Eighth'."
+    },
+    {
+      "n": 4,
+      "claim": "and the one he couldn't wait to get rid of outlived every single one.",
+      "where": "spoken (hook)",
+      "verdict": "confirmed",
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412; https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt; https://archive.org/stream/henrymachyncit00camduoft/henrymachyncit00camduoft_djvu.txt; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "'Couldn't wait to get rid of': L&P 15 no. 825, the King's own declaration: at Rochester 'he liked her so ill he was sorry she had come and he considered if it were possible to break off'; no. 823 (Cromwell, 30 June 1540): 'Nothing so well as she was spoken of', 'Is there none other remedy but that I must needs, against my will, put my neck in the yoke?'. 'Outlived every single one': she died July 1557 (Wriothesley vol. 2, A.D. 1557; Machyn, 1557). The last of the others, Parr, died 5 Sept 1548 (Nash p. 2)."
     },
     {
       "n": 5,
       "claim": "Wife one, Catherine of Aragon.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 6)",
-      "note": "Wriothesley vol. 1 p. 6: 'in June followinge the King was married to Queene Katherin, late wife of his brother Prince Arthure' (1509), his first marriage."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Wriothesley vol. 1, Henry VII anno 24 / 1509: 'in June followinge the King was married to Queene Katherin, late wife of his brother Prince Arthure'. This was his first marriage."
     },
     {
       "n": 6,
       "claim": "CATHERINE OF ARAGON",
       "where": "on-screen: catherine-of-aragon",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 6)",
-      "note": "Queen Katherine, widow of Prince Arthur; 'Catherine of Aragon' is the standard modern form."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Queen Katherine, widow of Prince Arthur. 'Catherine of Aragon' is the standard modern form of her name."
     },
     {
       "n": 7,
       "claim": "WIFE #1 · 1509",
       "where": "on-screen: catherine-of-aragon",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 6)",
-      "note": "Married June 1509 (Wriothesley vol. 1 p. 6; Henry proclaimed April 1509, crowned 24 June 1509)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Henry proclaimed on St George's Day 1508 [1509; the editor's bracket], married 'in June followinge'; crowned 24 June 1509."
     },
     {
       "n": 8,
       "claim": "24 years of marriage, annulled.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 6); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234 (nos. 526, 528); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305 (no. 661)",
-      "note": "June 1509 to Cranmer's sentence of 23 May 1533 (no. 528 'Today, 23 May, I have given sentence in your great and weighty cause'; no. 526 'Sentence of divorce was given this day, 23 May'; no. 661: final sentence 'that the Pope could not license such marriages', i.e. nullity) = 23 years 11 months; '24 years' is a fair rounding (A3)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234; https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305",
+      "note": "From June 1509 to Cranmer's sentence of 23 May 1533 is 23 years 11 months, so '24' is fair rounding (A3). Sentence: no. 528 (Cranmer: 'Today, 23 May, I have given sentence in your great and weighty cause'); no. 526 (Bedyll: 'Sentence of divorce was given this day, 23 May'); no. 525 (Tregonwell: 'declared it to be against the law of God, and has divorced the King from the noble lady Katharine'); no. 661 ('final sentence that the Pope could not license such marriages'). A declaration that the marriage was void is an annulment."
     },
     {
       "n": 9,
       "claim": "24",
-      "where": "on-screen: catherine-of-aragon (badge while '24 years' is spoken)",
+      "where": "on-screen: catherine-of-aragon (badge while “24 years” is spoken)",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 6); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234 (no. 528)",
-      "note": "Same as the spoken figure: 23 years 11 months, rounded to 24."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234",
+      "note": "Same figure as claim 8: 23 years 11 months, rounded to 24."
     },
     {
       "n": 10,
       "claim": "ANNULLED",
       "where": "on-screen: catherine-of-aragon",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234 (nos. 526, 528); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305 (no. 661)",
-      "note": "Cranmer's sentence of 23 May 1533 declared a marriage the Pope could not license, i.e. void."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234; https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305",
+      "note": "Same evidence as claim 8: Cranmer's sentence of 23 May 1533 declared the marriage against God's law, one the Pope could not license."
     },
     {
       "n": 11,
       "claim": "Henry broke England away from Rome to do it.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt (24 Hen. VIII c. 12); https://www.british-history.ac.uk/letters-papers-hen8/vol6/i-xli (preface pp. xvii-xviii)",
-      "note": "Act in Restraint of Appeals, 24 Hen. VIII c. 12 (A.D. 1532-3): 'Causes of Matrimony and Divorces ... shalbe frome hensforth harde examined ... and det'myned within the Kinges Jurisdiccion and Auctoritie and not elleswhere'; appeals to Rome under premunire. Gairdner's preface to L&P 6 (pp. xvii-xviii): Parliament was 'compelled to pass the measures devised by the King to cut off papal interference in the matter of his divorce and marriage'. The script's causal claim matches the editor's. A simplification: the break was a process (Supremacy followed in 1534) with other motives too; the script does not say the annulment was the only cause."
+      "source_checked": "https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol6/i-xli",
+      "note": "Act in Restraint of Appeals, 24 Hen. VIII c. 12 (1532-3): 'Causes of Matrimony and Divorces ... shalbe frome hensforth harde examined ... and det'myned within the Kinges Jurisdiccion and Auctoritie and not elleswhere'. Appeals to Rome now carried the penalties of premunire. Gairdner's preface to L&P 6 (pp. xvii-xviii): Parliament was 'compelled to pass the measures devised by the King to cut off papal interference in the matter of his divorce and marriage. It was enacted that appeals to Rome in ecclesiastical causes should no longer be allowed.' The script states the purpose, not that it was the only cause, and the source supports that."
     },
     {
       "n": 12,
       "claim": "Wife two, Anne Boleyn. She gave him a daughter, the future Elizabeth I.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 22-23); https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305 (no. 661)",
-      "note": "Wriothesley vol. 1 p. 22: 7 Sept 1533 'Queene Anne was brought to bedd of a faire daughter'; editor's note: 'The Princess Elizabeth, afterwards Queen of England'; christened Elizabeth (p. 23)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Wriothesley vol. 1 p. 22: 'the vii th daie of September, 1533 ... Queene Anne was brought to bedd of a faire daughter'. Editor's note: 'The Princess Elizabeth, afterwards Queen of England'. p. 23: 'shee had geaven her to name Elizabeth'."
     },
     {
       "n": 13,
       "claim": "Three years in, Henry had her executed.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305 (no. 661); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 38-41)",
-      "note": "Married about St Paul's day (25 Jan) 1533 (L&P 6 no. 661, Cranmer, 17 June 1533); executed 19 May 1536 (Wriothesley vol. 1 p. 41, 'Anne Bulleyn, Queene, was brought to execution'): 3 years 4 months. 'Henry had her executed': condemned for treason against the King, sentence to be burnt 'els to have thy head smitten of as the Kinges pleasure shal be further knowne' (p. 38). For the author's information only: Wriothesley pp. 40-41 also records that her marriage was annulled at Lambeth on 17 May 1536 ('the King was divorsed from his wife Queene Anne'); the script makes no claim that needs this."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp295-305; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Married 'about St. Paul's day last' (25 Jan 1533; L&P 6 no. 661, Cranmer, 17 June 1533). Executed 19 May 1536 (Wriothesley vol. 1 p. 41: 'Anne Bulleyn, Queene, was brought to execution'). That is 3 years 4 months. 'Henry had her executed': she was attainted of treason against the King, and the sentence was to be burnt 'els to have thy head smitten of as the Kinges pleasure shal be further knowne' (Wriothesley vol. 1, the trial). So the manner of execution was set at the King's pleasure."
     },
     {
       "n": 14,
-      "claim": "Wife three, Jane Seymour. She finally gave him a son,",
+      "claim": "Wife three, Jane Seymour. She finally gave him a male heir who lived.",
       "where": "spoken",
-      "verdict": "fix",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 7, 'Henrici VIII Anno 1', page number lost in OCR; p. 66 note); https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp309-324 (no. 889)",
-      "note": "Contradicted by the script's own cited chronicle: Wriothesley vol. 1, Henrici VIII Anno 1: 'This yeare, Prince Henrie, the Kings first sonne, was borne at Richmonde on Newe Yeares daye, and on St. Mathie's day after the saide Prince died' (Catherine of Aragon's son, 1511). So Jane was not the first wife to give him a son, and 'finally gave him a son' is false as worded; a pedant will say so. Edward's birth itself is confirmed (L&P 12 ii no. 889, the Queen announces 'the birth of her son', Hampton Court, 12 Oct 1537; Wriothesley p. 66 note: 12 October). Change to e.g. 'She finally gave him a son who lived' (or 'the male heir he wanted'), and add the 1511 prince to SOURCES entry 5."
+      "verdict": "confirmed",
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp309-324; https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "L&P 12 pt 2 no. 889: the Queen announces 'the birth of her son', Hampton Court, 12 Oct. No. 1060: 'Queen Jane, mother of Edward VI.' (he lived and reigned). 'Finally' and 'who lived': Wriothesley vol. 1, 1511: 'Prince Henrie, the Kings first sonne, was borne at Richmonde on Newe Yeares daye, and on St. Mathie s day after the saide Prince died'. Jane's son was the first legitimate son to survive. This wording fixes the earlier 'finally gave him a son'."
     },
     {
       "n": 15,
-      "claim": "then died 12 days later.",
+      "claim": "She died 12 days later.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp309-324 (no. 889); https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386 (no. 1060); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 66 note; p. 70 and introduction)",
-      "note": "Birth 12 Oct (Queen's letter dated Hampton Court, 12 Oct, no. 889; Wriothesley p. 66 editor's note); died at Hampton Court 24 Oct (no. 1060, Heralds' College record). 12 to 24 October = 12 days. Wriothesley's text says 14 Oct, but his editor shows from the weekday that the 24th is meant; SOURCES records this."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp309-324; https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Birth 12 Oct 1537 (no. 889; Wriothesley's editor: born 'on Friday, being the Eve of St. Edward the Confessor'). Death 24 Oct (no. 1060, Heralds' College record: 'died at Hampton Court, 24 Oct., on Wednesday'). 12 to 24 = 12 days. Wriothesley's text says '14 of October', but his editor gives the 24th, from the Public Record Office and the stated twelve-day gap. The SOURCES block records this."
     },
     {
       "n": 16,
       "claim": "Wife four, Anne of Cleves.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 111)",
-      "note": "Married 6 Jan 1540 (Twelfth Day), fourth in order (claim 1)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Married on Twelfth Day (6 Jan) 1540, Wriothesley vol. 1 p. 111. She was fourth in order (claim 2)."
     },
     {
       "n": 17,
       "claim": "WIFE #4 · 1540",
       "where": "on-screen: anne-of-cleves",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 111)",
-      "note": "Wriothesley vol. 1 p. 111, A.D. 1540: 'on Twelfe daie ... the Kinges Majestie was maried to the said Queene Anne'."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412",
+      "note": "Wriothesley vol. 1 p. 111, margin A.D. 1540: 'on Twelfe daie, which was Twesdaie, the Kinges Majestie was maried to the said Queene Anne'. This agrees with no. 823 (New Year's Day, 'Next day, Friday'), so 6 Jan was a Tuesday."
     },
     {
       "n": 18,
       "claim": "ANNE OF CLEVES",
       "where": "on-screen: anne-of-cleves",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt (32 Hen. VIII c. 25); https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436 (no. 860)",
-      "note": "Name as in the statute and L&P: 'the lady Anne of Cleves'."
+      "source_checked": "https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436",
+      "note": "'the lady Anne of Cleves' (32 Hen. VIII c. 25; L&P 15 no. 860)."
     },
     {
       "n": 19,
       "claim": "Henry met her and wanted out.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 109); https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412 (nos. 823, 825)",
-      "note": "Met at Rochester on New Year's Day 1540 (Wriothesley vol. 1, A.D. 1540, 'came privelie to Rochester'). No. 825, the King's declaration: 'he liked her so ill he was sorry she had come and he considered if it were possible to break off'; no. 823, Cromwell: 'Nothing so well as she was spoken of'. Both were made for the nullity case in June-July 1540 (the King's own account and Cromwell's from the Tower); the script reports what they record."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412",
+      "note": "Met at Rochester on New Year's Day 1540 (Wriothesley vol. 1 p. 110: 'on New Year s daie at afternoune the Kinges Grace ... came privelie to Rochester'). No. 825: 'when he saw her for the first time at Rochester ... he liked her so ill he was sorry she had come and he considered if it were possible to break off'. No. 823: 'Nothing so well as she was spoken of'."
     },
     {
       "n": 20,
       "claim": "Six months later, annulled",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436 (nos. 860, 861); https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt (32 Hen. VIII c. 25)",
-      "note": "Convocation's judgment of nullity, Westm., 9 July 1540 (nos. 860 ii, 861); confirmed by statute 32 Hen. VIII c. 25: 'the mariage betwene his Highnes and the said lady Anne of Cleves is clerely voide'. 1 Jan (meeting) or 6 Jan (wedding) to 9 July = six months."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436; https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt",
+      "note": "Convocation found the marriage null, 'Westm., 9 July 1540' (no. 860 ii). The statute 32 Hen. VIII c. 25 confirms it: 'the mariage betwene his Highnes and the said lady Anne of Cleves is clerely voide and of no force value ne effect'. From 1 Jan (meeting) or 6 Jan (wedding) to 9 July is six months."
     },
     {
       "n": 21,
       "claim": "ANNULLED",
       "where": "on-screen: anne-of-cleves",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436 (no. 860); https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt (32 Hen. VIII c. 25)",
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436; https://archive.org/stream/the-statutes-of-the-realm-3/The_Statutes_of_the_Realm-3_djvu.txt",
       "note": "As claim 20."
     },
     {
@@ -176,80 +176,88 @@
       "claim": "but she walked away with a palace, a manor,",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481 (nos. 899, 925); https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445",
-      "note": "No. 925 (Henry to Anne, 12 July 1540): 'We have appointed you two houses, that at Richemont where you now lie, and the other at Blechinglegh'; no. 899 (statement of provision): 'Two manors, Richmond and Blechingley, having splendid houses and parks'. Richmond is 'the palace of Richmond' in the notarial instrument of 11 July (vol15/pp436-445)."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481",
+      "note": "No. 925, Henry to Anne, 12 July 1540: 'We have appointed you two houses, that at Richemont where you now lie, and the other at Blechinglegh'. No. 899: 'Two manors, Richmond and Blechingley, having splendid houses and parks'. Richmond is a palace in the sources: no. 872 (3), a notarial instrument made 'in the palace of Richmond, Surr.', 11 July 1540. No. 902 (Marillac) lists Richmond, Ampthill and More, but the King's own letter and the settlement name Richmond and Bletchingley, and the script follows them."
     },
     {
       "n": 23,
       "claim": "Richmond Palace",
       "where": "on-screen: anne-of-cleves (house-icon label)",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481 (nos. 899, 925); https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445",
-      "note": "As claim 22; generic house icon, not a likeness."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481",
+      "note": "As claim 22: 'the palace of Richmond' (no. 872); 'that at Richemont' (no. 925). The icon is generic, not a likeness."
     },
     {
       "n": 24,
       "claim": "Bletchingley",
       "where": "on-screen: anne-of-cleves (house-icon label)",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481 (nos. 899, 925)",
-      "note": "'Blechinglegh' / 'Blechingley' in the sources; Bletchingley is the modern spelling."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481",
+      "note": "'Blechinglegh' (no. 925) and 'Blechingley' (no. 899), called a manor in no. 899. Bletchingley is the modern spelling."
     },
     {
       "n": 25,
       "claim": "and a new title: the King's sister.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481 (nos. 899, 925); https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445",
-      "note": "No. 899: 'She will be considered as the King's sister, and have precedence over all ladies in England, after the Queen and the King's children'; no. 925: new officers sworn 'to serve her as the King's sister'; Henry 'content to repute you as our dearest sister'; she signed 'your Majesty's most humble sister'. A style carrying formal precedence is fairly called a title; it was not created by patent, which the script does not claim."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp436-445; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481",
+      "note": "No. 899: 'She will be considered as the King's sister, and have precedence over all ladies in England, after the Queen and the King's children'. No. 925: officers sworn 'to serve her as the King's sister'; Henry is 'content to repute you as our dearest sister'. No. 872: she signs 'Your Majesty's most humble sister and servant'. This was a formal style with set precedence, so 'title' is a fair plain word for it."
     },
     {
       "n": 26,
       "claim": "“The King’s Sister”",
       "where": "on-screen: anne-of-cleves (banner)",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481 (nos. 899, 925)",
-      "note": "The quoted words appear verbatim in the calendar: 'as the King's sister' (nos. 899, 925)."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp445-481",
+      "note": "The quoted words appear verbatim in the calendar, 'as the King's sister' (nos. 899, 925). Only the capitals differ."
     },
     {
       "n": 27,
       "claim": "Wife five, Catherine Howard. Executed.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 121, 134)",
-      "note": "Married 8 Aug 1540 (Wriothesley vol. 1 p. 121: 'the King was maried to Katherin Hawarde'), after the Cleves annulment and before Parr ('sixth and last', Nash p. 1). 'the 13th of February, beinge Monday, the sayd Quene, Katharine ... Haward, was beheaded within the Tower on the grene' (p. 134, A.D. 1542)."
+      "source_checked": "https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Wriothesley vol. 1 p. 134, A.D. 1542: 'the 13th of February, beinge Monday, the sayd Quene, Katharine ... Haward, was beheaded within the Tower on the grene'. Married 1540 (p. 121, 'maried to Katherin Hawarde'), after the Cleves annulment."
     },
     {
       "n": 28,
       "claim": "Wife six, Catherine Parr. She outlived Henry.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt (pp. 1-2); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (p. 178)",
-      "note": "Nash p. 1: 'sixth and last wife'. Henry d. Friday 28 Jan 1547 (Wriothesley vol. 1 p. 178); Parr d. Wednesday 5 Sept 1548 at Sudeley (Nash p. 2, quoting the Heralds' College 'breviate of the interment')."
+      "source_checked": "https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt",
+      "note": "Nash p. 1: 'sixth and last wife'. Henry died Friday 28 Jan 1547 (Wriothesley vol. 1 p. 178, A.D. 1547). Parr died 'on Wenysdaye the 5 Septembre ... 1548' at Sudeley (Nash p. 2, quoting the Heralds' College breviate)."
     },
     {
       "n": 29,
       "claim": "Divorced, beheaded, died. Divorced, beheaded, survived.",
-      "where": "spoken (quoted rhyme)",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234 (no. 526); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt",
-      "note": "Presented as a rhyme, not a claim of record; its mapping onto the six wives is correct per the claims above, and 'divorce' was the contemporary word for the annulments (no. 526 'Sentence of divorce'). The rhyme's origin is not sourced and the script claims none."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol6/pp228-234; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt",
+      "note": "Quoted as a rhyme, with no claim about its origin. Each word fits its wife: Catherine's marriage was annulled, called 'Sentence of divorce' in L&P 6 no. 526. Anne Boleyn was beheaded with a sword in the Tower (Wriothesley p. 41). Jane died (no. 1060). Anne of Cleves's marriage was annulled (no. 860), and no. 872 says 'lately married to the King and divorced'. Catherine Howard was beheaded (p. 134). Parr survived Henry (Nash)."
     },
     {
       "n": 30,
-      "claim": "Anne of Cleves outlived Henry and all five other wives.",
+      "claim": "But here's what the rhyme leaves out.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt (vol. 2 p. 138); https://archive.org/stream/henrymachyncit00camduoft/henrymachyncit00camduoft_djvu.txt (p. 145); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 33, 41, 70, 134, 178); https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386 (no. 1060); https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt (p. 2)",
-      "note": "Anne of Cleves died July 1557 at Chelsea (Wriothesley vol. 2, under A.D. 1557: 'This yeare in Julie died the Ladie Ann of Cleve, at Chelsey'; Machyn, 3 Aug 1557: 'my lade Anne of Cleyff, sumtyme wyff unto kyng Henry the viijth cam from Chelsey to be [buried] unto Westmynster'). The others: Catherine of Aragon d. 7 Jan 1536 (Wriothesley vol. 1 p. 33 with the editor's note quoting the original letter), Anne Boleyn executed 19 May 1536 (p. 41), Jane Seymour d. 24 Oct 1537 (L&P 12 ii no. 1060), Catherine Howard beheaded 13 Feb 1542 (p. 134), Catherine Parr d. 5 Sept 1548 (Nash p. 2). Henry d. 28 Jan 1547 (Wriothesley vol. 1 p. 178)."
+      "source_checked": "none: framing line, nothing to check against a source",
+      "note": "Framing, not a claim of fact. The traditional rhyme ends with 'survived' for Parr and says nothing on who lived longest, so the line is accurate."
     },
     {
       "n": 31,
+      "claim": "Anne of Cleves outlived Henry and all five other wives.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt; https://archive.org/stream/henrymachyncit00camduoft/henrymachyncit00camduoft_djvu.txt; https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt; https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386",
+      "note": "Anne died July 1557 at Chelsea. Wriothesley vol. 2, A.D. 1557: 'This yeare in Julie died the Ladie Ann of Cleve, at Chelsey ... the 5 of August her corps were solemnly brought from thence to the Abbey of Westminster'. Machyn (1557, p. 145): 'The iij day of August my lade Anne of Cleyff, sumtyme wyff unto kyng Henry the viijth cam from Chelsey'. The editors give 16 July; the script gives no day. The others: Catherine of Aragon died 1536 (Wriothesley vol. 1, A.D. 1536, buried Peterborough 29 Jan). Anne Boleyn died 19 May 1536. Jane Seymour died 24 Oct 1537. Catherine Howard died 13 Feb 1542. Parr died 5 Sept 1548. Henry died 28 Jan 1547."
+    },
+    {
+      "n": 32,
       "claim": "The wife he rejected was the last one standing.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412 (no. 825); https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt (vol. 2 p. 138); https://archive.org/stream/henrymachyncit00camduoft/henrymachyncit00camduoft_djvu.txt (p. 145); https://archive.org/stream/chronicleengland00wriouoft/chronicleengland00wriouoft_djvu.txt (pp. 33, 41, 70, 134, 178); https://www.british-history.ac.uk/letters-papers-hen8/vol12/no2/pp370-386 (no. 1060); https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt (p. 2)",
-      "note": "'Rejected': no. 825 and the nullity (claims 19-20). 'Last one standing': she died July 1557, the last of the six; the next latest, Parr, died 1548."
+      "source_checked": "https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp376-412; https://www.british-history.ac.uk/letters-papers-hen8/vol15/pp412-436; https://archive.org/stream/chronicleofengla02wriouoft/chronicleofengla02wriouoft_djvu.txt; https://archive.org/stream/archaeologiaormi0009jnic/archaeologiaormi0009jnic_djvu.txt",
+      "note": "'Rejected': no. 825 (he considered breaking off) and the nullity of 9 July 1540. 'Last one standing': she died in 1557, the last of the six. The next latest, Parr, died in 1548."
     }
   ]
 }
