@@ -461,6 +461,7 @@ const Deck: React.FC = () => (
         size={104}
       />
       <Word text="LESS THAN HALF" at={F.less - 1} size={108} tilt={3} />
+      <Scrap text="BEST ESTIMATE" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
@@ -475,6 +476,8 @@ const Deck: React.FC = () => (
         by={1.08}
       />
       <Word text={`${HUMAN} TRILLION`} at={F.thirty} swipe="#bfe9e4" tilt={3} />
+      {/* The counts are the paper's reference man, not the viewer (fact-check, A3). */}
+      <Scrap text="TYPICAL 70 KG ADULT MAN" at={F.thirty + 4} x={540} y={250} size={48} tilt={-3} paper="#fffdf6" />
       <Scrap
         text="YOURS"
         at={F.yours}

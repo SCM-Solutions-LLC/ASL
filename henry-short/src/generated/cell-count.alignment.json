@@ -2,332 +2,357 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/cell-count.txt",
  "audio": "public/vo/cell-count.wav",
- "sha256": "df03c5a700082ef7c2c43e5a10091f60d9879475517abe669baaca83fb1057bd",
+ "sha256": "744044ead7d2dd7a02050a774824761dcfa638ccc9b217db9e4384e0dde8724b",
  "words": [
   {
    "text": "By",
    "start": 0.0,
-   "end": 0.229
+   "end": 0.218
+  },
+  {
+   "text": "the",
+   "start": 0.218,
+   "end": 0.459
+  },
+  {
+   "text": "best",
+   "start": 0.459,
+   "end": 0.723
   },
   {
    "text": "cell",
-   "start": 0.229,
-   "end": 0.507
+   "start": 0.723,
+   "end": 0.987
   },
   {
-   "text": "count,",
-   "start": 0.507,
-   "end": 0.809
+   "text": "count",
+   "start": 0.987,
+   "end": 1.275
+  },
+  {
+   "text": "we",
+   "start": 1.275,
+   "end": 1.493
+  },
+  {
+   "text": "have,",
+   "start": 1.493,
+   "end": 1.757
   },
   {
    "text": "you",
-   "start": 0.809,
-   "end": 1.063
+   "start": 1.757,
+   "end": 1.998
   },
   {
    "text": "are",
-   "start": 1.063,
-   "end": 1.316
+   "start": 1.998,
+   "end": 2.239
+  },
+  {
+   "text": "slightly",
+   "start": 2.239,
+   "end": 2.597
   },
   {
    "text": "less",
-   "start": 1.316,
-   "end": 1.594
+   "start": 2.597,
+   "end": 2.861
   },
   {
    "text": "than",
-   "start": 1.594,
-   "end": 1.872
+   "start": 2.861,
+   "end": 3.125
   },
   {
    "text": "half",
-   "start": 1.872,
-   "end": 2.15
+   "start": 3.125,
+   "end": 3.39
   },
   {
    "text": "human.",
-   "start": 2.15,
-   "end": 2.452
+   "start": 3.39,
+   "end": 3.677
   },
   {
    "text": "About",
-   "start": 3.11,
-   "end": 3.423
+   "start": 4.335,
+   "end": 4.648
   },
   {
    "text": "thirty",
-   "start": 3.423,
-   "end": 3.761
+   "start": 4.648,
+   "end": 4.986
   },
   {
    "text": "trillion",
-   "start": 3.761,
-   "end": 4.15
+   "start": 4.986,
+   "end": 5.375
   },
   {
    "text": "of",
-   "start": 4.15,
-   "end": 4.387
+   "start": 5.375,
+   "end": 5.612
   },
   {
    "text": "your",
-   "start": 4.387,
-   "end": 4.674
+   "start": 5.612,
+   "end": 5.899
   },
   {
    "text": "cells",
-   "start": 4.674,
-   "end": 4.987
+   "start": 5.899,
+   "end": 6.212
   },
   {
    "text": "are",
-   "start": 4.987,
-   "end": 5.249
+   "start": 6.212,
+   "end": 6.474
   },
   {
    "text": "yours.",
-   "start": 5.249,
-   "end": 5.562
+   "start": 6.474,
+   "end": 6.787
   },
   {
    "text": "Thirty-eight",
-   "start": 6.17,
-   "end": 6.743
+   "start": 7.395,
+   "end": 7.968
   },
   {
    "text": "trillion",
-   "start": 6.743,
-   "end": 7.253
+   "start": 7.968,
+   "end": 8.478
   },
   {
    "text": "are",
-   "start": 7.253,
-   "end": 7.597
+   "start": 8.478,
+   "end": 8.822
   },
   {
    "text": "bacteria.",
-   "start": 7.597,
-   "end": 8.107
+   "start": 8.822,
+   "end": 9.332
   },
   {
    "text": "But",
-   "start": 8.78,
-   "end": 9.045
+   "start": 10.005,
+   "end": 10.27
   },
   {
    "text": "put",
-   "start": 9.045,
-   "end": 9.31
+   "start": 10.27,
+   "end": 10.535
   },
   {
    "text": "them",
-   "start": 9.31,
-   "end": 9.601
+   "start": 10.535,
+   "end": 10.826
   },
   {
    "text": "all",
-   "start": 9.601,
-   "end": 9.866
+   "start": 10.826,
+   "end": 11.091
   },
   {
    "text": "on",
-   "start": 9.866,
-   "end": 10.105
+   "start": 11.091,
+   "end": 11.33
   },
   {
    "text": "a",
-   "start": 10.105,
-   "end": 10.319
+   "start": 11.33,
+   "end": 11.544
   },
   {
    "text": "scale,",
-   "start": 10.319,
-   "end": 10.636
+   "start": 11.544,
+   "end": 11.861
   },
   {
    "text": "and",
-   "start": 10.636,
-   "end": 10.901
+   "start": 11.861,
+   "end": 12.126
   },
   {
    "text": "those",
-   "start": 10.901,
-   "end": 11.217
+   "start": 12.126,
+   "end": 12.442
   },
   {
    "text": "bacteria",
-   "start": 11.217,
-   "end": 11.61
+   "start": 12.442,
+   "end": 12.835
   },
   {
    "text": "weigh",
-   "start": 11.61,
-   "end": 11.927
+   "start": 12.835,
+   "end": 13.152
   },
   {
    "text": "about",
-   "start": 11.927,
-   "end": 12.243
+   "start": 13.152,
+   "end": 13.468
   },
   {
    "text": "two",
-   "start": 12.243,
-   "end": 12.508
+   "start": 13.468,
+   "end": 13.733
   },
   {
    "text": "hundred",
-   "start": 12.508,
-   "end": 12.876
+   "start": 13.733,
+   "end": 14.101
   },
   {
    "text": "grams.",
-   "start": 12.876,
-   "end": 13.192
+   "start": 14.101,
+   "end": 14.417
   },
   {
    "text": "And",
-   "start": 13.815,
-   "end": 14.061
+   "start": 15.04,
+   "end": 15.286
   },
   {
    "text": "your",
-   "start": 14.061,
-   "end": 14.33
+   "start": 15.286,
+   "end": 15.555
   },
   {
    "text": "own",
-   "start": 14.33,
-   "end": 14.575
+   "start": 15.555,
+   "end": 15.8
   },
   {
    "text": "cells",
-   "start": 14.575,
-   "end": 14.869
+   "start": 15.8,
+   "end": 16.094
   },
   {
    "text": "are",
-   "start": 14.869,
-   "end": 15.114
+   "start": 16.094,
+   "end": 16.339
   },
   {
    "text": "not",
-   "start": 15.114,
-   "end": 15.36
+   "start": 16.339,
+   "end": 16.585
   },
   {
    "text": "what",
-   "start": 15.36,
-   "end": 15.629
+   "start": 16.585,
+   "end": 16.854
   },
   {
    "text": "you",
-   "start": 15.629,
-   "end": 15.875
+   "start": 16.854,
+   "end": 17.1
   },
   {
    "text": "picture.",
-   "start": 15.875,
-   "end": 16.215
+   "start": 17.1,
+   "end": 17.44
   },
   {
    "text": "Eighty-four",
-   "start": 16.9,
-   "end": 17.433
+   "start": 18.125,
+   "end": 18.658
   },
   {
    "text": "percent",
-   "start": 17.433,
-   "end": 17.876
+   "start": 18.658,
+   "end": 19.101
   },
   {
    "text": "are",
-   "start": 17.876,
-   "end": 18.196
+   "start": 19.101,
+   "end": 19.421
   },
   {
    "text": "red",
-   "start": 18.196,
-   "end": 18.516
+   "start": 19.421,
+   "end": 19.741
   },
   {
    "text": "blood",
-   "start": 18.516,
-   "end": 18.897
+   "start": 19.741,
+   "end": 20.122
   },
   {
    "text": "cells.",
-   "start": 18.897,
-   "end": 19.279
+   "start": 20.122,
+   "end": 20.504
   },
   {
    "text": "By",
-   "start": 19.885,
-   "end": 20.136
+   "start": 21.11,
+   "end": 21.361
   },
   {
    "text": "count,",
-   "start": 20.136,
-   "end": 20.468
+   "start": 21.361,
+   "end": 21.693
   },
   {
    "text": "your",
-   "start": 20.468,
-   "end": 20.773
+   "start": 21.693,
+   "end": 21.998
   },
   {
    "text": "cells",
-   "start": 20.773,
-   "end": 21.105
+   "start": 21.998,
+   "end": 22.33
   },
   {
    "text": "are",
-   "start": 21.105,
-   "end": 21.383
+   "start": 22.33,
+   "end": 22.608
   },
   {
    "text": "mostly",
-   "start": 21.383,
-   "end": 21.742
+   "start": 22.608,
+   "end": 22.967
   },
   {
    "text": "blood.",
-   "start": 21.742,
-   "end": 22.074
+   "start": 22.967,
+   "end": 23.299
   },
   {
    "text": "And",
-   "start": 22.745,
-   "end": 23.018
+   "start": 23.97,
+   "end": 24.243
   },
   {
    "text": "they",
-   "start": 23.018,
-   "end": 23.318
+   "start": 24.243,
+   "end": 24.543
   },
   {
    "text": "are",
-   "start": 23.318,
-   "end": 23.592
+   "start": 24.543,
+   "end": 24.817
   },
   {
    "text": "outnumbered",
-   "start": 23.592,
-   "end": 24.047
+   "start": 24.817,
+   "end": 25.272
   },
   {
    "text": "by",
-   "start": 24.047,
-   "end": 24.294
+   "start": 25.272,
+   "end": 25.519
   },
   {
    "text": "their",
-   "start": 24.294,
-   "end": 24.621
+   "start": 25.519,
+   "end": 25.846
   },
   {
    "text": "passengers.",
-   "start": 24.621,
-   "end": 25.076
+   "start": 25.846,
+   "end": 26.301
   }
  ]
 }

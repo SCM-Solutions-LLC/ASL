@@ -1,4 +1,4 @@
-By cell count, you are less than half human.
+By the best cell count we have, you are slightly less than half human.
 About thirty trillion of your cells are yours.
 Thirty-eight trillion are bacteria.
 But put them all on a scale, and those bacteria weigh about two hundred grams.
@@ -11,26 +11,30 @@ SOURCES (for approval — every claim in the script, with the number behind it)
 Everything here rests on one paper: Sender, Fuchs & Milo, "Revised Estimates for
 the Number of Human and Bacteria Cells in the Body", PLoS Biology 14(8): e1002533
 (2016), doi:10.1371/journal.pbio.1002533. Its numbers are for a "reference man"
-(20-30 years old, 70 kg, 170 cm) and the authors put the uncertainty at roughly
-25%, with person-to-person variation on top (they quote ~50%). Every figure in
-the script is therefore a round number for one standard body, not a measurement
-of the viewer.
+(20-30 years old, 70 kg, 170 cm). The authors put the uncertainty of the
+bacteria count, and so of the ratio, at roughly 25%; the human count is far
+tighter (about 2%). Person-to-person variation comes on top. Every figure in the
+script is therefore a round number for one standard body, not a measurement of
+the viewer, and the screen says so where the counts first appear ("typical 70
+kg adult man"). The paper's reference woman has about 21 trillion human cells
+and 44 trillion bacteria; its Table 3 puts the ratio at 1.3 or more for every
+group it models (man, woman, infants, elder, obese), so the direction of the
+hook does not depend on the reference body.
 
-Provenance (checked 9 Nov 2026): 3.0e13, 3.8e13 and 0.2 kg are in the paper's
-abstract. The 84% red-blood-cell share, the ~75% muscle-and-fat share of cell
-mass, the 25% uncertainty, the ~52-53% person-to-person variation and the
-defecation remark were confirmed against the BioNumbers entry for the paper
-(ID 113005) and Science News / Weizmann coverage of it. The paper's own full
-text and Table 3 were not opened: the PLoS and PMC hosts were not reachable
-from the session that did the check. No figure in the script changed.
+Provenance: an independent fact-check on 18 Nov 2026 read the paper's full text
+(journals.plos.org) and its tables (Europe PMC XML). An earlier pass had only
+BioNumbers (ID 113005) and press coverage; this replaces it.
 
-1. "By cell count, you are less than half human."
+1. "By the best cell count we have, you are slightly less than half human."
    3.0e13 human cells against 3.8e13 bacteria: 30 of 68 trillion is 44%. This is
-   the soft one. The ratio is 1.3:1, and the paper's own point is that this is
-   close enough to 1:1 that a single bowel movement — which sheds a large share
-   of the colon's bacteria — can tip it back to humans being the majority. So
-   "less than half" is true of the reference estimate and within its error bar
-   of not being true. What is NOT soft is the direction of the correction: the
+   the soft one, which is why the line says "the best count we have" and
+   "slightly". The ratio is 1.3:1, which the paper calls "about 1:1", and it
+   treats its colon count as "an upper limit". With 25% on the ratio the human
+   share runs from about 38% to 51%. The paper also notes each bowel movement
+   "reduces the content by a quarter to a third" of the colon's bacteria;
+   that this can briefly tip the count back toward human cells is arithmetic on
+   that figure, not a line of the paper. So "slightly less than half" is the
+   best estimate, and the screen shows it as "~44%" and "best estimate". What is NOT soft is the direction of the correction: the
    old "bacteria outnumber you ten to one" figure is the myth this paper
    retired, and the short must never be captioned or titled with it.
    The count is of bacteria only, which is what the paper counts; archaea, fungi
@@ -46,9 +50,11 @@ from the session that did the check. No figure in the script changed.
 
 4. "Those bacteria weigh about two hundred grams."
    Total bacterial mass ~0.2 kg, about 0.3% of a 70 kg body. They are that light
-   because a bacterium is of order a thousand times smaller by volume than a
-   typical human cell — which is why the animation shrinks them as they land on
-   the scale. This also replaces an older folk figure of 1-2 kg.
+   because a bacterium is on average far smaller than a human cell (the paper
+   uses about 5 pg for an average gut bacterium, against about 100 um^3 for a red
+   blood cell) — which is why the animation shrinks them as they land on the
+   scale, and the screen says "far smaller on average". The paper also retires
+   an older folk figure of 1-3 kg.
 
 5. "Eighty-four percent are red blood cells."
    ~2.5e13 red blood cells of 3.0e13 human cells, by COUNT. The unit chart shows
