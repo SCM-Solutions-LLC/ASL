@@ -47,5 +47,11 @@
   "licence": "cc-by-2.0",
   "ship": true,
   "note": "CC BY 2.0 requires credit: the altar-stone short shows 'Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0' on screen while the photo is up, and the video description must carry the same line. Licence read from the Commons file page metadata on 2026-11-18."
+ },
+ "public/img/altar-stone-thin-sections.jpg": {
+  "source": "Clarke et al. 2024, 'A Scottish provenance for the Altar Stone of Stonehenge', Nature 632, 570-575, doi:10.1038/s41586-024-07652-1, Fig. 2 (false colour mineralogy maps of Altar Stone thin sections MS3 and 2010K.240 with dated zircon, apatite and rutile grains). Downloaded from the PMC copy (PMC11324516, cdn.ncbi.nlm.nih.gov) on 2026-11-18; cropped above the mineral legend",
+  "licence": "cc-by-4.0",
+  "ship": true,
+  "note": "Licence from Crossref's licence field for the DOI (creativecommons.org/licenses/by/4.0). CC BY 4.0 requires credit and a note of changes: the altar-stone short shows 'Clarke et al. 2024, Nature / CC BY 4.0 · cropped' on screen while the image is up, and the video description must carry the same credit."
  }
 }
