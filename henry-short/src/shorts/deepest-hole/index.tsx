@@ -59,11 +59,14 @@ const CRUST_KM = 40;
 const NEAR = 38;
 const FAR = 14.5;
 
-// Depth against the calendar, 1970–1989, as fractions of the nineteen years: 9,583 m in 1979,
-// 12,000 m in 1983, 12,262 m in 1989. The last 262 metres took six years, and a counter that ran
-// evenly would hide the one thing about this hole that explains why it stopped.
-const depthAt = (p: number) =>
-  interpolate(p, [0, 9 / 19, 13 / 19, 1], [0, 9.583, 12, DEPTH_KM], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+// Depth against the calendar year (Lobanov 2021): 9,584 m in June 1979, 12,066 m in 1983, then
+// no new depth until the third branch reached 12,262 m in 1989-90 (a 1984 string break sent
+// drilling back to 7 km). The year counter and the depth counter run on the same clock.
+const depthAt = (year: number) =>
+  interpolate(year, [1970.4, 1979.45, 1983.9, 1989, 1990], [0, 9.584, 12.066, 12.066, DEPTH_KM], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
 
 // Wide enough to cover both crops with room for the camera shake.
 const SPAN = { left: -500, width: 2920 };
@@ -130,9 +133,8 @@ const Ground: React.FC = () => {
   if (gone >= 1) return null;
 
   const kpu = NEAR + (FAR - NEAR) * ease(ramp(f, F.never - 4, F.crust + 6));
-  // A first bite during the hook so the shaft is moving from the start, then the nineteen years.
-  const p = ramp(f, 10, F.took, 0, 0.05) + ramp(f, F.took, F.kilometres + 6, 0, 0.95);
-  const depth = depthAt(p);
+  const year = 1970 + 20 * ramp(f, F.took, F.kilometres + 6);
+  const depth = depthAt(year);
   const bottom = SURF + depth * kpu;
   const moho = SURF + CRUST_KM * kpu;
   // The glow starts building on "at the bottom", so the number lands on rock that is already hot.

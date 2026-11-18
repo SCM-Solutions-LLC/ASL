@@ -582,32 +582,17 @@ const Thermometer: React.FC = () => {
 };
 
 // The Earth, and where the hole is on it: nowhere that can be drawn. At this size twelve
-// kilometres is a fraction of a pixel, so the hole is pointed at and labelled instead.
+// kilometres is a fraction of a pixel, and Kola is not on this photo's visible face, so the hole is
+// named, not pointed at.
 const EARTH = { x: 540, y: 650 };
 
 const Planet: React.FC = () => (
   <>
     <Cut {...OUTLINE.earth} x={EARTH.x} y={EARTH.y} w={700} edge={10} />
-    <Marks>
-      <Stroke
-        d={`M${EARTH.x - 4} 218 C ${EARTH.x + 6} 240, ${EARTH.x - 6} 262, ${EARTH.x} 288`}
-        from={F.downAgain - 4}
-        to={F.downAgain + 2}
-        colour={YELLOW}
-        width={14}
-      />
-      <Stroke
-        d={`M${EARTH.x - 26} 262 L${EARTH.x} 292 L${EARTH.x + 26} 262`}
-        from={F.downAgain}
-        to={F.downAgain + 4}
-        colour={YELLOW}
-        width={14}
-      />
-    </Marks>
     <Label
       x={EARTH.x}
       y={172}
-      text="THE HOLE: TOO SMALL TO DRAW"
+      text="THE HOLE: TOO SMALL TO SEE HERE"
       at={F.downAgain - 6}
       size={46}
       tag={CREAM}

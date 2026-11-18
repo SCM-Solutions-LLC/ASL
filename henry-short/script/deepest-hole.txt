@@ -42,8 +42,9 @@ Sources read (an independent fact-check, 18 Nov 2026):
    The hole narrows in steps (Lobanov 2021, Fig. 5, actual well construction):
    720 mm to 40 m, cased at 325 mm to 2,000 m (so bored wider), cased at
    245 mm to 8,770 m, then open hole 215.9 mm to 12,262 m, drilled with a
-   214 mm bit (Lobanov). The USGS summary lists 295.3 mm reamers and, below
-   7 km, cavities wider than 40 cm. So only the last stretch is narrower than
+   214 mm bit (Lobanov). Lobanov also has the bore going oval below 7 km, with
+   "many caverns"; the USGS summary lists 295.3 mm reamers and cavities "to
+   depths of 7,000 m", some more than 40 cm across on one log. So only the last stretch is narrower than
    the 25.6 cm plate (Met 51.86.100); the line says "finished with a bit", and
    the labels name the bit ("21 CM BIT", "THE BIT", "the last stretch").
 
@@ -68,19 +69,21 @@ Sources read (an independent fact-check, 18 Nov 2026):
    Lobanov: "a drastic reduction in funding made it impossible to continue the
    work. Drilling was stopped in 1992"; a casing run in 1992 was meant to carry
    drilling on to 13 km. Zhu & Huang put the end on heat, which "induced
-   plastic rock flow that repeatedly sealed the hole", citing Lobanov (their
-   ref. 29), who does not say it. The line states only what Lobanov states; the
+   plastic rock flow that repeatedly sealed the hole" (that sentence carries no
+   citation of its own); Lobanov does not mention plastic flow. The line states only what Lobanov states; the
    heat is in line 6.
 
-8. "The centre of the Earth is six thousand more."
+8. "The centre of the Earth is over six thousand more."
    Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "over
    six thousand more" (on screen "6,000+ KM MORE"). The hole is 0.19% of the
    way to the centre, shown as "0.2%".
 
 9. Figures used by the animation, not spoken.
-   Depth against year: 9,584 m in June 1979 (passing the US record of 9,583 m) and
-   12,000 m on 27 December 1983 (Lobanov), 12,262 m in 1989-90; the curve between
-   them is a straight-line interpolation. The core is drawn to 3,485 km (NSSDC); no inner core is drawn,
-   crust drawn at 40 km. At the size the Earth is drawn the crust is under two
+   Depth against year (Lobanov): 9,584 m in June 1979 (passing the US record of
+   9,583 m), 12,066 m in 1983; a 1984 drill-string break sent drilling back to
+   7 km, and the third branch reached 12,262 m in 1989-90. The illustrated
+   look's depth counter runs on the same clock as its year counter, straight
+   between those points and flat from 1983 to 1989. The core is drawn to
+   3,485 km (NSSDC); no inner core is drawn; crust drawn at 40 km. At the size the Earth is drawn the crust is under two
    pixels thick and the hole is a fraction of one, which is why the last shot
    labels the hole instead of drawing it.
