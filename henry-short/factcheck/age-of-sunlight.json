@@ -7,305 +7,305 @@
       "n": 1,
       "claim": "The energy in the sunlight on your skin spent tens of thousands of years, maybe far more, getting out of the Sun.",
       "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); Crossref api.crossref.org/works/10.1086/172103 (metadata only, no abstract)",
-      "note": "Couldn't read any cited figure. Crossref confirms only the citation: Mitalas & Sills, 'On the photon diffusion time scale for the sun', ApJ 401, 759 (Dec 1992). Logically the wording holds IF the SOURCES quotes are accurate: every cited figure (4e4, 1.7e5, ~1e6, Stix ~3e7) is >= tens of thousands and 'maybe far more' covers the rest. A3 caveat to record in SOURCES: by its own SOURCES entry MS92 calls the common <=3e4 yr result 'much too short', and the lead figure ('tens of thousands', SVS 4e4) sits just above that range, so the hook leans on the lowest, non-peer-reviewed number with the best paper's 1.7e5 carried only by the hedge. To settle: open SVS 11084, MSFC interior.shtml and the ADS scan of 1992ApJ...401..759M and check the quoted sentences."
+      "verdict": "confirmed",
+      "source_checked": "https://svs.gsfc.nasa.gov/11084 (NASA SVS 'Origin Of Light', 2012); https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M (Mitalas & Sills, ApJ 401, 759-760, scan pp. 759-760 read); https://solarscience.msfc.nasa.gov/interior.shtml (NASA MSFC 'The Solar Interior', updated 2025-01-14)",
+      "note": "SVS: 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface' and 'Over tens of thousands of years, the photons travel a \"drunken walk\"'. MS92: 'the diffusion time scale of the Sun should be taken as the time for a diffusing photon to reach the inner edge of the solar convective zone ... t_d = 1.7 x 10^5 yr'; the 3e3-3e4 yr from the common step is 'much too short' ('too short by an order of magnitude'). MSFC: 'an individual photon takes about a million years to finally reach the interface layer'. Every cited figure is >= tens of thousands, and the sources disagree by orders of magnitude, so 'tens of thousands, maybe far more' is a lower bound all three support. 'Energy' (not 'photon') is the right word: MSFC 'This energy diffuses outward by radiation ... and by convective fluid flows'; MS92 'In the solar convective zone, however, the energy transfer is by convection'. Stix 2003 not opened; nothing here rests on it."
     },
     {
       "n": 2,
-      "claim": "A4: what a viewer who swipes at 2.0 s has heard and seen",
-      "where": "spoken + on-screen (both looks)",
+      "claim": "The trip from the Sun to you took eight minutes.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "src/generated/age-of-sunlight.alignment.json; src/shorts/age-of-sunlight/index.tsx; src/shorts/age-of-sunlight-cutout/index.tsx",
-      "note": "At 2.0 s the VO has reached 'The energy in the sunlight on your' ('skin' starts 2.052, 'spent' 2.345, 'tens' 2.664). On screen: Look A shows the Sun-Earth shot labelled 'not to scale' (first pulse starts only at 'trip', ~7.2 s); Look B shows the sunbeams card with 'SUNLIGHT' ('10,000+ YEARS' appears at 'tens', 2.66 s). No factual claim has been made by 2.0 s, so nothing false is taken away."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (last updated 2024-05-09); https://physics.nist.gov/cgi-bin/cuu/Value?c; https://svs.gsfc.nasa.gov/11084",
+      "note": "NSSDC: radius 695,700 km; distance from Earth mean 149.6, min 147.1, max 152.1 (10^6 km). NIST: c = 299 792 458 m/s (exact). Surface to Earth: (149.6e9 - 0.6957e9)/c = 496.7 s = 8.28 min; range 488-505 s = 8.1-8.4 min. SVS: 'Light takes eight minutes to travel the 93 million miles from the sun to Earth.' 'Eight minutes' is the rounding the agency source itself uses."
     },
     {
       "n": 3,
-      "claim": "A4: what a viewer who leaves at ~3-6.5 s takes away ('spent tens of thousands of years' with '10,000+ YEARS' on screen in Look B from 2.66 s)",
-      "where": "spoken + on-screen (both looks)",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. Wording check: the takeaway is 'sunlight's energy took 10,000+ years to get out', not the popular 'the photon/light is 10,000+ years old', and the words say 'energy'. Whether that takeaway is true depends entirely on claim 1. Settle as claim 1."
+      "claim": "Getting out was the slow part.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "As claims 1 and 2 (SVS 11084, MS92 scan, MSFC interior, NSSDC, NIST)",
+      "note": ">= 4e4 yr (SVS) against ~8.3 min. No new number. MSFC also: photons 'bounce so many times through this dense material'."
     },
     {
       "n": 4,
-      "claim": "The trip from the Sun to you took eight minutes.",
+      "claim": "But it is not the same light.",
       "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; IAU 2012 B2. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. 'Eight minutes' is a fair rounding of 8.1-8.4. To settle: open the NSSDC fact sheet and NIST c (or SVS 'Light takes eight minutes')."
+      "verdict": "confirmed",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://svs.gsfc.nasa.gov/11084",
+      "note": "MSFC: energy 'diffuses outward by radiation (mostly gamma-rays and x-rays) through the radiative zone' and the core reactions 'release the energy that ultimately leaves the surface as visible light'. So the light inside differs in kind from the light that leaves. SVS: each photon is 'absorbed by other atoms and emitted repeatedly' (consistent; note SVS and MSFC both narrate it as one photon travelling, so the line is confirmed on the spectral reading, which is what MSFC states)."
     },
     {
       "n": 5,
-      "claim": "Getting out was the slow part.",
+      "claim": "It leaves as sunlight.",
       "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Follows from claims 1 and 4 (>= 4e4 yr against ~8 min) with no new number, so it stands or falls with them. Settle by settling claims 1 and 4."
+      "verdict": "confirmed",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "MSFC: 'the energy that ultimately leaves the surface as visible light'."
     },
     {
       "n": 6,
-      "claim": "But it is not the same light.",
+      "claim": "The energy is ancient.",
       "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC ('mostly gamma-rays and x-rays' inside; 'leaves the surface as visible light') and SVS ('absorbed ... and emitted repeatedly'), neither opened. Physically sound (thermal radiation at 2-15 MK peaks at keV energies; the photosphere emits visible light), but not confirmed at source. To settle: open MSFC interior.shtml."
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Characterisation of >= 40,000 yr (SVS) to ~1e6 yr (MSFC); no new figure."
     },
     {
       "n": 7,
-      "claim": "It leaves as sunlight.",
+      "claim": "Its last eight minutes were the trip to you.",
       "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC 'the energy that ultimately leaves the surface as visible light', not opened. To settle: open MSFC interior.shtml."
+      "verdict": "confirmed",
+      "source_checked": "As claim 2 (NSSDC, NIST, SVS 11084)",
+      "note": "Same 8.1-8.4 min surface-to-Earth trip; SVS 'Light takes eight minutes to travel ... from the sun to Earth'."
     },
     {
       "n": 8,
-      "claim": "The energy is ancient.",
-      "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. 'Ancient' for >= tens of thousands of years is a fair word if claim 1 holds."
+      "claim": "A4: what a viewer who swipes away at 2.0 s has heard and seen",
+      "where": "spoken + on-screen (Space) + on-screen (Cutout)",
+      "verdict": "confirmed",
+      "source_checked": "src/generated/age-of-sunlight.alignment.json; brief of both looks",
+      "note": "At 2.0 s the VO has said 'The energy in the sunlight on your' ('skin' 2.052 s, 'spent' 2.345 s, 'tens' 2.664 s). Space: Sun-Earth shot labelled 'not to scale', no pulse until 'trip' (7.374 s). Cutout: sunbeams card, 'SUNLIGHT'. No factual claim has been made, and the framing is about the energy, not the popular 'the photon is thousands of years old', so nothing false is taken away. A viewer who stays to ~4 s hears 'tens of thousands of years' (true, claim 1) but in Look B sees '10,000+ YEARS' from 2.664 s: see claim 21."
     },
     {
       "n": 9,
-      "claim": "Its last eight minutes were the trip to you.",
-      "where": "spoken",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. "
-    },
-    {
-      "n": 10,
       "claim": "Sun-Earth shot with 'not to scale' under Earth while Earth is visible",
       "where": "on-screen (Space): Sun-Earth shot",
       "verdict": "confirmed",
-      "source_checked": "src/shorts/age-of-sunlight/index.tsx (label rendered with Earth)",
-      "note": "This is a disclaimer, not an assertion. Drawn: Sun r 110 px, Earth r 24 px, gap ~5.5 Sun radii. Any published figure (Sun/Earth radius ~109, distance ~215 Sun radii, the SOURCES' own numbers) makes this badly out of scale, so the label is true and A6 is met. The real-world ratios were not re-read at source; they are not needed to see that this is not to scale."
+      "source_checked": "NSSDC Sun fact sheet (radius 695,700 km, Earth 6371 km, distance 149.6e6 km)",
+      "note": "Sun is ~109 Earth radii and ~215 solar radii away, so any frame holding both is not to scale; A6 is met by the on-screen label."
+    },
+    {
+      "n": 10,
+      "claim": "A bright pulse crosses the Sun-Earth gap on 'The trip ... eight minutes' and on the closing line",
+      "where": "on-screen (Space): light pulse",
+      "verdict": "confirmed",
+      "source_checked": "SVS 11084; NSSDC; NIST c",
+      "note": "Implies light travels from the Sun's surface to Earth; the real duration is carried by the '8 MINUTES' tag (claim 11), so the compressed animation time misleads no one."
     },
     {
       "n": 11,
-      "claim": "Bright pulse crossing the Sun-Earth gap on 'The trip ... eight minutes' and on the closing line",
-      "where": "on-screen (Space): Sun-Earth shot",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Shows light travelling from the Sun to Earth under a 'not to scale' shot. The pulse runs during 'trip'...'minutes' (about 2 s), so it is schematic and its timing makes no claim. It adds nothing beyond claim 4, which is unverified. Confirmed in code: there is no longer a pulse under the hook (it starts at F.trip - 6), so the 'tens of thousands' line is never paired with a Sun-to-Earth crossing."
+      "claim": "8 MINUTES / surface to your skin / not to scale",
+      "where": "on-screen (Space): trip tag",
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c; SVS 11084",
+      "note": "Photosphere to Earth 488-505 s (8.1-8.4 min), computed from NSSDC radius and min/max distance and NIST c. 'Surface' is the right starting point for the 8.3 min figure."
     },
     {
       "n": 12,
-      "claim": "8 MINUTES / surface to your skin / not to scale",
-      "where": "on-screen (Space): tag",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. 'Surface to your skin' is the right endpoint: photosphere, not centre."
+      "claim": "10,000+ YEARS / energy, core to surface / not to scale",
+      "where": "on-screen (Space): interior cutaway tag",
+      "verdict": "fix",
+      "source_checked": "SVS 11084; MS92 scan (1992ApJ...401..759M); MSFC interior",
+      "note": "True as a bare lower bound, but 10,000 appears in no cited source. The lowest cited figure is SVS's 40,000 yr; MS92 calls 3e3-3e4 yr 'much too short' ('too short by an order of magnitude'), so a '10,000+' label anchors the viewer on the popular figure the best source rejects, and rounds the lowest source down 4x (A3: rounding may simplify, not change). Change to '40,000+ YEARS' (true at SVS 4e4, MS92 1.7e5, MSFC ~1e6), or 'TENS OF THOUSANDS OF YEARS+' to match the spoken line; update the SOURCES line 'On screen: \"10,000+ YEARS\"' to match. 'Core to surface' is fine: MS92/MSFC times run to the base of the convection zone and MSFC says convection then carries heat 'quite rapidly to the surface'."
     },
     {
       "n": 13,
-      "claim": "10,000+ YEARS / energy, core to surface / not to scale (during the interior cutaway)",
-      "where": "on-screen (Space): tag",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. '10,000+' is weaker than the spoken 'tens of thousands' and is true if the SOURCES figures hold. 'Core to surface' fits SVS (to the surface); MS92 and MSFC measure to the base of the convection zone (~0.7 R), and the convective leg adds little."
+      "claim": "Cutaway rings at 0.25 R and 0.7 R",
+      "where": "on-screen (Space): interior cutaway",
+      "verdict": "confirmed",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "MSFC: core 'the innermost 25%'; radiative zone 'from 25% of the distance to the surface to 70% of that distance'; convection zone 'the outermost 30%'. (MS92 Fig. 2 marks the convection-zone base near 0.75 R in its 1992 model; 0.7 is MSFC's rounding.)"
     },
     {
       "n": 14,
-      "claim": "Cutaway rings at 0.25 R (core edge) and 0.7 R (radiative/convective boundary)",
-      "where": "on-screen (Space): interior cutaway",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Christensen-Dalsgaard, Gough & Thompson 1991 (ADS). Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); Crossref 10.1086/170441 (metadata only)",
-      "note": "Crossref confirms the citation: 'The depth of the solar convection zone', ApJ 378, 413 (Sep 1991). The 0.713 R value and MSFC's 25%/70% were not read. To settle: open MSFC interior.shtml."
+      "claim": "Random-walk path from the centre to the 0.7 ring with short sideways strokes (absorption and re-emission); nothing walks above 0.7",
+      "where": "on-screen (Space): random walk",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior; MS92 scan; SVS 11084",
+      "note": "MSFC: energy carried by photons that 'bounces from particle to particle through the radiative zone', convection in the outer 30%. MS92: diffusion 'from the center' to 'the inner edge of the solar convective zone'; in the convective zone 'the energy transfer is by convection'. SVS: 'absorbed by other atoms and emitted repeatedly'. SVS's animation walks photons to the surface; the visual follows MSFC and MS92, the more specific sources. Step size is labelled not to scale (MS92 mean step 0.09 cm)."
     },
     {
       "n": 15,
-      "claim": "Random walk from the centre to the 0.7 ring with short sideways strokes (absorption and re-emission); nothing walks above 0.7",
-      "where": "on-screen (Space): interior cutaway",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC (radiative diffusion to ~0.7 R, convection above) and SVS (absorbed and re-emitted), neither opened. The code clamps the walk to <= 0.7 R (scaled by its furthest excursion). Minor and schematic: the walk starts at r = 0 although energy is released throughout the core (to ~0.25 R); not a fix."
+      "claim": "Path colour by log temperature: 15 MK at r=0, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at the surface",
+      "where": "on-screen (Space): path colour",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior; NSSDC Sun fact sheet",
+      "note": "MSFC: centre 'about 15,000,000 C'; at the core edge 'only half its central value'; radiative zone 'falls from 7,000,000 C to about 2,000,000 C'; surface 'dropped to 5,700 K'. NSSDC: central 1.571e7 K, effective 5772 K. C vs K is negligible at MK. Hue is schematic and no number is drawn."
     },
     {
       "n": 16,
-      "claim": "Path colour violet to pale yellow by log temperature: 15 MK at r=0, 7 MK at 0.25 R, 2 MK at 0.7 R, 5,700 K at the surface",
-      "where": "on-screen (Space): interior cutaway",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); code PROFILE/tint() in src/shorts/age-of-sunlight/index.tsx",
-      "note": "Code matches the stated profile, and the fractions are recomputed correctly: ln(15/7)/ln(15e6/5700) = 0.097 and ln(7.5)/ln(15e6/5700) = 0.256. The temperatures themselves (MSFC) were not read at source. The hue is schematic and no wavelength is printed on screen."
+      "claim": "Rotating dashed convection cells between 0.7 R and the surface",
+      "where": "on-screen (Space): convection zone",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior",
+      "note": "MSFC: 'convective fluid flows (boiling motion) through the convection zone, the outermost 30%'; 'These convective motions carry heat quite rapidly to the surface.'"
     },
     {
       "n": 17,
-      "claim": "Rotating dashed convection cells between 0.7 R and the surface",
-      "where": "on-screen (Space): interior cutaway",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC 'convective fluid flows ... outermost 30%' and 'carry heat quite rapidly to the surface', not opened."
+      "claim": "A fan of five yellow rays leaving the surface",
+      "where": "on-screen (Space): emission",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior",
+      "note": "MSFC: energy 'ultimately leaves the surface as visible light'. Rays start at the surface, not below it."
     },
     {
       "n": 18,
-      "claim": "Fan of five yellow rays leaving the surface (energy leaves as light)",
-      "where": "on-screen (Space): interior cutaway",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Same as 'It leaves as sunlight': MSFC not opened. The rays leave from the surface (photosphere), which is the right place."
+      "claim": "THE ENERGY / 10,000+ years getting out",
+      "where": "on-screen (Space): closing tag",
+      "verdict": "fix",
+      "source_checked": "SVS 11084; MS92 scan; MSFC interior",
+      "note": "Same problem as claim 12: no cited source gives 10,000; lowest is 40,000 (SVS) and MS92 calls <=3e4 'much too short'. Change to '40,000+ years getting out' or 'tens of thousands of years+ getting out'."
     },
     {
       "n": 19,
-      "claim": "THE ENERGY / 10,000+ years getting out",
+      "claim": "THE TRIP / 8 minutes to you / not to scale",
       "where": "on-screen (Space): closing tag",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. "
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c; SVS 11084",
+      "note": "As claim 11: 8.1-8.4 min."
     },
     {
       "n": 20,
-      "claim": "THE TRIP / 8 minutes to you / not to scale",
-      "where": "on-screen (Space): closing tag",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. "
+      "claim": "Card 1 'The energy in the sunlight on your skin': sunbeams over suburbs, cut-out hand, 'SUNLIGHT'",
+      "where": "on-screen (Cutout): card 1",
+      "verdict": "confirmed",
+      "source_checked": "Brief (photo described as CC0; licence not re-checked, not a factual claim)",
+      "note": "Illustrative; makes no factual claim beyond 'sunlight'."
     },
     {
       "n": 21,
-      "claim": "Card 1: sunbeams photo + cut-out hand, word 'SUNLIGHT' (on 'The energy in the sunlight on your skin')",
-      "where": "on-screen (Cutout): card 1",
-      "verdict": "confirmed",
-      "source_checked": "public/SOURCES.json entries rays.jpg and hand.jpg; the image itself",
-      "note": "No factual claim: the photo shows crepuscular rays (sunlight), and the word names it. Provenance is recorded from Commons only, which is a D1 licence matter, not an A2 fact."
+      "claim": "Card 2: '10,000+ YEARS' appears from 'tens' (2.664 s)",
+      "where": "on-screen (Cutout): card 2",
+      "verdict": "fix",
+      "source_checked": "SVS 11084; MS92 scan; MSFC interior; alignment.json",
+      "note": "As claim 12, and it matters more here because it is on screen during the hook (from 2.664 s) while the VO says 'tens of thousands': the label shows a figure lower than anything spoken or cited and in the range MS92 rejects. Change to '40,000+ YEARS' or 'TENS OF THOUSANDS OF YEARS'."
     },
     {
       "n": 22,
-      "claim": "Card 2: SDO/AIA 304 A false-colour disc, '10,000+ YEARS' from 'tens', 'MAYBE FAR MORE' from 'far'",
+      "claim": "Card 2: SDO/AIA 304 A (EUV, false colour) disc; scrap 'MAYBE FAR MORE' from 'far'",
       "where": "on-screen (Cutout): card 2",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. The picture stands only for 'the Sun' and makes no claim of its own. The tags match the spoken hedge."
+      "verdict": "confirmed",
+      "source_checked": "MS92 scan (1.7e5 yr); MSFC interior (~1e6 yr)",
+      "note": "'Maybe far more' is supported by MS92's 1.7e5 and MSFC's ~1e6. The EUV disc is just an image of the Sun under 'getting out of the Sun'; it implies nothing about the interior figures."
     },
     {
       "n": 23,
       "claim": "Card 3: STEREO 304 A Sun and Apollo 17 Blue Marble at arbitrary sizes, marker arrow Sun to Earth, 'NOT TO SCALE', '8 MINUTES'",
       "where": "on-screen (Cutout): card 3",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); NASA Image Library API images-api.nasa.gov (as17-148-22727)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. Earth photo confirmed at NASA: 'AS17-148-22727 (7 Dec. 1972) --- This view of Earth was seen by the Apollo 17 crew as they traveled toward the moon'. The 'NOT TO SCALE' tag covers the sizes and distance."
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c; SVS 11084",
+      "note": "8.1-8.4 min surface to Earth; sizes and distance explicitly labelled 'NOT TO SCALE' (A6)."
     },
     {
       "n": 24,
-      "claim": "Card 4: marker random walk (non-self-crossing) from the centre to 0.7 R, then one straight coral leg from 0.7 R past the limb; tags '10,000+ YEARS' (coral) and 'NOT TO SCALE'; 'GETTING OUT', 'THE SLOW PART'",
+      "claim": "Card 4: black marker random walk from a dot at the centre to 0.7 R, black tag '10,000+ YEARS' beside the walk",
       "where": "on-screen (Cutout): card 4",
       "verdict": "fix",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); src/shorts/age-of-sunlight-cutout/index.tsx (walk(), EXIT_ANGLE, Tag at F.part+2)",
-      "note": "Two problems with what the visual implies (A6). (a) Above 0.7 R this look draws one straight line, so energy seems to fly straight out once it reaches 0.7 R. The script's own source (MSFC) says the outer 30% is crossed by 'convective fluid flows', not straight-line travel, and this look never shows convection. (b) The '10,000+ YEARS' tag is coral, appears in the same second as the coral leg (F.part+2 vs F.part+4), and sits by its outer end (tag at about 735,200; leg ends at about 897,277). So the colour ties the long number to the fast leg, while the slow black walk, which it belongs to, is already finished. Fix: draw the outer leg as a looping or wavy convection stroke (or label it 'convection, fast'), and ink the '10,000+ YEARS' tag black, placed by the black walk. Note, not a fix: a real random walk crosses itself constantly; the non-crossing walk is a disclosed stylisation (code comment), covered by 'NOT TO SCALE'. The underlying numbers are unverified, as in claim 1."
+      "source_checked": "MSFC interior; MS92 scan; SVS 11084",
+      "note": "Geometry is right (MSFC radiative zone ends at 70%; MS92 diffusion ends at the convection-zone base). A non-self-crossing path is schematic, covered by 'NOT TO SCALE'. The tag is the problem: the figure for exactly this stretch (centre to convection-zone base) is 1.7e5 yr in MS92 and ~1e6 yr in MSFC, and MS92 calls <=3e4 'much too short'. Change the tag to '40,000+ YEARS' (or 'TENS OF THOUSANDS OF YEARS+')."
     },
     {
       "n": 25,
-      "claim": "Card 5: NASA SDO collage of the Sun in different wavelengths, 'NOT THE SAME LIGHT'",
-      "where": "on-screen (Cutout): card 5",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC (gamma/X-ray inside, visible out), not opened. The collage shows only light that has already left the Sun (plus magnetograms and Dopplergrams), so it illustrates 'light comes in different kinds', not the inside/outside contrast. That is acceptable as illustration and asserts nothing false."
+      "claim": "Card 4: coral looping stroke (three loops) from 0.7 R past the limb, coral tag 'CONVECTION'",
+      "where": "on-screen (Cutout): card 4",
+      "verdict": "fix",
+      "source_checked": "MSFC interior",
+      "note": "Convection from 0.7 R outward is right, but a stroke running past the limb draws convection carrying the energy out of the Sun. MSFC: convective motions carry heat 'to the surface', and the energy 'leaves the surface as visible light'. End the coral loops at the limb (where card 6's yellow rays take over), or switch the stroke to a yellow ray at the limb."
     },
     {
       "n": 26,
-      "claim": "Card 6: SDO giant prominence (31 Aug 2012) with a fan of five yellow marker rays off the limb, 'LEAVES AS SUNLIGHT'",
-      "where": "on-screen (Cutout): card 6",
-      "verdict": "fix",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); NASA Image Library API (GSFC_20171208_Archive_e001542: 'On Aug. 31, 2012, a giant prominence on the sun erupted ... captured by NASA's Solar Dynamics Observatory (SDO). Credit: NASA/SDO/AIA'); the image file public/cutout/sunlight/prominence.jpg viewed",
-      "note": "The picture is an SDO/AIA extreme-ultraviolet false-colour image (304/171 A look; AIA credit per NASA). It shows ~10^4-10^6 K plasma above the photosphere, in light that is absorbed high in Earth's atmosphere. Labelling it 'LEAVES AS SUNLIGHT', with rays fanning off the prominence, implies that this is the light that reaches your skin and that it leaves from a prominence. The script's point is the opposite: the light that leaves is visible light from the surface (MSFC). The image undercuts 'not the same light' one card earlier. Fix: use a visible-light picture for this card (e.g. the HMI continuum disc already in the deck, or a white-light photo) with the rays off the photosphere; or keep this image off the 'sunlight' line."
+      "claim": "Card 4: 'NOT TO SCALE'; words 'GETTING OUT' then 'THE SLOW PART' on an SDO/HMI visible-light disc",
+      "where": "on-screen (Cutout): card 4",
+      "verdict": "confirmed",
+      "source_checked": "As claim 3",
+      "note": "Restates the spoken line; the interior drawing is marked not to scale (A6)."
     },
     {
       "n": 27,
-      "claim": "Card 7: Skylab EUV photo of the Sun (1973) toned sepia, drawn cobweb, 'ENERGY' then 'ANCIENT ENERGY'",
-      "where": "on-screen (Cutout): card 7",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); NASA Image Library API S74-23458",
-      "note": "Photo confirmed at NASA: 'S74-23458 (19 Dec. 1973) ... taken in the light of ionized helium by the extreme ultraviolet spectroheliograph'. The sepia tone and cobweb are a visual metaphor for 'ancient' and assert no date or age. The 'ancient energy' claim rests on claim 1 (unverified). Watch-out, not a fix: an old-looking photo of light could read as 'the light is old', which the script denies; the word on screen says 'ENERGY', which keeps it right."
+      "claim": "Card 5: NASA SDO collage of the Sun in many wavelengths, 'NOT THE SAME LIGHT'",
+      "where": "on-screen (Cutout): card 5",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior",
+      "note": "Implies the light differs in wavelength, which is MSFC's point (gamma/X-rays inside, visible light out). The collage itself shows the Sun's atmosphere, not the interior, but no label says otherwise, so nothing false is shown."
     },
     {
       "n": 28,
-      "claim": "Card 8: ISS orbital sunrise photo, cut-out hand, 'LAST 8 MINUTES' then 'THE TRIP TO YOU'",
-      "where": "on-screen (Cutout): card 8",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); NASA Image Library API search for ISS047-E-138450 (no hit)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. The photo's NASA ID was not found in the NASA library (Commons only); the photo makes no claim beyond 'sunlight arriving at Earth'."
+      "claim": "Card 6: SDO/HMI visible-light disc with five yellow rays off its limb, 'LEAVES AS SUNLIGHT'",
+      "where": "on-screen (Cutout): card 6",
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior",
+      "note": "MSFC: 'leaves the surface as visible light'. A visible-light image is the right one here."
     },
     {
       "n": 29,
-      "claim": "Title: 'The energy in sunlight took at least tens of thousands of years to get out of the Sun'",
-      "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. 'At least tens of thousands' is a floor that every cited figure meets, if they are as quoted."
+      "claim": "Card 7: Skylab EUV photo (1973) toned sepia with a drawn cobweb, 'ENERGY' then 'ANCIENT ENERGY'",
+      "where": "on-screen (Cutout): card 7",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Age metaphor for >= 4e4 yr; the tag says the energy, not the light or the photo, is ancient."
     },
     {
       "n": 30,
-      "claim": "Caption: 'Sunlight reaches you about eight minutes after leaving the Sun.'",
-      "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. "
+      "claim": "Card 8: ISS orbital sunrise photo, cut-out hand, 'LAST 8 MINUTES' then 'THE TRIP TO YOU'",
+      "where": "on-screen (Cutout): card 8",
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c; SVS 11084",
+      "note": "As claim 7."
     },
     {
       "n": 31,
-      "claim": "Caption: 'The energy it carries spent tens of thousands of years, maybe far more, getting out.'",
+      "claim": "Title: The energy in sunlight took at least tens of thousands of years to get out of the Sun",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. "
+      "verdict": "confirmed",
+      "source_checked": "SVS 11084; MS92 scan; MSFC interior",
+      "note": "Lowest cited figure 40,000 yr (SVS: 'Over tens of thousands of years'); MS92 1.7e5; MSFC ~1e6. 'At least' is exactly the bound all three support."
     },
     {
       "n": 32,
-      "claim": "Description: 'Sunlight reaches you about eight minutes after leaving the Sun's surface.'",
+      "claim": "Caption: Sunlight reaches you about eight minutes after leaving the Sun.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA Sun Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; CODATA c https://physics.nist.gov/cgi-bin/cuu/Value?c; NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 4 (surface-to-Earth light time). Arithmetic re-done independently: (149.6e9 - 0.6957e9) m / 299,792,458 m/s = 496.7 s = 8.28 min; with the SOURCES' 147.1-152.1e6 km range, 488-505 s = 8.1-8.4 min; 1 AU/c = 499.0 s. The arithmetic holds, but the inputs (NSSDC distances and radius, NIST c) were not read at source this pass. "
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c; SVS 11084",
+      "note": "8.1-8.4 min; 'about' is accurate."
     },
     {
       "n": 33,
-      "claim": "Description: 'But the energy it carries spent tens of thousands of years, maybe far more, getting out.'",
+      "claim": "Caption: The energy it carries spent tens of thousands of years, maybe far more, getting out.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084; NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on claim 1 (SVS 4e4 yr, MS92 1.7e5 yr, MSFC ~1e6 yr), none of which could be opened. "
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Same wording as the spoken hook."
     },
     {
       "n": 34,
-      "claim": "Description: 'Estimates include about 40,000 years (NASA SVS)'",
+      "claim": "Description: Sunlight reaches you about eight minutes after leaving the Sun's surface.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA SVS 11084 https://svs.gsfc.nasa.gov/11084. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "SVS 11084 could not be opened. To settle: open it and check 'Over the course of 40,000 years ...'."
+      "verdict": "confirmed",
+      "source_checked": "NSSDC; NIST c",
+      "note": "Photosphere to Earth 488-505 s."
     },
     {
       "n": 35,
-      "claim": "Description: '170,000 (Mitalas & Sills 1992)'",
+      "claim": "Description: But the energy it carries spent tens of thousands of years, maybe far more, getting out.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits); Crossref api.crossref.org/works/10.1086/172103 (metadata only, no abstract)",
-      "note": "Crossref confirms authors, year and venue (ApJ 401, 759, Dec 1992; 'On the photon diffusion time scale for the sun'). The 1.7e5 yr figure was not read; Crossref has no abstract. Wording note for A3: MS92's figure is a photon diffusion time to the base of the convection zone, and the description lists it, fairly, as an estimate of how long the energy takes to get out. To settle: open the ADS scan 1992ApJ...401..759M."
+      "verdict": "confirmed",
+      "source_checked": "As claim 1",
+      "note": "Same as the hook."
     },
     {
       "n": 36,
-      "claim": "Description: 'and about a million (NASA Marshall)'",
+      "claim": "Description: Estimates include about 40,000 years (NASA SVS), 170,000 (Mitalas & Sills 1992) and about a million (NASA Marshall).",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "MSFC not opened. A search-engine result (not a source) suggests that MSFC's sentence concerns 'an individual photon' reaching the 'interface layer', not the energy reaching the surface. Check the exact wording when it is opened; listing it as 'about a million' to get out is fine if the description's frame (time to get out of the dense interior) is kept."
+      "verdict": "confirmed",
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "SVS 'Over the course of 40,000 years'; MS92 't_d = 1.7 x 10^5 yr' (abstract and Sec. 3); MSFC 'about a million years to finally reach the interface layer'. Attributions and figures match. MS92 and MSFC time the trip to the convection-zone base rather than the surface; MS92 argues that is the diffusion time scale of the Sun since convective crossing is 'very much shorter', and the next sentence of the description says so, so 'getting out' is a fair gloss."
     },
     {
       "n": 37,
-      "claim": "Description: 'The slow part is diffusing out through the Sun's dense interior; in the outer 30%, convection carries it up quickly.'",
+      "claim": "Description: The slow part is diffusing out through the Sun's dense interior; in the outer 30%, convection carries it up quickly.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml; Mitalas & Sills 1992 https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Rests on MSFC (radiative zone to 70%, convection in the outermost 30%, 'quite rapidly'), not opened."
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior; MS92 scan",
+      "note": "MSFC: 'they bounce so many times through this dense material'; convection zone 'the outermost 30%'; 'These convective motions carry heat quite rapidly to the surface.' MS92: convective crossing time 'very much shorter' than the diffusion time."
     },
     {
       "n": 38,
-      "claim": "Description: 'It leaves as sunlight.'",
+      "claim": "Description: It leaves as sunlight.",
       "where": "post text",
-      "verdict": "unverified",
-      "source_checked": "Attempted, not opened: NASA MSFC https://solarscience.msfc.nasa.gov/interior.shtml. Not reachable from this session: svs.gsfc.nasa.gov, solarscience.msfc.nasa.gov, nssdc.gsfc.nasa.gov, physics.nist.gov, articles.adsabs.harvard.edu, iau.org (proxy 403 / DNS not allowed; Firecrawl out of credits)",
-      "note": "Same as the spoken line: MSFC not opened."
+      "verdict": "confirmed",
+      "source_checked": "MSFC interior",
+      "note": "MSFC: 'leaves the surface as visible light'."
     }
   ]
 }
