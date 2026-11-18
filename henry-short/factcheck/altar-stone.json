@@ -1,6 +1,6 @@
 {
   "script": "script/altar-stone.txt",
-  "sha256": "eadc92780907b222c888a63e7520beebec99baa553997b1b5a5ffc23d4e27cab",
+  "sha256": "7f7f6a2d7f98fe3245deb214b62c88d4b5868744c5b77400f85f44a773b3984a",
   "checked": "2026-11-18",
   "claims": [
     {
@@ -8,312 +8,368 @@
       "claim": "In 2024, Stonehenge's Altar Stone was traced to Scotland.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "As a report of what the 2024 paper did: title 'A Scottish provenance for the Altar Stone of Stonehenge', published 14 August 2024; body: isotopic data 'indicate that the Altar Stone of Stonehenge has a provenance from the ORS in the Orcadian Basin of northeast Scotland'. Pirrie 2026 Conclusions: Clarke et al. (2024) 'proposed that it was derived from the Orcadian Basin of NE Scotland'."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Clarke 2024 (online 14 Aug 2024), title 'A Scottish provenance for the Altar Stone of Stonehenge'; abstract: detrital ages show 'a remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland'. Pirrie 2026 Conclusions: Clarke et al. (2024) 'proposed that it was derived from the Orcadian Basin of NE Scotland'. True as a report of the 2024 result."
     },
     {
       "n": 2,
       "claim": "Two years on, scientists still can't agree where it came from.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Clarke 2026 (online 4 June 2026) still favours NE Scotland: Caithness gives 'the closest match in zircon age structure', 'its source location within this large basin remains unresolved'. Pirrie 2026 (online 5 Nov 2026) questions it: scarce chrome spinel 'may indicate that an origin from this part of NE Scotland needs re-evaluating'; ORS 'from the Scottish Midland Valley to the Anglo-Welsh borderland ... remain possible source areas'; Conclusions 'the provenance of the Altar Stone has yet to be determined with confidence'. Aug 2024 to Nov 2026 is about two years. 'Still' holds in the sense that no source has ever been agreed: Parker Pearson 2024 p.129 'As yet, the actual outcrop from which the Altar Stone was extracted is unknown'. A pedant could note that in 2024 the Clarke and Parker Pearson teams agreed on the Orcadian Basin and the open dispute is a 2026 one; 'still' does not claim a 2024 dispute, so not a fix."
+      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "Clarke 2026 (online 4 Jun 2026) still proposes mainland NE Scotland, Caithness or Inverness-Black Isle 'the most likely source', while 'its source location within this large basin remains unresolved'. Pirrie 2026 (online 5 Nov 2026): 'detailed multi-proxy characterization of the Altar Stone raises questions over this interpretation'; scarce chrome spinel 'may indicate that an origin from this part of NE Scotland needs re-evaluating' (said of Clarke 2026's proposal); Conclusions 'the provenance of the Altar Stone has yet to be determined with confidence'. That is a published disagreement. Aug 2024 to Nov 2026 is about two years. 'Still' is fair: no source has been agreed at any point (Parker Pearson 2024 p.129 'As yet, the actual outcrop from which the Altar Stone was extracted is unknown')."
     },
     {
       "n": 3,
       "claim": "Hook as a viewer who swipes at second two leaves it: 'In 2024, Stonehenge's Altar Stone was traced to Scotland' (A4)",
       "where": "spoken (hook, A4)",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "The first clause is a past-tense report of the 2024 result, true as stated. A viewer who stops there may believe the stone is from Scotland; no cited source shows that false (Clarke 2026 still favours NE Scotland; Pirrie 2026 calls it undetermined and its remaining candidate ORS areas include the Scottish Midland Valley). The '?' over the area and 'SOURCE? / 2026 study questions NE Scotland' plus the title's second sentence carry the dispute early."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "The sentence is a dated report of a published result and is true. The belief it may leave (the stone is from Scotland) is the contested leading hypothesis, not something any source shows to be false: Clarke 2026 favours NE Scotland; Pirrie 2026 says the NE Scotland origin 'needs re-evaluating' and the provenance is 'as yet unknown', but neither excludes Scotland, and Pirrie's isotope data make 'an ORS provenance ... more likely than a Carboniferous source'. 'In 2024' frames it as a dated claim, and the next sentence (and the title) carry the dispute. Passes A4."
     },
     {
       "n": 4,
-      "claim": "The ages of tiny mineral grains inside it matched sandstone in the northeast.",
-      "where": "spoken",
+      "claim": "Stonehenge's Altar Stone was traced to Scotland in 2024. Scientists still can't agree where it came from",
+      "where": "metadata: video title",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Clarke 2024: U-Pb, Lu-Hf and trace-element data 'for zircon, apatite and rutile from two fragments of the Altar Stone'; heavy-mineral grains 'typically 10-40 µm wide' (tiny); abstract 'remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland'; apatite components from Caithness and Orkney 'match those from the Altar Stone'. Pirrie 2026 accepts the similarity (and notes the same pattern elsewhere in the Orcadian Basin, still NE Scotland). The script does not claim the match is unique."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Same two claims as n1-n2, same sources and readings."
     },
     {
       "n": 5,
-      "claim": "If so, how did six tonnes travel ...",
+      "claim": "The ages of tiny mineral grains inside it matched sandstone in the northeast.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024 abstract: 'the Altar Stone, a 6 tonne shaped block'; body: 'measuring 4.9 × 1.0 × 0.5 m ... weighing 6 t'. Parker Pearson 2024 p.116: 'a 6-tonne monolith'; Clarke 2026: '6000 kg'."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "Clarke 2024 dated zircon, apatite and rutile 'from two fragments of the Altar Stone' (MS3, 2010K.240); grains 'typically 10-40 µm wide' ('tiny'). Body: Orcadian Basin ORS detrital zircon 'provides the closest match to the Altar Stone detrital ages'; a K-S test 'fails to reject the null hypothesis that they are derived from the same underlying distribution'; apatite U-Pb components from Spittal, Caithness and Cruaday, Orkney 'match those from the Altar Stone'. 'The northeast' = northeast Scotland (abstract). Minor: the grains are from fragments attributed to the stone, not drilled from the monument (Pirrie 2026: 'direct sampling is not possible'); 'inside it' is a fair plain rendering."
     },
     {
       "n": 6,
-      "claim": "... more than seven hundred kilometres? (conditional: 'If so')",
+      "claim": "six tonnes",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Clarke 2024 abstract: 'Such a provenance implies that the Altar Stone ... was sourced at least 750 km from its current location'; body: 'a transport distance of at least 750 km'. 'More than 700' is under that. Clarke 2026's 'some 700 km' is rounder, not contradictory. 'If so' keeps Clarke 2024's own condition ('Such a provenance implies')."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "Clarke 2024 abstract 'a 6 tonne shaped block'; body '4.9 x 1.0 x 0.5 m ... weighing 6 t'. Parker Pearson 2024 'six-tonne Altar Stone'; Clarke 2026 '6000 kg'."
     },
     {
       "n": 7,
-      "claim": "The 2024 team suggested it went by sea.",
+      "claim": "If so, how did six tonnes travel more than seven hundred kilometres?",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024 abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.'"
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "Clarke 2024 abstract: 'Such a provenance implies that the Altar Stone ... was sourced at least 750 km from its current location'. Parker Pearson 2024 abstract 'more than 700 km away'; Clarke 2026 'some 700 km'. 'If so' keeps Clarke 2024's condition (an Orcadian Basin source)."
     },
     {
       "n": 8,
-      "claim": "But no late Stone Age boat has been found in Britain,",
+      "claim": "The 2024 team suggested it went by sea.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024 p.128: 'Although no boats are known from the Late Neolithic in Britain or Europe'; 'The earliest known boats in Britain have been found ... at Ferriby. The earliest of these Early Bronze Age sewn-plank boats (Ferriby 3) dates to 2030-1780 cal bc'. So no Neolithic (New Stone Age) boat is known in Britain at all, which covers either reading of 'late Stone Age'."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "Clarke 2024 abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.'"
     },
     {
       "n": 9,
-      "claim": "... and another study doubts one could carry six tonnes.",
+      "claim": "But no late Stone Age boat has been found in Britain",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024 p.128: 'What we know of Early Bronze Age boats ... would suggest that they and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters.' 'Doubts' = 'unlikely'. 'Another study' is literally true (a different paper), though three of its six authors (Bevins, Ixer, Pearce) are also Clarke 2024 authors; the script does not call it independent."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "Parker Pearson 2024 p.128: 'Although no boats are known from the Late Neolithic in Britain or Europe'; earliest known British boats are the Early Bronze Age Ferriby boats (Ferriby 3, 2030-1780 cal BC). 'Late Stone Age' is a plain rendering of 'Late Neolithic'."
     },
     {
       "n": 10,
-      "claim": "Overland, on a sledge, that study estimates about eight months of hauling.",
+      "claim": "and another study doubts one could carry six tonnes.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024 p.128: 'a suitably robust wooden sledge ... sliding on wooden rails'; 'such a journey with a large and heavy sledge could take perhaps four times today's time of under two months ... needing eight months or so to haul a stone from northern Scotland to Stonehenge.' 'About' = 'perhaps ... or so'."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "Parker Pearson 2024 p.128: 'What we know of Early Bronze Age boats ... would suggest that they and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters.' 'Doubts' = 'unlikely'. It is a different paper from Clarke 2024 (three authors in common: Bevins, Ixer, Pearce)."
     },
     {
       "n": 11,
+      "claim": "Overland, on a sledge, that study estimates about eight months of hauling.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "Parker Pearson 2024 p.128: 'a suitably robust wooden sledge ... sliding on wooden rails'; 'such a journey with a large and heavy sledge could take perhaps four times today's time of under two months ... needing eight months or so to haul a stone from northern Scotland to Stonehenge.'"
+    },
+    {
+      "n": 12,
       "claim": "A glacier? A 2026 ice model says ice could have carried it part of the way, at most.",
       "where": "spoken",
       "verdict": "confirmed",
       "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Clarke 2026 abstract: 'we combine sandstone provenance analysis with ice flow modelling'; 'Glacial transport may have provided an intermediate stage in the stone's journey, but alone cannot account for the final emplacement on Salisbury Plain.' Conclusions: 'Glaciation may therefore have provided, at most, partial transport rather than a complete delivery mechanism'; 'Our models do not predict any Late Devensian glacial transport directly to Stonehenge'. Matches 'part of the way, at most' nearly word for word. (The paper also finds even the Dogger Bank stage implausible on timing; leaving that out does not overstate.)"
-    },
-    {
-      "n": 12,
-      "claim": "Then, months later, a new study, including three of the 2024 team, looked closer.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Pirrie 2026 published online 5 November 2026 (Lyell history; Crossref 2026-11-05), five months after Clarke 2026 (4 June 2026). Its 13 authors include Bevins, Ixer and Pearce; Clarke 2024's authors are Clarke, Kirkland, Bevins, Pearce, Glorie, Ixer: three shared. 'Looked closer' = abstract 'a detailed multi-proxy characterization of the sedimentology, geochemistry, detrital and diagenetic mineralogy of the Altar Stone'."
+      "note": "Clarke 2026 combines 'sandstone provenance analysis with ice flow modelling'; abstract: 'Glacial transport may have provided an intermediate stage in the stone's journey, but alone cannot account for the final emplacement on Salisbury Plain'; Conclusions: 'Glaciation may therefore have provided, at most, partial transport rather than a complete delivery mechanism.' The wording follows the paper almost verbatim."
     },
     {
       "n": 13,
+      "claim": "Then, months later, a 2026 study ... looked closer.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Clarke 2026 online 4 Jun 2026 (Crossref, Wiley metadata); Pirrie 2026 published online 5 Nov 2026 (Lyell 'History'; Crossref issued 2026-11). About five months later."
+    },
+    {
+      "n": 14,
+      "claim": "including three of the 2024 team",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref author lists: api.crossref.org/works/10.1038/s41586-024-07652-1 and api.crossref.org/works/10.1144/jgs2026-090; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Clarke 2024 authors: Clarke, Kirkland, Bevins, Pearce, Glorie, Ixer. Pirrie 2026 authors include Bevins, Ixer and Pearce: exactly three in common."
+    },
+    {
+      "n": 15,
+      "claim": "looked closer",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Pirrie 2026 abstract: 'a detailed multi-proxy characterization of the sedimentology, geochemistry, detrital and diagenetic mineralogy of the Altar Stone'; Introduction: 'the most detailed description of the petrography, mineralogy and geochemistry of the Altar Stone to date'."
+    },
+    {
+      "n": 16,
       "claim": "Many outcrops in that part of Scotland could not have been the source.",
       "where": "spoken",
       "verdict": "confirmed",
       "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Pirrie 2026 abstract: 'many outcrops of the Old Red Sandstone (ORS) in the Orcadian Basin could not have been the source of the Altar Stone'. 'That part of Scotland' = the northeast named in the preceding line; the Orcadian Basin is NE Scotland (Clarke 2024)."
+      "note": "Pirrie 2026 abstract: 'many outcrops of the Old Red Sandstone (ORS) in the Orcadian Basin could not have been the source of the Altar Stone'. 'That part of Scotland' = the northeast just named (Orcadian Basin). Conclusions say the same."
     },
     {
-      "n": 14,
+      "n": 17,
       "claim": "No outcrop examined so far has been shown to match it in every way.",
       "where": "spoken",
       "verdict": "confirmed",
       "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Pirrie 2026 abstract: 'To date, no examined outcrop area of the UK ORS can be shown to have the same suite of lithological and geochemical characteristics as documented for the Altar Stone.' Conclusions: other ORS areas 'can all so far be excluded when all aspects of the multi-proxy analysis are considered'."
-    },
-    {
-      "n": 15,
-      "claim": "Six tonnes, from a spot no one has pinned down, by a route no one knows.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Recap. Six tonnes: Clarke 2024. Spot: Pirrie 2026 'the exact provenance of the Altar Stone is as yet unknown'; Clarke 2026 'remains unresolved'. Route: Clarke 2024 suggests sea but names no route; Parker Pearson 2024 argues a land route 'may have been favoured'; Clarke 2026 allows ice at most part way. None claims a route shown."
-    },
-    {
-      "n": 16,
-      "claim": "Sea, sledge or ice: how do you think it got there?",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "A question, no new fact. The three options are the three proposals in the cited papers. Ice was already qualified as 'part of the way, at most' and the recap label says so, so the question does not present ice as a shown full route."
-    },
-    {
-      "n": 17,
-      "claim": "Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0",
-      "where": "on-screen: photo credit",
-      "verdict": "confirmed",
-      "source_checked": "Wikimedia Commons API, File:Sunrise_at_Stonehenge-_Red_sky_in_the_morning.jpg extmetadata",
-      "note": "Commons metadata: Artist 'Stonehenge Stone Circle', LicenseShortName 'CC BY 2.0', Credit flickr.com/photos/stonehenge-stone-circle/11774816654. A credit, not a claim about the stone."
+      "note": "Pirrie 2026 abstract: 'To date, no examined outcrop area of the UK ORS can be shown to have the same suite of lithological and geochemical characteristics as documented for the Altar Stone.' Conclusions: other ORS areas 'can all so far be excluded when all aspects of the multi-proxy analysis are considered'. The paper reports no full match for any non-ORS candidate either (Southern Uplands ruled out; Carboniferous less likely). 'In every way' = 'the same suite of characteristics' (grain ages alone do match, n5)."
     },
     {
       "n": 18,
-      "claim": "Stonehenge (approx.) pin at 51.179 N 1.826 W",
-      "where": "on-screen: map pin",
+      "claim": "Six tonnes, from a spot no one has pinned down",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Historic England National Heritage List entry 1010140 (historicengland.org.uk/listing/the-list/list-entry/1010140, via Firecrawl); Pirrie 2026 Introduction",
-      "note": "Historic England: Stonehenge scheduled monument, Amesbury, Wiltshire, NGR SU 13083 42544 (first of the listed refs; covers stones and Avenue). Rough conversion puts that about 1 km east of the pin; at about 1 km per pixel and labelled 'approx.', within tolerance. Pirrie 2026: 'Stonehenge, on Salisbury Plain in Wiltshire'."
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "Pirrie 2026 abstract: 'the exact provenance of the Altar Stone is as yet unknown'; Clarke 2026: 'its source location within this large basin remains unresolved'. Both papers agree on this."
     },
     {
       "n": 19,
-      "claim": "TRACED HERE / 2024 · NE Scotland (area approx.) (dashed ellipse over NE Scotland)",
-      "where": "on-screen: TRACED HERE",
+      "claim": "by a route no one knows.",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024: provenance 'from the ORS in the Orcadian Basin of northeast Scotland'; comparison samples from Spittal, Caithness and Cruaday, Orkney. Ellipse is labelled approximate."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Clarke 2024 argues for the sea and says only that geography 'would have permitted sea routes southward from the Orcadian Basin'; Parker Pearson 2024 says a land route 'may have been favoured'; Clarke 2026 sketches 'potential minimum anthropogenic transport routes' from Dogger Bank. None shows which route was used; Pirrie 2026: when it was transported 'is unknown'."
     },
     {
       "n": 20,
-      "claim": "'?' over the ellipse; SOURCE? / 2026 study questions NE Scotland",
-      "where": "on-screen: SOURCE?",
+      "claim": "Sea, sledge or ice: how do you think it got there?",
+      "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Pirrie 2026 Discussion: chrome spinel scarcity 'may indicate that an origin from this part of NE Scotland needs re-evaluating'; Introduction: multi-proxy characterization 'raises questions over this interpretation'. 'A 2026 study' (not 'the'), which is accurate: the other 2026 paper (Clarke 2026) still favours NE Scotland."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "A question, not a fact. The three options are the three proposals in the sources (Clarke 2024 sea; Parker Pearson 2024 sledge overland; Clarke 2026 ice). 'Ice' as a bare option is limited by n12 ('part of the way, at most') said earlier; the recap label also keeps 'part of the way'."
     },
     {
       "n": 21,
-      "claim": "THE ALTAR STONE / thin sections, dated grains (over Clarke 2024 Fig. 2 with its own labels and ages)",
-      "where": "on-screen: THE ALTAR STONE",
+      "claim": "Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0",
+      "where": "on-screen: photo credit",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); local image public/img/altar-stone-thin-sections.jpg",
-      "note": "Fig. 2 caption: 'False colour automated mineralogy maps from thin sections of the Altar Stone ... U-Pb ablation pits ... are shown with age (in millions of years ago, Ma)'. Image labels MS3 and 2010K.240 match the text's two thin sections; apatite 462 ± 4 Ma and rutile 451 ± 8 Ma match the text's lower intercepts; zircon 1,092 ± 18 Ma fits the text's 1,091 Ma component. Note: media.springernature.com was blocked, so the crop was not pixel-compared with the published figure."
+      "source_checked": "Commons API imageinfo/extmetadata for File:Sunrise_at_Stonehenge-_Red_sky_in_the_morning.jpg (commons.wikimedia.org/w/api.php)",
+      "note": "Commons metadata: Artist 'Stonehenge Stone Circle', LicenseShortName 'CC BY 2.0', Credit flickr.com/photos/stonehenge-stone-circle/11774816654. A credit line, matches."
     },
     {
       "n": 22,
-      "claim": "Clarke et al. 2024, Nature / CC BY 4.0 · cropped",
-      "where": "on-screen: figure credit",
+      "claim": "Stonehenge (approx.)",
+      "where": "on-screen: map pin",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Rights and permissions: 'licensed under a Creative Commons Attribution 4.0 International License'. Fig. 2 carries no third-party credit line (unlike Fig. 1b, Historic England). 'cropped' indicates the change, as CC BY asks."
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "Pin at 51.179 N, 1.826 W (src/shorts/altar-stone/map.tsx). Pirrie 2026: 'Stonehenge, on Salisbury Plain in Wiltshire'; the point lies on Salisbury Plain, and the label says approx. Not checked against a figure image (Clarke 2024 Fig. 4a image host blocked), but a location this well established needs no more at map scale."
     },
     {
       "n": 23,
-      "claim": "AGES MATCH / sandstone of NE Scotland (area approx.)",
-      "where": "on-screen: AGES MATCH",
+      "claim": "TRACED HERE / 2024 · NE Scotland (area approx.)",
+      "where": "on-screen: map label + dashed ellipse",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "As spoken claim on grain ages: apatite components 'match those from the Altar Stone'; 'remarkable similarity' to Orcadian Basin ORS."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "As n1 and n5: Clarke 2024, Orcadian Basin of northeast Scotland (Caithness and Orkney comparison samples). Ellipse labelled approx."
     },
     {
       "n": 24,
-      "claim": "6 TONNES",
-      "where": "on-screen: 6 TONNES",
+      "claim": "? over the 2024 area; SOURCE? / 2026 study questions NE Scotland",
+      "where": "on-screen: map label",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024: '6 tonne', 'weighing 6 t'."
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Pirrie 2026 Introduction: multi-proxy characterization 'raises questions over this interpretation' (Clarke 2024's Orcadian Basin source); Discussion: an origin from 'this part of NE Scotland needs re-evaluating'. 'Questions', not 'refutes', matches the paper."
     },
     {
       "n": 25,
-      "claim": "700+ KM / if from NE Scotland",
-      "where": "on-screen: 700+ KM",
+      "claim": "THE ALTAR STONE / thin sections, dated grains (over Clarke et al. 2024 Fig. 2 with its own grain labels and ages)",
+      "where": "on-screen: image label",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024: 'at least 750 km', conditional on the Scottish provenance; the sub-line keeps the condition."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; local file public/img/altar-stone-thin-sections.jpg (viewed)",
+      "note": "The image is Clarke 2024 Fig. 2 ('False colour automated mineralogy maps from thin sections of the Altar Stone ... U-Pb ablation pits ... shown with age'): panels MS3 and 2010K.240, zircon 1,092 ± 18 Ma and 1,026 ± 25 Ma, apatite 462 ± 4 Ma, rutile 451 ± 8 Ma, legend cropped. The label describes it correctly."
     },
     {
       "n": 26,
-      "claim": "BY SEA? / route not known (two dashed coastal routes)",
-      "where": "on-screen: BY SEA?",
+      "claim": "Clarke et al. 2024, Nature / CC BY 4.0 · cropped",
+      "where": "on-screen: image credit",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Clarke 2024 suggests sea transport and says the geography 'would have permitted sea routes southward from the Orcadian Basin towards southern England', naming no specific route; the label says the route is not known. Fig. 4a itself could not be viewed (media host blocked); the two routes are flagged unknown by the label, so nothing rests on the figure."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "Crossref licence field and the article's rights text: Creative Commons Attribution 4.0. Crop noted, as CC BY requires."
     },
     {
       "n": 27,
-      "claim": "NO BOAT FOUND / from the late Stone Age, in Britain",
-      "where": "on-screen: NO BOAT FOUND",
+      "claim": "AGES MATCH / sandstone of NE Scotland (area approx.)",
+      "where": "on-screen: map label",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024: 'no boats are known from the Late Neolithic in Britain or Europe'; earliest known British boats are Early Bronze Age (Ferriby)."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "As n5."
     },
     {
       "n": 28,
-      "claim": "A 2024 STUDY / boats of the time: unlikely to carry six tonnes",
-      "where": "on-screen: A 2024 STUDY",
+      "claim": "6 TONNES",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024: Early Bronze Age boats 'and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters'. Date: PDF 'Published: 31 December 2024', article page 'Published on 30 Dec 2024', copyright and how-to-cite 2024 (Crossref records 2025-01-22); '2024 study' is fair."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n6."
     },
     {
       "n": 29,
-      "claim": "~8 MONTHS / overland estimate, 2024 study",
-      "where": "on-screen: ~8 MONTHS",
+      "claim": "700+ KM / if from NE Scotland",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024: 'needing eight months or so to haul a stone from northern Scotland to Stonehenge'."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n7: 'at least 750 km', conditional on the Orcadian Basin source, which the sub-line keeps."
     },
     {
       "n": 30,
-      "claim": "illustration of a hypothesis / crew size not known",
-      "where": "on-screen: sledge caveat",
+      "claim": "BY SEA? / route not known (two dashed routes, east and west coasts)",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13",
-      "note": "Parker Pearson 2024 proposes a sledge on wooden rails and gives no hauling crew size; caveat is accurate."
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "As n8. Clarke 2024 names no route, only that geography 'would have permitted sea routes southward from the Orcadian Basin towards southern England (Fig. 4a)'; drawing both coasts with 'route not known' is accurate."
     },
     {
       "n": 31,
-      "claim": "ICE MODEL / part of the way, at most; ice extent and path illustrative",
-      "where": "on-screen: ICE MODEL",
+      "claim": "NO BOAT FOUND / from the late Stone Age, in Britain",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Clarke 2026: 'Glaciation may therefore have provided, at most, partial transport'. Ice outline marked illustrative."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n9."
     },
     {
       "n": 32,
-      "claim": "Dogger Bank (approx.)",
-      "where": "on-screen: map pin",
+      "claim": "A 2024 STUDY / boats of the time: unlikely to carry six tonnes",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Marine Regions gazetteer https://www.marineregions.org/rest/getGazetteerRecordByMRGID.json/2395/; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "MRGID 2395 'Dogger Bank', Bank, 54.833333 N 2.333333 E (IHO-IOC GEBCO gazetteer). Clarke 2026 names Dogger Bank as the modelled glacial endpoint. Labelled approx."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n10. '2024': the publisher's page and PDF give 'Published: 31 December 2024' (citation_publication_date 2024-12-31), cited as Archaeology International 2024, 27(1); Crossref's record says 2025-01-22, but the publisher's date governs. 'Boats of the time' = Early Bronze Age boats 'and their Late Neolithic precursors'."
     },
     {
       "n": 33,
-      "claim": "Paper card: 'Journal of the Geological Society' / '2026'; page and thin section illustrative",
-      "where": "on-screen: paper card",
+      "claim": "~8 MONTHS / overland estimate, 2024 study",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Journal of the Geological Society vol. 183 no. 6, November 2026, published online 5 November 2026. Text-as-bars and drawn section are labelled illustrative."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n11; year as n32."
     },
     {
       "n": 34,
-      "claim": "A NEW STUDY / three of the 2024 team among its authors",
-      "where": "on-screen: A NEW STUDY",
+      "claim": "illustration of a hypothesis / crew size not known",
+      "where": "on-screen: sledge drawing caption",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1)",
-      "note": "Bevins, Ixer and Pearce are authors of both Pirrie 2026 and Clarke 2024."
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "The sledge-on-rails drawing follows Parker Pearson 2024's described hypothesis; the paper gives no crew size (only that a land journey would draw 'people in their thousands to witness and take part'), so 'crew size not known' is right."
     },
     {
       "n": 35,
-      "claim": "MANY RULED OUT; outcrops illustrative",
-      "where": "on-screen: MANY RULED OUT",
+      "claim": "ICE MODEL / part of the way, at most",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Pirrie 2026: 'many outcrops of the ORS in the Orcadian Basin could not have been the source'. Dot count/positions labelled illustrative; source gives no counts."
+      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "As n12; Conclusions 'at most, partial transport'."
     },
     {
       "n": 36,
-      "claim": "NO FULL MATCH / shown in any outcrop examined / source unknown",
-      "where": "on-screen: NO FULL MATCH",
+      "claim": "ice extent and path illustrative",
+      "where": "on-screen: disclaimer",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Pirrie 2026: no examined outcrop area 'can be shown to have the same suite of ... characteristics'; 'the exact provenance of the Altar Stone is as yet unknown'. Clarke 2026 agrees the location within the basin 'remains unresolved'."
+      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "A disclaimer. The drawn path (NE Scotland toward Dogger Bank) matches the direction Clarke 2026 models (a 'localised south-eastward pathway directed towards Dogger Bank'); labelled illustrative per A6."
     },
     {
       "n": 37,
-      "claim": "Recap: '?' over the 2024 area, '2024 area / disputed'",
-      "where": "on-screen: recap",
+      "claim": "Dogger Bank (approx.)",
+      "where": "on-screen: map pin",
       "verdict": "confirmed",
-      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Pirrie 2026 questions the NE Scotland area; Clarke 2026 still favours it: disputed."
+      "source_checked": "Marine Regions gazetteer MRGID 2395: https://www.marineregions.org/rest/getGazetteerRecordByMRGID.json/2395/; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "Marine Regions: Dogger Bank, placeType Bank, 54.833333 N, 2.333333 E; pin at 54.833 N, 2.333 E (map.tsx). Clarke 2026 names Dogger Bank as the modelled ice delivery point."
     },
     {
       "n": 38,
-      "claim": "Recap: SEA? / 2024 team; SLEDGE? / 2024 study; ICE? / 2026 model: part of the way; routes illustrative",
-      "where": "on-screen: recap",
+      "claim": "Journal of the Geological Society / 2026 (plain paper card, text drawn as bars)",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (doi:10.14324/AI.27.1.13); article page journals.uclpress.co.uk/ai/article/id/3293/; Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
-      "note": "Attributions correct: sea = Clarke 2024; sledge = Parker Pearson 2024; ice part way = Clarke 2026. Routes marked illustrative."
+      "source_checked": "Crossref api.crossref.org/works/10.1144/jgs2026-090; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Crossref container-title 'Journal of the Geological Society', vol. 183, issued 2026-11. No figure drawn, so nothing passes as the paper's own figure."
     },
     {
       "n": 39,
-      "claim": "Video title: Stonehenge's Altar Stone was traced to Scotland in 2024. Scientists still can't agree where it came from",
-      "where": "metadata: title",
+      "claim": "A 2026 STUDY / led by Duncan Pirrie",
+      "where": "on-screen",
       "verdict": "confirmed",
-      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
-      "note": "Same content as the spoken hook (claims 1-3); same sources and reasoning."
+      "source_checked": "Crossref api.crossref.org/works/10.1144/jgs2026-090; Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "Crossref first author Pirrie; Lyell author list: Duncan Pirrie, first and corresponding author, 'Conceptualization (Lead)'."
+    },
+    {
+      "n": 40,
+      "claim": "MANY RULED OUT (outcrop dots, most crossed out); outcrops illustrative",
+      "where": "on-screen",
+      "verdict": "confirmed",
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090",
+      "note": "As n16. The abstract gives no count, and the dots are labelled illustrative."
+    },
+    {
+      "n": 41,
+      "claim": "NO FULL MATCH / shown in any outcrop examined / source unknown",
+      "where": "on-screen",
+      "verdict": "confirmed",
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "As n17 and n18. 'Source unknown' = Pirrie 2026 'the exact provenance of the Altar Stone is as yet unknown'; Clarke 2026 also calls the source location 'unresolved'."
+    },
+    {
+      "n": 42,
+      "claim": "2024 area / disputed (with ? over the 2024 area)",
+      "where": "on-screen: recap map",
+      "verdict": "confirmed",
+      "source_checked": "Pirrie 2026 full text: https://www.lyellcollection.org/doi/full/10.1144/jgs2026-090 (via Firecrawl; doi:10.1144/jgs2026-090); Crossref api.crossref.org/works/10.1144/jgs2026-090; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "As n2 and n24: Clarke 2026 favours it, Pirrie 2026 says it 'needs re-evaluating'. 'Disputed' is accurate."
+    },
+    {
+      "n": 43,
+      "claim": "SEA? / 2024 team",
+      "where": "on-screen: recap map",
+      "verdict": "confirmed",
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1",
+      "note": "As n8 (Clarke 2024)."
+    },
+    {
+      "n": 44,
+      "claim": "SLEDGE? / 2024 study",
+      "where": "on-screen: recap map",
+      "verdict": "confirmed",
+      "source_checked": "Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13",
+      "note": "As n11 (Parker Pearson 2024; year as n32)."
+    },
+    {
+      "n": 45,
+      "claim": "ICE? / 2026 model: part of the way",
+      "where": "on-screen: recap map",
+      "verdict": "confirmed",
+      "source_checked": "Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "As n12."
+    },
+    {
+      "n": 46,
+      "claim": "routes illustrative",
+      "where": "on-screen: recap disclaimer",
+      "verdict": "confirmed",
+      "source_checked": "Clarke 2024 full text: https://www.nature.com/articles/s41586-024-07652-1?error=cookies_not_supported (doi:10.1038/s41586-024-07652-1); Crossref api.crossref.org/works/10.1038/s41586-024-07652-1; Parker Pearson 2024 full-text PDF: https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ and article page journals.uclpress.co.uk/ai/article/id/3293/ (doi:10.14324/AI.27.1.13); Crossref api.crossref.org/works/10.14324/AI.27.1.13; Clarke 2026 full text: https://onlinelibrary.wiley.com/doi/full/10.1002/jqs.70080 (via Firecrawl; doi:10.1002/jqs.70080); Crossref api.crossref.org/works/10.1002/jqs.70080",
+      "note": "A disclaimer; no source gives a mapped route (n19), so the lines must be marked as illustrative, and they are."
     }
   ]
 }
