@@ -34,41 +34,36 @@ import type { Short } from "../types";
 // script/age-of-sunlight.txt carries the numbers.
 const edit = makeEdit({
   alignment,
-  keyPhrases: [
-    ["hundred", "thousand"],
-    ["eight", "minutes"],
-    ["photon"],
-    ["ancient"],
-  ],
+  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["same", "light."], ["ancient"]],
+  // As in src/shorts/age-of-sunlight: the 19-word hook would overflow the caption block as one page.
+  breakAfter: ["skin", "years,"],
 });
 
 // Every card and every beat inside a card hangs off a spoken word.
 const F = {
   skin: edit.at("skin"),
-  hundred: edit.at("hundred"),
-  old: edit.at("old."),
+  tens: edit.at("tens"),
+  far: edit.at("far"),
+  sentence2: edit.at("the", 3),
+  trip: edit.at("trip"),
+  you: edit.at("you"),
   eight: edit.at("eight"),
   minutes: edit.at("minutes"),
-  trip: edit.at("trip"),
-  sun: edit.at("sun."),
-  sentence3: edit.at("the", 3),
-  rest: edit.at("rest"),
-  getting: edit.at("getting"),
-  out: edit.at("out."),
+  sentence3: edit.at("getting", 1),
+  slow: edit.at("slow"),
+  part: edit.at("part."),
   but: edit.at("but"),
   not: edit.at("not"),
   same: edit.at("same"),
-  no: edit.at("no"),
-  photon: edit.at("photon"),
-  survives: edit.at("survives"),
-  climb: edit.at("climb."),
-  sentence6: edit.at("the", 6),
-  energy: edit.at("energy"),
+  sentence5: edit.at("it", 1),
+  leaves: edit.at("leaves"),
+  sentence6: edit.at("the", 7),
+  energy: edit.at("energy", 1),
   ancient: edit.at("ancient."),
-  sentence7: edit.at("the", 7),
-  light: edit.at("light", 1),
-  eightAgain: edit.at("eight", 1),
-  oldAgain: edit.at("old.", 1),
+  its: edit.at("its"),
+  last: edit.at("last"),
+  tripAgain: edit.at("trip", 1),
+  youAgain: edit.at("you.", 1),
   end: edit.duration,
 };
 
@@ -294,23 +289,6 @@ const walk = (cx: number, cy: number, r: number) => {
   };
 };
 
-// A wave drawn along a straight run: the usual sign for light.
-const wave = (
-  [x0, y0]: readonly [number, number],
-  [x1, y1]: readonly [number, number],
-  cycles: number,
-  amp: number,
-) => {
-  const len = Math.hypot(x1 - x0, y1 - y0);
-  const [ux, uy] = [(x1 - x0) / len, (y1 - y0) / len];
-  const n = Math.round(cycles * 12);
-  return `M${Array.from({ length: n + 1 }, (_, i) => {
-    const t = i / n;
-    const w = Math.sin(t * cycles * Math.PI * 2) * amp;
-    return `${(x0 + ux * len * t - uy * w).toFixed(1)} ${(y0 + uy * len * t + ux * w).toFixed(1)}`;
-  }).join(" L")}`;
-};
-
 // Where the pasted Suns sit on their cards, in board pixels, so the marker drawn over one is placed
 // from the same numbers as the picture under it.
 const INSIDE = { x: 540, y: 590, r: 420 };
@@ -340,11 +318,10 @@ const CROSSING = (() => {
   };
 })();
 
-// The photon that does not make it: a wave climbing toward the edge, and the point it is absorbed.
-const CLIMB = { from: [215, 905], to: [560, 560] } as const;
-const CROSS = 105;
+// Light leaving the surface: a fan of rays off the limb.
+const LIMB = [560, 560] as const;
 const FAN = [-1.5, -1.05, -0.6, -0.15, 0.3].map((a) => {
-  const [x, y] = CLIMB.to;
+  const [x, y] = LIMB;
   const p = (m: number) =>
     `${(x + Math.cos(a) * m).toFixed(1)} ${(y + Math.sin(a) * m).toFixed(1)}`;
   return `M${p(150)} L${p(290)}`;
@@ -402,10 +379,11 @@ const Cobweb: React.FC<{ at: number }> = ({ at }) => {
   );
 };
 
-// Eight cards in nineteen seconds. No picture is the main picture of two cards.
+// Eight cards in twenty-two seconds. No picture is the main picture of two cards. Labels carry
+// only what script/age-of-sunlight.txt sources, and the same wording as src/shorts/age-of-sunlight.
 const Deck: React.FC = () => (
   <Board>
-    <Shot from={0} to={F.hundred - 2} tilt={-1.5} sheet={YELLOW}>
+    <Shot from={0} to={F.tens - 2} tilt={-1.5} sheet={YELLOW}>
       <Cut
         pic="rays"
         x={540}
@@ -427,21 +405,22 @@ const Deck: React.FC = () => (
       <Word text="SUNLIGHT" at={3} />
     </Shot>
 
-    <Shot from={F.hundred - 2} to={F.eight - 2} tilt={1.5} sheet={TEAL}>
+    <Shot from={F.tens - 2} to={F.sentence2 - 2} tilt={1.5} sheet={TEAL}>
       <Cut
         {...OUTLINE.sun304}
         x={540}
         y={585}
         w={840}
         tilt={2}
-        punch={F.old}
+        punch={F.far}
         by={1.08}
       />
-      <Burst at={F.hundred} x={540} y={1190} r={115} colour={YELLOW} n={14} />
-      <Word text="100,000 YEARS OLD" at={F.hundred} size={84} />
+      <Tag x={760} y={170} text="MAYBE FAR MORE" at={F.far} size={54} ink={CORAL} tilt={4} />
+      <Burst at={F.tens} x={540} y={1190} r={115} colour={YELLOW} n={14} />
+      <Word text="10,000+ YEARS" at={F.tens} size={100} />
     </Shot>
 
-    <Shot from={F.eight - 2} to={F.sentence3 - 2} tilt={-1.5} sheet="#22304f">
+    <Shot from={F.sentence2 - 2} to={F.sentence3 - 2} tilt={-1.5} sheet="#22304f">
       <Cut
         {...OUTLINE.stereo}
         x={TRIP.sun.x}
@@ -457,26 +436,28 @@ const Deck: React.FC = () => (
         w={TRIP.earth.r * 2}
         tilt={4}
         edge={10}
-        at={F.minutes + 3}
-        punch={F.sun + 3}
+        at={F.trip + 3}
+        punch={F.minutes + 3}
         by={1.22}
       />
       <Marks>
         <Stroke
           d={CROSSING.line}
           from={F.trip}
-          to={F.sun + 2}
+          to={F.you + 2}
           colour={YELLOW}
           width={20}
         />
         <Stroke
           d={CROSSING.head}
-          from={F.sun}
-          to={F.sun + 6}
+          from={F.you}
+          to={F.you + 6}
           colour={YELLOW}
           width={20}
         />
       </Marks>
+      {/* Sun, Earth and the gap are all pasted at whatever size reads, so the card says so (A6). */}
+      <Tag x={800} y={170} text="NOT TO SCALE" at={F.trip + 6} size={44} tilt={3} />
       <Word text="8 MINUTES" at={F.eight} swipe="#bfe9e4" tilt={3} />
     </Shot>
 
@@ -491,15 +472,15 @@ const Deck: React.FC = () => (
       <Marks>
         <Line
           d={WALK.grind}
-          from={F.rest - 2}
-          to={F.out + 4}
+          from={F.sentence3}
+          to={F.part + 4}
           colour={INK}
           width={10}
         />
         <Line
           d={WALK.out}
-          from={F.out + 4}
-          to={F.out + 9}
+          from={F.part + 4}
+          to={F.part + 9}
           colour={CORAL}
           width={14}
         />
@@ -510,16 +491,23 @@ const Deck: React.FC = () => (
       <Tag
         x={735}
         y={200}
-        text="100,000 YEARS"
-        at={F.out + 2}
+        text="10,000+ YEARS"
+        at={F.part + 2}
         size={58}
         ink={CORAL}
         tilt={4}
       />
-      <Word text="GETTING OUT" at={F.getting} size={118} />
+      <Tag x={250} y={1010} text="NOT TO SCALE" at={F.sentence3 + 4} size={40} tilt={-3} />
+      <Word
+        text="GETTING OUT"
+        at={F.sentence3}
+        until={F.slow - 1}
+        size={118}
+      />
+      <Word text="THE SLOW PART" at={F.slow - 1} size={110} />
     </Shot>
 
-    <Shot from={F.but - 2} to={F.no - 2} tilt={-1.5} sheet={CORAL}>
+    <Shot from={F.but - 2} to={F.sentence5 - 2} tilt={-1.5} sheet={CORAL}>
       <Cut
         pic="wheel"
         x={540}
@@ -538,7 +526,7 @@ const Deck: React.FC = () => (
       />
     </Shot>
 
-    <Shot from={F.no - 2} to={F.sentence6 - 2} tilt={1.5} sheet={TEAL}>
+    <Shot from={F.sentence5 - 2} to={F.sentence6 - 2} tilt={1.5} sheet={TEAL}>
       <Cut
         pic="prominence"
         x={540}
@@ -548,47 +536,21 @@ const Deck: React.FC = () => (
         tilt={2}
       />
       <Marks>
-        <Line
-          d={wave(CLIMB.from, CLIMB.to, 5, 34)}
-          from={F.no}
-          to={F.survives}
-          colour={YELLOW}
-          width={14}
-        />
-        <Line
-          d={`M${CLIMB.to[0] - CROSS} ${CLIMB.to[1] - CROSS} L${CLIMB.to[0] + CROSS} ${CLIMB.to[1] + CROSS}`}
-          from={F.survives}
-          to={F.survives + 4}
-          colour={CORAL}
-          width={26}
-        />
-        <Line
-          d={`M${CLIMB.to[0] + CROSS} ${CLIMB.to[1] - CROSS} L${CLIMB.to[0] - CROSS} ${CLIMB.to[1] + CROSS}`}
-          from={F.survives + 3}
-          to={F.survives + 7}
-          colour={CORAL}
-          width={26}
-        />
         {FAN.map((d, i) => (
           <Line
             key={d}
             d={d}
-            from={F.climb + i}
-            to={F.climb + 7 + i}
-            colour={TEAL}
+            from={F.leaves + i}
+            to={F.leaves + 7 + i}
+            colour={YELLOW}
             width={12}
           />
         ))}
       </Marks>
-      <Word text="NO PHOTON SURVIVES" at={F.photon} size={78} />
+      <Word text="LEAVES AS SUNLIGHT" at={F.leaves} size={76} />
     </Shot>
 
-    <Shot
-      from={F.sentence6 - 2}
-      to={F.sentence7 - 2}
-      tilt={-1.5}
-      sheet="#d8c9a8"
-    >
+    <Shot from={F.sentence6 - 2} to={F.its - 2} tilt={-1.5} sheet="#d8c9a8">
       <Cut
         pic="skylab"
         x={540}
@@ -618,14 +580,14 @@ const Deck: React.FC = () => (
       <Word text="ANCIENT ENERGY" at={F.ancient - 1} size={98} />
     </Shot>
 
-    <Shot from={F.sentence7 - 2} to={F.end} tilt={1.5} sheet={YELLOW}>
+    <Shot from={F.its - 2} to={F.end} tilt={1.5} sheet={YELLOW}>
       <Cut
         pic="sunrise"
         x={540}
         y={570}
         w={880}
         tilt={2}
-        punch={F.eightAgain - 1}
+        punch={F.tripAgain - 1}
         by={1.06}
       />
       <Cut
@@ -635,32 +597,33 @@ const Deck: React.FC = () => (
         w={420}
         tilt={-8}
         flip
-        at={F.oldAgain}
+        at={F.youAgain}
         edge={10}
       />
       <Word
-        text="THE LIGHT"
-        at={F.light}
-        until={F.eightAgain - 1}
+        text="LAST 8 MINUTES"
+        at={F.last}
+        until={F.tripAgain - 1}
+        size={98}
         swipe="#bfe9e4"
         tilt={3}
       />
       <Burst
-        at={F.eightAgain - 1}
+        at={F.tripAgain - 1}
         x={540}
         y={1190}
         r={115}
         colour={CORAL}
         n={14}
       />
-      <Word text="8 MINUTES OLD" at={F.eightAgain - 1} size={104} />
+      <Word text="THE TRIP TO YOU" at={F.tripAgain - 1} size={98} />
     </Shot>
   </Board>
 );
 
 export const ageOfSunlightCutout: Short = {
   slug: "age-of-sunlight-cutout",
-  title: "Sunlight is older than the light (cutout)",
+  title: "Sunlight's energy is older than its trip (cutout)",
   edit,
   looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
@@ -668,17 +631,16 @@ export const ageOfSunlightCutout: Short = {
   music: "sun",
   sfx: [
     { at: 0, name: "pop" },
-    { at: F.hundred - 2, name: "thud", volume: 0.5 },
-    { at: F.eight - 2, name: "flick" },
+    { at: F.tens - 2, name: "thud", volume: 0.5 },
+    { at: F.sentence2 - 2, name: "flick" },
     { at: F.trip, name: "whoosh", volume: 0.35 },
     { at: F.sentence3 - 2, name: "tap" },
-    { at: F.out + 2, name: "thud", volume: 0.4 },
+    { at: F.part + 2, name: "thud", volume: 0.4 },
     { at: F.but - 2, name: "pop" },
-    { at: F.no - 2, name: "flick" },
-    { at: F.survives, name: "thud", volume: 0.6 },
+    { at: F.sentence5 - 2, name: "flick" },
     { at: F.sentence6 - 2, name: "tap" },
     { at: F.ancient - 1, name: "thud", volume: 0.4 },
-    { at: F.sentence7 - 2, name: "pop" },
-    { at: F.eightAgain - 1, name: "sparkle", volume: 0.4 },
+    { at: F.its - 2, name: "pop" },
+    { at: F.tripAgain - 1, name: "sparkle", volume: 0.4 },
   ],
 };

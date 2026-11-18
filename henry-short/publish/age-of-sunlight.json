@@ -1,15 +1,34 @@
 {
   "look": "Space",
-  "title": "The sunlight on your skin is 100,000 years old",
-  "caption": "The light hitting you left the Sun 8 minutes ago. The energy in it started the trip about 100,000 years earlier.",
-  "description": "Light crosses from the Sun's surface to Earth in 8 minutes 19 seconds. Getting from the core to the surface takes far longer: energy is absorbed and re-emitted so many times on the way out that no single photon survives the climb. 100,000 years is a round figure under the published 170,000.",
+  "title": "The energy in sunlight took at least tens of thousands of years to get out of the Sun",
+  "caption": "Sunlight reaches you about eight minutes after leaving the Sun. The energy it carries spent tens of thousands of years, maybe far more, getting out.",
+  "description": "Sunlight reaches you about eight minutes after leaving the Sun's surface. But the energy it carries spent tens of thousands of years, maybe far more, getting out. Estimates include about 40,000 years (NASA SVS), 170,000 (Mitalas & Sills 1992) and about a million (NASA Marshall). The slow part is diffusing out through the Sun's dense interior; in the outer 30%, convection carries it up quickly. It leaves as sunlight.",
   "sources": [
-    "Mitalas & Sills, \"On the Photon Diffusion Time Scale for the Sun\", ApJ 401, 759 (1992), doi:10.1086/172103",
-    "1 AU = 149,597,870.7 km (IAU 2012); c = 299,792.458 km/s"
+    "Mitalas & Sills 1992, \"On the Photon Diffusion Time Scale for the Sun\", ApJ 401, 759. doi:10.1086/172103",
+    "NASA Marshall, The Solar Interior: solarscience.msfc.nasa.gov/interior.shtml",
+    "NASA SVS, Origin of Light: svs.gsfc.nasa.gov/11084",
+    "NASA Sun Fact Sheet (Earth-Sun distance): nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+    "CODATA 2022 (speed of light): physics.nist.gov/cgi-bin/cuu/Value?c"
   ],
   "hashtags": {
-    "tiktok": ["space", "sun", "physics", "learnontiktok"],
-    "youtube": ["Shorts", "space", "sun", "physics"],
-    "instagram": ["space", "sun", "physics", "science", "astronomy"]
+    "tiktok": [
+      "space",
+      "sun",
+      "physics",
+      "learnontiktok"
+    ],
+    "youtube": [
+      "Shorts",
+      "space",
+      "sun",
+      "physics"
+    ],
+    "instagram": [
+      "space",
+      "sun",
+      "physics",
+      "science",
+      "astronomy"
+    ]
   }
 }
