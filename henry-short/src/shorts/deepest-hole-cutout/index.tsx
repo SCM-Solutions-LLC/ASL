@@ -88,7 +88,7 @@ const F = {
 
 // The numbers on screen, each from script/deepest-hole.txt.
 const DEPTH_M = 12262;
-const BORE_CM = 21; // 214 mm bit and open hole (Popov 1999; Lobanov 2021)
+const BORE_CM = 21; // 214 mm bit (Lobanov 2021)
 // The plate in the picture is 25.6 cm across by its museum's record, so the hole can be drawn against
 // it to scale: a little smaller, as the script's notes say a dinner plate is.
 const PLATE_CM = 25.6;
