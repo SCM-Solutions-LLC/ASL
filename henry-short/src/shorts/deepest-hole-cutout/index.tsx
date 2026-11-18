@@ -76,7 +76,7 @@ const F = {
   eighty: edit.at("degrees."),
   too: edit.at("drilling"),
   keep: edit.at("stopped"),
-  money: edit.at("money"),
+  money: edit.at("funding"),
   again: edit.at("twelve", 1),
   downAgain: edit.at("down", 1),
   sentence7: edit.at("the", 6),
@@ -101,9 +101,8 @@ const EARTH_KM = 6371;
 // source 5), so the drawing is made from that fraction and no thickness is written on it.
 const THROUGH_CRUST = 1 / 3;
 const SHARE = (DEPTH_M / 1000 / EARTH_KM) * 100; // 0.19%, shown as 0.2%
-// Where the layers of the Earth change, as fractions of its radius (PREM, from the script's notes).
-const OUTER_CORE = 3480 / EARTH_KM;
-const INNER_CORE = 1221 / EARTH_KM;
+// Where the core ends, as a fraction of the radius (NSSDC, from the script's notes).
+const OUTER_CORE = 3485 / EARTH_KM;
 
 const KRAFT = "#d3ae7d";
 const NIGHT = "#22304f";
@@ -287,7 +286,7 @@ const Hole: React.FC = () => {
           <Label
             x={x}
             y={y}
-            text="THE HOLE"
+            text="THE BIT"
             at={F.wide + 1}
             size={84}
             colour={PAPER}
@@ -647,7 +646,6 @@ const Centre: React.FC = () => {
           [
             [1, "#e8843c"],
             [OUTER_CORE, YELLOW],
-            [INNER_CORE, "#fff3c4"],
           ] as const
         ).map(([k, fill]) => (
           <path

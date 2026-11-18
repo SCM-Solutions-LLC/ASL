@@ -16,7 +16,7 @@
       "claim": "...was drilled with a bit narrower than a dinner plate.",
       "where": "spoken (hook, first sentence)",
       "verdict": "fix",
-      "source_checked": "Lobanov 2021 (EN and RU PDFs), text p.276/EN p.232 and Fig. 5v 'actual well construction' (rendered at 600 dpi); USGS OFR 86-517 (pubs.usgs.gov/of/1986/0517/report.pdf) drilling sections; Met API object 201074",
+      "source_checked": "Lobanov 2021 (EN and RU PDFs), RU p.276/EN p.231 and Fig. 5v 'actual well construction' (rendered at 600 dpi); USGS OFR 86-517 (pubs.usgs.gov/of/1986/0517/report.pdf) drilling sections; Met API object 201074",
       "note": "The 214 mm bit is real (Lobanov: 'a 46 m long multistage turbine at the bottom with a 214 mm drill bit'), and it is narrower than the Met's 25.6 cm dinner plate. But the sentence says the hole was drilled with that bit, and the viewer takes away that the hole is narrower than a plate. Lobanov Fig. 5v gives the actual construction: 'd 720 mm, 40 m' at the top, casing 'd 325 mm, 2000 m', casing 'd 245 mm, 8770 m', and open hole 'd 215,9 mm, 12262 m'. The top 2 km had to be bored wider than the 325 mm casing, and the top 40 m is 72 cm across, so the upper hole is wider than a dinner plate. USGS: 'The predominantly uncased hole (after 2 km)'. The USGS bit list also includes 'reamers (to increase the diameter of the hole)' of 295.3 mm. Fails A3/A4 as worded. Change the line to something like 'The deepest hole humans have ever dug was drilled, for most of its depth, with a bit narrower than a dinner plate.' Or name the bit without the hole: 'its drill bit was narrower than a dinner plate.' Add the casing programme (Lobanov Fig. 5v) to SOURCES item 2."
     },
     {
@@ -24,7 +24,7 @@
       "claim": "21 CM BIT / narrower than a dinner plate (tag)",
       "where": "on-screen: Look 1 tag",
       "verdict": "confirmed",
-      "source_checked": "Lobanov 2021 EN p.232; USGS OFR 86-517 bit list (KC-212.7, ISM-214.3); Met API collectionapi.metmuseum.org/public/collection/v1/objects/201074",
+      "source_checked": "Lobanov 2021 EN p.231; USGS OFR 86-517 bit list (KC-212.7, ISM-214.3); Met API collectionapi.metmuseum.org/public/collection/v1/objects/201074",
       "note": "The text names the bit, and that holds: 214 mm rounds to 21 cm, and USGS lists coring bits of 212.7 and 214.3 mm. The Met has 51.86.100 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)'. The loupe drawn next to this tag is a separate claim (n 4)."
     },
     {
@@ -56,7 +56,7 @@
       "claim": "It took the Soviet Union about twenty years.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov 2021 EN pp.227, 228, 231; Zhu & Huang 2026",
+      "source_checked": "Lobanov 2021 EN pp.228, 231; Zhu & Huang 2026",
       "note": "Lobanov: 'Drilling was started on May 24, 1970'; 'In 1990, the maximum depth was reached — 12262 m'. Zhu & Huang: 'reaching 12,262 m between 1970 and 1989'. 19-20 years, so 'about twenty' holds. Both dates fall before the USSR ended in Dec 1991. Note: Zhu & Huang cite Lobanov (their ref. 29) for this paragraph, so 1990 has the better footing."
     },
     {
@@ -88,7 +88,7 @@
       "claim": "And it never made it through the crust.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "USGS OFR 86-517 p. ii-iii (text lines 'Crustal thickness...'); Zhu & Huang 2026; Lobanov 2021",
+      "source_checked": "USGS OFR 86-517 (section 'Results of deep geophysical studies in the area of corehole SD-3'); Zhu & Huang 2026; Lobanov 2021",
       "note": "USGS: 'Crustal thickness in the vicinity of the corehole was shown to be about 40 km.' Zhu & Huang: 'Despite not penetrating the Moho'. Lobanov: down to 12 km 'the borehole passed through gneisses and amphibolites of the Kola series, i.e. through the \"granite\" layer'. 12.3 km is well short of 40 km."
     },
     {
@@ -112,7 +112,7 @@
       "claim": "At the bottom, the rock was over two hundred degrees.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Lobanov 2021 EN p.236 and p.238; Zhu & Huang 2026",
+      "source_checked": "Lobanov 2021 EN pp.235, 237; Zhu & Huang 2026",
       "note": "Lobanov: 'the real temperature in the borehole at a depth of 10 km reached 180°С, and at a depth of about 12 km, the temperature values reached 212°С, instead of the assumed 120°С'. Zhu & Huang: 'bottom-hole temperatures of 212 °C'. These are borehole measurements standing in for the rock temperature, which is the ordinary reading; the script uses 'over two hundred', not the 10 km figure. Celsius is shown on screen, not spoken."
     },
     {
@@ -121,7 +121,7 @@
       "where": "on-screen: Look 1 tag; Look 2 labels",
       "verdict": "confirmed",
       "source_checked": "Lobanov 2021",
-      "note": "'212°С, instead of the assumed 120°С' (p.236) and 'instead of the expected 120°С' (p.238). Both 'predicted' and 'expected' match."
+      "note": "'212°С, instead of the assumed 120°С' (EN p.235) and 'instead of the expected 120°С' (EN p.237). Both 'predicted' and 'expected' match."
     },
     {
       "n": 16,
@@ -200,7 +200,7 @@
       "claim": "'KOLA PENINSULA' (loop on the CIA map) and 'SOVIET UNION'",
       "where": "on-screen: Look 2 (map)",
       "verdict": "confirmed",
-      "source_checked": "Lobanov 2021 p.227; public/cutout/hole/map.jpg with the coral loop's path mapped onto it",
+      "source_checked": "Lobanov 2021 EN p.228; public/cutout/hole/map.jpg with the coral loop's path mapped onto it",
       "note": "Lobanov: SG-3 was laid 'in the north-western part of the Kola Peninsula, 10 km west of Zapolyarny (69°25′ N, 30°44′ E)', in the USSR. The loop drawn on the map surrounds the Kola Peninsula (Murmansk). Placement was checked against the code's coordinates, not a render."
     },
     {
@@ -257,7 +257,7 @@
       "where": "SOURCES",
       "verdict": "confirmed",
       "source_checked": "Lobanov 2021, the journal's English edition arcticandnorth.ru/upload/iblock/61f/44_224_239.pdf (same DOI), checked against the Russian original",
-      "note": "All quotes are verbatim in the English edition (lines on its pp.227, 231, 232, 236). The English edition is paginated 224-239, while SOURCES gives the Russian 267-284; the DOI is the same."
+      "note": "All quotes are verbatim in the English edition (its pp.228, 231, 235, 237). The English edition is paginated 224-239, while SOURCES gives the Russian 267-284; the DOI is the same."
     },
     {
       "n": 33,
@@ -280,7 +280,7 @@
       "claim": "SOURCES item 1: 'Kola Superdeep Borehole, branch SG-3'",
       "where": "SOURCES",
       "verdict": "fix",
-      "source_checked": "Lobanov 2021 EN pp.232-233",
+      "source_checked": "Lobanov 2021 EN p.233",
       "note": "SG-3 is the name of the well, not a branch. The 12,262 m bore is the third shaft: 'the third one, started at a depth of 7010 m, ended at 12 262 m'. Write 'well SG-3 (the 12,262 m bore is its third branch, sidetracked at 7,010 m)'."
     },
     {
@@ -304,7 +304,7 @@
       "claim": "SOURCES item 9: 9,584 m in June 1979 passing the US record of 9,583 m; 12,000 m on 27 December 1983; 12,262 m in 1989-90",
       "where": "SOURCES (animation figures)",
       "verdict": "confirmed",
-      "source_checked": "Lobanov 2021 RU p.274-275, EN p.228-229",
+      "source_checked": "Lobanov 2021 RU pp.274-275, EN p.230",
       "note": "'In June 1979, the well broke the record of 9583 meters held by the US well, reaching a depth of 9584 meters.' RU: '27 декабря 1983 г. глубина скважины достигла 12 000 м'. The animation's straight-line interpolation between these points is flagged as such in SOURCES."
     }
   ]

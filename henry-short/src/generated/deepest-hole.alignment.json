@@ -2,362 +2,362 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/deepest-hole.txt",
  "audio": "public/vo/deepest-hole.wav",
- "sha256": "85595d2ebf877c551645ce9dbd3c986436f15965a8e738b399098cd85ec26e6c",
+ "sha256": "d1b9cbdd21f28fa0810ee526e57711a12e1fa8a79d2e2dd8ebab3e39c519a541",
  "words": [
   {
    "text": "The",
    "start": 0.0,
-   "end": 0.275
+   "end": 0.27
   },
   {
    "text": "deepest",
-   "start": 0.275,
-   "end": 0.656
+   "start": 0.27,
+   "end": 0.644
   },
   {
    "text": "hole",
-   "start": 0.656,
-   "end": 0.958
+   "start": 0.644,
+   "end": 0.939
   },
   {
    "text": "humans",
-   "start": 0.958,
-   "end": 1.312
+   "start": 0.939,
+   "end": 1.287
   },
   {
    "text": "have",
-   "start": 1.312,
-   "end": 1.614
+   "start": 1.287,
+   "end": 1.583
   },
   {
    "text": "ever",
-   "start": 1.614,
-   "end": 1.915
+   "start": 1.583,
+   "end": 1.879
   },
   {
    "text": "dug",
-   "start": 1.915,
-   "end": 2.19
+   "start": 1.879,
+   "end": 2.148
   },
   {
    "text": "was",
-   "start": 2.19,
-   "end": 2.465
+   "start": 2.148,
+   "end": 2.418
   },
   {
-   "text": "drilled",
-   "start": 2.465,
-   "end": 2.847
+   "text": "finished",
+   "start": 2.418,
+   "end": 2.818
   },
   {
    "text": "with",
-   "start": 2.847,
-   "end": 3.148
+   "start": 2.818,
+   "end": 3.114
   },
   {
    "text": "a",
-   "start": 3.148,
-   "end": 3.37
+   "start": 3.114,
+   "end": 3.331
   },
   {
    "text": "bit",
-   "start": 3.37,
-   "end": 3.645
+   "start": 3.331,
+   "end": 3.601
   },
   {
    "text": "narrower",
-   "start": 3.645,
-   "end": 4.053
+   "start": 3.601,
+   "end": 4.001
   },
   {
    "text": "than",
-   "start": 4.053,
-   "end": 4.354
+   "start": 4.001,
+   "end": 4.296
   },
   {
    "text": "a",
-   "start": 4.354,
-   "end": 4.576
+   "start": 4.296,
+   "end": 4.514
   },
   {
    "text": "dinner",
-   "start": 4.576,
-   "end": 4.931
+   "start": 4.514,
+   "end": 4.862
   },
   {
    "text": "plate.",
-   "start": 4.931,
-   "end": 5.259
+   "start": 4.862,
+   "end": 5.184
   },
   {
    "text": "It",
-   "start": 5.91,
-   "end": 6.167
+   "start": 5.835,
+   "end": 6.092
   },
   {
    "text": "took",
-   "start": 6.167,
-   "end": 6.479
+   "start": 6.092,
+   "end": 6.404
   },
   {
    "text": "the",
-   "start": 6.479,
-   "end": 6.763
+   "start": 6.404,
+   "end": 6.688
   },
   {
    "text": "Soviet",
-   "start": 6.763,
-   "end": 7.13
+   "start": 6.688,
+   "end": 7.055
   },
   {
    "text": "Union",
-   "start": 7.13,
-   "end": 7.469
+   "start": 7.055,
+   "end": 7.394
   },
   {
    "text": "about",
-   "start": 7.469,
-   "end": 7.808
+   "start": 7.394,
+   "end": 7.733
   },
   {
    "text": "twenty",
-   "start": 7.808,
-   "end": 8.175
+   "start": 7.733,
+   "end": 8.1
   },
   {
    "text": "years.",
-   "start": 8.175,
-   "end": 8.514
+   "start": 8.1,
+   "end": 8.439
   },
   {
    "text": "It",
-   "start": 9.145,
-   "end": 9.44
+   "start": 9.07,
+   "end": 9.365
   },
   {
    "text": "goes",
-   "start": 9.44,
-   "end": 9.799
+   "start": 9.365,
+   "end": 9.724
   },
   {
    "text": "down",
-   "start": 9.799,
-   "end": 10.157
+   "start": 9.724,
+   "end": 10.082
   },
   {
    "text": "twelve",
-   "start": 10.157,
-   "end": 10.579
+   "start": 10.082,
+   "end": 10.504
   },
   {
    "text": "kilometres.",
-   "start": 10.579,
-   "end": 11.124
+   "start": 10.504,
+   "end": 11.049
   },
   {
    "text": "And",
-   "start": 11.73,
-   "end": 11.952
+   "start": 11.655,
+   "end": 11.877
   },
   {
    "text": "it",
-   "start": 11.952,
-   "end": 12.152
+   "start": 11.877,
+   "end": 12.077
   },
   {
    "text": "never",
-   "start": 12.152,
-   "end": 12.416
+   "start": 12.077,
+   "end": 12.341
   },
   {
    "text": "made",
-   "start": 12.416,
-   "end": 12.66
+   "start": 12.341,
+   "end": 12.585
   },
   {
    "text": "it",
-   "start": 12.66,
-   "end": 12.86
+   "start": 12.585,
+   "end": 12.785
   },
   {
    "text": "through",
-   "start": 12.86,
-   "end": 13.167
+   "start": 12.785,
+   "end": 13.092
   },
   {
    "text": "the",
-   "start": 13.167,
-   "end": 13.389
+   "start": 13.092,
+   "end": 13.314
   },
   {
    "text": "crust.",
-   "start": 13.389,
-   "end": 13.653
+   "start": 13.314,
+   "end": 13.578
   },
   {
    "text": "At",
-   "start": 14.265,
-   "end": 14.498
+   "start": 14.19,
+   "end": 14.423
   },
   {
    "text": "the",
-   "start": 14.498,
-   "end": 14.755
+   "start": 14.423,
+   "end": 14.68
   },
   {
    "text": "bottom,",
-   "start": 14.755,
-   "end": 15.088
+   "start": 14.68,
+   "end": 15.013
   },
   {
    "text": "the",
-   "start": 15.088,
-   "end": 15.345
+   "start": 15.013,
+   "end": 15.27
   },
   {
    "text": "rock",
-   "start": 15.345,
-   "end": 15.628
+   "start": 15.27,
+   "end": 15.553
   },
   {
    "text": "was",
-   "start": 15.628,
-   "end": 15.886
+   "start": 15.553,
+   "end": 15.811
   },
   {
    "text": "over",
-   "start": 15.886,
-   "end": 16.168
+   "start": 15.811,
+   "end": 16.093
   },
   {
    "text": "two",
-   "start": 16.168,
-   "end": 16.426
+   "start": 16.093,
+   "end": 16.351
   },
   {
    "text": "hundred",
-   "start": 16.426,
-   "end": 16.783
+   "start": 16.351,
+   "end": 16.708
   },
   {
    "text": "degrees.",
-   "start": 16.783,
-   "end": 17.141
+   "start": 16.708,
+   "end": 17.066
   },
   {
    "text": "Drilling",
-   "start": 17.75,
-   "end": 18.174
+   "start": 17.675,
+   "end": 18.118
   },
   {
    "text": "stopped",
-   "start": 18.174,
-   "end": 18.57
+   "start": 18.118,
+   "end": 18.532
   },
   {
    "text": "in",
-   "start": 18.57,
-   "end": 18.828
+   "start": 18.532,
+   "end": 18.802
   },
   {
    "text": "nineteen",
-   "start": 18.828,
-   "end": 19.252
+   "start": 18.802,
+   "end": 19.245
   },
   {
    "text": "ninety-two,",
-   "start": 19.252,
-   "end": 19.704
+   "start": 19.245,
+   "end": 19.717
   },
   {
    "text": "when",
-   "start": 19.704,
-   "end": 20.017
+   "start": 19.717,
+   "end": 20.044
   },
   {
-   "text": "the",
-   "start": 20.017,
-   "end": 20.303
+   "text": "its",
+   "start": 20.044,
+   "end": 20.343
   },
   {
-   "text": "money",
-   "start": 20.303,
-   "end": 20.644
+   "text": "funding",
+   "start": 20.343,
+   "end": 20.757
   },
   {
-   "text": "ran",
-   "start": 20.644,
-   "end": 20.93
+   "text": "was",
+   "start": 20.757,
+   "end": 21.056
   },
   {
-   "text": "out.",
-   "start": 20.93,
-   "end": 21.215
+   "text": "cut.",
+   "start": 21.056,
+   "end": 21.354
   },
   {
    "text": "Twelve",
-   "start": 21.835,
-   "end": 22.353
+   "start": 21.985,
+   "end": 22.503
   },
   {
    "text": "kilometres",
-   "start": 22.353,
-   "end": 23.022
+   "start": 22.503,
+   "end": 23.171
   },
   {
    "text": "down.",
-   "start": 23.022,
-   "end": 23.462
+   "start": 23.171,
+   "end": 23.612
   },
   {
    "text": "The",
-   "start": 24.12,
-   "end": 24.369
+   "start": 24.27,
+   "end": 24.519
   },
   {
    "text": "centre",
-   "start": 24.369,
-   "end": 24.69
+   "start": 24.519,
+   "end": 24.839
   },
   {
    "text": "of",
-   "start": 24.69,
-   "end": 24.914
+   "start": 24.839,
+   "end": 25.064
   },
   {
    "text": "the",
-   "start": 24.914,
-   "end": 25.163
+   "start": 25.064,
+   "end": 25.312
   },
   {
    "text": "Earth",
-   "start": 25.163,
-   "end": 25.46
+   "start": 25.312,
+   "end": 25.609
   },
   {
    "text": "is",
-   "start": 25.46,
-   "end": 25.684
+   "start": 25.609,
+   "end": 25.834
   },
   {
    "text": "over",
-   "start": 25.684,
-   "end": 25.957
+   "start": 25.834,
+   "end": 26.106
   },
   {
    "text": "six",
-   "start": 25.957,
-   "end": 26.206
+   "start": 26.106,
+   "end": 26.355
   },
   {
    "text": "thousand",
-   "start": 26.206,
-   "end": 26.575
+   "start": 26.355,
+   "end": 26.723
   },
   {
    "text": "more.",
-   "start": 26.575,
-   "end": 26.847
+   "start": 26.723,
+   "end": 26.996
   }
  ]
 }

@@ -43,12 +43,11 @@ export const NightSky: React.FC = () => {
   );
 };
 
-// The Earth by fraction of its mean radius (6,371 km): inner core to 1,221 km, outer core to
-// 3,480 km, mantle above that. The crust is not in this list because at any radius the disc can be
+// The Earth by fraction of its mean radius (6,371 km): core to 3,485 km (NASA NSSDC Earth fact
+// sheet), mantle above that. No inner core: no source the fact-check could open gives its radius. The crust is not in this list because at any radius the disc can be
 // drawn at it is a hairline, and it is drawn as one.
 export const EARTH_KM = 6371;
-export const INNER_CORE = 1221 / EARTH_KM;
-export const OUTER_CORE = 3480 / EARTH_KM;
+export const OUTER_CORE = 3485 / EARTH_KM;
 
 const ring = (r: number): React.CSSProperties => ({
   position: "absolute",
@@ -96,17 +95,10 @@ export const EarthSection: React.FC<{ x: number; y: number; r: number; opacity?:
         }}
       />
       <div style={{ ...ring(r * OUTER_CORE), background: "radial-gradient(circle, #ffc94f 0%, #f09a2a 100%)" }} />
-      <div
-        style={{
-          ...ring(r * INNER_CORE),
-          background: "radial-gradient(circle, #fffbe6 0%, #ffe9a0 100%)",
-          boxShadow: "0 0 30px 6px rgba(255,240,180,0.55)",
-        }}
-      />
       {labels > 0 ? (
         <>
           {name(0.78, "MANTLE", "#ffd9b8")}
-          {name(0.37, "OUTER CORE", "#4a2206")}
+          {name(0.37, "CORE", "#4a2206")}
         </>
       ) : null}
     </div>
