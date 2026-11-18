@@ -33,7 +33,7 @@ const F = {
   crust: edit.at("crust."),
   bottom: edit.at("bottom,"),
   hundred: edit.at("hundred"),
-  too: edit.at("kept"),
+  too: edit.at("stopped"),
   // The pull back to the whole planet starts on the second "twelve kilometres", so the Earth has
   // arrived by the time the line about its centre is spoken.
   back: edit.at("twelve", 1) - 4,
@@ -201,7 +201,7 @@ const Ground: React.FC = () => {
         x={X + 40}
         y={bottom - 34}
         text={`${Math.round(depth * 1000).toLocaleString("en-US")} M`}
-        sub={f >= F.crust ? "a third of the crust" : undefined}
+        sub={f >= F.crust ? "about a third of the crust" : undefined}
         from={F.took}
       />
       <Tag x={X - 40} y={bottom - 130} align="right" text="212 °C" sub="predicted: 120 °C" from={F.hundred} />

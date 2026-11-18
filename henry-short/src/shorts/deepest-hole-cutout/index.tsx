@@ -74,12 +74,12 @@ const F = {
   bottom: edit.at("bottom,"),
   hundred: edit.at("hundred"),
   eighty: edit.at("degrees."),
-  too: edit.at("hot"),
-  keep: edit.at("kept"),
+  too: edit.at("drilling"),
+  keep: edit.at("stopped"),
   money: edit.at("money"),
   again: edit.at("twelve", 1),
   downAgain: edit.at("down", 1),
-  sentence7: edit.at("the", 8),
+  sentence7: edit.at("the", 6),
   centre: edit.at("centre"),
   six: edit.at("six"),
   more: edit.at("more."),
@@ -901,7 +901,7 @@ const Deck: React.FC = () => (
         />
       </Marks>
       <Burst at={F.too + 1} x={540} y={1190} r={190} colour={CORAL} n={14} />
-      <Word text="HOT ROCK" at={F.too + 1} until={F.money - 1} size={150} swipe="#ffc9c2" tilt={3} />
+      <Word text="1992" at={F.too + 1} until={F.money - 1} size={150} swipe="#ffc9c2" tilt={3} />
       <Word text="FUNDING CUT" at={F.money - 1} size={124} swipe="#bfe9e4" tilt={-2} />
     </Shot>
 

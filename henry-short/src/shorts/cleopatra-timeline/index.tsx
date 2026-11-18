@@ -22,7 +22,7 @@ import { DesertDusk } from "./set";
 // cut instead of breaking it.
 const edit = makeEdit({
   alignment,
-  keyPhrases: [["closer"], ["twenty-five", "sixty", "BC."], ["sixty-nine", "BC."], ["only", "two", "thousand."], ["ancient", "history."]],
+  keyPhrases: [["closer"], ["twenty-six", "hundred", "BC."], ["sixty-nine", "BC."], ["only", "two", "thousand."], ["ancient", "history."]],
   // The hook is fifteen words, which sets five lines at 9:16; breaking it at the comparison's hinge
   // gives two pages of three.
   breakAfter: ["landing"],
@@ -37,7 +37,7 @@ const F = {
   great: edit.at("great"),
   pyramid: edit.at("pyramid", 1),
   finished: edit.at("finished"),
-  built: edit.at("twenty-five"),
+  built: edit.at("twenty-six"),
   born: edit.at("born"),
   bornYear: edit.at("sixty-nine"),
   back: edit.at("two"),
@@ -53,12 +53,12 @@ const F = {
 };
 
 // The dates, in astronomical year numbering so the arithmetic is honest across the missing year
-// zero: 2560 BC is -2559, 69 BC is -68. Everything on screen — where she stands, how long each
+// zero: 2600 BC is -2599, 69 BC is -68. Everything on screen — where she stands, how long each
 // span is, the counts on the labels — is computed from these three numbers.
-export const YEAR = { pyramid: -2559, cleopatra: -68, apollo: 1969 };
-const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,491
+export const YEAR = { pyramid: -2599, cleopatra: -68, apollo: 1969 };
+const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,531
 const FORWARD = YEAR.apollo - YEAR.cleopatra; // 2,037
-const SHARE = BACK / (YEAR.apollo - YEAR.pyramid); // 0.550: how far along the line she stands
+const SHARE = BACK / (YEAR.apollo - YEAR.pyramid); // 0.554: how far along the line she stands
 
 // The line has to fit whichever crop is showing. 9:16 is an 885-unit window (x 517–1403), less
 // what the slow push-in takes off each side, so its line is 600 long; 16:9 has the whole set.
@@ -213,7 +213,7 @@ const Timeline: React.FC<{ L: Layout }> = ({ L }) => {
       <Span a={x0} b={cleo} y={spanY} years={BACK} draw={ramp(f, F.back, F.later)} label={pop(f, F.later - 6)} dim={1 - reveal * 0.35} />
       <Span a={cleo} b={x1} y={spanY} years={FORWARD} draw={ramp(f, F.from + 4, F.only)} label={pop(f, F.twoThousand)} hot />
 
-      <Pill x={x0} y={pillY} text="c. 2560 BC" t={pop(f, F.built)} />
+      <Pill x={x0} y={pillY} text="c. 2600 BC" t={pop(f, F.built)} />
       <Pill x={cleo} y={pillY} text="69 BC" t={pop(f, F.bornYear)} hot />
       <Pill x={x1} y={pillY} text="AD 1969" t={pop(f, F.apollo)} />
 
@@ -233,7 +233,7 @@ const Timeline: React.FC<{ L: Layout }> = ({ L }) => {
               color: "#fff",
             }}
           >
-            CLOSER TO APOLLO BY <span style={{ color: GOLD }}>ABOUT 450 YEARS</span>
+            CLOSER TO APOLLO BY <span style={{ color: GOLD }}>ABOUT 500 YEARS</span>
           </div>
         </div>
       ) : null}

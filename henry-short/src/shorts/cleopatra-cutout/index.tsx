@@ -38,7 +38,7 @@ const edit = makeEdit({
   alignment,
   keyPhrases: [
     ["closer"],
-    ["twenty-five", "sixty", "BC."],
+    ["twenty-six", "hundred", "BC."],
     ["sixty-nine", "BC."],
     ["only", "two", "thousand."],
     ["ancient", "history."],
@@ -53,7 +53,7 @@ const F = {
   building: edit.at("building"),
   sentence2: edit.at("the", 3),
   finished: edit.at("finished"),
-  built: edit.at("twenty-five"),
+  built: edit.at("twenty-six"),
   sentence3: edit.at("cleopatra", 1),
   born: edit.at("born"),
   bornYear: edit.at("sixty-nine"),
@@ -71,7 +71,7 @@ const F = {
 };
 
 // The numbers come from the same three dates the original cut computes from.
-const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,491
+const BACK = YEAR.cleopatra - YEAR.pyramid; // 2,531
 const FORWARD = YEAR.apollo - YEAR.cleopatra; // 2,037
 const SHARE = BACK / (YEAR.apollo - YEAR.pyramid);
 
@@ -83,7 +83,7 @@ const PICS = {
   aldrin: [1280, 1280],
   bootprint: [1280, 1291],
   flag: [1280, 1292],
-  launch: [1280, 1600],
+  launch: [1224, 1600],
   frith: [1920, 1511],
   geezeh: [960, 675],
   sphinx: [1280, 828],
@@ -285,7 +285,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
           colour={TEAL}
           size={128}
         />
-        <Year x={x0 + 10} y={lineY + 26} text="c. 2560 BC" at={F.back + 4} />
+        <Year x={x0 + 10} y={lineY + 26} text="c. 2600 BC" at={F.back + 4} />
         <Year x={xc} y={lineY + 26} text="69 BC" at={F.back + 8} />
         {second && (
           <Year x={x1 - 20} y={lineY + 26} text="AD 1969" at={F.only} />
@@ -300,7 +300,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
         />
       </div>
       <Word
-        text="ABOUT 450 YEARS CLOSER"
+        text="ABOUT 500 YEARS CLOSER"
         at={F.twoThousand + 12}
         y={1225}
         size={70}
@@ -429,7 +429,7 @@ const Deck: React.FC = () => (
         tilt={3}
       />
       <Burst at={F.built - 1} x={540} y={1190} r={170} colour={CORAL} n={12} />
-      <Word text="c. 2560 BC" at={F.built - 1} size={136} />
+      <Word text="c. 2600 BC" at={F.built - 1} size={136} />
       {/* The pyramid as photographed in 1858, weathered: credited so it is not read as new (A6). */}
       <Year x={540} y={150} text="AS PHOTOGRAPHED BY FRITH, 1858" at={F.finished} size={34} />
     </Shot>
@@ -474,7 +474,7 @@ const Deck: React.FC = () => (
         x={430}
         y={600}
         w={700}
-        box={[0, 60, 1280, 1500]}
+        box={[0, 60, 1224, 1500]}
         tilt={-3}
       />
       <Cut
@@ -518,6 +518,8 @@ const Deck: React.FC = () => (
         swipe="#bfe9e4"
         tilt={3}
       />
+      {/* A collage: Cleopatra pasted onto an 1839 view, not a scene from her life (A5/A6). */}
+      <Year x={540} y={150} text="ROBERTS, 1839 · COLLAGE" at={F.toHer + 4} size={34} />
     </Shot>
 
     <Shot from={F.ancient - 2} to={F.end} tilt={-1.5} sheet="#d8c9a8">

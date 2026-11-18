@@ -55,7 +55,7 @@ const F = {
   human: edit.at("human."),
   sentence2: edit.at("about", 1),
   thirty: edit.at("thirty"),
-  yours: edit.at("yours."),
+  yours: edit.at("own."),
   thirtyEight: edit.at("thirty-eight"),
   bacteria: edit.at("bacteria."),
   sentence4: edit.at("but"),
@@ -66,7 +66,7 @@ const F = {
   two: edit.at("two"),
   grams: edit.at("grams."),
   sentence5: edit.at("and", 1),
-  own: edit.at("own"),
+  own: edit.at("own", 1),
   not: edit.at("not"),
   what: edit.at("what"),
   eightyFour: edit.at("most"),
@@ -76,7 +76,7 @@ const F = {
   byCount: edit.at("count,"),
   mostly: edit.at("mostly"),
   sentence7: edit.at("and", 2),
-  they: edit.at("their"),
+  they: edit.at("his", 2),
   outnumbered: edit.at("match"),
   their: edit.at("for"),
   passengers: edit.at("cell.", 2),
@@ -480,7 +480,7 @@ const Deck: React.FC = () => (
       {/* The counts are the paper's reference man, not the viewer (fact-check, A3). */}
       <Scrap text="TYPICAL 70 KG MAN · 2016 COUNT" at={F.thirty + 4} x={540} y={250} size={48} tilt={-3} paper="#fffdf6" />
       <Scrap
-        text="YOURS"
+        text="HIS OWN"
         at={F.yours}
         x={790}
         y={905}

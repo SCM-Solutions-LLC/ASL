@@ -3,7 +3,7 @@ It took the Soviet Union about twenty years.
 It goes down twelve kilometres.
 And it never made it through the crust.
 At the bottom, the rock was over two hundred degrees.
-The hot rock kept closing the hole, and the money ran out.
+Drilling stopped in nineteen ninety-two, when the money ran out.
 Twelve kilometres down. The centre of the Earth is over six thousand more.
 
 ---
@@ -22,9 +22,6 @@ Sources read (an independent fact-check, 18 Nov 2026):
   "temperatures reached 180 °C at 10 km and 212 °C at 12 km"; "Drilling was
   abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C
   induced plastic rock flow that repeatedly sealed the hole."
-- Popov et al., Tectonophysics 306: 345 (1999),
-  doi:10.1016/S0040-1951(99)00065-7: casing 245 mm to 8,278 m, open borehole
-  214 mm below it.
 - Clarke et al., "The Kola Superdeep Drill Hole by Ye. A. Kozlovskiy (1984): A
   detailed summary", USGS Open-File Report 86-517 (1986), summarising
   Kozlovskiy, Kol'skaya sverkhglubokaya (Moscow: Nedra, 1984): "Crustal
@@ -37,17 +34,16 @@ Sources read (an independent fact-check, 18 Nov 2026):
 
 1. "The deepest hole humans have ever dug..."
    Kola Superdeep Borehole, branch SG-3, Kola Peninsula, USSR (now Russia):
-   12,262 m (Lobanov; Zhu & Huang), still the deepest point reached by
-   drilling. "Deepest", not "longest": some oil wells are longer measured along
+   12,262 m, "which has not been surpassed so far" (Lobanov 2021); Zhu & Huang
+   (2026) still treat it as the deepest. "Deepest", not "longest": some oil wells are longer measured along
    the bore but run mostly sideways. The script does not say "longest", and the
    post text no longer mentions those wells (no primary source was read for
    them).
 
 2. "...was drilled with a bit narrower than a dinner plate."
-   The bit is 214 mm (Lobanov), and the open hole below the casing 214 mm
-   (Popov). The hole is not that width everywhere: the top is cased at 245 mm
-   (so drilled wider), and below 7 km the bore went oval with caverns
-   (Lobanov). So the line and the labels name the bit ("21 CM BIT"), which is
+   The bit is 214 mm (Lobanov). The hole is not that width everywhere: below
+   7 km the bore went oval, "many caverns appeared" (Lobanov), and the USGS
+   summary mentions cavities wider than 40 cm. So the line and the labels name the bit ("21 CM BIT"), which is
    the one fixed number. The plate in the short is 25.6 cm (Met 51.86.100), and
    the bit's width is drawn against it to scale.
 
@@ -68,11 +64,13 @@ Sources read (an independent fact-check, 18 Nov 2026):
    (Lobanov). 180 °C was the reading at 10 km, not at the bottom. Celsius; the
    tag says so, the voice does not.
 
-7. "The hot rock kept closing the hole, and the money ran out."
-   The two sources give two reasons, so the line carries both and ranks
-   neither. Zhu & Huang: heat "induced plastic rock flow that repeatedly sealed
-   the hole". Lobanov: "a drastic reduction in funding made it impossible to
-   continue". Drilling stopped in 1992 (both).
+7. "Drilling stopped in nineteen ninety-two, when the money ran out."
+   Lobanov: "a drastic reduction in funding made it impossible to continue the
+   work. Drilling was stopped in 1992". The sources disagree on the rest of the
+   reason (A3): Zhu & Huang put it on heat, which "induced plastic rock flow
+   that repeatedly sealed the hole"; Lobanov describes the walls caving in
+   instead. The line states only what Lobanov states outright; the heat is
+   already in line 6.
 
 8. "The centre of the Earth is six thousand more."
    Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "over
@@ -80,9 +78,9 @@ Sources read (an independent fact-check, 18 Nov 2026):
    way to the centre, shown as "0.2%".
 
 9. Figures used by the animation, not spoken.
-   Depth against year: 9,583 m in June 1979 (passing the previous record) and
+   Depth against year: 9,584 m in June 1979 (passing the US record of 9,583 m) and
    12,000 m on 27 December 1983 (Lobanov), 12,262 m in 1989-90; the curve between
-   them is a straight-line interpolation. Earth's layers by radius from PREM,
+   them is a straight-line interpolation. Earth's layers by radius from PREM (NSSDC gives the core radius as 3,485 km),
    crust drawn at 40 km. At the size the Earth is drawn the crust is under two
    pixels thick and the hole is a fraction of one, which is why the last shot
    labels the hole instead of drawing it.

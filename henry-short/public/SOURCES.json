@@ -127,10 +127,10 @@
   "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  },
  "public/cutout/cleopatra/launch.jpg": {
-  "source": "Apollo 11 launch, 16 July 1969, NASA GPN-2000-000630 — https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg",
+  "source": "Apollo 11 launch, 16 July 1969, NASA KSC-69PC-442 — https://images.nasa.gov/details/ksc-69pc-442",
   "licence": "public-domain",
   "ship": true,
-  "note": "NASA photograph, US federal government work. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
+  "note": "NASA photograph, US federal government work. NASA's caption: 'The Apollo 11 Saturn V space vehicle lifted off ... at 9:32 a.m. EDT July 16, 1969'. Replaces a Commons copy (GPN-2000-000630) that had no NASA record the fact-check could open. 'large' rendition from images-assets.nasa.gov, scaled to 1224x1600. Fetched 2026-11-18."
  },
  "public/cutout/cleopatra/frith.jpg": {
   "source": "\"The Great Pyramid and the Great Sphinx\", Francis Frith, 1858, Metropolitan Museum of Art (Open Access) — https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_and_The_Great_Sphinx_MET_DP132062.jpg",

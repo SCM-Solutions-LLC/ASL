@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/deepest-hole.txt",
  "audio": "public/vo/deepest-hole.wav",
- "sha256": "2d8ef9eb6c3c74c173aaa9707ce01b68897ad186c1311dbf775f370aebc16f89",
+ "sha256": "85595d2ebf877c551645ce9dbd3c986436f15965a8e738b399098cd85ec26e6c",
  "words": [
   {
    "text": "The",
@@ -245,129 +245,119 @@
    "end": 17.141
   },
   {
-   "text": "The",
+   "text": "Drilling",
    "start": 17.75,
-   "end": 18.005
+   "end": 18.174
   },
   {
-   "text": "hot",
-   "start": 18.005,
-   "end": 18.26
+   "text": "stopped",
+   "start": 18.174,
+   "end": 18.57
   },
   {
-   "text": "rock",
-   "start": 18.26,
-   "end": 18.54
+   "text": "in",
+   "start": 18.57,
+   "end": 18.828
   },
   {
-   "text": "kept",
-   "start": 18.54,
-   "end": 18.82
+   "text": "nineteen",
+   "start": 18.828,
+   "end": 19.252
   },
   {
-   "text": "closing",
-   "start": 18.82,
-   "end": 19.174
+   "text": "ninety-two,",
+   "start": 19.252,
+   "end": 19.704
   },
   {
-   "text": "the",
-   "start": 19.174,
-   "end": 19.429
-  },
-  {
-   "text": "hole,",
-   "start": 19.429,
-   "end": 19.709
-  },
-  {
-   "text": "and",
-   "start": 19.709,
-   "end": 19.964
+   "text": "when",
+   "start": 19.704,
+   "end": 20.017
   },
   {
    "text": "the",
-   "start": 19.964,
-   "end": 20.219
+   "start": 20.017,
+   "end": 20.303
   },
   {
    "text": "money",
-   "start": 20.219,
-   "end": 20.523
+   "start": 20.303,
+   "end": 20.644
   },
   {
    "text": "ran",
-   "start": 20.523,
-   "end": 20.779
+   "start": 20.644,
+   "end": 20.93
   },
   {
    "text": "out.",
-   "start": 20.779,
-   "end": 21.034
+   "start": 20.93,
+   "end": 21.215
   },
   {
    "text": "Twelve",
-   "start": 21.635,
-   "end": 22.153
+   "start": 21.835,
+   "end": 22.353
   },
   {
    "text": "kilometres",
-   "start": 22.153,
-   "end": 22.821
+   "start": 22.353,
+   "end": 23.022
   },
   {
    "text": "down.",
-   "start": 22.821,
-   "end": 23.262
+   "start": 23.022,
+   "end": 23.462
   },
   {
    "text": "The",
-   "start": 23.92,
-   "end": 24.168
+   "start": 24.12,
+   "end": 24.369
   },
   {
    "text": "centre",
-   "start": 24.168,
-   "end": 24.489
+   "start": 24.369,
+   "end": 24.69
   },
   {
    "text": "of",
-   "start": 24.489,
-   "end": 24.713
+   "start": 24.69,
+   "end": 24.914
   },
   {
    "text": "the",
-   "start": 24.713,
-   "end": 24.961
+   "start": 24.914,
+   "end": 25.163
   },
   {
    "text": "Earth",
-   "start": 24.961,
-   "end": 25.257
+   "start": 25.163,
+   "end": 25.46
   },
   {
    "text": "is",
-   "start": 25.257,
-   "end": 25.482
+   "start": 25.46,
+   "end": 25.684
   },
   {
    "text": "over",
-   "start": 25.482,
-   "end": 25.754
+   "start": 25.684,
+   "end": 25.957
   },
   {
    "text": "six",
-   "start": 25.754,
-   "end": 26.002
+   "start": 25.957,
+   "end": 26.206
   },
   {
    "text": "thousand",
-   "start": 26.002,
-   "end": 26.37
+   "start": 26.206,
+   "end": 26.575
   },
   {
    "text": "more.",
-   "start": 26.37,
-   "end": 26.643
+   "start": 26.575,
+   "end": 26.847
   }
  ]
 }
