@@ -368,7 +368,7 @@ const Deck: React.FC = () => (
     <Shot from={0} to={F.moon - 2} tilt={-1.5} sheet={CORAL}>
       <Cut pic="cleopatra" x={540} y={585} w={820} tilt={-2} />
       {/* Paintings are imagined scenes, not likenesses (A5/A6), so each says whose and when. */}
-      <Year x={540} y={1040} text="WATERHOUSE, 1888 · IMAGINED" at={6} size={38} />
+      <Year x={540} y={1040} text="WATERHOUSE · IMAGINED" at={6} size={38} />
       <Burst at={2} x={540} y={1190} r={190} colour={YELLOW} n={14} />
       <Word text="CLEOPATRA" at={3} />
     </Shot>
@@ -403,7 +403,7 @@ const Deck: React.FC = () => (
         box={[25, 30, 910, 560]}
         tilt={-1.5}
       />
-      <Word text="GREAT PYRAMID" at={F.building + 6} size={108} />
+      <Word text="GIZA PYRAMIDS" at={F.building + 6} size={108} />
     </Shot>
 
     <Shot
@@ -430,6 +430,8 @@ const Deck: React.FC = () => (
       />
       <Burst at={F.built - 1} x={540} y={1190} r={170} colour={CORAL} n={12} />
       <Word text="c. 2560 BC" at={F.built - 1} size={136} />
+      {/* The pyramid as photographed in 1858, weathered: credited so it is not read as new (A6). */}
+      <Year x={540} y={150} text="AS PHOTOGRAPHED BY FRITH, 1858" at={F.finished} size={34} />
     </Shot>
 
     <Shot from={F.sentence3 - 2} to={F.back - 2} tilt={-1.5} sheet={CORAL}>
@@ -459,7 +461,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
-      <Year x={540} y={150} text="ALMA-TADEMA, 1885 · IMAGINED, 41 BC" at={F.born} size={34} />
+      <Year x={540} y={150} text="ALMA-TADEMA · IMAGINED, 41 BC" at={F.born} size={34} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>
@@ -529,6 +531,7 @@ const Deck: React.FC = () => (
         tone="sepia(0.7) contrast(1.05)"
       />
       <Cobweb at={F.ancient + 2} />
+      <Year x={600} y={1075} text="FRITH, 1858" at={F.ancient} size={34} />
       <Burst at={F.ancient} x={540} y={1190} r={190} colour={CORAL} n={12} />
       <Word text="ANCIENT HISTORY" at={F.ancient} size={92} />
     </Shot>

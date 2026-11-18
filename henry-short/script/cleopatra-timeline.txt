@@ -15,31 +15,35 @@ Sources:
   (Shaw 2000), 2554 (von Beckerath 1997) and 2480 +/- 5 (Spence 2000); Khafre
   2558 (Shaw) or 2586-2548 (radiocarbon).
 - Erdil et al., PLOS ONE (2025), doi:10.1371/journal.pone.0314612: the High and
-  Low Egyptian chronologies can differ "by as great as a century".
-- Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN
-  978-0-19-536553-5: "Cleopatra VII was born around the beginning of 69 b.c.";
-  "Cleopatra VII (69-30 b.c.), queen of Egypt". Plutarch, Antony 86 (she died
-  "forty years of age save one") agrees.
-- NASA, Apollo 11 mission page (nasa.gov/mission/apollo-11): launch 16 July
-  1969, Aldrin on the Moon 20 July 1969.
+  Low Egyptian chronologies: "Offsets between the two can be as great as a
+  century".
+- Rosso, "Toxicology and snakes in Ptolemaic Egyptian dynasty: the suicide of
+  Cleopatra", Toxicology Reports 8: 676-695 (2021),
+  doi:10.1016/j.toxrep.2021.03.004 (PMC8042289): "Cleopatra VII was born at 69
+  BC"; "The queen committed suicide in August 30 BC"; "the last member of
+  Ptolemaic Dynasty"; her meeting with Antony at Tarsus in 41 BC.
+- NASA Image and Video Library (images.nasa.gov) records for the Apollo 11
+  photographs: AS11-40-5903, Aldrin on the Moon, 20 July 1969; launch, 16 July
+  1969 (e.g. KSC-69PC-442).
 
 1. "The pyramid was finished around twenty-five sixty BC."
    The Great Pyramid of Giza was built for Khufu (Sheisha 2022: "the Great
-   Pyramid of Giza (Khufu Pyramid)"); c. 2560 BC is the usual round figure for its
-   completion, between the end of Khufu's reign and Khafre's accession on the
-   radiocarbon and Shaw dates (Sheisha 2022). No source states a completion
-   year, and published dates for Khufu differ by up to about a century: the
-   lowest (Spence, 2480 BC) would make the pyramid about 80 years younger. c.
-   2560 is used because the radiocarbon model supports the higher chronology.
+   Pyramid of Giza (Khufu Pyramid)"). No source states a completion year. It
+   was finished before Khafre's accession: 2586-2548 BC on the radiocarbon
+   model, 2558 BC on Shaw's dates (Sheisha 2022). c. 2560 BC is a round figure
+   inside that range. Published dates for Khufu's accession differ by more than
+   a century (2613-2577 radiocarbon down to 2480 +/- 5 Spence); like for like,
+   Spence's dates (Khafre 2448) would put completion about 110 years later, c.
+   2450 BC. c. 2560 is used because Sheisha calls the radiocarbon model
+   preferable and Erdil 2025 supports it.
    "Around" is in the line, and every on-screen date carries "c.". Even on the
-   lowest chronology the pyramid is about 2,400 years older than Cleopatra,
+   lowest chronology the pyramid is about 2,380 years older than Cleopatra,
    against 2,037 years from her to Apollo 11, so the comparison holds.
 
 2. "Cleopatra was born in sixty-nine BC."
-   Cleopatra VII Philopator: born around the beginning of 69 BC (Roller; Plutarch
-   allows late 70), died August 30 BC (Roller). She was the last
-   ruler of the Ptolemaic dynasty and Macedonian Greek by descent, which is why
-   the title card says "Queen of Egypt" rather than "Egyptian queen".
+   Cleopatra VII Philopator: born 69 BC, died August 30 BC (Rosso 2021). She was
+   the last ruler of the Macedonian Greek Ptolemaic dynasty, which is why the
+   title card says "Queen of Egypt" rather than "Egyptian queen".
 
 3. "Two and a half thousand years later."
    2560 BC to 69 BC is 2,491 years; on the radiocarbon brackets 2,480-2,520.
@@ -47,7 +51,7 @@ Sources:
    the c. of the pyramid date.
 
 4. "From her to Apollo eleven is only two thousand."
-   Apollo 11 landed on 20 July 1969 (NASA). From 69 BC to AD 1969 is 2,037 years —
+   Apollo 11 landed on 20 July 1969 (NASA image records). From 69 BC to AD 1969 is 2,037 years —
    68 + 1,969, because there is no year zero. The on-screen count is 2,037.
    Measured from her death in 30 BC instead, it is 1,998.
 
@@ -61,12 +65,11 @@ Sources:
 
 6. "To Cleopatra, the pyramids were already ancient history."
    Follows from 3. In context, "the pyramids" are those at Giza: the youngest,
-   Menkaure's, has an accession date of 2564-2524 BC (radiocarbon) or 2532 BC
-   (Shaw), both in Sheisha 2022, so all three were some 2,450 years old or more
-   at her birth. Diodorus Siculus (1.63), writing in her century, already
-   treated the largest as more than a thousand years old. Later pyramids, such
-   as the Nubian ones at Meroe, are not the subject; the title says "the Great
-   Pyramid" for that reason.
+   Menkaure's, was begun on an accession date of 2564-2524 BC (radiocarbon) or
+   2532 BC (Shaw), both in Sheisha 2022, so all three were begun some 2,450 or
+   more years before her birth. Later pyramids, such as the Nubian ones at
+   Meroe, are not the subject; the title says "the Great Pyramid" for that
+   reason.
 
 7. Scale used by the animation, not spoken.
    The three markers are placed along the line in proportion to the years
