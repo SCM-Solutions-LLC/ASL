@@ -184,10 +184,12 @@ that repeat a spoken claim cite its number above.
   is not visible in the photo, so nothing on it is labelled.
 - Map coastlines: Natural Earth 1:10m admin-0 countries (public domain), cut by
   tools/coast.mjs. Equirectangular, longitude scaled by cos 54.5 deg.
-- "Stonehenge" pin, 51.179 N 1.826 W: a location marker. At the map's scale
-  (about 1 km per pixel) any standard map reference agrees; no source for the
-  exact coordinate was read in this sandbox (UNESCO and Historic England pages
-  are blocked here).
+- "Stonehenge (approx.)" pin, 51.179 N 1.826 W: a location marker. Clarke
+  2024, Fig. 4a (a schematic map of Britain, CC BY 4.0) marks Stonehenge in
+  Wiltshire between the Bristol Channel and the Thames; the pin agrees with
+  it at this map's scale (about 1 km per pixel), and the label says
+  "approx.". The same figure draws sea transport south down both coasts,
+  which the two dashed routes follow (claim 4).
 - "TRACED HERE / 2024 · NE Scotland (area approx.)": claim 1. The dashed
   ellipse around Caithness, Orkney and the Moray Firth is approximate, as the
   label says; it does not trace the Orcadian Basin's edge.
@@ -219,9 +221,10 @@ that repeat a spoken claim cite its number above.
 - Ice map, "ICE MODEL / part of the way, at most", "ice extent and path
   illustrative", "Dogger Bank (approx.)": claim 7. Clarke 2026 abstract:
   glacial dispersal to Dogger Bank would cut the human leg "from 700 km to
-  400 km". The pin sits on the bank's south-west end, about 400 km from
-  Stonehenge on this map; the bank is far larger. The ice outline and path
-  are sketches, as the label says.
+  400 km". The pin is the Marine Regions gazetteer position for Dogger Bank
+  (MRGID 2395, 54.833 N 2.333 E, marineregions.org); the bank is far larger
+  than a pin, and no distance is drawn to it. The ice outline and path are
+  sketches, as the label says.
 - "Journal of the Geological Society / 2026" and "A NEW STUDY / three of the
   2024 team among its authors": claim 8 (Pirrie 2026).
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",

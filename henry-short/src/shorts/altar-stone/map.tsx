@@ -27,9 +27,9 @@ export const PLACES = {
   // The Orcadian Basin's onshore heart: Caithness, Orkney and the Moray Firth shore. A marker, not
   // a boundary: the on-screen label says "approx.".
   northeast: [-3.4, 58.3] as [number, number],
-  // Dogger Bank's south-west end, ~400 km from Stonehenge, the distance Clarke 2026 gives for the
-  // remaining human leg. The bank itself is far larger; the label says "approx.".
-  dogger: [1.2, 54.3] as [number, number],
+  // Dogger Bank, Marine Regions gazetteer MRGID 2395 (54.833 N, 2.333 E). The bank is far larger
+  // than a pin; the label says "approx.".
+  dogger: [2.333, 54.833] as [number, number],
 };
 
 export const VIEWS = {
