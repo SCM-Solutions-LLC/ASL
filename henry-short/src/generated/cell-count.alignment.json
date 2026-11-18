@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/cell-count.txt",
  "audio": "public/vo/cell-count.wav",
- "sha256": "2178aa34f008ecdbd731f33fa23222097093c376ba68c4f3c3419130112b5d23",
+ "sha256": "4bb6a09eee45de80c33373971a4d415353bdd5c95759951b05b5c691ae600c87",
  "words": [
   {
    "text": "By",
@@ -337,47 +337,57 @@
   {
    "text": "And",
    "start": 24.27,
-   "end": 24.556
+   "end": 24.552
   },
   {
    "text": "his",
-   "start": 24.556,
-   "end": 24.842
+   "start": 24.552,
+   "end": 24.834
   },
   {
    "text": "passengers",
-   "start": 24.842,
-   "end": 25.318
+   "start": 24.834,
+   "end": 25.304
   },
   {
    "text": "roughly",
-   "start": 25.318,
-   "end": 25.715
+   "start": 25.304,
+   "end": 25.695
   },
   {
    "text": "match",
-   "start": 25.715,
-   "end": 26.056
+   "start": 25.695,
+   "end": 26.032
   },
   {
-   "text": "them,",
-   "start": 26.056,
-   "end": 26.369
+   "text": "his",
+   "start": 26.032,
+   "end": 26.314
+  },
+  {
+   "text": "own",
+   "start": 26.314,
+   "end": 26.596
+  },
+  {
+   "text": "cells,",
+   "start": 26.596,
+   "end": 26.933
   },
   {
    "text": "cell",
-   "start": 26.369,
-   "end": 26.683
+   "start": 26.933,
+   "end": 27.242
   },
   {
    "text": "for",
-   "start": 26.683,
-   "end": 26.969
+   "start": 27.242,
+   "end": 27.524
   },
   {
    "text": "cell.",
-   "start": 26.969,
-   "end": 27.282
+   "start": 27.524,
+   "end": 27.833
   }
  ]
 }
