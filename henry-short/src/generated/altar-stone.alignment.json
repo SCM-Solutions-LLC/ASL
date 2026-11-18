@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/altar-stone.txt",
  "audio": "public/vo/altar-stone.wav",
- "sha256": "bd90665d0694cf12237a9723931009fe3b0d51cb6f87dddded3d17919e4dab3f",
+ "sha256": "825d9a1bc9759f0d32a86475062a4398fa930c0abbd51fc04cfa5554104a43bc",
  "words": [
   {
    "text": "In",
@@ -230,634 +230,709 @@
    "end": 18.368
   },
   {
-   "text": "The",
+   "text": "Clarke",
    "start": 19.015,
-   "end": 19.382
-  },
-  {
-   "text": "2024",
-   "start": 19.382,
-   "end": 19.784
-  },
-  {
-   "text": "team",
-   "start": 19.784,
-   "end": 20.187
-  },
-  {
-   "text": "suggested",
-   "start": 20.187,
-   "end": 20.767
-  },
-  {
-   "text": "it",
-   "start": 20.767,
-   "end": 21.098
-  },
-  {
-   "text": "went",
-   "start": 21.098,
-   "end": 21.501
-  },
-  {
-   "text": "by",
-   "start": 21.501,
-   "end": 21.832
-  },
-  {
-   "text": "sea.",
-   "start": 21.832,
-   "end": 22.199
-  },
-  {
-   "text": "But",
-   "start": 22.875,
-   "end": 23.146
-  },
-  {
-   "text": "no",
-   "start": 23.146,
-   "end": 23.392
-  },
-  {
-   "text": "late",
-   "start": 23.392,
-   "end": 23.689
-  },
-  {
-   "text": "Stone",
-   "start": 23.689,
-   "end": 24.013
-  },
-  {
-   "text": "Age",
-   "start": 24.013,
-   "end": 24.284
-  },
-  {
-   "text": "boat",
-   "start": 24.284,
-   "end": 24.582
-  },
-  {
-   "text": "has",
-   "start": 24.582,
-   "end": 24.853
-  },
-  {
-   "text": "been",
-   "start": 24.853,
-   "end": 25.151
-  },
-  {
-   "text": "found",
-   "start": 25.151,
-   "end": 25.475
-  },
-  {
-   "text": "in",
-   "start": 25.475,
-   "end": 25.72
-  },
-  {
-   "text": "Britain,",
-   "start": 25.72,
-   "end": 26.096
+   "end": 19.356
   },
   {
    "text": "and",
-   "start": 26.096,
-   "end": 26.368
+   "start": 19.356,
+   "end": 19.621
   },
   {
-   "text": "another",
-   "start": 26.368,
-   "end": 26.744
+   "text": "colleagues,",
+   "start": 19.621,
+   "end": 20.062
   },
   {
-   "text": "study",
-   "start": 26.744,
-   "end": 27.068
+   "text": "who",
+   "start": 20.062,
+   "end": 20.327
   },
   {
-   "text": "doubts",
-   "start": 27.068,
-   "end": 27.418
+   "text": "traced",
+   "start": 20.327,
+   "end": 20.668
   },
   {
-   "text": "one",
-   "start": 27.418,
-   "end": 27.689
+   "text": "it,",
+   "start": 20.668,
+   "end": 20.907
   },
   {
-   "text": "could",
-   "start": 27.689,
-   "end": 28.013
-  },
-  {
-   "text": "carry",
-   "start": 28.013,
-   "end": 28.337
-  },
-  {
-   "text": "six",
-   "start": 28.337,
-   "end": 28.609
-  },
-  {
-   "text": "tonnes.",
-   "start": 28.609,
-   "end": 28.959
-  },
-  {
-   "text": "Overland,",
-   "start": 29.61,
-   "end": 30.068
-  },
-  {
-   "text": "on",
-   "start": 30.068,
-   "end": 30.346
-  },
-  {
-   "text": "a",
-   "start": 30.346,
-   "end": 30.595
-  },
-  {
-   "text": "sledge,",
-   "start": 30.595,
-   "end": 30.993
-  },
-  {
-   "text": "that",
-   "start": 30.993,
-   "end": 31.332
-  },
-  {
-   "text": "study",
-   "start": 31.332,
-   "end": 31.7
-  },
-  {
-   "text": "estimates",
-   "start": 31.7,
-   "end": 32.188
-  },
-  {
-   "text": "about",
-   "start": 32.188,
-   "end": 32.556
-  },
-  {
-   "text": "eight",
-   "start": 32.556,
-   "end": 32.924
-  },
-  {
-   "text": "months",
-   "start": 32.924,
-   "end": 33.322
-  },
-  {
-   "text": "of",
-   "start": 33.322,
-   "end": 33.601
-  },
-  {
-   "text": "hauling.",
-   "start": 33.601,
-   "end": 34.029
-  },
-  {
-   "text": "A",
-   "start": 34.695,
-   "end": 35.06
-  },
-  {
-   "text": "glacier?",
-   "start": 35.06,
-   "end": 35.687
-  },
-  {
-   "text": "A",
-   "start": 36.38,
-   "end": 36.618
-  },
-  {
-   "text": "2026",
-   "start": 36.618,
-   "end": 36.943
-  },
-  {
-   "text": "ice",
-   "start": 36.943,
-   "end": 37.238
-  },
-  {
-   "text": "model",
-   "start": 37.238,
-   "end": 37.591
-  },
-  {
-   "text": "says",
-   "start": 37.591,
-   "end": 37.915
-  },
-  {
-   "text": "ice",
-   "start": 37.915,
-   "end": 38.211
-  },
-  {
-   "text": "could",
-   "start": 38.211,
-   "end": 38.564
-  },
-  {
-   "text": "have",
-   "start": 38.564,
-   "end": 38.888
-  },
-  {
-   "text": "carried",
-   "start": 38.888,
-   "end": 39.298
+   "text": "suggested",
+   "start": 20.907,
+   "end": 21.325
   },
   {
    "text": "it",
-   "start": 39.298,
-   "end": 39.565
+   "start": 21.325,
+   "end": 21.564
   },
   {
-   "text": "part",
-   "start": 39.565,
-   "end": 39.889
-  },
-  {
-   "text": "of",
-   "start": 39.889,
-   "end": 40.156
-  },
-  {
-   "text": "the",
-   "start": 40.156,
-   "end": 40.452
-  },
-  {
-   "text": "way,",
-   "start": 40.452,
-   "end": 40.747
-  },
-  {
-   "text": "at",
-   "start": 40.747,
-   "end": 41.014
-  },
-  {
-   "text": "most.",
-   "start": 41.014,
-   "end": 41.339
-  },
-  {
-   "text": "Then,",
-   "start": 41.965,
-   "end": 42.389
-  },
-  {
-   "text": "months",
-   "start": 42.389,
-   "end": 42.888
-  },
-  {
-   "text": "later,",
-   "start": 42.888,
-   "end": 43.35
-  },
-  {
-   "text": "a",
-   "start": 43.35,
-   "end": 43.662
-  },
-  {
-   "text": "2026",
-   "start": 43.662,
-   "end": 44.086
-  },
-  {
-   "text": "study,",
-   "start": 44.086,
-   "end": 44.548
-  },
-  {
-   "text": "including",
-   "start": 44.548,
-   "end": 45.159
-  },
-  {
-   "text": "three",
-   "start": 45.159,
-   "end": 45.621
-  },
-  {
-   "text": "of",
-   "start": 45.621,
-   "end": 45.971
-  },
-  {
-   "text": "the",
-   "start": 45.971,
-   "end": 46.358
-  },
-  {
-   "text": "2024",
-   "start": 46.358,
-   "end": 46.782
-  },
-  {
-   "text": "team,",
-   "start": 46.782,
-   "end": 47.206
-  },
-  {
-   "text": "looked",
-   "start": 47.206,
-   "end": 47.705
-  },
-  {
-   "text": "closer.",
-   "start": 47.705,
-   "end": 48.204
-  },
-  {
-   "text": "Many",
-   "start": 48.9,
-   "end": 49.182
-  },
-  {
-   "text": "outcrops",
-   "start": 49.182,
-   "end": 49.565
-  },
-  {
-   "text": "in",
-   "start": 49.565,
-   "end": 49.797
-  },
-  {
-   "text": "that",
-   "start": 49.797,
-   "end": 50.08
-  },
-  {
-   "text": "part",
-   "start": 50.08,
-   "end": 50.362
-  },
-  {
-   "text": "of",
-   "start": 50.362,
-   "end": 50.595
-  },
-  {
-   "text": "Scotland",
-   "start": 50.595,
-   "end": 50.977
-  },
-  {
-   "text": "could",
-   "start": 50.977,
-   "end": 51.284
-  },
-  {
-   "text": "not",
-   "start": 51.284,
-   "end": 51.542
-  },
-  {
-   "text": "have",
-   "start": 51.542,
-   "end": 51.825
-  },
-  {
-   "text": "been",
-   "start": 51.825,
-   "end": 52.107
-  },
-  {
-   "text": "the",
-   "start": 52.107,
-   "end": 52.365
-  },
-  {
-   "text": "source.",
-   "start": 52.365,
-   "end": 52.697
-  },
-  {
-   "text": "No",
-   "start": 53.31,
-   "end": 53.57
-  },
-  {
-   "text": "outcrop",
-   "start": 53.57,
-   "end": 53.969
-  },
-  {
-   "text": "examined",
-   "start": 53.969,
-   "end": 54.396
-  },
-  {
-   "text": "so",
-   "start": 54.396,
-   "end": 54.656
-  },
-  {
-   "text": "far",
-   "start": 54.656,
-   "end": 54.944
-  },
-  {
-   "text": "has",
-   "start": 54.944,
-   "end": 55.232
-  },
-  {
-   "text": "been",
-   "start": 55.232,
-   "end": 55.547
-  },
-  {
-   "text": "shown",
-   "start": 55.547,
-   "end": 55.891
-  },
-  {
-   "text": "to",
-   "start": 55.891,
-   "end": 56.151
-  },
-  {
-   "text": "match",
-   "start": 56.151,
-   "end": 56.494
-  },
-  {
-   "text": "it",
-   "start": 56.494,
-   "end": 56.754
-  },
-  {
-   "text": "in",
-   "start": 56.754,
-   "end": 57.014
-  },
-  {
-   "text": "every",
-   "start": 57.014,
-   "end": 57.358
-  },
-  {
-   "text": "way.",
-   "start": 57.358,
-   "end": 57.645
-  },
-  {
-   "text": "Six",
-   "start": 58.345,
-   "end": 58.602
-  },
-  {
-   "text": "tonnes,",
-   "start": 58.602,
-   "end": 58.933
-  },
-  {
-   "text": "from",
-   "start": 58.933,
-   "end": 59.214
-  },
-  {
-   "text": "a",
-   "start": 59.214,
-   "end": 59.421
-  },
-  {
-   "text": "spot",
-   "start": 59.421,
-   "end": 59.703
-  },
-  {
-   "text": "no",
-   "start": 59.703,
-   "end": 59.935
-  },
-  {
-   "text": "one",
-   "start": 59.935,
-   "end": 60.192
-  },
-  {
-   "text": "has",
-   "start": 60.192,
-   "end": 60.448
-  },
-  {
-   "text": "pinned",
-   "start": 60.448,
-   "end": 60.779
-  },
-  {
-   "text": "down,",
-   "start": 60.779,
-   "end": 61.061
+   "text": "went",
+   "start": 21.564,
+   "end": 21.854
   },
   {
    "text": "by",
-   "start": 61.061,
-   "end": 61.293
+   "start": 21.854,
+   "end": 22.093
   },
   {
-   "text": "a",
-   "start": 61.293,
-   "end": 61.5
+   "text": "sea.",
+   "start": 22.093,
+   "end": 22.358
   },
   {
-   "text": "route",
-   "start": 61.5,
-   "end": 61.806
+   "text": "But",
+   "start": 23.025,
+   "end": 23.309
   },
   {
    "text": "no",
-   "start": 61.806,
-   "end": 62.038
+   "start": 23.309,
+   "end": 23.565
+  },
+  {
+   "text": "late",
+   "start": 23.565,
+   "end": 23.876
+  },
+  {
+   "text": "Stone",
+   "start": 23.876,
+   "end": 24.214
+  },
+  {
+   "text": "Age",
+   "start": 24.214,
+   "end": 24.498
+  },
+  {
+   "text": "boat",
+   "start": 24.498,
+   "end": 24.809
+  },
+  {
+   "text": "has",
+   "start": 24.809,
+   "end": 25.092
+  },
+  {
+   "text": "been",
+   "start": 25.092,
+   "end": 25.403
+  },
+  {
+   "text": "found",
+   "start": 25.403,
+   "end": 25.742
+  },
+  {
+   "text": "in",
+   "start": 25.742,
+   "end": 25.998
+  },
+  {
+   "text": "Britain,",
+   "start": 25.998,
+   "end": 26.391
+  },
+  {
+   "text": "and",
+   "start": 26.391,
+   "end": 26.675
+  },
+  {
+   "text": "a",
+   "start": 26.675,
+   "end": 26.903
+  },
+  {
+   "text": "study",
+   "start": 26.903,
+   "end": 27.242
+  },
+  {
+   "text": "by",
+   "start": 27.242,
+   "end": 27.498
+  },
+  {
+   "text": "Parker",
+   "start": 27.498,
+   "end": 27.864
+  },
+  {
+   "text": "Pearson",
+   "start": 27.864,
+   "end": 28.257
+  },
+  {
+   "text": "and",
+   "start": 28.257,
+   "end": 28.541
+  },
+  {
+   "text": "colleagues",
+   "start": 28.541,
+   "end": 29.013
+  },
+  {
+   "text": "doubts",
+   "start": 29.013,
+   "end": 29.379
   },
   {
    "text": "one",
-   "start": 62.038,
-   "end": 62.295
+   "start": 29.379,
+   "end": 29.663
   },
   {
-   "text": "knows.",
-   "start": 62.295,
-   "end": 62.601
+   "text": "could",
+   "start": 29.663,
+   "end": 30.001
   },
   {
-   "text": "Sea,",
-   "start": 63.23,
-   "end": 63.479
+   "text": "carry",
+   "start": 30.001,
+   "end": 30.34
   },
   {
-   "text": "sledge",
-   "start": 63.479,
-   "end": 63.8
+   "text": "six",
+   "start": 30.34,
+   "end": 30.623
   },
   {
-   "text": "or",
-   "start": 63.8,
-   "end": 64.024
+   "text": "tonnes.",
+   "start": 30.623,
+   "end": 30.989
   },
   {
-   "text": "ice:",
-   "start": 64.024,
-   "end": 64.273
+   "text": "Overland,",
+   "start": 31.66,
+   "end": 32.098
   },
   {
-   "text": "how",
-   "start": 64.273,
-   "end": 64.522
+   "text": "on",
+   "start": 32.098,
+   "end": 32.364
   },
   {
-   "text": "do",
-   "start": 64.522,
-   "end": 64.746
+   "text": "a",
+   "start": 32.364,
+   "end": 32.602
   },
   {
-   "text": "you",
-   "start": 64.746,
-   "end": 64.995
+   "text": "sledge,",
+   "start": 32.602,
+   "end": 32.983
   },
   {
-   "text": "think",
-   "start": 64.995,
-   "end": 65.292
+   "text": "they",
+   "start": 32.983,
+   "end": 33.306
+  },
+  {
+   "text": "estimate",
+   "start": 33.306,
+   "end": 33.744
+  },
+  {
+   "text": "about",
+   "start": 33.744,
+   "end": 34.096
+  },
+  {
+   "text": "eight",
+   "start": 34.096,
+   "end": 34.448
+  },
+  {
+   "text": "months",
+   "start": 34.448,
+   "end": 34.828
+  },
+  {
+   "text": "of",
+   "start": 34.828,
+   "end": 35.095
+  },
+  {
+   "text": "hauling.",
+   "start": 35.095,
+   "end": 35.504
+  },
+  {
+   "text": "A",
+   "start": 36.17,
+   "end": 36.535
+  },
+  {
+   "text": "glacier?",
+   "start": 36.535,
+   "end": 37.162
+  },
+  {
+   "text": "A",
+   "start": 37.855,
+   "end": 38.085
+  },
+  {
+   "text": "2026",
+   "start": 38.085,
+   "end": 38.397
+  },
+  {
+   "text": "ice",
+   "start": 38.397,
+   "end": 38.681
+  },
+  {
+   "text": "model",
+   "start": 38.681,
+   "end": 39.021
+  },
+  {
+   "text": "by",
+   "start": 39.021,
+   "end": 39.278
+  },
+  {
+   "text": "Clarke",
+   "start": 39.278,
+   "end": 39.646
+  },
+  {
+   "text": "and",
+   "start": 39.646,
+   "end": 39.93
+  },
+  {
+   "text": "colleagues",
+   "start": 39.93,
+   "end": 40.405
+  },
+  {
+   "text": "says",
+   "start": 40.405,
+   "end": 40.717
+  },
+  {
+   "text": "ice",
+   "start": 40.717,
+   "end": 41.002
+  },
+  {
+   "text": "could",
+   "start": 41.002,
+   "end": 41.341
+  },
+  {
+   "text": "have",
+   "start": 41.341,
+   "end": 41.654
+  },
+  {
+   "text": "carried",
+   "start": 41.654,
+   "end": 42.048
   },
   {
    "text": "it",
-   "start": 65.292,
-   "end": 65.516
+   "start": 42.048,
+   "end": 42.306
+  },
+  {
+   "text": "part",
+   "start": 42.306,
+   "end": 42.618
+  },
+  {
+   "text": "of",
+   "start": 42.618,
+   "end": 42.875
+  },
+  {
+   "text": "the",
+   "start": 42.875,
+   "end": 43.16
+  },
+  {
+   "text": "way,",
+   "start": 43.16,
+   "end": 43.444
+  },
+  {
+   "text": "at",
+   "start": 43.444,
+   "end": 43.701
+  },
+  {
+   "text": "most.",
+   "start": 43.701,
+   "end": 44.014
+  },
+  {
+   "text": "Then,",
+   "start": 44.64,
+   "end": 45.043
+  },
+  {
+   "text": "months",
+   "start": 45.043,
+   "end": 45.517
+  },
+  {
+   "text": "later,",
+   "start": 45.517,
+   "end": 45.956
+  },
+  {
+   "text": "a",
+   "start": 45.956,
+   "end": 46.252
+  },
+  {
+   "text": "2026",
+   "start": 46.252,
+   "end": 46.655
+  },
+  {
+   "text": "study",
+   "start": 46.655,
+   "end": 47.094
+  },
+  {
+   "text": "by",
+   "start": 47.094,
+   "end": 47.426
+  },
+  {
+   "text": "Pirrie",
+   "start": 47.426,
+   "end": 47.9
+  },
+  {
+   "text": "and",
+   "start": 47.9,
+   "end": 48.268
+  },
+  {
+   "text": "colleagues,",
+   "start": 48.268,
+   "end": 48.881
+  },
+  {
+   "text": "including",
+   "start": 48.881,
+   "end": 49.461
+  },
+  {
+   "text": "three",
+   "start": 49.461,
+   "end": 49.9
+  },
+  {
+   "text": "of",
+   "start": 49.9,
+   "end": 50.232
+  },
+  {
+   "text": "the",
+   "start": 50.232,
+   "end": 50.6
+  },
+  {
+   "text": "2024",
+   "start": 50.6,
+   "end": 51.003
+  },
+  {
+   "text": "team,",
+   "start": 51.003,
+   "end": 51.406
+  },
+  {
+   "text": "looked",
+   "start": 51.406,
+   "end": 51.88
+  },
+  {
+   "text": "closer.",
+   "start": 51.88,
+   "end": 52.354
+  },
+  {
+   "text": "Many",
+   "start": 53.05,
+   "end": 53.332
+  },
+  {
+   "text": "outcrops",
+   "start": 53.332,
+   "end": 53.715
+  },
+  {
+   "text": "in",
+   "start": 53.715,
+   "end": 53.947
+  },
+  {
+   "text": "that",
+   "start": 53.947,
+   "end": 54.23
+  },
+  {
+   "text": "part",
+   "start": 54.23,
+   "end": 54.512
+  },
+  {
+   "text": "of",
+   "start": 54.512,
+   "end": 54.745
+  },
+  {
+   "text": "Scotland",
+   "start": 54.745,
+   "end": 55.127
+  },
+  {
+   "text": "could",
+   "start": 55.127,
+   "end": 55.434
+  },
+  {
+   "text": "not",
+   "start": 55.434,
+   "end": 55.692
+  },
+  {
+   "text": "have",
+   "start": 55.692,
+   "end": 55.975
+  },
+  {
+   "text": "been",
+   "start": 55.975,
+   "end": 56.257
+  },
+  {
+   "text": "the",
+   "start": 56.257,
+   "end": 56.515
+  },
+  {
+   "text": "source.",
+   "start": 56.515,
+   "end": 56.847
+  },
+  {
+   "text": "No",
+   "start": 57.46,
+   "end": 57.72
+  },
+  {
+   "text": "outcrop",
+   "start": 57.72,
+   "end": 58.119
+  },
+  {
+   "text": "examined",
+   "start": 58.119,
+   "end": 58.546
+  },
+  {
+   "text": "so",
+   "start": 58.546,
+   "end": 58.806
+  },
+  {
+   "text": "far",
+   "start": 58.806,
+   "end": 59.094
+  },
+  {
+   "text": "has",
+   "start": 59.094,
+   "end": 59.382
+  },
+  {
+   "text": "been",
+   "start": 59.382,
+   "end": 59.697
+  },
+  {
+   "text": "shown",
+   "start": 59.697,
+   "end": 60.041
+  },
+  {
+   "text": "to",
+   "start": 60.041,
+   "end": 60.301
+  },
+  {
+   "text": "match",
+   "start": 60.301,
+   "end": 60.644
+  },
+  {
+   "text": "it",
+   "start": 60.644,
+   "end": 60.904
+  },
+  {
+   "text": "in",
+   "start": 60.904,
+   "end": 61.164
+  },
+  {
+   "text": "every",
+   "start": 61.164,
+   "end": 61.508
+  },
+  {
+   "text": "way.",
+   "start": 61.508,
+   "end": 61.795
+  },
+  {
+   "text": "Six",
+   "start": 62.495,
+   "end": 62.752
+  },
+  {
+   "text": "tonnes,",
+   "start": 62.752,
+   "end": 63.083
+  },
+  {
+   "text": "from",
+   "start": 63.083,
+   "end": 63.364
+  },
+  {
+   "text": "a",
+   "start": 63.364,
+   "end": 63.571
+  },
+  {
+   "text": "spot",
+   "start": 63.571,
+   "end": 63.853
+  },
+  {
+   "text": "no",
+   "start": 63.853,
+   "end": 64.085
+  },
+  {
+   "text": "one",
+   "start": 64.085,
+   "end": 64.342
+  },
+  {
+   "text": "has",
+   "start": 64.342,
+   "end": 64.598
+  },
+  {
+   "text": "pinned",
+   "start": 64.598,
+   "end": 64.929
+  },
+  {
+   "text": "down,",
+   "start": 64.929,
+   "end": 65.211
+  },
+  {
+   "text": "by",
+   "start": 65.211,
+   "end": 65.443
+  },
+  {
+   "text": "a",
+   "start": 65.443,
+   "end": 65.65
+  },
+  {
+   "text": "route",
+   "start": 65.65,
+   "end": 65.956
+  },
+  {
+   "text": "no",
+   "start": 65.956,
+   "end": 66.188
+  },
+  {
+   "text": "one",
+   "start": 66.188,
+   "end": 66.445
+  },
+  {
+   "text": "knows.",
+   "start": 66.445,
+   "end": 66.751
+  },
+  {
+   "text": "Sea,",
+   "start": 67.38,
+   "end": 67.629
+  },
+  {
+   "text": "sledge",
+   "start": 67.629,
+   "end": 67.95
+  },
+  {
+   "text": "or",
+   "start": 67.95,
+   "end": 68.174
+  },
+  {
+   "text": "ice:",
+   "start": 68.174,
+   "end": 68.423
+  },
+  {
+   "text": "how",
+   "start": 68.423,
+   "end": 68.672
+  },
+  {
+   "text": "do",
+   "start": 68.672,
+   "end": 68.896
+  },
+  {
+   "text": "you",
+   "start": 68.896,
+   "end": 69.145
+  },
+  {
+   "text": "think",
+   "start": 69.145,
+   "end": 69.442
+  },
+  {
+   "text": "it",
+   "start": 69.442,
+   "end": 69.666
   },
   {
    "text": "got",
-   "start": 65.516,
-   "end": 65.765
+   "start": 69.666,
+   "end": 69.915
   },
   {
    "text": "there?",
-   "start": 65.765,
-   "end": 66.062
+   "start": 69.915,
+   "end": 70.212
   }
  ]
 }
