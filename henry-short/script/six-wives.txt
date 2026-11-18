@@ -12,8 +12,8 @@ years in, Henry had her executed.
 Wife three, Jane Seymour. She finally gave him a son, then died 12 days later.
 
 Wife four, Anne of Cleves. Henry met her and wanted out. Six months later,
-annulled, but she walked away with a palace, a castle, and a new title: the
-King's beloved sister.
+annulled, but she walked away with a palace, a manor, and a new title: the
+King's sister.
 
 Wife five, Catherine Howard. Executed.
 
@@ -22,3 +22,151 @@ Wife six, Catherine Parr. She outlived Henry.
 Divorced, beheaded, died. Divorced, beheaded, survived. But here's what the
 rhyme leaves out. Anne of Cleves outlived Henry and all five other wives. The
 wife he rejected was the last one standing.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Called below by short name. British History Online (BHO) pages and
+archive.org texts read on 2026-11-18. Archive.org quotes are from the
+scanned OCR text, so spelling is the edition's and small OCR noise is
+possible.
+
+- L&P: Letters and Papers, Foreign and Domestic, Henry VIII (HMSO), the
+  calendar of the state papers. vol. 6, ed. J. Gairdner (1882); vol. 12 pt 2
+  (1891); vol. 15 (1896). Read on BHO, www.british-history.ac.uk/letters-papers-hen8/.
+- Wriothesley: Charles Wriothesley, A Chronicle of England during the Reigns
+  of the Tudors, ed. W. D. Hamilton, Camden Society new series 11 (vol. 1,
+  1875) and 20 (vol. 2, 1877). Contemporary chronicle (Wriothesley was Windsor
+  Herald). archive.org/stream/chronicleengland00wriouoft and
+  archive.org/stream/chronicleofengla02wriouoft.
+- Machyn: The Diary of Henry Machyn, ed. J. G. Nichols, Camden Society 42
+  (1848). Contemporary diary. archive.org/stream/henrymachyncit00camduoft.
+- Nash 1789: Treadway Nash, "Observations on the Time of the Death and Place
+  of Burial of Queen Katharine Parr", Archaeologia 9 (1789), pp. 1-9, quoting
+  the Heralds' College record of her funeral.
+  archive.org/stream/archaeologiaormi0009jnic.
+- Statutes: Statutes of the Realm, vol. 3 (1817).
+  archive.org/stream/the-statutes-of-the-realm-3.
+
+1. "The fourth wife beat them all." / "Henry VIII had six wives, and the one
+   he couldn't wait to get rid of outlived every single one."
+   The hook (A4). True as stated: claims 5 and 8. "Six wives": Nash 1789,
+   p. 1, "Katharine Parr, sixth and last wife of Henry the Eighth". "Couldn't
+   wait to get rid of": claim 5 (he considered breaking off before the
+   wedding; annulled after six months). "Outlived every single one": claim 8.
+   "Beat them all" is the short's figure of speech for "outlived them all",
+   explained at once by the next sentence.
+
+2. "Wife one, Catherine of Aragon. 24 years of marriage, annulled."
+   Married June 1509: Wriothesley vol. 1, p. 6, "And in June followinge the
+   King was married to Queene Katherin, late wife of his brother Prince
+   Arthure". Annulled 23 May 1533: L&P vol. 6, no. 528, Cranmer to Henry,
+   "Today, 23 May, I have given sentence in your great and weighty cause";
+   no. 526, Bedyll to Cromwell, "Sentence of divorce was given this day, 23
+   May". June 1509 to May 1533 is 23 years 11 months; "24 years" rounds it.
+
+3. "Henry broke England away from Rome to do it."
+   Act in Restraint of Appeals, 24 Hen. VIII c. 12 (1533), Statutes vol. 3:
+   "Causes of Matrimony and Divorces ... shalbe frome hensforth harde
+   examined ... and det'myned within the Kinges Jurisdiccion and Auctoritie
+   and not elleswhere". L&P vol. 6, editor's preface, pp. xvii-xviii: Parliament
+   was "compelled to pass the measures devised by the King to cut off papal
+   interference in the matter of his divorce and marriage. It was enacted that
+   appeals to Rome in ecclesiastical causes should no longer be allowed." The
+   break had other causes too; the script says only that he did it to end the
+   marriage, which this supports.
+
+4. "Wife two, Anne Boleyn. She gave him a daughter, the future Elizabeth I.
+   Three years in, Henry had her executed."
+   Daughter: Wriothesley vol. 1, p. 22, "the viith daie of September, 1533
+   ... Queene Anne was brought to bedd of a faire daughter"; p. 23, named
+   "Elizabeth"; editor's note, "The Princess Elizabeth, afterwards Queen of
+   England". Marriage: L&P vol. 6, no. 661, Cranmer, 17 June 1533, "her
+   marriage, which took place about St. Paul's day last" (25 January 1533;
+   Wriothesley's editor notes 14 November 1532 as the other date given).
+   Executed: Wriothesley vol. 1, p. 41, "the 19th day of May, 1536 ... Anne
+   Bulleyn, Queene, was brought to execution". About three years and four
+   months (or three and a half) after either wedding date: "three years in".
+   "Had her executed": she was tried and condemned for treason; the script
+   makes no claim about the charges.
+
+5. "Wife three, Jane Seymour. She finally gave him a son, then died 12 days
+   later."
+   L&P vol. 12 pt 2, no. 889, Queen Jane's letter announcing "the birth of her
+   son ... Hampton Court, 12 Oct." (1537); no. 1060, "Queen Jane, mother of
+   Edward VI., who died at Hampton Court, 24 Oct." 12 to 24 October is 12
+   days. (Wriothesley's text gives "the 14 of October"; his editor corrects
+   it to the 24th. The script follows L&P.) "Finally" is the script's word
+   for the wait: the son came only with the third wife, after Elizabeth
+   (claim 4). It makes no count of earlier pregnancies and says nothing of
+   his illegitimate son.
+
+6. "Wife four, Anne of Cleves. Henry met her and wanted out. Six months
+   later, annulled"
+   Met: Wriothesley vol. 1, p. 109, "on New Year's daie at afternoune the
+   Kinges Grace ... came privelie to Rochester" (1 January 1540). Wanted out:
+   L&P vol. 15, no. 825, the King's own declaration, "when he saw her for the
+   first time at Rochester ... he liked her so ill he was sorry she had come
+   and he considered if it were possible to break off"; no. 823, Cromwell to
+   Henry, the King's words, "Nothing so well as she was spoken of".
+   Married: Wriothesley vol. 1, p. 111, "on Twelfe daie ... the Kinges
+   Majestie was maried to the said Queene Anne" (6 January 1540). Annulled:
+   L&P vol. 15, no. 860, Convocation, "they have found the marriage null ...
+   Westm., 9 July 1540"; confirmed by statute, 32 Hen. VIII c. 25, "the
+   mariage betwene his Highnes and the said lady Anne of Cleves is clerely
+   voide". 6 January to 9 July: six months. (An earlier wording, "met her
+   once", was dropped: he met her many times.)
+
+7. "but she walked away with a palace, a manor, and a new title: the King's
+   sister."
+   L&P vol. 15, no. 925, Henry to Anne, 12 July 1540: "We have appointed you
+   two houses, that at Richemont where you now lie, and the other at
+   Blechinglegh" (Richmond Palace; the manor of Bletchingley, Surrey), and he
+   is "content to repute you as our dearest sister"; her household was sworn
+   "to serve her as the King's sister"; no. 899, "She will be considered as
+   the King's sister". She signed herself "your Majesty's most humble sister".
+   "Title" is the plain word for that style. (An earlier wording, "a castle"
+   and "the King's beloved sister", was dropped: Hever appears only in an
+   18th-century county history, and "beloved" only in Henry's salutation.)
+
+8. "Wife five, Catherine Howard. Executed."
+   Wriothesley vol. 1, p. 134: "the 13th of February, beinge Monday, the sayd
+   Quene, Katharine Haward, was beheaded within the Tower on the grene" (1542).
+
+9. "Wife six, Catherine Parr. She outlived Henry."
+   Henry died 28 January 1547: Wriothesley vol. 1, p. 178, "the Kinges
+   Majestie Henrie the Eight ... deceased ... on Fridaie last, being the 28th
+   of Januarie". Parr died 5 September 1548: Nash 1789, p. 2, quoting the
+   heralds' record, "on Wenysdaye the 5 Septembre ... died the aforesaid
+   Ladye, late Quene Dowager, at the Castle of Sudley".
+
+10. "Divorced, beheaded, died. Divorced, beheaded, survived."
+   A traditional schoolroom rhyme, quoted as a rhyme, not as a claim; no
+   citable origin was found and none is claimed. "Divorced" is the rhyme's
+   word for the two annulments; contemporaries used it too (claim 2,
+   "Sentence of divorce").
+
+11. "But here's what the rhyme leaves out. Anne of Cleves outlived Henry and
+   all five other wives. The wife he rejected was the last one standing."
+   Anne died in July 1557 at Chelsea: Wriothesley vol. 2, p. 138, "This yeare
+   in Julie died the Ladie Ann of Cleve, at Chelsey ... the 5 of August her
+   corps were solemnly brought from thence to the Abbey of Westminster";
+   Machyn, p. 145, "The iij day of August my lade Anne of Cleyff ... cam from
+   Chelsey to be [buried] unto Westmynster". (The exact day, 16 July, is
+   supplied by both editors, not the original texts; the script gives no
+   day.) The other five died by 1548: Catherine of Aragon 1536 (Wriothesley
+   vol. 1, p. 33), Anne Boleyn 1536 (claim 4), Jane Seymour 1537 (claim 5),
+   Catherine Howard 1542 (claim 8), Catherine Parr 1548 (claim 9). Henry
+   1547 (claim 9). So she was the last of the six. "Rejected": claim 6.
+
+ON SCREEN (A6). Every label the two cuts of this VO draw.
+
+- catherine-of-aragon: "WIFE #1 · 1509" (marriage year, claim 2), "24"
+  (claim 2), "ANNULLED" (claim 2).
+- anne-of-cleves: "4TH" (claim 1), "WIFE #4 · 1540" (marriage year, claim
+  6), "ANNULLED" (claim 6), "Richmond Palace" and "Bletchingley" (the two
+  houses of claim 7, each drawn as a generic house icon, not a likeness),
+  "“The King’s Sister”" (claim 7: L&P vol. 15, nos. 899 and 925, "the
+  King's sister").
+- The characters are illustrations, drawn or after Holbein's portraits; no
+  dialogue is put in anyone's mouth.

@@ -28,7 +28,7 @@ export const illustratedKeys = (F: Beats) => ({
       // turns back to watch her leave with the loot
       { f: F.walked + 8, pose: { eyes: { v: "side" }, brows: { v: "default" }, mouth: { v: "default" } }, ease: "hold" },
       { f: F.palace + 2, pose: { head: { r: 5 }, brows: { v: "raised" } }, ease: "back" },
-      { f: F.castle + 2, pose: { head: { r: -4 } }, ease: "back" },
+      { f: F.manor + 2, pose: { head: { r: -4 } }, ease: "back" },
       // jaw drop on the title
       { f: F.kings + 2, pose: { eyes: { v: "wide" }, mouth: { v: "open" }, jaw: { y: 0 }, torso: { sy: 1 } }, ease: "hold" },
       { f: F.kings + 8, pose: { jaw: { y: 24 }, head: { r: 0 }, torso: { sy: 0.96 } }, ease: "back" },
@@ -56,7 +56,7 @@ export const illustratedKeys = (F: Beats) => ({
       { f: F.walked, pose: { torso: { x: 0 } } },
       { f: F.palace - 2, pose: { torso: { x: -40 } }, ease: "linear" },
       { f: F.palace, pose: { upperR: { r: -140 }, foreR: { r: -20 } }, ease: "back" },
-      { f: F.castle, pose: { upperL: { r: 140 }, foreL: { r: 20 } }, ease: "back" },
+      { f: F.manor, pose: { upperL: { r: 140 }, foreL: { r: 20 } }, ease: "back" },
       { f: F.kings, pose: { upperL: { r: 158 }, foreL: { r: 0 }, upperR: { r: -158 }, foreR: { r: 0 }, mouth: { v: "smile" }, eyes: { v: "closed" } }, ease: "back" },
       { f: F.sister, pose: {}, ease: "hold" },
       { f: F.sister + 10, pose: { ...anneHipsHands, mouth: { v: "smirk" }, eyes: { v: "default" } }, ease: "back" },

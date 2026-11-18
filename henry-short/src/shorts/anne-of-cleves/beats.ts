@@ -11,7 +11,7 @@ export const beats = (e: Edit) => ({
   annulled: e.at("annulled,"),
   walked: e.at("walked"),
   palace: e.at("palace,"),
-  castle: e.at("castle,"),
+  manor: e.at("manor,"),
   kings: e.at("king's"),
   sister: e.at("sister."),
   voEnd: e.voEnd,

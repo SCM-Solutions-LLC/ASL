@@ -109,7 +109,7 @@ const FIG = { w: 692, h: 482, zx: 345 / 692, zy: 385 / 482 };
 export const Grains: React.FC<{ L: Layout; t: number; zoom: number }> = ({ L, t, zoom }) => {
   const w = L.vertical ? 860 : 980;
   const h = (w * FIG.h) / FIG.w;
-  const left = 960 - w / 2;
+  const left = 960 - w / 2 + (L.vertical ? 0 : 60); // 16:9: room on the left for the tag
   const top = L.vertical ? 80 : 60;
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080 }}>

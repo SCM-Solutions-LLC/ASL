@@ -29,7 +29,7 @@ export const holbeinKeys = (F: Beats) => ({
       { f: F.annulled + 9, pose: { head: { r: 0 } } },
       // turns back as she leaves with the loot
       { f: F.palace + 2, pose: { head: { r: 6 }, jaw: { y: 6 } }, ease: "back" },
-      { f: F.castle + 2, pose: { head: { r: -5 }, jaw: { y: 0 } }, ease: "back" },
+      { f: F.manor + 2, pose: { head: { r: -5 }, jaw: { y: 0 } }, ease: "back" },
       // jaw hits the floor on the title
       { f: F.kings + 2, pose: { jaw: { y: 0 }, body: { sy: 1 } }, ease: "hold" },
       { f: F.kings + 8, pose: { jaw: { y: 26 }, head: { r: 0 }, body: { sy: 0.97 } }, ease: "back" },
@@ -62,7 +62,7 @@ export const holbeinKeys = (F: Beats) => ({
       { f: F.walked, pose: { skirt: { x: 0 } } },
       { f: F.palace - 2, pose: { skirt: { x: -110 } }, ease: "linear" },
       ...hop(F.palace),
-      ...hop(F.castle),
+      ...hop(F.manor),
       { f: F.kings - 2, pose: { skirt: { sx: 1 } } },
       { f: F.kings + 5, pose: { skirt: { sx: -1 } }, ease: "inOut" },
       { f: F.kings + 12, pose: { skirt: { sx: 1 } }, ease: "inOut" },

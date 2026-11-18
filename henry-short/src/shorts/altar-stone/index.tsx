@@ -148,6 +148,9 @@ const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size
 
 // Tag positions per crop: the 9:16 slice is only x 517–1403, so tags sit in the sea beside Britain;
 // the 16:9 frame has room to the right of the map.
+const Plate: React.FC<{ x: number; y: number; w: number; h: number; opacity: number }> = ({ x, y, w, h, opacity }) => (
+  <div style={{ position: "absolute", left: x, top: y, width: w, height: h, borderRadius: 8, background: "rgba(14,11,9,0.78)", opacity }} />
+);
 const at = (L: Layout, v: [number, number], w: [number, number]) => (L.vertical ? { x: v[0], y: v[1] } : { x: w[0], y: w[1] });
 
 const Pin: React.FC<{ P: Project; at: [number, number]; o: number; color?: string }> = ({ P, at: ll, o, color = INKC }) => {
@@ -300,8 +303,11 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
         <Push s={1}>
           <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} zoom={ease(ramp(f, F.tiny, F.sandstone - 8))} />
         </Push>
-        <Tag {...tagL} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
-        <Note {...at(L, [545, 700], [480, 700])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
+        {/* Dark plates: the zoom fills the frame with the figure, and the credit must stay legible. */}
+        <Plate {...at(L, [525, -166], [14, 44])} w={L.vertical ? 500 : 480} h={124} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} />
+        <Plate {...at(L, [531, 692], [456, 772])} w={370} h={86} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} />
+        <Tag {...at(L, [545, -150], [34, 60])} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
+        <Note {...at(L, [545, 700], [470, 780])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
@@ -327,7 +333,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
         </Push>
         <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
-        <Note {...at(L, [545, 880], [200, 860])} text="page and thin section illustrative" opacity={ramp(f, SHOTS.study[0] + 6, SHOTS.study[0] + 16)} size={34} />
+        <Note {...at(L, [545, -4], [120, 300])} text={L.vertical ? "page and thin section illustrative" : "page and thin section\nillustrative"} opacity={ramp(f, SHOTS.study[0] + 6, SHOTS.study[0] + 16)} size={34} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />

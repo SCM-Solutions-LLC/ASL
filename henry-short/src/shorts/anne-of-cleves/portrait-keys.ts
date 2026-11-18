@@ -25,7 +25,7 @@ export const portraitKeys = (F: Beats) => ({
     { f: F.annulled + 14, pose: { body: { y: 0 } }, ease: "back" },
     // watches the settlement leave
     { f: F.palace + 2, pose: { head: { r: -7 }, jaw: { y: 3 } }, ease: "back" },
-    { f: F.castle + 2, pose: { head: { r: -9 }, jaw: { y: 5 } }, ease: "back" },
+    { f: F.manor + 2, pose: { head: { r: -9 }, jaw: { y: 5 } }, ease: "back" },
     // jaw hits the floor on the title
     { f: F.kings + 2, pose: { jaw: { y: 5 } }, ease: "hold" },
     { f: F.kings + 10, pose: { jaw: { y: 11 }, head: { r: -4 } }, ease: "back" },
@@ -49,7 +49,7 @@ export const portraitKeys = (F: Beats) => ({
     // She takes the settlement and walks out of her own portrait — the one exit a hung figure has.
     { f: F.walked, pose: { body: { x: 0 } }, ease: "hold" },
     { f: F.palace, pose: { body: { x: 54 }, head: { r: 4 } }, ease: "out" },
-    { f: F.castle, pose: { body: { x: 118 }, head: { r: 6 } }, ease: "out" },
+    { f: F.manor, pose: { body: { x: 118 }, head: { r: 6 } }, ease: "out" },
     { f: F.kings + 8, pose: { body: { x: 470 }, head: { r: 8 } }, ease: "in" },
     { f: F.voEnd - 14, pose: { body: { x: 470 } }, ease: "hold" },
     // and leans back in for the last word
