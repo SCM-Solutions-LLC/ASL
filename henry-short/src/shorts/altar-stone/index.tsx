@@ -17,7 +17,7 @@ import { Boat, clamp01, Credit, ease, FilmGrain, Grains, LightLeak, Photo, ramp,
 const edit = makeEdit({
   alignment,
   cut: [{ from: "In 2024, Stonehenge's", to: "in every way.", tail: 0.5 }],
-  keyPhrases: [["traced", "to", "Scotland."], ["nobody"], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."]],
+  keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."]],
   // "?" does not end a caption page on its own, and the long lines need one break each.
   breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far"],
 });
@@ -25,8 +25,8 @@ const edit = makeEdit({
 const F = {
   traced: edit.at("traced"),
   scotland: edit.at("Scotland."),
-  now: edit.at("Now"),
-  exactly: edit.at("exactly"),
+  now: edit.at("Exactly"),
+  exactly: edit.at("still"),
   ages: edit.at("ages"),
   tiny: edit.at("tiny"),
   sandstone: edit.at("sandstone"),
