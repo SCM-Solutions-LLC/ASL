@@ -170,7 +170,7 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
               const [x, y] = P(...c.at);
               const show = ramp(f, F.many + i * 2, F.many + i * 2 + 8);
               const cross = c.ruled ? ramp(f, F.ruled + i * 2.5, F.ruled + i * 2.5 + 6) : 0;
-              const open = c.ruled ? 0 : ramp(f, F.outcrop + 4, F.outcrop + 14);
+              // No "?" on the dots left standing: the abstract names no remaining candidates.
               return (
                 <g key={i} opacity={show}>
                   <circle cx={x} cy={y} r={14} fill={c.ruled && cross > 0 ? "#6b5a48" : GOLD} stroke="#1d1208" strokeWidth={3} opacity={1 - 0.4 * cross} />
@@ -179,11 +179,6 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
                       <line x1={x - 16} y1={y - 16} x2={x + 16} y2={y + 16} />
                       <line x1={x + 16} y1={y - 16} x2={x - 16} y2={y + 16} />
                     </g>
-                  ) : null}
-                  {open > 0 ? (
-                    <text x={x} y={y - 26} textAnchor="middle" fontFamily={SERIF} fontSize={40} fill={INKC} opacity={open} style={{ textShadow: "0 2px 8px #000" }}>
-                      ?
-                    </text>
                   ) : null}
                 </g>
               );
@@ -196,10 +191,10 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
         <div style={{ position: "absolute", left: nx - 40, top: ny - 78, fontFamily: SERIF, fontSize: 130, color: INKC, opacity: unknown, textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>?</div>
       ) : null}
       {!inMap4 ? <Note x={sx + 18} y={sy + 6} text="Stonehenge" opacity={1} /> : null}
-      {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
+      {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank (approx.)" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
 
       {/* map1: the hook. */}
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub="2024 · NE Scotland" from={F.scotland} to={F.now} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"2024 · NE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
       <Tag {...at(L, [1010, 40], [1300, 140])} text="EXACT SOURCE" sub="unknown" from={F.exactly} to={SHOTS.map1[1]} />
       {/* map2: grain ages, distance, sea. */}
       <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland (area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
@@ -208,11 +203,11 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub="route not known" from={F.suggested + 10} to={SHOTS.map2[1]} />
       {/* map3: the ice model. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="ICE MODEL" sub={"part of the way,\nat most"} from={F.part} to={SHOTS.map3[1]} />
-      {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={24} /> : null}
+      {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={24} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
       <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} />
-      {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrop positions illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={24} /> : null}
+      {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={24} /> : null}
     </div>
   );
 };
@@ -240,7 +235,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
 
       <Layer o={vis(f, SHOTS.grains)}>
         <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} lit={ramp(f, F.tiny + 6, F.tiny + 16)} />
-        <Tag {...tagL} text="MINERAL GRAINS" sub={"10–40 µm wide\nillustration"} from={F.tiny + 4} />
+        <Tag {...tagL} text="MINERAL GRAINS" sub={"typically 10–40 µm wide\nillustration, not to scale"} from={F.tiny + 4} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
