@@ -1,18 +1,21 @@
 In 2024, Stonehenge's Altar Stone was traced to Scotland. Exactly where it came from is still unknown.
 The ages of tiny mineral grains inside it matched sandstone in the northeast.
 If so, how did six tonnes travel more than seven hundred kilometres?
-The 2024 team suggested it went by sea.
-But no late Stone Age boat has been found in Britain, and another study doubts one could carry six tonnes.
-Overland, on a sledge, that study estimates about eight months of hauling.
-A glacier? A 2026 ice model says ice could have carried it part of the way, at most.
-Then, months later, a new study, including three of the 2024 team, looked closer.
+Clarke and colleagues, who traced it, suggested it went by sea.
+But no late Stone Age boat has been found in Britain, and a study by Parker Pearson and colleagues doubts one could carry six tonnes.
+Overland, on a sledge, they estimate about eight months of hauling.
+A glacier? A 2026 ice model by Clarke and colleagues says ice could have carried it part of the way, at most.
+Then, months later, Pirrie and colleagues, including three of the 2024 team, looked closer.
 Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far has been shown to match it in every way.
 Six tonnes, from a spot no one has pinned down, by a route no one knows. Sea, sledge or ice: how do you think it got there?
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-Four papers. Called below by first author:
+Four papers. Called below by first author, and named the same way in the
+voice-over ("Clarke and colleagues") and on screen ("Clarke et al."). The
+names are first authors only: the script never says who led a team, because
+an author list does not show that.
 
 - Clarke 2024: Clarke, Kirkland, Bevins, Pearce, Glorie & Ixer, "A Scottish
   provenance for the Altar Stone of Stonehenge", Nature 632, 570-575 (2024;
@@ -87,13 +90,14 @@ neither paper claims.
    was transported to the site, is unknown". So the script gives no date for
    the journey.
 
-4. "The 2024 team suggested it went by sea." The 2024 team = Clarke 2024.
+4. "Clarke and colleagues, who traced it, suggested it went by sea." Clarke
+   and colleagues = Clarke 2024, the paper behind claim 1 ("who traced it").
    Clarke 2024, abstract: "The difficulty of long-distance overland transport
    of such massive cargo from Scotland, navigating topographic barriers,
    suggests that it was transported by sea."
 
-5. "But no late Stone Age boat has been found in Britain, and another study
-   doubts one could carry six tonnes."
+5. "But no late Stone Age boat has been found in Britain, and a study by
+   Parker Pearson and colleagues doubts one could carry six tonnes."
    Parker Pearson 2024, "How was the Altar Stone transported?": "Although no
    boats are known from the Late Neolithic in Britain or Europe ..."; "The
    earliest known boats in Britain have been found ... at Ferriby. The earliest
@@ -103,12 +107,12 @@ neither paper claims.
    carry a 6-tonne stone in coastal waters." "One" = a boat of that period
    (the Early Bronze Age boats "and their Late Neolithic precursors"). "Late Stone Age" is the plain
    rendering of "Late Neolithic" (Neolithic = New Stone Age). "Doubts" matches
-   "unlikely". "Another study" is accurate as a description of the paper, but
-   note that three of its six authors (Bevins, Ixer, Pearce) also wrote Clarke
-   2024.
+   "unlikely". "Parker Pearson and colleagues": Parker Pearson is its first
+   author. Note that three of its six authors (Bevins, Ixer, Pearce) also
+   wrote Clarke 2024.
 
-6. "Overland, on a sledge, that study estimates about eight months of
-   hauling."
+6. "Overland, on a sledge, they estimate about eight months of hauling."
+   "They" = Parker Pearson and colleagues (claim 5).
    Parker Pearson 2024: "necessitating the use of a suitably robust wooden
    sledge ... sliding on wooden 'rails'"; "such a journey with a large and
    heavy sledge could take perhaps four times today's time of under two months
@@ -116,8 +120,10 @@ neither paper claims.
    Stonehenge." "About" stands for "perhaps ... or so": it is an estimate, and
    the script says so.
 
-7. "A glacier? A 2026 ice model says ice could have carried it part of the
-   way, at most."
+7. "A glacier? A 2026 ice model by Clarke and colleagues says ice could have
+   carried it part of the way, at most." Clarke is the first author of Clarke
+   2026, as of Clarke 2024; the script does not claim they are the same
+   person or the same team.
    Clarke 2026, abstract: "we combine sandstone provenance analysis with ice
    flow modelling"; "Glacial dispersal to Dogger Bank would reduce the
    anthropogenic transport distance required to Stonehenge from 700 km to 400
@@ -133,8 +139,9 @@ neither paper claims.
    glacial transport can be rejected", but the script uses the narrower 2026
    wording, which is based on an actual ice model.
 
-8. "Then, months later, a new study, including three of the 2024 team,
-   looked closer."
+8. "Then, months later, Pirrie and colleagues, including three of the 2024
+   team, looked closer." Pirrie is the first author of Pirrie 2026; "the
+   2024 team" = the authors of Clarke 2024.
    Pirrie 2026 (November 2026) came about five months after Clarke 2026 (4 June
    2026). Its authors include Bevins, Ixer and Pearce, all three of whom are
    authors of Clarke 2024. "Looked closer" stands for the abstract's "detailed
@@ -190,7 +197,8 @@ that repeat a spoken claim cite its number above.
   it at this map's scale (about 1 km per pixel), and the label says
   "approx.". The same figure draws sea transport south down both coasts,
   which the two dashed routes follow (claim 4).
-- "TRACED HERE / 2024 · NE Scotland (area approx.)": claim 1. The dashed
+- "TRACED HERE / Clarke et al. / Nature, 2024 / NE Scotland (area approx.)":
+  claim 1. The dashed
   ellipse around Caithness, Orkney and the Moray Firth is approximate, as the
   label says; it does not trace the Orcadian Basin's edge.
 - "?" and "EXACT SOURCE / unknown": claim 1.
@@ -206,37 +214,39 @@ that repeat a spoken claim cite its number above.
 - "6 TONNES" and "700+ KM / if from NE Scotland": claim 3. The dashed straight
   line runs from the NE Scotland marker to Stonehenge, about 800 km on this
   map, consistent with "at least 750 km".
-- "BY SEA? / route not known", two dashed routes, east and west coasts: claim
+- "BY SEA? / route not known / Clarke et al. 2024", two dashed routes, east and west coasts: claim
   4. Clarke 2024 suggests sea transport but names no route, so both coasts are
   drawn and the label says the route is not known.
 - "NO BOAT FOUND / from the late Stone Age, in Britain" and "A 2024 STUDY /
-  boats of the time: unlikely to carry six tonnes": claim 5. The dashed boat
+  Parker Pearson et al. / Archaeology International / boats of the time:
+  unlikely to carry six tonnes": claim 5. The dashed boat
   outline is drawn as absent, with a "?".
-- "~8 MONTHS / overland estimate, 2024 study" and "illustration of a
+- "~8 MONTHS / overland estimate / Parker Pearson et al. 2024" and "illustration of a
   hypothesis · crew size not known": claim 6. The slab is drawn at 4.9 m by
   0.5 m against ~1.7 m figures (Clarke 2024 dimensions, claim 3); the sledge
   on timber rails follows Parker Pearson 2024 ("a suitably robust wooden
-  sledge ... sliding on wooden 'rails'"). "2024 study" = Parker Pearson 2024,
-  published 31 December 2024 (the issue is dated January 2025).
-- Ice map, "ICE MODEL / part of the way, at most", "ice extent and path
+  sledge ... sliding on wooden 'rails'"). Parker Pearson 2024 was published
+  31 December 2024 (the issue is dated January 2025).
+- Ice map, "ICE MODEL / Clarke et al. 2026 / Journal of Quaternary Science /
+  part of the way, at most", "ice extent and path
   illustrative", "Dogger Bank (approx.)": claim 7. Clarke 2026 abstract:
   glacial dispersal to Dogger Bank would cut the human leg "from 700 km to
   400 km". The pin is the Marine Regions gazetteer position for Dogger Bank
   (MRGID 2395, 54.833 N 2.333 E, marineregions.org); the bank is far larger
   than a pin, and no distance is drawn to it. The ice outline and path are
   sketches, as the label says.
-- "Journal of the Geological Society / 2026" and "A NEW STUDY / three of the
-  2024 team among its authors": claim 8 (Pirrie 2026).
+- "Journal of the Geological Society / 2026" and "A NEW STUDY / Pirrie et al.
+  2026 / three of the 2024 team among its authors": claim 8 (Pirrie 2026).
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",
   "NO FULL MATCH / shown in any outcrop examined / exact source unknown":
   claim 9 and claim 1. The dots, their number and their positions are
   illustrative, as the label says; the abstract gives no counts. The dots
   left uncrossed carry no mark, because the abstract names no surviving
   candidate.
-- Recap map, "SEA? / 2024 team", "SLEDGE? / 2024 study", "ICE? / 2026 model:
-  part of the way", "routes illustrative", the "?" over NE Scotland and the
-  same routes as before (both sea routes, the straight dashed line, the ice
-  and people paths): claim 10, restating claims 1, 4, 6 and 7. "2024 team" =
-  Clarke 2024; "2024 study" = Parker Pearson 2024; "2026 model" = Clarke 2026.
+- Recap map, "SEA? / Clarke et al. 2024", "SLEDGE? / Parker Pearson et al.
+  2024", "ICE? / Clarke et al. 2026: part of the way", "routes illustrative",
+  the "?" over NE Scotland and the same routes as before (both sea routes, the
+  straight dashed line, the ice and people paths): claim 10, restating claims
+  1, 4, 6 and 7. Each label names its paper by first author.
   The lines are the earlier map's lines, drawn again; the label says they are
   illustrative.
