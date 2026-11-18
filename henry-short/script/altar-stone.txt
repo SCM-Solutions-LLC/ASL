@@ -27,16 +27,23 @@ Four papers. Called below by first author:
 - Clarke 2026: Clarke, Veness, Kirkland, Clark, Gandy, Emery, Bradley, Ely &
   Ádám, "From Highlands to Henge: Refining the Provenance and Transport
   Pathways of Stonehenge's Altar Stone", Journal of Quaternary Science
-  (online 4 June 2026), doi:10.1002/jqs.70080. ONLY THE ABSTRACT WAS READ (the
-  publisher's own abstract, as deposited with Crossref, read on 2026-11-18;
-  the Wiley full text sits behind a bot challenge this sandbox cannot pass).
+  (online 4 June 2026), doi:10.1002/jqs.70080. Open access (CC BY 4.0). Full
+  text (HTML at onlinelibrary.wiley.com, fetched through Firecrawl) read on
+  2026-11-18.
 - Pirrie 2026: Pirrie, Bevins, Ixer, Pearce, Turner, Power, Hillier, Morton,
   Saunders, Andò, Barbarano, Horbury & Price, "Searching for the origin of the
   Stonehenge Altar Stone: new sedimentological, petrographical, mineralogical,
   geochemical and isotopic constraints", Journal of the Geological Society
-  (November 2026), doi:10.1144/jgs2026-090. ONLY THE ABSTRACT WAS READ (the
-  same way, on 2026-11-18; the Lyell Collection full text sits behind the same
-  kind of bot challenge).
+  (November 2026), doi:10.1144/jgs2026-090. Full text (HTML at
+  lyellcollection.org, fetched through Firecrawl) read on 2026-11-18. Its
+  figures are under the Lyell Collection user licence, not CC BY, so none is
+  reused on screen.
+
+Pirrie 2026 also notes (Discussion) that the 2024 grain ages "do not exclude
+a potential source for the Altar Stone from the Carboniferous", but adds that
+the isotope data "indicate an ORS provenance is more likely than a
+Carboniferous source". The script names no rock unit beyond what claims 1, 2
+and 9 say, so neither reading is contradicted.
 
 The two 2026 papers disagree about how strong the Scottish match is. Clarke
 2026 calls Caithness sandstone "the closest match"; Pirrie 2026 says "the exact
@@ -127,7 +134,10 @@ neither paper claims.
    anthropogenic transport would have remained necessary." "Part of the way, at
    most" = "may have provided an intermediate stage ... alone cannot account".
    The abstract adds a further problem (Dogger Bank
-   was flooded before the stone likely arrived); the script leaves that out
+   was flooded before the stone likely arrived); the full text's discussion
+   says the same: glacial transport "provides only an intermediate stage in
+   the stone's history, reducing the overall anthropogenic transport distance
+   but not removing the need for substantial later human agency". The script leaves the flooding out
    because it only weakens the glacier idea further. Parker Pearson 2024 goes
    further, "Clarke et al. (2024) have discussed why theories involving Ice Age
    glacial transport can be rejected", but the script uses the narrower 2026
@@ -156,7 +166,11 @@ neither paper claims.
    Basin of northeast Scotland (claim 2). The same abstract says the earlier
    grain dating "supports a Laurentian source for the heavy minerals", so it
    narrows the source down rather than overturning the 2024 result. The script
-   says only what is above.
+   says only what is above. The full text's Conclusions agree: "To date, no
+   outcrop area of the ORS examined can be shown to have the same suite of
+   lithological characteristics as documented from the Altar Stone", and
+   other ORS areas "can all so far be excluded when all aspects of the
+   multi-proxy analysis are considered".
 
 10. "Six tonnes, from a spot no one has pinned down, by a route no one knows.
    Sea, sledge or ice: how do you think it got there?"
