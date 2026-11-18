@@ -54,12 +54,14 @@ cells", "mostly blood") hold for any body in either paper, so they say "your".
    Total bacterial mass ~0.2 kg (Sender). They are that light because a
    bacterium is on average far smaller than a human cell; the screen says "far
    smaller on average". Sender revises earlier statements of 1-3 kg (1-3% of
-   body mass), citing a 2012 NIH news release.
+   body mass), citing an NIH news release (its ref. 25).
 
 5. "Most of them are red blood cells."
    Sender: "The cell count is dominated by red blood cells (84%)", 2.5e13 of
    3.0e13. Hatton: non-nucleated blood cells (red cells and platelets) ≈29 of
-   ≈36 trillion. "Most" holds on both; the 84% figure is not spoken.
+   ≈36 trillion; its Dataset S1 gives red cells alone at about 26.5 of 36.5
+   trillion for the man and 19.8 of 27.8 for the woman. "Most" holds on both
+   papers and for both bodies; the 84% figure is not spoken.
 
 6. "By count, your cells are mostly blood."
    True by count only, and the line says so. By MASS it is the other way round:
