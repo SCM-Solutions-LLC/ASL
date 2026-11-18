@@ -1,0 +1,73 @@
+The Altar Stone at the heart of Stonehenge came from northeast Scotland.
+It is a six-tonne slab of sandstone, nearly five metres long.
+Several of Stonehenge's bluestones came from hills in west Wales, about two hundred and twenty-five kilometres away.
+For about a hundred years, the Altar Stone was thought to come from Wales too.
+Then geologists dated tiny mineral grains inside it.
+Their ages matched old sandstone in northeast Scotland, at least seven hundred and fifty kilometres away.
+How six tonnes made that trip is unknown. The researchers think it probably went by sea.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Primary paper, read at the publisher on 2026-11-17 (nature.com, fetched through
+the Firecrawl scraper because this sandbox cannot reach nature.com directly):
+Clarke, Kirkland, Bevins, Pearce, Glorie & Ixer, "A Scottish provenance for the
+Altar Stone of Stonehenge", Nature 632, 570-575 (2024; online 14 August 2024),
+doi:10.1038/s41586-024-07652-1. Called "Clarke" below.
+
+1. "The Altar Stone at the heart of Stonehenge came from northeast Scotland."
+   Clarke, abstract: "Detrital age comparisons to sedimentary packages
+   throughout Britain and Ireland reveal a remarkable similarity to the Old Red
+   Sandstone of the Orcadian Basin in northeast Scotland." Title: "A Scottish
+   provenance for the Altar Stone". Body: "the central megalith of Stonehenge,
+   the Altar Stone (Stone 80)". The script says "northeast Scotland" and no
+   closer: the paper names a basin, not a quarry or outcrop.
+
+2. "It is a six-tonne slab of sandstone, nearly five metres long."
+   Clarke, abstract: "the Altar Stone, a 6 tonne shaped block"; "the central
+   recumbent sandstone megalith". Body: "measuring 4.9 x 1.0 x 0.5 m".
+
+3. "Several of Stonehenge's bluestones came from hills in west Wales, about two
+   hundred and twenty-five kilometres away."
+   Clarke: "the igneous bluestones were brought around 225 km from the Mynydd
+   Preseli to Stonehenge" (citing Parker Pearson et al. 2020). Clarke also
+   calls the Altar Stone "the largest of the bluestones". Mynydd Preseli is in
+   Pembrokeshire, west Wales; Clarke places the Mill Bay site "close to the
+   Mynydd Preseli source of the doleritic and rhyolitic bluestones". "Several"
+   is deliberately vague: the script does not count the Welsh stones.
+
+4. "For about a hundred years, the Altar Stone was thought to come from Wales
+   too."
+   Clarke: "An early proposed source for the Altar Stone from Mill Bay,
+   Pembrokeshire ... strongly influenced the notion of a sea transport route
+   via the Bristol Channel", citing H. H. Thomas, "The source of the stones of
+   Stonehenge", Antiquaries Journal 3, 239-260 (1923),
+   doi:10.1017/S0003581500005096. After Mill Bay was ruled out, "a source from
+   elsewhere in the ORS of the Anglo-Welsh Basin was still considered likely"
+   (Bevins et al., J. Archaeol. Sci. 120, 105188 (2020)), until Bevins et al.
+   2023 (J. Archaeol. Sci. Rep. 51, 104215) showed "the Anglo-Welsh Basin is
+   highly unlikely to be the source". 1923 to 2023 is a hundred years. Thomas
+   and the two Bevins papers were not opened; this entry rests on Clarke's
+   account of them.
+
+5. "Then geologists dated tiny mineral grains inside it."
+   Clarke: "we present in situ U-Pb, Lu-Hf and trace element isotopic data for
+   zircon, apatite and rutile from two fragments of the Altar Stone"; the grains
+   are "typically 10-40 µm wide".
+
+6. "Their ages matched old sandstone in northeast Scotland, at least seven
+   hundred and fifty kilometres away."
+   Clarke, abstract (claim 1), and: "Such a provenance implies that the Altar
+   Stone ... was sourced at least 750 km from its current location." "Old
+   sandstone" stands for the Old Red Sandstone, which is Devonian. Not said
+   aloud: "old" is a plain word here, not a date.
+
+7. "How six tonnes made that trip is unknown. The researchers think it probably
+   went by sea."
+   Clarke, abstract: "The difficulty of long-distance overland transport of such
+   massive cargo from Scotland, navigating topographic barriers, suggests that
+   it was transported by sea." Publisher summary: "probably by sea". The paper
+   gives no direct evidence of the route, so "unknown" stands.
+
+Not used: the Pirrie/Bevins 2026 follow-up named in the topic slate. It was seen
+only in a news summary and is not needed for anything spoken.
