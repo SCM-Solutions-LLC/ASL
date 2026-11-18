@@ -28,52 +28,108 @@ const ROWS: Row[] = [
 // first version of this scene read as one figure copied down a line.
 const GAIT = ROWS.map((r, ri) => {
   const next = rng(91 + ri * 17);
-  return Array.from({ length: r.count }, () => ({ rate: 0.8 + next() * 0.4, phase: next() * Math.PI * 2, lean: 22 + next() * 12, jitter: next() * 10 - 5 }));
+  return Array.from({ length: r.count }, () => ({
+    rate: 0.8 + next() * 0.4,
+    phase: next() * Math.PI * 2,
+    lean: 22 + next() * 12,
+    jitter: next() * 10 - 5,
+    // Bodies differ: build and height, hair, beard, how long the tunic is, and whether a cloak hangs.
+    build: 0.85 + next() * 0.4,
+    tall: 0.92 + next() * 0.16,
+    hair: Math.floor(next() * 3), // 0 cropped, 1 long and loose, 2 tied back
+    beard: next() < 0.55,
+    hem: 0.7 + next() * 0.6,
+    cloak: next() < 0.3,
+  }));
 });
 
-const Hauler: React.FC<{ x: number; y: number; s: number; f: number; rate: number; phase: number; lean: number; hand: [number, number]; color: string }> = ({
-  x,
-  y,
-  s,
-  f,
-  rate,
-  phase,
-  lean,
-  hand,
-  color,
-}) => {
-  const th = (f * rate * Math.PI * 2) / 44 + phase;
+type Look = (typeof GAIT)[number][number];
+const pts = (p: [number, number][]) => p.map((q) => q.map((n) => n.toFixed(1)).join(",")).join(" ");
+// A hauler in silhouette: shaped limbs, hands and feet, a belted tunic with an uneven hem, a head with
+// hair and sometimes a beard or a cloak. Facing left, the way the team pulls.
+const Hauler: React.FC<{ x: number; y: number; s: number; f: number; g: Look; hand: [number, number]; color: string }> = ({ x, y, s: s0, f, g, hand, color }) => {
+  const s = s0 * g.tall;
+  const b = g.build;
+  const th = (f * g.rate * Math.PI * 2) / 44 + g.phase;
   const swing = Math.sin(th);
   const bob = -Math.abs(Math.cos(th)) * 2.4 * s;
+  // Each heave dips the body: lean deepens on the push-off of every stride.
+  const a = ((g.lean + Math.sin(th * 2) * 3 + Math.max(0, swing) * 3) * Math.PI) / 180;
   const hip: [number, number] = [x, y - 62 * s + bob];
-  const a = ((lean + Math.sin(th * 2) * 2) * Math.PI) / 180;
-  const sh: [number, number] = [hip[0] - Math.sin(a) * 50 * s, hip[1] - Math.cos(a) * 50 * s];
-  const head: [number, number] = [sh[0] - Math.sin(a) * 15 * s, sh[1] - Math.cos(a) * 15 * s];
-  const foot = (k: number): [number, number] => [x + (-6 + 20 * k * swing) * s, y];
-  const knee = (ft: [number, number]): [number, number] => [(hip[0] + ft[0]) / 2 - 7 * s, (hip[1] + ft[1]) / 2];
-  const leg = (ft: [number, number]) => [hip, knee(ft), ft].map((p) => p.join(",")).join(" ");
-  const elbow: [number, number] = [(sh[0] + hand[0]) / 2 + 4 * s, (sh[1] + hand[1]) / 2 + 6 * s];
+  const along = (p: [number, number], d: number): [number, number] => [p[0] - Math.sin(a) * d * s, p[1] - Math.cos(a) * d * s];
+  const sh = along(hip, 50);
+  const neck = along(hip, 56);
+  const head = along(hip, 66);
+  const foot = (k: number): [number, number] => [x + (-6 + 22 * k * swing) * s, y];
+  const knee = (ft: [number, number]): [number, number] => [(hip[0] + ft[0]) / 2 - 9 * s, (hip[1] + ft[1]) / 2 + 1 * s];
+  // A limb as a tapered quad pair, thick at the top, so it reads as flesh rather than a line.
+  const limb = (p0: [number, number], p1: [number, number], p2: [number, number], w0: number, w1: number, w2: number) => {
+    const n = (u: [number, number], v: [number, number]) => {
+      const dx = v[0] - u[0], dy = v[1] - u[1], l = Math.hypot(dx, dy) || 1;
+      return [-dy / l, dx / l];
+    };
+    const [ax, ay] = n(p0, p1), [bx, by] = n(p1, p2);
+    const L: [number, number][] = [
+      [p0[0] + ax * w0, p0[1] + ay * w0], [p1[0] + (ax + bx) * 0.5 * w1, p1[1] + (ay + by) * 0.5 * w1], [p2[0] + bx * w2, p2[1] + by * w2],
+      [p2[0] - bx * w2, p2[1] - by * w2], [p1[0] - (ax + bx) * 0.5 * w1, p1[1] - (ay + by) * 0.5 * w1], [p0[0] - ax * w0, p0[1] - ay * w0],
+    ];
+    return <polygon points={pts(L)} />;
+  };
+  const leg = (k: number) => {
+    const ft = foot(k);
+    const kn = knee(ft);
+    return (
+      <g key={k}>
+        {limb(hip, kn, [ft[0], ft[1] - 3 * s], 7 * s * b, 5 * s * b, 3.2 * s)}
+        {/* Foot, toes forward (left). */}
+        <path d={`M${ft[0] + 4 * s},${y} Q${ft[0] + 3 * s},${y - 6 * s} ${ft[0] - 2 * s},${y - 5 * s} L${ft[0] - 11 * s},${y - 1.5 * s} Q${ft[0] - 12 * s},${y} ${ft[0] - 9 * s},${y} Z`} />
+      </g>
+    );
+  };
+  const elbow: [number, number] = [(sh[0] + hand[0]) / 2 + 3 * s, (sh[1] + hand[1]) / 2 + 7 * s];
+  // Torso: a curved back and chest, wider with build, then a tunic skirt with a ragged hem.
+  const back = along(hip, 30);
+  const torso: [number, number][] = [
+    [sh[0] - 7 * s * b, sh[1] + 4 * s],
+    [back[0] - 9 * s * b, back[1] + 2 * s],
+    [hip[0] - 9 * s * b, hip[1] + 4 * s],
+    [hip[0] + 8 * s * b, hip[1] + 2 * s],
+    [back[0] + 9 * s * b, back[1] - 3 * s],
+    [sh[0] + 9 * s * b, sh[1] - 3 * s],
+  ];
+  const hemY = hip[1] + (14 + 10 * g.hem) * s;
+  const sway = swing * 4 * s;
+  const skirt: [number, number][] = [
+    [hip[0] - 10 * s * b, hip[1] + 2 * s],
+    [hip[0] + 9 * s * b, hip[1]],
+    [hip[0] + 13 * s * b + sway, hemY - 2 * s],
+    [hip[0] + 4 * s + sway, hemY + 2 * s],
+    [hip[0] - 4 * s + sway, hemY - 1 * s],
+    [hip[0] - 13 * s * b + sway, hemY + 1 * s],
+  ];
+  const tail = (k: number): [number, number] => [head[0] + (10 + k * 4) * s + Math.sin(th + k) * 1.5 * s, head[1] + (2 + k * 9) * s];
   return (
-    <g stroke={color} strokeLinecap="round" strokeLinejoin="round" fill="none">
-      <polyline points={leg(foot(1))} strokeWidth={10 * s} />
-      <polyline points={leg(foot(-1))} strokeWidth={10 * s} />
-      {/* A belted tunic: a tapered torso and a short skirt read as a person, a single line as a stick. */}
-      <polygon
-        points={[
-          [sh[0] - 9 * s, sh[1] + 2 * s],
-          [sh[0] + 8 * s, sh[1] - 2 * s],
-          [hip[0] + 8 * s, hip[1] + 12 * s],
-          [hip[0] - 9 * s, hip[1] + 13 * s],
-        ].map((p) => p.join(",")).join(" ")}
-        fill={color}
-        strokeWidth={5 * s}
-      />
-      <polyline points={[sh, elbow, hand].map((p) => p.join(",")).join(" ")} strokeWidth={7.5 * s} />
-      <circle cx={head[0]} cy={head[1]} r={10 * s} fill={color} stroke="none" />
+    <g fill={color} stroke={color} strokeLinejoin="round" strokeLinecap="round" strokeWidth={1.2 * s}>
+      {g.cloak ? <path d={`M${sh[0] + 6 * s},${sh[1]} Q${hip[0] + 26 * s + sway * 2},${hip[1] - 10 * s} ${hip[0] + 22 * s + sway * 3},${hip[1] + 16 * s} L${hip[0] + 6 * s},${hip[1] + 4 * s} Z`} opacity={0.92} /> : null}
+      {leg(-1)}
+      {leg(1)}
+      <polygon points={pts(torso)} />
+      <polygon points={pts(skirt)} />
+      {/* Belt. */}
+      <line x1={hip[0] - 9 * s * b} y1={hip[1] + 3 * s} x2={hip[0] + 8 * s * b} y2={hip[1] + 1 * s} strokeWidth={2.5 * s} stroke="#000" strokeOpacity={0.25} />
+      {limb(sh, elbow, hand, 4.4 * s * b, 3.4 * s, 2.6 * s)}
+      <ellipse cx={hand[0]} cy={hand[1]} rx={3.6 * s} ry={3 * s} />
+      {limb(neck, neck, head, 3.6 * s, 3.6 * s, 3.4 * s)}
+      {/* Head, chin down into the effort; slightly longer front to back than a ball. */}
+      <ellipse cx={head[0]} cy={head[1]} rx={8.6 * s} ry={9.8 * s} transform={`rotate(${(-a * 180) / Math.PI} ${head[0]} ${head[1]})`} />
+      <path d={`M${head[0] - 8 * s},${head[1] + 1 * s} L${head[0] - 11 * s},${head[1] + 3 * s} L${head[0] - 8 * s},${head[1] + 5 * s} Z`} />
+      {g.beard ? <path d={`M${head[0] - 8 * s},${head[1] + 4 * s} Q${head[0] - 9 * s},${head[1] + 13 * s} ${head[0] - 2 * s},${head[1] + 12 * s} Q${head[0] + 2 * s},${head[1] + 8 * s} ${head[0]},${head[1] + 5 * s} Z`} /> : null}
+      {g.hair === 1 ? <path d={`M${head[0] - 2 * s},${head[1] - 9 * s} Q${head[0] + 12 * s},${head[1] - 8 * s} ${tail(1)[0]},${tail(1)[1]} L${tail(2)[0] - 3 * s},${tail(2)[1]} Q${head[0] + 4 * s},${head[1] + 6 * s} ${head[0] + 3 * s},${head[1]} Z`} /> : null}
+      {g.hair === 2 ? <ellipse cx={tail(0)[0]} cy={tail(0)[1] - 2 * s} rx={4 * s} ry={3.5 * s} /> : null}
+      {g.hair !== 0 ? <path d={`M${head[0] - 7 * s},${head[1] - 6 * s} Q${head[0]},${head[1] - 13 * s} ${head[0] + 8 * s},${head[1] - 5 * s}`} fill="none" strokeWidth={3 * s} /> : null}
     </g>
   );
 };
-
 const Bird: React.FC<{ x: number; y: number; f: number; k: number }> = ({ x, y, f, k }) => {
   const w = Math.sin(f * 0.35 + k) * 6;
   return <path d={`M${x - 11},${y + w} Q${x - 5},${y - 3} ${x},${y} Q${x + 5},${y - 3} ${x + 11},${y + w}`} stroke="#2a1410" strokeWidth={2.4} fill="none" />;
@@ -159,7 +215,7 @@ const Team: React.FC<{ row: Row; gait: (typeof GAIT)[number]; tow: [number, numb
       <polyline points={[tow, ropeAt(lead - row.gap * 0.5), [far, handY]].map((p) => p.join(",")).join(" ")} stroke={row.color} strokeWidth={3.2 * s} fill="none" opacity={0.9} />
       {gait.map((g, i) => {
         const x = lead - i * row.gap + g.jitter;
-        return <Hauler key={i} x={x} y={row.ground} s={s} f={f} rate={g.rate} phase={g.phase} lean={g.lean} hand={ropeAt(x - 30 * s)} color={row.color} />;
+        return <Hauler key={i} x={x} y={row.ground} s={s} f={f} g={g} hand={ropeAt(x - 30 * s)} color={row.color} />;
       })}
     </>
   );

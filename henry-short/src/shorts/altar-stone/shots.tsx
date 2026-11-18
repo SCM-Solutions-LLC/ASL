@@ -102,14 +102,20 @@ const Section: React.FC<{ cx: number; cy: number; r: number; lit: number; seedSh
   </svg>
 );
 
-export const Grains: React.FC<{ L: Layout; t: number; lit: number }> = ({ L, t, lit }) => {
-  const r = L.vertical ? 380 : 330;
-  const cy = L.vertical ? 420 : 450;
+// The real thing: Clarke 2024, Fig. 2 (Nature, CC BY 4.0), the Altar Stone's two thin sections with
+// dated zircon, apatite and rutile grains. Cropped above the legend; credited on screen. The camera
+// starts on both sections and closes on the 1,092 Ma zircon as the line says "tiny".
+const FIG = { w: 692, h: 482, zx: 345 / 692, zy: 385 / 482 };
+export const Grains: React.FC<{ L: Layout; t: number; zoom: number }> = ({ L, t, zoom }) => {
+  const w = L.vertical ? 860 : 980;
+  const h = (w * FIG.h) / FIG.w;
+  const left = 960 - w / 2;
+  const top = L.vertical ? 80 : 60;
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080 }}>
-      <div style={{ position: "absolute", left: -600, top: -700, width: 3120, height: 2600, background: "radial-gradient(circle at 50% 40%, #1d1712 0%, #070504 70%)" }} />
-      <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `960px ${cy}px`, scale: `${1 + 0.06 * t}`, rotate: `${t * 4}deg` }}>
-        <Section cx={960} cy={cy} r={r} lit={lit} />
+      <div style={{ position: "absolute", left: -600, top: -700, width: 3120, height: 2600, background: "#1b1b1b" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `${left + FIG.zx * w}px ${top + FIG.zy * h}px`, scale: `${1 + 0.04 * t + 1.3 * zoom}` }}>
+        <Img src={staticFile("img/altar-stone-thin-sections.jpg")} style={{ position: "absolute", left, top, width: w, height: h }} />
       </div>
     </div>
   );

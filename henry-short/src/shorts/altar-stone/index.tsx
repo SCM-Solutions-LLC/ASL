@@ -4,11 +4,11 @@ import { makeEdit } from "../../edit";
 import { SERIF } from "../../fonts";
 import type { Layout } from "../../layout";
 import alignment from "../../generated/altar-stone.alignment.json";
-import { Tag } from "../../scenes/space";
+import { Tag as BaseTag } from "../../scenes/space";
 import type { Short } from "../types";
 import { Haul } from "./haul";
 import { Coast, Ink, PLACES, projector, Route, Sea, VIEWS } from "./map";
-import type { Project } from "./map";
+import type { Project, View } from "./map";
 import { Boat, clamp01, Credit, ease, FilmGrain, Grains, LightLeak, Photo, ramp, Study } from "./shots";
 
 // The voice-over is Kokoro (`npm run tts -- altar-stone`) from script/altar-stone.txt, fact-checked
@@ -16,10 +16,10 @@ import { Boat, clamp01, Credit, ease, FilmGrain, Grains, LightLeak, Photo, ramp,
 // that file's SOURCES block supports, and anything drawn rather than measured says so on screen.
 const edit = makeEdit({
   alignment,
-  cut: [{ from: "In 2024, Stonehenge's", to: "in every way.", tail: 0.5 }],
-  keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."]],
+  cut: [{ from: "In 2024, Stonehenge's", to: "got there?", tail: 0.8 }],
+  keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
   // "?" does not end a caption page on its own, and the long lines need one break each.
-  breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far"],
+  breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
 });
 
 const F = {
@@ -52,6 +52,14 @@ const F = {
   ruled: edit.at("could", 2),
   outcrop: edit.at("outcrop"),
   match: edit.at("match"),
+  // The recap: "Six tonnes, from a spot no one has pinned down, by a route no one knows. Sea, sledge or ice: ..."
+  recap: edit.at("six", 2),
+  spot: edit.at("spot"),
+  route: edit.at("route"),
+  sea: edit.at("sea", 1),
+  sledge: edit.at("sledge", 1),
+  ice: edit.at("ice", 2),
+  how: edit.at("how", 1),
   end: edit.duration,
 };
 
@@ -66,9 +74,52 @@ const SHOTS = {
   haul: [F.overland - 4, F.glacier],
   map3: [F.glacier - 6, F.then],
   study: [F.then - 6, F.many],
-  map4: [F.many - 6, F.end + 10],
+  map4: [F.many - 6, F.recap],
+  recap: [F.recap - 6, F.end + 10],
 } as const;
 const vis = (f: number, [a, b]: readonly [number, number]) => Math.min(clamp01((f - a) / 10), clamp01((b - f) / 10));
+
+// The caveat lines carry A6, so they must survive a phone screen: larger than the shared default.
+const Tag: typeof BaseTag = (p) => <BaseTag subSize={38} {...p} />;
+
+// Map camera, keyed to the beats: it follows the line up to Scotland, holds close on the northeast,
+// pulls back for the distance, rides the ice south, then pans the outcrops. Keys are sorted by frame.
+const cam = (lon: number, lat: number, z: number): View => ({ lon, lat, z });
+const CAM: [number, View][] = (
+  [
+    [SHOTS.map1[0], VIEWS.uk],
+    [F.scotland, cam(-2.4, 56.6, 1.6)],
+    [SHOTS.map1[1], cam(-2.6, 57.4, 1.9)],
+    [SHOTS.map2[0], cam(-2.4, 57.3, 1.8)],
+    [F.six, cam(-2.5, 56.8, 1.6)],
+    [F.seven, VIEWS.uk],
+    [SHOTS.map2[1], cam(-3.4, 54.8, 0.95)],
+    [SHOTS.map3[0], cam(-2.6, 54.8, 0.95)],
+    [F.part, cam(-0.5, 56.0, 1.3)],
+    [SHOTS.map3[1], cam(-0.8, 53.5, 1.3)],
+    [SHOTS.map4[0], VIEWS.uk],
+    [SHOTS.map4[0] + 30, VIEWS.ne],
+    [F.ruled, cam(-3.6, 57.9, 3.3)],
+    [F.match, cam(-3.3, 58.3, 3.2)],
+    [SHOTS.map4[1], cam(-3.4, 58.2, 3.6)],
+    [F.recap + 24, cam(-3.0, 54.9, 0.95)],
+    [F.end, cam(-2.9, 54.8, 1.02)],
+  ] as [number, View][]
+).sort((a, b) => a[0] - b[0]);
+const camAt = (f: number): View => {
+  const i = CAM.findIndex(([k]) => k > f);
+  if (i <= 0) return CAM[i === 0 ? 0 : CAM.length - 1][1];
+  const [a, va] = CAM[i - 1];
+  const [b, vb] = CAM[i];
+  const k = ease(clamp01((f - a) / (b - a)));
+  return { lon: va.lon + (vb.lon - va.lon) * k, lat: va.lat + (vb.lat - va.lat) * k, z: va.z + (vb.z - va.z) * k };
+};
+
+// A short punch-in on a spoken beat, for the shots that would otherwise hold still.
+const beat = (f: number, at: number) => ease(ramp(f, at - 4, at + 8));
+const Push: React.FC<{ s: number; y?: number; children: React.ReactNode }> = ({ s, y = 0, children }) => (
+  <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, scale: `${s}`, translate: `0 ${y}px` }}>{children}</div>
+);
 
 // A sea route and its alternative: the 2024 paper argues for the sea but names no route, so both
 // coasts are drawn and the label says the route is not known.
@@ -92,7 +143,7 @@ const INKC = "#f4ecd8";
 // A small label in map space, for place names under the big tags.
 const Note: React.FC<{ x: number; y: number; text: string; opacity: number; size?: number }> = ({ x, y, text, opacity, size = 28 }) =>
   opacity <= 0 ? null : (
-    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "nowrap", textShadow: "0 2px 10px rgba(0,0,0,0.95)" }}>{text}</div>
+    <div style={{ position: "absolute", left: x, top: y, fontFamily: SERIF, fontSize: size, color: "#e2d3b0", opacity, whiteSpace: "pre", textShadow: "0 2px 10px rgba(0,0,0,0.95)" }}>{text}</div>
   );
 
 // Tag positions per crop: the 9:16 slice is only x 517–1403, so tags sit in the sea beside Britain;
@@ -105,14 +156,9 @@ const Pin: React.FC<{ P: Project; at: [number, number]; o: number; color?: strin
 };
 
 const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const o = Math.max(vis(f, SHOTS.map1), vis(f, SHOTS.map2), vis(f, SHOTS.map3), vis(f, SHOTS.map4));
+  const o = Math.max(vis(f, SHOTS.map1), vis(f, SHOTS.map2), vis(f, SHOTS.map3), vis(f, SHOTS.map4), vis(f, SHOTS.recap));
   if (o <= 0) return null;
-  const zoomNE = ease(ramp(f, SHOTS.map4[0], SHOTS.map4[0] + 30));
-  const v = {
-    lon: VIEWS.uk.lon + (VIEWS.ne.lon - VIEWS.uk.lon) * zoomNE,
-    lat: VIEWS.uk.lat + (VIEWS.ne.lat - VIEWS.uk.lat) * zoomNE,
-    z: VIEWS.uk.z + (VIEWS.ne.z - VIEWS.uk.z) * zoomNE + ramp(f, SHOTS.map4[0], F.end) * 0.25,
-  };
+  const v = camAt(f);
   const P = projector(L, v);
   const [nx, ny] = P(...PLACES.northeast);
   const [sx, sy] = P(...PLACES.stonehenge);
@@ -121,12 +167,15 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
   const inMap1 = f < SHOTS.map1[1] + 10;
   const inMap2 = f >= SHOTS.map2[0] && f < SHOTS.map2[1] + 10;
   const inMap3 = f >= SHOTS.map3[0] && f < SHOTS.map3[1] + 10;
-  const inMap4 = f >= SHOTS.map4[0];
+  const inMap4 = f >= SHOTS.map4[0] && f < SHOTS.map4[1] + 10;
+  const inRecap = f >= SHOTS.recap[0];
   // The region marker: a dashed ellipse, ~1.2° by ~0.9°, around the onshore Orcadian Basin.
   const rx = 1.15 * 112 * 0.58 * z * (L.vertical ? 1 : 0.75);
   const ry = 0.85 * 112 * z * (L.vertical ? 1 : 0.75);
-  const region = inMap4 ? 0 : inMap1 ? ramp(f, F.scotland - 8, F.scotland + 6) : 1;
-  const unknown = inMap1 ? ramp(f, F.now, F.now + 10) : 0;
+  const region = inMap4 ? 0 : inMap1 ? ramp(f, F.scotland - 8, F.scotland + 6) : inRecap ? ramp(f, F.spot - 4, F.spot + 8) : 1;
+  const unknown = inMap1 ? ramp(f, F.now, F.now + 10) : inRecap ? ramp(f, F.spot, F.spot + 10) : 0;
+  // On "how", every recap route pulses together.
+  const pulse = 0.75 + 0.25 * Math.sin(f / 4) * ramp(f, F.how, F.how + 8);
   const slide = ease(ramp(f, F.model + 4, F.part));
   const [ix, iy] = (() => {
     // The stone marker riding the ice path.
@@ -184,6 +233,15 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
               );
             })
           : null}
+        {inRecap ? (
+          <>
+            <Route P={P} pts={EAST} t={ease(ramp(f, F.sea, F.sea + 24))} color="#9fd0e0" width={4} dash="6 10" opacity={pulse} />
+            <Route P={P} pts={WEST} t={ease(ramp(f, F.sea + 4, F.sea + 28))} color="#9fd0e0" width={4} dash="6 10" opacity={pulse} />
+            <Route P={P} pts={[PLACES.northeast, PLACES.stonehenge]} t={ease(ramp(f, F.sledge, F.sledge + 20))} color={GOLD} width={5} dash="16 10" opacity={pulse} />
+            <Route P={P} pts={ICE_PATH} t={ease(ramp(f, F.ice, F.ice + 16))} color="#e8f2f7" width={5} opacity={pulse} />
+            <Route P={P} pts={PEOPLE_PATH} t={ease(ramp(f, F.ice + 12, F.ice + 28))} color={GOLD} width={4} dash="8 10" opacity={0.7 * pulse} />
+          </>
+        ) : null}
         {!inMap4 ? <Pin P={P} at={PLACES.stonehenge} o={1} /> : null}
       </Ink>
 
@@ -197,17 +255,22 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       <Tag {...at(L, [1010, 40], [1300, 140])} text="TRACED HERE" sub={"2024 · NE Scotland\n(area approx.)"} from={F.scotland} to={F.now} />
       <Tag {...at(L, [1010, 40], [1300, 140])} text="EXACT SOURCE" sub="unknown" from={F.exactly} to={SHOTS.map1[1]} />
       {/* map2: grain ages, distance, sea. */}
-      <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland (area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
+      <Tag {...at(L, [1010, 40], [1300, 140])} text="AGES MATCH" sub={"sandstone of\nNE Scotland\n(area approx.)"} from={F.sandstone + 4} to={F.ifSo} />
       <Tag {...at(L, [1090, 210], [1300, 240])} text="6 TONNES" from={F.six} to={F.suggested} />
-      <Tag {...at(L, [1090, 300], [1300, 340])} text="700+ KM" sub="if from NE Scotland" from={F.seven} to={F.suggested} />
+      <Tag {...at(L, [1090, 300], [1300, 340])} text="700+ KM" sub={"if from\nNE Scotland"} from={F.seven} to={F.suggested} />
       <Tag {...at(L, [1090, 420], [1300, 420])} text="BY SEA?" sub="route not known" from={F.suggested + 10} to={SHOTS.map2[1]} />
       {/* map3: the ice model. */}
-      <Tag {...at(L, [545, -160], [200, 80])} text="ICE MODEL" sub={"part of the way,\nat most"} from={F.part} to={SHOTS.map3[1]} />
-      {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={24} /> : null}
+      <Tag {...at(L, [545, 640], [200, 80])} text="ICE MODEL" sub={"part of the way,\nat most"} from={F.part} to={SHOTS.map3[1]} />
+      {inMap3 ? <Note {...at(L, [545, 870], [200, 860])} text="ice extent and path illustrative" opacity={ramp(f, F.glacier + 6, F.glacier + 16)} size={34} /> : null}
       {/* map4: the outcrops. */}
       <Tag {...at(L, [545, -160], [200, 80])} text="MANY RULED OUT" from={F.ruled} to={F.outcrop} />
-      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} />
-      {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={24} /> : null}
+      <Tag {...at(L, [545, -160], [200, 80])} text="NO FULL MATCH" sub={"shown in any outcrop examined\nexact source unknown"} from={F.match} to={SHOTS.map4[1]} />
+      {/* recap: the three proposals, none shown to be the one. */}
+      <Tag {...at(L, [1090, 200], [1300, 200])} text="SEA?" sub="2024 team" from={F.sea} />
+      <Tag {...at(L, [1090, 330], [1300, 330])} text="SLEDGE?" sub="2024 study" from={F.sledge} />
+      <Tag {...at(L, [1090, 460], [1300, 460])} text="ICE?" sub={"2026 model:\npart of the way"} from={F.ice} />
+      {inRecap ? <Note {...at(L, [545, 870], [200, 860])} text="routes illustrative" opacity={ramp(f, F.sea + 6, F.sea + 16)} size={34} /> : null}
+      {inMap4 ? <Note {...at(L, [545, 880], [200, 860])} text="outcrops illustrative" opacity={ramp(f, F.many + 8, F.many + 18)} size={34} /> : null}
     </div>
   );
 };
@@ -222,7 +285,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
   // The hauling shot pulls back from the front of the team to the whole line. The 9:16 slice is
   // narrow, so it starts closer and ends with the slab and the nearest haulers still filling it.
   const haulT = ease(ramp(f, SHOTS.haul[0], SHOTS.haul[1]));
-  const pull = L.vertical ? 1.85 - 0.45 * haulT : 1.3 - 0.3 * haulT;
+  const pull = L.vertical ? 1.95 - 0.7 * haulT : 1.3 - 0.3 * haulT;
 
   return (
     <>
@@ -234,28 +297,35 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
       <MapLayer L={L} f={f} />
 
       <Layer o={vis(f, SHOTS.grains)}>
-        <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} lit={ramp(f, F.tiny + 6, F.tiny + 16)} />
-        <Tag {...tagL} text="MINERAL GRAINS" sub={"typically 10–40 µm wide\nillustration, not to scale"} from={F.tiny + 4} />
+        <Push s={1}>
+          <Grains L={L} t={ramp(f, SHOTS.grains[0], SHOTS.grains[1])} zoom={ease(ramp(f, F.tiny, F.sandstone - 8))} />
+        </Push>
+        <Tag {...tagL} text="THE ALTAR STONE" sub={"thin sections, dated grains"} from={SHOTS.grains[0] + 6} />
+        <Note {...at(L, [545, 700], [480, 700])} text={"Clarke et al. 2024, Nature\nCC BY 4.0 · cropped"} opacity={ramp(f, SHOTS.grains[0] + 6, SHOTS.grains[0] + 16)} size={30} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.boat)}>
-        <Boat f={f} ghost={ramp(f, F.boat - 4, F.boat + 10)} />
+        <Push s={1 + 0.06 * ease(ramp(f, SHOTS.boat[0], SHOTS.boat[1])) + 0.08 * beat(f, F.boat) + 0.08 * beat(f, F.doubts)} y={-30 * beat(f, F.doubts)}>
+          <Boat f={f} ghost={ramp(f, F.boat - 4, F.boat + 10)} />
+        </Push>
         <Tag {...tagL} text="NO BOAT FOUND" sub="from the late Stone Age, in Britain" from={F.boat + 4} />
         <Tag {...tagL2} text="A 2024 STUDY" sub={"boats of the time: unlikely\nto carry six tonnes"} from={F.doubts + 2} />
         <FilmGrain f={f} opacity={0.12} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.haul)}>
-        <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: L.vertical ? "1060px 700px" : "960px 640px", scale: `${pull}`, translate: L.vertical ? "0 -230px" : undefined }}>
+        <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: L.vertical ? "820px 700px" : "960px 640px", scale: `${pull}`, translate: L.vertical ? "0 -150px" : undefined }}>
           <Haul f={f - SHOTS.haul[0]} />
         </div>
         <Tag {...tagL} text="~8 MONTHS" sub="overland estimate, 2024 study" from={F.eight} />
-        <Note {...at(L, [545, 880], [160, 880])} text="illustration of a hypothesis · crew size not known" opacity={ramp(f, SHOTS.haul[0] + 6, SHOTS.haul[0] + 16)} size={24} />
+        <Note {...at(L, [545, 880], [160, 810])} text={"illustration of a hypothesis\ncrew size not known"} opacity={ramp(f, SHOTS.haul[0] + 6, SHOTS.haul[0] + 16)} size={34} />
         <FilmGrain f={f} opacity={0.16} />
       </Layer>
 
       <Layer o={vis(f, SHOTS.study)}>
-        <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+        <Push s={1 + 0.04 * ease(ramp(f, SHOTS.study[0], SHOTS.study[1])) + 0.05 * beat(f, F.three) + 0.08 * beat(f, F.closer)} y={60 + 80 * beat(f, F.three) + 120 * beat(f, F.closer)}>
+          <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
+        </Push>
         <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
       </Layer>
 

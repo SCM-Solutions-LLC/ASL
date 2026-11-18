@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/altar-stone.txt",
  "audio": "public/vo/altar-stone.wav",
- "sha256": "5e089739c64a5aca899ed7b8c42fabc715f85249c0a85655e7a5752e7cfb3f33",
+ "sha256": "17d704227318005e8ccba87beb3c2a6fb6ea0687f7fccbf389e9eac2b52ef6a2",
  "words": [
   {
    "text": "In",
@@ -708,6 +708,141 @@
    "text": "way.",
    "start": 55.633,
    "end": 55.92
+  },
+  {
+   "text": "Six",
+   "start": 56.62,
+   "end": 56.877
+  },
+  {
+   "text": "tonnes,",
+   "start": 56.877,
+   "end": 57.208
+  },
+  {
+   "text": "from",
+   "start": 57.208,
+   "end": 57.489
+  },
+  {
+   "text": "a",
+   "start": 57.489,
+   "end": 57.696
+  },
+  {
+   "text": "spot",
+   "start": 57.696,
+   "end": 57.978
+  },
+  {
+   "text": "no",
+   "start": 57.978,
+   "end": 58.21
+  },
+  {
+   "text": "one",
+   "start": 58.21,
+   "end": 58.467
+  },
+  {
+   "text": "has",
+   "start": 58.467,
+   "end": 58.723
+  },
+  {
+   "text": "pinned",
+   "start": 58.723,
+   "end": 59.054
+  },
+  {
+   "text": "down,",
+   "start": 59.054,
+   "end": 59.336
+  },
+  {
+   "text": "by",
+   "start": 59.336,
+   "end": 59.568
+  },
+  {
+   "text": "a",
+   "start": 59.568,
+   "end": 59.775
+  },
+  {
+   "text": "route",
+   "start": 59.775,
+   "end": 60.081
+  },
+  {
+   "text": "no",
+   "start": 60.081,
+   "end": 60.313
+  },
+  {
+   "text": "one",
+   "start": 60.313,
+   "end": 60.57
+  },
+  {
+   "text": "knows.",
+   "start": 60.57,
+   "end": 60.876
+  },
+  {
+   "text": "Sea,",
+   "start": 61.505,
+   "end": 61.754
+  },
+  {
+   "text": "sledge",
+   "start": 61.754,
+   "end": 62.075
+  },
+  {
+   "text": "or",
+   "start": 62.075,
+   "end": 62.299
+  },
+  {
+   "text": "ice:",
+   "start": 62.299,
+   "end": 62.548
+  },
+  {
+   "text": "how",
+   "start": 62.548,
+   "end": 62.797
+  },
+  {
+   "text": "do",
+   "start": 62.797,
+   "end": 63.021
+  },
+  {
+   "text": "you",
+   "start": 63.021,
+   "end": 63.27
+  },
+  {
+   "text": "think",
+   "start": 63.27,
+   "end": 63.567
+  },
+  {
+   "text": "it",
+   "start": 63.567,
+   "end": 63.791
+  },
+  {
+   "text": "got",
+   "start": 63.791,
+   "end": 64.04
+  },
+  {
+   "text": "there?",
+   "start": 64.04,
+   "end": 64.337
   }
  ]
 }
