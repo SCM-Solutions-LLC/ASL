@@ -16,9 +16,9 @@ export const illustratedKeys = (F: Beats) => ({
       { f: F.henry - 10, pose: { torso: { x: off, r: 0 } }, ease: "hold" },
       { f: F.henry - 4, pose: { torso: { x: -120, r: 10 } }, ease: "in" },
       { f: F.henry + 6, pose: { torso: { x: 0, r: 0 } }, ease: "back" },
-      // double take on "once"
-      { f: F.once, pose: { eyes: { v: "side" }, head: { r: 4 } }, ease: "out" },
-      { f: F.once + 5, pose: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" }, torso: { r: -7 }, head: { r: -6 }, upperL: { r: 34 }, upperR: { r: -34 }, foreL: { r: -50 }, foreR: { r: 50 } }, ease: "back" },
+      // double take on "met"
+      { f: F.met, pose: { eyes: { v: "side" }, head: { r: 4 } }, ease: "out" },
+      { f: F.met + 5, pose: { eyes: { v: "wide" }, brows: { v: "raised" }, mouth: { v: "open" }, torso: { r: -7 }, head: { r: -6 }, upperL: { r: 34 }, upperR: { r: -34 }, foreL: { r: -50 }, foreR: { r: 50 } }, ease: "back" },
       // "wanted out": turned away (flip), jerks a thumb back at her
       { f: F.wanted, pose: { eyes: { v: "default" }, brows: { v: "angry" }, mouth: { v: "frown" }, torso: { r: 0 }, head: { r: 0 }, ...henryRest }, ease: "out" },
       { f: F.wanted + 8, pose: { upperL: { r: 105 }, foreL: { r: -30 }, handL: { v: "point" }, head: { r: -5 } }, ease: "back" },

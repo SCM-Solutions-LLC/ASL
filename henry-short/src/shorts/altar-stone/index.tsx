@@ -327,6 +327,7 @@ const AltarScene: React.FC<{ L: Layout }> = ({ L }) => {
           <Study L={L} t={ramp(f, SHOTS.study[0], SHOTS.study[1])} lens={ramp(f, F.closer - 6, F.closer + 24)} />
         </Push>
         <Tag {...at(L, [545, -170], [120, 120])} text="A NEW STUDY" sub={"three of the 2024 team\namong its authors"} from={F.three} />
+        <Note {...at(L, [545, 880], [200, 860])} text="page and thin section illustrative" opacity={ramp(f, SHOTS.study[0] + 6, SHOTS.study[0] + 16)} size={34} />
       </Layer>
 
       <LightLeak f={f} at={SHOTS.photo[1] - 6} />

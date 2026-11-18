@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/six-wives.txt",
  "audio": "public/vo/six-wives.wav",
- "sha256": "9013c428d1eb1f4123196b4cfa970908ae464e032173e7c2baeaf3135128dab2",
+ "sha256": "3e46903a9d8e8610ebc32de034278159aaeeac7a8a202739ac0efed2148c2981",
  "words": [
   {
    "text": "The",
@@ -427,362 +427,357 @@
   {
    "text": "Henry",
    "start": 34.76,
-   "end": 35.084
+   "end": 35.089
   },
   {
    "text": "met",
-   "start": 35.084,
-   "end": 35.355
+   "start": 35.089,
+   "end": 35.364
   },
   {
    "text": "her",
-   "start": 35.355,
-   "end": 35.627
-  },
-  {
-   "text": "once",
-   "start": 35.627,
-   "end": 35.925
+   "start": 35.364,
+   "end": 35.639
   },
   {
    "text": "and",
-   "start": 35.925,
-   "end": 36.196
+   "start": 35.639,
+   "end": 35.914
   },
   {
    "text": "wanted",
-   "start": 36.196,
-   "end": 36.546
+   "start": 35.914,
+   "end": 36.269
   },
   {
    "text": "out.",
-   "start": 36.546,
-   "end": 36.818
+   "start": 36.269,
+   "end": 36.545
   },
   {
    "text": "Six",
-   "start": 37.445,
-   "end": 37.731
+   "start": 37.145,
+   "end": 37.431
   },
   {
    "text": "months",
-   "start": 37.731,
-   "end": 38.1
+   "start": 37.431,
+   "end": 37.8
   },
   {
    "text": "later,",
-   "start": 38.1,
-   "end": 38.441
+   "start": 37.8,
+   "end": 38.141
   },
   {
    "text": "annulled,",
-   "start": 38.441,
-   "end": 38.865
+   "start": 38.141,
+   "end": 38.565
   },
   {
    "text": "but",
-   "start": 38.865,
-   "end": 39.15
+   "start": 38.565,
+   "end": 38.851
   },
   {
    "text": "she",
-   "start": 39.15,
-   "end": 39.436
+   "start": 38.851,
+   "end": 39.137
   },
   {
    "text": "walked",
-   "start": 39.436,
-   "end": 39.805
+   "start": 39.137,
+   "end": 39.506
   },
   {
    "text": "away",
-   "start": 39.805,
-   "end": 40.118
+   "start": 39.506,
+   "end": 39.819
   },
   {
    "text": "with",
-   "start": 40.118,
-   "end": 40.432
+   "start": 39.819,
+   "end": 40.133
   },
   {
    "text": "a",
-   "start": 40.432,
-   "end": 40.662
+   "start": 40.133,
+   "end": 40.363
   },
   {
    "text": "palace,",
-   "start": 40.662,
-   "end": 41.031
+   "start": 40.363,
+   "end": 40.732
   },
   {
    "text": "a",
-   "start": 41.031,
-   "end": 41.262
+   "start": 40.732,
+   "end": 40.963
   },
   {
    "text": "castle,",
-   "start": 41.262,
-   "end": 41.63
+   "start": 40.963,
+   "end": 41.332
   },
   {
    "text": "and",
-   "start": 41.63,
-   "end": 41.916
+   "start": 41.332,
+   "end": 41.617
   },
   {
    "text": "a",
-   "start": 41.916,
-   "end": 42.147
+   "start": 41.617,
+   "end": 41.848
   },
   {
    "text": "new",
-   "start": 42.147,
-   "end": 42.432
+   "start": 41.848,
+   "end": 42.134
   },
   {
    "text": "title:",
-   "start": 42.432,
-   "end": 42.773
+   "start": 42.134,
+   "end": 42.475
   },
   {
    "text": "the",
-   "start": 42.773,
-   "end": 43.059
+   "start": 42.475,
+   "end": 42.761
   },
   {
    "text": "King's",
-   "start": 43.059,
-   "end": 43.428
+   "start": 42.761,
+   "end": 43.13
   },
   {
    "text": "beloved",
-   "start": 43.428,
-   "end": 43.824
+   "start": 43.13,
+   "end": 43.526
   },
   {
    "text": "sister.",
-   "start": 43.824,
-   "end": 44.193
+   "start": 43.526,
+   "end": 43.895
   },
   {
    "text": "Wife",
-   "start": 44.855,
-   "end": 45.248
+   "start": 44.555,
+   "end": 44.948
   },
   {
    "text": "five,",
-   "start": 45.248,
-   "end": 45.641
+   "start": 44.948,
+   "end": 45.341
   },
   {
    "text": "Catherine",
-   "start": 45.641,
-   "end": 46.208
+   "start": 45.341,
+   "end": 45.908
   },
   {
    "text": "Howard.",
-   "start": 46.208,
-   "end": 46.67
+   "start": 45.908,
+   "end": 46.37
   },
   {
    "text": "Executed.",
-   "start": 47.315,
-   "end": 48.396
+   "start": 47.015,
+   "end": 48.096
   },
   {
    "text": "Wife",
-   "start": 49.05,
-   "end": 49.429
+   "start": 48.75,
+   "end": 49.129
   },
   {
    "text": "six,",
-   "start": 49.429,
-   "end": 49.775
+   "start": 49.129,
+   "end": 49.474
   },
   {
    "text": "Catherine",
-   "start": 49.775,
-   "end": 50.321
+   "start": 49.474,
+   "end": 50.02
   },
   {
    "text": "Parr.",
-   "start": 50.321,
-   "end": 50.701
+   "start": 50.02,
+   "end": 50.399
   },
   {
    "text": "She",
-   "start": 51.36,
-   "end": 51.725
+   "start": 51.06,
+   "end": 51.425
   },
   {
    "text": "outlived",
-   "start": 51.725,
-   "end": 52.266
+   "start": 51.425,
+   "end": 51.967
   },
   {
    "text": "Henry.",
-   "start": 52.266,
-   "end": 52.701
+   "start": 51.967,
+   "end": 52.403
   },
   {
    "text": "Divorced,",
-   "start": 53.37,
-   "end": 53.978
+   "start": 53.07,
+   "end": 53.678
   },
   {
    "text": "beheaded,",
-   "start": 53.978,
-   "end": 54.587
+   "start": 53.678,
+   "end": 54.287
   },
   {
    "text": "died.",
-   "start": 54.587,
-   "end": 55.037
+   "start": 54.287,
+   "end": 54.737
   },
   {
    "text": "Divorced,",
-   "start": 55.705,
-   "end": 56.361
+   "start": 55.405,
+   "end": 56.061
   },
   {
    "text": "beheaded,",
-   "start": 56.361,
-   "end": 57.018
+   "start": 56.061,
+   "end": 56.717
   },
   {
    "text": "survived.",
-   "start": 57.018,
-   "end": 57.674
+   "start": 56.717,
+   "end": 57.373
   },
   {
    "text": "But",
-   "start": 58.315,
-   "end": 58.541
+   "start": 58.015,
+   "end": 58.241
   },
   {
    "text": "here's",
-   "start": 58.541,
-   "end": 58.833
+   "start": 58.241,
+   "end": 58.533
   },
   {
    "text": "what",
-   "start": 58.833,
-   "end": 59.082
+   "start": 58.533,
+   "end": 58.782
   },
   {
    "text": "the",
-   "start": 59.082,
-   "end": 59.308
+   "start": 58.782,
+   "end": 59.008
   },
   {
    "text": "rhyme",
-   "start": 59.308,
-   "end": 59.578
+   "start": 59.008,
+   "end": 59.278
   },
   {
    "text": "leaves",
-   "start": 59.578,
-   "end": 59.87
+   "start": 59.278,
+   "end": 59.57
   },
   {
    "text": "out.",
-   "start": 59.87,
-   "end": 60.096
+   "start": 59.57,
+   "end": 59.796
   },
   {
    "text": "Anne",
-   "start": 60.7,
-   "end": 61.018
+   "start": 60.4,
+   "end": 60.718
   },
   {
    "text": "of",
-   "start": 61.018,
-   "end": 61.28
+   "start": 60.718,
+   "end": 60.98
   },
   {
    "text": "Cleves",
-   "start": 61.28,
-   "end": 61.654
+   "start": 60.98,
+   "end": 61.355
   },
   {
    "text": "outlived",
-   "start": 61.654,
-   "end": 62.085
+   "start": 61.355,
+   "end": 61.785
   },
   {
    "text": "Henry",
-   "start": 62.085,
-   "end": 62.431
+   "start": 61.785,
+   "end": 62.131
   },
   {
    "text": "and",
-   "start": 62.431,
-   "end": 62.721
+   "start": 62.131,
+   "end": 62.421
   },
   {
    "text": "all",
-   "start": 62.721,
-   "end": 63.011
+   "start": 62.421,
+   "end": 62.711
   },
   {
    "text": "five",
-   "start": 63.011,
-   "end": 63.329
+   "start": 62.711,
+   "end": 63.03
   },
   {
    "text": "other",
-   "start": 63.329,
-   "end": 63.676
+   "start": 63.03,
+   "end": 63.376
   },
   {
    "text": "wives.",
-   "start": 63.676,
-   "end": 64.022
+   "start": 63.376,
+   "end": 63.722
   },
   {
    "text": "The",
-   "start": 64.635,
-   "end": 64.923
+   "start": 64.335,
+   "end": 64.623
   },
   {
    "text": "wife",
-   "start": 64.923,
-   "end": 65.238
+   "start": 64.623,
+   "end": 64.939
   },
   {
    "text": "he",
-   "start": 65.238,
-   "end": 65.498
+   "start": 64.939,
+   "end": 65.199
   },
   {
    "text": "rejected",
-   "start": 65.498,
-   "end": 65.924
+   "start": 65.199,
+   "end": 65.627
   },
   {
    "text": "was",
-   "start": 65.924,
-   "end": 66.212
+   "start": 65.627,
+   "end": 65.915
   },
   {
    "text": "the",
-   "start": 66.212,
-   "end": 66.5
+   "start": 65.915,
+   "end": 66.203
   },
   {
    "text": "last",
-   "start": 66.5,
-   "end": 66.815
+   "start": 66.203,
+   "end": 66.519
   },
   {
    "text": "one",
-   "start": 66.815,
-   "end": 67.103
+   "start": 66.519,
+   "end": 66.807
   },
   {
    "text": "standing.",
-   "start": 67.103,
-   "end": 67.529
+   "start": 66.807,
+   "end": 67.234
   }
  ]
 }

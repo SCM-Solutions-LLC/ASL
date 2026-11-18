@@ -18,9 +18,9 @@ export const holbeinKeys = (F: Beats) => ({
       { f: F.henry - 10, pose: { body: { x: off, r: 0 } }, ease: "hold" },
       { f: F.henry - 4, pose: { body: { x: -160, r: 9 } }, ease: "in" },
       { f: F.henry + 6, pose: { body: { x: 0, r: 0 } }, ease: "back" },
-      // double take on "once": rock back, jaw drops
-      { f: F.once, pose: { head: { r: 5 } }, ease: "out" },
-      { f: F.once + 5, pose: { body: { r: -6 }, head: { r: -9 }, jaw: { y: 14 }, foreL: { r: -45 }, foreR: { r: -35 } }, ease: "back" },
+      // double take on "met": rock back, jaw drops
+      { f: F.met, pose: { head: { r: 5 } }, ease: "out" },
+      { f: F.met + 5, pose: { body: { r: -6 }, head: { r: -9 }, jaw: { y: 14 }, foreL: { r: -45 }, foreR: { r: -35 } }, ease: "back" },
       // "wanted out": turned away (flip), points back at her over his shoulder
       { f: F.wanted, pose: { body: { r: 0 }, head: { r: 0 }, jaw: { y: 0 }, foreL: { r: 0 }, foreR: { r: 0 } }, ease: "out" },
       { f: F.wanted + 8, pose: { foreL: { r: 130 }, head: { r: -6 } }, ease: "back" },

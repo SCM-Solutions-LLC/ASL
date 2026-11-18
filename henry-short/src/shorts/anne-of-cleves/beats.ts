@@ -6,7 +6,7 @@ export const beats = (e: Edit) => ({
   all: e.at("all."),
   wife4: e.at("wife", 1),
   henry: e.at("henry"),
-  once: e.at("once"),
+  met: e.at("met"),
   wanted: e.at("wanted"),
   annulled: e.at("annulled,"),
   walked: e.at("walked"),

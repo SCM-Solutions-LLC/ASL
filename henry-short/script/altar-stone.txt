@@ -226,7 +226,11 @@ that repeat a spoken claim cite its number above.
   than a pin, and no distance is drawn to it. The ice outline and path are
   sketches, as the label says.
 - "Journal of the Geological Society / 2026" and "A NEW STUDY / three of the
-  2024 team among its authors": claim 8 (Pirrie 2026).
+  2024 team among its authors": claim 8 (Pirrie 2026). The card is a
+  stand-in for the paper, labelled "page and thin section illustrative": its
+  text is drawn as bars and its thin section (and the lens's enlargement) is
+  drawn, not taken from Pirrie 2026, whose licence (Lyell Collection user
+  licence, not CC BY) does not allow reuse of its figures.
 - Outcrop dots, most crossed out, "MANY RULED OUT", "outcrops illustrative",
   "NO FULL MATCH / shown in any outcrop examined / exact source unknown":
   claim 9 and claim 1. The dots, their number and their positions are

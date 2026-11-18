@@ -13,10 +13,10 @@ export const portraitKeys = (F: Beats) => ({
     { f: F.henry - 10, pose: { body: { x: -540 } }, ease: "hold" },
     { f: F.henry + 4, pose: { body: { x: 40, r: 3 } }, ease: "out" },
     { f: F.henry + 14, pose: { body: { x: 0, r: 0 } }, ease: "back" },
-    // "once": rocks back, jaw drops, forearms lift into frame
-    { f: F.once, pose: { head: { r: 4 } }, ease: "out" },
-    { f: F.once + 5, pose: { body: { r: -4 }, head: { r: -8 }, jaw: { y: 6 }, foreL: { r: -38 }, foreR: { r: -30 } }, ease: "back" },
-    { f: F.once + 20, pose: { body: { r: 0 }, head: { r: -3 }, jaw: { y: 2 }, foreL: { r: -14 }, foreR: { r: -10 } } },
+    // "met": rocks back, jaw drops, forearms lift into frame
+    { f: F.met, pose: { head: { r: 4 } }, ease: "out" },
+    { f: F.met + 5, pose: { body: { r: -4 }, head: { r: -8 }, jaw: { y: 6 }, foreL: { r: -38 }, foreR: { r: -30 } }, ease: "back" },
+    { f: F.met + 20, pose: { body: { r: 0 }, head: { r: -3 }, jaw: { y: 2 }, foreL: { r: -14 }, foreR: { r: -10 } } },
     // "wanted out": turns away from her
     { f: F.wanted + 6, pose: { head: { r: 9 }, jaw: { y: 0 }, foreL: { r: 0 }, foreR: { r: 0 } }, ease: "back" },
     // the gavel
