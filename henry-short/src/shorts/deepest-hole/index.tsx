@@ -59,11 +59,11 @@ const CRUST_KM = 40;
 const NEAR = 38;
 const FAR = 14.5;
 
-// Depth against the calendar year (Lobanov 2021): 9,584 m in June 1979, 12,066 m in 1983, then
-// no new depth until the third branch reached 12,262 m in 1989-90 (a 1984 string break sent
-// drilling back to 7 km). The year counter and the depth counter run on the same clock.
+// Deepest point reached, against the calendar year (Lobanov 2021): 7,263 m in May 1975 and a
+// year's pause, 9,584 m in June 1979, 12,066 m by the end of 1983, then no new depth until the
+// third branch reached 12,262 m in 1989-90 (a 1984 string break sent drilling back to 7 km).
 const depthAt = (year: number) =>
-  interpolate(year, [1970.4, 1979.45, 1983.9, 1989, 1990], [0, 9.584, 12.066, 12.066, DEPTH_KM], {
+  interpolate(year, [1970.4, 1975.4, 1976.3, 1979.45, 1984, 1989, 1990], [0, 7.263, 7.263, 9.584, 12.066, 12.066, DEPTH_KM], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -203,7 +203,7 @@ const Ground: React.FC = () => {
         x={X + 40}
         y={bottom - 34}
         text={`${Math.round(depth * 1000).toLocaleString("en-US")} M`}
-        sub={f >= F.crust ? "about a third of the crust" : undefined}
+        sub={f >= F.crust ? "about a third of the crust" : "deepest point so far"}
         from={F.took}
       />
       <Tag x={X - 40} y={bottom - 130} align="right" text="212 °C" sub="predicted: 120 °C" from={F.hundred} />
