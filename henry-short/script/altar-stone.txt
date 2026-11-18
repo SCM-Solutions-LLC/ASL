@@ -6,7 +6,7 @@ But no late Stone Age boat has been found in Britain, and another study doubts o
 Overland, on a sledge, that study estimates about eight months of hauling.
 A glacier? A 2026 ice model says ice could have carried it part of the way, at most.
 Then, months later, a new study, including three of the same geologists, looked closer.
-Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far is a match.
+Many outcrops in that part of Scotland could not have been the source. No outcrop examined so far matches it in every way.
 Where exactly the Altar Stone came from is, for now, unknown.
 
 ---
@@ -128,13 +128,16 @@ neither paper claims.
    and diagenetic mineralogy of the Altar Stone".
 
 9. "Many outcrops in that part of Scotland could not have been the source. No
-   outcrop examined so far is a match."
+   outcrop examined so far matches it in every way."
    Pirrie 2026, abstract: "the overall petrology, heavy mineral assemblage, clay
    mineralogy and geochemistry show that many outcrops of the Old Red Sandstone
    (ORS) in the Orcadian Basin could not have been the source of the Altar
    Stone. To date, no examined outcrop area of the UK ORS can be shown to have
    the same suite of lithological and geochemical characteristics as
-   documented for the Altar Stone." "That part of Scotland" = the Orcadian
+   documented for the Altar Stone." "In every way" stands for "the same suite
+   of ... characteristics": the grain ages still match (claim 2; Clarke 2024
+   found apatite ages from Caithness and Orkney samples "match those from the
+   Altar Stone"), but no outcrop matches the whole set. "That part of Scotland" = the Orcadian
    Basin of northeast Scotland (claim 2). The same abstract says the earlier
    grain dating "supports a Laurentian source for the heavy minerals", so it
    narrows the source down rather than overturning the 2024 result. The script
