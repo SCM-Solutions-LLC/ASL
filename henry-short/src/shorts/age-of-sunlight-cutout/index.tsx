@@ -415,7 +415,7 @@ const Deck: React.FC = () => (
         punch={F.far}
         by={1.08}
       />
-      <Tag x={760} y={170} text="MAYBE FAR MORE" at={F.far} size={54} ink={CORAL} tilt={4} />
+      <Tag x={760} y={250} text="MAYBE FAR MORE" at={F.far} size={54} ink={CORAL} tilt={4} />
       <Burst at={F.tens} x={540} y={1190} r={115} colour={YELLOW} n={14} />
       <Word text="10,000+ YEARS" at={F.tens} size={100} />
     </Shot>
@@ -457,7 +457,7 @@ const Deck: React.FC = () => (
         />
       </Marks>
       {/* Sun, Earth and the gap are all pasted at whatever size reads, so the card says so (A6). */}
-      <Tag x={800} y={170} text="NOT TO SCALE" at={F.trip + 6} size={44} tilt={3} />
+      <Tag x={800} y={250} text="NOT TO SCALE" at={F.trip + 6} size={44} tilt={3} />
       <Word text="8 MINUTES" at={F.eight} swipe="#bfe9e4" tilt={3} />
     </Shot>
 
