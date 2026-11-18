@@ -1,96 +1,84 @@
-The deepest hole humans have ever dug is as wide as a dinner plate.
-It took the Soviet Union nineteen years.
+The deepest hole humans have ever dug is narrower than a dinner plate.
+It took the Soviet Union about twenty years.
 It goes down twelve kilometres.
 And it never made it through the crust.
-At the bottom, the rock was a hundred and eighty degrees. Too hot to keep drilling.
+At the bottom, the rock was over two hundred degrees.
+The hot rock kept closing the hole, and the money ran out.
 Twelve kilometres down. The centre of the Earth is six thousand more.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-Provenance for the whole file: these figures were written from the standard
-published account of the Kola Superdeep Borehole (Kozlovsky, ed., "The Superdeep
-Well of the Kola Peninsula", Springer 1987; Kozlovsky, "The World's Deepest
-Well", Scientific American 251(6), December 1984) as it is commonly reported.
-The depth, the dates and the Earth's radius are uncontested; the soft numbers
-are flagged where they appear.
-
-Checked 9 Nov 2026 against secondary sources (the Wikipedia article as returned
-by search, HowStuffWorks, Works in Progress, EarthDate), not against Kozlovsky:
-confirmed are the 24 May 1970 start, 12,262 m, the 23 cm bore, 180 °C against
-an expected 100 °C, the 1992 stop, the 6 June 1979 passing of Bertha Rogers at
-9,583 m, 12,000 m in 1983, and that it is still the deepest hole by true
-vertical depth. Not confirmed: the 35 km crust figure (claim 5) and the 300 °C
-projection (claim 7). No spoken line changed.
+Sources read (an independent fact-check, 18 Nov 2026):
+- Lobanov, Chicherov & Sharov, Arktika i Sever 44: 267-284 (2021),
+  doi:10.37482/issn2221-2698.2021.44.267. Russian Academy of Sciences authors;
+  full text. "Drilling was started on May 24, 1970"; "In 1990, the maximum depth
+  was reached - 12262 m"; a "214 mm drill bit"; "at a depth of 10 km reached
+  180°C, and at a depth of about 12 km ... 212°C, instead of the assumed
+  120°C"; "a drastic reduction in funding made it impossible to continue the
+  work. Drilling was stopped in 1992".
+- Zhu & Huang, Communications Earth & Environment 7: 124 (2026),
+  doi:10.1038/s43247-026-03246-z: "reaching 12,262 m between 1970 and 1989";
+  "temperatures reached 180 °C at 10 km and 212 °C at 12 km"; "Drilling was
+  abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C
+  induced plastic rock flow that repeatedly sealed the hole."
+- Popov et al., Tectonophysics 306: 345 (1999),
+  doi:10.1016/S0040-1951(99)00065-7: casing 245 mm to 8,278 m, open borehole
+  214 mm below it.
+- Kozlovsky, "The World's Deepest Well" / "The Superdeep Well of the Kola
+  Peninsula", translated as USGS Open-File Report 86-517: "Crustal thickness
+  in the vicinity of the corehole was shown to be about 40 km."
+- NASA NSSDC Earth Fact Sheet: volumetric mean radius 6,371 km.
+- Dziewonski & Anderson 1981, PREM, Phys. Earth Planet. Inter. 25: 297,
+  doi:10.1016/0031-9201(81)90046-7: inner core 1,221.5 km, outer core to
+  3,480 km (used only for the drawing).
 
 1. "The deepest hole humans have ever dug..."
    Kola Superdeep Borehole, branch SG-3, Kola Peninsula, USSR (now Russia):
-   12,262 m true vertical depth, reached in 1989. Still the deepest point ever
-   reached by drilling. Most sources say 1989; at least one Russian-authored
-   account says 1990. The script does not speak the year, but "nineteen years"
-   (claim 3) leans on it.
+   12,262 m (Lobanov; Zhu & Huang), still the deepest point reached by
+   drilling. "Deepest", not "longest": some oil wells are longer measured along
+   the bore but run mostly sideways. The script does not say "longest", and the
+   post text no longer mentions those wells (no primary source was read for
+   them).
 
-   "Deepest", not "longest", and the difference is real: several oil wells are
-   longer measured along the bore — Sakhalin-I extended-reach wells and Qatar's
-   Al Shaheen are past 12 km of measured length — but they run mostly sideways
-   and get nowhere near 12 km below the surface. If the line is ever reworded
-   to "longest", it becomes false.
+2. "...is narrower than a dinner plate."
+   The bit and the open hole are 214 mm (Popov; Lobanov); the cased top is
+   245 mm. The plate in the short is 25.6 cm (Met 51.86.100, public/SOURCES.json),
+   so the hole is drawn at 21 cm against it. Below 7 km the bore went oval with
+   caverns (Lobanov), so 21 cm is the drilled width, not a constant.
 
-2. "...is as wide as a dinner plate."
-   The bore is 23 cm (9 in) across at depth. A dinner plate is 25-28 cm, so
-   the comparison flatters the hole slightly rather than shrinking it.
-   SOFT in one respect: 23 cm is the diameter of the deep section. The top of
-   the well is wider and cased, as every deep well is. The tag on screen says
-   "23 CM WIDE" with no qualifier; "at the bottom" is the strictly accurate
-   reading.
-
-3. "It took the Soviet Union nineteen years."
-   Drilling began 24 May 1970; the final depth was reached in 1989. 1989 - 1970
-   = 19. Drilling did not stop then: attempts to go deeper continued until 1992
-   without passing 12,262 m, and the project was formally closed later. So
-   nineteen years is the time to reach the depth, not the life of the project.
+3. "It took the Soviet Union about twenty years."
+   Started 24 May 1970 (Lobanov). The sources disagree on the end: 1989 (Zhu &
+   Huang) or 1990 (Lobanov). 19 or 20 years, so the line says "about twenty"
+   and the counters end on "1989–90".
 
 4. "It goes down twelve kilometres."
    12,262 m, rounded down. The counter on screen runs to the full figure.
 
 5. "And it never made it through the crust."
-   The continental crust of the Baltic Shield at the site is about 35 km thick,
-   so the hole got roughly a third of the way through (12.262 / 35 = 0.35).
-   SOFT: 35 km is a round figure for the local Moho depth; published estimates
-   for the area run to about 40 km. The claim in the script — that it did not
-   get through — holds anywhere in that range; only the "a third of the crust"
-   tag moves, to "under a third". The check found "about one-third of the
-   Baltic Shield's crust" in secondary sources but no measured Moho depth for
-   the site, so 35 km is still a recalled figure.
+   Crust about 40 km thick at the site (Kozlovsky, USGS OFR 86-517), so the hole
+   got about 31% of the way through ("about a third" on screen).
 
-6. "At the bottom, the rock was a hundred and eighty degrees."
-   About 180 °C at 12 km, against roughly 100 °C predicted when the well was
-   planned. Celsius; the tag says so, the voice does not. Wikipedia attaches
-   the 180 °C reading to 11,882 m, where the last branch was abandoned in 1992,
-   not to the 12,262 m record branch; both are "the bottom" at the rounding the
-   script uses.
+6. "At the bottom, the rock was over two hundred degrees."
+   About 212 °C at about 12 km (Lobanov; Zhu & Huang), against 120 °C assumed
+   (Lobanov). 180 °C was the reading at 10 km, not at the bottom. Celsius; the
+   tag says so, the voice does not.
 
-7. "Too hot to keep drilling."
-   The reason given for stopping: at that temperature the rock behaved more
-   like a plastic than a solid and the hole would not stay open, and the
-   projected temperature at the 15 km target was around 300 °C, beyond what the
-   equipment could work in. Funding after 1991 is also part of why it ended, so
-   "too hot" is the engineering reason rather than the whole story.
+7. "The hot rock kept closing the hole, and the money ran out."
+   The two sources give two reasons, so the line carries both and ranks
+   neither. Zhu & Huang: heat "induced plastic rock flow that repeatedly sealed
+   the hole". Lobanov: "a drastic reduction in funding made it impossible to
+   continue". Drilling stopped in 1992 (both).
 
 8. "The centre of the Earth is six thousand more."
-   Mean radius of the Earth 6,371 km; 6,371 - 12.262 = 6,359 km still to go, so
-   "six thousand more" is a round number on the low side. The hole is 0.19% of
-   the way to the centre, shown as "0.2%".
+   Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "six
+   thousand more" is a round number on the low side. The hole is 0.19% of the
+   way to the centre, shown as "0.2%".
 
 9. Figures used by the animation, not spoken.
-   Depth against year: 9,583 m in 1979 (passing the Bertha Rogers well in
-   Oklahoma, the previous record), 12,000 m in 1983, 12,262 m in 1989. The
-   counter follows those, which is why it races and then crawls. The milestones
-   are confirmed (see the provenance note); SOFT only in that the curve between
-   them is a straight-line interpolation.
-
-   Earth's layers by radius: inner core to 1,221 km, outer core to 3,480 km,
-   mantle above that, crust drawn at the 35 km of claim 5. Standard PREM
-   figures. At the size the Earth is drawn the crust is under two pixels thick
-   and the hole is a fraction of one, which is why the last shot labels the hole
-   instead of drawing it.
+   Depth against year: 9,583 m in June 1979 (passing the previous record) and
+   12,000 m on 27 December 1983 (Lobanov), 12,262 m in 1989-90; the curve between
+   them is a straight-line interpolation. Earth's layers by radius from PREM,
+   crust drawn at 40 km. At the size the Earth is drawn the crust is under two
+   pixels thick and the hole is a fraction of one, which is why the last shot
+   labels the hole instead of drawing it.

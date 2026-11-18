@@ -40,10 +40,10 @@ const edit = makeEdit({
   alignment,
   keyPhrases: [
     ["dinner", "plate."],
-    ["nineteen", "years."],
+    ["twenty", "years."],
     ["twelve", "kilometres"],
     ["crust."],
-    ["hundred", "and", "eighty"],
+    ["two", "hundred", "degrees."],
     ["six", "thousand"],
   ],
   breakAfter: ["dug"],
@@ -54,13 +54,13 @@ const F = {
   deepest: edit.at("deepest"),
   humans: edit.at("humans"),
   dug: edit.at("dug"),
-  wide: edit.at("wide"),
-  as: edit.at("as", 1),
+  wide: edit.at("narrower"),
+  as: edit.at("than"),
   dinner: edit.at("dinner"),
   sentence2: edit.at("it"),
   took: edit.at("took"),
   soviet: edit.at("soviet"),
-  nineteen: edit.at("nineteen"),
+  nineteen: edit.at("twenty"),
   years: edit.at("years."),
   sentence3: edit.at("it", 1),
   goes: edit.at("goes"),
@@ -73,12 +73,13 @@ const F = {
   sentence5: edit.at("at"),
   bottom: edit.at("bottom,"),
   hundred: edit.at("hundred"),
-  eighty: edit.at("eighty"),
-  too: edit.at("too"),
-  keep: edit.at("keep"),
+  eighty: edit.at("degrees."),
+  too: edit.at("hot"),
+  keep: edit.at("kept"),
+  money: edit.at("money"),
   again: edit.at("twelve", 1),
   downAgain: edit.at("down", 1),
-  sentence7: edit.at("the", 5),
+  sentence7: edit.at("the", 7),
   centre: edit.at("centre"),
   six: edit.at("six"),
   more: edit.at("more."),
@@ -87,14 +88,14 @@ const F = {
 
 // The numbers on screen, each from script/deepest-hole.txt.
 const DEPTH_M = 12262;
-const BORE_CM = 23;
+const BORE_CM = 21; // 214 mm bit and open hole (Popov 1999; Lobanov 2021)
 // The plate in the picture is 25.6 cm across by its museum's record, so the hole can be drawn against
 // it to scale: a little smaller, as the script's notes say a dinner plate is.
 const PLATE_CM = 25.6;
 const STARTED = 1970;
-const REACHED = 1989;
-const ROCK_C = 180;
-const EXPECTED_C = 100;
+const REACHED = "1989–90"; // 1989 in Zhu & Huang 2026, 1990 in Lobanov 2021
+const ROCK_C = 212; // at about 12 km (Lobanov 2021; Zhu & Huang 2026)
+const EXPECTED_C = 120; // "instead of the assumed 120°C" (Lobanov 2021)
 const EARTH_KM = 6371;
 // The hole stopped about a third of the way through the crust. The script's notes give that
 // fraction and flag the crust's thickness in kilometres as unconfirmed, so the drawing is made
@@ -840,7 +841,7 @@ const Deck: React.FC = () => (
       />
       <Burst at={F.years} x={850} y={895} r={150} colour={YELLOW} n={12} />
       <Word
-        text={`${REACHED - STARTED} YEARS`}
+        text="ABOUT 20 YEARS"
         at={F.nineteen}
         swipe="#ffc9c2"
         tilt={3}
@@ -900,7 +901,8 @@ const Deck: React.FC = () => (
         />
       </Marks>
       <Burst at={F.too + 1} x={540} y={1190} r={190} colour={CORAL} n={14} />
-      <Word text="TOO HOT" at={F.too + 1} size={150} swipe="#ffc9c2" tilt={3} />
+      <Word text="HOT ROCK" at={F.too + 1} until={F.money - 1} size={150} swipe="#ffc9c2" tilt={3} />
+      <Word text="NO MONEY" at={F.money - 1} size={150} swipe="#bfe9e4" tilt={-2} />
     </Shot>
 
     <Shot from={F.again - 2} to={F.sentence7 - 2} tilt={1.5} sheet={NIGHT}>

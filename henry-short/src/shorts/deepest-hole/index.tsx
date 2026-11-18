@@ -16,8 +16,8 @@ import type { Short } from "../types";
 // cut instead of breaking it.
 const edit = makeEdit({
   alignment,
-  keyPhrases: [["dinner", "plate."], ["nineteen", "years."], ["twelve", "kilometres"], ["crust."],
-    ["hundred", "and", "eighty"], ["six", "thousand"]],
+  keyPhrases: [["dinner", "plate."], ["twenty", "years."], ["twelve", "kilometres"], ["crust."],
+    ["two", "hundred", "degrees."], ["six", "thousand"]],
   // The hook is fourteen words, which is five lines in the 9:16 caption block against the four it
   // has room for. "dug" occurs once, so it breaks nothing else.
   breakAfter: ["dug"],
@@ -25,15 +25,15 @@ const edit = makeEdit({
 
 // Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
 const F = {
-  wide: edit.at("wide"),
+  wide: edit.at("narrower"),
   took: edit.at("took"),
-  nineteen: edit.at("nineteen"),
+  nineteen: edit.at("twenty"),
   kilometres: edit.at("kilometres"),
   never: edit.at("never"),
   crust: edit.at("crust."),
   bottom: edit.at("bottom,"),
   hundred: edit.at("hundred"),
-  too: edit.at("too"),
+  too: edit.at("kept"),
   // The pull back to the whole planet starts on the second "twelve kilometres", so the Earth has
   // arrived by the time the line about its centre is spoken.
   back: edit.at("twelve", 1) - 4,
@@ -53,7 +53,7 @@ const ease = (t: number) => t * t * (3 - 2 * t);
 const X = 960;
 const SURF = 250;
 const DEPTH_KM = 12.262;
-const CRUST_KM = 35;
+const CRUST_KM = 40;
 // Near: the hole fills the frame, bottoming out at y 716. Far: the whole crust fits above the
 // 16:9 caption line, with the Moho at y 758 and a strip of mantle under it.
 const NEAR = 38;
@@ -83,7 +83,7 @@ const Derrick: React.FC<{ lamp: number }> = ({ lamp }) => (
 );
 
 // The hole seen from above, next to the thing it is as wide as. A loupe rather than a label on the
-// shaft, because at any scale that shows twelve kilometres a 23 cm bore has no width to point at.
+// shaft, because at any scale that shows twelve kilometres a 21 cm bore has no width to point at.
 const Loupe: React.FC<{ t: number; plate: number }> = ({ t, plate }) =>
   t <= 0 ? null : (
     <div style={{ position: "absolute", left: 740, top: 455, scale: `${t}`, opacity: Math.min(1, t * 2) }}>
@@ -192,10 +192,10 @@ const Ground: React.FC = () => {
       />
 
       <Loupe t={Math.min(ramp(f, F.wide - 6, F.wide + 4), 1 - ramp(f, F.nineteen - 8, F.nineteen))} plate={ease(ramp(f, F.wide + 6, F.wide + 20))} />
-      <Tag x={630} y={585} text="23 CM WIDE" sub="about a dinner plate" from={F.wide + 8} to={F.nineteen - 8} />
+      <Tag x={630} y={585} text="21 CM WIDE" sub="narrower than a dinner plate" from={F.wide + 8} to={F.nineteen - 8} />
 
       {/* In the sky beside the derrick: the only clear ground while the shaft is still short. */}
-      <Tag x={590} y={70} text={`${Math.round(1970 + 19 * ramp(f, F.took, F.kilometres + 6))}`} sub="drilling since 1970" from={F.took} to={F.never - 6} />
+      <Tag x={590} y={70} text={((y) => (y >= 1990 ? "1989–90" : `${y}`))(Math.round(1970 + 20 * ramp(f, F.took, F.kilometres + 6)))} sub="drilling since 1970" from={F.took} to={F.never - 6} />
       {/* Rides the drill head down, so the number and the thing it measures stay together. */}
       <Tag
         x={X + 40}
@@ -204,8 +204,8 @@ const Ground: React.FC = () => {
         sub={f >= F.crust ? "a third of the crust" : undefined}
         from={F.took}
       />
-      <Tag x={X - 40} y={bottom - 34} align="right" text="180 °C" sub="predicted: 100 °C" from={F.hundred} />
-      <Tag x={640} y={570} text="CRUST" sub="≈35 km thick here" from={F.crust - 4} />
+      <Tag x={X - 40} y={bottom - 34} align="right" text="212 °C" sub="predicted: 120 °C" from={F.hundred} />
+      <Tag x={640} y={570} text="CRUST" sub="≈40 km thick here" from={F.crust - 4} />
       <Tag x={640} y={moho + 18} text="MANTLE" from={F.crust + 4} />
     </div>
   );

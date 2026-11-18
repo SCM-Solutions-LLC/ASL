@@ -87,7 +87,7 @@ export const EarthSection: React.FC<{ x: number; y: number; r: number; opacity?:
   return (
     <div style={{ position: "absolute", left: x, top: y, opacity }}>
       <div style={{ ...ring(r * 1.04), background: "radial-gradient(circle, rgba(120,170,255,0.3) 93%, transparent 100%)" }} />
-      {/* Mantle, with the crust as its outline: 35 km on a 6,371 km radius is half a percent. */}
+      {/* Mantle, with the crust as its outline: 40 km on a 6,371 km radius is under one percent. */}
       <div
         style={{
           ...ring(r),

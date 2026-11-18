@@ -1,11 +1,14 @@
 {
   "look": "Cutout",
   "title": "The deepest hole ever dug never left the crust",
-  "caption": "19 years of drilling, 12 km down, and it got 0.2% of the way to the centre of the Earth.",
-  "description": "The Kola Superdeep Borehole in the Soviet Arctic reached 12,262 metres in 1989, the deepest humans have ever drilled straight down. The rock at the bottom was about 180 °C, far hotter than predicted, and the hole was about a third of the way through the crust beneath it. Longer wells exist, but they run sideways.",
+  "caption": "About 20 years of drilling, 12 km down, and it got 0.2% of the way to the centre of the Earth.",
+  "description": "The Kola Superdeep Borehole in the Soviet Arctic reached 12,262 metres in 1989-90, the deepest humans have ever drilled. The bore was about 21 cm across. The rock at the bottom was over 200 °C, against about 120 °C predicted, and the hole was about a third of the way through the crust beneath it. Hot rock kept squeezing the hole shut, and funding was cut; drilling stopped in 1992.",
   "sources": [
-    "Kola Superdeep Borehole SG-3: begun 24 May 1970, 12,262 m reached in 1989, 23 cm bore at depth",
-    "Earth mean radius 6,371 km; continental crust under the Kola Peninsula roughly 35-40 km thick"
+    "Lobanov, Chicherov & Sharov 2021, Arktika i Sever 44: 267-284, doi:10.37482/issn2221-2698.2021.44.267",
+    "Zhu & Huang 2026, Communications Earth & Environment 7: 124, doi:10.1038/s43247-026-03246-z",
+    "Popov et al. 1999, Tectonophysics 306: 345, doi:10.1016/S0040-1951(99)00065-7",
+    "Kozlovsky 1984, The World's Deepest Well (USGS Open-File Report 86-517, translation)",
+    "NASA NSSDC Earth Fact Sheet (mean radius 6,371 km)"
   ],
   "hashtags": {
     "tiktok": [
