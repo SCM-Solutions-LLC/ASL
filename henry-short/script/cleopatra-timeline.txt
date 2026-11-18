@@ -42,9 +42,9 @@ Sources:
    2,037 years from her to Apollo 11, so the comparison holds.
 
 2. "Cleopatra was born in sixty-nine BC."
-   Cleopatra VII Philopator: born 69 BC, died August 30 BC (Rosso 2021). She was
-   the last ruler of the Macedonian Greek Ptolemaic dynasty, which is why the
-   title card says "Queen of Egypt" rather than "Egyptian queen".
+   Cleopatra VII: born 69 BC, died August 30 BC, "the last member of Ptolemaic
+   Dynasty" and "the last queen of Egypt" (Rosso 2021), which is why the title
+   card says "Queen of Egypt".
 
 3. "Two and a half thousand years later."
    2600 BC to 69 BC is 2,531 years; on Erdil's medians 2,496-2,534. The

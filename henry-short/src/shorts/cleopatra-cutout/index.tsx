@@ -461,7 +461,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
-      <Year x={540} y={1060} text="A LATER PAINTING · IMAGINED, 41 BC" at={F.born} size={32} />
+      <Year x={540} y={1060} text="A LATER PAINTING · IMAGINED" at={F.born} size={32} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>
@@ -519,7 +519,7 @@ const Deck: React.FC = () => (
         tilt={3}
       />
       {/* A collage: Cleopatra pasted onto an 1839 view, not a scene from her life (A5/A6). */}
-      <Year x={540} y={150} text="AN 1840s PRINT · COLLAGE" at={F.toHer + 4} size={34} />
+      <Year x={540} y={150} text="A 19TH-CENTURY PRINT · COLLAGE" at={F.toHer + 4} size={34} />
     </Shot>
 
     <Shot from={F.ancient - 2} to={F.end} tilt={-1.5} sheet="#d8c9a8">
