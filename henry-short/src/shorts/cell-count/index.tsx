@@ -254,10 +254,10 @@ const CellScene: React.FC = () => {
       <Tag x={COLUMN} y={130} text="30 TRILLION" sub="typical 70 kg man (2016 count)" from={F.thirty + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={280} text="38 TRILLION" sub="bacteria" from={F.thirtyEight + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={130} text={"38 TRILLION\nBACTERIA"} sub="far smaller on average" from={F.scale + 8} to={F.own - 6} />
-      <Tag x={COLUMN} y={130} text={"HIS 30\nTRILLION"} sub="counted, not weighed" from={F.own + 4} to={F.eightyFour - 4} />
+      <Tag x={COLUMN} y={130} text={"HIS 30\nTRILLION"} sub="counted, not weighed (2016 count)" from={F.own + 4} to={F.eightyFour - 4} />
       <Tag x={COLUMN} y={130} text={"MOSTLY RED\nBLOOD CELLS"} sub="25 of 30 trillion (2016 count)" from={F.eightyFour + 6} to={F.outnumbered - 6} />
       {/* The two populations side by side on the last line, stacked because the column is narrow. */}
-      <Tag x={COLUMN} y={130} text="30 TRILLION" sub="his own, mostly blood" from={F.outnumbered + 6} />
+      <Tag x={COLUMN} y={130} text="30 TRILLION" sub="his own, mostly blood (2016 count)" from={F.outnumbered + 6} />
       <Tag x={COLUMN} y={280} text="38 TRILLION" sub="passengers, typical 70 kg man" from={F.passengers - 4} />
       {/* The dots are shuffled through the figure: a count, not a map (A6). */}
       <Tag x={COLUMN} y={430} text="1 DOT = 1 TRILLION" sub="a count, not where they live" from={F.thirty + 6} subSize={24} />
