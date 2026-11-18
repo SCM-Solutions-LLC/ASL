@@ -461,7 +461,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
-      <Year x={540} y={150} text="ALMA-TADEMA · IMAGINED, 41 BC" at={F.born} size={34} />
+      <Year x={540} y={1060} text="ALMA-TADEMA · IMAGINED, 41 BC" at={F.born} size={32} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>

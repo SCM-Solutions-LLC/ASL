@@ -344,7 +344,7 @@ const Outnumbered: React.FC = () => {
         />
       </Marker>
       <Scrap
-        text="YOUR CELLS"
+        text="HIS CELLS"
         at={F.sentence7}
         x={left}
         y={82}
@@ -386,7 +386,7 @@ const Outnumbered: React.FC = () => {
         n={12}
       />
       <Word text="ROUGHLY EVEN" at={F.outnumbered + 3} size={112} />
-      <Scrap text="TYPICAL 70 KG MAN" at={F.outnumbered + 3} x={540} y={170} size={46} tilt={-2} paper={YELLOW} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.outnumbered + 3} x={540} y={1105} size={46} tilt={-2} paper={YELLOW} />
     </>
   );
 };
@@ -462,7 +462,7 @@ const Deck: React.FC = () => (
         size={104}
       />
       <Word text="ABOUT HALF" at={F.less - 1} size={120} tilt={3} />
-      <Scrap text="TYPICAL 70 KG MAN" at={F.half} x={760} y={300} size={50} tilt={4} paper={YELLOW} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.half} x={700} y={340} size={50} tilt={4} paper={YELLOW} />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
