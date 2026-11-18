@@ -18,8 +18,9 @@ const edit = makeEdit({
   alignment,
   cut: [{ from: "In 2024, Stonehenge's", to: "got there?", tail: 0.8 }],
   keyPhrases: [["traced", "to", "Scotland."], ["still", "unknown."], ["six", "tonnes"], ["sea."], ["eight", "months"], ["part", "of", "the", "way,"], ["every", "way."], ["no", "one", "knows."], ["how", "do", "you", "think"]],
-  // "?" does not end a caption page on its own, and the long lines need one break each.
-  breakAfter: ["grains", "kilometres?", "Britain,", "sledge,", "glacier?", "says", "later,", "Scotland", "far", "down,", "knows."],
+  // "?" does not end a caption page on its own, and the long lines need one break each; the named
+  // lines break after "colleagues" so no page runs past four lines in 9:16.
+  breakAfter: ["grains", "kilometres?", "Britain,", "colleagues", "sledge,", "glacier?", "later,", "Scotland", "far", "down,", "knows."],
 });
 
 const F = {
