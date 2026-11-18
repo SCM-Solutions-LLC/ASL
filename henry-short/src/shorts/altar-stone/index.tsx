@@ -73,7 +73,7 @@ const vis = (f: number, [a, b]: readonly [number, number]) => Math.min(clamp01((
 // A sea route and its alternative: the 2024 paper argues for the sea but names no route, so both
 // coasts are drawn and the label says the route is not known.
 const EAST: [number, number][] = [[-2.9, 58.45], [-2.4, 58.3], [-1.6, 57.6], [-1.4, 56.6], [-1.6, 55.8], [-0.6, 54.6], [0.6, 53.6], [1.9, 52.8], [1.9, 51.6], [1.2, 50.85], [0.2, 50.6], [-0.85, 50.66]];
-const WEST: [number, number][] = [[-3.5, 58.66], [-5.0, 58.75], [-7.0, 58.7], [-7.8, 57.5], [-7.8, 56.5], [-6.9, 55.75], [-6.0, 55.42], [-5.3, 54.6], [-5.0, 53.5], [-5.5, 52.2], [-5.6, 51.4], [-5.9, 50.6], [-5.0, 49.88], [-3.5, 50.1], [-1.95, 50.6]];
+const WEST: [number, number][] = [[-3.5, 58.66], [-5.0, 58.75], [-7.0, 58.7], [-7.8, 57.5], [-7.8, 56.5], [-6.9, 55.75], [-6.0, 55.42], [-5.3, 54.6], [-5.0, 53.5], [-5.5, 52.2], [-5.6, 51.4], [-5.9, 50.6], [-5.85, 50.0], [-5.2, 49.85], [-3.5, 50.1], [-1.95, 50.6]];
 // Clarke 2026's ice model: dispersal toward Dogger Bank, then people for the rest (claim 7). The
 // ice sheet outline is a sketch, and says so on screen.
 const ICE: [number, number][] = [[-8.5, 59.8], [-3, 61.2], [2.5, 60.2], [4, 57.5], [3.4, 55.2], [2.2, 54.2], [0, 53.9], [-2.6, 54.3], [-5, 54.5], [-7.4, 55.6], [-8.8, 57.6]];
@@ -190,7 +190,7 @@ const MapLayer: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       {unknown > 0 ? (
         <div style={{ position: "absolute", left: nx - 40, top: ny - 78, fontFamily: SERIF, fontSize: 130, color: INKC, opacity: unknown, textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>?</div>
       ) : null}
-      {!inMap4 ? <Note x={sx + 18} y={sy + 6} text="Stonehenge" opacity={1} /> : null}
+      {!inMap4 ? <Note x={sx + 18} y={sy + 6} text="Stonehenge (approx.)" opacity={1} /> : null}
       {inMap3 ? <Note x={dx - 70} y={dy + 16} text="Dogger Bank (approx.)" opacity={ramp(f, F.model, F.model + 10)} size={26} /> : null}
 
       {/* map1: the hook. */}
