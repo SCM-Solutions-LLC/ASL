@@ -1,0 +1,279 @@
+{
+  "script": "script/cell-count.txt",
+  "sha256": "c76a68356e76359171130c5d7c6af708cdb4b9ed26aace18717a9465519475a0",
+  "checked": "2026-11-18",
+  "claims": [
+    {
+      "n": 1,
+      "claim": "By the best cell count we have, you are slightly less than half human.",
+      "where": "spoken (hook, first sentence)",
+      "verdict": "fix",
+      "source_checked": "Sender, Fuchs & Milo 2016, PLoS Biol 14(8): e1002533, doi:10.1371/journal.pbio.1002533: full text and Tables 1-3 read in the JATS XML from PMC (pmc.ncbi.nlm.nih.gov/api/oai/v1/mh/?verb=GetRecord&identifier=oai:pubmedcentral.nih.gov:4991899&metadataPrefix=pmc; journals.plos.org and ebi.ac.uk were refused by this session's proxy). Also Hatton et al. 2023, 'The human cell count and size distribution', PNAS 120(39): e2303077120, doi:10.1073/pnas.2303077120, full text read in the JATS XML from PMC (oai:pubmedcentral.nih.gov:10523466).",
+      "note": "Two problems for a viewer who swipes at second two (A4). (a) 'you': the 44% is for the 70 kg reference man only, and the reference-body qualifier is not on screen or spoken during the hook. Sender Table 3: 'ref. woman | 63 | | 3.9 | 4.5 | 480 | 0.92 | 21 | 44 | 2.2', i.e. 21/(21+44) = 32% human; elder 1.8 (36%), infant 1.7 (37%), young infant 2.3 (30%). 'Less than half' holds for every group at the central estimate, 'slightly' holds only for the reference man (1.3) and obese (1.4). (b) 'the best cell count we have': a newer peer-reviewed census exists. Hatton et al. 2023: 'In total, we estimate total body counts of ≈36 trillion cells in the male [70 kg]', and its introduction says earlier studies 'converging on values of 30 to 37 trillion human cells'. With 36 human vs 38 bacteria the reference man is ~49% human, so the direction survives, but 'the best count' is no longer only Sender 2016 and the SOURCES block does not mention this (A3 requires the disagreement to be recorded). Change: put the reference-body qualifier in the hook itself (e.g. spoken 'By the best counts we have, a typical man is slightly less than half human', or show 'typical 70 kg adult man' from frame one), or drop 'slightly' and keep 'less than half' (true for every Table 3 group at the central estimate); say 'counts' rather than 'the best cell count'; and record Hatton 2023 in SOURCES (see n=2). The paper's own conclusion is 'about 1:1' with 25% uncertainty, so keep the 'best estimate' framing."
+    },
+    {
+      "n": 2,
+      "claim": "About thirty trillion of your cells are yours.",
+      "where": "spoken; also on-screen Look 1 '30 TRILLION' / 'typical 70 kg adult man', 'YOUR 30 TRILLION' / 'counted, not weighed', '30 TRILLION' / 'yours, mostly blood'; Look 2 counter '30 TRILLION' and 'YOURS'; SOURCES entry 2",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "The cited paper supports the figure: 'This leaves us with 3.0·10^13 human cells in the 70 kg \"reference man,\" with a calculated 2% uncertainty and 14% CV', and adds 'the uncertainty and CV estimates might be too optimistically low'. But a newer A2 source disagrees: Hatton et al. 2023 give '≈36 trillion cells in the male' (70 kg, 176 cm, 20 to 50 y, ICRP model). 36 is within A3's rounding limit for 'about thirty', so the spoken line can stand, but A3 requires the SOURCES entry to record the disagreement and why Sender's 30 trillion is used (it is the only count paired with a bacteria count for the same reference body). Change: add Hatton 2023 to SOURCES entry 2 with its ≈36 trillion and its own summary 'converging on values of 30 to 37 trillion human cells'; drop 'Everything here rests on one paper'."
+    },
+    {
+      "n": 3,
+      "claim": "Thirty-eight trillion are bacteria.",
+      "where": "spoken; also on-screen Look 1 '38 TRILLION' / 'bacteria'; Look 2 counter '38 TRILLION' and 'BACTERIA'; SOURCES entry 3",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text and Table 3 (PMC JATS XML)",
+      "note": "Abstract: 'We estimate the total number of bacteria in the 70 kg \"reference man\" to be 3.8·10^13.' Results: '3.8·10^13 bacteria in the colon with a standard error uncertainty of 25% and a variation of 52% SD'. Table 3 ref. man total bacteria 38 (x10^12). SOURCES' 'nearly all of them in the colon' matches 'the contribution to the total number of bacteria from other organs is at most 10^12'. Hatton 2023 does not re-count bacteria; it cites Sender ('an approximately equal number of bacteria cells')."
+    },
+    {
+      "n": 4,
+      "claim": "But put them all on a scale, and those bacteria weigh about two hundred grams.",
+      "where": "spoken; also on-screen Look 1 scale '200 g' / 'in a typical 70 kg man'; Look 2 'ON A SCALE', 'ALL 38 TRILLION', '200 GRAMS', kitchen scale with 200 g mark ringed; post caption '...those bacteria weigh about 200 grams'",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'we conclude that there is about 0.2 kg of bacteria in the body overall' (wet weight; 'the total dry weight of bacteria in the body is about 50–100g'). Abstract: 'their total mass is about 0.2 kg'. Fig 3 legend: 'the contribution of bacteria ... amounting to only 0.2 kg, which is about 0.3% of the body weight' for a 70 kg adult man. The figure is wet mass; that is what 'weigh on a scale' implies."
+    },
+    {
+      "n": 5,
+      "claim": "38 TRILLION BACTERIA / far smaller on average",
+      "where": "on-screen: Look 1 '38 TRILLION BACTERIA' / 'far smaller on average'; SOURCES entry 4 ('a bacterium is on average far smaller than a human cell')",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'the average mass of a gut bacterium of about 5 pg (wet weight...)'; red blood cells are 'among the smallest cell types in the human body with a volume of about 100 μm3' (~100 pg); fat and muscle cells 'usually >10,000 μm3'; ≈46 kg of cell mass over 3.0·10^13 cells is ~1.5 ng per average human cell. So a gut bacterium is ~20x lighter than even a red blood cell and ~300x lighter than the average human cell (arithmetic on the paper's figures). 'bacteria have a minor contribution in terms of mass, but a cell count comparable to all human cells combined'."
+    },
+    {
+      "n": 6,
+      "claim": "And your own cells are not what you picture.",
+      "where": "spoken; also on-screen Look 2 'YOUR CELLS', 'YOUR OWN CELLS', 'NOT WHAT YOU PICTURE' (over an animal-cell diagram)",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "Framing label with no figure. Supported by the paper's own remark that the dominance of the hematopoietic lineage 'is counterintuitive given the composition of the body by mass', and that red blood cells are enucleated, unlike the textbook nucleated cell the diagram shows."
+    },
+    {
+      "n": 7,
+      "claim": "Eighty-four percent are red blood cells.",
+      "where": "spoken; also on-screen Look 1 '84% RED BLOOD CELLS' / '25 of your 30 trillion'; Look 2 '84%', 'BY COUNT', 'RED BLOOD CELLS'; SOURCES entry 5",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "The cited paper states it: 'The cell count is dominated by red blood cells (84%)', and Box 4 gives 'a total of 2.5·10^13 red blood cells' (25 of 30 trillion = 83%, so '25 of your 30 trillion' and the 25-of-30 dots match). But Hatton 2023, the newer census, gives for the 70 kg male 'nonnucleated blood cells (≈29 trillion)' (red cells and platelets together) of '≈36 trillion', about 80%, so red cells alone are below 84% there. The spoken line can stay as Sender's figure, but A3 requires SOURCES entry 5 to record this disagreement. Change: add Hatton's figure to SOURCES entry 5 and say why Sender's 84% is used, or say 'more than three quarters', which both sources support."
+    },
+    {
+      "n": 8,
+      "claim": "By count, your cells are mostly blood.",
+      "where": "spoken; also on-screen Look 1 '30 TRILLION' / 'yours, mostly blood'; Look 2 'MOSTLY BLOOD'; SOURCES entry 6",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Sender: 'The striking dominance of the hematopoietic lineage in the cell count (90% of the total)', 'red blood cells (84%)'. Hatton agrees: 'Cell counts are completely dominated by red blood cells, platelets, and tissue resident white blood cells' (≈29 trillion non-nucleated plus ≈3.4 trillion white cells of ≈36 trillion). 'By count' is the right qualifier: by mass 'cell biomass is dominated by muscle and fat'."
+    },
+    {
+      "n": 9,
+      "claim": "And they are outnumbered by their passengers.",
+      "where": "spoken (last line); also on-screen Look 1 '38 TRILLION' / 'passengers'; Look 2 'OUTNUMBERED', 'PASSENGERS'; SOURCES entry 7",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Stated flat, with no 'best estimate' qualifier, which is stronger than the paper's own conclusion. Sender: 'B/H = 1.3, with an uncertainty of 25% and a variation of 53%... This B/H value of about 1:1 (with the associated uncertainty range) should replace the 10:1'; abstract: 'of the same order as the number of human cells'; Discussion: the colon estimate 'In some respects... can be considered an upper limit' and 'there might be systematic errors beyond what we could account for'. With Hatton's ≈36 trillion human cells the gap is 38 vs 36, well inside the 25% uncertainty. Change: carry the qualifier into this line, e.g. 'And, by the best counts, slightly outnumbered by their passengers', or 'roughly matched, maybe outnumbered, by their passengers'; the Look 2 'OUTNUMBERED' card needs the same qualifier (e.g. 'BEST ESTIMATE' beside it). 'Passengers' as a metaphor for gut bacteria is framing and is fine."
+    },
+    {
+      "n": 10,
+      "claim": "~44% HUMAN / best estimate, by count",
+      "where": "on-screen: Look 1 hook card '~44% HUMAN' / 'best estimate, by count'; Look 2 Vitruvian Man split at 44% with 'BY CELL COUNT', 'LESS THAN HALF', scrap 'BEST ESTIMATE'",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Table 3 (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "30/(30+38) = 44.1% is correct arithmetic on Sender's reference man, and 'best estimate, by count' is the right framing. But this is the hook card, shown before the 'typical 70 kg adult man' qualifier, so it reads as the viewer's own share. Sender's reference woman is 21/(21+44) = 32%, and with Hatton's ≈36 trillion the reference man is ~49%. 'LESS THAN HALF' (Look 2) holds for every group in Table 3 at the central estimate; the 44% split does not. Change: add 'typical 70 kg man' to the hook card in both looks (or show 'under 50%' instead of a precise 44% split) and record Hatton 2023 in SOURCES (n=2)."
+    },
+    {
+      "n": 11,
+      "claim": "typical 70 kg adult man",
+      "where": "on-screen: Look 1 sub '30 TRILLION' / 'typical 70 kg adult man', '200 g' / 'in a typical 70 kg man'; Look 2 scrap 'TYPICAL 70 KG ADULT MAN'",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'Reference Man is defined as being between 20–30 years of age, weighing 70 kg, is 170 cm in height.' The paper's own summary uses 'typical': 'the typical adult human body consists of about 30 trillion human cells and about 38 trillion bacteria.' I could not check when this label appears relative to the hook (timing was not supplied); see n=1 and n=10."
+    },
+    {
+      "n": 12,
+      "claim": "Unit chart: 68 dots, one per trillion cells: 30 human (25 of them red blood cells) and 38 bacteria.",
+      "where": "on-screen: Look 1 unit chart; SOURCES entry 8",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Box 4 and Table 3 (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Exact to Sender's rounded figures (human 30, bacteria 38, red blood cells 2.5·10^13). Same issue as n=2 and n=7: Hatton 2023 gives ≈36 trillion human cells for a 70 kg male, and SOURCES entry 8 calls the picture 'exact' without recording that. The chart also counts red blood cells as cells, which the paper calls 'a question of definition' (see n=29). Change: same SOURCES addition as n=2; no change to the chart needed if Sender's figures are kept and justified."
+    },
+    {
+      "n": 13,
+      "claim": "Look 2 imagery: cheek-cell micrograph, false-coloured E. coli SEM, balance scale, animal-cell diagram, SEM of red blood cells",
+      "where": "on-screen: Look 2 collage",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML) for the content the images stand for; the images themselves were not viewed by this checker",
+      "note": "Illustrative, no figures. The paper does not name species; E. coli stands in for 'bacteria' generically and the short makes no claim that it is the dominant gut species. Red blood cells and a balance scale match claims n=4 and n=7. I checked only the descriptions I was given, not the image files or their licences (that is D1)."
+    },
+    {
+      "n": 14,
+      "claim": "Title: \"By the best count, you are slightly less than half human\"",
+      "where": "post text: title",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Table 3 (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Same as n=1. The title travels without the on-screen 'typical 70 kg adult man', so 'you ... slightly' is false for a typical woman (Sender Table 3: 21 human vs 44 bacteria, ~32% human), and 'the best count' ignores Hatton 2023. Change, e.g.: 'By the best counts, you are less than half human' (true for every Table 3 group at the central estimate) or 'By the best count, a typical man is slightly less than half human'."
+    },
+    {
+      "n": 15,
+      "claim": "Caption: \"About 30 trillion of your cells are yours. About 38 trillion are bacteria, and those bacteria weigh about 200 grams.\"",
+      "where": "post text: caption",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text and Table 3 (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "38 trillion and 200 g are confirmed (n=3, n=4). The caption has no reference-body qualifier, so 'your' applies the reference man's 30 trillion to every reader (Sender's reference woman: 21 trillion; Hatton female: '≈28 trillion'), and the 30 trillion figure carries the n=2 disagreement. Change: add 'In a typical 70 kg man,' at the start, and record Hatton 2023 in SOURCES."
+    },
+    {
+      "n": 16,
+      "claim": "Description: \"For the reference man in the best published estimate (aged 20-30, 70 kg), there are about 30 trillion human cells and 38 trillion bacteria\"",
+      "where": "post text: description",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Age, weight and both counts match Sender ('between 20–30 years of age, weighing 70 kg'; 3.0·10^13 and 3.8·10^13). 'The best published estimate' is contestable: Hatton et al. 2023 (PNAS) is a later, larger human-cell census giving '≈36 trillion cells in the male' (70 kg). Change: 'in the most detailed published estimate that counts both human cells and bacteria' or 'in Sender, Fuchs & Milo (2016)', and add Hatton's figure to the E4 source list."
+    },
+    {
+      "n": 17,
+      "claim": "Description: \"a ratio near 1.3 to 1 and not the 10 to 1 once quoted\"",
+      "where": "post text: description",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'we can give an updated estimate of B/H = 1.3 ... should replace the 10:1 or 100:1 values that are stated in the literature'. The paper adds that against nucleated human cells only, 'the ratio will be about 10:1', calling the choice 'a question of definition'. The description's wording is about the ratio to all human cells and is fine; see n=27 for the SOURCES wording."
+    },
+    {
+      "n": 18,
+      "claim": "Description: \"The bacteria count, and so the ratio, carries roughly 25% uncertainty, so the split is close to even.\"",
+      "where": "post text: description",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'3.8·10^13 bacteria in the colon with a standard error uncertainty of 25%'; 'B/H = 1.3, with an uncertainty of 25% and a variation of 53%'; 'This B/H value of about 1:1'."
+    },
+    {
+      "n": 19,
+      "claim": "Description: \"By count, about 84% of human cells are red blood cells; by mass, muscle and fat dominate.\"",
+      "where": "post text: description",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 PNAS full text (PMC JATS XML)",
+      "note": "Mass half confirmed: '75% of total cell mass is composed of two cell types, fat cells (adipocytes) and muscle cells (myocytes)'; Hatton agrees ('cell biomass is dominated by muscle and fat'). The 84% is Sender's ('red blood cells (84%)') but Hatton's newer census puts red cells plus platelets at ≈29 of ≈36 trillion (~80%). Change: as n=7, either attribute the 84% to Sender 2016 or say 'more than three quarters'."
+    },
+    {
+      "n": 20,
+      "claim": "Sender, Fuchs & Milo, \"Revised Estimates for the Number of Human and Bacteria Cells in the Body\", PLoS Biology 14(8): e1002533 (2016), doi:10.1371/journal.pbio.1002533",
+      "where": "SOURCES (citation)",
+      "verdict": "confirmed",
+      "source_checked": "PMC JATS XML front matter for PMC4991899",
+      "note": "Title, authors (Ron Sender, Shai Fuchs, Ron Milo), journal, volume 14, issue 8, e1002533, published 19 Aug 2016 and doi all match. Article type is 'Essay'."
+    },
+    {
+      "n": 21,
+      "claim": "Everything here rests on one paper: Sender, Fuchs & Milo (2016).",
+      "where": "SOURCES (preamble)",
+      "verdict": "fix",
+      "source_checked": "Hatton et al. 2023, PNAS 120(39): e2303077120, doi:10.1073/pnas.2303077120, full text read in PMC JATS XML (PMC10523466)",
+      "note": "A3: 'If sources disagree, ... the SOURCES entry records the disagreement and why this reading was chosen.' A later peer-reviewed census exists and is not mentioned: 'we estimate total body counts of ≈36 trillion cells in the male, ≈28 trillion in the female, and ≈17 trillion in the child'; reference male '70 kg, 176 cm in height and 20 to 50 y of age'. It cites Sender for bacteria ('an approximately equal number of bacteria cells'). Change: add Hatton 2023, state its 36 trillion (and ~80% non-nucleated), and say why Sender's 30 trillion is used (same reference body as the bacteria count) and that the hook's direction survives (36 vs 38 is ~49% human)."
+    },
+    {
+      "n": 22,
+      "claim": "Its numbers are for a \"reference man\" (20-30 years old, 70 kg, 170 cm).",
+      "where": "SOURCES (preamble)",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 Introduction (PMC JATS XML)",
+      "note": "'Reference Man is defined as being between 20–30 years of age, weighing 70 kg, is 170 cm in height.'"
+    },
+    {
+      "n": 23,
+      "claim": "The authors put the uncertainty of the bacteria count, and so of the ratio, at roughly 25%; the human count is far tighter (about 2%). Person-to-person variation comes on top.",
+      "where": "SOURCES (preamble)",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML); Hatton et al. 2023 (PMC JATS XML)",
+      "note": "25% (bacteria and ratio) and 2% (human) are quoted correctly, and the variation figures exist (52% SD bacteria, 14% CV human, 53% ratio). But the paper qualifies the 2% at once: 'We note that the uncertainty and CV estimates might be too optimistically low, as they are dominated by the reported high confidence of studies dealing with red blood cells but may underestimate systematic errors, omissions of some cell types'. Hatton's ≈36 trillion is 20% above 30. Change: add the authors' caveat; drop 'far tighter'."
+    },
+    {
+      "n": 24,
+      "claim": "The paper's reference woman has about 21 trillion human cells and 44 trillion bacteria; its Table 3 puts the ratio at 1.3 or more for every group it models (man, woman, infants, elder, obese), so the direction of the hook does not depend on the reference body.",
+      "where": "SOURCES (preamble)",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 Table 3 (PMC JATS XML)",
+      "note": "Table 3 B:H: ref. man 1.3, ref. woman 2.2 (21 human, 44 bacteria), young infant 2.3, infant 1.7, elder 1.8, obese 1.4. The direction holds for every group. The size does not: the reference woman is ~32% human, so 'slightly' in the hook holds only for the man and obese groups (see n=1). Small inconsistency in the source: Table 3 lists the woman at 63 kg, the text at 60 kg; the script does not use either."
+    },
+    {
+      "n": 25,
+      "claim": "Provenance: an independent fact-check on 18 Nov 2026 read the paper's full text (journals.plos.org) and its tables (Europe PMC XML). An earlier pass had only BioNumbers (ID 113005) and press coverage; this replaces it.",
+      "where": "SOURCES (provenance)",
+      "verdict": "confirmed",
+      "source_checked": "Process note, not a claim about the topic. The previous factcheck/cell-count.json (overwritten by this report) listed journals.plos.org and the Europe PMC fullTextXML as its sources.",
+      "note": "No factual content about cells. In this pass journals.plos.org and ebi.ac.uk were refused by the proxy; the same paper was read from PMC's OAI-PMH JATS XML (PMC4991899) instead, Tables 1-3 included. Once this pass's fixes are applied, update the provenance line to mention Hatton 2023."
+    },
+    {
+      "n": 26,
+      "claim": "3.0e13 human cells against 3.8e13 bacteria: 30 of 68 trillion is 44%. The ratio is 1.3:1, which the paper calls \"about 1:1\"; with 25% on the ratio the human share runs from about 38% to 51%.",
+      "where": "SOURCES entry 1",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "30/68 = 44.1%. 'This B/H value of about 1:1' is quoted correctly. 1.3 x 0.75 = 0.975 gives 50.6% human; 1.3 x 1.25 = 1.625 gives 38.1%. Note this is a ±1 standard-error band, not a full interval, and it excludes the 53% population variation."
+    },
+    {
+      "n": 27,
+      "claim": "[The paper] treats its colon count as \"an upper limit\".",
+      "where": "SOURCES entry 1",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Discussion (PMC JATS XML)",
+      "note": "The paper hedges: 'In some respects, the estimate we performed of multiplying observed fecal bacteria density with colon content volume can be considered an upper limit.' Change: quote it with 'in some respects'."
+    },
+    {
+      "n": 28,
+      "claim": "The paper also notes each bowel movement \"reduces the content by a quarter to a third\" of the colon's bacteria; that this can briefly tip the count back toward human cells is arithmetic on that figure, not a line of the paper.",
+      "where": "SOURCES entry 1",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 Box 1 (PMC JATS XML)",
+      "note": "Quote is exact: 'each defecation event reduces the content by a quarter to a third [18]'. The paper says colon content, not bacteria; assuming bacteria scale with content, 38 x 2/3 to 38 x 3/4 = 25 to 28.5 trillion, below 30, so the arithmetic holds and is labelled as such. Wording nit: drop 'of the colon's bacteria' from inside the paraphrase, or move it outside the quote. Not used in the spoken script."
+    },
+    {
+      "n": 29,
+      "claim": "the old \"bacteria outnumber you ten to one\" figure is the myth this paper retired",
+      "where": "SOURCES entry 1",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016, section 'The Ratio of Bacteria to Human Cells in the Adult Body' (PMC JATS XML)",
+      "note": "The paper replaces 10:1 for all human cells, but says it comes back if red blood cells are excluded: 'if one chooses to compare the number of bacteria in the human body (3.8·10^13) to the number of nucleated human cells (≈0.3·10^13), the ratio will be about 10:1 ... seems to be a question of definition. We view red blood cells as bona fide cells ... But it is also plausible to choose not to include them'. A pedant will raise this, especially since the short itself stresses that 84% of 'your' cells are red blood cells. Change: record this in SOURCES ('the 44% counts enucleated red blood cells as cells, as the paper does; against nucleated cells only, bacteria outnumber human cells about 10:1'). Not on screen, so no visual change is required; never caption it '10:1 myth' without that caveat."
+    },
+    {
+      "n": 30,
+      "claim": "The count is of bacteria only, which is what the paper counts; archaea, fungi and viruses are not in the 38 trillion.",
+      "where": "SOURCES entry 1",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Results and Box 2 (PMC JATS XML)",
+      "note": "The paper does not exclude archaea or fungi; it counts microbial cells (stool counts by microscopy, DAPI and FISH) and calls them bacteria for convenience: 'Bacteria overwhelmingly outnumber eukaryotes and archaea in the human microbiome by 2–3 orders of magnitude [7,8]. We therefore sometimes operationally refer to the microbial cells in the human body as bacteria.' Change: 'The paper counts microbial cells and calls them bacteria because bacteria outnumber archaea and eukaryotes 100-1000 to 1; viruses are not cells and are not counted.'"
+    },
+    {
+      "n": 31,
+      "claim": "Total bacterial mass ~0.2 kg, about 0.3% of a 70 kg body ... the paper uses about 5 pg for an average gut bacterium, against about 100 um^3 for a red blood cell.",
+      "where": "SOURCES entry 4",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 full text (PMC JATS XML)",
+      "note": "'about 0.2 kg of bacteria in the body overall'; 'The total bacteria mass we find represents about 0.3% of the overall body weight'; 'average mass of a gut bacterium of about 5 pg (wet weight...)'; red blood cells 'with a volume of about 100 μm3'. The comparison mixes a mass with a volume; at roughly water density 100 μm3 is ~100 pg, so the point stands."
+    },
+    {
+      "n": 32,
+      "claim": "The paper also retires an older folk figure of 1-3 kg.",
+      "where": "SOURCES entry 4",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 full text and reference 25 (PMC JATS XML)",
+      "note": "The figure is there: 'significantly updating previous statements that 1%–3% of the body mass is composed of bacteria or that a normal human hosts 1–3 kg of bacteria [25]'. But ref. 25 is an NIH news release (2012, Human Microbiome Project), not folklore. Change: 'an earlier figure of 1-3 kg (from a 2012 NIH news release)'."
+    },
+    {
+      "n": 33,
+      "claim": "~2.5e13 red blood cells of 3.0e13 human cells, by COUNT. The unit chart shows 25 of 30 dots, which is 83%; the label carries the paper's 84%.",
+      "where": "SOURCES entry 5",
+      "verdict": "confirmed",
+      "source_checked": "Sender et al. 2016 Box 4 and Fig 3 discussion (PMC JATS XML)",
+      "note": "'This led to a total of 2.5·10^13 red blood cells'; 'The cell count is dominated by red blood cells (84%)'; 25/30 = 83.3%. Correct as a statement of what the cited paper says; the Hatton disagreement is handled in n=7."
+    },
+    {
+      "n": 34,
+      "claim": "By MASS ... muscle and fat cells are about three quarters of the body's cell mass, and red blood cells only a few percent, because they are among the smallest cells there are.",
+      "where": "SOURCES entry 6",
+      "verdict": "fix",
+      "source_checked": "Sender et al. 2016 Mass-Centered Approach section (PMC JATS XML)",
+      "note": "'75% of total cell mass is composed of two cell types, fat cells (adipocytes) and muscle cells (myocytes)' is confirmed. 'Only a few percent' is not stated in the text (Fig 3 not viewed); arithmetic on the paper's figures gives 2.5·10^13 x ~100 μm3 ≈ 2.5-2.8 kg of ≈46 kg cell mass, about 6%, which fits. The overstatement: the paper says 'among the smallest cell types in the human body', not 'among the smallest cells there are' (bacteria are ~20x smaller, per the paper's own 5 pg). Change: 'among the smallest cells in the body'."
+    }
+  ]
+}

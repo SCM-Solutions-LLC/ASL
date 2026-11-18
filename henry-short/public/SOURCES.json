@@ -192,12 +192,6 @@
   "ship": true,
   "note": "A NASA collage of its own SDO images (it also includes magnetic and Doppler maps), US federal government work. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
  },
- "public/cutout/sunlight/prominence.jpg": {
-  "source": "A giant prominence on the Sun before it erupted, 31 August 2012, NASA's Solar Dynamics Observatory, NASA/SDO/AIA/Goddard Space Flight Center — https://commons.wikimedia.org/wiki/File:Giant_prominence_on_the_sun_erupted.jpg",
-  "licence": "public-domain",
-  "ship": true,
-  "note": "A NASA image, US federal government work. Commons also holds the same frame under another title tagged CC BY 2.0 from NASA Goddard's Flickr; this is the copy sourced from nasa.gov and tagged public domain. 1280px rendition. Fetched from Wikimedia Commons on 2026-11-10; licence as stated on the file's page that day."
- },
  "public/cutout/sunlight/skylab.jpg": {
   "source": "The Sun with a loop prominence, photographed in extreme ultraviolet from Skylab, 19 December 1973, NASA S74-23458 — https://commons.wikimedia.org/wiki/File:Skylab_Solar_flare.jpg",
   "licence": "public-domain",

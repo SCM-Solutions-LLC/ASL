@@ -7,45 +7,66 @@ To Cleopatra, the pyramids were already ancient history.
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-Checked 9 Nov 2026: c. 2560 BC and Khufu's c. 2589-2566 BC are the conventional
-dates in general reference works (World History Encyclopedia, New World
-Encyclopedia); the arithmetic in 3, 4, 5 and 7 was recomputed and is right.
-Cleopatra's dates and Apollo 11's were not re-fetched; they are not in doubt.
+Sources:
+- Sheisha et al., "Nile waterscapes facilitated the construction of the Giza
+  pyramids during the 3rd millennium BCE", PNAS 119(37): e2202530119 (2022),
+  doi:10.1073/pnas.2202530119 (full text, PMC9477388). Gives the published
+  accession dates for Khufu: 2613-2577 BCE (radiocarbon model, 1 sigma), 2589
+  (Shaw 2000), 2554 (von Beckerath 1997) and 2480 +/- 5 (Spence 2000); Khafre
+  2558 (Shaw) or 2586-2548 (radiocarbon).
+- Erdil et al., PLOS ONE (2025), doi:10.1371/journal.pone.0314612: the High and
+  Low Egyptian chronologies can differ "by as great as a century".
+- Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN
+  978-0-19-536553-5: "Cleopatra VII was born around the beginning of 69 b.c.";
+  "Cleopatra VII (69-30 b.c.), queen of Egypt". Plutarch, Antony 86 (she died
+  "forty years of age save one") agrees.
+- NASA, Apollo 11 mission page (nasa.gov/mission/apollo-11): launch 16 July
+  1969, Aldrin on the Moon 20 July 1969.
 
 1. "The pyramid was finished around twenty-five sixty BC."
-   The Great Pyramid of Giza was built for Khufu, whose reign is conventionally
-   given as c. 2589-2566 BC; c. 2560 BC is the usual round figure for its
-   completion. This is the softest number in the script: Old Kingdom chronology
-   carries an uncertainty of several decades, and published dates for Khufu
-   differ by that much between chronologies. "Around" is in the line for that
-   reason. The uncertainty is tens of years against a margin of about 450, so
-   it cannot change the comparison.
+   The Great Pyramid of Giza was built for Khufu (Sheisha 2022: "the Great
+   Pyramid of Giza (Khufu Pyramid)"); c. 2560 BC is the usual round figure for its
+   completion, between the end of Khufu's reign and Khafre's accession on the
+   radiocarbon and Shaw dates (Sheisha 2022). No source states a completion
+   year, and published dates for Khufu differ by up to about a century: the
+   lowest (Spence, 2480 BC) would make the pyramid about 80 years younger. c.
+   2560 is used because the radiocarbon model supports the higher chronology.
+   "Around" is in the line, and every on-screen date carries "c.". Even on the
+   lowest chronology the pyramid is about 2,400 years older than Cleopatra,
+   against 2,037 years from her to Apollo 11, so the comparison holds.
 
 2. "Cleopatra was born in sixty-nine BC."
-   Cleopatra VII Philopator: born early 69 BC (some reconstructions put it in
-   late 70), died August 30 BC. Uncontested at this precision. She was the last
+   Cleopatra VII Philopator: born around the beginning of 69 BC (Roller; Plutarch
+   allows late 70), died August 30 BC (Roller). She was the last
    ruler of the Ptolemaic dynasty and Macedonian Greek by descent, which is why
    the title card says "Queen of Egypt" rather than "Egyptian queen".
 
 3. "Two and a half thousand years later."
-   2560 BC to 69 BC is 2,491 years. Rounded up in the read; the on-screen count
-   is the unrounded 2,491.
+   2560 BC to 69 BC is 2,491 years; on the radiocarbon brackets 2,480-2,520.
+   The on-screen count shows 2,491 marked "YEARS, ROUGHLY", because it inherits
+   the c. of the pyramid date.
 
 4. "From her to Apollo eleven is only two thousand."
-   Apollo 11 landed on 20 July 1969. From 69 BC to AD 1969 is 2,037 years —
+   Apollo 11 landed on 20 July 1969 (NASA). From 69 BC to AD 1969 is 2,037 years —
    68 + 1,969, because there is no year zero. The on-screen count is 2,037.
    Measured from her death in 30 BC instead, it is 1,998.
 
 5. "Cleopatra lived closer to the Moon landing than to the building of the
    Great Pyramid."
    Rests on 1-4: 2,491 years back against 2,037 forward from her birth, a
-   difference of 454, which is the figure on the closing label. From her death
+   difference of 454 (440-480 on the radiocarbon brackets), shown on the
+   closing label as "about 450". From her death
    the gap is wider still (2,530 against 1,998). The claim holds on either
    reckoning and for any defensible date for the pyramid.
 
 6. "To Cleopatra, the pyramids were already ancient history."
-   Follows from 3. No new number. The pyramids were standing, famous and
-   visited in her time — "ancient history", not ruins.
+   Follows from 3. In context, "the pyramids" are those at Giza: the youngest,
+   Menkaure's, has an accession date of 2564-2524 BC (radiocarbon) or 2532 BC
+   (Shaw), both in Sheisha 2022, so all three were some 2,450 years old or more
+   at her birth. Diodorus Siculus (1.63), writing in her century, already
+   treated the largest as more than a thousand years old. Later pyramids, such
+   as the Nubian ones at Meroe, are not the subject; the title says "the Great
+   Pyramid" for that reason.
 
 7. Scale used by the animation, not spoken.
    The three markers are placed along the line in proportion to the years

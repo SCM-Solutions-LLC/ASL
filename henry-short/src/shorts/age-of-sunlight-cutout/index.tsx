@@ -77,7 +77,6 @@ const PICS = {
   earth: [1280, 1281],
   disc: [960, 960],
   wheel: [1280, 1280],
-  prominence: [1280, 720],
   skylab: [1280, 1007],
   sunrise: [1280, 852],
 } as const;
@@ -281,11 +280,22 @@ const walk = (cx: number, cy: number, r: number) => {
   const [c, s] = [Math.cos(turn), Math.sin(turn)];
   const at = ([px, py]: [number, number]) =>
     `${(cx + (px * c - py * s) * k).toFixed(1)} ${(cy + (px * s + py * c) * k).toFixed(1)}`;
-  const edge = (m: number) =>
-    `${(cx + Math.cos(EXIT_ANGLE) * r * m).toFixed(1)} ${(cy + Math.sin(EXIT_ANGLE) * r * m).toFixed(1)}`;
+  // Above 0.7 R convection carries it, so the last leg loops (a prolate trochoid) rather than
+  // flying straight out, which would read as light crossing the convection zone (A6).
+  const [ux, uy] = [Math.cos(EXIT_ANGLE), Math.sin(EXIT_ANGLE)];
+  const L = (1.13 - RADIATIVE) * r;
+  const loops = 3;
+  const b = (L / (2 * Math.PI * loops)) * 1.8;
+  const loop = Array.from({ length: 73 }, (_, i) => {
+    const t = i / 72;
+    const th = 2 * Math.PI * loops * t;
+    const a = RADIATIVE * r + L * t - b * Math.sin(th);
+    const w = b * (1 - Math.cos(th));
+    return `${(cx + ux * a - uy * w).toFixed(1)} ${(cy + uy * a + ux * w).toFixed(1)}`;
+  });
   return {
     grind: `M${pts.map(at).join(" L")}`,
-    out: `M${edge(RADIATIVE)} L${edge(1.13)}`,
+    out: `M${loop.join(" L")}`,
   };
 };
 
@@ -318,13 +328,16 @@ const CROSSING = (() => {
   };
 })();
 
-// Light leaving the surface: a fan of rays off the limb.
-const LIMB = [560, 560] as const;
-const FAN = [-1.5, -1.05, -0.6, -0.15, 0.3].map((a) => {
+// Light leaving the visible surface: a fan of rays off the limb of the visible-light disc.
+const LIMB = [
+  INSIDE.x + Math.cos(EXIT_ANGLE) * INSIDE.r,
+  INSIDE.y + Math.sin(EXIT_ANGLE) * INSIDE.r,
+] as const;
+const FAN = [-1.5, -1.1, -0.7, -0.3, 0.1].map((a) => {
   const [x, y] = LIMB;
   const p = (m: number) =>
     `${(x + Math.cos(a) * m).toFixed(1)} ${(y + Math.sin(a) * m).toFixed(1)}`;
-  return `M${p(150)} L${p(290)}`;
+  return `M${p(40)} L${p(190)}`;
 });
 
 // A cobweb in the corner of the card: old.
@@ -488,15 +501,9 @@ const Deck: React.FC = () => (
         <circle cx={INSIDE.x} cy={INSIDE.y} r={26} fill="#fffdf6" />
         <circle cx={INSIDE.x} cy={INSIDE.y} r={17} fill={INK} />
       </Marks>
-      <Tag
-        x={735}
-        y={200}
-        text="10,000+ YEARS"
-        at={F.part + 2}
-        size={58}
-        ink={CORAL}
-        tilt={4}
-      />
+      {/* The long number belongs to the slow black walk, so it is inked black and sits by it. */}
+      <Tag x={290} y={205} text="10,000+ YEARS" at={F.slow} size={58} tilt={-4} />
+      <Tag x={840} y={205} text="CONVECTION" at={F.part + 6} size={44} ink={CORAL} tilt={4} />
       <Tag x={250} y={1010} text="NOT TO SCALE" at={F.sentence3 + 4} size={40} tilt={-3} />
       <Word
         text="GETTING OUT"
@@ -527,13 +534,13 @@ const Deck: React.FC = () => (
     </Shot>
 
     <Shot from={F.sentence5 - 2} to={F.sentence6 - 2} tilt={1.5} sheet={TEAL}>
+      {/* Visible light, not the EUV frames: this is the light that leaves (fact-check, A6). */}
       <Cut
-        pic="prominence"
-        x={540}
-        y={585}
-        w={900}
-        box={[200, 0, 1080, 720]}
-        tilt={2}
+        {...OUTLINE.disc}
+        x={INSIDE.x}
+        y={INSIDE.y}
+        w={INSIDE.r * 2}
+        tilt={0}
       />
       <Marks>
         {FAN.map((d, i) => (

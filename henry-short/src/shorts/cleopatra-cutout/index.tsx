@@ -13,7 +13,6 @@ import {
   TEAL,
   Word,
   YELLOW,
-  fmt,
   makeCut,
   pop,
   ramp,
@@ -271,6 +270,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
           x={(x0 + xc) / 2}
           y={235}
           value={Math.round(BACK * backDraw)}
+          unit="YEARS, ROUGHLY"
           at={F.back + 2}
           colour={CORAL}
           size={112}
@@ -284,7 +284,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
           colour={TEAL}
           size={128}
         />
-        <Year x={x0 + 10} y={lineY + 26} text="2560 BC" at={F.back + 4} />
+        <Year x={x0 + 10} y={lineY + 26} text="c. 2560 BC" at={F.back + 4} />
         <Year x={xc} y={lineY + 26} text="69 BC" at={F.back + 8} />
         {second && (
           <Year x={x1 - 20} y={lineY + 26} text="AD 1969" at={F.only} />
@@ -299,7 +299,7 @@ const Timeline: React.FC<{ second?: boolean }> = ({ second }) => {
         />
       </div>
       <Word
-        text={`${fmt(BACK - FORWARD)} YEARS CLOSER`}
+        text="ABOUT 450 YEARS CLOSER"
         at={F.twoThousand + 12}
         y={1225}
         size={92}
@@ -366,6 +366,8 @@ const Deck: React.FC = () => (
   <Board>
     <Shot from={0} to={F.moon - 2} tilt={-1.5} sheet={CORAL}>
       <Cut pic="cleopatra" x={540} y={585} w={820} tilt={-2} />
+      {/* Paintings are imagined scenes, not likenesses (A5/A6), so each says whose and when. */}
+      <Year x={540} y={1040} text="WATERHOUSE, 1888 · IMAGINED" at={6} />
       <Burst at={2} x={540} y={1190} r={190} colour={YELLOW} n={14} />
       <Word text="CLEOPATRA" at={3} />
     </Shot>
@@ -456,6 +458,7 @@ const Deck: React.FC = () => (
         n={12}
       />
       <Word text="69 BC" at={F.bornYear - 1} size={150} />
+      <Year x={540} y={1040} text="ALMA-TADEMA, 1885 · IMAGINED, 41 BC" at={F.born} />
     </Shot>
 
     <Shot from={F.back - 2} to={F.from - 2}>

@@ -1,0 +1,199 @@
+{
+ "script": "script/cleopatra-timeline.txt",
+ "sha256": "5e174eadf50dfb31b5deae6f4d7b53e6c4a3accc4aa05466fbb6562435a4d58a",
+ "checked": "2026-11-18",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.",
+   "where": "spoken (hook, line 1)",
+   "verdict": "confirmed",
+   "source_checked": "Pyramid side from Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Cleopatra side from Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract; NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "What a viewer who swipes at second two takes away: Cleopatra's lifetime sits closer in time to 1969 than to the Great Pyramid's construction. That is true. PNAS 2022: 'the accession date of Khufu ranges from 2613 to 2577 BCE (1σ) according to the 14C-based chronology', 'other sources place the onset of his reign at 2589 BCE (Shaw 2000), 2554 BCE (von Beckerath 1997), or 2480 ± 5 BCE' (Spence 2000, astronomical). Even on the latest of these, Khafre's accession comes at 2448 ± 5 BCE, so Khufu's pyramid is no later than about 2450 BC. That is still about 2,384 years before 69 BC, against 2,037 years from 69 BC to 1969. Roller: 'Cleopatra VII (69–30 b.c.)'. Measured from her death (30 BC) the margin only grows. 'The building of' is safe: building started at or after Khufu's accession, which is earlier still. The popular form of this fact is true, so A4 passes. Caveat: the script's own SOURCES entry 1 cites only World History Encyclopedia and New World Encyclopedia (A2 fail). Replace them with the sources named here (see claim 13)."
+  },
+  {
+   "n": 2,
+   "claim": "The pyramid was finished around twenty-five sixty BC.",
+   "where": "spoken (line 2)",
+   "verdict": "confirmed",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Erdil et al. 2025, PLOS ONE, doi:10.1371/journal.pone.0314612, full text https://pmc.ncbi.nlm.nih.gov/articles/PMC12119019/ (Introduction, Table 4, Discussion)",
+   "note": "No source I read states a completion year. 'Around 2560' is derived from the end of Khufu's reign. PNAS 2022 attributes the pyramid to him ('the Great Pyramid of Giza (Khufu Pyramid)'; the Journal of Merer records limestone being taken 'to the construction site of the Great Pyramid of Khufu'). It also gives the accession dates that bracket the end of his reign: Khufu 2589 BCE and Khafre 2558 BCE on Shaw's chronology; Khufu 2613–2577 and Khafre 2586–2548 BCE (1σ) on the radiocarbon model. On either chronology the end of the reign, and so completion, falls about 2590–2550 BC. 'Around 2560' fits, and 'around' is needed. Erdil et al. 2025 (radiocarbon): 'our results act to reaffirm the High chronological estimates ... the Low chronological position ... is ruled out at 95% probability' for the Old Kingdom. So the high (c. 2560) placing is the best-supported one. Lower published dates exist (von Beckerath, Spence: 30–110 years later). A3 requires that disagreement to be recorded in SOURCES, and at present it is not (claim 13). Shaw 2000 and Bronk Ramsey 2010 were not opened directly (archive.org and science.org are blocked here); their figures are as reported in PNAS 2022, which is itself peer-reviewed."
+  },
+  {
+   "n": 3,
+   "claim": "Cleopatra was born in sixty-nine BC.",
+   "where": "spoken (line 3)",
+   "verdict": "confirmed",
+   "source_checked": "Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract; Plutarch, Life of Antony 86, Loeb trans. (Perrin), https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Antony*.html",
+   "note": "Roller: 'Cleopatra VII was born around the beginning of 69 b.c.'; 'Cleopatra VII (69–30 b.c.), queen of Egypt'. Primary source, Plutarch Ant. 86: 'When Cleopatra died she was forty years of age save one'. She died in August 30 BC, so her birth falls in late 70 or 69 BC, which agrees with Roller. The SOURCES entry should cite Roller, because at present it cites nothing."
+  },
+  {
+   "n": 4,
+   "claim": "Two and a half thousand years later.",
+   "where": "spoken (line 3)",
+   "verdict": "confirmed",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read; Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "From 2560 BC to 69 BC is 2,491 years (-68 - (-2559)), and 'two and a half thousand' is a fair rounding of that. On the radiocarbon brackets (completion c. 2590–2550 BC) the span runs from about 2,480 to 2,520 years, which is still 'two and a half thousand'."
+  },
+  {
+   "n": 5,
+   "claim": "From her to Apollo eleven is only two thousand.",
+   "where": "spoken (line 4)",
+   "verdict": "confirmed",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read; NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17); Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract",
+   "note": "NASA: launch 'July 16, 1969'; image caption 'Buzz Aldrin stands on the Moon on July 20th 1969'. From 69 BC to AD 1969 is 2,037 years (1969 - (-68)), and from her death in 30 BC it is 1,998. 'Only two thousand' rounds both correctly."
+  },
+  {
+   "n": 6,
+   "claim": "To Cleopatra, the pyramids were already ancient history.",
+   "where": "spoken (line 5)",
+   "verdict": "confirmed",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Diodorus Siculus 1.63.5, Loeb trans. (Oldfather), https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html",
+   "note": "This is a framing, and it follows from the arithmetic. In context, 'the pyramids' means those at Giza. Menkaure's, the youngest, has an accession date of 2564–2524 BCE (14C) or 2532 BCE (Shaw), as given in PNAS 2022, so all three were about 2,450 or more years old at her birth. Diodorus, a Greek writing in the 1st century BC, says of the largest pyramid: 'no fewer than a thousand years have elapsed, as they say, to our lifetime, or, as some writers have it, more than three thousand four hundred'. To people of her era they were already of vast, uncertain age. I did not re-check Diodorus's own dating of his visit to Egypt. Optional: say 'the Giza pyramids' (see claim 22 on the title)."
+  },
+  {
+   "n": 7,
+   "claim": "CLEOPATRA / QUEEN OF EGYPT · 69–30 BC",
+   "where": "on-screen: title card (look 1)",
+   "verdict": "confirmed",
+   "source_checked": "Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract",
+   "note": "Roller: 'Cleopatra VII (69–30 b.c.), queen of Egypt'; 'In August of 30 b.c.' This matches the card word for word."
+  },
+  {
+   "n": 8,
+   "claim": "c. 2560 BC",
+   "where": "on-screen: timeline pill (look 1); word card after GREAT PYRAMID / FINISHED! (look 2)",
+   "verdict": "confirmed",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "Same evidence as claim 2. The 'c.' is needed and is present here."
+  },
+  {
+   "n": 9,
+   "claim": "2560 BC",
+   "where": "on-screen: timeline year label (look 2, src/shorts/cleopatra-cutout/index.tsx line 287)",
+   "verdict": "fix",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "This label drops the 'c.' that every other place keeps. The date is a derived estimate with decades of uncertainty (published Khufu accession dates run from 2613–2577 BCE (14C) down to 2480 ± 5 BCE), so the bare year shows more precision than any source supports (A3/A6). Change it to 'c. 2560 BC'."
+  },
+  {
+   "n": 10,
+   "claim": "69 BC",
+   "where": "on-screen: timeline pill (look 1); BORN / 69 BC cards and timeline label (look 2)",
+   "verdict": "confirmed",
+   "source_checked": "Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract",
+   "note": "Roller: 'born around the beginning of 69 b.c.'"
+  },
+  {
+   "n": 11,
+   "claim": "AD 1969 / MOON LANDING / APOLLO 11",
+   "where": "on-screen: timeline pill and word cards (looks 1 and 2)",
+   "verdict": "confirmed",
+   "source_checked": "NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "NASA Apollo 11 page: the Moon landing is dated 'July 20th 1969'."
+  },
+  {
+   "n": 12,
+   "claim": "2,491 YEARS (count, pyramid to Cleopatra's birth)",
+   "where": "on-screen: year count (looks 1 and 2)",
+   "verdict": "fix",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read; Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "The arithmetic is right: -68 - (-2559) = 2491. But a four-digit exact count claims one-year precision for a span whose start is only 'c. 2560 BC'. On the radiocarbon brackets the true figure lies anywhere between about 2,480 and 2,520. The description already says 'about 2,491'. Mark it the same way on screen, e.g. '≈2,491 YEARS' or 'ABOUT 2,500 YEARS', or show the count beside the 'c.' date with a 'c.' of its own (A3/A6)."
+  },
+  {
+   "n": 13,
+   "claim": "Old Kingdom chronology carries an uncertainty of several decades ... published dates for Khufu differ by that much between chronologies (SOURCES entry 1; description: 'Old Kingdom dates are uncertain by decades, which does not change the comparison')",
+   "where": "SOURCES block entry 1 and metadata: description",
+   "verdict": "fix",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Erdil et al. 2025, PLOS ONE, doi:10.1371/journal.pone.0314612, full text https://pmc.ncbi.nlm.nih.gov/articles/PMC12119019/ (Introduction, Table 4, Discussion)",
+   "note": "This understates the spread. PNAS 2022 lists Khufu accession dates of 2613–2577 BCE (14C, 1σ), 2589 (Shaw), 2554 (von Beckerath) and 2480 ± 5 BCE (Spence), a range of over a century. Erdil et al. 2025: 'Offsets between the two [High and Low chronologies] can be as great as a century'. The second half is still true: even 2480 BC leaves the comparison intact (claim 1). Changes needed: (a) description: 'Published dates for Khufu differ by up to about a century; the latest still puts the pyramid some 2,400 years before Cleopatra.' (b) SOURCES entry 1 (A1/A2/A3): replace World History Encyclopedia and New World Encyclopedia with A2 sources (Shaw ed. 2000; Bronk Ramsey et al. 2010 Science doi:10.1126/science.1189395; Sheisha et al. 2022 PNAS doi:10.1073/pnas.2202530119; Erdil et al. 2025). Record the lower chronologies (von Beckerath 2554; Spence 2480 ± 5) and why c. 2560 was chosen (radiocarbon supports the High chronology). Also give entries 2 and 4 their sources (Roller 2010; NASA), which they currently lack."
+  },
+  {
+   "n": 14,
+   "claim": "2,037 YEARS (count, Cleopatra's birth to Apollo 11)",
+   "where": "on-screen: year count (looks 1 and 2)",
+   "verdict": "confirmed",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read; Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract; NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "1969 - (-68) = 2037. Both ends are dated to the year: 'around the beginning of 69 b.c.' (Roller) and 20 July 1969 (NASA). If the birth was in late 70 BC instead (Plutarch allows this), the count becomes 2,038. That is inside rounding."
+  },
+  {
+   "n": 15,
+   "claim": "CLOSER TO APOLLO BY 454 YEARS (look 1) / 454 YEARS CLOSER (look 2, src/shorts/cleopatra-cutout/index.tsx line 302)",
+   "where": "on-screen: closing label",
+   "verdict": "fix",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read; Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "The arithmetic is right: 2,491 - 2,037 = 454, measured from her birth. But 454 carries over the full uncertainty of the pyramid date. On the radiocarbon brackets the margin is roughly 440–480 years; on the lowest published chronology (Spence) it is about 350; measured from her death it is 532. The direction is certain, but the exact figure is not. Change it to 'ABOUT 450 YEARS' or '≈454', or keep 454 and tie it on screen to 'c. 2560 BC' (A3/A6). Note: the brief's list of look-2 text did not include the '454 YEARS CLOSER' label, but it is in the code."
+  },
+  {
+   "n": 16,
+   "claim": "Timeline drawn to scale: markers at c. 2560 BC, 69 BC, AD 1969, Cleopatra 55.0% of the way along",
+   "where": "on-screen: timeline geometry (looks 1 and 2)",
+   "verdict": "confirmed",
+   "source_checked": "Arithmetic recomputed (astronomical years: 2560 BC=-2559, 69 BC=-68, 30 BC=-29); src/shorts/cleopatra-timeline/index.tsx (YEAR, SHARE) and src/shorts/cleopatra-cutout/index.tsx read",
+   "note": "Both looks place Cleopatra at x0 + (x1 - x0) * SHARE, with SHARE = 2491/4528 = 0.5501, computed from YEAR = {pyramid: -2559, cleopatra: -68, apollo: 1969}. The positions are proportional to the years, so the scale claim is true for the stated dates. It inherits the 'c.' of the pyramid date, which is fine at this resolution."
+  },
+  {
+   "n": 17,
+   "claim": "Waterhouse's 1888 painting 'Cleopatra' shown as CLEOPATRA",
+   "where": "on-screen: look 2, first card (image under 'CLEOPATRA')",
+   "verdict": "fix",
+   "source_checked": "Not opened: museum or catalogue record unreachable (private collection; only a Wikimedia Commons link is recorded in public/SOURCES.json). Roller 2010 preview read for context.",
+   "note": "A6/A5: this is a Victorian artist's imagined Cleopatra, not a likeness. Under a bare 'CLEOPATRA' label, a viewer can take it as what she looked like. Add a small on-screen credit such as 'J. W. Waterhouse, 1888 (imagined)', or say in the VO or on screen that it is a later painting. The attribution and date themselves are unverified: no A2 catalogue entry was reachable."
+  },
+  {
+   "n": 18,
+   "claim": "Alma-Tadema's 'The Meeting of Antony and Cleopatra' shown with BORN / 69 BC",
+   "where": "on-screen: look 2, card 'BORN' + '69 BC' (pic 'second')",
+   "verdict": "fix",
+   "source_checked": "Not opened: no catalogue entry reachable (public/SOURCES.json gives 1885 and a Wikimedia Commons link only)",
+   "note": "A6: the painting shows an adult Cleopatra at her meeting with Antony, in 41 BC by the painting's full title. Pairing it with 'BORN 69 BC' puts an image of a 28-year-old queen on her birth year, and it is an imagined 19th-century scene. Use it on a card that does not date her birth, or caption it ('Alma-Tadema, 1885: meeting Antony, 41 BC'). The attribution and date are unverified (no A2 catalogue reached)."
+  },
+  {
+   "n": 19,
+   "claim": "Buzz Aldrin on the Moon (AS11-40-5903) shown with MOON LANDING",
+   "where": "on-screen: look 2, Moon-landing card",
+   "verdict": "confirmed",
+   "source_checked": "NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "The NASA Apollo 11 page uses this photograph as its lead image: og:image 'Aldrin_Apollo_11', alt 'Buzz Aldrin on the Moon', caption 'Buzz Aldrin stands on the Moon on July 20th 1969'."
+  },
+  {
+   "n": 20,
+   "claim": "Other Apollo 11 photos: bootprint (AS11-40-5877), flag salute (AS11-40-5874), launch (GPN-2000-000630), shown with MOON LANDING / APOLLO 11",
+   "where": "on-screen: look 2, Moon-landing and Apollo 11 cards",
+   "verdict": "unverified",
+   "source_checked": "Not opened: NASA image catalogue pages for these IDs not reached (only Wikimedia Commons links are recorded in public/SOURCES.json); NASA Apollo 11 page gives launch 'July 16, 1969'",
+   "note": "Low risk: these are well-known Apollo 11 frames, and the launch date is confirmed by NASA's mission page. But I did not open an agency record matching each image ID to Apollo 11. To settle it, open the NASA Image and Video Library or the Apollo Lunar Surface Journal entry for each ID."
+  },
+  {
+   "n": 21,
+   "claim": "Frith 1858 photograph of the Great Pyramid and Sphinx; Roberts/Haghe lithographs of Giza, shown with GREAT PYRAMID / FINISHED! and THE PYRAMIDS? / ANCIENT HISTORY",
+   "where": "on-screen: look 2, pyramid cards",
+   "verdict": "unverified",
+   "source_checked": "Not opened: the Met record (DP132062) and the Cleveland Museum of Art record (1953.503) were unreachable from this session (metmuseum.org blocked); only public/SOURCES.json was read",
+   "note": "They depict Giza, as their titles say, so the cards make no false claim about what is shown. But the museum entries could not be read. Presentation note (A6): placing 'FINISHED!' on 19th-century views of the stripped, weathered pyramid shows it as it looked about 4,400 years later, not as finished. That is acceptable if it is not presented as the finished state. To settle: open the Met and Cleveland catalogue entries."
+  },
+  {
+   "n": 22,
+   "claim": "Cleopatra lived closer to the Moon landing than to the pyramids",
+   "where": "metadata: video title",
+   "verdict": "fix",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph)",
+   "note": "This overstates what the script and its sources claim. The script compares her with the Great Pyramid, and the sources read support it for the three Giza pyramids (Menkaure's accession 2564–2524 BCE (14C) or 2532 BCE (Shaw); even Spence's 2415 ± 10 BCE leaves about 2,345 years to 69 BC, against 2,037). But 'the pyramids' with no qualifier includes pyramids built much later: Middle Kingdom royal pyramids, and Nubian pyramids at Meroë that were still being built in her lifetime. A pedant will point to those (A4; E2: the title must match what the short claims). I did not open an A2 source for the later pyramids; the fix rests on the title saying more than the sources checked support. Change it to '...than to the Great Pyramid' or '...than to the building of the Great Pyramid'. The on-screen 'THE PYRAMIDS?' card follows the spoken line and is fine in context."
+  },
+  {
+   "n": 23,
+   "claim": "The Great Pyramid of Giza was completed around 2560 BC. Cleopatra VII was born in 69 BC, about 2,491 years later. From her birth to the Apollo 11 landing in 1969 is 2,037 years.",
+   "where": "metadata: description",
+   "verdict": "confirmed",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract; NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "Same as claims 2, 3, 4, 5 and 14. 'About 2,491' marks the approximation. The sentence about uncertainty that follows is a separate claim (13: fix)."
+  },
+  {
+   "n": 24,
+   "claim": "The Great Pyramid was about 2,500 years old when Cleopatra was born. Apollo 11 came 2,000 years after her.",
+   "where": "metadata: caption (publish/cleopatra-timeline.json)",
+   "verdict": "confirmed",
+   "source_checked": "Sheisha et al. 2022, PNAS 119(37):e2202530119, doi:10.1073/pnas.2202530119, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC9477388/ (Introduction and chronology paragraph); Roller, Cleopatra: A Biography (Oxford University Press, 2010), ISBN 978-0-19-536553-5: publisher's preview PDF (front matter, Introduction, start of ch. 1) https://api.pageplace.de/preview/DT0400.9780199711000_A35484074/preview-9780199711000_A35484074.pdf; page numbers not visible in the extract; NASA, Apollo 11 mission page https://www.nasa.gov/mission/apollo-11/ (page text and image caption, via Firecrawl, cached 2026-11-17)",
+   "note": "This one was not in the brief, but it is in the publish metadata. The rounding of 2,491 and 2,037 (or 1,998 from her death) is fine."
+  }
+ ]
+}

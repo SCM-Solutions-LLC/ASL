@@ -165,7 +165,10 @@ const Span: React.FC<{ a: number; b: number; y: number; years: number; draw: num
             <div style={{ font: `900 ${hot ? 64 : 54}px ${SANS}`, lineHeight: 1, color: hot ? GOLD : "#fff", WebkitTextStroke: `9px ${INK}`, paintOrder: "stroke fill" }}>
               {fmt(years)}
             </div>
-            <div style={{ font: `900 26px ${SANS}`, letterSpacing: 3, color: "#fff", WebkitTextStroke: `7px ${INK}`, paintOrder: "stroke fill" }}>YEARS</div>
+            <div style={{ font: `900 26px ${SANS}`, letterSpacing: 3, color: "#fff", WebkitTextStroke: `7px ${INK}`, paintOrder: "stroke fill" }}>
+              {/* The pyramid span starts at a c. date; the Apollo span is exact. */}
+              {hot ? "YEARS" : "YEARS, ROUGHLY"}
+            </div>
           </div>
         </div>
       ) : null}
@@ -230,7 +233,7 @@ const Timeline: React.FC<{ L: Layout }> = ({ L }) => {
               color: "#fff",
             }}
           >
-            CLOSER TO APOLLO BY <span style={{ color: GOLD }}>{fmt(BACK - FORWARD)} YEARS</span>
+            CLOSER TO APOLLO BY <span style={{ color: GOLD }}>ABOUT 450 YEARS</span>
           </div>
         </div>
       ) : null}

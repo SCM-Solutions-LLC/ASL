@@ -1,12 +1,12 @@
 {
   "look": "Cutout",
-  "title": "Cleopatra lived closer to the Moon landing than to the pyramids",
+  "title": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid",
   "caption": "The Great Pyramid was about 2,500 years old when Cleopatra was born. Apollo 11 came 2,000 years after her.",
-  "description": "The Great Pyramid of Giza was completed around 2560 BC. Cleopatra VII was born in 69 BC, about 2,491 years later. From her birth to the Apollo 11 landing in 1969 is 2,037 years. Old Kingdom dates are uncertain by decades, which does not change the comparison.",
+  "description": "The Great Pyramid of Giza was completed around 2560 BC. Cleopatra VII was born in 69 BC, about 2,491 years later. From her birth to the Apollo 11 landing in 1969 is 2,037 years. Published dates for Khufu differ by up to about a century; even the latest still puts the pyramid some 2,400 years before Cleopatra.",
   "sources": [
-    "Great Pyramid of Giza, built for Khufu (reign c. 2589-2566 BC), completed c. 2560 BC",
-    "Cleopatra VII Philopator, born 69 BC, died 30 BC",
-    "Apollo 11 lunar landing, 20 July 1969"
+    "Sheisha et al. 2022, PNAS 119(37): e2202530119, doi:10.1073/pnas.2202530119",
+    "Roller, Cleopatra: A Biography (Oxford University Press, 2010)",
+    "NASA, Apollo 11 mission page: nasa.gov/mission/apollo-11"
   ],
   "hashtags": {
     "tiktok": [
