@@ -250,7 +250,7 @@ const CellScene: React.FC = () => {
 
       {/* One column, right of the figure: the 9:16 crop has nowhere else, and a label that stays
           put is one the eye does not have to find again. */}
-      <Tag x={COLUMN} y={130} text="ABOUT HALF HUMAN" sub="best estimates, by count" from={F.half} to={F.thirty - 4} />
+      <Tag x={COLUMN} y={130} text="ABOUT HALF HUMAN" sub="typical 70 kg man, by count" from={F.half} to={F.thirty - 4} />
       <Tag x={COLUMN} y={130} text="30 TRILLION" sub="typical 70 kg man (2016 count)" from={F.thirty + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={280} text="38 TRILLION" sub="bacteria" from={F.thirtyEight + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={130} text={"38 TRILLION\nBACTERIA"} sub="far smaller on average" from={F.scale + 8} to={F.own - 6} />

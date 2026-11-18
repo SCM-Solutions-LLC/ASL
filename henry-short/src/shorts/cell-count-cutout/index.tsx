@@ -366,7 +366,7 @@ const Outnumbered: React.FC = () => {
         at={F.they}
         colour={CORAL}
         size={150}
-        unit="TRILLION"
+        unit="TRILLION (2016)"
       />
       <Count
         x={right}
@@ -461,7 +461,7 @@ const Deck: React.FC = () => (
         size={104}
       />
       <Word text="ABOUT HALF" at={F.less - 1} size={120} tilt={3} />
-      <Scrap text="BEST ESTIMATES" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
+      <Scrap text="TYPICAL 70 KG MAN" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
@@ -477,7 +477,7 @@ const Deck: React.FC = () => (
       />
       <Word text={`${HUMAN} TRILLION`} at={F.thirty} swipe="#bfe9e4" tilt={3} />
       {/* The counts are the paper's reference man, not the viewer (fact-check, A3). */}
-      <Scrap text="TYPICAL 70 KG ADULT MAN" at={F.thirty + 4} x={540} y={250} size={48} tilt={-3} paper="#fffdf6" />
+      <Scrap text="TYPICAL 70 KG MAN · 2016 COUNT" at={F.thirty + 4} x={540} y={250} size={48} tilt={-3} paper="#fffdf6" />
       <Scrap
         text="YOURS"
         at={F.yours}
