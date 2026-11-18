@@ -36,13 +36,13 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   keyPhrases: [
-    ["less", "than", "half"],
+    ["about", "half", "human."],
     ["thirty", "trillion"],
     ["Thirty-eight", "trillion"],
     ["two", "hundred", "grams."],
-    ["Eighty-four", "percent"],
+    ["Most", "of", "them"],
     ["mostly", "blood."],
-    ["outnumbered"],
+    ["roughly", "match"],
   ],
   breakAfter: ["scale,"],
 });
@@ -50,10 +50,10 @@ const edit = makeEdit({
 // Every card and every beat inside a card hangs off a spoken word.
 const F = {
   cell: edit.at("cell"),
-  less: edit.at("less"),
+  less: edit.at("about"),
   half: edit.at("half"),
   human: edit.at("human."),
-  sentence2: edit.at("about"),
+  sentence2: edit.at("about", 1),
   thirty: edit.at("thirty"),
   yours: edit.at("yours."),
   thirtyEight: edit.at("thirty-eight"),
@@ -69,17 +69,17 @@ const F = {
   own: edit.at("own"),
   not: edit.at("not"),
   what: edit.at("what"),
-  eightyFour: edit.at("eighty-four"),
-  percent: edit.at("percent"),
+  eightyFour: edit.at("most"),
+  percent: edit.at("them", 1),
   red: edit.at("red"),
   sentence6: edit.at("by", 1),
-  byCount: edit.at("count,", 1),
+  byCount: edit.at("count,"),
   mostly: edit.at("mostly"),
   sentence7: edit.at("and", 2),
-  they: edit.at("they"),
-  outnumbered: edit.at("outnumbered"),
-  their: edit.at("their"),
-  passengers: edit.at("passengers."),
+  they: edit.at("their"),
+  outnumbered: edit.at("match"),
+  their: edit.at("cell", 1),
+  passengers: edit.at("cell.", 2),
   end: edit.duration,
 };
 
@@ -385,7 +385,7 @@ const Outnumbered: React.FC = () => {
         colour={YELLOW}
         n={12}
       />
-      <Word text="OUTNUMBERED" at={F.outnumbered + 3} size={112} />
+      <Word text="ROUGHLY EVEN" at={F.outnumbered + 3} size={112} />
     </>
   );
 };
@@ -460,8 +460,8 @@ const Deck: React.FC = () => (
         until={F.less - 1}
         size={104}
       />
-      <Word text="LESS THAN HALF" at={F.less - 1} size={108} tilt={3} />
-      <Scrap text="BEST ESTIMATE" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
+      <Word text="ABOUT HALF" at={F.less - 1} size={120} tilt={3} />
+      <Scrap text="BEST ESTIMATES" at={F.half} x={800} y={250} size={50} tilt={4} paper={YELLOW} />
     </Shot>
 
     {/* 2. About thirty trillion of your cells are yours. */}
@@ -614,7 +614,7 @@ const Deck: React.FC = () => (
         by={1.08}
       />
       <Scrap
-        text="84%"
+        text="MOST"
         at={F.eightyFour}
         x={275}
         y={300}
@@ -667,7 +667,7 @@ const Deck: React.FC = () => (
       <Word text="MOSTLY BLOOD" at={F.mostly} size={116} swipe="#ffc9c2" />
     </Shot>
 
-    {/* 9. And they are outnumbered */}
+    {/* 9. And their passengers roughly match them, */}
     <Shot from={F.sentence7 - 2} to={F.their - 2}>
       <Outnumbered />
     </Shot>
@@ -696,7 +696,7 @@ const Deck: React.FC = () => (
         colour={YELLOW}
         n={14}
       />
-      <Word text="PASSENGERS" at={F.passengers} swipe="#bfe9e4" tilt={3} />
+      <Word text="CELL FOR CELL" at={F.passengers} swipe="#bfe9e4" tilt={3} />
     </Shot>
   </Board>
 );

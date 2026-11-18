@@ -16,8 +16,8 @@ import { Slide } from "./set";
 // cut instead of breaking it.
 const edit = makeEdit({
   alignment,
-  keyPhrases: [["less", "than", "half"], ["thirty", "trillion"], ["Thirty-eight", "trillion"], ["two", "hundred", "grams."],
-    ["Eighty-four", "percent"], ["mostly", "blood."], ["outnumbered"]],
+  keyPhrases: [["about", "half", "human."], ["thirty", "trillion"], ["Thirty-eight", "trillion"], ["two", "hundred", "grams."],
+    ["Most", "of", "them"], ["mostly", "blood."], ["roughly", "match"]],
   // The scale sentence is fifteen words, which is five lines in the 9:16 caption block against
   // the four it has room for; it breaks on its own comma.
   breakAfter: ["scale,"],
@@ -25,17 +25,17 @@ const edit = makeEdit({
 
 // Every beat hangs off a spoken word, so a re-read of the script re-resolves the cut.
 const F = {
-  less: edit.at("less"),
+  less: edit.at("about"),
   half: edit.at("half"),
   thirty: edit.at("thirty"),
   thirtyEight: edit.at("Thirty-eight"),
   scale: edit.at("scale,"),
   two: edit.at("two"),
   own: edit.at("own"),
-  eightyFour: edit.at("Eighty-four"),
+  eightyFour: edit.at("Most"),
   red: edit.at("red"),
   mostly: edit.at("mostly"),
-  outnumbered: edit.at("outnumbered"),
+  outnumbered: edit.at("match"),
   passengers: edit.at("passengers."),
 };
 
@@ -250,12 +250,12 @@ const CellScene: React.FC = () => {
 
       {/* One column, right of the figure: the 9:16 crop has nowhere else, and a label that stays
           put is one the eye does not have to find again. */}
-      <Tag x={COLUMN} y={130} text="~44% HUMAN" sub="best estimate, by count" from={F.half} to={F.thirty - 4} />
-      <Tag x={COLUMN} y={130} text="30 TRILLION" sub="typical 70 kg adult man" from={F.thirty + 6} to={F.scale - 6} />
+      <Tag x={COLUMN} y={130} text="ABOUT HALF HUMAN" sub="best estimates, by count" from={F.half} to={F.thirty - 4} />
+      <Tag x={COLUMN} y={130} text="30 TRILLION" sub="typical 70 kg man (2016 count)" from={F.thirty + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={280} text="38 TRILLION" sub="bacteria" from={F.thirtyEight + 6} to={F.scale - 6} />
       <Tag x={COLUMN} y={130} text={"38 TRILLION\nBACTERIA"} sub="far smaller on average" from={F.scale + 8} to={F.own - 6} />
       <Tag x={COLUMN} y={130} text={"YOUR 30\nTRILLION"} sub="counted, not weighed" from={F.own + 4} to={F.eightyFour - 4} />
-      <Tag x={COLUMN} y={130} text={"84% RED\nBLOOD CELLS"} sub="25 of your 30 trillion" from={F.eightyFour + 6} to={F.outnumbered - 6} />
+      <Tag x={COLUMN} y={130} text={"MOSTLY RED\nBLOOD CELLS"} sub="25 of 30 trillion (2016 count)" from={F.eightyFour + 6} to={F.outnumbered - 6} />
       {/* The two populations side by side on the last line, stacked because the column is narrow. */}
       <Tag x={COLUMN} y={130} text="30 TRILLION" sub="yours, mostly blood" from={F.outnumbered + 6} />
       <Tag x={COLUMN} y={280} text="38 TRILLION" sub="passengers" from={F.passengers - 4} />

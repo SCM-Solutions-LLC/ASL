@@ -1,75 +1,71 @@
-By the best cell count we have, you are slightly less than half human.
+By the best cell counts we have, you are about half human.
 About thirty trillion of your cells are yours.
 Thirty-eight trillion are bacteria.
 But put them all on a scale, and those bacteria weigh about two hundred grams.
-And your own cells are not what you picture. Eighty-four percent are red blood cells.
-By count, your cells are mostly blood. And they are outnumbered by their passengers.
+And your own cells are not what you picture. Most of them are red blood cells.
+By count, your cells are mostly blood. And their passengers roughly match them, cell for cell.
 
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
-Everything here rests on one paper: Sender, Fuchs & Milo, "Revised Estimates for
-the Number of Human and Bacteria Cells in the Body", PLoS Biology 14(8): e1002533
-(2016), doi:10.1371/journal.pbio.1002533. Its numbers are for a "reference man"
-(20-30 years old, 70 kg, 170 cm). The authors put the uncertainty of the
-bacteria count, and so of the ratio, at roughly 25%; the human count is far
-tighter (about 2%). Person-to-person variation comes on top. Every figure in the
-script is therefore a round number for one standard body, not a measurement of
-the viewer, and the screen says so where the counts first appear ("typical 70
-kg adult man"). The paper's reference woman has about 21 trillion human cells
-and 44 trillion bacteria; its Table 3 puts the ratio at 1.3 or more for every
-group it models (man, woman, infants, elder, obese), so the direction of the
-hook does not depend on the reference body.
+Two peer-reviewed counts, read in full by an independent fact-check (18 Nov 2026):
+- Sender, Fuchs & Milo, "Revised Estimates for the Number of Human and Bacteria
+  Cells in the Body", PLoS Biology 14(8): e1002533 (2016),
+  doi:10.1371/journal.pbio.1002533. For a "reference man" (20-30 years old,
+  70 kg, 170 cm): 3.0e13 human cells (2% uncertainty, which the authors say
+  "might be too optimistically low"), 3.8e13 bacteria, a ratio B/H = 1.3 with
+  25% uncertainty, which they call "about 1:1". The only count that pairs human
+  cells and bacteria for the same reference body, which is why its 30 and 38
+  trillion are the numbers spoken.
+- Hatton et al., PNAS 120(39): e2303077120 (2023), doi:10.1073/pnas.2303077120:
+  "≈36 trillion cells in the male" (70 kg, 176 cm, 20-50 y), "≈28 trillion in
+  the female"; earlier studies "converging on values of 30 to 37 trillion human
+  cells"; it cites Sender for "an approximately equal number of bacteria cells".
 
-Provenance: an independent fact-check on 18 Nov 2026 read the paper's full text
-(journals.plos.org) and its tables (Europe PMC XML). An earlier pass had only
-BioNumbers (ID 113005) and press coverage; this replaces it.
+The spoken line was narrowed so it is true on both counts: 30 of 68 trillion is
+44% human (Sender), 36 of 74 is 49% (Hatton with Sender's bacteria). Sender's
+reference woman is about a third human (21 and 44 trillion), so the screen
+names the body the numbers are for ("typical 70 kg man").
 
-1. "By the best cell count we have, you are slightly less than half human."
-   3.0e13 human cells against 3.8e13 bacteria: 30 of 68 trillion is 44%. This is
-   the soft one, which is why the line says "the best count we have" and
-   "slightly". The ratio is 1.3:1, which the paper calls "about 1:1", and it
-   treats its colon count as "an upper limit". With 25% on the ratio the human
-   share runs from about 38% to 51%. The paper also notes each bowel movement
-   "reduces the content by a quarter to a third" of the colon's bacteria;
-   that this can briefly tip the count back toward human cells is arithmetic on
-   that figure, not a line of the paper. So "slightly less than half" is the
-   best estimate, and the screen shows it as "~44%" and "best estimate". What is NOT soft is the direction of the correction: the
-   old "bacteria outnumber you ten to one" figure is the myth this paper
-   retired, and the short must never be captioned or titled with it.
-   The count is of bacteria only, which is what the paper counts; archaea, fungi
-   and viruses are not in the 38 trillion.
+1. "By the best cell counts we have, you are about half human."
+   44% (Sender) or 49% (Hatton). "About half" is the claim both support; the
+   short does not claim bacteria outnumber human cells.
+   The count treats red blood cells as cells, as both papers do. Sender notes
+   that against nucleated human cells only, bacteria outnumber them about
+   10:1 ("a question of definition"). The short never captions the 10:1 figure.
+   The paper counts microbial cells and "operationally" calls them bacteria;
+   archaea and eukaryotes are 2-3 orders of magnitude fewer.
 
 2. "About thirty trillion of your cells are yours."
-   3.0e13 human cells in the reference man.
+   3.0e13 (Sender); Hatton's 36 trillion is within "about thirty" at A3's limit,
+   and on screen the 30 trillion is marked "(2016 count)".
 
 3. "Thirty-eight trillion are bacteria."
-   3.8e13, nearly all of them in the colon. The animation scatters them through
-   the figure because it is a count, not a map; it does not claim they live
-   everywhere.
+   3.8e13 (Sender), nearly all in the colon. Sender treats its colon estimate as
+   "in some respects ... an upper limit". The animation scatters them through
+   the figure because it is a count, not a map.
 
 4. "Those bacteria weigh about two hundred grams."
-   Total bacterial mass ~0.2 kg, about 0.3% of a 70 kg body. They are that light
-   because a bacterium is on average far smaller than a human cell (the paper
-   uses about 5 pg for an average gut bacterium, against about 100 um^3 for a red
-   blood cell) — which is why the animation shrinks them as they land on the
-   scale, and the screen says "far smaller on average". The paper also retires
-   an older folk figure of 1-3 kg.
+   Total bacterial mass ~0.2 kg (Sender). They are that light because a
+   bacterium is on average far smaller than a human cell; the screen says "far
+   smaller on average". Sender also revises an earlier figure of 1-3 kg, which
+   came from a 2012 NIH news release.
 
-5. "Eighty-four percent are red blood cells."
-   ~2.5e13 red blood cells of 3.0e13 human cells, by COUNT. The unit chart shows
-   25 of 30 dots, which is 83%; the label carries the paper's 84%.
+5. "Most of them are red blood cells."
+   Sender: "The cell count is dominated by red blood cells (84%)", 2.5e13 of
+   3.0e13. Hatton: non-nucleated blood cells (red cells and platelets) ≈29 of
+   ≈36 trillion. "Most" holds on both; the 84% figure is not spoken.
 
 6. "By count, your cells are mostly blood."
    True by count only, and the line says so. By MASS it is the other way round:
-   muscle and fat cells are about three quarters of the body's cell mass, and
-   red blood cells only a few percent, because they are among the smallest
-   cells there are. An earlier draft said "You are mostly blood", which is false
-   without the qualifier and was changed for that reason.
+   "75% of total cell mass is composed of two cell types, fat cells
+   (adipocytes) and muscle cells (myocytes)" (Sender; Hatton agrees). Red blood
+   cells are "among the smallest cell types in the human body" (Sender).
 
-7. "And they are outnumbered by their passengers."
-   Claim 1 again, with the same caveat.
+7. "And their passengers roughly match them, cell for cell."
+   Sender's "about 1:1" (1.3 with 25% uncertainty); 38 against 30-36 trillion.
 
 8. The unit chart, not spoken.
    68 dots, one per trillion cells: 30 human (25 of them red blood cells) and 38
-   bacteria. The picture is exact to the rounding of the numbers above.
+   bacteria, Sender's rounded figures, labelled "(2016 count)" where the human
+   total is shown.
