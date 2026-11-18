@@ -1,6 +1,6 @@
 In 2024, Stonehenge's Altar Stone was traced to Scotland. Now nobody can say exactly where it came from.
 The ages of tiny mineral grains inside it matched sandstone in the northeast.
-So how did six tonnes of stone travel more than seven hundred kilometres?
+If so, how did six tonnes travel more than seven hundred kilometres?
 The 2024 team suggested it went by sea.
 But no late Stone Age boat has been found in Britain, and another study doubts one could carry six tonnes.
 Overland, on a sledge, that study estimates about eight months of hauling.
@@ -68,15 +68,16 @@ neither paper claims.
    grains are "typically 10-40 µm wide"; abstract as in claim 1 ("northeast
    Scotland").
 
-3. "So how did six tonnes of stone travel more than seven hundred
-   kilometres?"
+3. "If so, how did six tonnes travel more than seven hundred kilometres?"
    Clarke 2024, abstract: "Such a provenance implies that the Altar Stone, a 6
    tonne shaped block, was sourced at least 750 km from its current location";
    body: "measuring 4.9 x 1.0 x 0.5 m ... weighing 6 t". "More than seven
    hundred" sits under Clarke 2024's "at least 750 km". Clarke 2026 gives a
    rounder "some 700 km" ("the 6000 kg central sandstone megalith"), which the
-   script does not contradict. The distance assumes the Orcadian Basin source;
-   the line follows straight on from the 2024 result. "When" is unknown:
+   script does not contradict. The distance holds only for an Orcadian Basin
+   source, as Clarke 2024 frames it ("Such a provenance implies"); "If so"
+   keeps that condition, since claim 1 and claim 10 say the source is
+   unresolved. "When" is unknown:
    Parker Pearson 2024, "Just when the Altar Stone arrived at Stonehenge is
    unknown"; Pirrie 2026 abstract, "Its purpose at the monument, and when it
    was transported to the site, is unknown". So the script gives no date for
