@@ -1,11 +1,72 @@
-{"script":"script/altar-stone.txt","sha256":"82e8e81f321d4660ed63b1b5c81bd65a5c33bbd268c65f8fa7bbdf7a7fe0caec","checked":"2026-11-17","claims":[
-{"n":1,"claim":"The Altar Stone at the heart of Stonehenge came from northeast Scotland.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1 (doi:10.1038/s41586-024-07652-1), full text via Firecrawl scrape","note":"Abstract: 'remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland'; Discussion: data 'indicate that the Altar Stone of Stonehenge has a provenance from the ORS in the Orcadian Basin of northeast Scotland'. 'At the heart' matches 'The central megalith of Stonehenge, the Altar Stone (Stone 80)'. Region-level wording (no outcrop named) matches the paper."},
-{"n":2,"claim":"(A4 hook) A viewer who swipes at second two leaves believing the Altar Stone, Stonehenge's central stone, originated in northeast Scotland.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"That takeaway is the paper's central finding as stated; no later sentence in the script is needed to make it true. The popular-myth risk (an actual altar) is not asserted: 'Altar Stone' is the stone's conventional name (Stone 80)."},
-{"n":3,"claim":"It is a six-tonne slab of sandstone, nearly five metres long.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"'measuring 4.9 x 1.0 x 0.5 m ... weighing 6 t and composed of pale green micaceous sandstone'; abstract 'a 6 tonne shaped block', 'central recumbent sandstone megalith'. 4.9 m = 'nearly five metres'; 4.9 x 1.0 x 0.5 m fits 'slab'."},
-{"n":4,"claim":"Several of Stonehenge's bluestones came from hills in west Wales, about two hundred and twenty-five kilometres away.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"'the igneous bluestones were brought around 225 km from the Mynydd Preseli to Stonehenge' (citing Parker Pearson et al. 2020); Mynydd Preseli placed 'close to' Mill Bay, Pembrokeshire. 'Several' understates rather than overstates. 'Came from' is about origin only, so the glacial-transport minority view the paper mentions does not contradict it."},
-{"n":5,"claim":"For about a hundred years, the Altar Stone was thought to come from Wales too.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1; Thomas 1923 doi:10.1017/S0003581500005096 (Cambridge Core landing page only, full text paywalled, metadata confirms author/title/July 1923)","note":"Clarke: early Mill Bay, Pembrokeshire source proposed in Thomas (1923); after Mill Bay was ruled out 'a source from elsewhere in the ORS of the Anglo-Welsh Basin was still considered likely', until Bevins et al. 2023 showed 'the Anglo-Welsh Basin is highly unlikely to be the source'. 1923 to 2023/2024 is about a century. Rests on Clarke's peer-reviewed account; Thomas's own text was not readable here."},
-{"n":6,"claim":"Then geologists dated tiny mineral grains inside it.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"'we present in situ U-Pb, Lu-Hf and trace element isotopic data for zircon, apatite and rutile from two fragments of the Altar Stone'; Methods: heavy-mineral grains 'typically 10-40 um wide'. The SOURCES quote is verified. Minor: zircon from the stone had already been dated in 2020 (Bevins et al., ref 1), but that does not make 'Then' false, because the 2024 dating is the one that produced the Scottish match."},
-{"n":7,"claim":"Their ages matched old sandstone in northeast Scotland, at least seven hundred and fifty kilometres away.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"Abstract: 'remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland. Such a provenance implies that the Altar Stone ... was sourced at least 750 km from its current location.' Apatite ages from Caithness and Orkney samples 'match those from the Altar Stone'. 'Old sandstone' is a loose rendering of 'Old Red Sandstone' (mostly Mid-Devonian per the paper) but is not false."},
-{"n":8,"claim":"How six tonnes made that trip is unknown.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"The paper only infers the route ('suggests', 'we posit') from how hard overland transport would have been, with no direct evidence of the route or method. So 'unknown' is accurate."},
-{"n":9,"claim":"The researchers think it probably went by sea.","where":"spoken","verdict":"confirmed","source_checked":"https://www.nature.com/articles/s41586-024-07652-1","note":"Abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.' Discussion says sea routes south from the Orcadian Basin were possible. 'Probably' matches 'suggests'."}
-]}
+{
+  "script": "script/altar-stone.txt",
+  "sha256": "f4c036cc193be4fdb72078ef19f4928708255e4bc995cdc244a8de57c0718f04",
+  "checked": "2026-11-18",
+  "claims": [
+    { "n": 1, "claim": "In 2024, geologists traced Stonehenge's six-tonne Altar Stone to Scotland, more than seven hundred kilometres away.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.1038/s41586-024-07652-1, full text at https://pmc.ncbi.nlm.nih.gov/articles/PMC11324516/; Crossref works/10.1038/s41586-024-07652-1 (published online 2024-08-14); Crossref abstract of doi:10.1002/jqs.70080",
+      "note": "Abstract: 'remarkable similarity to the Old Red Sandstone of the Orcadian Basin in northeast Scotland. Such a provenance implies that the Altar Stone, a 6 tonne shaped block, was sourced at least 750 km from its current location.' Body: 'weighing 6 t'; summary: 'transported from northeast Scotland, more than 750 km away'. 'More than seven hundred' sits below 'at least 750'; Clarke 2026 gives 'some 700 km' and '6000 kg'. Authors are in Earth-science departments (Curtin, Aberystwyth, Adelaide) plus petrologist Ixer (UCL Institute of Archaeology), so 'geologists' holds. Published online 14 Aug 2024."
+    },
+    { "n": 2, "claim": "(A4 hook takeaway) A viewer who swipes at second two believes geologists found in 2024 that the Altar Stone came from Scotland, 700+ km from Stonehenge.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "PMC11324516 (Clarke 2024 full text); Crossref abstracts of doi:10.1002/jqs.70080 and doi:10.1144/jgs2026-090",
+      "note": "The sentence is dated, so as a statement about 2024 it is true. The belief it leaves (a Scottish source) is not contradicted by any source read: Clarke 2026 still says the stone 'is suggested to have originated from the Orcadian Basin in northeast Scotland' with Caithness 'the closest match'; Pirrie 2026 rules out 'many' (not all) Orcadian outcrops, says the grain dating 'supports a Laurentian source', and calls only the 'exact' provenance unknown. Residual risk to know: Pirrie 2026's abstract does not itself endorse Scotland, Clarke 2024 notes Svalbard ORS zircons are also statistically indistinguishable, and Pirrie's full text was not readable (bot challenge)."
+    },
+    { "n": 3, "claim": "The ages of tiny mineral grains inside it matched sandstone in the northeast.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "PMC11324516 (Clarke 2024 full text)",
+      "note": "U-Pb/Lu-Hf ages of detrital zircon, apatite and rutile in the Altar Stone; heavy-mineral grains 'typically 10-40 um wide', 'usually <30 um', so 'tiny' fits. 'Apatite U-Pb age components from Orcadian Basin samples from Spittal, Caithness (AQ1) and Cruaday, Orkney (CQ1) ... match those from the Altar Stone'; zircon K-S test 'fails to reject the null hypothesis' for Altar Stone vs Orcadian Basin. 'Northeast' = 'Orcadian Basin in northeast Scotland'. The line does not claim the match is unique (Svalbard also fits the zircons), so no overstatement."
+    },
+    { "n": 4, "claim": "So how did it get here? (implies the means of transport is not known)", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref abstract of doi:10.1002/jqs.70080; doi:10.14324/AI.27.1.13 full-text PDF",
+      "note": "A question, not an assertion. Its implication is supported: Clarke 2026 abstract 'its mode of transport uncertain'. No date for the journey is given, correctly: Parker Pearson 2024 'Just when the Altar Stone arrived at Stonehenge is unknown'."
+    },
+    { "n": 5, "claim": "The geologists suggested it went by sea.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "PMC11324516 (Clarke 2024 full text)",
+      "note": "Abstract: 'The difficulty of long-distance overland transport of such massive cargo from Scotland, navigating topographic barriers, suggests that it was transported by sea.' 'Suggested' keeps the paper's hedge."
+    },
+    { "n": 6, "claim": "But no late Stone Age boat has been found in Britain", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.14324/AI.27.1.13, full-text PDF https://journals.uclpress.co.uk/ai/article/3293/galley/18572/download/ (peer-reviewed per the PDF, 'Published: 31 December 2024')",
+      "note": "'Although no boats are known from the Late Neolithic in Britain or Europe ...'; 'The earliest known boats in Britain ... at Ferriby. The earliest of these Early Bronze Age sewn-plank boats (Ferriby 3) dates to 2030-1780 cal bc'. Consistent with Clarke 2024 (Hanson Log Boat, 'around 1500 bc'). 'Late Stone Age' is a plain rendering of 'Late Neolithic' (a pedant may note the capitalised term is African prehistory's; the lower-case 'late' reads as the period). Scope (Britain) is narrower than the source's."
+    },
+    { "n": 7, "claim": "and another study doubts one could carry six tonnes.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.14324/AI.27.1.13 full-text PDF (UCL Press)",
+      "note": "'What we know of Early Bronze Age boats, limited though our knowledge is, would suggest that they and their Late Neolithic precursors were unlikely to be sturdy enough to carry a 6-tonne stone in coastal waters.' 'Doubts' = 'unlikely'; 'one' = a Late Neolithic boat. It is a separate paper, but not an independent team: Bevins, Ixer and Pearce co-wrote both it and Clarke 2024. The script says only 'another study', which is accurate, though line 8 flags author overlap for Pirrie 2026 and not here."
+    },
+    { "n": 8, "claim": "Overland, on a sledge, that study estimates about eight months of hauling.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "doi:10.14324/AI.27.1.13 full-text PDF (UCL Press)",
+      "note": "'necessitating the use of a suitably robust wooden sledge ... sliding on wooden rails'; 'such a journey with a large and heavy sledge could take perhaps four times today's time of under two months ... needing eight months or so to haul a stone from northern Scotland to Stonehenge.' 'Estimates about' = 'perhaps ... or so'."
+    },
+    { "n": 9, "claim": "A glacier? A 2026 ice model says ice could have carried it part of the way, at most.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref works/10.1002/jqs.70080 (publisher-deposited abstract, published online 2026-06-04). Wiley full text not reachable (bot challenge)",
+      "note": "Rests on the abstract alone, and the abstract itself says it: 'we combine sandstone provenance analysis with ice flow modelling'; 'Glacial transport may have provided an intermediate stage in the stone's journey, but alone cannot account for the final emplacement on Salisbury Plain. Even under a glacially assisted scenario, substantial anthropogenic transport would have remained necessary.' 'Could have ... part of the way, at most' does not exceed 'may have provided an intermediate stage'. Disagreement on record: Clarke 2024 calls glacial transport 'difficult to reconcile' and Parker Pearson 2024 says such theories 'can be rejected'; the script attributes the permissive view to the 2026 paper and caps it. The abstract's Dogger Bank flooding problem is omitted, which leaves the glacier sounding slightly more possible than the abstract does, but 'could have' is the abstract's own 'may have'."
+    },
+    { "n": 10, "claim": "Then, months later, a new study, including three of the same geologists, looked closer.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref works/10.1144/jgs2026-090 (authors, published online 2026-11-05, abstract); Crossref works/10.1002/jqs.70080 (online 2026-06-04); Clarke 2024 author list at PMC11324516",
+      "note": "About five months after the June 2026 paper of the previous line. Clarke 2024: Clarke, Kirkland, Bevins, Pearce, Glorie, Ixer. Pirrie 2026: Pirrie, Bevins, Ixer, Pearce, Turner, Power, Hillier, Morton, Saunders, Ando, Barbarano, Horbury, Price. Overlap exactly three (Bevins, Ixer, Pearce), all Earth scientists. 'The same geologists' refers back to line 4's 2024 team (Pirrie shares no author with Clarke 2026). 'Looked closer' = 'detailed multi-proxy characterization of the sedimentology, geochemistry, detrital and diagenetic mineralogy of the Altar Stone'."
+    },
+    { "n": 11, "claim": "Many outcrops in that part of Scotland could not have been the source.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref works/10.1144/jgs2026-090 (publisher-deposited abstract). Lyell Collection full text not reachable (bot challenge)",
+      "note": "Abstract itself: 'the overall petrology, heavy mineral assemblage, clay mineralogy and geochemistry show that many outcrops of the Old Red Sandstone (ORS) in the Orcadian Basin could not have been the source of the Altar Stone.' 'That part of Scotland' = the northeast / Orcadian Basin (Clarke 2024: 'Orcadian Basin in northeast Scotland')."
+    },
+    { "n": 12, "claim": "No outcrop examined so far matches it in every way.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref works/10.1144/jgs2026-090 (abstract); PMC11324516 (Clarke 2024 full text)",
+      "note": "Abstract: 'To date, no examined outcrop area of the UK ORS can be shown to have the same suite of lithological and geochemical characteristics as documented for the Altar Stone.' 'So far' = 'to date'; 'in every way' = 'the same suite of ... characteristics', which keeps it consistent with line 3 (Clarke 2024's grain-age match at Spittal and Cruaday is one characteristic, not the suite). Fine point: the source says no outcrop 'can be shown to have' the full suite; 'has been shown to match it in every way' would be the most literal wording, but the spoken line does not change the claim."
+    },
+    { "n": 13, "claim": "Where exactly the Altar Stone came from is, for now, unknown.", "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Crossref abstracts of doi:10.1144/jgs2026-090 and doi:10.1002/jqs.70080; doi:10.14324/AI.27.1.13 full-text PDF",
+      "note": "Pirrie 2026: 'the exact provenance of the Altar Stone is as yet unknown.' Clarke 2026: 'its source location within this large basin remains unresolved'. Parker Pearson 2024: 'As yet, the actual outcrop from which the Altar Stone was extracted is unknown'. 'Exactly' keeps it at outcrop level, consistent with the region-level hook."
+    }
+  ]
+}
