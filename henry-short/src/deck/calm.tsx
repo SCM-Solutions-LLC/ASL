@@ -12,11 +12,13 @@ export const Card: React.FC<{
   from: number;
   to: number;
   word: string;
+  /** The keyword's figure in imperial units, on a smaller line under it. */
+  sub?: string;
   at: number;
   sheet?: string;
   tilt?: number;
   children: React.ReactNode;
-}> = ({ from, to, word, at, sheet, tilt = 0, children }) => {
+}> = ({ from, to, word, sub, at, sheet, tilt = 0, children }) => {
   const f = useCurrentFrame();
   if (f < from || f >= to) return null;
   return (
@@ -74,6 +76,26 @@ export const Card: React.FC<{
           {word}
         </div>
       </div>
+      {sub && (
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: KEY.y + 76,
+            textAlign: "center",
+            translate: "0 -50%",
+            rotate: `${KEY.tilt}deg`,
+            font: `400 ${KEY.size * 0.55}px ${MARKER}`,
+            color: INK,
+            whiteSpace: "nowrap",
+            letterSpacing: 1,
+            opacity: interpolate(f, [at, at + 6], [0, 1], clamp),
+          }}
+        >
+          {sub}
+        </div>
+      )}
     </div>
   );
 };

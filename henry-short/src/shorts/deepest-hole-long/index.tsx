@@ -158,7 +158,8 @@ const Plate: React.FC<{
 
 // Depth against year, from the script's SOURCES (Lobanov 2021). Dots are dated readings; the
 // dashed lines between them only join them up, since the depth between readings is not shown.
-const X = (yr: number) => 240 + ((yr - 1970) / 23) * 740;
+const X = (yr: number) => 240 + ((yr - 1970) / 23) * 640;
+const KM_PER_MI = 1.609344;
 const Y = (km: number) => 250 + (km / 13) * 760;
 const PTS = {
   start: [1970.39, 0],
@@ -262,6 +263,33 @@ const Chart: React.FC<{ stage: number; from: number }> = ({ stage, from }) => {
           <Tick x={X(yr)} y={Y(0) - 46} text={`${yr}`} />
         </React.Fragment>
       ))}
+      <line
+        x1={X(1993)}
+        y1={Y(0)}
+        x2={X(1993)}
+        y2={Y(13)}
+        stroke={INK}
+        strokeWidth={6}
+        strokeLinecap="round"
+      />
+      {[2, 4, 6, 8].map((mi) => (
+        <React.Fragment key={mi}>
+          <line
+            x1={X(1993)}
+            y1={Y(mi * KM_PER_MI)}
+            x2={X(1993) + 18}
+            y2={Y(mi * KM_PER_MI)}
+            stroke={INK}
+            strokeWidth={8}
+          />
+          <Tick
+            x={X(1993) + 28}
+            y={Y(mi * KM_PER_MI)}
+            text={`${mi} MI`}
+            anchor="start"
+          />
+        </React.Fragment>
+      ))}
       {level(US_RECORD_KM, 1, TEAL)}
       {level(PLAN_KM, 5, CORAL)}
       {stage >= 1 && (
@@ -359,6 +387,25 @@ const Thermometer: React.FC<{
               y={yAt(c)}
               text={c === 200 ? "200 °C" : `${c}`}
               anchor="end"
+            />
+          </React.Fragment>
+        ))}
+        {[0, 50, 100, 150, 200].map((c) => (
+          <React.Fragment key={c}>
+            <line
+              x1={x + 44}
+              y1={yAt(c)}
+              x2={x + 90}
+              y2={yAt(c)}
+              stroke={INK}
+              strokeWidth={9}
+              strokeLinecap="round"
+            />
+            <Tick
+              x={x + 104}
+              y={yAt(c)}
+              text={c === 200 ? "392 °F" : `${(c * 9) / 5 + 32}`}
+              anchor="start"
             />
           </React.Fragment>
         ))}
@@ -516,6 +563,7 @@ const Deck: React.FC = () => (
       from={WAS - 2}
       to={cut(1)}
       word={`${BIT_CM} CM BIT`}
+      sub="8 IN"
       at={at(0, "bit")}
       sheet={TEAL}
       tilt={1.5}
@@ -556,6 +604,7 @@ const Deck: React.FC = () => (
       from={cut(2)}
       to={cut(3)}
       word={`${TOP_CM} CM AT THE TOP`}
+      sub="28 IN"
       at={at(2, "seventy-two")}
       sheet={MINT}
       tilt={1}
@@ -571,6 +620,7 @@ const Deck: React.FC = () => (
       from={cut(3)}
       to={cut(4)}
       word={`DOWN TO ${BIT_CM} CM`}
+      sub="8 IN"
       at={at(3, "twenty-one")}
       sheet={MINT}
       tilt={1}
@@ -587,6 +637,7 @@ const Deck: React.FC = () => (
       from={cut(4)}
       to={cut(5)}
       word="OVER 7 KM"
+      sub="OVER 4.3 MI"
       at={at(4, "seven")}
       sheet={CREAM}
     >
@@ -605,6 +656,7 @@ const Deck: React.FC = () => (
       from={cut(6)}
       to={cut(7)}
       word="12 KM"
+      sub="7.5 MI"
       at={at(6, "twelve")}
       sheet={CREAM}
     >
@@ -614,6 +666,7 @@ const Deck: React.FC = () => (
       from={cut(7)}
       to={cut(8)}
       word="BACK TO 7 KM"
+      sub="4.4 MI"
       at={at(7, "start")}
       sheet={CREAM}
     >
@@ -623,6 +676,7 @@ const Deck: React.FC = () => (
       from={cut(8)}
       to={cut(9)}
       word="12,262 M"
+      sub="40,230 FT"
       at={at(8, "twelve")}
       sheet={CREAM}
     >
@@ -651,6 +705,7 @@ const Deck: React.FC = () => (
       from={cut(10)}
       to={cut(11)}
       word="EXPECTED: 120 °C"
+      sub="248 °F"
       at={at(10, "expected")}
       sheet={PINK}
       tilt={1.5}
@@ -661,6 +716,7 @@ const Deck: React.FC = () => (
       from={cut(11)}
       to={cut(12)}
       word="180 °C AT 10 KM"
+      sub="356 °F AT 6.2 MI"
       at={at(11, "hundred")}
       sheet={PINK}
       tilt={1.5}
@@ -676,6 +732,7 @@ const Deck: React.FC = () => (
       from={cut(12)}
       to={cut(13)}
       word="212 °C"
+      sub="414 °F"
       at={at(12, "two")}
       sheet={PINK}
       tilt={1.5}
@@ -711,6 +768,7 @@ const Deck: React.FC = () => (
       from={cut(15)}
       to={cut(16)}
       word="PLAN: 13 KM"
+      sub="8.1 MI"
       at={at(15, "thirteen")}
       sheet={CREAM}
     >
@@ -728,6 +786,7 @@ const Deck: React.FC = () => (
       from={cut(17)}
       to={cut(18)}
       word="12 KM DOWN"
+      sub="7.5 MI"
       at={S[17]}
       sheet={NIGHT}
       tilt={1.5}
@@ -738,6 +797,7 @@ const Deck: React.FC = () => (
       from={cut(18)}
       to={edit.duration}
       word="6,000+ KM MORE"
+      sub="3,700+ MI"
       at={at(18, "six")}
       sheet={NIGHT}
       tilt={-1.5}
