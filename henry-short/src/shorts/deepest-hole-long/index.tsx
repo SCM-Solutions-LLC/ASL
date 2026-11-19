@@ -325,7 +325,7 @@ const Chart: React.FC<{ stage: number; from: number }> = ({ stage, from }) => {
       {seg(PTS.restart, [1990, FINAL_KM], 4)}
       {stage >= 4 && (
         <Stroke
-          d={`M${X(1989)} ${Y(FINAL_KM)} L${X(1991)} ${Y(FINAL_KM)}`}
+          d={`M${X(1990)} ${Y(FINAL_KM)} L${X(1991)} ${Y(FINAL_KM)}`}
           from={stage > 4 ? 0 : from + 36}
           to={stage > 4 ? 1 : from + 44}
           colour={CORAL}
