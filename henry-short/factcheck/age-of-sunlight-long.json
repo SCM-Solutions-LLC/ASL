@@ -63,9 +63,9 @@
       "n": 8,
       "claim": "HYDROGEN → HELIUM; SDO photo of the Sun with a ring marked 'CORE' and the tag 'CORE DRAWN AT 1/4 OF THE RADIUS'",
       "where": "on-screen: CORE DRAWN AT 1/4 OF THE RADIUS",
-      "verdict": "fix",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (NASA MSFC 'The Solar Interior'); src/shorts/age-of-sunlight-long/index.tsx lines 977-994 and SUN304 = disc(641, 620, 545); public/cutout/sunlight/sun304.jpg measured (radial median brightness)",
-      "note": "The ring is drawn at 390 * CORE = 97.5 px on a cutout drawn at w=780, i.e. a quarter of the CUTOUT radius (545 image px). But the cutout circle includes a dark rim: the photographed disc's limb is at ~508 image px (median brightness falls from ~145 at r=505 to ~92 at 510 and ~50 at 520). So the ring sits at 136/508 = 0.27 of the Sun's visible radius, not 1/4 (7% too large), while the tag states 1/4 exactly. MSFC: core is the 'innermost 25%' / 'about 25% of the distance to the surface'. Change needed (either): (a) draw the ring at a quarter of the disc, e.g. radius 390 * (508 / 545) * CORE ≈ 91 px (and move the CORE tag to match), or shrink SUN304's cutout radius to ~508; or (b) relabel 'CORE DRAWN AT ABOUT 1/4 OF THE RADIUS'. HYDROGEN → HELIUM itself is confirmed (MSFC, as claim 7)."
+      "verdict": "confirmed",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (NASA MSFC 'The Solar Interior'); src/shorts/age-of-sunlight-long/index.tsx lines 103-106 (SUN304 = disc(641, 620, 545), LIMB = 508 / 545) and 980-997; public/cutout/sunlight/sun304.jpg re-measured (radial median brightness, 1 px steps, 360 angles; edge thresholds 40 and 100)",
+      "note": "Re-checked after the code change. The ring is now drawn at 390 * LIMB * CORE = 390 * (508/545) * 0.25 = 90.9 px on a cutout drawn at w=780, i.e. 127 image px. The photographed limb: radial median brightness ~147 at r<=503, 111 at 508, 92 at 510, ~50 by 520 (half-height ~509 px); brightness>100 edges at 508/518/512/510 px (right/left/down/up), so ~508-512 px with the cutout centre within ~5 px of the disc's. Ring / limb = 127/508-512 = 0.248-0.250, i.e. 1/4 of the visible radius, matching the tag 'CORE DRAWN AT 1/4 OF THE RADIUS' and MSFC ('the innermost 25%'; core edge 'about 25% of the distance to the surface'). The CORE tag moved with the ring. HYDROGEN → HELIUM confirmed as claim 7."
     },
     {
       "n": 9,
