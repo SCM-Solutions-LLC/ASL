@@ -23,6 +23,8 @@ import type { Short } from "../types";
 // depth against year that gains a point a sentence. Every number drawn is in that script's SOURCES.
 const edit = makeEdit({
   alignment,
+  // About 3 s on the closing question after it is spoken, so a viewer can read it and answer.
+  outro: 80,
   keyPhrases: [
     ["dinner", "plate."],
     ["seventy-two", "centimetres"],

@@ -13,6 +13,8 @@ import type { Short } from "../types";
 // The bars are a schematic of the trend, and say so; only the axis marks are the paper's values.
 const edit = makeEdit({
   alignment,
+  // About 3 s on the closing question after it is spoken, so a viewer can read it and answer.
+  outro: 80,
   keyPhrases: [
     ["roughly", "the", "same."],
     ["million", "times", "heavier."],
