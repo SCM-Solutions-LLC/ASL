@@ -271,7 +271,7 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
           <ellipse cx={x0 + cassL / 2} cy={row1} rx={cassL / 2} ry={48} fill="url(#ps)" filter="url(#soft)" />
           {grow > 0 ? <ellipse cx={x0 + (GL * 0.42) / 2} cy={row1} rx={(GL * 0.42) / 2} ry={48} fill="none" stroke={INK} strokeWidth={3} strokeDasharray="10 8" opacity={0.8} /> : null}
           {/* The paper's range, a third to a half; the drawn oval sits inside it. */}
-          <g opacity={1 - grow}>
+          <g opacity={1 - ramp(f, F.growing - 14, F.growing - 4)}>
             <line x1={x0 + GL / 3} y1={row1 + 72} x2={x0 + GL / 2} y2={row1 + 72} stroke={GOLD} strokeWidth={8} strokeLinecap="round" />
           </g>
           <ellipse cx={x0 + GL / 2} cy={row2} rx={GL / 2} ry={70} fill="url(#grs)" filter="url(#soft)" />
@@ -284,14 +284,14 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
         </svg>
       ) : null}
       {label(compare, x0, row1 - 112, "1665 · Cassini's spot")}
-      {label(compare * (1 - grow), x0 + GL / 3, row1 + 86, "⅓ to ½ the length", undefined, GOLD)}
-      {label(compare * ramp(f, F.growing, F.growing + 10) * (1 - cross), x0, row1 + 86, "+160 km a year?", "for 166 years, 1713–1879, unseen")}
+      {label(compare * (1 - ramp(f, F.growing - 14, F.growing - 4)), x0 + GL / 3, row1 + 86, "⅓ to ½ the length", undefined, GOLD)}
+      {label(compare * ramp(f, F.growing - 2, F.growing + 8) * (1 - cross), x0, row1 + 86, "+160 km a year?", "for 166 years, 1713–1879, unseen")}
       {label(compare * cross, x0, row1 + 86, "Never seen", "in any storm on Jupiter", "#ff9b84")}
       {label(compare, x0, row2 - 120, "1879 · Great Red Spot", undefined, "#ff9b84")}
       {label(compare, x0 + GL, row2 + 84, "", "lengths to scale with each other", INK, true)}
 
       {/* 5. The two records. */}
-      <Callout {...gs} ring={out(F.record + 6, F.end + 20)} o={out(F.record + 6, F.end + 20)} title="The Great Red Spot" sub="on record since 1831" />
+      <Callout {...gs} ring={out(F.record + 6, F.end + 20)} o={out(F.record + 6, F.end + 20)} title="The Great Red Spot" />
       <Note {...at(L, { x: yx(R, 1665) - 6, y: R.y - 132 }, { x: yx(R, 1665), y: R.y - 132 })} text={f >= F.gone ? "Cassini's spot · gone" : "Cassini's spot"} o={ramp(f, F.record, F.record + 10)} size={30} color={DIM} />
       <Note {...at(L, { x: yx(R, 1831), y: R.y - 132 }, { x: yx(R, 1831), y: R.y - 132 })} text="Great Red Spot · 1831–today" o={ramp(f, F.record, F.record + 10)} size={30} color="#ff9b84" />
     </>
