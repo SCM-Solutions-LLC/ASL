@@ -821,5 +821,5 @@ export const deepestHoleLong: Short = {
   looks: [{ id: "Calm", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "geology",
+  music: "discovery",
 };

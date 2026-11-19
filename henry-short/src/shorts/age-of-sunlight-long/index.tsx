@@ -1,4 +1,5 @@
 import React from "react";
+import { getLength, getPointAtLength } from "@remotion/paths";
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { Card, Marks, Pieces, circle } from "../../deck/calm";
 import {
@@ -83,10 +84,9 @@ const CREAM = "#fffdf6";
 const NIGHT = "#22304f";
 const MINT = "#bfe9e4";
 const PINK = "#ffc9c2";
-const SUNFILL = "#ffe7a6";
 
 const Cut = makeCut("sunlight", {
-  hand: [1280, 1920],
+  sunrise: [1280, 852],
   sun304: [1280, 1222],
   stereo: [1280, 1280],
 } as const);
@@ -102,8 +102,9 @@ const disc = (cx: number, cy: number, r: number, n = 30) => ({
 });
 const SUN304 = { pic: "sun304", ...disc(641, 620, 545) } as const;
 const STEREO = { pic: "stereo", ...disc(604, 636, 450) } as const;
-// The hand, cropped to the open palm, as the cutout deck does.
-const HAND = { pic: "hand", box: [440, 390, 845, 880] } as const;
+// "You": sunrise over Earth's limb from the ISS, cropped on the Sun as it clears the horizon.
+const SUNRISE = { pic: "sunrise", box: [560, 440, 600, 400] } as const;
+const SUNRISE_WIDE = { pic: "sunrise", box: [380, 300, 880, 552] } as const;
 
 const Tick: React.FC<{
   x: number;
@@ -203,12 +204,63 @@ const Line: React.FC<{
   colour: string;
   width?: number;
 }> = ({ d, seg, colour, width = 12 }) => {
+  const f = useCurrentFrame();
   const s = draw(seg);
   if (!s) return null;
+  const t = ramp(f, s[0], s[1]);
+  const tip = t > 0 && t < 1 ? getPointAtLength(d, getLength(d) * t) : null;
   return (
     <>
       <Stroke d={d} from={s[0]} to={s[1]} colour={CREAM} width={width + 12} />
       <Stroke d={d} from={s[0]} to={s[1]} colour={colour} width={width} />
+      {tip && <Spark x={tip.x} y={tip.y} colour={colour} r={width + 6} />}
+    </>
+  );
+};
+
+// The leading edge of a line as it is drawn: a bright bead with a soft halo.
+const Spark: React.FC<{ x: number; y: number; colour: string; r: number }> = ({
+  x,
+  y,
+  colour,
+  r,
+}) => (
+  <>
+    <circle cx={x} cy={y} r={r * 2.2} fill={colour} opacity={0.25} />
+    <circle
+      cx={x}
+      cy={y}
+      r={r}
+      fill="#fffdf6"
+      stroke={colour}
+      strokeWidth={5}
+    />
+  </>
+);
+
+// Neutrinos streaming down the finished teal lane: beads that never stop, at a steady clip.
+const TEAL_PATH = `${TEAL_IN} ${TEAL_TRIP.replace("M", "L")}`;
+const TEAL_LEN = getLength(TEAL_PATH);
+const Flow: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <>
+      {Array.from({ length: 7 }, (_, i) => {
+        const t = (f / 40 + i / 7) % 1;
+        const p = getPointAtLength(TEAL_PATH, TEAL_LEN * t);
+        if (!p) return null;
+        return (
+          <circle
+            key={i}
+            cx={p.x}
+            cy={p.y}
+            r={9}
+            fill="#fffdf6"
+            stroke={TEAL}
+            strokeWidth={4}
+          />
+        );
+      })}
     </>
   );
 };
@@ -263,48 +315,98 @@ const NotToScale: React.FC<{ y?: number; text?: string }> = ({
   text = "NOT TO SCALE",
 }) => <Tag x={540} y={y} text={text} size={30} tilt={0} />;
 
-// The Sun cut open: core, radiative zone and convection zone at NASA MSFC's radii.
+// The Sun cut open: SDO's photograph of its face, with a wedge cut out on the side facing you that
+// shows the core, radiative zone and convection zone at NASA MSFC's radii. Gas churns in the
+// convection zone and the core glows. Schematic, and labelled so; no new numbers.
+const WEDGE = [20, 160].map((d) => (d * Math.PI) / 180) as [number, number];
+const wedge = (s: typeof SUN) => {
+  const p = (a: number) =>
+    `${s.x + Math.cos(a) * s.r} ${s.y + Math.sin(a) * s.r}`;
+  return `M${s.x} ${s.y} L${p(WEDGE[0])} A${s.r} ${s.r} 0 0 1 ${p(WEDGE[1])} Z`;
+};
+const ROLLS = 7; // convection rolls across the wedge, turning alternately
 const SunZones: React.FC<{ s?: typeof SUN; labels?: boolean }> = ({
   s = SUN,
   labels = false,
-}) => (
-  <>
-    <Pieces>
-      <path d={circle(s.x, s.y, s.r)} fill={SUNFILL} />
-    </Pieces>
-    <Marks>
-      <path d={circle(s.x, s.y, s.r * RADIATIVE)} fill="#ffd77a" />
-      <path d={circle(s.x, s.y, s.r * CORE)} fill="#ffb84d" />
-      <path
-        d={circle(s.x, s.y, s.r)}
-        stroke={INK}
-        strokeWidth={10}
-        fill="none"
-      />
-      <path
-        d={circle(s.x, s.y, s.r * RADIATIVE)}
-        stroke={INK}
-        strokeWidth={5}
-        strokeDasharray="10 14"
-        fill="none"
-      />
-      <path
-        d={circle(s.x, s.y, s.r * CORE)}
-        stroke={INK}
-        strokeWidth={5}
-        strokeDasharray="10 14"
-        fill="none"
-      />
-      {labels && (
-        <Tick x={s.x} y={s.y - s.r * CORE - 26} text="CORE" size={30} />
-      )}
-    </Marks>
-  </>
-);
+}) => {
+  const f = useCurrentFrame();
+  const mid = (RADIATIVE + 1) / 2;
+  const rollR = ((1 - RADIATIVE) / 2) * s.r * 0.92;
+  const glow = 1 + 0.06 * Math.sin(f / 9);
+  return (
+    <>
+      <Cut {...SUN304} x={s.x} y={s.y} w={s.r * 2} edge={8} jitter={0} />
+      <Marks>
+        <defs>
+          <clipPath id="sun-wedge">
+            <path d={wedge(s)} />
+          </clipPath>
+          <radialGradient id="sun-inside">
+            <stop offset={0} stopColor="#fff6d0" />
+            <stop offset={CORE} stopColor="#ffd36b" />
+            <stop offset={RADIATIVE} stopColor="#ffab3d" />
+            <stop offset={1} stopColor="#f2762b" />
+          </radialGradient>
+          <radialGradient id="sun-core">
+            <stop offset={0} stopColor="#ffffff" />
+            <stop offset={0.6} stopColor="#fff1b0" />
+            <stop offset={1} stopColor="#ffc24d" />
+          </radialGradient>
+        </defs>
+        <g clipPath="url(#sun-wedge)">
+          <path d={circle(s.x, s.y, s.r)} fill="url(#sun-inside)" />
+          {Array.from({ length: ROLLS }, (_, i) => {
+            const a = WEDGE[0] + ((i + 0.5) / ROLLS) * (WEDGE[1] - WEDGE[0]);
+            const cx = s.x + Math.cos(a) * s.r * mid;
+            const cy = s.y + Math.sin(a) * s.r * mid;
+            const turn = (i % 2 ? -1 : 1) * f * 0.9;
+            return (
+              <g key={i} transform={`rotate(${turn} ${cx} ${cy})`}>
+                <path
+                  d={circle(cx, cy, rollR)}
+                  stroke="#8a2f0f"
+                  strokeWidth={7}
+                  strokeDasharray="24 14"
+                  fill="none"
+                  opacity={0.9}
+                />
+                <circle cx={cx + rollR} cy={cy} r={7} fill="#fff1b0" />
+              </g>
+            );
+          })}
+          <path
+            d={circle(s.x, s.y, s.r * RADIATIVE)}
+            stroke={INK}
+            strokeWidth={5}
+            strokeDasharray="10 14"
+            fill="none"
+          />
+          <path
+            d={wedge(s)}
+            stroke={INK}
+            strokeWidth={10}
+            strokeLinejoin="round"
+            fill="none"
+          />
+        </g>
+        <path
+          d={circle(s.x, s.y, s.r * CORE * glow)}
+          fill="url(#sun-core)"
+          stroke={INK}
+          strokeWidth={5}
+          strokeDasharray="10 14"
+        />
+        {labels && (
+          <Tick x={s.x} y={s.y - s.r * CORE - 26} text="CORE" size={30} />
+        )}
+      </Marks>
+    </>
+  );
+};
 
-// You, at the foot of both lanes: the open palm from the cutout deck.
+// You, at the foot of both lanes: sunrise over the Earth.
 const You: React.FC = () => (
-  <Cut {...HAND} x={YOU.x} y={YOU.y + 20} w={230} edge={8} jitter={0} />
+  <Cut {...SUNRISE} x={YOU.x} y={YOU.y + 30} w={300} edge={8} jitter={0} />
 );
 
 // The two lanes. Each segment is drawn between two frames, shown whole, or left out; `dim` greys a
@@ -349,6 +451,7 @@ const Lanes: React.FC<{
       <Marks>
         <Line d={TEAL_IN} seg={tealIn} colour={TEAL} />
         <Line d={TEAL_TRIP} seg={tealTrip} colour={TEAL} />
+        {tealIn === "full" && tealTrip === "full" && !dimTeal && <Flow />}
       </Marks>
       {tealClock}
     </div>
@@ -535,6 +638,22 @@ const Detector: React.FC<{ tally?: [number, number] }> = ({ tally }) => {
   const f = useCurrentFrame();
   const c = { x: 540, y: 560 };
   const n = tally ? Math.round(PER_DAY * ramp(f, tally[0], tally[1])) : 0;
+  // A flash of light in the liquid each time one is caught: the most recent few, fading.
+  const every = tally ? Math.max(3, (tally[1] - tally[0]) / PER_DAY) : 16;
+  const start = tally ? tally[0] : 0;
+  const flashes: [number, number, number][] = [];
+  for (
+    let k = Math.max(0, Math.floor((f - start) / every) - 2);
+    start + k * every <= f;
+    k++
+  ) {
+    const age = f - (start + k * every);
+    if (age > 10 || (tally && start + k * every > tally[1])) continue;
+    const next = rng(1000 + k);
+    const ang = next() * Math.PI * 2;
+    const rad = Math.sqrt(next()) * 250;
+    flashes.push([c.x + Math.cos(ang) * rad, c.y + Math.sin(ang) * rad, age]);
+  }
   return (
     <>
       <Pieces>
@@ -557,6 +676,36 @@ const Detector: React.FC<{ tally?: [number, number] }> = ({ tally }) => {
           stroke={INK}
           strokeWidth={10}
         />
+        {Array.from({ length: 56 }, (_, i) => {
+          // The light sensors that line the steel sphere, drawn as a ring. Schematic.
+          const a = (i / 56) * Math.PI * 2;
+          const lit = flashes.some(
+            ([, , age]) => age < 6 && (i + age) % 9 === 0,
+          );
+          return (
+            <circle
+              key={i}
+              cx={c.x + Math.cos(a) * 326}
+              cy={c.y + Math.sin(a) * 326}
+              r={11}
+              fill={lit ? YELLOW : "#4a5563"}
+              stroke={INK}
+              strokeWidth={4}
+            />
+          );
+        })}
+        {flashes.map(([x, y, age], i) => (
+          <g key={`fl${i}`} opacity={1 - age / 10}>
+            <circle
+              cx={x}
+              cy={y}
+              r={14 + age * 9}
+              fill={YELLOW}
+              opacity={0.35}
+            />
+            <circle cx={x} cy={y} r={9} fill="#fffdf6" />
+          </g>
+        ))}
         {Array.from({ length: n }, (_, i) => {
           const group = Math.floor(i / 5);
           const k = i % 5;
@@ -822,7 +971,7 @@ const Deck: React.FC = () => (
       at={at(8, "eight")}
       sheet={MINT}
     >
-      <Cut {...HAND} x={540} y={600} w={560} edge={10} jitter={0} />
+      <Cut {...SUNRISE_WIDE} x={540} y={600} w={860} edge={10} jitter={0} />
       <Through
         a={at(8, "pass")}
         lines={[
@@ -1010,5 +1159,5 @@ export const ageOfSunlightLong: Short = {
   looks: [{ id: "Calm", Set: Paper, cast: () => [] }],
   ui: () => <Deck />,
   scrim: false,
-  music: "sun",
+  music: "gravity-turn",
 };
