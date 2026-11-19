@@ -195,7 +195,7 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
   const f = useCurrentFrame();
   const v = L.vertical;
   const J = at(L, { cx: 960, cy: 330, r: 330 }, { cx: 1260, cy: 420, r: 330 });
-  const R: Rule = at(L, { x0: 560, x1: 1360, y: 880 }, { x0: 140, x1: 1780, y: 880 });
+  const R: Rule = at(L, { x0: 560, x1: 1360, y: 880 }, { x0: 140, x1: 1780, y: 845 }); // 16:9: year labels clear of two-line captions
   const year = yearAt(f);
 
   // Cassini's spot: on while he and others kept reporting it, gone in the gap.
@@ -239,9 +239,10 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
       ) : null}
 
       {/* 1. Hook. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="1665 · CASSINI" sub={"a dark oval at this latitude"} from={4} to={F.kept} />
+      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="1665 · CASSINI" sub={"a dark oval at this latitude"} from={4} to={v ? F.probably : F.kept} />
       <Note x={lx(-0.05)} y={J.cy + SPOT_Y * J.r - (v ? 240 : 210)} text="?" o={ramp(f, F.probably, F.probably + 6) * (1 - ramp(f, F.kept, F.kept + 8))} size={200} color={GOLD} align="center" />
-      <Tag {...at(L, { x: 560, y: -40 }, { x: 140, y: 280 })} text="PROBABLY NOT" sub={"the Great Red Spot"} from={F.probably} to={F.kept} />
+      {/* 9:16 has no room for two tags above the planet, so this one replaces the hook tag. */}
+      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 280 })} text="PROBABLY NOT" sub={"the Great Red Spot"} from={F.probably} to={F.kept} />
       {/* 2–3. Sightings, then the gap. */}
       <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="REPORTED UNTIL 1713" sub={"Cassini, Maraldi and others"} from={F.kept} to={F.then} />
       <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="118 YEARS" sub={"no report of it\nin the surviving observations"} from={F.hundred} to={F.storm} />
@@ -268,9 +269,10 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
       <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="⅓ TO ½ AS LONG" sub={"lengths to scale with each other\nSánchez-Lavega et al. 2024"} from={F.third} to={F.growing - 4} />
       {/* 6. The growth nobody saw. */}
       <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="+160 KM A YEAR?" sub={"for 166 years, 1713–1879,\nwith no one seeing it"} from={F.growing} to={F.record - 6} />
+      {/* The X sits on the grown part of the oval, clear of its label. */}
       {cross > 0 ? (
         <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <g stroke={RED} strokeWidth={22} strokeLinecap="round" opacity={cross} transform={`translate(${P.x + cassW / 2} ${P.y}) scale(${0.8 + 0.2 * ease(cross)})`}>
+          <g stroke={RED} strokeWidth={22} strokeLinecap="round" opacity={cross} transform={`translate(${P.x + cassW * 0.7} ${P.y}) scale(${0.8 + 0.2 * ease(cross)})`}>
             <line x1={-120} y1={-120} x2={120} y2={120} />
             <line x1={120} y1={-120} x2={-120} y2={120} />
           </g>
