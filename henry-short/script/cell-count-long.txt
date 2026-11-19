@@ -1,8 +1,8 @@
 Sort the cells in your body by size, from red blood cells up, and something odd turns up: each size class weighs roughly the same.
-A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size.
+A twenty twenty-three study combined over fifteen hundred published sources to estimate the body's cells, type by type, and sorted them by size.
 The smallest cells it sorted are red blood cells.
 The biggest are muscle fibres, more than a million times heavier.
-Now put every cell into a size class, each class twice as heavy as the one before.
+Now put those cells into size classes, each class twice as heavy as the one before.
 Each time the size doubles, there are, on average, about half as many cells.
 So the small cells win on numbers, the big cells win on size, and the two cancel out.
 Every class ends up holding roughly the same weight.
@@ -44,8 +44,10 @@ Sources:
    cells up", not "every cell": the binning leaves out platelets and the smallest
    haploid gametes (line 3), so the hook names where the sorting starts.
 
-2. "A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size."
+2. "A twenty twenty-three study combined over fifteen hundred published sources to estimate the body's cells, type by type, and sorted them by size."
    "Estimate", not "count": the paper compiles published data and says "we estimate".
+   "Published sources", not "studies": they include reference catalogues such as
+   ICRP's reference man.
    Hatton 2023, PNAS, online 18 Sep 2023: counts and sizes for 400 cell types
    across 60 tissue systems (1,264 cell groups), from ">1,500 published
    sources". Not
@@ -66,9 +68,10 @@ Sources:
    cell; myocyte biomass peaks "near 10^-4 g" (10^-4 / 4e-11 = 2.5 million). A floor,
    so the card says ">1,000,000×": the full range is seven orders of magnitude.
 
-5. "Now put every cell into a size class, each class twice as heavy as the one before."
+5. "Now put those cells into size classes, each class twice as heavy as the one before."
    Hatton 2023, Methods: "bins increase by a multiplicative factor of 2 from small
-   to large (octave size classes)".
+   to large (octave size classes)". "Those cells": the ones from red blood cells
+   up; "We ignored binning cells smaller than erythrocytes".
 
 6. "Each time the size doubles, there are, on average, about half as many cells."
    Hatton 2023: the count per size class follows "a power law with a slope near
@@ -134,5 +137,8 @@ Sources:
    paper's 26 doubling classes from 4e-11 g (to about 2.7e-3 g; Fig. 3, Methods). The falling
    count staircase and the mass bars are drawn as a schematic of the trend in
    lines 6-9 and say "schematic" on screen; they are not the paper's per-bin data.
+   The man / woman / child rows stop one class short: in Fig. 4 the last class (the
+   largest muscle fibres) falls off, steeply for the woman and child, and the rows
+   are only about the dip.
    Only the axis positions of red blood cells (4e-11 g), fat cells (~1e-6 g) and
    muscle fibres (~1e-4 g) are values from the paper.

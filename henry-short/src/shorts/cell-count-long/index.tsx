@@ -29,7 +29,7 @@ const edit = makeEdit({
     "size,",
     "body,",
     "study",
-    "studies",
+    "sources",
     "type,",
     "class,",
     "doubles,",
@@ -248,7 +248,8 @@ const Three: React.FC<{ from: number }> = ({ from }) => {
           <g key={name} opacity={o}>
             <T x={X0} y={base - 150} text={name} size={34} anchor="start" />
             <line x1={X0} y1={base} x2={X1} y2={base} stroke={INK} strokeWidth={6} />
-            {Array.from({ length: BINS }, (_, k) => {
+            {/* One class short: the last class falls off in Fig. 4, and these rows are about the dip. */}
+            {Array.from({ length: BINS - 1 }, (_, k) => {
               const m = mid(k);
               const inDip = m > FAT * 1.5 && m < MUSCLE / 1.5;
               const h = 110 + wob(k) * 14 - (inDip ? 80 * dip : 0);
@@ -329,7 +330,7 @@ const Deck: React.FC = () => (
     <Card from={0} to={cut(1)} word="ROUGHLY THE SAME" at={at(0, "roughly")} sheet={CREAM}>
       <Ruler weights={[S[0] + 6, end(0)]} />
     </Card>
-    <Card from={cut(1)} to={cut(2)} word="1,500+ STUDIES" at={at(1, "fifteen")} sheet={MINT}>
+    <Card from={cut(1)} to={cut(2)} word="1,500+ SOURCES" at={at(1, "fifteen")} sheet={MINT}>
       <Ruler axis={[S[1] + 4, at(1, "sorted")]} />
     </Card>
     <Card from={cut(2)} to={cut(3)} word="RED BLOOD CELLS" at={at(2, "red")} sheet={PINK}>
