@@ -79,7 +79,7 @@ const F = {
   money: edit.at("funding"),
   again: edit.at("twelve", 1),
   downAgain: edit.at("down", 1),
-  sentence7: edit.at("the", 6),
+  sentence7: edit.at("the", 5),
   centre: edit.at("centre"),
   six: edit.at("six"),
   more: edit.at("more."),
