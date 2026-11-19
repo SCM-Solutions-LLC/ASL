@@ -7,7 +7,7 @@ Each time the size doubles, there are, on average, about half as many cells.
 So the small cells win on numbers, the big cells win on size, and the two cancel out.
 Every class ends up holding roughly the same weight.
 With one exception: a dip, between the fat cells and the muscle fibres.
-In women the dip is smaller, and in a ten-year-old it is fainter still.
+In a typical woman the dip is smaller, and in a typical ten-year-old it is fainter still.
 Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus.
 Yet they make up about half the weight of all his cells.
 And all his cells together weigh about forty-five kilograms.
@@ -89,9 +89,13 @@ Sources:
    Hatton 2023: "prominent biomass peaks comprising adipocytes (near 10^-6 g) and
    myocytes (near 10^-4 g), separated by a gap of relatively low biomass".
 
-10. "In women the dip is smaller, and in a ten-year-old it is fainter still."
+10. "In a typical woman the dip is smaller, and in a typical ten-year-old it is fainter still."
    Hatton 2023, Fig. 4B: the gap is "less prominent in the reference female" and
-   "even less evident in the 10-y-old reference child".
+   "even less evident in the 10-y-old reference child". "Typical": these are the
+   paper's 60 kg reference woman and 32 kg reference child, models scaled from the
+   reference man, and fat and muscle vary widely between people. On screen this is
+   text only (no drawn rows): the paper compares the dip across the three bodies on
+   a linear axis, which a schematic row would misstate.
 
 11. "Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus."
    Hatton 2023: skeletal myocytes "make up <0.002% of the nucleated cell count"
@@ -137,8 +141,8 @@ Sources:
    paper's 26 doubling classes from 4e-11 g (to about 2.7e-3 g; Fig. 3, Methods). The falling
    count staircase and the mass bars are drawn as a schematic of the trend in
    lines 6-9 and say "schematic" on screen; they are not the paper's per-bin data.
-   The man / woman / child rows stop one class short: in Fig. 4 the last class (the
-   largest muscle fibres) falls off, steeply for the woman and child, and the rows
-   are only about the dip.
+   The single weight chart is the reference man. The ocean card raises the first
+   three classes (bacteria, about 2.5, 2.5 and 1.9 Gt against about 1 Gt) and lowers
+   the last two (the mammal classes), as Hatton 2021 Fig. 2 does.
    Only the axis positions of red blood cells (4e-11 g), fat cells (~1e-6 g) and
    muscle fibres (~1e-4 g) are values from the paper.

@@ -181,7 +181,7 @@ const Ruler: React.FC<{
           const m = mid(k);
           const inDip = m > FAT * 1.5 && m < MUSCLE / 1.5;
           let h = AXIS - level + wob(k) * 40 - (inDip ? 190 * dip : 0);
-          if (ocean) h = AXIS - level + wob(k) * 25 + (k < 2 ? 120 : 0) - (k > BINS - 3 ? 150 : 0);
+          if (ocean) h = AXIS - level + wob(k) * 25 + (k < 3 ? (k < 2 ? 120 : 80) : 0) - (k > BINS - 3 ? 150 : 0);
           const g = grow(f, weights, k);
           return (
             <rect
@@ -230,43 +230,20 @@ const Ruler: React.FC<{
   );
 };
 
-// Three rulers stacked: the dip in the man, the woman and the ten-year-old.
-const Three: React.FC<{ from: number }> = ({ from }) => {
+// The dip in the three reference bodies, as text: the paper compares them on a linear axis.
+const Dips: React.FC<{ from: number }> = ({ from }) => {
   const f = useCurrentFrame();
   const rows = [
-    ["MAN", 1],
-    ["WOMAN", 0.55],
-    ["CHILD, 10", 0.25],
-  ] as const;
+    "TYPICAL MAN: MOST PROMINENT",
+    "TYPICAL WOMAN: SMALLER",
+    "TYPICAL 10-YEAR-OLD: FAINTER STILL",
+  ];
   return (
     <Marks>
-      <T x={540} y={235} text="WEIGHT IN EACH CLASS · LOG SCALE · SCHEMATIC" size={30} />
-      {rows.map(([name, dip], r) => {
-        const base = 470 + r * 230;
-        const o = ramp(f, from + r * 10, from + r * 10 + 8);
-        return (
-          <g key={name} opacity={o}>
-            <T x={X0} y={base - 150} text={name} size={34} anchor="start" />
-            <line x1={X0} y1={base} x2={X1} y2={base} stroke={INK} strokeWidth={6} />
-            {/* One class short: the last class falls off in Fig. 4, and these rows are about the dip. */}
-            {Array.from({ length: BINS - 1 }, (_, k) => {
-              const m = mid(k);
-              const inDip = m > FAT * 1.5 && m < MUSCLE / 1.5;
-              const h = 110 + wob(k) * 14 - (inDip ? 80 * dip : 0);
-              return (
-                <rect
-                  key={k}
-                  x={edge(k) + 3}
-                  y={base - h}
-                  width={edge(k + 1) - edge(k) - 6}
-                  height={h}
-                  fill={CORAL}
-                />
-              );
-            })}
-          </g>
-        );
-      })}
+      <T x={540} y={330} text="THE DIP BETWEEN FAT AND MUSCLE" size={40} />
+      {rows.map((t, r) => (
+        <T key={t} x={540} y={500 + r * 150} text={t} size={44} op={ramp(f, from + r * 12, from + r * 12 + 8)} />
+      ))}
     </Marks>
   );
 };
@@ -354,8 +331,8 @@ const Deck: React.FC = () => (
     <Card from={cut(8)} to={cut(9)} word="ONE DIP" at={at(8, "dip,")} sheet={PINK}>
       <Ruler weights="full" marks={["fat", "muscle"]} />
     </Card>
-    <Card from={cut(9)} to={cut(10)} word="SMALLER IN WOMEN" at={at(9, "smaller,")} sheet={PINK}>
-      <Three from={S[9]} />
+    <Card from={cut(9)} to={cut(10)} word="TYPICAL WOMAN" at={at(9, "woman")} sheet={PINK}>
+      <Dips from={S[9]} />
     </Card>
     <Card from={cut(10)} to={cut(11)} word="A TYPICAL MAN" sub="70 KG (154 LB)" at={at(10, "typical")} sheet={CREAM}>
       <Body from={S[10]} show="cells" />
