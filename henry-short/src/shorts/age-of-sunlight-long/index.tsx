@@ -54,6 +54,7 @@ const edit = makeEdit({
     "doing",
     "count",
     "hard",
+    "passed",
   ],
 });
 
