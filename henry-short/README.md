@@ -11,7 +11,12 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 | `anne-of-cleves` | `Illustrated`, `Holbein` | the hook plus the Anne of Cleves beat, 14.5s |
 | `catherine-of-aragon` | `Illustrated` | wife one, 7.4s — built on `src/moves` as a pipeline test |
 | `scale-of-the-sun` | `Space` | its own Kokoro VO, 60.3s, no cast at all |
-| `age-of-sunlight` | `Space` | its own Kokoro VO, 19.0s, no cast at all |
+| `age-of-sunlight` | `Space` | its own Kokoro VO, 22.3s, no cast at all |
+| `deepest-hole` | `Earth` | its own Kokoro VO, 28.2s, no cast — the Kola borehole against the crust, then the planet |
+| `cell-count` | `Lab` | its own Kokoro VO, 29.0s, no cast — a 68-dot unit chart of human and bacterial cells |
+| `cleopatra-timeline` | `Illustrated` | its own Kokoro VO, 23.6s, one figure on a timeline drawn to scale |
+| `cleopatra-cutout` | `Cutout` | the Cleopatra VO as collage cards, a new picture about every 2.5s and one keyword each; public-domain and CC0 pictures (src/deck/kit.tsx) |
+| `age-of-sunlight-cutout`, `deepest-hole-cutout`, `cell-count-cutout` | `Cutout` | the same VOs as collage cards, same kit |
 
 The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
 
@@ -28,6 +33,7 @@ npm run sheet -- <slug>                   # render a short end to end; contact s
 npm run tts -- <slug>                     # speak a script with Kokoro and write its word timings
 npm run tts -- --self-test                # check the timing/WAV code with no model downloaded
 npm run align -- <vo-slug>                # word timings for a VO recorded elsewhere
+npm run kit -- <slug>                     # render the 9:16 MP4 and the post text — see docs/publishing.md
 python3 tools/cut.py                      # re-cut the portraits in kit_src/ into public/kit/pd/ (needs opencv-python-headless)
 ```
 

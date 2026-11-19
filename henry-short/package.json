@@ -41,7 +41,9 @@
     "publishable": "node tools/check-licences.mjs --publish && node tools/check-factcheck.mjs",
     "tts": ".venv/bin/python -I tools/tts.py",
     "sheet": ".venv/bin/python -I tools/sheet.py",
-    "sfx": ".venv/bin/python -I tools/sfx.py"
+    "sfx": ".venv/bin/python -I tools/sfx.py",
+    "music": "bash tools/music.sh",
+    "kit": "node tools/publish-kit.mjs"
   },
   "allowScripts": {
     "esbuild": false

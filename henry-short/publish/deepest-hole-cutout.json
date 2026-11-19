@@ -1,0 +1,34 @@
+{
+  "look": "Cutout",
+  "title": "The deepest hole ever dug never left the crust",
+  "caption": "About 20 years of drilling, 12 km down, and it got 0.2% of the way to the centre of the Earth.",
+  "description": "The Kola Superdeep Borehole in the Soviet Arctic reached 12,262 metres in 1989-90, the deepest humans have ever drilled. Its last stretch was drilled with a bit about 21 cm across. The rock at the bottom was over 200 °C, against about 120 °C predicted, and the hole was about a third of the way through the crust beneath it. Funding was drastically cut, and drilling stopped in 1992.",
+  "sources": [
+    "Lobanov, Chicherov & Sharov 2021, Arktika i Sever 44: 267-284, doi:10.37482/issn2221-2698.2021.44.267",
+    "Zhu & Huang 2026, Communications Earth & Environment 7: 124, doi:10.1038/s43247-026-03246-z",
+    "Clarke et al. 1986, The Kola Superdeep Drill Hole by Ye. A. Kozlovskiy (1984): A detailed summary, USGS Open-File Report 86-517",
+    "NASA NSSDC Earth Fact Sheet (mean radius 6,371 km)"
+  ],
+  "hashtags": {
+    "tiktok": [
+      "geology",
+      "earth",
+      "science",
+      "learnontiktok"
+    ],
+    "youtube": [
+      "Shorts",
+      "geology",
+      "earth",
+      "science"
+    ],
+    "instagram": [
+      "geology",
+      "earthscience",
+      "science",
+      "history",
+      "engineering"
+    ]
+  },
+  "script": "deepest-hole"
+}

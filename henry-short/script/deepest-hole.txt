@@ -1,0 +1,90 @@
+The deepest hole humans have ever dug was finished with a bit narrower than a dinner plate.
+It took the Soviet Union about twenty years.
+It goes down twelve kilometres.
+And it never made it through the crust.
+At the bottom, the rock was over two hundred degrees.
+Drilling stopped in nineteen ninety-two, when its funding was cut.
+Twelve kilometres down. The centre of the Earth is over six thousand more.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Sources read (an independent fact-check, 18 Nov 2026):
+- Lobanov, Chicherov & Sharov, Arktika i Sever 44: 267-284 (2021),
+  doi:10.37482/issn2221-2698.2021.44.267. Russian Academy of Sciences authors;
+  full text. "Drilling was started on May 24, 1970"; "In 1990, the maximum depth
+  was reached - 12262 m"; a "214 mm drill bit"; "at a depth of 10 km reached
+  180°C, and at a depth of about 12 km ... 212°C, instead of the assumed
+  120°C"; "a drastic reduction in funding made it impossible to continue the
+  work. Drilling was stopped in 1992".
+- Zhu & Huang, Communications Earth & Environment 7: 124 (2026),
+  doi:10.1038/s43247-026-03246-z: "reaching 12,262 m between 1970 and 1989";
+  "temperatures reached 180 °C at 10 km and 212 °C at 12 km"; "Drilling was
+  abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C
+  induced plastic rock flow that repeatedly sealed the hole."
+- Clarke et al., "The Kola Superdeep Drill Hole by Ye. A. Kozlovskiy (1984): A
+  detailed summary", USGS Open-File Report 86-517 (1986), summarising
+  Kozlovskiy, Kol'skaya sverkhglubokaya (Moscow: Nedra, 1984): "Crustal
+  thickness in the vicinity of the corehole was shown to be about 40 km"; the
+  Moho under the Kola Peninsula as a whole is put at 37 km (range 28-40).
+- NASA NSSDC Earth Fact Sheet: volumetric mean radius 6,371 km; core radius
+  3,485 km.
+
+1. "The deepest hole humans have ever dug..."
+   Kola Superdeep Borehole, well SG-3 (the record is its third branch, sidetracked at 7,010 m; Lobanov), Kola Peninsula, USSR (now Russia):
+   12,262 m, "which has not been surpassed so far" (Lobanov 2021); Zhu & Huang
+   (2026) still treat it as the deepest. The script says "deepest" (vertical
+   depth), never "longest".
+
+2. "...was finished with a bit narrower than a dinner plate."
+   The hole narrows in steps (Lobanov 2021, Fig. 5, actual well construction):
+   720 mm to 40 m, cased at 325 mm to 2,000 m (so bored wider), cased at
+   245 mm to 8,770 m, then open hole 215.9 mm to 12,262 m, drilled with a
+   214 mm bit (Lobanov). Lobanov also has the bore going oval below 7 km, with
+   "many caverns"; the USGS summary lists 295.3 mm reamers and cavities "to
+   depths of 7,000 m". So only the last stretch is narrower than
+   the 25.6 cm plate (Met 51.86.100); the line says "finished with a bit", and
+   the labels name the bit ("21 CM BIT", "THE BIT", "the last stretch").
+
+3. "It took the Soviet Union about twenty years."
+   Started 24 May 1970 (Lobanov). The sources disagree on the end: 1989 (Zhu &
+   Huang) or 1990 (Lobanov). 19 or 20 years, so the line says "about twenty"
+   and the counters end on "1989–90".
+
+4. "It goes down twelve kilometres."
+   12,262 m, rounded down. The counter on screen runs to the full figure.
+
+5. "And it never made it through the crust."
+   Crust about 40 km thick at the site (Kozlovsky, USGS OFR 86-517), so the hole
+   got about 31% of the way through ("about a third" on screen).
+
+6. "At the bottom, the rock was over two hundred degrees."
+   About 212 °C at about 12 km (Lobanov; Zhu & Huang), against 120 °C assumed
+   (Lobanov). 180 °C was the reading at 10 km, not at the bottom. Celsius; the
+   tag says so, the voice does not.
+
+7. "Drilling stopped in nineteen ninety-two, when its funding was cut."
+   Lobanov: "a drastic reduction in funding made it impossible to continue the
+   work. Drilling was stopped in 1992"; a casing run in 1992 was meant to carry
+   drilling on to 13 km. Zhu & Huang put the end on heat, which "induced
+   plastic rock flow that repeatedly sealed the hole" (that sentence carries no
+   citation of its own); Lobanov does not mention plastic flow. The line states only what Lobanov states; the
+   heat is in line 6.
+
+8. "The centre of the Earth is over six thousand more."
+   Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km still to go, so "over
+   six thousand more" (on screen "6,000+ KM MORE"). The hole is 0.19% of the
+   way to the centre, shown as "0.2%".
+
+9. Figures used by the animation, not spoken.
+   Depth against year (Lobanov): 7,263 m in May 1975, then almost a year's
+   pause to change rigs; 9,584 m in June 1979 (passing the US record of
+   9,583 m); 12,000 m on 27 December 1983, 12,066 m before the 1984
+   drill-string break, which sent drilling back to 7 km; the third branch
+   reached 12,262 m in 1989-90. The illustrated look's depth counter runs on
+   the same clock as its year counter through those points, straight between
+   them, and from 1984 to 1989 it holds at the deepest point reached so far,
+   labelled as such. The core is drawn to
+   3,485 km (NSSDC); no inner core is drawn; crust drawn at 40 km. At the size the Earth is drawn the crust is under two
+   pixels thick and the hole is a fraction of one, which is why the last shot
+   labels the hole instead of drawing it.

@@ -1,0 +1,661 @@
+import React from "react";
+import { useCurrentFrame } from "remotion";
+import {
+  BOARD,
+  Board,
+  Burst,
+  CORAL,
+  INK,
+  Paper,
+  Shot,
+  Stroke,
+  TEAL,
+  Word,
+  YELLOW,
+  makeCut,
+  pop,
+  useBoil,
+  useJitter,
+} from "../../deck/kit";
+import { makeEdit } from "../../edit";
+import { MARKER } from "../../fonts";
+import alignment from "../../generated/age-of-sunlight.alignment.json";
+import type { Short } from "../types";
+
+// The age-of-sunlight short as a deck of collage cards: same voice-over, same script, same sourced
+// numbers as src/shorts/age-of-sunlight, with a new picture track. See src/deck/kit.tsx for the look and
+// src/shorts/cleopatra-cutout for the deck this one follows.
+//
+// Every picture is a real one, public domain or CC0, cut out like paper and pasted down: NASA's own
+// frames of the Sun from the Solar Dynamics Observatory, STEREO and Skylab, the Earth from Apollo 17,
+// a sunrise from the Space Station, and two CC0 photographs for the sunbeams and the hand. What
+// cannot be photographed — the inside of the Sun, a photon's path — is drawn over them in marker,
+// so a drawing is never passed off as a picture. public/SOURCES.json carries where each came from;
+// script/age-of-sunlight.txt carries the numbers.
+const edit = makeEdit({
+  alignment,
+  keyPhrases: [["tens"], ["thousands"], ["eight", "minutes"], ["same", "light."], ["ancient"]],
+  // As in src/shorts/age-of-sunlight: the 19-word hook would overflow the caption block as one page.
+  breakAfter: ["skin", "years,"],
+});
+
+// Every card and every beat inside a card hangs off a spoken word.
+const F = {
+  skin: edit.at("skin"),
+  tens: edit.at("tens"),
+  far: edit.at("far"),
+  sentence2: edit.at("the", 3),
+  trip: edit.at("trip"),
+  you: edit.at("you"),
+  eight: edit.at("eight"),
+  minutes: edit.at("minutes"),
+  sentence3: edit.at("getting", 1),
+  slow: edit.at("slow"),
+  part: edit.at("part."),
+  but: edit.at("but"),
+  not: edit.at("not"),
+  same: edit.at("same"),
+  sentence5: edit.at("it", 1),
+  leaves: edit.at("leaves"),
+  sentence6: edit.at("the", 7),
+  energy: edit.at("energy", 1),
+  ancient: edit.at("ancient."),
+  its: edit.at("its"),
+  last: edit.at("last"),
+  tripAgain: edit.at("trip", 1),
+  youAgain: edit.at("you.", 1),
+  end: edit.duration,
+};
+
+// The pictures in public/cutout/sunlight/, with their pixel sizes, so a crop or an outline can be
+// given in the picture's own pixels.
+const PICS = {
+  rays: [1280, 960],
+  hand: [1280, 1920],
+  sun304: [1280, 1222],
+  stereo: [1280, 1280],
+  earth: [1280, 1281],
+  disc: [960, 960],
+  wheel: [1280, 1280],
+  skylab: [1280, 1007],
+  sunrise: [1280, 852],
+} as const;
+const Cut = makeCut("sunlight", PICS);
+
+// A disc cut out with scissors: a many-sided outline, never quite round.
+const disc = (cx: number, cy: number, r: number, n = 30) => ({
+  box: [cx - r, cy - r, r * 2, r * 2] as const,
+  pts: Array.from({ length: n }, (_, i) => {
+    const a = (i / n) * Math.PI * 2;
+    const k = r * (i % 2 ? 0.994 : 1);
+    return [cx + Math.cos(a) * k, cy + Math.sin(a) * k] as const;
+  }),
+});
+
+// Outlines cut around a subject, in the picture's pixels: where each disc sits in its frame, and
+// the hand traced finger by finger.
+const OUTLINE = {
+  sun304: { pic: "sun304", ...disc(641, 620, 545) },
+  stereo: { pic: "stereo", ...disc(604, 636, 450) },
+  earth: { pic: "earth", ...disc(637, 638, 562) },
+  disc: { pic: "disc", ...disc(480, 480, 436) },
+  hand: {
+    pic: "hand",
+    box: [440, 390, 845, 880],
+    pts: [
+      [455, 1215],
+      [468, 1170],
+      [565, 1132],
+      [646, 1084],
+      [682, 1010],
+      [686, 900],
+      [652, 850],
+      [600, 760],
+      [563, 662],
+      [556, 604],
+      [582, 574],
+      [628, 590],
+      [662, 660],
+      [730, 774],
+      [786, 800],
+      [812, 700],
+      [832, 560],
+      [848, 440],
+      [890, 402],
+      [942, 430],
+      [938, 520],
+      [908, 660],
+      [902, 772],
+      [950, 700],
+      [1000, 600],
+      [1030, 545],
+      [1075, 528],
+      [1102, 560],
+      [1092, 620],
+      [1042, 720],
+      [1008, 800],
+      [1012, 848],
+      [1060, 876],
+      [1150, 848],
+      [1235, 822],
+      [1272, 845],
+      [1266, 882],
+      [1200, 932],
+      [1110, 968],
+      [1072, 980],
+      [1066, 1040],
+      [1030, 1110],
+      [1005, 1140],
+      [900, 1178],
+      [760, 1192],
+      [620, 1218],
+      [560, 1248],
+      [480, 1258],
+    ],
+  },
+} as const;
+
+// Marker drawn over the pasted pictures, in board pixels.
+const Marks: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const boil = useBoil();
+  return (
+    <svg
+      style={{
+        position: "absolute",
+        inset: 0,
+        overflow: "visible",
+        filter: boil,
+      }}
+      width={BOARD.w}
+      height={BOARD.h}
+    >
+      {children}
+    </svg>
+  );
+};
+
+// A marker line over a photograph needs ground under it to read, so each is drawn twice: a wider
+// pass in paper white, then the colour on top — a strip of paper with a line down it.
+const Line: React.FC<{
+  d: string;
+  from: number;
+  to: number;
+  colour: string;
+  width?: number;
+}> = ({ d, from, to, colour, width = 14 }) => (
+  <>
+    <Stroke d={d} from={from} to={to} colour="#fffdf6" width={width + 14} />
+    <Stroke d={d} from={from} to={to} colour={colour} width={width} />
+  </>
+);
+
+// A label written on a scrap of paper and stuck on: for the one number a card needs besides its
+// keyword.
+const Tag: React.FC<{
+  x: number;
+  y: number;
+  text: string;
+  at: number;
+  size?: number;
+  tilt?: number;
+  ink?: string;
+}> = ({ x, y, text, at, size = 62, tilt = -4, ink = INK }) => {
+  const f = useCurrentFrame();
+  const j = useJitter(`tag${text}${x}`);
+  const e = pop(f, at);
+  if (e <= 0) return null;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: x + j.dx,
+        top: y + j.dy,
+        width: 0,
+        height: 0,
+        scale: `${e}`,
+        rotate: `${tilt + j.rot}deg`,
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          translate: "-50% -50%",
+          padding: `${size * 0.08}px ${size * 0.4}px ${size * 0.02}px`,
+          background: "#fffdf6",
+          font: `400 ${size}px ${MARKER}`,
+          lineHeight: 1.25,
+          color: ink,
+          whiteSpace: "nowrap",
+          clipPath: "polygon(1% 4%, 99% 0%, 100% 95%, 0% 100%)",
+          filter: "drop-shadow(0 8px 0 rgba(29,18,8,0.2))",
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+};
+
+// Deterministic, so the walk is in the same place on every render.
+const rng = (seed: number) => () => {
+  seed = (seed * 1664525 + 1013904223) % 4294967296;
+  return seed / 4294967296;
+};
+
+// The Sun's interior by fraction of its radius: energy diffuses out through the radiative zone to
+// about 0.7, and the convective zone above that carries it the rest of the way in weeks (script
+// sources 3 and 6). So the path is a random walk as far as 0.7 and one straight leg after it.
+const RADIATIVE = 0.7;
+const EXIT_ANGLE = -0.72;
+
+// A path out of the core as what it is: a step in a random direction, then another, until it is
+// seven steps from the centre. A marker line that crosses itself reads as a scribble rather than a
+// path, so a step that would land back on the line is thrown again — the one liberty taken with the
+// walk. A real photon's is beyond drawing either way, so the honest picture is its shape; the
+// number stays in the tag where it can be checked.
+const walk = (cx: number, cy: number, r: number) => {
+  const next = rng(8);
+  const pts: [number, number][] = [[0, 0]];
+  let [x, y] = [0, 0];
+  while (Math.hypot(x, y) < 7 && pts.length < 400) {
+    let [nx, ny] = [x, y];
+    for (let tries = 0; tries < 30; tries++) {
+      const a = next() * Math.PI * 2;
+      const th = pts.length === 1 ? a : Math.atan2(y, x) + (a - Math.PI) * 0.97;
+      [nx, ny] = [x + Math.cos(th), y + Math.sin(th)];
+      const clear = pts
+        .slice(0, -1)
+        .every(([px, py]) => Math.hypot(nx - px, ny - py) >= 0.95);
+      if (clear) break;
+    }
+    [x, y] = [nx, ny];
+    pts.push([x, y]);
+  }
+  // Scaled by the furthest excursion, so no leg strays past the radiative zone, and turned so the
+  // walk ends pointing at the exit.
+  const far = Math.max(...pts.map(([px, py]) => Math.hypot(px, py)));
+  const k = (RADIATIVE * r) / far;
+  const [lx, ly] = pts[pts.length - 1];
+  const turn = EXIT_ANGLE - Math.atan2(ly, lx);
+  const [c, s] = [Math.cos(turn), Math.sin(turn)];
+  const at = ([px, py]: [number, number]) =>
+    `${(cx + (px * c - py * s) * k).toFixed(1)} ${(cy + (px * s + py * c) * k).toFixed(1)}`;
+  // Above 0.7 R convection carries it to the surface, so that leg loops (a prolate trochoid); only
+  // at the surface does it leave, as light: a short straight ray (A6).
+  const [ux, uy] = [Math.cos(EXIT_ANGLE), Math.sin(EXIT_ANGLE)];
+  const L = (1 - RADIATIVE) * r;
+  const loops = 3;
+  const b = (L / (2 * Math.PI * loops)) * 1.8;
+  const loop = Array.from({ length: 73 }, (_, i) => {
+    const t = i / 72;
+    const th = 2 * Math.PI * loops * t;
+    const a = RADIATIVE * r + L * t - b * Math.sin(th);
+    const w = b * (1 - Math.cos(th));
+    return `${(cx + ux * a - uy * w).toFixed(1)} ${(cy + uy * a + ux * w).toFixed(1)}`;
+  });
+  return {
+    grind: `M${pts.map(at).join(" L")}`,
+    out: `M${loop.join(" L")}`,
+    ray: `M${(cx + ux * r).toFixed(1)} ${(cy + uy * r).toFixed(1)} L${(cx + ux * r * 1.15).toFixed(1)} ${(cy + uy * r * 1.15).toFixed(1)}`,
+  };
+};
+
+// Where the pasted Suns sit on their cards, in board pixels, so the marker drawn over one is placed
+// from the same numbers as the picture under it.
+const INSIDE = { x: 540, y: 590, r: 420 };
+const TRIP = {
+  sun: { x: 330, y: 410, r: 215 },
+  earth: { x: 800, y: 840, r: 120 },
+};
+const WALK = walk(INSIDE.x, INSIDE.y, INSIDE.r);
+
+// Sun to Earth: one stroke from limb to limb, with an arrowhead where it lands.
+const CROSSING = (() => {
+  const { sun, earth } = TRIP;
+  const a = Math.atan2(earth.y - sun.y, earth.x - sun.x);
+  const from = [
+    sun.x + Math.cos(a) * (sun.r + 34),
+    sun.y + Math.sin(a) * (sun.r + 34),
+  ];
+  const to = [
+    earth.x - Math.cos(a) * (earth.r + 44),
+    earth.y - Math.sin(a) * (earth.r + 44),
+  ];
+  const head = (turn: number) =>
+    `${(to[0] - Math.cos(a + turn) * 62).toFixed(1)} ${(to[1] - Math.sin(a + turn) * 62).toFixed(1)}`;
+  return {
+    line: `M${from[0].toFixed(1)} ${from[1].toFixed(1)} Q ${(from[0] + to[0]) / 2 + 60} ${(from[1] + to[1]) / 2 - 60} ${to[0].toFixed(1)} ${to[1].toFixed(1)}`,
+    head: `M${head(0.75)} L${to[0].toFixed(1)} ${to[1].toFixed(1)} L${head(-0.35)}`,
+  };
+})();
+
+// Light leaving the visible surface: a fan of rays off the limb of the visible-light disc.
+const LIMB = [
+  INSIDE.x + Math.cos(EXIT_ANGLE) * INSIDE.r,
+  INSIDE.y + Math.sin(EXIT_ANGLE) * INSIDE.r,
+] as const;
+const FAN = [-1.5, -1.1, -0.7, -0.3, 0.1].map((a) => {
+  const [x, y] = LIMB;
+  const p = (m: number) =>
+    `${(x + Math.cos(a) * m).toFixed(1)} ${(y + Math.sin(a) * m).toFixed(1)}`;
+  return `M${p(30)} L${p(130)}`;
+});
+
+// A cobweb in the corner of the card: old.
+const Cobweb: React.FC<{ at: number }> = ({ at }) => {
+  const boil = useBoil();
+  const spokes = [0, 22, 45, 68, 90].map((deg) => {
+    const a = (deg * Math.PI) / 180;
+    return `M0 0 L${Math.cos(a) * 330} ${Math.sin(a) * 330}`;
+  });
+  const rings = [110, 200, 290].map((r) =>
+    [0, 22, 45, 68]
+      .map((deg, i) => {
+        const [a, b] = [(deg * Math.PI) / 180, ((deg + 22) * Math.PI) / 180];
+        const m = (a + b) / 2;
+        return `${i ? "" : `M${Math.cos(a) * r} ${Math.sin(a) * r}`} Q ${Math.cos(m) * r * 0.8} ${Math.sin(m) * r * 0.8} ${Math.cos(b) * r} ${Math.sin(b) * r}`;
+      })
+      .join(" "),
+  );
+  return (
+    <svg
+      style={{
+        position: "absolute",
+        left: 95,
+        top: 240,
+        overflow: "visible",
+        filter: boil,
+      }}
+      width={340}
+      height={340}
+    >
+      {spokes.map((d, i) => (
+        <Stroke
+          key={d}
+          d={d}
+          from={at + i}
+          to={at + 8 + i}
+          colour={INK}
+          width={6}
+        />
+      ))}
+      {rings.map((d, i) => (
+        <Stroke
+          key={d}
+          d={d}
+          from={at + 6 + i * 3}
+          to={at + 14 + i * 3}
+          colour={INK}
+          width={5}
+        />
+      ))}
+    </svg>
+  );
+};
+
+// Eight cards in twenty-two seconds. No picture is the main picture of two cards. Labels carry
+// only what script/age-of-sunlight.txt sources, and the same wording as src/shorts/age-of-sunlight.
+const Deck: React.FC = () => (
+  <Board>
+    <Shot from={0} to={F.tens - 2} tilt={-1.5} sheet={YELLOW}>
+      <Cut
+        pic="rays"
+        x={540}
+        y={560}
+        w={900}
+        box={[90, 10, 1120, 730]}
+        tilt={-2}
+      />
+      <Cut
+        {...OUTLINE.hand}
+        x={770}
+        y={850}
+        w={430}
+        tilt={8}
+        at={F.skin}
+        edge={10}
+      />
+      <Burst at={2} x={540} y={1190} r={115} colour={CORAL} n={14} />
+      <Word text="SUNLIGHT" at={3} />
+    </Shot>
+
+    <Shot from={F.tens - 2} to={F.sentence2 - 2} tilt={1.5} sheet={TEAL}>
+      <Cut
+        {...OUTLINE.sun304}
+        x={540}
+        y={585}
+        w={840}
+        tilt={2}
+        punch={F.far}
+        by={1.08}
+      />
+      <Tag x={760} y={250} text="MAYBE FAR MORE" at={F.far} size={54} ink={CORAL} tilt={4} />
+      <Burst at={F.tens} x={540} y={1190} r={115} colour={YELLOW} n={14} />
+      <Word text="40,000+ YEARS" at={F.tens} size={100} />
+    </Shot>
+
+    <Shot from={F.sentence2 - 2} to={F.sentence3 - 2} tilt={-1.5} sheet="#22304f">
+      <Cut
+        {...OUTLINE.stereo}
+        x={TRIP.sun.x}
+        y={TRIP.sun.y}
+        w={TRIP.sun.r * 2}
+        tilt={-3}
+        edge={10}
+      />
+      <Cut
+        {...OUTLINE.earth}
+        x={TRIP.earth.x}
+        y={TRIP.earth.y}
+        w={TRIP.earth.r * 2}
+        tilt={4}
+        edge={10}
+        at={F.trip + 3}
+        punch={F.minutes + 3}
+        by={1.22}
+      />
+      <Marks>
+        <Stroke
+          d={CROSSING.line}
+          from={F.trip}
+          to={F.you + 2}
+          colour={YELLOW}
+          width={20}
+        />
+        <Stroke
+          d={CROSSING.head}
+          from={F.you}
+          to={F.you + 6}
+          colour={YELLOW}
+          width={20}
+        />
+      </Marks>
+      {/* Sun, Earth and the gap are all pasted at whatever size reads, so the card says so (A6). */}
+      <Tag x={800} y={250} text="NOT TO SCALE" at={F.trip + 6} size={44} tilt={3} />
+      <Word text="8 MINUTES" at={F.eight} swipe="#bfe9e4" tilt={3} />
+    </Shot>
+
+    <Shot from={F.sentence3 - 2} to={F.but - 2} tilt={1.5} sheet="#bfe9e4">
+      <Cut
+        {...OUTLINE.disc}
+        x={INSIDE.x}
+        y={INSIDE.y}
+        w={INSIDE.r * 2}
+        tilt={0}
+      />
+      <Marks>
+        <Line
+          d={WALK.grind}
+          from={F.sentence3}
+          to={F.part + 4}
+          colour={INK}
+          width={10}
+        />
+        <Line
+          d={WALK.out}
+          from={F.part + 4}
+          to={F.part + 9}
+          colour={CORAL}
+          width={14}
+        />
+        <Line
+          d={WALK.ray}
+          from={F.part + 9}
+          to={F.part + 12}
+          colour={YELLOW}
+          width={14}
+        />
+        {/* Where it starts: the core. */}
+        <circle cx={INSIDE.x} cy={INSIDE.y} r={26} fill="#fffdf6" />
+        <circle cx={INSIDE.x} cy={INSIDE.y} r={17} fill={INK} />
+      </Marks>
+      {/* The long number belongs to the slow black walk, so it is inked black and sits by it. */}
+      <Tag x={290} y={205} text="40,000+ YEARS" at={F.slow} size={58} tilt={-4} />
+      <Tag x={840} y={205} text="CONVECTION" at={F.part + 6} size={44} ink={CORAL} tilt={4} />
+      <Tag x={250} y={1010} text="NOT TO SCALE" at={F.sentence3 + 4} size={40} tilt={-3} />
+      <Word
+        text="GETTING OUT"
+        at={F.sentence3}
+        until={F.slow - 1}
+        size={118}
+      />
+      <Word text="THE SLOW PART" at={F.slow - 1} size={110} />
+    </Shot>
+
+    <Shot from={F.but - 2} to={F.sentence5 - 2} tilt={-1.5} sheet={CORAL}>
+      <Cut
+        pic="wheel"
+        x={540}
+        y={590}
+        w={790}
+        tilt={-2}
+        punch={F.same}
+        by={1.1}
+      />
+      <Word
+        text="NOT THE SAME LIGHT"
+        at={F.not}
+        size={76}
+        swipe="#ffc9c2"
+        tilt={3}
+      />
+    </Shot>
+
+    <Shot from={F.sentence5 - 2} to={F.sentence6 - 2} tilt={1.5} sheet={TEAL}>
+      {/* Visible light, not the EUV frames: this is the light that leaves (fact-check, A6). */}
+      <Cut
+        {...OUTLINE.disc}
+        x={INSIDE.x}
+        y={INSIDE.y}
+        w={INSIDE.r * 2}
+        tilt={0}
+      />
+      <Marks>
+        {FAN.map((d, i) => (
+          <Line
+            key={d}
+            d={d}
+            from={F.leaves + i}
+            to={F.leaves + 7 + i}
+            colour={YELLOW}
+            width={12}
+          />
+        ))}
+      </Marks>
+      <Word text="LEAVES AS SUNLIGHT" at={F.leaves} size={76} />
+    </Shot>
+
+    <Shot from={F.sentence6 - 2} to={F.its - 2} tilt={-1.5} sheet="#d8c9a8">
+      <Cut
+        pic="skylab"
+        x={540}
+        y={590}
+        w={900}
+        tilt={-1.5}
+        tone="sepia(0.7) contrast(1.05)"
+        punch={F.ancient - 1}
+        by={1.08}
+      />
+      <Cobweb at={F.ancient + 2} />
+      <Word
+        text="ENERGY"
+        at={F.energy}
+        until={F.ancient - 1}
+        swipe="#bfe9e4"
+        tilt={3}
+      />
+      <Burst
+        at={F.ancient - 1}
+        x={540}
+        y={1190}
+        r={115}
+        colour={CORAL}
+        n={12}
+      />
+      <Word text="ANCIENT ENERGY" at={F.ancient - 1} size={98} />
+    </Shot>
+
+    <Shot from={F.its - 2} to={F.end} tilt={1.5} sheet={YELLOW}>
+      <Cut
+        pic="sunrise"
+        x={540}
+        y={570}
+        w={880}
+        tilt={2}
+        punch={F.tripAgain - 1}
+        by={1.06}
+      />
+      <Cut
+        {...OUTLINE.hand}
+        x={300}
+        y={860}
+        w={420}
+        tilt={-8}
+        flip
+        at={F.youAgain}
+        edge={10}
+      />
+      <Word
+        text="LAST 8 MINUTES"
+        at={F.last}
+        until={F.tripAgain - 1}
+        size={98}
+        swipe="#bfe9e4"
+        tilt={3}
+      />
+      <Burst
+        at={F.tripAgain - 1}
+        x={540}
+        y={1190}
+        r={115}
+        colour={CORAL}
+        n={14}
+      />
+      <Word text="THE TRIP TO YOU" at={F.tripAgain - 1} size={98} />
+    </Shot>
+  </Board>
+);
+
+export const ageOfSunlightCutout: Short = {
+  slug: "age-of-sunlight-cutout",
+  title: "Sunlight's energy is older than its trip (cutout)",
+  edit,
+  looks: [{ id: "Cutout", Set: Paper, cast: () => [] }],
+  ui: () => <Deck />,
+  scrim: false,
+  music: "sun",
+  sfx: [
+    { at: 0, name: "pop" },
+    { at: F.tens - 2, name: "thud", volume: 0.5 },
+    { at: F.sentence2 - 2, name: "flick" },
+    { at: F.trip, name: "whoosh", volume: 0.35 },
+    { at: F.sentence3 - 2, name: "tap" },
+    { at: F.part + 2, name: "thud", volume: 0.4 },
+    { at: F.but - 2, name: "pop" },
+    { at: F.sentence5 - 2, name: "flick" },
+    { at: F.sentence6 - 2, name: "tap" },
+    { at: F.ancient - 1, name: "thud", volume: 0.4 },
+    { at: F.its - 2, name: "pop" },
+    { at: F.tripAgain - 1, name: "sparkle", volume: 0.4 },
+  ],
+};
