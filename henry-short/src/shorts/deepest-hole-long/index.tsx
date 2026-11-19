@@ -45,7 +45,9 @@ const edit = makeEdit({
     "reached",
     "expected",
     "ninety-two,",
-    "heat",
+    "oval,",
+    "walls",
+    "beat",
   ],
 });
 
@@ -163,8 +165,8 @@ const PTS = {
   y1975: [1975.37, 7.263],
   y1979: [1979.45, 9.584],
   y1983: [1983.99, 12.0],
-  y1984: [1984.5, 12.066],
-  branch: [1984.5, 7.01],
+  y1984: [1984.74, 12.066], // 27 September 1984
+  branch: [1984.74, 7.01],
 } as const;
 const US_RECORD_KM = 9.583;
 const FINAL_KM = 12.262;
@@ -374,15 +376,30 @@ const Thermometer: React.FC<{
   );
 };
 
-// One paper's account: the walls of the hole flowing inward, in section.
-const Closing: React.FC<{ a: number; b: number }> = ({ a, b }) => {
+// Below 7 km the walls kept caving in and the bore went oval with caverns: the hole in section,
+// its walls breaking outward in pockets as the line is spoken. Schematic, not to scale.
+const Caving: React.FC<{ a: number; b: number }> = ({ a, b }) => {
   const f = useCurrentFrame();
   const k = ramp(f, a, b);
-  const [top, bottom, half] = [220, 1040, 80];
+  const [top, bottom, half] = [220, 1040, 70];
+  const pockets = [
+    [380, 70, 1],
+    [540, 110, -1],
+    [700, 90, 1],
+    [860, 120, -1],
+    [930, 60, 1],
+  ];
   const wall = (side: number) => {
-    const bulge = (half - 14) * k;
-    const mid = (top + bottom) / 2;
-    return `M${540 + side * 520} ${top} L${540 + side * half} ${top} C ${540 + side * half} ${mid - 260}, ${540 + side * (half - bulge * 1.6)} ${mid - 120}, ${540 + side * (half - bulge)} ${mid} C ${540 + side * (half - bulge * 1.6)} ${mid + 120}, ${540 + side * half} ${mid + 260}, ${540 + side * half} ${bottom} L${540 + side * 520} ${bottom} Z`;
+    const pts: string[] = [];
+    for (let y = top; y <= bottom; y += 10) {
+      const out = pockets.reduce(
+        (n, [py, depth, sd]) =>
+          n + (sd === side ? depth * k * Math.exp(-(((y - py) / 45) ** 2)) : 0),
+        0,
+      );
+      pts.push(`${540 + side * (half + out)},${y}`);
+    }
+    return `M${540 + side * 520},${top} L${pts.join(" L")} L${540 + side * 520},${bottom} Z`;
   };
   return (
     <Pieces>
@@ -673,31 +690,31 @@ const Deck: React.FC = () => (
     <Card
       from={cut(13)}
       to={cut(14)}
+      word="WALLS CAVING IN"
+      at={at(13, "caving")}
+      sheet={PINK}
+      tilt={-1}
+    >
+      <Caving a={at(13, "walls")} b={at(13, "caverns.") + 8} />
+    </Card>
+    <Card
+      from={cut(14)}
+      to={cut(15)}
       word="1992: FUNDING CUT"
-      at={at(13, "nineteen")}
+      at={at(14, "nineteen")}
       sheet={YELLOW}
       tilt={-1.5}
     >
       <Cut pic="wornbit" x={540} y={590} w={900} tilt={2} jitter={0} />
     </Card>
     <Card
-      from={cut(14)}
-      to={cut(15)}
-      word="PLAN: 13 KM"
-      at={at(14, "thirteen")}
-      sheet={CREAM}
-    >
-      <Chart stage={5} from={S[14]} />
-    </Card>
-    <Card
       from={cut(15)}
       to={cut(16)}
-      word="ONE PAPER: HEAT"
-      at={at(15, "paper")}
-      sheet={PINK}
-      tilt={-1}
+      word="PLAN: 13 KM"
+      at={at(15, "thirteen")}
+      sheet={CREAM}
     >
-      <Closing a={at(15, "flow")} b={cut(16)} />
+      <Chart stage={5} from={S[15]} />
     </Card>
     <Card
       from={cut(16)}
