@@ -1,5 +1,5 @@
 Sort every cell in your body by size, and something odd turns up: each size class weighs roughly the same.
-A twenty twenty-three study counted the cells of the human body, type by type, and sorted them by size.
+A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size.
 The smallest cells it sorted are red blood cells.
 The biggest are muscle fibres, more than a million times heavier.
 Now put every cell into a size class, each class twice as heavy as the one before.
@@ -12,8 +12,8 @@ Take a typical man. His muscle fibres are fewer than one in fifty thousand of hi
 Yet they make up about half the weight of all his cells.
 And all his cells together weigh about forty-five kilograms.
 The other twenty-five of his seventy are not cells at all. They are the water, protein and minerals between them.
-Sort the life in the ocean by size, and most size classes hold about the same weight too.
-But in your body, nobody knows why. The authors know of no process that explains it.
+Sort the life in the ocean by size, as it was before industrial fishing, and most size classes held about the same weight too.
+And in your body, nobody knows why. No accepted process explains it yet.
 Trillions of tiny cells, far fewer giant ones, and roughly the same weight at every size.
 
 ---
@@ -42,7 +42,8 @@ Sources:
    within two orders of magnitude". The hook says "roughly", not "exactly".
    "Size" here is cell mass in grams, the paper's measure of size.
 
-2. "A twenty twenty-three study counted the cells of the human body, type by type, and sorted them by size."
+2. "A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size."
+   "Estimate", not "count": the paper compiles published data and says "we estimate".
    Hatton 2023, PNAS, online 18 Sep 2023: counts and sizes for 400 cell types
    across 60 tissue systems (1,264 cell groups), from ">1,500 published
    sources". Not
@@ -60,7 +61,8 @@ Sources:
 4. "The biggest are muscle fibres, more than a million times heavier."
    Hatton 2023: cell sizes run "from red blood cells to the largest muscle
    fibers"; a myocyte is "more than a million-fold larger" than a red blood
-   cell; myocyte biomass peaks "near 10^-4 g" (10^-4 / 4e-11 = 2.5 million).
+   cell; myocyte biomass peaks "near 10^-4 g" (10^-4 / 4e-11 = 2.5 million). A floor,
+   so the card says ">1,000,000×": the full range is seven orders of magnitude.
 
 5. "Now put every cell into a size class, each class twice as heavy as the one before."
    Hatton 2023, Methods: "bins increase by a multiplicative factor of 2 from small
@@ -88,7 +90,8 @@ Sources:
 
 11. "Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus."
    Hatton 2023: skeletal myocytes "make up <0.002% of the nucleated cell count"
-   (reference male). 0.002% = 1 in 50,000.
+   (reference male). 0.002% = 1 in 50,000, an upper limit, so the card says "< 1 IN
+   50,000" and the dot grid "FEWER THAN 1 MUSCLE FIBRE".
 
 12. "Yet they make up about half the weight of all his cells."
    Hatton 2023, Fig. 1 caption: "Cell biomass is dominated by skeletal myocytes,
@@ -102,16 +105,22 @@ Sources:
    biomass in each tissue, made up of extracellular water, protein, and minerals
    (~25 kg)". 45 + 25 = 70 kg, the reference male.
 
-15. "Sort the life in the ocean by size, and most size classes hold about the same weight too."
+15. "Sort the life in the ocean by size, as it was before industrial fishing, and most size classes held about the same weight too."
    Hatton 2021: "biomass within most order of magnitude size classes is indeed
    remarkably constant, near 1 gigatonne (Gt) wet weight (10^15 g), but bacteria
    and large marine mammals are markedly above and below this value,
-   respectively." Hence "most". Its classes are tenfold, not twofold; the line
-   does not claim the same class width.
+   respectively." Hence "most". That holds for the ocean before industrial
+   fishing (before 1850); today "the upper one-third of the biomass spectrum has
+   been severely truncated", hence the past tense and the qualifier, also on the
+   chart's title. Its classes are tenfold, not twofold; the line does not claim the
+   same class width.
 
-16. "But in your body, nobody knows why. The authors know of no process that explains it."
+16. "And in your body, nobody knows why. No accepted process explains it yet."
    Hatton 2023, Discussion: "To our knowledge, there is no universally recognized
-   process that accounts for these patterns."
+   process that accounts for these patterns." The paper then proposes candidates
+   (random growth processes; growth and division rates out of step), so the line
+   says no accepted process, not none at all. "And", not "but": the ocean paper
+   does not claim its pattern is explained either.
 
 17. "Trillions of tiny cells, far fewer giant ones, and roughly the same weight at every size."
    Summary of lines 3-8. "Trillions": red blood cells are most of the ≈36
@@ -119,7 +128,8 @@ Sources:
    every size class, with the dip of line 9; "roughly" carries the spread of line 1.
 
 18. The size chart, not spoken.
-   A log-scale size axis from 10^-11 to 10^-3 g, labelled "log scale". The falling
+   A log-scale size axis from 10^-11 to 10^-2 g, labelled "log scale", with the
+   paper's 26 doubling classes from 4e-11 g (to about 2.7e-3 g; Fig. 3, Methods). The falling
    count staircase and the mass bars are drawn as a schematic of the trend in
    lines 6-9 and say "schematic" on screen; they are not the paper's per-bin data.
    Only the axis positions of red blood cells (4e-11 g), fat cells (~1e-6 g) and

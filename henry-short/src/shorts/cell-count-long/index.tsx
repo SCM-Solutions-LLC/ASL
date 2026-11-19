@@ -27,6 +27,8 @@ const edit = makeEdit({
   breakAfter: [
     "size,",
     "body,",
+    "study",
+    "studies",
     "type,",
     "class,",
     "doubles,",
@@ -39,6 +41,7 @@ const edit = makeEdit({
     "seventy",
     "water,",
     "size,",
+    "fishing,",
     "cells,",
   ],
 });
@@ -59,16 +62,16 @@ const end = (s: number) => (s + 1 >= S.length ? edit.duration : S[s + 1]);
 const RBC = 4e-11; // the lower bound of red blood cells, where the binned distribution starts
 const FAT = 1e-6; // adipocyte biomass peak
 const MUSCLE = 1e-4; // myocyte biomass peak
-const BINS = 23; // octaves from 4e-11 g: 4e-11 * 2^23 = 3.4e-4 g, the largest muscle fibres
+const BINS = 26; // the paper's octave classes from 4e-11 g, to 4e-11 * 2^26 = 2.7e-3 g
 
 const CREAM = "#fffdf6";
 const MINT = "#bfe9e4";
 const PINK = "#ffc9c2";
 const SEA = "#cfe3f5";
 
-// The ruler, in board pixels: 10^-11 g at the left, 10^-3 g at the right.
+// The ruler, in board pixels: 10^-11 g at the left, 10^-2 g at the right.
 const LO = -11;
-const HI = -3;
+const HI = -2;
 const X0 = 120;
 const X1 = 990;
 const AXIS = 880;
@@ -212,8 +215,8 @@ const Ruler: React.FC<{
         const x = xOf(g);
         const anchor = m === "rbc" ? "start" : m === "muscle" ? "end" : "middle";
         const lx = m === "rbc" ? x - 10 : m === "muscle" ? x + 40 : x;
-        // Fat and muscle sit two decades apart, so the muscle label goes a row higher.
-        const ly = AXIS - (m === "muscle" ? 480 : 390);
+        // Fat sits between the other two marks, so its label takes the lower row.
+        const ly = AXIS - (m === "fat" ? 390 : 480);
         return (
           <g key={m}>
             <line x1={x} y1={ly + 60} x2={x} y2={AXIS} stroke={INK} strokeWidth={5} strokeDasharray="14 12" />
@@ -287,7 +290,7 @@ const Crowd: React.FC<{ ring: number }> = ({ ring }) => {
       <rect x={x} y={y} width={w} height={h} fill="url(#crowd)" />
       <circle cx={cx} cy={cy} r={4} fill={CORAL} />
       <circle cx={cx} cy={cy} r={20 + 50 * (1 - r)} stroke={CORAL} strokeWidth={6} fill="none" opacity={r} />
-      <T x={540} y={y + h + 50} text="50,000 CELLS WITH A NUCLEUS · 1 MUSCLE FIBRE" size={30} />
+      <T x={540} y={y + h + 50} text="50,000 CELLS WITH A NUCLEUS · FEWER THAN 1 MUSCLE FIBRE" size={28} />
     </Marks>
   );
 };
@@ -325,13 +328,13 @@ const Deck: React.FC = () => (
     <Card from={0} to={cut(1)} word="ROUGHLY THE SAME" at={at(0, "roughly")} sheet={CREAM}>
       <Ruler weights={[S[0] + 6, end(0)]} />
     </Card>
-    <Card from={cut(1)} to={cut(2)} word="2023 CELL COUNT" at={at(1, "twenty")} sheet={MINT}>
+    <Card from={cut(1)} to={cut(2)} word="1,500+ STUDIES" at={at(1, "fifteen")} sheet={MINT}>
       <Ruler axis={[S[1] + 4, at(1, "sorted")]} />
     </Card>
     <Card from={cut(2)} to={cut(3)} word="RED BLOOD CELLS" at={at(2, "red")} sheet={PINK}>
       <Ruler marks={["rbc"]} />
     </Card>
-    <Card from={cut(3)} to={cut(4)} word="1,000,000× HEAVIER" at={at(3, "million")} sheet={PINK}>
+    <Card from={cut(3)} to={cut(4)} word=">1,000,000× HEAVIER" at={at(3, "million")} sheet={PINK}>
       <Ruler marks={["rbc", "muscle"]} />
     </Card>
     <Card from={cut(4)} to={cut(5)} word="×2 EACH CLASS" at={at(4, "twice")} sheet={CREAM}>
@@ -355,7 +358,7 @@ const Deck: React.FC = () => (
     <Card from={cut(10)} to={cut(11)} word="A TYPICAL MAN" sub="70 KG (154 LB)" at={at(10, "typical")} sheet={CREAM}>
       <Body from={S[10]} show="cells" />
     </Card>
-    <Card from={cut(11)} to={cut(12)} word="1 IN 50,000" at={at(11, "fifty")} sheet={CREAM}>
+    <Card from={cut(11)} to={cut(12)} word="< 1 IN 50,000" at={at(11, "fifty")} sheet={CREAM}>
       <Crowd ring={at(11, "one")} />
     </Card>
     <Card from={cut(12)} to={cut(13)} word="ABOUT HALF" at={at(12, "half")} sheet={PINK}>
@@ -374,12 +377,12 @@ const Deck: React.FC = () => (
       </Marks>
     </Card>
     <Card from={cut(16)} to={cut(17)} word="THE OCEAN TOO" at={at(16, "ocean")} sheet={SEA}>
-      <Ruler ocean weights={[at(16, "ocean"), end(16)]} title="MOST SIZE CLASSES · SCHEMATIC" />
+      <Ruler ocean weights={[at(16, "ocean"), end(16)]} title="BEFORE INDUSTRIAL FISHING · SCHEMATIC" />
     </Card>
     <Card from={cut(17)} to={cut(18)} word="NOBODY KNOWS WHY" at={at(17, "nobody")} sheet={YELLOW} tilt={1.5}>
       <Ruler weights="full" />
     </Card>
-    <Card from={cut(18)} to={cut(19)} word="NO KNOWN PROCESS" at={at(18, "process")} sheet={CREAM}>
+    <Card from={cut(18)} to={cut(19)} word="NOT YET EXPLAINED" at={at(18, "process")} sheet={CREAM}>
       <Ruler weights="full" />
     </Card>
     <Card from={cut(19)} to={edit.duration} word="ROUGHLY THE SAME" at={at(19, "roughly")} sheet={YELLOW} tilt={-1}>
