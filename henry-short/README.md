@@ -104,6 +104,21 @@ Editorial rules — accuracy, sourcing, uniqueness, content limits, approval —
    cited source and writes `factcheck/<vo>.json`; `npm run publishable` refuses a missing or stale one.
 7. `npm run sheet -- <slug>` and review every tile against the checklist in `tools/sheet.py`.
 
+## Publishing
+
+Renders aren't byte-identical across machines, so the approved file must be the uploaded file.
+GitHub Actions makes and keeps it:
+
+1. Run **Render short** (slug + composition). It runs lint and `publishable`, renders, and keeps the
+   MP4 as an artifact for 90 days; the run summary prints its SHA-256.
+2. Put that hash in `review/<slug>.json` (`mp4_sha256`) and merge it to `main`.
+3. The owner watches the artifact and replies `Approve <slug> mp4 <hex> meta <hex> as <visibility>`.
+4. Run **Upload short** with that line and the render run's id. `tools/upload.mjs` refuses unless both
+   hashes match; credentials are the `youtube` environment's secrets `YT_CLIENT_ID`,
+   `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`.
+
+Until the Google project passes YouTube's API audit, every API upload is locked to private.
+
 ## Layout
 
 ### Pipeline

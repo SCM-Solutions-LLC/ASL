@@ -1,0 +1,56 @@
+# Uploads an MP4 made by "Render short" against the owner's approval line. tools/upload.mjs refuses
+# unless the MP4 and review/<slug>.json at this commit hash to what the line approves (GUARDRAILS F1/F2).
+# Credentials (F3) are secrets on the "youtube" environment: YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
+name: Upload short
+on:
+  workflow_dispatch:
+    inputs:
+      approval:
+        description: "Owner's line: Approve <slug> mp4 <hex> meta <hex> as <private|unlisted|public> [at <ISO time>]"
+        required: true
+      render_run_id:
+        description: "Run id of the Render short run that made the approved MP4"
+        required: true
+permissions:
+  contents: read
+  actions: read
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    environment: youtube
+    defaults:
+      run:
+        working-directory: henry-short
+    env:
+      APPROVAL: ${{ inputs.approval }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Slug from approval
+        id: slug
+        run: |
+          [[ "$APPROVAL" =~ ^Approve\ ([a-z0-9-]+)\  ]] || { echo "Not an approval line"; exit 1; }
+          echo "slug=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ steps.slug.outputs.slug }}
+          run-id: ${{ inputs.render_run_id }}
+          github-token: ${{ github.token }}
+          path: henry-short/out/release
+      - name: Credentials
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          umask 077
+          node -e 'const e=process.env; require("fs").writeFileSync(e.RUNNER_TEMP+"/yt.json", JSON.stringify({client_id:e.YT_CLIENT_ID, client_secret:e.YT_CLIENT_SECRET, refresh_token:e.YT_REFRESH_TOKEN}))'
+      - name: Upload
+        run: YT_CREDENTIALS="$RUNNER_TEMP/yt.json" node tools/upload.mjs "$APPROVAL"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.slug.outputs.slug }}-upload-record
+          path: henry-short/review/${{ steps.slug.outputs.slug }}.upload.json

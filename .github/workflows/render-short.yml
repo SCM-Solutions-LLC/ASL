@@ -1,0 +1,49 @@
+# Renders one short on a fixed machine and keeps the MP4 as an artifact, so the file the owner
+# reviews is the file that gets uploaded (a re-render elsewhere gives a different hash; GUARDRAILS F1).
+name: Render short
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Short slug, e.g. altar-stone"
+        required: true
+      composition:
+        description: "Composition id, e.g. altar-stone-Illustrated"
+        required: true
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: henry-short
+    env:
+      SLUG: ${{ inputs.slug }}
+      COMP: ${{ inputs.composition }}
+    steps:
+      - name: Check inputs
+        working-directory: .
+        run: |
+          [[ "$SLUG" =~ ^[a-z0-9-]+$ ]] || { echo "bad slug"; exit 1; }
+          [[ "$COMP" =~ ^[A-Za-z0-9-]+$ ]] || { echo "bad composition"; exit 1; }
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: henry-short/package-lock.json
+      - run: npm ci
+      - run: npm run lint && npm run publishable
+      - run: npx remotion render "$COMP" "out/release/$SLUG.mp4"
+      - name: Hash
+        run: |
+          sha=$(sha256sum "out/release/$SLUG.mp4" | cut -d' ' -f1)
+          echo "$SLUG mp4_sha256 $sha (render run ${{ github.run_id }}, commit ${{ github.sha }})" | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.slug }}
+          path: henry-short/out/release/${{ inputs.slug }}.mp4
+          retention-days: 90
+          compression-level: 0
