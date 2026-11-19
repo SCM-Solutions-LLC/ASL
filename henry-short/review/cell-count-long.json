@@ -1,0 +1,13 @@
+{
+  "slug": "cell-count-long",
+  "file": "out/cell-count-long/cell-count-long_9x16.mp4",
+  "mp4_sha256": "c6c6f0d6360551d0c5aac33f9933f536aa6938711b46bb3402d57f8c9bd70088",
+  "title": "Sort your cells by size and each size class weighs roughly the same",
+  "description": "Hatton et al. (PNAS, 2023) combined over 1,500 published sources to estimate the body's cells type by type, then sorted them into size classes, each holding cells twice as heavy as the one before. Each doubling in size brings, on average, about half as many cells, so on the paper's log scale every class holds roughly the same total mass, except for a dip between fat cells and muscle fibres. In a typical 70 kg man, muscle fibres are fewer than 1 in 50,000 of his cells with a nucleus, yet about half the mass of all his cells. His cells weigh about 45 kg; the other 25 kg is water, protein and minerals between them. The ocean before industrial fishing showed a similar pattern (Hatton et al., 2021). No accepted process explains it yet. The charts in the video are schematic.\n\nSources:\n- Hatton et al., PNAS 120(39): e2303077120 (2023), doi:10.1073/pnas.2303077120\n- Hatton et al., Science Advances 7(46): eabh3732 (2021), doi:10.1126/sciadv.abh3732\n\nNarration: Kokoro-82M synthetic voice. Illustrated animation; the charts are schematic.\n\n#shorts #biology #science #humanbody",
+  "tags": ["human body", "cells", "cell size", "biomass", "biology", "science"],
+  "categoryId": "28",
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "alteredOrSyntheticContent": false,
+  "notes": "privacyStatus and schedule are the owner's call at approval (F2); the owner chose private. E3: illustrated animation with a stock synthetic narrator, not realistic; re-check YouTube's rule at upload. E5: over the 60 s target (hard limit 3 min); the owner accepts or rejects the length at approval."
+}
