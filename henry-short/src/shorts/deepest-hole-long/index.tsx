@@ -168,6 +168,7 @@ const PTS = {
   y1983: [1983.99, 12.0],
   y1984: [1984.74, 12.066], // 27 September 1984
   branch: [1984.74, 7.01],
+  restart: [1985.33, 7.01], // drilling resumed from 7 km seven months after the break
 } as const;
 const US_RECORD_KM = 9.583;
 const FINAL_KM = 12.262;
@@ -320,10 +321,11 @@ const Chart: React.FC<{ stage: number; from: number }> = ({ stage, from }) => {
           width={14}
         />
       )}
-      {seg(PTS.branch, [1989.5, FINAL_KM], 4)}
+      {seg(PTS.branch, PTS.restart, 4)}
+      {seg(PTS.restart, [1990, FINAL_KM], 4)}
       {stage >= 4 && (
         <Stroke
-          d={`M${X(1989)} ${Y(FINAL_KM)} L${X(1990)} ${Y(FINAL_KM)}`}
+          d={`M${X(1989)} ${Y(FINAL_KM)} L${X(1991)} ${Y(FINAL_KM)}`}
           from={stage > 4 ? 0 : from + 36}
           to={stage > 4 ? 1 : from + 44}
           colour={CORAL}
@@ -449,10 +451,15 @@ const Caving: React.FC<{ a: number; b: number }> = ({ a, b }) => {
     return `M${540 + side * 520},${top} L${pts.join(" L")} L${540 + side * 520},${bottom} Z`;
   };
   return (
-    <Pieces>
-      <path d={wall(-1)} fill={KRAFT} />
-      <path d={wall(1)} fill={KRAFT} />
-    </Pieces>
+    <>
+      <Pieces>
+        <path d={wall(-1)} fill={KRAFT} />
+        <path d={wall(1)} fill={KRAFT} />
+      </Pieces>
+      <Marks>
+        <Tick x={1000} y={1005} text="NOT TO SCALE" anchor="end" />
+      </Marks>
+    </>
   );
 };
 
