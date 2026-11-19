@@ -1,0 +1,126 @@
+Sort every cell in your body by size, and something odd turns up: each size class weighs roughly the same.
+A twenty twenty-three study counted the cells of the human body, type by type, and sorted them by size.
+The smallest cells it sorted are red blood cells.
+The biggest are muscle fibres, more than a million times heavier.
+Now put every cell into a size class, each class twice as heavy as the one before.
+Each time the size doubles, there are, on average, about half as many cells.
+So the small cells win on numbers, the big cells win on size, and the two cancel out.
+Every class ends up holding roughly the same weight.
+With one exception: a dip, between the fat cells and the muscle fibres.
+In women the dip is smaller, and in a ten-year-old it is fainter still.
+Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus.
+Yet they make up about half the weight of all his cells.
+And all his cells together weigh about forty-five kilograms.
+The other twenty-five of his seventy are not cells at all. They are the water, protein and minerals between them.
+Sort the life in the ocean by size, and most size classes hold about the same weight too.
+But in your body, nobody knows why. The authors know of no process that explains it.
+Trillions of tiny cells, far fewer giant ones, and roughly the same weight at every size.
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+The longer follow-up to script/cell-count.txt. Its core claim is new (B1): the cell-count short
+is about how many cells are human and which type dominates the count; this one is about how cell
+mass is spread across cell sizes. Publish one of the two, not both.
+
+Sources:
+- Hatton, Galbraith, Merleau, Miettinen, Smith & Shander, "The human cell count
+  and size distribution", PNAS 120(39): e2303077120 (2023),
+  doi:10.1073/pnas.2303077120; open full text at PMC10523466. Read by the author
+  of this script, 19 Nov 2026. Reference male 70 kg, reference female 60 kg,
+  reference child 10 years, 32 kg.
+- Hatton, Heneghan, Bar-On & Galbraith, "The global ocean size spectrum from
+  bacteria to whales", Science Advances 7(46): eabh3732 (2021),
+  doi:10.1126/sciadv.abh3732; open full text at PMC8580314. Cited by the PNAS
+  paper as another example of the same pattern.
+
+1. "Sort every cell in your body by size, and something odd turns up: each size class weighs roughly the same."
+   Hatton 2023: "a roughly similar fraction of total body mass is present in each
+   logarithmic cell-size class" (Fig. 4A), and the female and child patterns are
+   "broadly similar to the male". "Roughly" is the paper's word and it carries
+   weight: outside the dip (line 9), "all variation in cellular biomass lies
+   within two orders of magnitude". The hook says "roughly", not "exactly".
+   "Size" here is cell mass in grams, the paper's measure of size.
+
+2. "A twenty twenty-three study counted the cells of the human body, type by type, and sorted them by size."
+   Hatton 2023, PNAS, online 18 Sep 2023: counts and sizes for 400 cell types
+   across 60 tissue systems (1,264 cell groups), from ">1,500 published
+   sources". Not
+   called the "first" census: Sender & Milo and others counted before it.
+
+3. "The smallest cells it sorted are red blood cells."
+   Hatton 2023: the binned distribution "only considers the distribution beginning
+   at red blood cells (4 × 10^-11 g)", i.e. "beginning at the lower bound of
+   erythrocytes". Platelets and the smallest haploid gametes are smaller but were
+   left out of the binning "to avoid fitting the distribution over relatively large
+   gaps", hence "the smallest cells it sorted". 4e-11 g is the lower bound of red
+   blood cells, not a typical one, so no red-cell mass is spoken; the axis starts
+   there and says "from 4 × 10⁻¹¹ g".
+
+4. "The biggest are muscle fibres, more than a million times heavier."
+   Hatton 2023: cell sizes run "from red blood cells to the largest muscle
+   fibers"; a myocyte is "more than a million-fold larger" than a red blood
+   cell; myocyte biomass peaks "near 10^-4 g" (10^-4 / 4e-11 = 2.5 million).
+
+5. "Now put every cell into a size class, each class twice as heavy as the one before."
+   Hatton 2023, Methods: "bins increase by a multiplicative factor of 2 from small
+   to large (octave size classes)".
+
+6. "Each time the size doubles, there are, on average, about half as many cells."
+   Hatton 2023: the count per size class follows "a power law with a slope near
+   -0.97 with a 95% CI of -1.09 to -0.87". A slope of -1 means half as many cells
+   per doubling. "On average" because it is a fitted trend, not true bin by bin.
+
+7. "So the small cells win on numbers, the big cells win on size, and the two cancel out."
+   Arithmetic from line 6: count times size is about constant when count falls as
+   1/size.
+
+8. "Every class ends up holding roughly the same weight."
+   As line 1.
+
+9. "With one exception: a dip, between the fat cells and the muscle fibres."
+   Hatton 2023: "prominent biomass peaks comprising adipocytes (near 10^-6 g) and
+   myocytes (near 10^-4 g), separated by a gap of relatively low biomass".
+
+10. "In women the dip is smaller, and in a ten-year-old it is fainter still."
+   Hatton 2023, Fig. 4B: the gap is "less prominent in the reference female" and
+   "even less evident in the 10-y-old reference child".
+
+11. "Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus."
+   Hatton 2023: skeletal myocytes "make up <0.002% of the nucleated cell count"
+   (reference male). 0.002% = 1 in 50,000.
+
+12. "Yet they make up about half the weight of all his cells."
+   Hatton 2023, Fig. 1 caption: "Cell biomass is dominated by skeletal myocytes,
+   comprising about half of all 45 kg of cell biomass in the body".
+
+13. "And all his cells together weigh about forty-five kilograms."
+   As line 12: 45 kg of cell biomass, reference male.
+
+14. "The other twenty-five of his seventy are not cells at all. They are the water, protein and minerals between them."
+   Hatton 2023, Fig. 2 caption: cell biomass "excludes noncellular components of
+   biomass in each tissue, made up of extracellular water, protein, and minerals
+   (~25 kg)". 45 + 25 = 70 kg, the reference male.
+
+15. "Sort the life in the ocean by size, and most size classes hold about the same weight too."
+   Hatton 2021: "biomass within most order of magnitude size classes is indeed
+   remarkably constant, near 1 gigatonne (Gt) wet weight (10^15 g), but bacteria
+   and large marine mammals are markedly above and below this value,
+   respectively." Hence "most". Its classes are tenfold, not twofold; the line
+   does not claim the same class width.
+
+16. "But in your body, nobody knows why. The authors know of no process that explains it."
+   Hatton 2023, Discussion: "To our knowledge, there is no universally recognized
+   process that accounts for these patterns."
+
+17. "Trillions of tiny cells, far fewer giant ones, and roughly the same weight at every size."
+   Summary of lines 3-8. "Trillions": red blood cells are most of the ≈36
+   trillion cells of the reference male (Hatton 2023). "At every size" means
+   every size class, with the dip of line 9; "roughly" carries the spread of line 1.
+
+18. The size chart, not spoken.
+   A log-scale size axis from 10^-11 to 10^-3 g, labelled "log scale". The falling
+   count staircase and the mass bars are drawn as a schematic of the trend in
+   lines 6-9 and say "schematic" on screen; they are not the paper's per-bin data.
+   Only the axis positions of red blood cells (4e-11 g), fat cells (~1e-6 g) and
+   muscle fibres (~1e-4 g) are values from the paper.
