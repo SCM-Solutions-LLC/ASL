@@ -17,6 +17,7 @@ compositions automatically, named `<slug>-<Look>` and `<slug>-<Look>Wide`.
 | `cleopatra-timeline` | `Illustrated` | its own Kokoro VO, 23.6s, one figure on a timeline drawn to scale |
 | `cleopatra-cutout` | `Cutout` | the Cleopatra VO as collage cards, a new picture about every 2.5s and one keyword each; public-domain and CC0 pictures (src/deck/kit.tsx) |
 | `age-of-sunlight-cutout`, `deepest-hole-cutout`, `cell-count-cutout` | `Cutout` | the same VOs as collage cards, same kit |
+| `deepest-hole-calm` | `Calm` | the deepest-hole VO as calmer cards: one picture per sentence, one keyword in one size, slow drift and crossfades, same kit and photos |
 
 The two Tudor shorts are cut from the same `six-wives` VO: one recording can carry several shorts.
 
