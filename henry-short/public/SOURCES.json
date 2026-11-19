@@ -299,5 +299,17 @@
   "licence": "public-domain",
   "ship": true,
   "note": "NASA imagery is not copyrighted (credit NASA/JPL/Space Science Institute). Downscaled to 2048x1024. cassini-2000-no-grs.jpg has the Great Red Spot cloned out with a clean stretch of the same latitude 700 px east, for the pre-1831 beats; the short says on screen that the planet is an illustration."
+ },
+ "public/music/gravity-turn.mp3": {
+  "source": "\"Gravity Turn\" (action version) by vitalezzz, https://opengameart.org/content/gravity-turn",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for the long age-of-sunlight short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
+ },
+ "public/music/discovery.mp3": {
+  "source": "\"GSF Discovery\" by vitalezzz, https://opengameart.org/content/gsf-discovery",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for the long deepest-hole short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
  }
 }

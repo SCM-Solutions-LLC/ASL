@@ -13,10 +13,10 @@ tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 mkdir -p public/music
 
-bed() { # name, source URL, the file to take out of it when the source is a zip, and where to start (s)
+bed() { # name, source URL, the file to take out of it when the source is a zip, where to start (s), length (s, default 45)
   curl -fsSL --max-time 180 --retry 6 --retry-delay 60 -A "henry-short-music/1.0" -o "$tmp/$1" "$2"
   if [ -n "${3:-}" ]; then unzip -p "$tmp/$1" "$3" > "$tmp/$1.member" && mv "$tmp/$1.member" "$tmp/$1"; fi
-  ffmpeg -v error -y -ss "${4:-0}" -i "$tmp/$1" -t 45 -af "loudnorm=I=-26:TP=-3:LRA=11" -ar 44100 -ac 2 \
+  ffmpeg -v error -y -ss "${4:-0}" -i "$tmp/$1" -t "${5:-45}" -af "loudnorm=I=-26:TP=-3:LRA=11" -ar 44100 -ac 2 \
     -map_metadata -1 -fflags +bitexact -flags:a +bitexact -c:a libmp3lame -b:a 128k "public/music/$1.mp3"
 }
 
@@ -28,3 +28,6 @@ bed egypt   "https://opengameart.org/sites/default/files/Desert_Mystic%20By%20Po
 # Wikimedia serves its MP3/Ogg renditions to scripts but refuses the original files.
 bed sun     "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c8/HOLST_%22The_Planets%2C_Op._32_7._Neptune%2C_the_Mystic%22_-_%22The_President%27s_Own%22_U.S._Marine_Band.opus/HOLST_%22The_Planets%2C_Op._32_7._Neptune%2C_the_Mystic%22_-_%22The_President%27s_Own%22_U.S._Marine_Band.opus.mp3" "" 40
 bed cells   "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Kimiko_Ishizaka_-_J.S._Bach-_-Open-_Goldberg_Variations%2C_BWV_988_%28Piano%29_-_02_Variatio_1_a_1_Clav.mp3/Kimiko_Ishizaka_-_J.S._Bach-_-Open-_Goldberg_Variations%2C_BWV_988_%28Piano%29_-_02_Variatio_1_a_1_Clav.mp3.ogg"
+# The long shorts run 90-100 s, so their beds are taken at 110 s and never loop.
+bed gravity-turn "https://opengameart.org/sites/default/files/gravity_turn_action_1.mp3" "" 0 110
+bed discovery    "https://opengameart.org/sites/default/files/discovery.mp3" "" 0 110

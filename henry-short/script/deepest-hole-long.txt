@@ -1,0 +1,124 @@
+The deepest hole humans have ever dug was finished with a bit narrower than a dinner plate.
+The Soviet Union started drilling it in May nineteen seventy, on the Kola Peninsula.
+At the top, the hole was seventy-two centimetres wide.
+It was drilled in steps, each narrower than the last, down to a bit just twenty-one centimetres across.
+By nineteen seventy-five, it was over seven kilometres deep.
+In nineteen seventy-nine, at almost nine point six kilometres, it beat the American record.
+By the end of nineteen eighty-three, it had reached twelve kilometres.
+Then, in nineteen eighty-four, the drill string broke, and they had to start again from seven kilometres down.
+In nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres.
+No hole has gone deeper since.
+The rock at the bottom was expected to be around a hundred and twenty degrees.
+At ten kilometres, it was already a hundred and eighty.
+At the bottom, it was over two hundred.
+Below seven kilometres, the walls kept caving in, and the hole went oval, with many caverns.
+Drilling stopped in nineteen ninety-two, when its funding was cut. The plan had been to go on to thirteen kilometres.
+And for all that, it never made it through the crust: it got about a third of the way.
+Twelve kilometres down. The centre of the Earth is over six thousand more.
+How deep do you think we'll ever dig, and what will stop us?
+
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+The longer cut of script/deepest-hole.txt, built from the same sources; nothing here was read
+afresh. Publish one of the two, not both (GUARDRAILS B1).
+
+Sources read (an independent fact-check, 18 Nov 2026):
+- Lobanov, Chicherov & Sharov, Arktika i Sever 44: 267-284 (2021),
+  doi:10.37482/issn2221-2698.2021.44.267. Russian Academy of Sciences authors;
+  full text. "Drilling was started on May 24, 1970"; "In 1990, the maximum depth
+  was reached - 12262 m"; a "214 mm drill bit"; "at a depth of 10 km reached
+  180°C, and at a depth of about 12 km ... 212°C, instead of the assumed
+  120°C"; "a drastic reduction in funding made it impossible to continue the
+  work. Drilling was stopped in 1992". Fig. 5 (actual well construction) and the
+  depth-against-year account behind lines 3-9.
+- Zhu & Huang, Communications Earth & Environment 7: 124 (2026),
+  doi:10.1038/s43247-026-03246-z: "reaching 12,262 m between 1970 and 1989";
+  "temperatures reached 180 °C at 10 km and 212 °C at 12 km"; "Drilling was
+  abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C
+  induced plastic rock flow that repeatedly sealed the hole."
+- Clarke et al., "The Kola Superdeep Drill Hole by Ye. A. Kozlovskiy (1984): A
+  detailed summary", USGS Open-File Report 86-517 (1986), summarising
+  Kozlovskiy, Kol'skaya sverkhglubokaya (Moscow: Nedra, 1984): "Crustal
+  thickness in the vicinity of the corehole was shown to be about 40 km".
+- NASA NSSDC Earth Fact Sheet: volumetric mean radius 6,371 km; core radius
+  3,485 km.
+
+1. "The deepest hole humans have ever dug was finished with a bit narrower than a dinner plate."
+   As script/deepest-hole.txt items 1-2: Kola Superdeep Borehole SG-3, 12,262 m, "which has not
+   been surpassed so far" (Lobanov 2021); finished with a 214 mm bit (Lobanov), against a dinner
+   plate 25.6 cm across (Met 51.86.100). "Deepest" (vertical depth), never "longest".
+
+2. "The Soviet Union started drilling it in May nineteen seventy, on the Kola Peninsula."
+   "Drilling was started on May 24, 1970" (Lobanov); Kola Peninsula, USSR (Lobanov).
+
+3. "At the top, the hole was seventy-two centimetres wide."
+   Lobanov Fig. 5: 720 mm to 40 m.
+
+4. "It was drilled in steps, each narrower than the last, down to a bit just twenty-one centimetres across."
+   Lobanov Fig. 5: 720 mm to 40 m; cased at 325 mm to 2,000 m; cased at 245 mm to 8,770 m; open
+   hole 215.9 mm to 12,262 m, drilled with a 214 mm bit (21.4 cm, said as twenty-one). Lobanov
+   also has the bore going oval below 7 km with "many caverns", so the steps are the design, not
+   a measured width at every depth; the screen draws the design and says so.
+
+5. "By nineteen seventy-five, it was over seven kilometres deep."
+   7,263 m in May 1975 (Lobanov).
+
+6. "In nineteen seventy-nine, at almost nine point six kilometres, it beat the American record."
+   "In June 1979, the well broke the record of 9583 meters held by the US well, reaching a depth
+   of 9584 meters" (Lobanov). Said as "almost nine point six": the record was beaten by one metre,
+   so "nine and a half" (an earlier draft) was a depth at which it had not yet been beaten.
+
+7. "By the end of nineteen eighty-three, it had reached twelve kilometres."
+   12,000 m on 27 December 1983 (Lobanov).
+
+8. "Then, in nineteen eighty-four, the drill string broke, and they had to start again from seven kilometres down."
+   12,066 m before the drill string broke on 27 September 1984, which sent drilling back to 7 km;
+   the record branch was sidetracked at 7,010 m (Lobanov). The chart puts the break at 1984.74.
+
+9. "In nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres."
+   "In 1990, the maximum depth was reached — 12262 m" (Lobanov; Fig. 5b labels the branch end
+   1990). Zhu & Huang give 1989, but cite Lobanov for it, so 1990 is used. Lobanov gives no month,
+   and "it took 6 years to reach 12 km depth again" after the September 1984 break points late in
+   the year, so the chart draws the arrival at the end of 1990 (1991.0). "As of 05/01/1991
+   [01.05.1991, 1 May 1991], the well depth was 12262 m" (Lobanov): the chart holds 12,262 m to
+   1991.33.
+
+10. "No hole has gone deeper since."
+   "Which has not been surpassed so far" (Lobanov 2021); Zhu & Huang (2026) still treat it as the
+   deepest.
+
+11. "The rock at the bottom was expected to be around a hundred and twenty degrees."
+   "Instead of the assumed 120°C" (Lobanov). Celsius; the screen says so, the voice does not.
+
+12. "At ten kilometres, it was already a hundred and eighty."
+   180 °C at 10 km (Lobanov; Zhu & Huang).
+
+13. "At the bottom, it was over two hundred."
+   212 °C at about 12 km (Lobanov; Zhu & Huang).
+
+14. "Below seven kilometres, the walls kept caving in, and the hole went oval, with many caverns."
+   Lobanov: below 7 km the bore went elliptical, with "many caverns" and the walls collapsing, so
+   the hole grew wider rather than narrower. The card draws this in section, not to scale. It
+   replaces an earlier line that Zhu & Huang (2026) blame heat for, "plastic rock flow that
+   repeatedly sealed the hole": that sentence cites nothing, the paper it cites next to it (Lobanov)
+   gives funding as the reason and describes the hole widening, so the claim was cut (A3).
+
+15. "Drilling stopped in nineteen ninety-two, when its funding was cut. The plan had been to go on to thirteen kilometres."
+   "A drastic reduction in funding made it impossible to continue the work. Drilling was stopped
+   in 1992" (Lobanov); a casing run in 1992 was meant to carry drilling on to 13 km (Lobanov).
+
+16. "And for all that, it never made it through the crust: it got about a third of the way."
+   Crust about 40 km thick at the site (Kozlovskiy, USGS OFR 86-517): 12.262 / 40 = 31%.
+
+17. "Twelve kilometres down. The centre of the Earth is over six thousand more."
+   Mean radius 6,371 km (NSSDC); 6,371 - 12.262 = 6,359 km to go: "over six thousand more".
+
+18. Imperial figures, on screen only (not spoken), converted from the metric figures above
+   (1 in = 2.54 cm, 1 ft = 0.3048 m, 1 mi = 1.609344 km, °F = °C × 9/5 + 32):
+   21 cm = 8.3 in, shown "8 IN"; 72 cm = 28.3 in, "28 IN"; over 7 km = over 4.35 mi,
+   "OVER 4.3 MI"; 12 km = 7.46 mi, "7.5 MI"; 7 km = 4.35 mi, "4.3 MI"; 12,262 m = 40,230 ft,
+   "40,230 FT"; 120 °C = 248 °F; 180 °C = 356 °F and 10 km = 6.2 mi, "356 °F AT 6.2 MI";
+   212 °C = 413.6 °F, "414 °F"; 13 km = 8.08 mi, "8.1 MI"; over 6,000 km = over 3,728 mi,
+   "3,700+ MI". The chart carries a second depth scale in miles (2, 4, 6, 8 MI) and the
+   thermometer a °F scale (32, 122, 212, 302, 392 °F) against its °C marks.
