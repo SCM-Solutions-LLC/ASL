@@ -6,7 +6,7 @@ By nineteen seventy-five, it was over seven kilometres deep.
 In nineteen seventy-nine, at almost nine point six kilometres, it beat the American record.
 By the end of nineteen eighty-three, it had reached twelve kilometres.
 Then, in nineteen eighty-four, the drill string broke, and they had to start again from seven kilometres down.
-By nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres.
+In nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres.
 No hole has gone deeper since.
 The rock at the bottom was expected to be around a hundred and twenty degrees.
 At ten kilometres, it was already a hundred and eighty.
@@ -75,8 +75,13 @@ Sources read (an independent fact-check, 18 Nov 2026):
    12,066 m before the drill string broke on 27 September 1984, which sent drilling back to 7 km;
    the record branch was sidetracked at 7,010 m (Lobanov). The chart puts the break at 1984.74.
 
-9. "By nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres."
-   12,262 m: 1990 in Lobanov, 1989 in Zhu & Huang. "By 1990" is true on either reading.
+9. "In nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres."
+   "In 1990, the maximum depth was reached — 12262 m" (Lobanov; Fig. 5b labels the branch end
+   1990). Zhu & Huang give 1989, but cite Lobanov for it, so 1990 is used. Lobanov gives no month,
+   and "it took 6 years to reach 12 km depth again" after the September 1984 break points late in
+   the year, so the chart draws the arrival at the end of 1990 (1991.0). "As of 05/01/1991
+   [01.05.1991, 1 May 1991], the well depth was 12262 m" (Lobanov): the chart holds 12,262 m to
+   1991.33.
 
 10. "No hole has gone deeper since."
    "Which has not been surpassed so far" (Lobanov 2021); Zhu & Huang (2026) still treat it as the

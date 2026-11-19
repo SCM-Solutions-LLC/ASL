@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/deepest-hole-long.txt",
  "audio": "public/vo/deepest-hole-long.wav",
- "sha256": "174623361fca1c39623ad2e9671c5f1ab23c5a37b197d71c4a19b99e012e9f5b",
+ "sha256": "580cf1e7f270715852fc20fd8df12baa0111d59fdd26e93cf555c04d38465620",
  "words": [
   {
    "text": "The",
@@ -555,7 +555,7 @@
    "end": 43.04
   },
   {
-   "text": "By",
+   "text": "In",
    "start": 43.755,
    "end": 44.026
   },
