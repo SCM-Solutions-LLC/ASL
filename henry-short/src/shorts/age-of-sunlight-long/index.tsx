@@ -75,7 +75,7 @@ const TONNES_PER_S = 4.26e6; // NASA Sun fact sheet, mass conversion rate
 const EXIT_S = 2.32; // the Sun's radius / c
 const PER_DAY = 144; // Borexino pp rate, counts per day per 100 t
 const PREDICTED = 131; // the rate the SSM predicts, counts per day per 100 t
-const PER_DAY_ERR = 13;
+const PER_DAY_ERR = 16; // 13 stat, 10 syst, in quadrature
 const CORE = 0.25; // fractions of the Sun's radius (NASA MSFC)
 const RADIATIVE = 0.7;
 
@@ -471,7 +471,7 @@ const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
           })}
         </>
       )}
-      <Tick x={540} y={930} text="4 H  →  1 He  +  2 ν" size={52} />
+      <Tick x={540} y={930} text="4 H → 1 He + 2 e⁺ + 2 ν" size={52} />
     </Marks>
   );
 };
@@ -586,7 +586,9 @@ const Detector: React.FC<{ tally?: [number, number] }> = ({ tally }) => {
             />
           );
         })}
-        {tally && <Tick x={540} y={990} text={`${n} IN ONE DAY`} size={40} />}
+        {tally && (
+          <Tick x={540} y={990} text={`${PER_DAY} A DAY (AVERAGE)`} size={40} />
+        )}
       </Marks>
       <NotToScale y={1060} text="SCHEMATIC" />
     </>
@@ -749,7 +751,7 @@ const Deck: React.FC = () => (
       from={cut(4)}
       to={cut(5)}
       word="4 MILLION+ TONNES"
-      sub="A SECOND · 4.6 MILLION+ US TONS"
+      sub="A SECOND · 4.7 MILLION US TONS"
       at={at(4, "four")}
       sheet={NIGHT}
       tilt={1.5}

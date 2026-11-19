@@ -2,1267 +2,1272 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/age-of-sunlight-long.txt",
  "audio": "public/vo/age-of-sunlight-long.wav",
- "sha256": "1d3373401ef53d36d0787c79a979cb6b42bb97a091f5f51349b9ffaa9d878e84",
+ "sha256": "5875bd8b4c79d308ca654e2a4eba5935c66e2c05b75f360540d3489c01a29ec9",
  "words": [
   {
    "text": "Right",
    "start": 0.0,
-   "end": 0.281
+   "end": 0.268
   },
   {
    "text": "now,",
-   "start": 0.281,
-   "end": 0.517
+   "start": 0.268,
+   "end": 0.493
   },
   {
    "text": "two",
-   "start": 0.517,
-   "end": 0.753
+   "start": 0.493,
+   "end": 0.718
   },
   {
    "text": "things",
-   "start": 0.753,
-   "end": 1.057
+   "start": 0.718,
+   "end": 1.008
   },
   {
    "text": "from",
-   "start": 1.057,
-   "end": 1.315
+   "start": 1.008,
+   "end": 1.255
   },
   {
    "text": "the",
-   "start": 1.315,
-   "end": 1.551
+   "start": 1.255,
+   "end": 1.48
   },
   {
    "text": "Sun's",
-   "start": 1.551,
-   "end": 1.833
+   "start": 1.48,
+   "end": 1.748
   },
   {
    "text": "core",
-   "start": 1.833,
-   "end": 2.091
+   "start": 1.748,
+   "end": 1.994
   },
   {
    "text": "are",
-   "start": 2.091,
-   "end": 2.327
+   "start": 1.994,
+   "end": 2.219
   },
   {
    "text": "reaching",
-   "start": 2.327,
-   "end": 2.677
+   "start": 2.219,
+   "end": 2.553
   },
   {
-   "text": "you.",
-   "start": 2.677,
-   "end": 2.912
+   "text": "the",
+   "start": 2.553,
+   "end": 2.778
+  },
+  {
+   "text": "Earth.",
+   "start": 2.778,
+   "end": 3.046
   },
   {
    "text": "One",
-   "start": 3.585,
-   "end": 3.832
+   "start": 3.835,
+   "end": 4.082
   },
   {
    "text": "left",
-   "start": 3.832,
-   "end": 4.102
+   "start": 4.082,
+   "end": 4.352
   },
   {
    "text": "the",
-   "start": 4.102,
-   "end": 4.349
+   "start": 4.352,
+   "end": 4.599
   },
   {
    "text": "core",
-   "start": 4.349,
-   "end": 4.62
+   "start": 4.599,
+   "end": 4.87
   },
   {
    "text": "about",
-   "start": 4.62,
-   "end": 4.914
+   "start": 4.87,
+   "end": 5.165
   },
   {
    "text": "eight",
-   "start": 4.914,
-   "end": 5.209
+   "start": 5.165,
+   "end": 5.459
   },
   {
    "text": "minutes",
-   "start": 5.209,
-   "end": 5.551
+   "start": 5.459,
+   "end": 5.801
   },
   {
    "text": "ago.",
-   "start": 5.551,
-   "end": 5.798
+   "start": 5.801,
+   "end": 6.048
   },
   {
    "text": "The",
-   "start": 6.47,
-   "end": 6.729
+   "start": 6.72,
+   "end": 6.979
   },
   {
    "text": "other",
-   "start": 6.729,
-   "end": 7.038
+   "start": 6.979,
+   "end": 7.288
   },
   {
    "text": "left",
-   "start": 7.038,
-   "end": 7.321
+   "start": 7.288,
+   "end": 7.571
   },
   {
    "text": "it",
-   "start": 7.321,
-   "end": 7.555
+   "start": 7.571,
+   "end": 7.805
   },
   {
    "text": "tens",
-   "start": 7.555,
-   "end": 7.839
+   "start": 7.805,
+   "end": 8.089
   },
   {
    "text": "of",
-   "start": 7.839,
-   "end": 8.073
+   "start": 8.089,
+   "end": 8.322
   },
   {
    "text": "thousands",
-   "start": 8.073,
-   "end": 8.482
+   "start": 8.322,
+   "end": 8.731
   },
   {
    "text": "of",
-   "start": 8.482,
-   "end": 8.716
+   "start": 8.731,
+   "end": 8.965
   },
   {
    "text": "years",
-   "start": 8.716,
-   "end": 9.024
+   "start": 8.965,
+   "end": 9.274
   },
   {
    "text": "ago,",
-   "start": 9.024,
-   "end": 9.283
+   "start": 9.274,
+   "end": 9.533
   },
   {
    "text": "maybe",
-   "start": 9.283,
-   "end": 9.592
+   "start": 9.533,
+   "end": 9.841
   },
   {
    "text": "far",
-   "start": 9.592,
-   "end": 9.851
+   "start": 9.841,
+   "end": 10.1
   },
   {
    "text": "more.",
-   "start": 9.851,
-   "end": 10.135
+   "start": 10.1,
+   "end": 10.384
   },
   {
    "text": "Both",
-   "start": 10.83,
-   "end": 11.173
+   "start": 11.08,
+   "end": 11.425
   },
   {
    "text": "start",
-   "start": 11.173,
-   "end": 11.545
+   "start": 11.425,
+   "end": 11.801
   },
   {
    "text": "where",
-   "start": 11.545,
-   "end": 11.918
+   "start": 11.801,
+   "end": 12.177
   },
   {
    "text": "hydrogen",
-   "start": 11.918,
-   "end": 12.382
+   "start": 12.177,
+   "end": 12.644
   },
   {
    "text": "fuses",
-   "start": 12.382,
-   "end": 12.754
+   "start": 12.644,
+   "end": 13.019
   },
   {
    "text": "into",
-   "start": 12.754,
-   "end": 13.097
+   "start": 13.019,
+   "end": 13.364
   },
   {
    "text": "helium.",
-   "start": 13.097,
-   "end": 13.5
+   "start": 13.364,
+   "end": 13.771
   },
   {
    "text": "Every",
-   "start": 14.215,
-   "end": 14.568
+   "start": 14.465,
+   "end": 14.815
   },
   {
    "text": "second,",
-   "start": 14.568,
-   "end": 14.949
+   "start": 14.815,
+   "end": 15.193
   },
   {
    "text": "the",
-   "start": 14.949,
-   "end": 15.244
+   "start": 15.193,
+   "end": 15.487
   },
   {
    "text": "Sun",
-   "start": 15.244,
-   "end": 15.54
+   "start": 15.487,
+   "end": 15.78
   },
   {
    "text": "turns",
-   "start": 15.54,
-   "end": 15.893
+   "start": 15.78,
+   "end": 16.13
   },
   {
    "text": "over",
-   "start": 15.893,
-   "end": 16.217
+   "start": 16.13,
+   "end": 16.452
   },
   {
    "text": "four",
-   "start": 16.217,
-   "end": 16.541
+   "start": 16.452,
+   "end": 16.773
   },
   {
    "text": "million",
-   "start": 16.541,
-   "end": 16.951
+   "start": 16.773,
+   "end": 17.18
   },
   {
    "text": "tonnes",
-   "start": 16.951,
-   "end": 17.332
+   "start": 17.18,
+   "end": 17.559
   },
   {
    "text": "of",
-   "start": 17.332,
-   "end": 17.599
+   "start": 17.559,
+   "end": 17.824
   },
   {
    "text": "its",
-   "start": 17.599,
-   "end": 17.895
+   "start": 17.824,
+   "end": 18.117
   },
   {
    "text": "mass",
-   "start": 17.895,
-   "end": 18.219
+   "start": 18.117,
+   "end": 18.439
   },
   {
    "text": "into",
-   "start": 18.219,
-   "end": 18.543
+   "start": 18.439,
+   "end": 18.76
   },
   {
    "text": "energy.",
-   "start": 18.543,
-   "end": 18.924
+   "start": 18.76,
+   "end": 19.139
   },
   {
    "text": "And",
-   "start": 19.625,
-   "end": 19.96
+   "start": 19.875,
+   "end": 20.21
   },
   {
    "text": "every",
-   "start": 19.96,
-   "end": 20.36
+   "start": 20.21,
+   "end": 20.61
   },
   {
    "text": "time",
-   "start": 20.36,
-   "end": 20.728
+   "start": 20.61,
+   "end": 20.978
   },
   {
    "text": "four",
-   "start": 20.728,
-   "end": 21.095
+   "start": 20.978,
+   "end": 21.345
   },
   {
    "text": "hydrogen",
-   "start": 21.095,
-   "end": 21.593
+   "start": 21.345,
+   "end": 21.842
   },
   {
    "text": "nuclei",
-   "start": 21.593,
-   "end": 22.025
+   "start": 21.842,
+   "end": 22.275
   },
   {
    "text": "become",
-   "start": 22.025,
-   "end": 22.457
+   "start": 22.275,
+   "end": 22.707
   },
   {
    "text": "one",
-   "start": 22.457,
-   "end": 22.792
+   "start": 22.707,
+   "end": 23.042
   },
   {
    "text": "helium",
-   "start": 22.792,
-   "end": 23.225
+   "start": 23.042,
+   "end": 23.475
   },
   {
    "text": "nucleus,",
-   "start": 23.225,
-   "end": 23.69
+   "start": 23.475,
+   "end": 23.94
   },
   {
    "text": "two",
-   "start": 23.69,
-   "end": 24.025
+   "start": 23.94,
+   "end": 24.275
   },
   {
    "text": "neutrinos",
-   "start": 24.025,
-   "end": 24.554
+   "start": 24.275,
+   "end": 24.804
   },
   {
    "text": "are",
-   "start": 24.554,
-   "end": 24.89
+   "start": 24.804,
+   "end": 25.14
   },
   {
    "text": "made.",
-   "start": 24.89,
-   "end": 25.257
+   "start": 25.14,
+   "end": 25.507
   },
   {
    "text": "Neutrinos",
-   "start": 25.91,
-   "end": 26.467
+   "start": 26.16,
+   "end": 26.717
   },
   {
    "text": "barely",
-   "start": 26.467,
-   "end": 26.922
+   "start": 26.717,
+   "end": 27.172
   },
   {
    "text": "interact",
-   "start": 26.922,
-   "end": 27.445
+   "start": 27.172,
+   "end": 27.695
   },
   {
    "text": "with",
-   "start": 27.445,
-   "end": 27.831
+   "start": 27.695,
+   "end": 28.081
   },
   {
    "text": "anything.",
-   "start": 27.831,
-   "end": 28.354
+   "start": 28.081,
+   "end": 28.604
   },
   {
    "text": "They",
-   "start": 29.045,
-   "end": 29.294
+   "start": 29.295,
+   "end": 29.544
   },
   {
    "text": "fly",
-   "start": 29.294,
-   "end": 29.522
+   "start": 29.544,
+   "end": 29.772
   },
   {
    "text": "straight",
-   "start": 29.522,
-   "end": 29.859
+   "start": 29.772,
+   "end": 30.109
   },
   {
    "text": "out",
-   "start": 29.859,
-   "end": 30.087
+   "start": 30.109,
+   "end": 30.337
   },
   {
    "text": "of",
-   "start": 30.087,
-   "end": 30.292
+   "start": 30.337,
+   "end": 30.542
   },
   {
    "text": "the",
-   "start": 30.292,
-   "end": 30.52
+   "start": 30.542,
+   "end": 30.77
   },
   {
    "text": "Sun",
-   "start": 30.52,
-   "end": 30.747
+   "start": 30.77,
+   "end": 30.997
   },
   {
    "text": "in",
-   "start": 30.747,
-   "end": 30.953
+   "start": 30.997,
+   "end": 31.203
   },
   {
    "text": "about",
-   "start": 30.953,
-   "end": 31.224
+   "start": 31.203,
+   "end": 31.474
   },
   {
    "text": "two",
-   "start": 31.224,
-   "end": 31.451
+   "start": 31.474,
+   "end": 31.701
   },
   {
    "text": "seconds.",
-   "start": 31.451,
-   "end": 31.767
+   "start": 31.701,
+   "end": 32.017
   },
   {
    "text": "Eight",
-   "start": 32.405,
-   "end": 32.682
+   "start": 32.655,
+   "end": 32.932
   },
   {
    "text": "minutes",
-   "start": 32.682,
-   "end": 33.004
+   "start": 32.932,
+   "end": 33.254
   },
   {
    "text": "later,",
-   "start": 33.004,
-   "end": 33.281
+   "start": 33.254,
+   "end": 33.531
   },
   {
    "text": "they",
-   "start": 33.281,
-   "end": 33.536
+   "start": 33.531,
+   "end": 33.786
   },
   {
    "text": "reach",
-   "start": 33.536,
-   "end": 33.813
+   "start": 33.786,
+   "end": 34.063
   },
   {
    "text": "the",
-   "start": 33.813,
-   "end": 34.045
+   "start": 34.063,
+   "end": 34.295
   },
   {
    "text": "Earth,",
-   "start": 34.045,
-   "end": 34.323
+   "start": 34.295,
+   "end": 34.573
   },
   {
    "text": "and",
-   "start": 34.323,
-   "end": 34.555
+   "start": 34.573,
+   "end": 34.805
   },
   {
    "text": "pass",
-   "start": 34.555,
-   "end": 34.81
+   "start": 34.805,
+   "end": 35.06
   },
   {
    "text": "through",
-   "start": 34.81,
-   "end": 35.132
+   "start": 35.06,
+   "end": 35.382
   },
   {
    "text": "you.",
-   "start": 35.132,
-   "end": 35.364
+   "start": 35.382,
+   "end": 35.614
   },
   {
    "text": "Tens",
-   "start": 36.04,
-   "end": 36.365
+   "start": 36.29,
+   "end": 36.615
   },
   {
    "text": "of",
-   "start": 36.365,
-   "end": 36.633
+   "start": 36.615,
+   "end": 36.883
   },
   {
    "text": "billions",
-   "start": 36.633,
-   "end": 37.072
+   "start": 36.883,
+   "end": 37.322
   },
   {
    "text": "of",
-   "start": 37.072,
-   "end": 37.34
+   "start": 37.322,
+   "end": 37.59
   },
   {
    "text": "them",
-   "start": 37.34,
-   "end": 37.665
+   "start": 37.59,
+   "end": 37.915
   },
   {
    "text": "cross",
-   "start": 37.665,
-   "end": 38.019
+   "start": 37.915,
+   "end": 38.269
   },
   {
    "text": "every",
-   "start": 38.019,
-   "end": 38.372
+   "start": 38.269,
+   "end": 38.622
   },
   {
    "text": "square",
-   "start": 38.372,
-   "end": 38.755
+   "start": 38.622,
+   "end": 39.005
   },
   {
    "text": "centimetre",
-   "start": 38.755,
-   "end": 39.249
+   "start": 39.005,
+   "end": 39.499
   },
   {
    "text": "of",
-   "start": 39.249,
-   "end": 39.516
+   "start": 39.499,
+   "end": 39.766
   },
   {
    "text": "you,",
-   "start": 39.516,
-   "end": 39.813
+   "start": 39.766,
+   "end": 40.063
   },
   {
    "text": "every",
-   "start": 39.813,
-   "end": 40.166
+   "start": 40.063,
+   "end": 40.416
   },
   {
    "text": "second.",
-   "start": 40.166,
-   "end": 40.549
+   "start": 40.416,
+   "end": 40.799
   },
   {
    "text": "In",
-   "start": 41.2,
-   "end": 41.495
+   "start": 41.45,
+   "end": 41.745
   },
   {
    "text": "Italy,",
-   "start": 41.495,
-   "end": 41.886
+   "start": 41.745,
+   "end": 42.136
   },
   {
    "text": "a",
-   "start": 41.886,
-   "end": 42.149
+   "start": 42.136,
+   "end": 42.399
   },
   {
    "text": "detector",
-   "start": 42.149,
-   "end": 42.635
+   "start": 42.399,
+   "end": 42.885
   },
   {
    "text": "called",
-   "start": 42.635,
-   "end": 43.056
+   "start": 42.885,
+   "end": 43.306
   },
   {
    "text": "Borexino",
-   "start": 43.056,
-   "end": 43.542
+   "start": 43.306,
+   "end": 43.792
   },
   {
    "text": "counted",
-   "start": 43.542,
-   "end": 43.995
+   "start": 43.792,
+   "end": 44.245
   },
   {
    "text": "the",
-   "start": 43.995,
-   "end": 44.322
+   "start": 44.245,
+   "end": 44.572
   },
   {
    "text": "ones",
-   "start": 44.322,
-   "end": 44.681
+   "start": 44.572,
+   "end": 44.931
   },
   {
    "text": "from",
-   "start": 44.681,
-   "end": 45.039
+   "start": 44.931,
+   "end": 45.289
   },
   {
    "text": "fusion's",
-   "start": 45.039,
-   "end": 45.524
+   "start": 45.289,
+   "end": 45.774
   },
   {
    "text": "very",
-   "start": 45.524,
-   "end": 45.883
+   "start": 45.774,
+   "end": 46.133
   },
   {
    "text": "first",
-   "start": 45.883,
-   "end": 46.273
+   "start": 46.133,
+   "end": 46.523
   },
   {
    "text": "step.",
-   "start": 46.273,
-   "end": 46.632
+   "start": 46.523,
+   "end": 46.882
   },
   {
    "text": "In",
-   "start": 47.26,
-   "end": 47.491
+   "start": 47.51,
+   "end": 47.739
   },
   {
    "text": "every",
-   "start": 47.491,
-   "end": 47.796
+   "start": 47.739,
+   "end": 48.041
   },
   {
    "text": "hundred",
-   "start": 47.796,
-   "end": 48.15
+   "start": 48.041,
+   "end": 48.392
   },
   {
    "text": "tonnes",
-   "start": 48.15,
-   "end": 48.48
+   "start": 48.392,
+   "end": 48.719
   },
   {
    "text": "of",
-   "start": 48.48,
-   "end": 48.711
+   "start": 48.719,
+   "end": 48.947
   },
   {
    "text": "its",
-   "start": 48.711,
-   "end": 48.966
+   "start": 48.947,
+   "end": 49.201
   },
   {
    "text": "liquid,",
-   "start": 48.966,
-   "end": 49.296
-  },
-  {
-   "text": "it",
-   "start": 49.296,
+   "start": 49.201,
    "end": 49.527
   },
   {
-   "text": "caught",
+   "text": "it",
    "start": 49.527,
-   "end": 49.856
+   "end": 49.756
+  },
+  {
+   "text": "caught",
+   "start": 49.756,
+   "end": 50.083
   },
   {
    "text": "about",
-   "start": 49.856,
-   "end": 50.161
+   "start": 50.083,
+   "end": 50.385
   },
   {
    "text": "a",
-   "start": 50.161,
-   "end": 50.367
+   "start": 50.385,
+   "end": 50.589
   },
   {
    "text": "hundred",
-   "start": 50.367,
-   "end": 50.722
+   "start": 50.589,
+   "end": 50.94
   },
   {
    "text": "and",
-   "start": 50.722,
-   "end": 50.977
+   "start": 50.94,
+   "end": 51.193
   },
   {
    "text": "forty",
-   "start": 50.977,
-   "end": 51.282
+   "start": 51.193,
+   "end": 51.495
   },
   {
    "text": "a",
-   "start": 51.282,
-   "end": 51.488
+   "start": 51.495,
+   "end": 51.7
   },
   {
    "text": "day.",
-   "start": 51.488,
-   "end": 51.744
+   "start": 51.7,
+   "end": 51.953
   },
   {
    "text": "The",
-   "start": 52.445,
-   "end": 52.724
+   "start": 52.695,
+   "end": 52.973
   },
   {
    "text": "energy",
-   "start": 52.724,
-   "end": 53.083
+   "start": 52.973,
+   "end": 53.333
   },
   {
    "text": "takes",
-   "start": 53.083,
-   "end": 53.415
+   "start": 53.333,
+   "end": 53.665
   },
   {
    "text": "the",
-   "start": 53.415,
-   "end": 53.694
+   "start": 53.665,
+   "end": 53.944
   },
   {
    "text": "slow",
-   "start": 53.694,
-   "end": 53.999
+   "start": 53.944,
+   "end": 54.249
   },
   {
    "text": "road.",
-   "start": 53.999,
-   "end": 54.305
+   "start": 54.249,
+   "end": 54.554
   },
   {
    "text": "It",
-   "start": 54.98,
-   "end": 55.244
+   "start": 55.23,
+   "end": 55.494
   },
   {
    "text": "is",
-   "start": 55.244,
-   "end": 55.508
+   "start": 55.494,
+   "end": 55.758
   },
   {
    "text": "absorbed",
-   "start": 55.508,
-   "end": 55.942
+   "start": 55.758,
+   "end": 56.192
   },
   {
    "text": "and",
-   "start": 55.942,
-   "end": 56.234
+   "start": 56.192,
+   "end": 56.485
   },
   {
    "text": "given",
-   "start": 56.234,
-   "end": 56.583
+   "start": 56.485,
+   "end": 56.833
   },
   {
    "text": "off",
-   "start": 56.583,
-   "end": 56.875
+   "start": 56.833,
+   "end": 57.126
   },
   {
    "text": "again,",
-   "start": 56.875,
-   "end": 57.224
+   "start": 57.126,
+   "end": 57.475
   },
   {
    "text": "over",
-   "start": 57.224,
-   "end": 57.545
+   "start": 57.475,
+   "end": 57.796
   },
   {
    "text": "and",
-   "start": 57.545,
-   "end": 57.837
+   "start": 57.796,
+   "end": 58.088
   },
   {
    "text": "over,",
-   "start": 57.837,
-   "end": 58.158
+   "start": 58.088,
+   "end": 58.409
   },
   {
    "text": "then",
-   "start": 58.158,
-   "end": 58.479
+   "start": 58.409,
+   "end": 58.729
   },
   {
    "text": "carried",
-   "start": 58.479,
-   "end": 58.884
+   "start": 58.729,
+   "end": 59.135
   },
   {
    "text": "up",
-   "start": 58.884,
-   "end": 59.148
+   "start": 59.135,
+   "end": 59.399
   },
   {
    "text": "by",
-   "start": 59.148,
-   "end": 59.412
+   "start": 59.399,
+   "end": 59.663
   },
   {
    "text": "churning",
-   "start": 59.412,
-   "end": 59.846
+   "start": 59.663,
+   "end": 60.097
   },
   {
    "text": "gas.",
-   "start": 59.846,
-   "end": 60.138
+   "start": 60.097,
+   "end": 60.389
   },
   {
    "text": "Tens",
-   "start": 60.74,
-   "end": 61.057
+   "start": 60.99,
+   "end": 61.307
   },
   {
    "text": "of",
-   "start": 61.057,
-   "end": 61.317
+   "start": 61.307,
+   "end": 61.567
   },
   {
    "text": "thousands",
-   "start": 61.317,
-   "end": 61.773
+   "start": 61.567,
+   "end": 62.023
   },
   {
    "text": "of",
-   "start": 61.773,
-   "end": 62.034
+   "start": 62.023,
+   "end": 62.284
   },
   {
    "text": "years",
-   "start": 62.034,
-   "end": 62.379
+   "start": 62.284,
+   "end": 62.629
   },
   {
    "text": "later,",
-   "start": 62.379,
-   "end": 62.723
+   "start": 62.629,
+   "end": 62.973
   },
   {
    "text": "maybe",
-   "start": 62.723,
-   "end": 63.067
+   "start": 62.973,
+   "end": 63.317
   },
   {
    "text": "far",
-   "start": 63.067,
-   "end": 63.356
+   "start": 63.317,
+   "end": 63.606
   },
   {
    "text": "more,",
-   "start": 63.356,
-   "end": 63.673
+   "start": 63.606,
+   "end": 63.923
   },
   {
    "text": "it",
-   "start": 63.673,
-   "end": 63.933
+   "start": 63.923,
+   "end": 64.183
   },
   {
    "text": "leaves",
-   "start": 63.933,
-   "end": 64.306
+   "start": 64.183,
+   "end": 64.556
   },
   {
    "text": "the",
-   "start": 64.306,
-   "end": 64.594
+   "start": 64.556,
+   "end": 64.844
   },
   {
    "text": "surface",
-   "start": 64.594,
-   "end": 64.995
+   "start": 64.844,
+   "end": 65.245
   },
   {
    "text": "as",
-   "start": 64.995,
-   "end": 65.255
+   "start": 65.245,
+   "end": 65.505
   },
   {
    "text": "sunlight.",
-   "start": 65.255,
-   "end": 65.684
+   "start": 65.505,
+   "end": 65.934
   },
   {
    "text": "Eight",
-   "start": 66.4,
-   "end": 66.715
+   "start": 66.65,
+   "end": 66.965
   },
   {
    "text": "minutes",
-   "start": 66.715,
-   "end": 67.081
+   "start": 66.965,
+   "end": 67.331
   },
   {
    "text": "after",
-   "start": 67.081,
-   "end": 67.396
+   "start": 67.331,
+   "end": 67.646
   },
   {
    "text": "that,",
-   "start": 67.396,
-   "end": 67.685
+   "start": 67.646,
+   "end": 67.935
   },
   {
    "text": "it",
-   "start": 67.685,
-   "end": 67.923
+   "start": 67.935,
+   "end": 68.173
   },
   {
    "text": "lands",
-   "start": 67.923,
-   "end": 68.238
+   "start": 68.173,
+   "end": 68.488
   },
   {
    "text": "on",
-   "start": 68.238,
-   "end": 68.476
+   "start": 68.488,
+   "end": 68.726
   },
   {
    "text": "your",
-   "start": 68.476,
-   "end": 68.766
+   "start": 68.726,
+   "end": 69.016
   },
   {
    "text": "skin.",
-   "start": 68.766,
-   "end": 69.055
+   "start": 69.016,
+   "end": 69.305
   },
   {
    "text": "So",
-   "start": 69.71,
-   "end": 69.936
+   "start": 69.96,
+   "end": 70.186
   },
   {
    "text": "the",
-   "start": 69.936,
-   "end": 70.185
+   "start": 70.186,
+   "end": 70.435
   },
   {
    "text": "sunlight",
-   "start": 70.185,
-   "end": 70.556
+   "start": 70.435,
+   "end": 70.806
   },
   {
    "text": "shows",
-   "start": 70.556,
-   "end": 70.854
+   "start": 70.806,
+   "end": 71.104
   },
   {
    "text": "what",
-   "start": 70.854,
-   "end": 71.128
-  },
-  {
-   "text": "the",
-   "start": 71.128,
+   "start": 71.104,
    "end": 71.378
   },
   {
-   "text": "core",
+   "text": "the",
    "start": 71.378,
-   "end": 71.652
+   "end": 71.628
+  },
+  {
+   "text": "core",
+   "start": 71.628,
+   "end": 71.902
   },
   {
    "text": "was",
-   "start": 71.652,
-   "end": 71.901
+   "start": 71.902,
+   "end": 72.151
   },
   {
    "text": "doing",
-   "start": 71.901,
-   "end": 72.199
+   "start": 72.151,
+   "end": 72.449
   },
   {
    "text": "when",
-   "start": 72.199,
-   "end": 72.473
+   "start": 72.449,
+   "end": 72.723
   },
   {
    "text": "that",
-   "start": 72.473,
-   "end": 72.747
+   "start": 72.723,
+   "end": 72.997
   },
   {
    "text": "energy",
-   "start": 72.747,
-   "end": 73.07
+   "start": 72.997,
+   "end": 73.32
   },
   {
    "text": "set",
-   "start": 73.07,
-   "end": 73.319
-  },
-  {
-   "text": "out.",
-   "start": 73.319,
+   "start": 73.32,
    "end": 73.569
   },
   {
+   "text": "out.",
+   "start": 73.569,
+   "end": 73.819
+  },
+  {
    "text": "The",
-   "start": 74.245,
-   "end": 74.512
+   "start": 74.495,
+   "end": 74.762
   },
   {
    "text": "neutrinos",
-   "start": 74.512,
-   "end": 74.935
+   "start": 74.762,
+   "end": 75.185
   },
   {
    "text": "show",
-   "start": 74.935,
-   "end": 75.229
+   "start": 75.185,
+   "end": 75.479
   },
   {
    "text": "what",
-   "start": 75.229,
-   "end": 75.522
+   "start": 75.479,
+   "end": 75.772
   },
   {
    "text": "it",
-   "start": 75.522,
-   "end": 75.764
+   "start": 75.772,
+   "end": 76.014
   },
   {
    "text": "was",
-   "start": 75.764,
-   "end": 76.031
+   "start": 76.014,
+   "end": 76.281
   },
   {
    "text": "doing",
-   "start": 76.031,
-   "end": 76.35
+   "start": 76.281,
+   "end": 76.6
   },
   {
    "text": "eight",
-   "start": 76.35,
-   "end": 76.669
+   "start": 76.6,
+   "end": 76.919
   },
   {
    "text": "minutes",
-   "start": 76.669,
-   "end": 77.04
+   "start": 76.919,
+   "end": 77.29
   },
   {
    "text": "ago.",
-   "start": 77.04,
-   "end": 77.308
+   "start": 77.29,
+   "end": 77.558
   },
   {
    "text": "In",
-   "start": 78.005,
-   "end": 78.299
+   "start": 78.255,
+   "end": 78.549
   },
   {
    "text": "twenty",
-   "start": 78.299,
-   "end": 78.718
+   "start": 78.549,
+   "end": 78.968
   },
   {
    "text": "fourteen,",
-   "start": 78.718,
-   "end": 79.2
+   "start": 78.968,
+   "end": 79.45
   },
   {
    "text": "Borexino's",
-   "start": 79.2,
-   "end": 79.742
+   "start": 79.45,
+   "end": 79.992
   },
   {
    "text": "count",
-   "start": 79.742,
-   "end": 80.13
+   "start": 79.992,
+   "end": 80.38
   },
   {
    "text": "matched",
-   "start": 80.13,
-   "end": 80.581
+   "start": 80.38,
+   "end": 80.831
   },
   {
    "text": "what",
-   "start": 80.581,
-   "end": 80.938
+   "start": 80.831,
+   "end": 81.188
   },
   {
    "text": "the",
-   "start": 80.938,
-   "end": 81.263
+   "start": 81.188,
+   "end": 81.513
   },
   {
    "text": "sunlight",
-   "start": 81.263,
-   "end": 81.745
+   "start": 81.513,
+   "end": 81.995
   },
   {
    "text": "predicts,",
-   "start": 81.745,
-   "end": 82.228
+   "start": 81.995,
+   "end": 82.478
   },
   {
    "text": "to",
-   "start": 82.228,
-   "end": 82.521
+   "start": 82.478,
+   "end": 82.771
   },
   {
    "text": "within",
-   "start": 82.521,
-   "end": 82.941
+   "start": 82.771,
+   "end": 83.191
   },
   {
    "text": "about",
-   "start": 82.941,
-   "end": 83.329
+   "start": 83.191,
+   "end": 83.579
   },
   {
    "text": "ten",
-   "start": 83.329,
-   "end": 83.654
+   "start": 83.579,
+   "end": 83.904
   },
   {
    "text": "percent.",
-   "start": 83.654,
-   "end": 84.105
+   "start": 83.904,
+   "end": 84.355
   },
   {
    "text": "So",
-   "start": 84.765,
-   "end": 84.993
+   "start": 85.015,
+   "end": 85.243
   },
   {
    "text": "the",
-   "start": 84.993,
-   "end": 85.246
+   "start": 85.243,
+   "end": 85.496
   },
   {
    "text": "core",
-   "start": 85.246,
-   "end": 85.523
+   "start": 85.496,
+   "end": 85.773
   },
   {
    "text": "is",
-   "start": 85.523,
-   "end": 85.751
+   "start": 85.773,
+   "end": 86.001
   },
   {
    "text": "burning",
-   "start": 85.751,
-   "end": 86.101
+   "start": 86.001,
+   "end": 86.351
   },
   {
    "text": "about",
-   "start": 86.101,
-   "end": 86.402
+   "start": 86.351,
+   "end": 86.652
   },
   {
    "text": "as",
-   "start": 86.402,
-   "end": 86.63
+   "start": 86.652,
+   "end": 86.88
   },
   {
    "text": "hard",
-   "start": 86.63,
-   "end": 86.907
+   "start": 86.88,
+   "end": 87.157
   },
   {
    "text": "now",
-   "start": 86.907,
-   "end": 87.16
+   "start": 87.157,
+   "end": 87.41
   },
   {
    "text": "as",
-   "start": 87.16,
-   "end": 87.388
+   "start": 87.41,
+   "end": 87.638
   },
   {
    "text": "when",
-   "start": 87.388,
-   "end": 87.665
+   "start": 87.638,
+   "end": 87.915
   },
   {
    "text": "today's",
-   "start": 87.665,
-   "end": 88.015
+   "start": 87.915,
+   "end": 88.265
   },
   {
    "text": "sunlight",
-   "start": 88.015,
-   "end": 88.39
+   "start": 88.265,
+   "end": 88.64
   },
   {
    "text": "set",
-   "start": 88.39,
-   "end": 88.642
+   "start": 88.64,
+   "end": 88.892
   },
   {
    "text": "out.",
-   "start": 88.642,
-   "end": 88.895
+   "start": 88.892,
+   "end": 89.145
   },
   {
    "text": "The",
-   "start": 89.55,
-   "end": 89.807
+   "start": 89.8,
+   "end": 90.057
   },
   {
    "text": "sunlight",
-   "start": 89.807,
-   "end": 90.187
+   "start": 90.057,
+   "end": 90.437
   },
   {
    "text": "on",
-   "start": 90.187,
-   "end": 90.419
+   "start": 90.437,
+   "end": 90.669
   },
   {
    "text": "your",
-   "start": 90.419,
-   "end": 90.7
+   "start": 90.669,
+   "end": 90.95
   },
   {
    "text": "skin",
-   "start": 90.7,
-   "end": 90.982
+   "start": 90.95,
+   "end": 91.232
   },
   {
    "text": "is",
-   "start": 90.982,
-   "end": 91.214
+   "start": 91.232,
+   "end": 91.464
   },
   {
    "text": "old",
-   "start": 91.214,
-   "end": 91.47
+   "start": 91.464,
+   "end": 91.72
   },
   {
    "text": "news.",
-   "start": 91.47,
-   "end": 91.752
+   "start": 91.72,
+   "end": 92.002
   },
   {
    "text": "The",
-   "start": 92.385,
-   "end": 92.7
+   "start": 92.635,
+   "end": 92.952
   },
   {
    "text": "neutrinos",
-   "start": 92.7,
-   "end": 93.199
+   "start": 92.952,
+   "end": 93.452
   },
   {
    "text": "are",
-   "start": 93.199,
-   "end": 93.514
+   "start": 93.452,
+   "end": 93.768
   },
   {
    "text": "fresh.",
-   "start": 93.514,
-   "end": 93.89
+   "start": 93.768,
+   "end": 94.146
   },
   {
    "text": "And",
-   "start": 94.52,
-   "end": 94.851
+   "start": 94.77,
+   "end": 95.101
   },
   {
    "text": "they",
-   "start": 94.851,
-   "end": 95.215
+   "start": 95.101,
+   "end": 95.465
   },
   {
    "text": "agree.",
-   "start": 95.215,
-   "end": 95.61
+   "start": 95.465,
+   "end": 95.86
   }
  ]
 }
