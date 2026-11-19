@@ -1,4 +1,4 @@
-Sort every cell in your body by size, and something odd turns up: each size class weighs roughly the same.
+Sort the cells in your body by size, from red blood cells up, and something odd turns up: each size class weighs roughly the same.
 A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size.
 The smallest cells it sorted are red blood cells.
 The biggest are muscle fibres, more than a million times heavier.
@@ -34,13 +34,15 @@ Sources:
   doi:10.1126/sciadv.abh3732; open full text at PMC8580314. Cited by the PNAS
   paper as another example of the same pattern.
 
-1. "Sort every cell in your body by size, and something odd turns up: each size class weighs roughly the same."
+1. "Sort the cells in your body by size, from red blood cells up, and something odd turns up: each size class weighs roughly the same."
    Hatton 2023: "a roughly similar fraction of total body mass is present in each
    logarithmic cell-size class" (Fig. 4A), and the female and child patterns are
    "broadly similar to the male". "Roughly" is the paper's word and it carries
    weight: outside the dip (line 9), "all variation in cellular biomass lies
    within two orders of magnitude". The hook says "roughly", not "exactly".
-   "Size" here is cell mass in grams, the paper's measure of size.
+   "Size" here is cell mass in grams, the paper's measure of size. "From red blood
+   cells up", not "every cell": the binning leaves out platelets and the smallest
+   haploid gametes (line 3), so the hook names where the sorting starts.
 
 2. "A twenty twenty-three study combined over fifteen hundred earlier studies to estimate the body's cells, type by type, and sorted them by size."
    "Estimate", not "count": the paper compiles published data and says "we estimate".

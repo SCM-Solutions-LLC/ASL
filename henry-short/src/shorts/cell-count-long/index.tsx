@@ -25,6 +25,7 @@ const edit = makeEdit({
     ["nobody", "knows", "why."],
   ],
   breakAfter: [
+    "up,",
     "size,",
     "body,",
     "study",
@@ -239,7 +240,7 @@ const Three: React.FC<{ from: number }> = ({ from }) => {
   ] as const;
   return (
     <Marks>
-      <T x={540} y={235} text="WEIGHT IN EACH CLASS · SCHEMATIC" size={30} />
+      <T x={540} y={235} text="WEIGHT IN EACH CLASS · LOG SCALE · SCHEMATIC" size={30} />
       {rows.map(([name, dip], r) => {
         const base = 470 + r * 230;
         const o = ramp(f, from + r * 10, from + r * 10 + 8);
@@ -346,7 +347,7 @@ const Deck: React.FC = () => (
     <Card from={cut(6)} to={cut(7)} word="THEY CANCEL OUT" at={at(6, "cancel")} sheet={MINT}>
       <Ruler bins="full" counts="full" dimCounts weights={[at(6, "cancel"), end(6)]} />
     </Card>
-    <Card from={cut(7)} to={cut(8)} word="SAME WEIGHT" at={at(7, "same")} sheet={CREAM}>
+    <Card from={cut(7)} to={cut(8)} word="ABOUT THE SAME" at={at(7, "same")} sheet={CREAM}>
       <Ruler bins="full" weights="full" />
     </Card>
     <Card from={cut(8)} to={cut(9)} word="ONE DIP" at={at(8, "dip,")} sheet={PINK}>
