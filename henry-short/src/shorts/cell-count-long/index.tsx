@@ -127,7 +127,7 @@ const Ruler: React.FC<{
   const f = useCurrentFrame();
   const a = axis === "full" ? 1 : ramp(f, axis[0], axis[1]);
   const top = 300;
-  const level = 520;
+  const level = 600;
   return (
     <Marks>
       <line x1={X0} y1={AXIS} x2={X0 + (X1 - X0) * a} y2={AXIS} stroke={INK} strokeWidth={8} strokeLinecap="round" />
@@ -182,7 +182,9 @@ const Ruler: React.FC<{
         Array.from({ length: BINS }, (_, k) => {
           const m = mid(k);
           const inDip = m > FAT * 1.5 && m < MUSCLE / 1.5;
-          let h = AXIS - level + wob(k) * 40 - (inDip ? 190 * dip : 0);
+          // Fig. 4's peaks either side of the dip: fat (~1e-6 g) and muscle (~1e-4 g).
+          const peak = Math.abs(Math.log2(m / FAT)) < 1.2 ? 90 : Math.abs(Math.log2(m / MUSCLE)) < 1.6 ? 140 : 0;
+          let h = AXIS - level + wob(k) * 40 - (inDip ? 190 * dip : 0) + peak;
           if (ocean) h = AXIS - level + wob(k) * 25 + (k < 3 ? (k < 2 ? 120 : 80) : 0) - (k > BINS - 3 ? 150 : 0);
           const g = grow(f, weights, k);
           return (
@@ -219,7 +221,7 @@ const Ruler: React.FC<{
         const anchor = m === "rbc" ? "start" : m === "muscle" ? "end" : "middle";
         const lx = m === "rbc" ? x - 10 : m === "muscle" ? x + 40 : x;
         // Fat sits between the other two marks, so its label takes the lower row.
-        const ly = AXIS - (m === "fat" ? 390 : 480);
+        const ly = AXIS - (m === "fat" ? 480 : 550);
         return (
           <g key={m}>
             <line x1={x} y1={ly + 60} x2={x} y2={AXIS} stroke={INK} strokeWidth={5} strokeDasharray="14 12" />
@@ -367,7 +369,7 @@ const Deck: React.FC = () => (
       <Ruler weights="full" />
     </Card>
     <Card from={cut(19)} to={edit.duration} word="ROUGHLY THE SAME" at={at(19, "roughly")} sheet={YELLOW} tilt={-1}>
-      <Ruler bins="full" counts="full" dimCounts weights="full" marks={["rbc", "fat", "muscle"]} />
+      <Ruler bins="full" weights="full" marks={["rbc", "fat", "muscle"]} />
     </Card>
   </Board>
 );

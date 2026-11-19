@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/cell-count-long.txt",
  "audio": "public/vo/cell-count-long.wav",
- "sha256": "8263b95c2c8d2519f8c04288410c7ee3e8ed7129457aca947c05231f185f35bb",
+ "sha256": "ef95536e993bc99e94b83bb6e1515a84439811a9dfb7f4607bf3355b957f0896",
  "words": [
   {
    "text": "Sort",
@@ -1287,82 +1287,87 @@
   {
    "text": "Trillions",
    "start": 94.54,
-   "end": 95.039
+   "end": 95.04
   },
   {
    "text": "of",
-   "start": 95.039,
-   "end": 95.324
+   "start": 95.04,
+   "end": 95.326
   },
   {
    "text": "tiny",
-   "start": 95.324,
-   "end": 95.67
+   "start": 95.326,
+   "end": 95.674
   },
   {
    "text": "cells,",
-   "start": 95.67,
-   "end": 96.047
+   "start": 95.674,
+   "end": 96.052
   },
   {
    "text": "far",
-   "start": 96.047,
-   "end": 96.363
+   "start": 96.052,
+   "end": 96.368
   },
   {
    "text": "fewer",
-   "start": 96.363,
-   "end": 96.74
+   "start": 96.368,
+   "end": 96.746
   },
   {
    "text": "giant",
-   "start": 96.74,
-   "end": 97.117
+   "start": 96.746,
+   "end": 97.124
   },
   {
    "text": "ones,",
-   "start": 97.117,
-   "end": 97.463
+   "start": 97.124,
+   "end": 97.471
   },
   {
    "text": "and",
-   "start": 97.463,
-   "end": 97.779
+   "start": 97.471,
+   "end": 97.788
   },
   {
    "text": "roughly",
-   "start": 97.779,
-   "end": 98.216
+   "start": 97.788,
+   "end": 98.227
   },
   {
    "text": "the",
-   "start": 98.216,
-   "end": 98.532
+   "start": 98.227,
+   "end": 98.544
   },
   {
    "text": "same",
-   "start": 98.532,
-   "end": 98.878
+   "start": 98.544,
+   "end": 98.891
   },
   {
    "text": "weight",
-   "start": 98.878,
-   "end": 99.286
+   "start": 98.891,
+   "end": 99.299
   },
   {
    "text": "at",
-   "start": 99.286,
-   "end": 99.571
+   "start": 99.299,
+   "end": 99.585
+  },
+  {
+   "text": "almost",
+   "start": 99.585,
+   "end": 99.994
   },
   {
    "text": "every",
-   "start": 99.571,
-   "end": 99.948
+   "start": 99.994,
+   "end": 100.372
   },
   {
    "text": "size.",
-   "start": 99.948,
-   "end": 100.294
+   "start": 100.372,
+   "end": 100.719
   }
  ]
 }
