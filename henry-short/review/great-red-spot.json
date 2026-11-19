@@ -1,0 +1,13 @@
+{
+  "slug": "great-red-spot",
+  "file": "out/release/great-red-spot.mp4",
+  "mp4_sha256": "8d0077e9336a739c27f4219fe746a8c1d3a7e327959a28e99b834ea9bf91ee9a",
+  "title": "Cassini's 1665 spot probably wasn't the Great Red Spot",
+  "description": "In 1665, Giovanni Cassini saw a dark oval on Jupiter, at the latitude of today's Great Red Spot. Astronomers kept reporting his spot until 1713. Then, for about 118 years, it appears in no surviving observation. The storm we call the Great Red Spot first shows up in drawings in 1831, as a light 'Hollow' in a cloud belt; it turned reddish only in the 1870s. Cassini's spot was only a third to a half as long as the Great Red Spot was in 1879. To be the same storm, it would have had to grow steadily, by about 160 km a year, for 166 years without anyone seeing it, and no storm on Jupiter has ever been seen to grow like that. So the Great Red Spot has been on record since 1831, and Cassini's spot was most likely a different storm that disappeared.\n\nSource:\n- Sánchez-Lavega et al. 2024, \"The Origin of Jupiter's Great Red Spot\", Geophysical Research Letters 51(12), e2024GL108993. doi:10.1029/2024GL108993\n\nNarration: Kokoro-82M synthetic voice. Illustration: the planet is NASA/JPL/Space Science Institute's Cassini map of Jupiter (2000), with the Great Red Spot removed for the years before 1831; the spots drawn on it are not to scale.\n\n#shorts #jupiter #astronomy #space",
+  "tags": ["jupiter", "great red spot", "astronomy", "cassini", "space", "planetary science", "history of science"],
+  "categoryId": "28",
+  "selfDeclaredMadeForKids": false,
+  "privacyStatus": "private",
+  "alteredOrSyntheticContent": true,
+  "notes": "privacyStatus and schedule are the owner's call at approval (F2). E3: the planet is a real NASA Cassini map, with the Great Red Spot cloned out for the pre-1831 beats; labelled \"Illustration\" on screen and in the description. Realistic altered imagery of a real place, so disclose when uploading (flag set to true; re-check YouTube's rule). E5: 49.8 s voice-over. A6: the 1831 Hollow is not drawn red; Cassini's oval is never labelled the Great Red Spot."
+}

@@ -14,8 +14,9 @@ import { ageOfSunlightLong } from "./age-of-sunlight-long";
 import { cellCountCutout } from "./cell-count-cutout";
 import { cellCountLong } from "./cell-count-long";
 import { altarStone } from "./altar-stone";
+import { greatRedSpot } from "./great-red-spot";
 import type { Short } from "./types";
 
 // Every short in the channel. Listing one here registers its compositions — one per look, per
 // format. `npm run new-short <slug>` scaffolds the files.
-export const SHORTS: Short[] = [anneOfCleves, catherineOfAragon, scaleOfTheSun, ageOfSunlight, deepestHole, cellCount, cleopatraTimeline, cleopatraCutout, ageOfSunlightCutout, deepestHoleCutout, deepestHoleCalm, deepestHoleLong, ageOfSunlightLong, cellCountCutout, cellCountLong, altarStone];
+export const SHORTS: Short[] = [anneOfCleves, catherineOfAragon, scaleOfTheSun, ageOfSunlight, deepestHole, cellCount, cleopatraTimeline, cleopatraCutout, ageOfSunlightCutout, deepestHoleCutout, deepestHoleCalm, deepestHoleLong, ageOfSunlightLong, cellCountCutout, cellCountLong, altarStone, greatRedSpot];
