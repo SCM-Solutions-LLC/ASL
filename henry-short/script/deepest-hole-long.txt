@@ -111,7 +111,7 @@ Sources read (an independent fact-check, 18 Nov 2026):
 18. Imperial figures, on screen only (not spoken), converted from the metric figures above
    (1 in = 2.54 cm, 1 ft = 0.3048 m, 1 mi = 1.609344 km, °F = °C × 9/5 + 32):
    21 cm = 8.3 in, shown "8 IN"; 72 cm = 28.3 in, "28 IN"; over 7 km = over 4.35 mi,
-   "OVER 4.3 MI"; 12 km = 7.46 mi, "7.5 MI"; 7.01 km = 4.36 mi, "4.4 MI"; 12,262 m = 40,230 ft,
+   "OVER 4.3 MI"; 12 km = 7.46 mi, "7.5 MI"; 7 km = 4.35 mi, "4.3 MI"; 12,262 m = 40,230 ft,
    "40,230 FT"; 120 °C = 248 °F; 180 °C = 356 °F and 10 km = 6.2 mi, "356 °F AT 6.2 MI";
    212 °C = 413.6 °F, "414 °F"; 13 km = 8.08 mi, "8.1 MI"; over 6,000 km = over 3,728 mi,
    "3,700+ MI". The chart carries a second depth scale in miles (2, 4, 6, 8 MI) and the
