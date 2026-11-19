@@ -4,7 +4,8 @@ import { makeEdit } from "../../edit";
 import { SANS, SERIF } from "../../fonts";
 import type { Layout } from "../../layout";
 import alignment from "../../generated/great-red-spot.alignment.json";
-import { Starfield, Tag as BaseTag } from "../../scenes/space";
+import { Starfield } from "../../scenes/space";
+import { GRS, Planet, type Spot } from "./planet";
 import type { Short } from "../types";
 import { clamp01, ease, ramp } from "../altar-stone/shots";
 
@@ -51,13 +52,11 @@ const SIGHTINGS = [1665, 1667, 1672, 1677, 1685, 1686, 1687, 1690, 1691, 1694, 1
 const NOW = 2026;
 
 const RED = "#d8432c";
-const SPOT = "#3b2a22";
 const INK = "#f4ecd8";
 const DIM = "#a99f8a";
 const GOLD = "#f1c74f";
 
 const at = <T,>(L: Layout, v: T, w: T) => (L.vertical ? v : w);
-const Tag: typeof BaseTag = (p) => <BaseTag subSize={36} {...p} />;
 
 // The year the playhead is on, beat by beat: it walks the sightings, sweeps the gap, and finishes on today.
 const yearAt = (f: number) => {
@@ -78,66 +77,6 @@ const yearAt = (f: number) => {
   const [a, ya] = keys[i - 1];
   const [b, yb] = keys[i];
   return Math.round(ya + (yb - ya) * ease(clamp01((f - a) / (b - a))));
-};
-
-// Jupiter, drawn once. Features sit on the GRS latitude band; `x` is their offset from the centre
-// meridian in units of the radius, so they slide slowly with the planet's turn.
-type Feature = { x: number; len: number; h: number; fill: string; rim?: string; o: number; hollow?: boolean };
-
-const BANDS: [number, number, string][] = [
-  [-0.95, 0.3, "#c7a27a"],
-  [-0.62, 0.12, "#8d6239"],
-  [-0.48, 0.2, "#e2c6a0"],
-  [-0.26, 0.22, "#a8774a"],
-  [-0.02, 0.18, "#ead6b6"],
-  [0.16, 0.2, "#93653b"], // South Equatorial Belt: the Hollow is cut into its southern edge.
-  [0.36, 0.22, "#e8d2ae"], // the GRS latitude
-  [0.58, 0.14, "#9a6d43"],
-  [0.72, 0.4, "#c9a57d"],
-];
-const SPOT_Y = 0.47;
-
-const Jupiter: React.FC<{ cx: number; cy: number; r: number; f: number; features: Feature[] }> = ({ cx, cy, r, f, features }) => {
-  const turn = (f * 0.0016) % 2;
-  return (
-    <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-      <defs>
-        <clipPath id="disc">
-          <circle cx={cx} cy={cy} r={r} />
-        </clipPath>
-        <radialGradient id="shade" cx="38%" cy="32%" r="75%">
-          <stop offset="0.55" stopColor="rgba(0,0,0,0)" />
-          <stop offset="1" stopColor="rgba(0,0,0,0.75)" />
-        </radialGradient>
-        <filter id="swirl">
-          <feTurbulence type="fractalNoise" baseFrequency="0.004 0.03" numOctaves={3} seed={4} />
-          <feDisplacementMap in="SourceGraphic" scale={9} />
-        </filter>
-      </defs>
-      <circle cx={cx} cy={cy} r={r + 26} fill="rgba(240,200,140,0.10)" />
-      <g clipPath="url(#disc)">
-        <rect x={cx - r} y={cy - r} width={2 * r} height={2 * r} fill="#d9b88f" />
-        <g filter="url(#swirl)" transform={`translate(${-turn * 40} 0)`}>
-          {BANDS.map(([y, h, c], i) => (
-            <rect key={i} x={cx - r - 60} y={cy + y * r} width={2 * r + 260} height={h * r} fill={c} />
-          ))}
-        </g>
-        {features.map((s, i) => {
-          if (s.o <= 0) return null;
-          const lon = s.x - turn * 0.05;
-          const fx = cx + r * Math.sin(lon);
-          const squash = Math.cos(lon);
-          return (
-            <g key={i} opacity={s.o}>
-              {s.hollow ? <ellipse cx={fx} cy={cy + (SPOT_Y - 0.12) * r} rx={(s.len * r * squash) / 2 + 14} ry={s.h * r * 0.9} fill="#ead6b6" /> : null}
-              <ellipse cx={fx} cy={cy + SPOT_Y * r} rx={(s.len * r * squash) / 2} ry={(s.h * r) / 2} fill={s.fill} stroke={s.rim ?? "none"} strokeWidth={s.rim ? 6 : 0} />
-            </g>
-          );
-        })}
-        <circle cx={cx} cy={cy} r={r} fill="url(#shade)" />
-      </g>
-    </svg>
-  );
 };
 
 // The observing timeline. Years map linearly onto the ruler.
@@ -191,98 +130,170 @@ const Note: React.FC<{ x: number; y: number; text: string; o: number; size?: num
     <div style={{ position: "absolute", left: x, top: y, translate: align === "center" ? "-50% 0" : undefined, textAlign: align, fontFamily: SERIF, fontSize: size, color, opacity: o, whiteSpace: "pre", textShadow: "0 3px 12px rgba(0,0,0,0.95)" }}>{text}</div>
   );
 
+const D = Math.PI / 180;
+const glide = (t: number) => t * t * t * (t * (6 * t - 15) + 10);
+const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+// How far the camera has pushed in on the spot's latitude: 0 = whole disc, 1 = close.
+const pushAt = (f: number) =>
+  glide(ramp(f, 0, F.probably)) * (1 - glide(ramp(f, F.kept, F.kept + 40))) +
+  0.85 * glide(ramp(f, F.drawings - 10, F.drawings + 40)) * (1 - glide(ramp(f, F.third - 24, F.third + 6))) +
+  0.12 * glide(ramp(f, F.record, F.end));
+
+const TITLE: React.CSSProperties = { fontFamily: SANS, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: INK };
+const SUB: React.CSSProperties = { fontFamily: SERIF, fontStyle: "italic", color: DIM };
+const SHADOW = "0 2px 10px rgba(0,0,0,0.95), 0 0 24px rgba(0,0,0,0.7)";
+
+// A ring around something on the planet, with its label hung underneath: labels sit on what they name.
+const Callout: React.FC<{ x: number; y: number; rx: number; ry: number; ring: number; o: number; title: string; sub?: string; subColor?: string; size?: number }> = ({ x, y, rx, ry, ring, o, title, sub, subColor = DIM, size = 34 }) =>
+  o <= 0 ? null : (
+    <>
+      {ring > 0 ? (
+        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ring }}>
+          <ellipse cx={x} cy={y} rx={rx + 16} ry={ry + 14} fill="none" stroke={GOLD} strokeWidth={4} strokeDasharray="14 10" />
+          <line x1={x} y1={y + ry + 14} x2={x} y2={y + ry + 44} stroke={GOLD} strokeWidth={4} />
+        </svg>
+      ) : null}
+      <div style={{ position: "absolute", left: x, top: y + ry + 50, translate: "-50% 0", textAlign: "center", whiteSpace: "pre", opacity: o, textShadow: SHADOW }}>
+        <div style={{ ...TITLE, fontSize: size }}>{title}</div>
+        {sub ? <div style={{ ...SUB, fontSize: size * 0.85, color: subColor, marginTop: 4 }}>{sub}</div> : null}
+      </div>
+    </>
+  );
+
 const Scene: React.FC<{ L: Layout }> = ({ L }) => {
   const f = useCurrentFrame();
   const v = L.vertical;
-  const J = at(L, { cx: 960, cy: 330, r: 330 }, { cx: 1260, cy: 420, r: 330 });
-  const R: Rule = at(L, { x0: 560, x1: 1360, y: 880 }, { x0: 140, x1: 1780, y: 845 }); // 16:9: year labels clear of two-line captions
+  const R: Rule = at(L, { x0: 560, x1: 1360, y: 910 }, { x0: 140, x1: 1780, y: 845 }); // 16:9: year labels clear of two-line captions
   const year = yearAt(f);
 
-  // Cassini's spot: on while he and others kept reporting it, gone in the gap.
-  const blink = SIGHTINGS.some((s) => Math.abs(year - s) <= 1) ? 1 : 0.55;
-  // On from the first frames: the hook is the oval.
-  const ps = ramp(f, 4, 14) * (1 - ramp(f, F.then, F.then + 12)) * (f < F.kept ? 1 : blink);
-  // The size comparison and the growth that would have been needed.
-  const compare = ramp(f, F.third - 6, F.third + 6) * (1 - ramp(f, F.record - 8, F.record));
-  const grow = ease(ramp(f, F.growing - 4, F.unseen + 10));
-  const hollow = ramp(f, F.drawings, F.drawings + 10) * (1 - compare);
-  const today = ramp(f, F.record - 6, F.record + 6);
-  const PSF = { len: 0.3, h: 0.11, fill: SPOT, rim: "#1a120d" };
+  // The planet and the camera on it.
+  const base = at(L, { cx: 960, cy: 320, r: 350 }, { cx: 1260, cy: 410, r: 350 });
+  const aim = at(L, { x: 960, y: 300 }, { x: 1260, y: 400 });
+  const push = pushAt(f);
+  const r = base.r * (1 + 0.6 * push);
+  const cx = lerp(base.cx, aim.x, push);
+  const cy = lerp(base.cy, aim.y + Math.sin(GRS.lat * D) * r, push);
+  const lon0 = GRS.lon - 6 + f * 0.008;
+  const onDisc = (lon: number, lat: number, len: number, h: number) => {
+    const a = (lon - lon0) * D;
+    const b = lat * D;
+    return { x: cx + r * Math.cos(b) * Math.sin(a), y: cy - r * Math.sin(b), rx: r * Math.cos(b) * Math.cos(a) * Math.sin((len / 2) * D), ry: r * Math.cos(b) * Math.sin((h / 2) * D) };
+  };
 
-  const features: Feature[] = [
-    { x: -0.05, ...PSF, o: ps },
-    // 1831: the Hollow only, the light bay in the belt's edge. Not red.
-    { x: 0.05, len: 0.62, h: 0.16, fill: "#ead6b6", rim: "#8d6239", o: hollow, hollow: true },
-    { x: 0.05, len: 0.62, h: 0.2, fill: "#c4553a", rim: "#7a2a1a", o: today, hollow: true },
-  ];
-
-  const lx = (fr: number) => J.cx + J.r * Math.sin(fr);
-  const P = v ? { x: 600, y: 140, w: 720 } : { x: 900, y: 190, w: 720 };
-  const cassW = P.w * (0.42 + 0.58 * grow);
-  const bigYear = year;
+  // Beats.
+  const blink = SIGHTINGS.some((s) => Math.abs(year - s) <= 1) ? 1 : 0.45;
+  const ps = ramp(f, 4, 12) * (1 - ramp(f, F.then, F.then + 12)) * (f < F.kept ? 1 : blink);
+  const hollow = ramp(f, F.drawings, F.drawings + 12) * (1 - ramp(f, F.third - 20, F.third));
+  const compare = ramp(f, F.third - 10, F.third + 6) * (1 - ramp(f, F.record - 10, F.record));
+  const grow = glide(ramp(f, F.growing - 4, F.unseen + 10));
   const cross = ramp(f, F.grow - 4, F.grow + 6) * (1 - ramp(f, F.record - 10, F.record));
+  const today = ramp(f, F.record - 6, F.record + 14);
+  const out = (a: number, b: number) => ramp(f, a, a + 8) * (1 - ramp(f, b - 8, b));
+
+  const CASSINI = { lon: GRS.lon, lat: GRS.lat, len: 13, h: 7.5 };
+  const HOLLOW = { lon: GRS.lon, lat: GRS.lat + 0.5, len: 24, h: 10 };
+  const spots: Spot[] = [
+    { ...CASSINI, rgb: [62, 44, 36], rim: [32, 22, 18], o: ps },
+    // 1831: the Hollow only, a light bay in the belt's edge. Not red (A6).
+    { ...HOLLOW, rgb: [236, 226, 208], rim: [150, 112, 78], o: hollow },
+  ];
+  const cs = onDisc(CASSINI.lon, CASSINI.lat, CASSINI.len, CASSINI.h);
+  const hs = onDisc(HOLLOW.lon, HOLLOW.lat, HOLLOW.len, HOLLOW.h);
+  const gs = onDisc(GRS.lon, GRS.lat, 19, 12);
+
+  // The lengths panel: the two spots, to scale with each other only.
+  const P = at(L, { x: 560, y: 30, w: 800 }, { x: 900, y: 70, w: 800 });
+  const GL = 0.9 * P.w;
+  const x0 = P.x + (P.w - GL) / 2;
+  const row1 = P.y + 150;
+  const row2 = P.y + 500;
+  const cassL = GL * (0.42 + 0.58 * grow);
+  const label = (o: number, x: number, y: number, title: string, sub?: string, color = INK, right = false) =>
+    o <= 0 ? null : (
+      <div style={{ position: "absolute", left: x, top: y, opacity: o, textShadow: SHADOW, whiteSpace: "pre", translate: right ? "-100% 0" : undefined, textAlign: right ? "right" : "left" }}>
+        <div style={{ ...TITLE, fontSize: 30, color }}>{title}</div>
+        {sub ? <div style={{ ...SUB, fontSize: 28, marginTop: 2 }}>{sub}</div> : null}
+      </div>
+    );
+
+  const gapX = (yx(R, 1713) + yx(R, 1831)) / 2;
+  const gapO = ramp(f, F.hundred, F.hundred + 10) * (1 - ramp(f, F.third - 10, F.third));
 
   return (
     <>
       <div style={{ position: "absolute", left: -600, top: -700, width: 3120, height: 2600, background: "#04050b" }} />
       <Starfield drift={0.05} />
-      <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, opacity: 1 - 0.8 * compare }}>
-        <Jupiter cx={J.cx} cy={J.cy} r={J.r} f={f} features={features} />
+      <Planet cx={cx} cy={cy} r={r} res={L.zoom * 1.05} lon={lon0} today={today} spots={spots} dim={0.72 * compare} />
+      <div style={{ position: "absolute", ...(v ? { left: 1395, top: -196 } : { left: 1900, top: 16 }), translate: "-100% 0", fontFamily: SERIF, fontStyle: "italic", fontSize: 22, color: DIM, opacity: 0.75, whiteSpace: "pre" }}>
+        Illustration · clouds from NASA/JPL/SSI Cassini map
       </div>
       <Timeline R={R} f={f} year={year} />
 
-      {/* The year the playhead is on, large: the one number the viewer should track. */}
-      {bigYear ? (
-        <div style={{ position: "absolute", ...(v ? { left: 560, top: 690 } : { left: 140, top: 560 }), fontFamily: SANS, fontWeight: 700, fontSize: v ? 120 : 140, color: GOLD, opacity: 1 - ramp(f, F.record - 8, F.record + 6), textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>
-          {bigYear}
+      {/* The year the playhead is on: the one number to track. */}
+      <div style={{ position: "absolute", ...(v ? { left: 1360, top: 650, translate: "-100% 0" } : { left: 140, top: 560 }), fontFamily: SANS, fontWeight: 800, fontSize: v ? 120 : 140, color: GOLD, opacity: 1 - ramp(f, F.record - 8, F.record + 6), textShadow: "0 4px 18px rgba(0,0,0,0.9)", fontVariantNumeric: "tabular-nums" }}>
+        {year}
+      </div>
+
+      {/* 1. Hook, then the sightings: one label on the oval, rewritten as the story moves. */}
+      <Callout {...cs} ring={ps > 0 ? out(4, F.then) : 0} o={out(4, F.kept)} title="1665 · Cassini" sub={f < F.probably ? "a dark oval at this latitude" : "probably not the Great Red Spot"} subColor={f < F.probably ? DIM : GOLD} />
+      <Callout {...cs} ring={0} o={out(F.kept, F.then + 4)} title="Reported until 1713" sub="Cassini, Maraldi and others" />
+      {/* 2. The gap, named where it is on the timeline. */}
+      {gapO > 0 ? (
+        <div style={{ position: "absolute", left: gapX, top: R.y - 150, translate: "-50% 0", textAlign: "center", opacity: gapO, textShadow: SHADOW }}>
+          <div style={{ ...TITLE, fontSize: 32, color: "#ff9b84" }}>118 years</div>
+          <div style={{ ...SUB, fontSize: 26 }}>no reports</div>
         </div>
       ) : null}
+      {/* 3. The Hollow. */}
+      <Callout {...hs} ring={out(F.drawings + 6, F.third - 12)} o={out(F.drawings + 6, F.third - 12)} title="1831 · The Hollow" sub={"first drawings of today's storm\nnot yet red: that came ~1872–76"} size={30} />
 
-      {/* 1. Hook. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="1665 · CASSINI" sub={"a dark oval at this latitude"} from={4} to={v ? F.probably : F.kept} />
-      <Note x={lx(-0.05)} y={J.cy + SPOT_Y * J.r - (v ? 240 : 210)} text="?" o={ramp(f, F.probably, F.probably + 6) * (1 - ramp(f, F.kept, F.kept + 8))} size={200} color={GOLD} align="center" />
-      {/* 9:16 has no room for two tags above the planet, so this one replaces the hook tag. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 280 })} text="PROBABLY NOT" sub={"the Great Red Spot"} from={F.probably} to={F.kept} />
-      {/* 2–3. Sightings, then the gap. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="REPORTED UNTIL 1713" sub={"Cassini, Maraldi and others"} from={F.kept} to={F.then} />
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="118 YEARS" sub={"no report of it\nin the surviving observations"} from={F.hundred} to={F.storm} />
-      {/* 4. The Hollow. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="1831 · THE HOLLOW" sub={"first drawings of today's storm\n(not yet red: that came ~1872–76)"} from={F.drawings} to={F.third - 6} />
-      {/* 5. Lengths. */}
+      {/* 4. Lengths, then the growth nobody saw. */}
       {compare > 0 ? (
-        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <g opacity={compare}>
-            {[P.x, P.x + P.w].map((x) => (
-              <line key={x} x1={x} y1={P.y - 70} x2={x} y2={P.y + 320} stroke={DIM} strokeWidth={3} strokeDasharray="8 8" />
-            ))}
-            <ellipse cx={P.x + cassW / 2} cy={P.y} rx={cassW / 2} ry={52} fill={SPOT} stroke="#000" strokeWidth={4} />
-            {grow > 0 ? <ellipse cx={P.x + (P.w * 0.42) / 2} cy={P.y} rx={(P.w * 0.42) / 2} ry={52} fill="none" stroke={INK} strokeWidth={3} strokeDasharray="10 8" /> : null}
-            {/* The paper's range, a third to a half; the drawn oval sits inside it. */}
-            <rect x={P.x + P.w / 3} y={P.y + 66} width={P.w / 6} height={12} rx={6} fill={GOLD} opacity={1 - grow} />
-            <ellipse cx={P.x + P.w / 2} cy={P.y + 240} rx={P.w / 2} ry={74} fill="#c4553a" stroke="#7a2a1a" strokeWidth={6} />
+        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: compare }}>
+          <defs>
+            <radialGradient id="ps" cx="45%" cy="40%" r="65%">
+              <stop offset="0" stopColor="#5a4234" />
+              <stop offset="1" stopColor="#24180f" />
+            </radialGradient>
+            <radialGradient id="grs" cx="45%" cy="40%" r="65%">
+              <stop offset="0" stopColor="#e07a58" />
+              <stop offset="1" stopColor="#8f3522" />
+            </radialGradient>
+            <filter id="soft">
+              <feGaussianBlur stdDeviation="2.5" />
+            </filter>
+          </defs>
+          <rect x={P.x - 20} y={P.y} width={P.w + 40} height={640} rx={24} fill="rgba(6,8,18,0.6)" stroke="rgba(255,255,255,0.08)" strokeWidth={2} />
+          {[x0, x0 + GL].map((x) => (
+            <line key={x} x1={x} y1={row1 - 70} x2={x} y2={row2 + 70} stroke={DIM} strokeWidth={2} strokeDasharray="6 8" opacity={0.7} />
+          ))}
+          <ellipse cx={x0 + cassL / 2} cy={row1} rx={cassL / 2} ry={48} fill="url(#ps)" filter="url(#soft)" />
+          {grow > 0 ? <ellipse cx={x0 + (GL * 0.42) / 2} cy={row1} rx={(GL * 0.42) / 2} ry={48} fill="none" stroke={INK} strokeWidth={3} strokeDasharray="10 8" opacity={0.8} /> : null}
+          {/* The paper's range, a third to a half; the drawn oval sits inside it. */}
+          <g opacity={1 - grow}>
+            <line x1={x0 + GL / 3} y1={row1 + 72} x2={x0 + GL / 2} y2={row1 + 72} stroke={GOLD} strokeWidth={8} strokeLinecap="round" />
           </g>
+          <ellipse cx={x0 + GL / 2} cy={row2} rx={GL / 2} ry={70} fill="url(#grs)" filter="url(#soft)" />
+          {cross > 0 ? (
+            <g stroke={RED} strokeWidth={18} strokeLinecap="round" opacity={cross} transform={`translate(${x0 + cassL * 0.7} ${row1}) scale(${0.8 + 0.2 * ease(cross)})`}>
+              <line x1={-90} y1={-90} x2={90} y2={90} />
+              <line x1={90} y1={-90} x2={-90} y2={90} />
+            </g>
+          ) : null}
         </svg>
       ) : null}
-      <Note x={P.x} y={P.y - 118} text="Cassini's spot, 1665" o={compare} size={40} />
-      <Note x={P.x + P.w / 3} y={P.y + 84} text="⅓ to ½" o={compare * (1 - grow)} size={32} color={GOLD} />
-      <Note x={P.x} y={P.y + 330} text="Great Red Spot, 1879" o={compare} size={40} color="#ff9b84" />
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="⅓ TO ½ AS LONG" sub={"lengths to scale with each other\nSánchez-Lavega et al. 2024"} from={F.third} to={F.growing - 4} />
-      {/* 6. The growth nobody saw. */}
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="+160 KM A YEAR?" sub={"for 166 years, 1713–1879,\nwith no one seeing it"} from={F.growing} to={F.record - 6} />
-      {/* The X sits on the grown part of the oval, clear of its label. */}
-      {cross > 0 ? (
-        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <g stroke={RED} strokeWidth={22} strokeLinecap="round" opacity={cross} transform={`translate(${P.x + cassW * 0.7} ${P.y}) scale(${0.8 + 0.2 * ease(cross)})`}>
-            <line x1={-120} y1={-120} x2={120} y2={120} />
-            <line x1={120} y1={-120} x2={-120} y2={120} />
-          </g>
-        </svg>
-      ) : null}
-      <Tag {...at(L, { x: 560, y: 520 }, { x: 140, y: 330 })} text="NEVER SEEN" sub={"in any storm on Jupiter"} from={F.grow} to={F.record - 6} />
-      {/* 7. The two records. */}
-      <Note {...at(L, { x: yx(R, 1665) - 6, y: R.y - 132 }, { x: yx(R, 1665), y: R.y - 132 })} text={f >= F.gone ? "Cassini's spot · gone" : "Cassini's spot"} o={ramp(f, F.record, F.record + 10)} size={34} color={DIM} />
-      <Note {...at(L, { x: yx(R, 1831), y: R.y - 132 }, { x: yx(R, 1831), y: R.y - 132 })} text="Great Red Spot" o={ramp(f, F.record, F.record + 10)} size={34} color="#ff9b84" />
-      <Tag {...at(L, { x: 560, y: -180 }, { x: 140, y: 140 })} text="ON RECORD SINCE 1831" sub={"nearly 200 years"} from={F.nearly} />
+      {label(compare, x0, row1 - 112, "1665 · Cassini's spot")}
+      {label(compare * (1 - grow), x0 + GL / 3, row1 + 86, "⅓ to ½ the length", undefined, GOLD)}
+      {label(compare * ramp(f, F.growing, F.growing + 10) * (1 - cross), x0, row1 + 86, "+160 km a year?", "for 166 years, 1713–1879, unseen")}
+      {label(compare * cross, x0, row1 + 86, "Never seen", "in any storm on Jupiter", "#ff9b84")}
+      {label(compare, x0, row2 - 120, "1879 · Great Red Spot", undefined, "#ff9b84")}
+      {label(compare, x0 + GL, row2 + 84, "", "lengths to scale with each other", INK, true)}
+
+      {/* 5. The two records. */}
+      <Callout {...gs} ring={out(F.record + 6, F.end + 20)} o={out(F.record + 6, F.end + 20)} title="The Great Red Spot" sub="on record since 1831" />
+      <Note {...at(L, { x: yx(R, 1665) - 6, y: R.y - 132 }, { x: yx(R, 1665), y: R.y - 132 })} text={f >= F.gone ? "Cassini's spot · gone" : "Cassini's spot"} o={ramp(f, F.record, F.record + 10)} size={30} color={DIM} />
+      <Note {...at(L, { x: yx(R, 1831), y: R.y - 132 }, { x: yx(R, 1831), y: R.y - 132 })} text="Great Red Spot · 1831–today" o={ramp(f, F.record, F.record + 10)} size={30} color="#ff9b84" />
     </>
   );
 };

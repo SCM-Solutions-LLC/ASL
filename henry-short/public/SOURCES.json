@@ -293,5 +293,11 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "The Open Goldberg Variations recording was released CC0 by the performer. Bed for the cell-count card deck, chosen by ear from two candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`) from Commons' Ogg rendition. Licence read on the file's page on 2026-11-10."
+ },
+ "public/jupiter/*.jpg": {
+  "source": "\"Cassini Best Maps of Jupiter: Cylindrical Map\", PIA07782, NASA/JPL/Space Science Institute — https://images.nasa.gov/details/PIA07782",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "NASA imagery is not copyrighted (credit NASA/JPL/Space Science Institute). Downscaled to 2048x1024. cassini-2000-no-grs.jpg has the Great Red Spot cloned out with a clean stretch of the same latitude 700 px east, for the pre-1831 beats; the short says on screen that the planet is an illustration."
  }
 }
