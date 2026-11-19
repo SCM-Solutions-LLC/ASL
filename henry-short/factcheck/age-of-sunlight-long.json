@@ -1,343 +1,327 @@
 {
   "script": "script/age-of-sunlight-long.txt",
-  "sha256": "047c8f5ac105b51a05f2e708bb816009fbc27e534f85e2e4e4816c122032a877",
+  "sha256": "cb74b4090f7722660f248660819371187c506c3d2376cabea3821d4f043f02d0",
   "checked": "2026-11-19",
   "claims": [
     {
       "n": 1,
-      "claim": "Right now, two things from the Sun's core are reaching you.",
+      "claim": "Right now, two things from the Sun's core are reaching the Earth. (Hook, A4: what a viewer who leaves at second two takes away.)",
       "where": "spoken",
-      "verdict": "fix",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (NASA MSFC 'The Solar Interior', updated 2025-01-14); https://arxiv.org/pdf/1508.05379 (BX-P)",
-      "note": "The two things are real (MSFC: core reactions 'release the energy that ultimately leaves the surface as visible light'; neutrinos 'pass right through the overlying layers of the Sun'). But 'right now ... reaching you' is only true of the sunlight for a viewer who is in daylight. Neutrinos reach you at night, through the Earth; sunlight does not. Shorts are often watched at night or indoors, and this is the line a viewer hears before swiping at second two (A4). SOURCES entry 1 itself only claims 'Both reach Earth continuously'. Change: say 'reaching the Earth', or make it conditional ('If you're in the sun right now, two things from its core are reaching you'). The rest of the script's 'you' lines are already conditional ('the sunlight on your skin')."
+      "verdict": "confirmed",
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml (NASA MSFC 'The Solar Interior'); https://arxiv.org/pdf/1508.05379 (BX-P, full text)",
+      "note": "The two are the neutrinos and the fusion energy. MSFC: core reactions 'release the energy that ultimately leaves the surface as visible light'; neutrinos 'pass right through the overlying layers of the Sun and, with some effort, can be detected here on Earth'. BX-P: neutrinos 'travel almost undisturbed from the core of the Sun to the surface of the Earth'. A viewer who swipes at second two hears only that something from the core reaches the Earth right now, which is true for both, day and night ('the Earth', not 'you'). Nothing false is left behind; the photons themselves are not claimed to come from the core (the script later says 'the energy')."
     },
     {
       "n": 2,
-      "claim": "Swipe after the opening (A4): the viewer leaves believing something from the core reaches them about eight minutes after leaving it, and something else after tens of thousands of years or more.",
-      "where": "spoken (hook implication, lines 1-3)",
-      "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml; https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-      "note": "Lines 2-3 do not repeat the popular 'sunlight is 8 minutes old' myth: the eight minutes goes to 'one' thing (the neutrinos) and the long time to 'the other', which is the correction. Both figures check out (claims 3 and 4). The only false impression at second two is the night/indoors one in claim 1."
-    },
-    {
-      "n": 3,
       "claim": "One left the core about eight minutes ago.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (radius 695,700 km; Sun-Earth distance mean 149.6, min 147.1, max 152.1 x10^6 km); https://physics.nist.gov/cgi-bin/cuu/Value?c (c = 299 792 458 m/s exact, CODATA 2022); https://arxiv.org/pdf/1508.05379",
-      "note": "Recomputed: 695,700 km / c = 2.32 s to cross the Sun's radius; 149.6e6 km / c = 499.0 s (490.7-507.4 s over the year). Total about 8.2-8.5 min, so 'about eight minutes' holds. That neutrinos travel at effectively c is checked in claim 9."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://www.nature.com/articles/s41567-021-01463-1 (KATRIN, Nat. Phys. 18, 160-166)",
+      "note": "Recomputed: radius 695,700 km / c = 2.32 s out of the Sun; mean distance 149.6e6 km minus radius / c = 497 s (8.28 min); 8.14-8.42 min from perihelion (147.1e6 km) to aphelion (152.1e6 km). Total about 8.3 min. Neutrinos move at c to better than 1e-8 (KATRIN m < 0.8 eV/c^2 at 90% CL; gamma > 1.25e4 even at 10 keV). 'About eight minutes' holds."
     },
     {
-      "n": 4,
+      "n": 3,
       "claim": "The other left it tens of thousands of years ago, maybe far more.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084 (NASA SVS 'Origin Of Light', 2012, updated 2023-05-03); https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "SVS: 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface'; 'Over tens of thousands of years, the photons travel a \"drunken walk\"'. MSFC: 'an individual photon takes about a million years to finally reach the interface layer'. 'Tens of thousands ... maybe far more' fits both. I did not re-open Mitalas & Sills (1992) or Stix (2003), but they are not needed: SVS and MSFC alone support the wording."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084 (NASA SVS 'Origin of Light'); https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M (Mitalas & Sills, ApJ 401, 759-760, both scan pages read; doi:10.1086/172103 metadata via api.crossref.org); https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "SVS: 'Over the course of 40,000 years it will be absorbed by other atoms and emitted repeatedly until reaching the sun's surface'. Mitalas & Sills: 'diffusion time scale for the Sun of t_d = 1.7 x 10^5 yr' (to the inner edge of the convection zone; abstract also calls 3e3-3e4 yr 'much too short'). MSFC: 'an individual photon takes about a million years to finally reach the interface layer'. Lowest cited figure 4e4 yr, others 1.7e5 and ~1e6, so 'tens of thousands, maybe far more' is the narrowest reading all support (A3). What 'left' is the energy (MSFC 'This energy diffuses outward'). Stix 2003 not opened; nothing spoken depends on it."
     },
     {
-      "n": 5,
+      "n": 4,
       "claim": "Both start where hydrogen fuses into helium.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://arxiv.org/pdf/1508.05379 eq. (1)",
-      "note": "MSFC: 'The Sun's core is the central region where nuclear reactions consume hydrogen to form helium. These reactions release the energy that ultimately leaves the surface as visible light'; 'In this process of fusing hydrogen to form helium, the nuclear reactions produce elementary particles called neutrinos.'"
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://arxiv.org/pdf/1508.05379",
+      "note": "MSFC: 'The Sun's core is the central region where nuclear reactions consume hydrogen to form helium.' BX-P eq. (1): '4p -> 4He + 2e+ + 2 nu_e', the 'effective reaction' converting hydrogen into helium."
     },
     {
-      "n": 6,
+      "n": 5,
       "claim": "Every second, the Sun turns over four million tonnes of its mass into energy.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html (last updated 9 May 2024)",
-      "note": "NSSDC: 'Mass conversion rate (10^6 kg/s) 4260.' and 'Luminosity (10^24 J/s) 382.8'. Recomputed: 3.828e26 W / c^2 = 4.259e9 kg/s, which is 4.26 million tonnes a second. 'Four million tonnes' rounds down and does not overstate."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c",
+      "note": "NSSDC: 'Mass conversion rate (10^6 kg/s) 4260.' = 4.26 million tonnes/s. Cross-check: luminosity 382.8e24 W / c^2 = 4.259e9 kg/s. 'Four million' rounds down, so it does not overstate."
     },
     {
-      "n": 7,
+      "n": 6,
       "claim": "And every time four hydrogen nuclei become one helium nucleus, two neutrinos are made.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 (Mosteiro et al., Borexino, arXiv:1508.05379v1, sec. 1, eq. 1); https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "BX-P: 'the \"effective reaction\" that takes place is the conversion of hydrogen (p) into helium (He), 4p -> 4He + 2e+ + 2nu_e'. This holds for both the pp chain and the CNO cycle, so 'every time' is fine. MSFC first step: 'two protons collide to produce deuterium, a positron, and a neutrino'."
+      "source_checked": "https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "BX-P eq. (1): '4p -> 4He + 2e+ + 2 nu_e', 'with a net release of kinetic energy and emission of electron neutrinos'. p = hydrogen nucleus. MSFC first step: 'two protons collide to produce deuterium, a positron, and a neutrino'."
     },
     {
-      "n": 8,
+      "n": 7,
       "claim": "Neutrinos barely interact with anything.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 1; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "BX-P: 'they can only interact via the weak force. Thus, they travel almost undisturbed from the core of the Sun to the surface of the Earth'. MSFC: 'pass right through the overlying layers of the Sun'."
+      "source_checked": "https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "BX-P: 'they can only interact via the weak force. Thus, they travel almost undisturbed from the core of the Sun to the surface of the Earth'. MSFC: 'These elusive particles pass right through the overlying layers of the Sun'."
     },
     {
-      "n": 9,
+      "n": 8,
       "claim": "They fly straight out of the Sun in about two seconds.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://www.nature.com/articles/s41567-021-01463-1 (KATRIN, Nature Physics 18, 160 (2022), abstract); https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "R/c = 695,700 km / 299,792.458 km/s = 2.32 s from the centre. MSFC puts the core's edge at about 25% of the radius, so about 1.7 s from there. KATRIN abstract: 'we find an upper limit of m_nu < 0.8 eV c^-2 at 90% CL'. BX-P: the pp spectrum ends at 420 keV. At keV energies gamma > 1e4, so the speed is c for this purpose. 'Straight': BX-P 'almost undisturbed'. 'About two seconds' holds."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://www.nature.com/articles/s41567-021-01463-1; https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "Recomputed: 695,700 km / 299,792,458 m/s = 2.32 s from the centre; from the core edge (MSFC: 175,000 km from centre) (695,700-175,000) km / c = 1.74 s. Speed = c to <1e-8 (KATRIN 'm_nu < 0.8 eV c^-2 at 90% CL'; BX-P pp endpoint 420 keV; at 10 keV gamma = 1.25e4, 1-v/c = 3e-9). 'Straight': MSFC 'pass right through', BX-P 'almost undisturbed'. 'About two seconds' holds for 1.7-2.3 s."
     },
     {
-      "n": 10,
+      "n": 9,
       "claim": "Eight minutes later, they reach the Earth, and pass through you.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://arxiv.org/pdf/1508.05379",
-      "note": "Sun-Earth 147.1-152.1e6 km / c = 491-507 s, i.e. 8.2-8.5 min (about 2.3 s less from the surface). BX-P: 'travel almost undisturbed from the core of the Sun to the surface of the Earth'; they interact only through the weak force."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "Surface to Earth 8.14-8.42 min, mean 8.28 min (recomputed from NSSDC distances and c). 'Pass through you': particles that 'pass right through the overlying layers of the Sun' (MSFC) and 'travel almost undisturbed' (BX-P) to a detector under the Gran Sasso pass through a body; implied by both, not stated in the words 'through you'."
     },
     {
-      "n": 11,
+      "n": 10,
       "claim": "Tens of billions of them cross every square centimetre of you, every second.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 1 and sec. 4",
-      "note": "BX-P measured pp flux: '(6.6 ± 0.7) x 10^10 cm^-2 s^-1, consistent with the SSM prediction'. The SSM values are 5.98 and 6.03 x10^10. That is 60-66 billion from the pp branch alone, so 'tens of billions' is a narrow, true reading."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P: 'we can calculate the pp neutrino flux to be (6.6 +- 0.7) x 10^10 cm^-2 s^-1', and SSM pp flux 5.98-6.03 x 10^10 cm^-2 s^-1. pp alone is ~60-66 billion per cm^2 per second; 'tens of billions' is the narrower reading. Per cm^2 facing the Sun (standard flux convention)."
     },
     {
-      "n": 12,
+      "n": 11,
       "claim": "In Italy, a detector called Borexino counted the ones from fusion's very first step.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 2; https://www.nature.com/articles/nature13702 (abstract)",
-      "note": "BX-P: 'Borexino is a liquid scintillator detector located at the Laboratori Nazionali del Gran Sasso, in central Italy.' BX-N abstract: 'The primary reaction is thought to be the fusion of two protons with the emission of a low-energy neutrino'; 'Here we report spectral observations of pp neutrinos'. 'Counted' is plain language for a measured count rate (counts per day per 100 t), which came from a spectral fit and not a tally of individual events (see claim 37)."
+      "source_checked": "https://arxiv.org/pdf/1508.05379; https://www.nature.com/articles/nature13702 (abstract page)",
+      "note": "BX-P: 'Borexino is a liquid scintillator detector located at the Laboratori Nazionali del Gran Sasso, in central Italy.' BX-N abstract: 'The primary reaction is thought to be the fusion of two protons with the emission of a low-energy neutrino ... Here we report spectral observations of pp neutrinos'. MSFC calls p+p the 'first step'. 'Counted': the result is a rate from a spectral fit, reported in counts per day ('c.p.d. per 100 t'), so 'counted' matches the paper's unit; no individual event is claimed identified."
     },
     {
-      "n": 13,
+      "n": 12,
       "claim": "In every hundred tonnes of its liquid, it caught about a hundred and forty a day.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 3, eq. (2), fit inset of Fig. 3, Extended Data Fig. 8",
-      "note": "BX-P final result: 'R_pp = 144 ± 13 (stat) ± 10 (syst) (d·100 t)^-1'. Extended Data Fig. 8: 'our reported value of 144 c.p.d. per 100 t'. 'A liquid scintillator detector'; the rate is pp-induced electron recoils in the scintillator. 'About a hundred and forty' is a fair rounding."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P eq. (2): 'R_pp = 144 +- 13 (stat) +- 10 (syst) (d . 100 t)^-1'; Extended Data Fig. 8 'our reported value of 144 c.p.d. per 100 t'. Liquid: 'a liquid scintillator detector'. Rate is normalised to 100 t (fiducial mass was 75.5 t), which is what 'in every hundred tonnes' says. 'About 140' for 144."
     },
     {
-      "n": 14,
+      "n": 13,
       "claim": "The energy takes the slow road.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "This compares claims 4 and 9: tens of thousands of years or more against about two seconds. It adds no new figure."
+      "source_checked": "as claims 2, 3, 8 (SVS 11084, MSFC interior, Mitalas & Sills 1992, NSSDC, NIST)",
+      "note": "Comparative only: >= 4e4 yr against ~8 min. No new figure."
     },
     {
-      "n": 15,
+      "n": 14,
       "claim": "It is absorbed and given off again, over and over, then carried up by churning gas.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "SVS: 'absorbed by other atoms and emitted repeatedly until reaching the sun's surface'. MSFC: energy 'diffuses outward by radiation ... through the radiative zone and by convective fluid flows (boiling motion) through the convection zone, the outermost 30%'; 'These convective motions carry heat quite rapidly to the surface'. 'Churning gas' is a fair plain-word reading of 'boiling motion'."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml; https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M",
+      "note": "SVS: 'absorbed by other atoms and emitted repeatedly until reaching the sun's surface'. MSFC: energy moves 'by radiation ... through the radiative zone and by convective fluid flows (boiling motion) through the convection zone, the outermost 30%'; 'These convective motions carry heat quite rapidly to the surface'. Mitalas & Sills: 'In the solar convective zone, however, the energy transfer is by convection'. 'Churning gas' = MSFC's boiling fluid (surface density ~1/10,000 of air)."
     },
     {
-      "n": 16,
+      "n": 15,
       "claim": "Tens of thousands of years later, maybe far more, it leaves the surface as sunlight.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "Same sources as claim 4. MSFC: the energy 'ultimately leaves the surface as visible light'."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml; https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M",
+      "note": "As claim 3 (4e4 / 1.7e5 / ~1e6 yr). MSFC: 'the energy that ultimately leaves the surface as visible light'."
     },
     {
-      "n": 17,
+      "n": 16,
       "claim": "Eight minutes after that, it lands on your skin.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://svs.gsfc.nasa.gov/11084",
-      "note": "149.6e6 km / c = 499 s, about 8.3 min. SVS: 'Light takes eight minutes to travel the 93 million miles from the sun to Earth.' This describes the light's journey, so it reads as conditional on being in sunlight."
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c",
+      "note": "Photosphere to Earth 8.14-8.42 min, mean 8.28 min (recomputed)."
     },
     {
-      "n": 18,
+      "n": 17,
       "claim": "So the sunlight shows what the core was doing when that energy set out.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 4",
-      "note": "This follows from claims 4-5. BX-P uses the same reasoning: agreement 'justifies the assumption made by the SSM that the photon and neutrino luminosities from the Sun can be correlated; i.e., that the Sun has been stable for the past 10^5 years', which treats the photon luminosity as a delayed report of the core's output."
+      "source_checked": "https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "Follows from claims 3/15 and MSFC (core energy is what leaves as light). BX-P frames the same logic: agreement 'justifies the assumption made by the SSM that the photon and neutrino luminosities from the Sun can be correlated; i.e., that the Sun has been stable for the past 10^5 years', i.e. the photon luminosity reflects core output one transit time earlier."
     },
     {
-      "n": 19,
+      "n": 18,
       "claim": "The neutrinos show what it was doing eight minutes ago.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://arxiv.org/pdf/1508.05379",
-      "note": "About 2 s out of the Sun plus about 499 s to Earth, so roughly 8.4 min. BX-P: the neutrinos give 'key information about what goes on at the core of our star'."
+      "source_checked": "as claims 2, 8, 9 (NSSDC, NIST, KATRIN, BX-P)",
+      "note": "2.3 s + 8.3 min: neutrinos arriving now were made ~8.3 min ago; 'eight minutes ago' is the rounding."
     },
     {
-      "n": 20,
+      "n": 19,
       "claim": "In twenty fourteen, Borexino's count matched what the sunlight predicts, to within about ten percent.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.nature.com/articles/nature13702 (doi:10.1038/nature13702; dc.date 2014-08-27, Nature 512, Aug 2014); https://arxiv.org/pdf/1508.05379 secs. 2 and 4",
-      "note": "Published online 27 Aug 2014 (SOURCES says 28 Aug, which is the print issue date); either way, 2014. BX-P expected rate: '131 ± 2 (d·100 t)^-1 (assuming the high-metallicity SSM)'; measured 144 ± 13 (stat) ± 10 (syst). 144/131 = 1.099. The flux 6.6 ± 0.7 is 'consistent with the SSM prediction' (6.6/6.03 = 1.09, 6.6/5.98 = 1.10). 'What the sunlight predicts' simplifies 'the SSM prediction', but BX-P's own framing (photon and neutrino luminosities correlated) supports it. 'Matched to within about ten percent' is accurate."
+      "source_checked": "https://www.nature.com/articles/nature13702 (abstract page, 'Published: 27 August 2014', 'Issue date: 28 August 2014'); https://arxiv.org/pdf/1508.05379",
+      "note": "Date: BX-N published 27 Aug 2014. Prediction: BX-P 'expected rate of pp-induced electron recoils in Borexino to be 131 +- 2 (d.100 t)^-1 (assuming the high-metallicity SSM)'; measured 144 +- 13 +- 10. 144/131 = 1.099 (9.9% apart); combined error sqrt(13^2+10^2) = 16.4 (11%), so they agree within ~0.8 sigma; flux 6.6 vs 6.03 = 9.5% apart, +-0.7 = 10.6%. 'What the sunlight predicts' = the SSM expectation, which BX-P ties to the photon luminosity ('the assumption made by the SSM that the photon and neutrino luminosities from the Sun can be correlated'). 'Matched ... to within about ten percent' holds both as difference and as precision."
     },
     {
-      "n": 21,
+      "n": 20,
       "claim": "So the core is burning about as hard now as when today's sunlight set out.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 4",
-      "note": "BX-P: 'the fact that the present measurement of the pp neutrino flux is consistent with expectation justifies the assumption ... that the Sun has been stable for the past 10^5 years'. The script leaves out BX-P's 10^5 yr figure and ties the claim to the energy's transit time, whatever that is. That is the same logic, and 'about as hard' keeps it to the ~10% precision."
+      "source_checked": "https://arxiv.org/pdf/1508.05379; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "BX-P: 'the present measurement of the pp neutrino flux is consistent with expectation [which] justifies the assumption ... that the Sun has been stable for the past 10^5 years.' The script avoids BX-P's 10^5-yr figure and states the comparison relative to the sunlight's own departure time, which is the logic of BX-P's sentence whatever the transit time. 'About as hard' = within the ~10% precision (claim 19). 'Burning' = MSFC's own 'nuclear burning'."
     },
     {
-      "n": 22,
+      "n": 21,
       "claim": "The sunlight on your skin is old news. The neutrinos are fresh. And they agree.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "As for claims 4, 19, 20",
-      "note": "This restates confirmed claims and adds no new figure."
+      "source_checked": "as claims 3, 9, 19",
+      "note": "Restatement of claims 3/15 (>= tens of thousands of years), 9/18 (~8 min) and 19 (agreement within ~10%). No new figure."
+    },
+    {
+      "n": 22,
+      "claim": "2 THINGS, 1 CORE",
+      "where": "on-screen: hook card",
+      "verdict": "confirmed",
+      "source_checked": "as claim 1",
+      "note": "Same content as claim 1."
     },
     {
       "n": 23,
-      "claim": "2 THINGS, 1 CORE",
-      "where": "on-screen: hook title",
+      "claim": "8 MINUTES AGO / 8 MIN (neutrino lane clock); NEUTRINOS beside 8 MINUTES AGO",
+      "where": "on-screen: neutrino lane tags",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "Neutrinos and the energy that becomes sunlight both come from the core's fusion (MSFC). The night/indoors problem belongs to the spoken 'reaching you' (claim 1), not to this label."
+      "source_checked": "as claims 2, 18",
+      "note": "~8.3 min recomputed; '8' is the rounding."
     },
     {
       "n": 24,
-      "claim": "8 MINUTES AGO (beside NEUTRINOS); 8 MIN (neutrino lane clock)",
-      "where": "on-screen: neutrino lane tags",
+      "claim": "40,000+ YEARS AGO / 40,000+ YEARS (coral lane clock; running year counter climbing to 40,000+ YEARS and stopping); SUNLIGHT: THEN beside 40,000+ YEARS AGO",
+      "where": "on-screen: sunlight lane tags and year counter",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c",
-      "note": "2.3 s + 491-507 s comes to about 8.2-8.5 min. Same check as claims 3 and 19."
+      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://articles.adsabs.harvard.edu/pdf/1992ApJ...401..759M; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "40,000 = SVS, the lowest cited figure; '+' covers 1.7e5 (Mitalas & Sills) and ~1e6 (MSFC). The counter stops at 40,000+, not at a single disputed value."
     },
     {
       "n": 25,
-      "claim": "40,000+ YEARS AGO (beside SUNLIGHT: THEN); 40,000+ YEARS (lane tag); running year counter stopping at 40,000+ YEARS",
-      "where": "on-screen: sunlight lane tags",
+      "claim": "+ 8 MIN",
+      "where": "on-screen: sunlight lane, surface to you",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "SVS gives 40,000 years and MSFC about a million years to the tachocline alone. '40,000+' uses the lowest cited figure as a floor, which is consistent with both sources."
+      "source_checked": "as claim 16",
+      "note": "8.14-8.42 min recomputed."
     },
     {
       "n": 26,
       "claim": "HYDROGEN → HELIUM",
-      "where": "on-screen: fusion label",
+      "where": "on-screen: claim 4 card",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: 'nuclear reactions consume hydrogen to form helium'."
+      "source_checked": "as claim 4",
+      "note": "MSFC 'consume hydrogen to form helium'."
     },
     {
       "n": 27,
       "claim": "CORE; CORE DRAWN AT 1/4 OF THE RADIUS",
-      "where": "on-screen: Sun photo overlay",
+      "where": "on-screen: core marked on Sun photo",
       "verdict": "confirmed",
-      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "MSFC: 'Energy is generated in the core, the innermost 25%'; outer edge 'about 25% of the distance to the surface or 175,000 km from the center'. 175,000/695,700 = 0.25."
+      "source_checked": "https://solarscience.msfc.nasa.gov/interior.shtml; https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+      "note": "MSFC: core is 'the innermost 25%'; edge 'about 25% of the distance to the surface or 175,000 km from the center'. 175,000/695,700 = 0.252."
     },
     {
       "n": 28,
-      "claim": "4 MILLION+ TONNES, sub A SECOND · 4.6 MILLION+ US TONS",
-      "where": "on-screen: mass card",
+      "claim": "4 MILLION+ TONNES, sub 'A SECOND · 4.7 MILLION US TONS'; running tag '<n> TONNES SO FAR' at 4.26 million tonnes per second of video",
+      "where": "on-screen: mass-conversion card",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-      "note": "4.26e9 kg/s is 4.26 million tonnes; divided by 907.185 kg it is 4.696 million US tons. Both labels are rounded-down floors marked '+', so both are true. ('4.7 MILLION' would be the conventional rounding, but '4.6 MILLION+' is not false.)"
+      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; src/shorts/age-of-sunlight-long/index.tsx (TONNES_PER_S = 4.26e6, Tonnes component)",
+      "note": "NSSDC 4260e6 kg/s = 4.26 Mt/s ('4 MILLION+' true). 4.26e9 kg / 907.185 kg = 4.70 million short tons. The tag multiplies elapsed card time by 4.26e6 and rounds to the thousand, matching the stated rate."
     },
     {
       "n": 29,
-      "claim": "<n> TONNES SO FAR, counting at 4.26 million tonnes per second of video from the card's start",
-      "where": "on-screen: running tag on mass card",
+      "claim": "2 NEUTRINOS; 4 H → 1 He + 2 e⁺ + 2 ν (four H discs merge into one He disc, two ν arrows leave)",
+      "where": "on-screen: fusion card",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-      "note": "The rate equals the NSSDC mass conversion rate (4260 x 10^6 kg/s) in real time, so it is correct as long as the video plays at 1x."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P eq. (1) '4p -> 4He + 2e+ + 2 nu_e' with H for p (nuclei, as spoken). Two neutrinos per helium. Housekeeping only: the SOURCES block's closing 'Not spoken' paragraph quotes the label as '4 H → 1 He + 2 ν', while claim 6's entry and the code (index.tsx line 474) have the e⁺ version shown here; the on-screen string is correct."
     },
     {
       "n": 30,
-      "claim": "2 NEUTRINOS; 4 H → 1 He + 2 ν (four H discs merge into one He disc, two ν arrows leave)",
-      "where": "on-screen: fusion card",
+      "claim": "BARELY INTERACT (straight teal lines through a photo of the Sun)",
+      "where": "on-screen: claim 7 card",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 eq. (1)",
-      "note": "BX-P: 4p -> 4He + 2e+ + 2nu_e. The label leaves out the 2 positrons. Read with element symbols (atoms), 4 1H -> 4He + 2nu (+ energy) is a valid net equation, because the positrons annihilate with two of the electrons, so the label is not wrong. The neutrino count, 2, is correct."
+      "source_checked": "as claim 7",
+      "note": "MSFC 'pass right through the overlying layers'; BX-P 'almost undisturbed'."
     },
     {
       "n": 31,
-      "claim": "BARELY INTERACT (straight teal lines through a photo of the Sun)",
-      "where": "on-screen: neutrino card",
+      "claim": "ABOUT 2 SECONDS, running clock 0.0 S → 2.3 S",
+      "where": "on-screen: claim 8 card",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 1; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "Same as claims 8-9."
+      "source_checked": "as claim 8 (NSSDC radius, NIST c)",
+      "note": "R/c = 2.32 s, the time from the centre; the clock stops at 2.3 s (index.tsx EXIT_S = 2.32)."
     },
     {
       "n": 32,
-      "claim": "ABOUT 2 SECONDS, with running clock 0.0 S → 2.3 S",
-      "where": "on-screen: neutrino exit card",
+      "claim": "8 MINUTES LATER (teal lines through a photo of a hand)",
+      "where": "on-screen: claim 9 card",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c",
-      "note": "695,700 km / c = 2.32 s. A clock that stops at 2.3 S is correct for the full radius."
+      "source_checked": "as claim 9",
+      "note": "8.28 min mean recomputed; pass-through as claim 9."
     },
     {
       "n": 33,
-      "claim": "8 MINUTES LATER (teal lines through a photo of a hand); + 8 MIN (sunlight after leaving the surface)",
-      "where": "on-screen: arrival cards",
+      "claim": "TENS OF BILLIONS, sub 'PER CM² (0.16 SQ IN), PER SECOND'; square '1 cm² (ENLARGED)'; tag 'SCHEMATIC'",
+      "where": "on-screen: flux card",
       "verdict": "confirmed",
-      "source_checked": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html; https://physics.nist.gov/cgi-bin/cuu/Value?c; https://arxiv.org/pdf/1508.05379",
-      "note": "491-507 s, which is 8.2-8.5 min. Neutrinos 'travel almost undisturbed' (BX-P), so drawing them passing through the hand fits."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P pp flux (6.6 +- 0.7) x 10^10 cm^-2 s^-1. 1 cm^2 = 0.155 sq in -> 0.16. Enlargement and dot count are flagged as schematic (A6)."
     },
     {
       "n": 34,
-      "claim": "TENS OF BILLIONS, sub PER CM² (0.16 SQ IN), PER SECOND; square labelled 1 cm² (ENLARGED); tag SCHEMATIC",
-      "where": "on-screen: flux card",
+      "claim": "BOREXINO, ITALY (drawn sphere in a tank, tag 'SCHEMATIC')",
+      "where": "on-screen: detector card",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 4",
-      "note": "6.6e10 cm^-2 s^-1 from pp alone. 1 cm^2 = 1/2.54^2 = 0.155 sq in, which rounds to 0.16. The dots are labelled schematic."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P: liquid scintillator inner detector viewed by PMTs, 'Outside the inner detector, a water tank'; 'Laboratori Nazionali del Gran Sasso, in central Italy'. Drawing labelled schematic."
     },
     {
       "n": 35,
-      "claim": "BOREXINO, ITALY (drawn sphere in a tank, tag SCHEMATIC)",
-      "where": "on-screen: detector card",
+      "claim": "ABOUT 140 A DAY, sub 'PER 100 TONNES (110 US TONS)'; schematic tally marks filling to 144 under '144 A DAY (AVERAGE)'",
+      "where": "on-screen: rate card",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 2",
-      "note": "BX-P: 'located at the Laboratori Nazionali del Gran Sasso, in central Italy'. It describes an inner detector surrounded by PMTs inside 'a water tank', with a spherical fiducial volume. The drawing is labelled schematic."
+      "source_checked": "https://arxiv.org/pdf/1508.05379",
+      "note": "BX-P eq. (2) 144 per day per 100 t. 100 t / 0.907185 t = 110.2 short tons. 'AVERAGE' is right: the 144 is a fitted mean rate over 408 live days (Jan 2012-Jun 2013), not a daily count; the tally is labelled schematic."
     },
     {
       "n": 36,
-      "claim": "ABOUT 140 A DAY, sub PER 100 TONNES (110 US TONS)",
-      "where": "on-screen: detector card",
+      "claim": "THE SLOW ROAD; OVER AND OVER",
+      "where": "on-screen: claims 13-14 cards",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 eq. (2)",
-      "note": "R_pp = 144 ± 13 (stat) ± 10 (syst) per day per 100 t. 100 t / 0.907185 t = 110.2 US tons."
+      "source_checked": "as claims 13, 14",
+      "note": "SVS 'absorbed ... and emitted repeatedly'."
     },
     {
       "n": 37,
-      "claim": "Tally counting up to 144 IN ONE DAY",
-      "where": "on-screen: detector card tally",
-      "verdict": "fix",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 secs. 2-3, eq. (2), Fig. 3",
-      "note": "144 is a mean rate, normalised to 100 t, from a spectral fit over 408 live days (Jan 2012-Jun 2013). It is not one day's count. The analysed fiducial volume was 75.5 t, and individual pp events cannot be picked out: they were separated statistically from 14C decays at ~40 per second per 100 t and ~100/day of pile-up. 'IN ONE DAY' presents an average as a tally of a single day. Change the label to '144 A DAY (AVERAGE)' or 'AVERAGE: 144 A DAY', or drop the per-event tally framing. Keep '144' only with the per-100 t sub visible."
+      "claim": "WITHIN ABOUT 10%; bars 'SUNLIGHT PREDICTS' 131 and 'BOREXINO COUNTED' 144 ± 16; axis 'PER DAY, PER 100 TONNES'",
+      "where": "on-screen: comparison chart",
+      "verdict": "confirmed",
+      "source_checked": "https://arxiv.org/pdf/1508.05379; src/shorts/age-of-sunlight-long/index.tsx (bar chart code)",
+      "note": "BX-P: expected '131 +- 2 (d.100 t)^-1', measured '144 +- 13 (stat) +- 10 (syst)'; quadrature 16.4 -> 16. Bars are zero-based and linear (height = value x 3.6 px), so the chart does not exaggerate the gap. 144/131 = 1.10."
     },
     {
       "n": 38,
-      "claim": "THE SLOW ROAD; OVER AND OVER",
-      "where": "on-screen: energy lane cards",
+      "claim": "ABOUT THE SAME",
+      "where": "on-screen: claim 20 card",
       "verdict": "confirmed",
-      "source_checked": "https://svs.gsfc.nasa.gov/11084; https://solarscience.msfc.nasa.gov/interior.shtml",
-      "note": "Same as claims 14-15."
+      "source_checked": "as claims 19, 20",
+      "note": "Within ~10% (0.8 sigma); BX-P 'consistent with expectation', 'stable'."
     },
     {
       "n": 39,
-      "claim": "WITHIN ABOUT 10%; bar SUNLIGHT PREDICTS 131; axis PER DAY, PER 100 TONNES",
-      "where": "on-screen: agreement chart",
+      "claim": "OLD NEWS; FRESH; THEY AGREE",
+      "where": "on-screen: closing cards",
       "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 2",
-      "note": "BX-P: 'expected rate of pp-induced electron recoils in Borexino to be 131 ± 2 (d·100 t)^-1 (assuming the high-metallicity SSM)'. Units match the axis. 144/131 = 1.099, so 'within about 10%' is right. 'SUNLIGHT PREDICTS' stands for the SSM, as in claim 20."
+      "source_checked": "as claim 21",
+      "note": "Restates claims 3, 9, 19."
     },
     {
       "n": 40,
-      "claim": "BOREXINO COUNTED 144 ± 13",
-      "where": "on-screen: agreement chart bar",
-      "verdict": "fix",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 eq. (2) and Fig. 3 inset",
-      "note": "'± 13' is only the statistical part. BX-P's final result is 'R_pp = 144 ± 13 (stat) ± 10 (syst) (d·100 t)^-1'. The '144 ± 13' in the Fig. 3 inset is the bare fit value. The chart understates the measurement's uncertainty (the total in quadrature is about ±16), which A6 does not allow. Show '144 ± 13 ± 10', or '144 ± 16' with a SOURCES note that stat and syst were combined in quadrature, or drop the error bar. Update SOURCES entry 19 too, which calls ±13 'the count's uncertainty'."
-    },
-    {
-      "n": 41,
-      "claim": "ABOUT THE SAME; OLD NEWS; FRESH; THEY AGREE",
-      "where": "on-screen: closing cards",
-      "verdict": "confirmed",
-      "source_checked": "https://arxiv.org/pdf/1508.05379 sec. 4",
-      "note": "These restate claims 20-22. BX-P: the flux is 'consistent with the SSM prediction'."
-    },
-    {
-      "n": 42,
-      "claim": "NOT TO SCALE (on every two-lane diagram)",
+      "claim": "NOT TO SCALE on every two-lane diagram (drawn Sun at top, photo of a hand standing for 'you' at bottom; straight teal and tangled coral lanes)",
       "where": "on-screen: two-lane diagrams",
       "verdict": "confirmed",
-      "source_checked": "Script SOURCES 'Not spoken' section (A6 disclosure)",
-      "note": "The lanes, Sun, hand and distances are schematic, and the label discloses this as A6 requires. The zones follow MSFC (core to 0.25 R, radiative zone 0.25-0.70 R, convection zone outermost 30%), which I checked at https://solarscience.msfc.nasa.gov/interior.shtml."
+      "source_checked": "src/shorts/age-of-sunlight-long/index.tsx; https://solarscience.msfc.nasa.gov/interior.shtml",
+      "note": "A6: the deliberately non-to-scale sizes and distances are flagged on screen. Zones match MSFC (core to 0.25 R, radiative 0.25-0.70 R, convection above)."
     }
   ]
 }
