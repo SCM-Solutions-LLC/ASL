@@ -147,6 +147,8 @@ export const makeCut = <P extends Pics>(dir: string, PICS: P) => {
     flip?: boolean;
     tone?: string;
     edge?: number;
+    /** 0 holds the piece still, for a card that drifts instead. */
+    jitter?: number;
   }> = ({
     pic,
     x,
@@ -161,9 +163,10 @@ export const makeCut = <P extends Pics>(dir: string, PICS: P) => {
     flip,
     tone,
     edge = 14,
+    jitter = 1,
   }) => {
     const f = useCurrentFrame();
-    const j = useJitter(`${pic}${x}${y}`);
+    const j = useJitter(`${pic}${x}${y}`, jitter);
     const [pw, ph] = PICS[pic];
     const [bx, by0, bw, bh] = box ?? [0, 0, pw, ph];
     const k = w / bw;

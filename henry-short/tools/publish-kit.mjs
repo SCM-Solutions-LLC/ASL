@@ -30,6 +30,8 @@ if (source.includes("makeDraftEdit")) fail(`${slug} is still drafted (makeDraftE
 const metaPath = `publish/${slug}.json`;
 if (!existsSync(metaPath)) fail(`${metaPath} is missing — the post text is written and reviewed with the short, not at upload time`);
 const meta = JSON.parse(readFileSync(metaPath, "utf8"));
+// GUARDRAILS B1: a replaced short keeps its post text for the record but is never kitted again.
+if (meta.superseded_by) fail(`${slug} is superseded by ${meta.superseded_by}; publish only one of the two (B1)`);
 
 // Limits as the platforms enforce them. TikTok's is the one the Higgsfield publish tool accepts
 // for a title; YouTube's title is 100 and a Short needs no #Shorts tag but is found faster with one.

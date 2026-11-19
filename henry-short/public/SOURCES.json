@@ -293,5 +293,17 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "The Open Goldberg Variations recording was released CC0 by the performer. Bed for the cell-count card deck, chosen by ear from two candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`) from Commons' Ogg rendition. Licence read on the file's page on 2026-11-10."
+ },
+ "public/music/gravity-turn.mp3": {
+  "source": "\"Gravity Turn\" (action version) by vitalezzz, https://opengameart.org/content/gravity-turn",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for the long age-of-sunlight short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
+ },
+ "public/music/discovery.mp3": {
+  "source": "\"GSF Discovery\" by vitalezzz, https://opengameart.org/content/gsf-discovery",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author. Bed for the long deepest-hole short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
  }
 }
