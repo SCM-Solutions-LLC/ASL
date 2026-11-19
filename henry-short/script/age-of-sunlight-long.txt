@@ -100,8 +100,11 @@ Sources read for this script (19 Nov 2026):
    BX-P eq. (1), the net reaction: 4p -> 4He + 2e+ + 2 nu_e. A hydrogen nucleus is a proton.
    BX-P calls it the "effective reaction" of hydrogen burning; MSFC's first step: "two protons
    collide to produce deuterium, a positron, and a neutrino".
-   On screen: four small discs joining into one larger disc, two arrows leaving, labelled "ν",
-   and the line "4 H → 1 He + 2 e⁺ + 2 ν", BX-P eq. (1) with hydrogen nuclei for p.
+   On screen: four small discs closing in and joining into one larger disc, two lines leaving,
+   labelled "ν", and the line "4 H → 1 He + 2 e⁺ + 2 ν", BX-P eq. (1) with hydrogen nuclei for p.
+   The card is tagged "NET RESULT OF SEVERAL STEPS · SCHEMATIC": the real reaction is a chain of
+   two-body steps (BX-P Fig. 1; MSFC's first, second and third steps), with the neutrinos made
+   along the way, not by the finished helium nucleus.
 
 7. "Neutrinos barely interact with anything."
    BX-P: "they can only interact via the weak force. Thus, they travel almost undisturbed".
@@ -214,8 +217,8 @@ Sources read for this script (19 Nov 2026):
 Not spoken: the two lanes. Through the short, one flash in a drawn core splits into a straight
 teal line (the neutrinos) and a tangled coral line (the energy), each with its own clock: the teal
 one in seconds and minutes, the coral one in years. Both are schematic and labelled "NOT TO
-SCALE"; the Sun, the hand that stands for you and the distance between them are not drawn to
-scale. Zones as in
+SCALE"; the Sun, the photograph that stands for you and the distance between them are not drawn
+to scale. Zones as in
 script/age-of-sunlight.txt claim 6: core to 0.25 R, radiative zone 0.25-0.70 R, convection zone
 above (MSFC).
 
@@ -224,6 +227,7 @@ Their clock tags: "8 MIN" (neutrinos, claim 2), "40,000+ YEARS" (claim 3), "+ 8 
 THEN" (claim 17), "NEUTRINOS" beside "8 MINUTES AGO" (claim 18); a running year counter climbs to
 "40,000+ YEARS" and stops there (claim 15). "CORE" marks the core at a quarter of the radius on
 the photograph of the Sun, tagged "CORE DRAWN AT 1/4 OF THE RADIUS" (MSFC: the core is the
-innermost 25% of the radius). The fusion card is labelled "4 H → 1 He + 2 ν" (claim 6). The
+innermost 25% of the radius). The fusion card is labelled "4 H → 1 He + 2 e⁺ + 2 ν" (claim 6). The
 photographs (public/cutout/sunlight/, declared in public/SOURCES.json) are NASA images of
-the Sun and a CC0 photograph of a hand, which stands for "you".
+the Sun and a NASA photograph from the ISS of sunrise over the Earth (ISS047-E-138450), which
+stands for "you".

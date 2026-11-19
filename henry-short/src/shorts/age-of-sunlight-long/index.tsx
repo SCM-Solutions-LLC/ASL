@@ -58,8 +58,8 @@ const edit = makeEdit({
 const S = edit.words
   .filter((w, i) => i === 0 || /\.$/.test(edit.words[i - 1].text))
   .map((w) => w.start);
-if (S.length !== 23)
-  throw new Error(`expected 23 sentences, found ${S.length}`);
+if (S.length !== 24)
+  throw new Error(`expected 24 sentences, found ${S.length}`);
 const at = (s: number, word: string) => {
   const hit = edit.words.find(
     (w) => w.start >= S[s] && clean(w.text) === clean(word),
@@ -650,19 +650,6 @@ const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
                 {out > 0 && out < 1 && (
                   <Spark x={x2} y={c.y} colour={TEAL} r={16} />
                 )}
-                {out >= 1 &&
-                  [0, 1, 2].map((k) => (
-                    // More neutrinos after the first: beads running out along the line.
-                    <circle
-                      key={k}
-                      cx={c.x + s * (120 + 300 * ((f / 30 + k / 3) % 1))}
-                      cy={c.y}
-                      r={10}
-                      fill={CREAM}
-                      stroke={TEAL}
-                      strokeWidth={4}
-                    />
-                  ))}
                 {out > 0.2 && (
                   <Tick
                     x={x2 + s * 34}
@@ -681,6 +668,13 @@ const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
     </Marks>
   );
 };
+// Fusion is drawn as one merge; the real thing is a chain of steps, and the card says so.
+const FusionCard: React.FC<{ a: number; b: number }> = (p) => (
+  <>
+    <Fusion {...p} />
+    <NotToScale y={1040} text="NET RESULT OF SEVERAL STEPS · SCHEMATIC" />
+  </>
+);
 
 // Straight teal lines through a picture: neutrinos passing through without stopping.
 const Through: React.FC<{
@@ -1018,7 +1012,7 @@ const Deck: React.FC = () => (
       at={at(5, "neutrinos")}
       sheet={CREAM}
     >
-      <Fusion a={at(5, "four")} b={at(5, "become") + 14} />
+      <FusionCard a={at(5, "four")} b={at(5, "become") + 14} />
     </Card>
     <Card
       from={cut(6)}

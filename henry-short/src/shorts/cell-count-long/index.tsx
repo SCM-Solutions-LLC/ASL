@@ -50,7 +50,7 @@ const edit = makeEdit({
 const S = edit.words
   .filter((w, i) => i === 0 || /\.$/.test(edit.words[i - 1].text))
   .map((w) => w.start);
-if (S.length !== 20) throw new Error(`expected 20 sentences, found ${S.length}`);
+if (S.length !== 21) throw new Error(`expected 21 sentences, found ${S.length}`);
 const at = (s: number, word: string) => {
   const hit = edit.words.find((w) => w.start >= S[s] && clean(w.text) === clean(word));
   if (!hit) throw new Error(`"${word}" is not spoken in or after sentence ${s}`);
