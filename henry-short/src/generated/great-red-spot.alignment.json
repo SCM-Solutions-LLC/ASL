@@ -1,0 +1,648 @@
+{
+ "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "script": "script/great-red-spot.txt",
+ "audio": "public/vo/great-red-spot.wav",
+ "sha256": "4704e3ec2464f6787ab702e4722f2c9c7ba94a9b0057c8ca287cbfb0728e9832",
+ "words": [
+  {
+   "text": "In",
+   "start": 0.0,
+   "end": 0.367
+  },
+  {
+   "text": "1665,",
+   "start": 0.367,
+   "end": 0.812
+  },
+  {
+   "text": "the",
+   "start": 0.812,
+   "end": 1.218
+  },
+  {
+   "text": "astronomer",
+   "start": 1.218,
+   "end": 1.895
+  },
+  {
+   "text": "Cassini",
+   "start": 1.895,
+   "end": 2.459
+  },
+  {
+   "text": "saw",
+   "start": 2.459,
+   "end": 2.865
+  },
+  {
+   "text": "a",
+   "start": 2.865,
+   "end": 3.192
+  },
+  {
+   "text": "dark",
+   "start": 3.192,
+   "end": 3.638
+  },
+  {
+   "text": "oval",
+   "start": 3.638,
+   "end": 4.083
+  },
+  {
+   "text": "on",
+   "start": 4.083,
+   "end": 4.45
+  },
+  {
+   "text": "Jupiter.",
+   "start": 4.45,
+   "end": 5.013
+  },
+  {
+   "text": "It",
+   "start": 5.71,
+   "end": 5.946
+  },
+  {
+   "text": "was",
+   "start": 5.946,
+   "end": 6.207
+  },
+  {
+   "text": "probably",
+   "start": 6.207,
+   "end": 6.594
+  },
+  {
+   "text": "not",
+   "start": 6.594,
+   "end": 6.855
+  },
+  {
+   "text": "the",
+   "start": 6.855,
+   "end": 7.116
+  },
+  {
+   "text": "Great",
+   "start": 7.116,
+   "end": 7.428
+  },
+  {
+   "text": "Red",
+   "start": 7.428,
+   "end": 7.689
+  },
+  {
+   "text": "Spot.",
+   "start": 7.689,
+   "end": 7.975
+  },
+  {
+   "text": "Astronomers",
+   "start": 8.595,
+   "end": 9.351
+  },
+  {
+   "text": "kept",
+   "start": 9.351,
+   "end": 9.848
+  },
+  {
+   "text": "reporting",
+   "start": 9.848,
+   "end": 10.564
+  },
+  {
+   "text": "his",
+   "start": 10.564,
+   "end": 11.017
+  },
+  {
+   "text": "spot",
+   "start": 11.017,
+   "end": 11.514
+  },
+  {
+   "text": "until",
+   "start": 11.514,
+   "end": 12.055
+  },
+  {
+   "text": "1713.",
+   "start": 12.055,
+   "end": 12.552
+  },
+  {
+   "text": "Then,",
+   "start": 13.23,
+   "end": 13.534
+  },
+  {
+   "text": "for",
+   "start": 13.534,
+   "end": 13.811
+  },
+  {
+   "text": "about",
+   "start": 13.811,
+   "end": 14.141
+  },
+  {
+   "text": "a",
+   "start": 14.141,
+   "end": 14.365
+  },
+  {
+   "text": "hundred",
+   "start": 14.365,
+   "end": 14.749
+  },
+  {
+   "text": "and",
+   "start": 14.749,
+   "end": 15.025
+  },
+  {
+   "text": "eighteen",
+   "start": 15.025,
+   "end": 15.436
+  },
+  {
+   "text": "years,",
+   "start": 15.436,
+   "end": 15.767
+  },
+  {
+   "text": "nobody",
+   "start": 15.767,
+   "end": 16.124
+  },
+  {
+   "text": "recorded",
+   "start": 16.124,
+   "end": 16.535
+  },
+  {
+   "text": "it",
+   "start": 16.535,
+   "end": 16.785
+  },
+  {
+   "text": "at",
+   "start": 16.785,
+   "end": 17.035
+  },
+  {
+   "text": "all.",
+   "start": 17.035,
+   "end": 17.312
+  },
+  {
+   "text": "The",
+   "start": 18.015,
+   "end": 18.318
+  },
+  {
+   "text": "storm",
+   "start": 18.318,
+   "end": 18.68
+  },
+  {
+   "text": "we",
+   "start": 18.68,
+   "end": 18.954
+  },
+  {
+   "text": "call",
+   "start": 18.954,
+   "end": 19.286
+  },
+  {
+   "text": "the",
+   "start": 19.286,
+   "end": 19.59
+  },
+  {
+   "text": "Great",
+   "start": 19.59,
+   "end": 19.951
+  },
+  {
+   "text": "Red",
+   "start": 19.951,
+   "end": 20.255
+  },
+  {
+   "text": "Spot",
+   "start": 20.255,
+   "end": 20.587
+  },
+  {
+   "text": "first",
+   "start": 20.587,
+   "end": 20.949
+  },
+  {
+   "text": "shows",
+   "start": 20.949,
+   "end": 21.311
+  },
+  {
+   "text": "up",
+   "start": 21.311,
+   "end": 21.585
+  },
+  {
+   "text": "in",
+   "start": 21.585,
+   "end": 21.859
+  },
+  {
+   "text": "drawings",
+   "start": 21.859,
+   "end": 22.308
+  },
+  {
+   "text": "in",
+   "start": 22.308,
+   "end": 22.582
+  },
+  {
+   "text": "1831.",
+   "start": 22.582,
+   "end": 22.915
+  },
+  {
+   "text": "And",
+   "start": 23.6,
+   "end": 23.922
+  },
+  {
+   "text": "Cassini's",
+   "start": 23.922,
+   "end": 24.432
+  },
+  {
+   "text": "spot",
+   "start": 24.432,
+   "end": 24.785
+  },
+  {
+   "text": "was",
+   "start": 24.785,
+   "end": 25.107
+  },
+  {
+   "text": "only",
+   "start": 25.107,
+   "end": 25.461
+  },
+  {
+   "text": "a",
+   "start": 25.461,
+   "end": 25.721
+  },
+  {
+   "text": "third",
+   "start": 25.721,
+   "end": 26.105
+  },
+  {
+   "text": "to",
+   "start": 26.105,
+   "end": 26.396
+  },
+  {
+   "text": "a",
+   "start": 26.396,
+   "end": 26.656
+  },
+  {
+   "text": "half",
+   "start": 26.656,
+   "end": 27.01
+  },
+  {
+   "text": "as",
+   "start": 27.01,
+   "end": 27.301
+  },
+  {
+   "text": "long",
+   "start": 27.301,
+   "end": 27.654
+  },
+  {
+   "text": "as",
+   "start": 27.654,
+   "end": 27.945
+  },
+  {
+   "text": "the",
+   "start": 27.945,
+   "end": 28.268
+  },
+  {
+   "text": "Great",
+   "start": 28.268,
+   "end": 28.652
+  },
+  {
+   "text": "Red",
+   "start": 28.652,
+   "end": 28.974
+  },
+  {
+   "text": "Spot",
+   "start": 28.974,
+   "end": 29.328
+  },
+  {
+   "text": "was",
+   "start": 29.328,
+   "end": 29.65
+  },
+  {
+   "text": "in",
+   "start": 29.65,
+   "end": 29.941
+  },
+  {
+   "text": "1879.",
+   "start": 29.941,
+   "end": 30.295
+  },
+  {
+   "text": "To",
+   "start": 31.01,
+   "end": 31.239
+  },
+  {
+   "text": "be",
+   "start": 31.239,
+   "end": 31.467
+  },
+  {
+   "text": "the",
+   "start": 31.467,
+   "end": 31.721
+  },
+  {
+   "text": "same",
+   "start": 31.721,
+   "end": 31.998
+  },
+  {
+   "text": "storm,",
+   "start": 31.998,
+   "end": 32.3
+  },
+  {
+   "text": "it",
+   "start": 32.3,
+   "end": 32.529
+  },
+  {
+   "text": "would",
+   "start": 32.529,
+   "end": 32.831
+  },
+  {
+   "text": "have",
+   "start": 32.831,
+   "end": 33.109
+  },
+  {
+   "text": "had",
+   "start": 33.109,
+   "end": 33.362
+  },
+  {
+   "text": "to",
+   "start": 33.362,
+   "end": 33.591
+  },
+  {
+   "text": "keep",
+   "start": 33.591,
+   "end": 33.868
+  },
+  {
+   "text": "growing",
+   "start": 33.868,
+   "end": 34.219
+  },
+  {
+   "text": "for",
+   "start": 34.219,
+   "end": 34.472
+  },
+  {
+   "text": "more",
+   "start": 34.472,
+   "end": 34.75
+  },
+  {
+   "text": "than",
+   "start": 34.75,
+   "end": 35.028
+  },
+  {
+   "text": "a",
+   "start": 35.028,
+   "end": 35.232
+  },
+  {
+   "text": "century,",
+   "start": 35.232,
+   "end": 35.583
+  },
+  {
+   "text": "unseen.",
+   "start": 35.583,
+   "end": 35.91
+  },
+  {
+   "text": "No",
+   "start": 36.595,
+   "end": 36.842
+  },
+  {
+   "text": "storm",
+   "start": 36.842,
+   "end": 37.169
+  },
+  {
+   "text": "on",
+   "start": 37.169,
+   "end": 37.416
+  },
+  {
+   "text": "Jupiter",
+   "start": 37.416,
+   "end": 37.795
+  },
+  {
+   "text": "has",
+   "start": 37.795,
+   "end": 38.069
+  },
+  {
+   "text": "ever",
+   "start": 38.069,
+   "end": 38.369
+  },
+  {
+   "text": "been",
+   "start": 38.369,
+   "end": 38.669
+  },
+  {
+   "text": "seen",
+   "start": 38.669,
+   "end": 38.969
+  },
+  {
+   "text": "to",
+   "start": 38.969,
+   "end": 39.216
+  },
+  {
+   "text": "grow",
+   "start": 39.216,
+   "end": 39.516
+  },
+  {
+   "text": "like",
+   "start": 39.516,
+   "end": 39.816
+  },
+  {
+   "text": "that.",
+   "start": 39.816,
+   "end": 40.116
+  },
+  {
+   "text": "So",
+   "start": 40.855,
+   "end": 41.095
+  },
+  {
+   "text": "the",
+   "start": 41.095,
+   "end": 41.361
+  },
+  {
+   "text": "Great",
+   "start": 41.361,
+   "end": 41.678
+  },
+  {
+   "text": "Red",
+   "start": 41.678,
+   "end": 41.943
+  },
+  {
+   "text": "Spot",
+   "start": 41.943,
+   "end": 42.235
+  },
+  {
+   "text": "has",
+   "start": 42.235,
+   "end": 42.5
+  },
+  {
+   "text": "been",
+   "start": 42.5,
+   "end": 42.792
+  },
+  {
+   "text": "on",
+   "start": 42.792,
+   "end": 43.032
+  },
+  {
+   "text": "record",
+   "start": 43.032,
+   "end": 43.374
+  },
+  {
+   "text": "for",
+   "start": 43.374,
+   "end": 43.64
+  },
+  {
+   "text": "nearly",
+   "start": 43.64,
+   "end": 43.983
+  },
+  {
+   "text": "two",
+   "start": 43.983,
+   "end": 44.249
+  },
+  {
+   "text": "hundred",
+   "start": 44.249,
+   "end": 44.617
+  },
+  {
+   "text": "years.",
+   "start": 44.617,
+   "end": 44.934
+  },
+  {
+   "text": "Cassini's",
+   "start": 45.565,
+   "end": 46.035
+  },
+  {
+   "text": "spot",
+   "start": 46.035,
+   "end": 46.361
+  },
+  {
+   "text": "was",
+   "start": 46.361,
+   "end": 46.658
+  },
+  {
+   "text": "most",
+   "start": 46.658,
+   "end": 46.984
+  },
+  {
+   "text": "likely",
+   "start": 46.984,
+   "end": 47.368
+  },
+  {
+   "text": "a",
+   "start": 47.368,
+   "end": 47.608
+  },
+  {
+   "text": "different",
+   "start": 47.608,
+   "end": 48.078
+  },
+  {
+   "text": "storm,",
+   "start": 48.078,
+   "end": 48.432
+  },
+  {
+   "text": "long",
+   "start": 48.432,
+   "end": 48.758
+  },
+  {
+   "text": "gone.",
+   "start": 48.758,
+   "end": 49.085
+  }
+ ]
+}
