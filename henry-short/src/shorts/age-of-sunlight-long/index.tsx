@@ -501,11 +501,14 @@ const Running: React.FC<{
   return <Tag x={x} y={y} text={text} ink={ink} from={a - 8} />;
 };
 
-// Four hydrogen nuclei close in and become one helium nucleus; two neutrinos leave.
+// Four hydrogen nuclei close in and become one helium nucleus; two neutrinos leave. Drawn inside a
+// glow standing for the core's heat: the nuclei jostle and spiral in, the merge flashes, the helium
+// nucleus glows, and the neutrinos streak off with bright heads. Net reaction only, as the equation says.
 const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
   const f = useCurrentFrame();
   const t = ramp(f, a, b);
   const out = ramp(f, b, b + 24);
+  const flash = f >= b ? Math.max(0, 1 - (f - b) / 16) : 0;
   const c = { x: 540, y: 560 };
   const corners = [
     [-1, -1],
@@ -513,31 +516,115 @@ const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
     [-1, 1],
     [1, 1],
   ];
-  const spread = 280 * (1 - t);
+  const spread = 230 * (1 - t);
+  const spin = t * 1.6; // radians the four turn through as they close in
+  const heat = rng(7);
+  const motes = Array.from({ length: 60 }, () => [heat(), heat(), heat()]);
   return (
     <Marks>
+      <defs>
+        <radialGradient id="fusion-heat">
+          <stop offset={0} stopColor="#fff3c4" />
+          <stop offset={0.55} stopColor="#ffc85c" stopOpacity={0.9} />
+          <stop offset={1} stopColor="#ff9a3c" stopOpacity={0} />
+        </radialGradient>
+      </defs>
+      <circle
+        cx={c.x}
+        cy={c.y}
+        r={460 * (1 + 0.03 * Math.sin(f / 7))}
+        fill="url(#fusion-heat)"
+      />
+      {motes.map(([u, v, w], i) => {
+        // Hot gas: specks drifting on their own small loops.
+        const ang = u * Math.PI * 2 + f * (0.01 + w * 0.02);
+        const rad = 60 + v * 360;
+        return (
+          <circle
+            key={i}
+            cx={c.x + Math.cos(ang) * rad}
+            cy={c.y + Math.sin(ang) * rad * 0.9}
+            r={3 + w * 4}
+            fill={CORAL}
+            opacity={0.35}
+          />
+        );
+      })}
       {t < 1 &&
-        corners.map(([dx, dy], i) => (
-          <g key={i}>
-            <circle
-              cx={c.x + dx * (spread + 40)}
-              cy={c.y + dy * (spread + 40)}
-              r={46}
-              fill={CORAL}
-              stroke={INK}
-              strokeWidth={7}
-            />
-            <Tick
-              x={c.x + dx * (spread + 40)}
-              y={c.y + dy * (spread + 40) + 4}
-              text="H"
-              size={44}
-              fill={CREAM}
-            />
-          </g>
-        ))}
+        corners.map(([dx, dy], i) => {
+          const r0 = Math.SQRT2 * (spread + 40);
+          const ang = Math.atan2(dy, dx) + spin;
+          const jx = Math.sin(f * 0.9 + i * 2) * 6 * (1 - t);
+          const jy = Math.cos(f * 1.1 + i * 3) * 6 * (1 - t);
+          const x = c.x + Math.cos(ang) * r0 + jx;
+          const y = c.y + Math.sin(ang) * r0 + jy;
+          const trail = Math.cos(ang - 0.25) * (r0 + 30);
+          const trailY = Math.sin(ang - 0.25) * (r0 + 30);
+          return (
+            <g key={i}>
+              {t > 0 && (
+                <line
+                  x1={x}
+                  y1={y}
+                  x2={c.x + trail}
+                  y2={c.y + trailY}
+                  stroke={CORAL}
+                  strokeWidth={14}
+                  strokeLinecap="round"
+                  opacity={0.3}
+                />
+              )}
+              <circle
+                cx={x}
+                cy={y}
+                r={46}
+                fill={CORAL}
+                stroke={INK}
+                strokeWidth={7}
+              />
+              <Tick x={x} y={y + 4} text="H" size={44} fill={CREAM} />
+            </g>
+          );
+        })}
+      {flash > 0 && (
+        <>
+          <circle
+            cx={c.x}
+            cy={c.y}
+            r={90 + (1 - flash) * 330}
+            fill="none"
+            stroke={YELLOW}
+            strokeWidth={24 * flash}
+          />
+          {Array.from({ length: 12 }, (_, i) => {
+            const ang = (i / 12) * Math.PI * 2;
+            const r1 = 110 + (1 - flash) * 120;
+            const r2 = r1 + 90 * flash;
+            return (
+              <line
+                key={i}
+                x1={c.x + Math.cos(ang) * r1}
+                y1={c.y + Math.sin(ang) * r1}
+                x2={c.x + Math.cos(ang) * r2}
+                y2={c.y + Math.sin(ang) * r2}
+                stroke={INK}
+                strokeWidth={8}
+                strokeLinecap="round"
+                opacity={flash}
+              />
+            );
+          })}
+        </>
+      )}
       {t >= 1 && (
         <>
+          <circle
+            cx={c.x}
+            cy={c.y}
+            r={130 + 10 * Math.sin(f / 5)}
+            fill={YELLOW}
+            opacity={0.35}
+          />
           <circle
             cx={c.x}
             cy={c.y}
@@ -560,6 +647,22 @@ const Fusion: React.FC<{ a: number; b: number }> = ({ a, b }) => {
                   strokeWidth={12}
                   strokeLinecap="round"
                 />
+                {out > 0 && out < 1 && (
+                  <Spark x={x2} y={c.y} colour={TEAL} r={16} />
+                )}
+                {out >= 1 &&
+                  [0, 1, 2].map((k) => (
+                    // More neutrinos after the first: beads running out along the line.
+                    <circle
+                      key={k}
+                      cx={c.x + s * (120 + 300 * ((f / 30 + k / 3) % 1))}
+                      cy={c.y}
+                      r={10}
+                      fill={CREAM}
+                      stroke={TEAL}
+                      strokeWidth={4}
+                    />
+                  ))}
                 {out > 0.2 && (
                   <Tick
                     x={x2 + s * 34}
