@@ -101,6 +101,9 @@ const disc = (cx: number, cy: number, r: number, n = 30) => ({
   }),
 });
 const SUN304 = { pic: "sun304", ...disc(641, 620, 545) } as const;
+// The photographed limb sits at ~508 px of that 545 px cut (the rest is dark rim), so a fraction
+// of the Sun's radius on this photo is taken of 508.
+const LIMB = 508 / 545;
 const STEREO = { pic: "stereo", ...disc(604, 636, 450) } as const;
 // "You": sunrise over Earth's limb from the ISS, cropped on the Sun as it clears the horizon.
 const SUNRISE = { pic: "sunrise", box: [560, 440, 600, 400] } as const;
@@ -977,7 +980,7 @@ const Deck: React.FC = () => (
       <Cut {...SUN304} x={540} y={590} w={780} edge={10} jitter={0} />
       <Marks>
         <Stroke
-          d={circle(540, 590, 390 * CORE)}
+          d={circle(540, 590, 390 * LIMB * CORE)}
           from={at(3, "where")}
           to={at(3, "where") + 18}
           colour={CREAM}
@@ -986,7 +989,7 @@ const Deck: React.FC = () => (
       </Marks>
       <Tag
         x={540}
-        y={590 - 390 * CORE - 50}
+        y={590 - 390 * LIMB * CORE - 50}
         text="CORE"
         from={at(3, "where") + 10}
         size={40}
