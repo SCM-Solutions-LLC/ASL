@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/cell-count-long.txt",
  "audio": "public/vo/cell-count-long.wav",
- "sha256": "ef95536e993bc99e94b83bb6e1515a84439811a9dfb7f4607bf3355b957f0896",
+ "sha256": "bc5bd83837698b762288a776f0e07a218b0ad0c3cc1014cacdabeb341b7753ed",
  "words": [
   {
    "text": "Sort",
@@ -1368,6 +1368,51 @@
    "text": "size.",
    "start": 100.372,
    "end": 100.719
+  },
+  {
+   "text": "Where",
+   "start": 101.35,
+   "end": 101.614
+  },
+  {
+   "text": "else",
+   "start": 101.614,
+   "end": 101.857
+  },
+  {
+   "text": "do",
+   "start": 101.857,
+   "end": 102.056
+  },
+  {
+   "text": "you",
+   "start": 102.056,
+   "end": 102.278
+  },
+  {
+   "text": "think",
+   "start": 102.278,
+   "end": 102.541
+  },
+  {
+   "text": "this",
+   "start": 102.541,
+   "end": 102.784
+  },
+  {
+   "text": "pattern",
+   "start": 102.784,
+   "end": 103.091
+  },
+  {
+   "text": "shows",
+   "start": 103.091,
+   "end": 103.355
+  },
+  {
+   "text": "up?",
+   "start": 103.355,
+   "end": 103.555
   }
  ]
 }

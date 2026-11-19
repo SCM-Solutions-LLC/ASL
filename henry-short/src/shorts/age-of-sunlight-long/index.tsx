@@ -1244,13 +1244,23 @@ const Deck: React.FC = () => (
     </Card>
     <Card
       from={cut(22)}
-      to={edit.duration}
+      to={cut(23)}
       word="THEY AGREE"
       at={at(22, "agree.")}
       sheet={YELLOW}
       tilt={-1}
     >
       <Lanes />
+    </Card>
+    <Card
+      from={cut(23)}
+      to={edit.duration}
+      word="YOUR GUESS?"
+      at={S[23]}
+      sheet={MINT}
+      tilt={1}
+    >
+      <Lanes dimCoral />
     </Card>
   </Board>
 );

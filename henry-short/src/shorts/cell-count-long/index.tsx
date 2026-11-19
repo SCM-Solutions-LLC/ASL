@@ -368,7 +368,10 @@ const Deck: React.FC = () => (
     <Card from={cut(18)} to={cut(19)} word="NOT YET EXPLAINED" at={at(18, "process")} sheet={CREAM}>
       <Ruler weights="full" />
     </Card>
-    <Card from={cut(19)} to={edit.duration} word="ROUGHLY THE SAME" at={at(19, "roughly")} sheet={YELLOW} tilt={-1}>
+    <Card from={cut(19)} to={cut(20)} word="ROUGHLY THE SAME" at={at(19, "roughly")} sheet={YELLOW} tilt={-1}>
+      <Ruler bins="full" weights="full" marks={["rbc", "fat", "muscle"]} />
+    </Card>
+    <Card from={cut(20)} to={edit.duration} word="WHERE ELSE?" at={S[20]} sheet={SEA} tilt={1}>
       <Ruler bins="full" weights="full" marks={["rbc", "fat", "muscle"]} />
     </Card>
   </Board>

@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/age-of-sunlight-long.txt",
  "audio": "public/vo/age-of-sunlight-long.wav",
- "sha256": "5875bd8b4c79d308ca654e2a4eba5935c66e2c05b75f360540d3489c01a29ec9",
+ "sha256": "c37f47b9154f04e0fb892ecc038095ba46bd6168871d322f0ff30416990bbb45",
  "words": [
   {
    "text": "Right",
@@ -1268,6 +1268,71 @@
    "text": "agree.",
    "start": 95.465,
    "end": 95.86
+  },
+  {
+   "text": "How",
+   "start": 96.555,
+   "end": 96.779
+  },
+  {
+   "text": "many",
+   "start": 96.779,
+   "end": 97.025
+  },
+  {
+   "text": "neutrinos",
+   "start": 97.025,
+   "end": 97.378
+  },
+  {
+   "text": "do",
+   "start": 97.378,
+   "end": 97.581
+  },
+  {
+   "text": "you",
+   "start": 97.581,
+   "end": 97.805
+  },
+  {
+   "text": "think",
+   "start": 97.805,
+   "end": 98.072
+  },
+  {
+   "text": "passed",
+   "start": 98.072,
+   "end": 98.361
+  },
+  {
+   "text": "through",
+   "start": 98.361,
+   "end": 98.671
+  },
+  {
+   "text": "you",
+   "start": 98.671,
+   "end": 98.895
+  },
+  {
+   "text": "while",
+   "start": 98.895,
+   "end": 99.162
+  },
+  {
+   "text": "you",
+   "start": 99.162,
+   "end": 99.386
+  },
+  {
+   "text": "watched",
+   "start": 99.386,
+   "end": 99.697
+  },
+  {
+   "text": "this?",
+   "start": 99.697,
+   "end": 99.943
   }
  ]
 }

@@ -802,12 +802,22 @@ const Deck: React.FC = () => (
     </Card>
     <Card
       from={cut(18)}
-      to={edit.duration}
+      to={cut(19)}
       word="6,000+ KM MORE"
       sub="3,700+ MI"
       at={at(18, "six")}
       sheet={NIGHT}
       tilt={-1.5}
+    >
+      <Centre a={at(18, "centre")} b={at(18, "six")} />
+    </Card>
+    <Card
+      from={cut(19)}
+      to={edit.duration}
+      word="HOW DEEP NEXT?"
+      at={S[19]}
+      sheet={NIGHT}
+      tilt={1}
     >
       <Centre a={at(18, "centre")} b={at(18, "six")} />
     </Card>

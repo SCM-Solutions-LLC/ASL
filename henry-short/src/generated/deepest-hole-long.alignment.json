@@ -2,7 +2,7 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/deepest-hole-long.txt",
  "audio": "public/vo/deepest-hole-long.wav",
- "sha256": "580cf1e7f270715852fc20fd8df12baa0111d59fdd26e93cf555c04d38465620",
+ "sha256": "e0a33d557257cc629d237c6661982a6099c7a6c052ad5497ccae297793d534c0",
  "words": [
   {
    "text": "The",
@@ -1163,6 +1163,71 @@
    "text": "more.",
    "start": 88.433,
    "end": 88.706
+  },
+  {
+   "text": "How",
+   "start": 89.365,
+   "end": 89.601
+  },
+  {
+   "text": "deep",
+   "start": 89.601,
+   "end": 89.86
+  },
+  {
+   "text": "do",
+   "start": 89.86,
+   "end": 90.074
+  },
+  {
+   "text": "you",
+   "start": 90.074,
+   "end": 90.31
+  },
+  {
+   "text": "think",
+   "start": 90.31,
+   "end": 90.592
+  },
+  {
+   "text": "we'll",
+   "start": 90.592,
+   "end": 90.874
+  },
+  {
+   "text": "ever",
+   "start": 90.874,
+   "end": 91.133
+  },
+  {
+   "text": "dig,",
+   "start": 91.133,
+   "end": 91.369
+  },
+  {
+   "text": "and",
+   "start": 91.369,
+   "end": 91.606
+  },
+  {
+   "text": "what",
+   "start": 91.606,
+   "end": 91.865
+  },
+  {
+   "text": "will",
+   "start": 91.865,
+   "end": 92.124
+  },
+  {
+   "text": "stop",
+   "start": 92.124,
+   "end": 92.383
+  },
+  {
+   "text": "us?",
+   "start": 92.383,
+   "end": 92.596
   }
  ]
 }
