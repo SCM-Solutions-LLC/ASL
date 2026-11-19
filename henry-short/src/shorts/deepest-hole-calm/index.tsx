@@ -220,36 +220,28 @@ const Plate: React.FC = () => {
   );
 };
 
-// The ground in section, the stamp's drawing of the well pasted in, and the depth drawn down.
+// The stamp's own drawing of the well in section, uncovered from the top down as the line says
+// how deep it goes. A separate card from the crust below, so no depth scale is implied here.
 const Down: React.FC = () => {
-  const [top, bottom, x] = [240, 1040, 450];
+  const f = useCurrentFrame();
+  const [y, w] = [600, 135];
+  const box = [312, 40, 112, 724] as const;
+  const h = (box[3] * w) / box[2];
+  const shown =
+    y -
+    h / 2 -
+    40 +
+    (h + 80) * (0.12 + 0.88 * ramp(f, F.goes, F.kilometres + 8));
   return (
-    <>
-      <Pieces>
-        <polygon
-          points={`46,${top + 4} 420,${top - 6} 1034,${top + 2} 1030,1086 600,1094 50,1088`}
-          fill={KRAFT}
-        />
-      </Pieces>
-      <Cut
-        pic="stamp"
-        x={255}
-        y={(top + bottom) / 2 + 14}
-        w={120}
-        box={[318, 62, 100, 700]}
-        edge={8}
-        jitter={0}
-      />
-      <Marks>
-        <Stroke
-          d={`M${x} ${top + 14} C ${x + 5} ${top + 300}, ${x - 5} ${bottom - 300}, ${x} ${bottom}`}
-          from={F.goes}
-          to={F.kilometres + 8}
-          colour={CORAL}
-          width={20}
-        />
-      </Marks>
-    </>
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        clipPath: `inset(0 0 ${BOARD.h - shown}px 0)`,
+      }}
+    >
+      <Cut pic="stamp" x={540} y={y} w={w} box={box} edge={8} jitter={0} />
+    </div>
   );
 };
 
@@ -428,7 +420,14 @@ const Deck: React.FC = () => (
         jitter={0}
       />
     </Card>
-    <Card from={F.s3 - 2} to={F.s4 - 2} word="12 KM DOWN" at={F.twelve}>
+    <Card
+      from={F.s3 - 2}
+      to={F.s4 - 2}
+      word="12 KM DOWN"
+      at={F.twelve}
+      sheet="#bfe9e4"
+      tilt={1}
+    >
       <Down />
     </Card>
     <Card
