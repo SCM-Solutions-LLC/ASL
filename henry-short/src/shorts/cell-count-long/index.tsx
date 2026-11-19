@@ -162,7 +162,9 @@ const Ruler: React.FC<{
       {counts &&
         Array.from({ length: BINS }, (_, k) => {
           // Log count falls in a straight line as log size rises: a slope of about -1.
-          const h = (AXIS - top) * (1 - (0.92 * k) / BINS);
+          // Same dip as the weight bars: weight is count times mass.
+          const m = mid(k);
+          const h = (AXIS - top) * (1 - (0.92 * k) / BINS) - (m > FAT * 1.5 && m < MUSCLE / 1.5 ? 110 : 0);
           const g = grow(f, counts, k);
           return (
             <rect
@@ -269,7 +271,7 @@ const Crowd: React.FC<{ ring: number }> = ({ ring }) => {
       <rect x={x} y={y} width={w} height={h} fill="url(#crowd)" />
       <circle cx={cx} cy={cy} r={4} fill={CORAL} />
       <circle cx={cx} cy={cy} r={20 + 50 * (1 - r)} stroke={CORAL} strokeWidth={6} fill="none" opacity={r} />
-      <T x={540} y={y + h + 50} text="50,000 CELLS WITH A NUCLEUS · FEWER THAN 1 MUSCLE FIBRE" size={28} />
+      <T x={540} y={y + h + 50} text="50,000 CELLS WITH A NUCLEUS · AT MOST 1 MUSCLE FIBRE" size={28} />
     </Marks>
   );
 };
@@ -316,7 +318,7 @@ const Deck: React.FC = () => (
     <Card from={cut(3)} to={cut(4)} word=">1,000,000× HEAVIER" at={at(3, "million")} sheet={PINK}>
       <Ruler marks={["rbc", "muscle"]} />
     </Card>
-    <Card from={cut(4)} to={cut(5)} word="×2 EACH CLASS" at={at(4, "twice")} sheet={CREAM}>
+    <Card from={cut(4)} to={cut(5)} word="×2 CELL SIZE" at={at(4, "twice")} sheet={CREAM}>
       <Ruler bins={[S[4] + 4, end(4)]} />
     </Card>
     <Card from={cut(5)} to={cut(6)} word="HALF AS MANY" at={at(5, "half")} sheet={MINT}>

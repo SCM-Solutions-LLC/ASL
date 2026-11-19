@@ -2,7 +2,7 @@ Sort the cells in your body by size, from red blood cells up, and something odd 
 A twenty twenty-three study combined over fifteen hundred published sources to estimate the body's cells, type by type, and sorted them by size.
 The smallest cells it sorted are red blood cells.
 The biggest are muscle fibres, more than a million times heavier.
-Now put those cells into size classes, each class twice as heavy as the one before.
+Now put those cells into size classes, where each class holds cells twice as heavy as the one before.
 Each time the size doubles, there are, on average, about half as many cells.
 So the small cells win on numbers, the big cells win on size, and the two cancel out.
 Every class ends up holding roughly the same weight.
@@ -68,10 +68,11 @@ Sources:
    cell; myocyte biomass peaks "near 10^-4 g" (10^-4 / 4e-11 = 2.5 million). A floor,
    so the card says ">1,000,000×": the full range is seven orders of magnitude.
 
-5. "Now put those cells into size classes, each class twice as heavy as the one before."
+5. "Now put those cells into size classes, where each class holds cells twice as heavy as the one before."
    Hatton 2023, Methods: "bins increase by a multiplicative factor of 2 from small
    to large (octave size classes)". "Those cells": the ones from red blood cells
-   up; "We ignored binning cells smaller than erythrocytes".
+   up; "We ignored binning cells smaller than erythrocytes". The line says the
+   cells double, not the class: the class weights are what stay level.
 
 6. "Each time the size doubles, there are, on average, about half as many cells."
    Hatton 2023: the count per size class follows "a power law with a slope near
@@ -141,6 +142,10 @@ Sources:
    paper's 26 doubling classes from 4e-11 g (to about 2.7e-3 g; Fig. 3, Methods). The falling
    count staircase and the mass bars are drawn as a schematic of the trend in
    lines 6-9 and say "schematic" on screen; they are not the paper's per-bin data.
+   The count staircase carries the same dip as the weight bars (weight = count x
+   mass; in Fig. 3 counts near 1e-5 g fall about tenfold below the fitted line).
+   The dot grid's caption says "AT MOST 1 MUSCLE FIBRE", since 1 in 50,000 is an
+   upper limit.
    The single weight chart is the reference man. The ocean card raises the first
    three classes (bacteria, about 2.5, 2.5 and 1.9 Gt against about 1 Gt) and lowers
    the last two (the mammal classes), as Hatton 2021 Fig. 2 does.

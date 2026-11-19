@@ -1,6 +1,6 @@
 {
   "script": "script/cell-count-long.txt",
-  "sha256": "5884f4cbf07d587e37e3d150388f1a3d970d0b7fd9e8520fd2b374e521ee6b67",
+  "sha256": "679033d78454f846ca34a3b868753c5092dfa3a0de96a64c295160139e569fd7",
   "checked": "2026-11-19",
   "claims": [
     {
@@ -8,392 +8,368 @@
       "claim": "Sort the cells in your body by size, from red blood cells up, and something odd turns up: each size class weighs roughly the same. (Hook, A4: what a viewer who leaves at second two takes away.)",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Results: 'a roughly similar fraction of total body mass is present in each logarithmic cell-size class (Fig. 4A)'; Fig. 4 caption: female 'broadly similar to the male and child'; Abstract calls the inverse relation 'surprising' (so 'odd' is fair). Binning starts at red blood cells: 'only considers the distribution beginning at red blood cells (4 x 10^-11 g)'. 'Roughly' is the paper's word, and the paper itself names the fat/muscle gap as the one exception ('With the exception of this gap, all variation in cellular biomass lies within two orders of magnitude'), which the script says at line 9. At second two the viewer has heard only 'Sort the cells in your body by size', which asserts nothing false; the first card is keyed to the spoken word 'roughly' (index.tsx, at(0, \"roughly\")), so 'ROUGHLY THE SAME' cannot be misread early as 'cells are the same size'."
+      "source_checked": "doi:10.1073/pnas.2303077120 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; Fig. 4 image from https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
+      "note": "PNAS Results: 'a roughly similar fraction of total body mass is present in each logarithmic cell-size class (Fig. 4A)'; Conclusion: 'cell biomass is roughly independent of cell-size class'. The hook uses the paper's own hedge ('roughly', 'each'). Adversarial: Fig. 4B (male, linear) runs from about 0.2 to 7 kg per class, and the paper says variation outside the dip is 'within two orders of magnitude', on a log axis across seven orders; 'roughly' carries this only because it is the paper's word. At second two the viewer has heard only 'sort the cells in your body by size', which leaves nothing false. 'Your body' generalises from the paper's reference male, female and child, all 'broadly similar'; the dip exception follows in line 9."
     },
     {
       "n": 2,
-      "claim": "ROUGHLY THE SAME",
-      "where": "on-screen: keyword card 1",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 1: 'a roughly similar fraction of total body mass ... in each logarithmic cell-size class'."
-    },
-    {
-      "n": 3,
       "claim": "A twenty twenty-three study combined over fifteen hundred published sources to estimate the body's cells, type by type, and sorted them by size.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Received 22 Feb 2023, published online 18 Sep 2023, PNAS 120(39), 26 Sep 2023. 'data drawn from >1,500 published sources'; Methods: 'more than 1,500 published sources for 400 known cell types across 60 tissue systems ... giving 1,264 cell groups'. 'We compile data to estimate cell mass, size range, and cell count', so 'estimate' (not 'count') is right. Cells are then binned by mass into size classes (Fig. 3)."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "PNAS 120(39), published online 18 Sep 2023 (pub-date in XML 18 09 2023). Abstract: 'data drawn from >1,500 published sources'; Methods: 'more than 1,500 published sources for 400 known cell types across 60 tissue systems ... 1,264 cell groups'. 'Estimate' is the paper's verb ('to estimate cell mass, size range, and cell count'). Sorted by size: whole-body cell-size histogram (Fig. 3)."
     },
     {
-      "n": 4,
-      "claim": "1,500+ SOURCES",
-      "where": "on-screen: keyword card 2",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'>1,500 published sources'."
-    },
-    {
-      "n": 5,
+      "n": 3,
       "claim": "The smallest cells it sorted are red blood cells.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Methods: bins begin 'at the lower bound of erythrocytes'; 'We ignored binning cells smaller than erythrocytes (blood platelets and the smallest haploid gamete cells)'. Dataset S1 confirms platelets (9e-12 g) and spermatids/spermatozoa (2.8e-11 g) are the only smaller entries. 'It sorted' correctly excludes them."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Methods: bins begin 'at the lower bound of erythrocytes'; 'We ignored binning cells smaller than erythrocytes (blood platelets and the smallest haploid gamete cells)'. Results: 'only considers the distribution beginning at red blood cells (4 × 10−11 g)'. 'It sorted' correctly excludes platelets and sperm, which are smaller."
     },
     {
-      "n": 6,
-      "claim": "RED BLOOD CELLS",
-      "where": "on-screen: keyword card 3",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 5."
-    },
-    {
-      "n": 7,
+      "n": 4,
       "claim": "The biggest are muscle fibres, more than a million times heavier.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'from a tiny red blood cell to a myocyte, more than a million-fold larger'; sizes run 'from the smallest red blood cells to the largest muscle fibers', 'seven orders of magnitude'. The paper's size is mass, so 'heavier' is right. Dataset S1: the six heaviest mean cell masses are all skeletal myocytes (sartorius 7.2e-4 g, upper bound 1.9e-3 g); the heaviest non-muscle cell (A-alpha sensory neuron) has mean 6.3e-5 g. 7.2e-4 / 4e-11 = 1.8e7; even mean fibre mass (21.5 kg / 1.19e8 = 1.8e-4 g) over a typical red cell (~9e-11 g) is about 2e6."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Results: 'from a tiny red blood cell to a myocyte, more than a million-fold larger'; the distribution extends 'from red blood cells to the largest myocytes'; size is cell mass in g throughout. Cross-check: myocyte peak ~1e-4 g / 4e-11 g = 2.5e6; SI gives sartorius fibres ≈7e-4 g; the 26 octave bins reach 2.7e-3 g. 'More than a million' is a floor, so not overstated."
     },
     {
-      "n": 8,
-      "claim": ">1,000,000× HEAVIER",
-      "where": "on-screen: keyword card 4",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 7: 'more than a million-fold larger'. A floor, correctly marked '>'."
-    },
-    {
-      "n": 9,
+      "n": 5,
       "claim": "Now put those cells into size classes, each class twice as heavy as the one before.",
       "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Methods: 'bins increase by a multiplicative factor of 2 from small to large (octave size classes), beginning at the lower bound of erythrocytes, and giving 26 size classes'."
+      "verdict": "fix",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix (pnas.2303077120.sapp.pdf, from the Europe PMC supplementaryFiles bundle)",
+      "note": "The figure is right (Methods: 'bins increase by a multiplicative factor of 2 ... (octave size classes)'; SI: 'each larger size class twice as large as the adjacent smaller size class'), but the wording says the CLASS is twice as heavy. A listener can hear that the total weight of each class doubles, which is the opposite of the short's core claim (each class holds roughly the same weight) and of the source. Change to make the cells, not the class, twice as heavy, e.g. 'each class for cells twice as heavy as the one before' or 'each class holding cells twice as heavy as the last'."
     },
     {
-      "n": 10,
-      "claim": "×2 EACH CLASS",
-      "where": "on-screen: keyword card 5",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 9."
-    },
-    {
-      "n": 11,
+      "n": 6,
       "claim": "Each time the size doubles, there are, on average, about half as many cells.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 3 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 3: count per class regressed on mass gives 'a slope near -0.97'; 95% CI -1.09 to -0.87. Per doubling: 2^-0.97 = 0.51 (CI 0.47 to 0.55), so 'about half'. 'On average' is needed and present: Fig. 3 bins scatter round the line (e.g. the first class sits below the second, and classes near 1e-5 g fall well below the fit)."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; Fig. 3 image (supplementaryFiles bundle)",
+      "note": "Methods: 'power law with a slope near −0.97 with a 95% CI of −1.09 to −0.87' over octave bins. Per doubling: 2^-0.97 = 0.51 (CI 0.47 to 0.55), so 'about half'. 'On average' is needed and present: Fig. 3 binned points scatter about the fit, with two classes near 1e-5 g about an order of magnitude below the line."
     },
     {
-      "n": 12,
-      "claim": "HALF AS MANY",
-      "where": "on-screen: keyword card 6",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 11."
-    },
-    {
-      "n": 13,
+      "n": 7,
       "claim": "So the small cells win on numbers, the big cells win on size, and the two cancel out.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'A slope near -1 implies a roughly inverse relation between cell size and count, such that an increase in size by a given factor is offset by a decrease in cell count by a similar factor'."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Results: 'an increase in size by a given factor is offset by a decrease in cell count by a similar factor'. Fig. 1: 'Cell counts are completely dominated by red blood cells, platelets, and tissue resident white blood cells, while cell biomass is dominated by muscle and fat'. 'Cancel out' = 'offset'; the CI of the slope includes -1, and the next line says 'roughly'."
     },
     {
-      "n": 14,
-      "claim": "THEY CANCEL OUT",
-      "where": "on-screen: keyword card 7",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 13 ('offset')."
-    },
-    {
-      "n": 15,
+      "n": 8,
       "claim": "Every class ends up holding roughly the same weight.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'a roughly similar fraction of total body mass is present in each logarithmic cell-size class'; Abstract goes further ('contribute an equal fraction'). The exception follows in the next sentence."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 1: 'a roughly similar fraction of total body mass is present in each logarithmic cell-size class'; 'cellular biomass is overall approximately evenly spread among cell-size classes'. The exception is stated in the very next line."
     },
     {
-      "n": 16,
-      "claim": "ABOUT THE SAME",
-      "where": "on-screen: keyword card 8",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 15."
-    },
-    {
-      "n": 17,
+      "n": 9,
       "claim": "With one exception: a dip, between the fat cells and the muscle fibres.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 4 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'prominent biomass peaks comprising adipocytes (near 10^-6 g) and myocytes (near 10^-4 g), separated by a gap of relatively low biomass'; 'With the exception of this gap, all variation in cellular biomass lies within two orders of magnitude'. 'One exception' is the paper's own framing. Fig. 4B (male) read off the figure: the gap floor is about 0.05 kg against a mean of about 1.7 kg per class, the only class more than two orders below the peak (7 kg)."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; Fig. 4 image",
+      "note": "Results: 'prominent biomass peaks comprising adipocytes (near 10−6 g) and myocytes (near 10−4 g), separated by a gap of relatively low biomass' and 'With the exception of this gap, all variation in cellular biomass lies within two orders of magnitude'. The paper singles out this gap as the one exception within the binned range (the other irregularities it names, around platelets and sperm, lie below the binned range). Fig. 4B shows the dip near 1e-5 g in all three bodies."
     },
     {
-      "n": 18,
-      "claim": "ONE DIP",
-      "where": "on-screen: keyword card 9",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 17."
-    },
-    {
-      "n": 19,
-      "claim": "In women the dip is smaller, and in a ten-year-old it is fainter still.",
+      "n": 10,
+      "claim": "In a typical woman the dip is smaller, and in a typical ten-year-old it is fainter still.",
       "where": "spoken",
-      "verdict": "fix",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); SI Appendix via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "The paper says it of one modelled body: 'This gap is also evident but less prominent in the reference female, and is even less evident in the 10-y-old reference child'. That reference female is the 60 kg ICRP model, built by scaling the male: skeletal myocyte sizes are multiplied by 0.625 and adipocyte counts are scaled by tissue mass. The dip sits between the fat and muscle peaks, and the paper notes that 'body fat varies widely among subjects' and that adipocyte and myocyte sizes change with 'obesity, or muscle atrophy'. So 'In women' turns a comparison of two reference models into a claim about all women, which the paper does not make. The child half ('a ten-year-old', singular) is fine. Change: 'In a typical woman the dip is smaller, and in a typical ten-year-old it is fainter still' (this matches 'Take a typical man' at line 11)."
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; Fig. 4 image",
+      "note": "Results: 'This gap is also evident but less prominent in the reference female, and is even less evident in the 10-y-old reference child (Fig. 4B ...)'. 'Typical' = the paper's 'representative' reference models (female 60 kg, child 32 kg, 10 y). Note the female and child models are scaled from the male model (Approach), which the SOURCES entry records."
     },
     {
-      "n": 20,
-      "claim": "SMALLER IN WOMEN",
-      "where": "on-screen: keyword card 10",
-      "verdict": "fix",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Same over-generalisation as claim 19. Change to e.g. 'SMALLER IN A TYPICAL WOMAN' (or 'TYPICAL WOMAN: SMALLER'), to match the fixed line."
-    },
-    {
-      "n": 21,
+      "n": 11,
       "claim": "Take a typical man. His muscle fibres are fewer than one in fifty thousand of his cells with a nucleus.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 1 caption: skeletal myocytes 'make up <0.002% of the nucleated cell count'; 0.002% = 1 in 50,000. Recomputed from Dataset S1 (reference male): 1.19e8 striated skeletal myocytes out of 7.12e12 nucleated cells (36.49e12 total minus 29.37e12 non-nucleated) = 1 in 59,900. 'Typical man' = the 70 kg ICRP reference male (20-50 y, 176 cm), which the paper calls 'representative'."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Fig. 1 caption (reference male): skeletal myocytes 'make up <0.002% of the nucleated cell count'. 0.002% = 1/50,000, and '<' is kept as 'fewer than'. 'Muscle fibres' is read as skeletal muscle fibres, the usual meaning and the paper's 'muscle fibers' (Significance); cardiomyocytes and smooth muscle cells are not in the figure. 'Typical man' = 70 kg reference male."
     },
     {
-      "n": 22,
-      "claim": "A TYPICAL MAN, sub \"70 KG (154 LB)\"",
-      "where": "on-screen: keyword card 11",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'Male, (70 kg, 176 cm in height and 20 to 50 y of age)'. 70 x 2.20462 = 154.3 lb, so '154 LB' is right."
-    },
-    {
-      "n": 23,
-      "claim": "< 1 IN 50,000",
-      "where": "on-screen: keyword card 12",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 21; '<' matches '<0.002%'."
-    },
-    {
-      "n": 24,
+      "n": 12,
       "claim": "Yet they make up about half the weight of all his cells.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); SI Appendix and Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 1 caption: 'Cell biomass is dominated by skeletal myocytes, comprising about half of all 45 kg of cell biomass'. SI: 'slightly less than 22 kg of myocyte mass'. Dataset S1: 21.5 of 44.3 kg = 48.6%."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "Fig. 1 caption: 'Cell biomass is dominated by skeletal myocytes, comprising about half of all 45 kg of cell biomass'; 'remaining 23.5 kg' gives 21.5 kg (48%). SI: 'slightly less than 22 kg of myocyte mass'."
     },
     {
-      "n": 25,
-      "claim": "ABOUT HALF",
-      "where": "on-screen: keyword card 13",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 24."
-    },
-    {
-      "n": 26,
+      "n": 13,
       "claim": "And all his cells together weigh about forty-five kilograms.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); SI Appendix and Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 1: '45 kg of cell biomass'; SI notes to Fig. 2: 'a total of ~44.3 kg of cell mass'; Dataset S1 sums to 44.27 kg (male)."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "Fig. 1 caption: '45 kg of cell biomass'. SI: 'giving a total of ~44.3 kg of cell mass'. 'About' covers both."
     },
     {
-      "n": 27,
-      "claim": "45 KG, sub \"99 LB\"",
-      "where": "on-screen: keyword card 14",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "45 x 2.20462 = 99.2 lb, so '99 LB' is right."
-    },
-    {
-      "n": 28,
+      "n": 14,
       "claim": "The other twenty-five of his seventy are not cells at all. They are the water, protein and minerals between them.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); SI Appendix via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 2 caption: cell biomass 'excludes noncellular components of biomass in each tissue, made up of extracellular water, protein, and minerals (~25 kg)'. SI: 'The remaining mass in the 70 kg male resides in extracellular content, including water (18-19 kg), protein (~3.7 kg), and minerals (~3.3 kg, most of which are bone minerals)', which sums to 25-26 kg; 44.3 + 25 is about 70. 'Between them' = extracellular, the paper's word. The gut microbiome (cells, but about 0.2 kg) is within the rounding."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "Fig. 2 caption: 'noncellular components of biomass in each tissue, made up of extracellular water, protein, and minerals (~25 kg)'. SI: 'The remaining mass in the 70 kg male resides in extracellular content, including water (18 – 19 kg), protein (~3.7 kg), and minerals (~3.3 kg, most of which are bone minerals)', which sums to 25-26 kg. 'Between them' = extracellular. Reference male is 70 kg (Methods)."
     },
     {
-      "n": 29,
-      "claim": "NOT CELLS, sub \"25 KG (55 LB)\"",
-      "where": "on-screen: keyword card 15",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "~25 kg noncellular (claim 28). 25 x 2.20462 = 55.1 lb, so '55 LB' is right; 99 + 55 = 154 lb is consistent with card 11."
-    },
-    {
-      "n": 30,
-      "claim": "BETWEEN THE CELLS",
-      "where": "on-screen: keyword card 16",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'extracellular water, protein, and minerals'."
-    },
-    {
-      "n": 31,
+      "n": 15,
       "claim": "Sort the life in the ocean by size, as it was before industrial fishing, and most size classes held about the same weight too.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML (doi:10.1126/sciadv.abh3732)",
-      "note": "Abstract: 'biomass within most order of magnitude size classes is indeed remarkably constant, near 1 gigatonne (Gt) wet weight (10^15 g), but bacteria and large marine mammals are markedly above and below this value, respectively'. Evaluated 'in a \"pristine\" state, before industrial-scale human capture of fish and marine mammals (pre-1850)'; today 'the upper one-third of the biomass spectrum has been severely truncated', so the past tense and 'most' are both needed and present. The PNAS paper cites this as the same pattern ('bodies in the ocean from bacteria to whales', ref. 44). The ocean classes are tenfold; the line does not claim otherwise."
+      "source_checked": "doi:10.1126/sciadv.abh3732 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML; Fig. 2 image from https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/supplementaryFiles",
+      "note": "Abstract: 'biomass within most order of magnitude size classes is indeed remarkably constant, near 1 gigatonne (Gt) wet weight ... but bacteria and large marine mammals are markedly above and below this value'. Evaluated in a 'pristine' state, 'before industrial-scale human capture of fish and marine mammals (pre-1850)'; today 'human impacts appear to have significantly truncated the upper one-third of the spectrum', so the past tense and 'before industrial fishing' are needed and present. 'Most' is the paper's word. Caveat for the record: the headline result is the upper 200 m; over the full depth bacteria and a mesopelagic-fish hump (0.01-1 g) stand higher, and the paper 'hesitate[s] to draw a strong conclusion' on the latter."
     },
     {
-      "n": 32,
-      "claim": "THE OCEAN TOO",
-      "where": "on-screen: keyword card 17",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML (doi:10.1126/sciadv.abh3732)",
-      "note": "As claim 31."
-    },
-    {
-      "n": 33,
+      "n": 16,
       "claim": "And in your body, nobody knows why. No accepted process explains it yet.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Discussion, Origins: 'To our knowledge, there is no universally recognized process that accounts for these patterns'; Conclusion: 'the developmental mechanisms underlying this pattern remain unresolved'. The paper offers candidates (random growth processes, mismatched growth and division rates) but stresses that 'many simple mechanisms are possible'. 'No accepted process ... yet' matches 'no universally recognized process'; 'nobody knows why' matches 'remain unresolved'."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Discussion: 'To our knowledge, there is no universally recognized process that accounts for these patterns'; Conclusion: 'the developmental mechanisms underlying this pattern remain unresolved'. The paper offers candidates (random growth; growth/division mismatch) without claiming them, so 'no accepted process' matches. 'Yet' is a 2026 claim resting on a 2023 source; a web search on 19 Nov 2026 found no later work claiming an accepted explanation (not an A2 source, so this only fails to break it)."
     },
     {
-      "n": 34,
-      "claim": "NOBODY KNOWS WHY",
-      "where": "on-screen: keyword card 18",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 33 ('remain unresolved')."
-    },
-    {
-      "n": 35,
-      "claim": "NOT YET EXPLAINED",
-      "where": "on-screen: keyword card 19",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claim 33 ('no universally recognized process')."
-    },
-    {
-      "n": 36,
+      "n": 17,
       "claim": "Trillions of tiny cells, far fewer giant ones, and roughly the same weight at every size.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'≈36 trillion cells in the male', of which non-nucleated blood cells ≈29 trillion; skeletal fibres 1.19e8 (Dataset S1). 'Roughly the same weight at every size' restates 'cell biomass is roughly independent of cell-size class' (Conclusion), after the dip was stated at line 9."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Fig. 1 caption: nonnucleated blood cells ≈29 trillion of ≈36 trillion (plus ≈7 trillion nucleated). Muscle fibres <0.002% of nucleated cells. 'Roughly the same weight at every size' restates the paper's 'cell biomass is roughly independent of cell-size class' (Conclusion); the dip was stated two lines earlier."
+    },
+    {
+      "n": 18,
+      "claim": "Keyword card: \"ROUGHLY THE SAME\" (hook)",
+      "where": "on-screen: keyword card 1",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 1; the paper's 'roughly similar fraction ... in each logarithmic cell-size class'."
+    },
+    {
+      "n": 19,
+      "claim": "Keyword card: \"1,500+ SOURCES\"",
+      "where": "on-screen: keyword card 2",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "'>1,500 published sources' (Abstract), 'more than 1,500 published sources' (Methods)."
+    },
+    {
+      "n": 20,
+      "claim": "Keyword card: \"RED BLOOD CELLS\"",
+      "where": "on-screen: keyword card 3",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 3: binning begins at the lower bound of erythrocytes."
+    },
+    {
+      "n": 21,
+      "claim": "Keyword card: \">1,000,000× HEAVIER\"",
+      "where": "on-screen: keyword card 4",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 4: 'more than a million-fold larger', size measured as mass."
+    },
+    {
+      "n": 22,
+      "claim": "Keyword card: \"×2 EACH CLASS\"",
+      "where": "on-screen: keyword card 5",
+      "verdict": "fix",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Same ambiguity as claim 5: '×2 EACH CLASS', shown while the line says the class is 'twice as heavy', reads as the class's weight doubling, which the source contradicts. Name what doubles, e.g. '×2 CELL SIZE EACH CLASS' or 'CELLS ×2 HEAVIER EACH CLASS'."
+    },
+    {
+      "n": 23,
+      "claim": "Keyword card: \"HALF AS MANY\"",
+      "where": "on-screen: keyword card 6",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 6: slope -0.97 gives 0.51× per doubling. The spoken 'on average' carries the hedge."
+    },
+    {
+      "n": 24,
+      "claim": "Keyword card: \"THEY CANCEL OUT\"",
+      "where": "on-screen: keyword card 7",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 7: 'offset by a decrease in cell count by a similar factor'."
+    },
+    {
+      "n": 25,
+      "claim": "Keyword card: \"ABOUT THE SAME\"",
+      "where": "on-screen: keyword card 8",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 8."
+    },
+    {
+      "n": 26,
+      "claim": "Keyword card: \"ONE DIP\"",
+      "where": "on-screen: keyword card 9",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 9: 'With the exception of this gap'."
+    },
+    {
+      "n": 27,
+      "claim": "Keyword card: \"TYPICAL WOMAN\"",
+      "where": "on-screen: keyword card 10",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 10: the 60 kg reference female, a 'representative' model."
+    },
+    {
+      "n": 28,
+      "claim": "Keyword card: \"A TYPICAL MAN\", sub \"70 KG (154 LB)\"",
+      "where": "on-screen: keyword card 11",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Methods: 'Male, (70 kg, 176 cm ...)'. Recomputed 70 × 2.20462 = 154.3 lb, so 154 LB is right."
+    },
+    {
+      "n": 29,
+      "claim": "Keyword card: \"< 1 IN 50,000\"",
+      "where": "on-screen: keyword card 12",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "'<0.002% of the nucleated cell count' = fewer than 1 in 50,000; the '<' is kept."
+    },
+    {
+      "n": 30,
+      "claim": "Keyword card: \"ABOUT HALF\"",
+      "where": "on-screen: keyword card 13",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 12: 'about half of all 45 kg of cell biomass'."
+    },
+    {
+      "n": 31,
+      "claim": "Keyword card: \"45 KG\", sub \"99 LB\"",
+      "where": "on-screen: keyword card 14",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "'45 kg of cell biomass'. Recomputed 45 × 2.20462 = 99.2 lb, so 99 LB is right."
+    },
+    {
+      "n": 32,
+      "claim": "Keyword card: \"NOT CELLS\", sub \"25 KG (55 LB)\"",
+      "where": "on-screen: keyword card 15",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "'noncellular components ... (~25 kg)'. Recomputed 25 × 2.20462 = 55.1 lb, so 55 LB is right."
+    },
+    {
+      "n": 33,
+      "claim": "Keyword card: \"BETWEEN THE CELLS\"",
+      "where": "on-screen: keyword card 16",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "'extracellular water, protein, and minerals'."
+    },
+    {
+      "n": 34,
+      "claim": "Keyword card: \"THE OCEAN TOO\"",
+      "where": "on-screen: keyword card 17",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML",
+      "note": "As claim 15. The PNAS paper itself draws the parallel ('bodies in the ocean from bacteria to whales (44)')."
+    },
+    {
+      "n": 35,
+      "claim": "Keyword card: \"NOBODY KNOWS WHY\"",
+      "where": "on-screen: keyword card 18",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 16: 'no universally recognized process', 'mechanisms ... remain unresolved'."
+    },
+    {
+      "n": 36,
+      "claim": "Keyword card: \"NOT YET EXPLAINED\"",
+      "where": "on-screen: keyword card 19",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claim 16."
     },
     {
       "n": 37,
-      "claim": "ROUGHLY THE SAME",
+      "claim": "Keyword card: \"ROUGHLY THE SAME\" (closing)",
       "where": "on-screen: keyword card 20",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "As claims 1 and 36."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "As claims 1 and 17."
     },
     {
       "n": 38,
-      "claim": "Axis \"CELL MASS IN GRAMS · LOG SCALE\" from 10⁻¹¹ to 10⁻² g",
-      "where": "on-screen: size chart axis",
+      "claim": "Chart, reference man: axis \"CELL MASS IN GRAMS · LOG SCALE\" from 10⁻¹¹ to 10⁻² g, with marks \"RED BLOOD CELLS / FROM 4 × 10⁻¹¹ g\", \"FAT CELLS / ~10⁻⁶ g\", \"MUSCLE FIBRES / ~10⁻⁴ g\"",
+      "where": "on-screen: size chart axis and marks",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 3/4 images via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Size is cell mass in g, on log axes in Figs. 3-4. The binned range, 4e-11 to 2.7e-3 g, fits inside 1e-11 to 1e-2. The log scale is labelled."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; Fig. 3 and Fig. 4 images",
+      "note": "'red blood cells (4 × 10−11 g)' as the start of the distribution, 'adipocytes (near 10−6 g) and myocytes (near 10−4 g)'. Axis range covers the binned span (4e-11 to 2.7e-3 g); Fig. 3/4 axes are log, as labelled. 'FROM' correctly marks 4e-11 g as the lower bound, not a typical red-cell mass."
     },
     {
       "n": 39,
-      "claim": "Mark \"RED BLOOD CELLS / FROM 4 × 10⁻¹¹ g\"",
-      "where": "on-screen: size chart",
+      "claim": "26 size classes, each twice the mass of the last, starting at 4 × 10⁻¹¹ g",
+      "where": "on-screen: size chart classes",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "'beginning at red blood cells (4 x 10^-11 g)', 'the lower bound of erythrocytes'. 'FROM' correctly marks it as a lower bound."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Methods: 'bins increase by a multiplicative factor of 2 ... beginning at the lower bound of erythrocytes, and giving 26 size classes'; Fig. 3 caption '26 logarithmic size classes'. 4e-11 × 2^26 = 2.68e-3 g, inside the 10^-2 axis end and consistent with the Fig. 3 rightmost bin."
     },
     {
       "n": 40,
-      "claim": "Mark \"FAT CELLS / ~10⁻⁶ g\"",
-      "where": "on-screen: size chart",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'biomass peaks comprising adipocytes (near 10^-6 g)'. Dataset S1: white adipocytes of 2.8e-7 to 8.9e-7 g carry most fat-cell mass (biomass-weighted mean 5.3e-7 g). '~' is apt."
+      "claim": "Bars \"NUMBER OF CELLS · LOG SCALE · SCHEMATIC\": a straight falling staircase",
+      "where": "on-screen: count bars",
+      "verdict": "fix",
+      "source_checked": "Fig. 3 image (pnas.2303077120fig03.jpg) from https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "The schematic contradicts the weight bars shown next to it and the paper's Fig. 3. Weight per class = count × cell mass, so the dip the weight bars show between fat and muscle must also appear as a dip in counts; in Fig. 3 the binned counts near 1e-5 g fall about an order of magnitude below the fitted line. A perfectly straight staircase implies level weight everywhere, with no dip. 'SCHEMATIC' covers simplification, not internal contradiction. Fix: draw the same dip in the count staircase at the same classes as the weight dip (keeping 'SCHEMATIC'), or relabel it as the fitted trend, e.g. 'AVERAGE TREND · LOG SCALE · SCHEMATIC'."
     },
     {
       "n": 41,
-      "claim": "Mark \"MUSCLE FIBRES / ~10⁻⁴ g\"",
-      "where": "on-screen: size chart",
+      "claim": "Bars \"WEIGHT IN EACH CLASS · LOG SCALE · SCHEMATIC\": roughly level, with a dip between the fat and muscle marks",
+      "where": "on-screen: weight bars",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'myocytes (near 10^-4 g)'. Dataset S1: mean skeletal fibre = 21.5 kg / 1.19e8 = 1.8e-4 g."
+      "source_checked": "Fig. 4 image (pnas.2303077120fig04.jpg) from the supplementaryFiles bundle; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "Fig. 4A (log axis) shows binned biomass near-level with a clear low between the adipocyte (~1e-6 g) and myocyte (~1e-4 g) peaks; Fig. 4B shows the same dip for the male. Labelled schematic, so smaller wobbles (and the low last class) need not be drawn. Fig. 4A plots the female; the paper says the male is 'broadly similar', and Fig. 4B confirms the male dip."
     },
     {
       "n": 42,
-      "claim": "26 size classes, each twice the mass of the last, starting at 4 × 10⁻¹¹ g",
-      "where": "on-screen: size chart",
+      "claim": "Text card \"THE DIP BETWEEN FAT AND MUSCLE\": \"TYPICAL MAN: MOST PROMINENT\", \"TYPICAL WOMAN: SMALLER\", \"TYPICAL 10-YEAR-OLD: FAINTER STILL\"",
+      "where": "on-screen: dip text card",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120)",
-      "note": "Methods: factor 2, 'beginning at the lower bound of erythrocytes, and giving 26 size classes'. The top edge, 4e-11 x 2^26 = 2.7e-3 g, covers the heaviest fibres in Dataset S1 (sartorius upper bound 1.9e-3 g)."
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "'This gap is also evident but less prominent in the reference female, and is even less evident in the 10-y-old reference child' implies the male is most prominent of the three. Text-only, so no linear-vs-log misdrawing."
     },
     {
       "n": 43,
-      "claim": "Bars \"NUMBER OF CELLS · LOG SCALE · SCHEMATIC\": a straight falling staircase",
-      "where": "on-screen: size chart",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 3 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "A schematic of the fitted power law (slope -0.97, about -1 per doubling). It is labelled SCHEMATIC, and the voice says 'on average'. The real bins in Fig. 3 scatter round the line (first class below the second; a shortfall near 1e-5 g), but a schematic of the fit, labelled as one, meets A6."
+      "claim": "Grid of 250 × 200 dots captioned \"50,000 CELLS WITH A NUCLEUS · FEWER THAN 1 MUSCLE FIBRE\", with one dot ringed",
+      "where": "on-screen: dot grid",
+      "verdict": "fix",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML",
+      "note": "250 × 200 = 50,000 and the caption is right ('<0.002%'). But the ringed whole dot shows exactly one muscle fibre among 50,000, which the caption beside it says is not reached. The visual contradicts its own caption. Fix one of the two: caption 'AT MOST 1 MUSCLE FIBRE' (true, since '<' implies '≤') with the ringed dot, or keep 'FEWER THAN 1' and draw the ringed dot partly filled or faded so it reads as less than one."
     },
     {
       "n": 44,
-      "claim": "Bars \"WEIGHT IN EACH CLASS · LOG SCALE · SCHEMATIC\": roughly level, with a dip between the fat and muscle marks",
-      "where": "on-screen: size chart",
+      "claim": "Bar \"ALL HIS CELLS · 45 KG\", half of it filled and labelled \"MUSCLE FIBRES ≈ HALF\"",
+      "where": "on-screen: body-mass bar, stage 1",
       "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 4 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 4A caption: biomass per class shows 'little systematic variation with log cell mass'; the gap between the adipocyte and myocyte peaks is the named exception. Fig. 4B male, read off the figure: classes outside the gap lie within about 1 order of magnitude of the 1.7 kg mean (lowest: about 0.2-0.3 kg, including the last class), while the gap floor is about 0.05 kg. On a log scale, 'roughly level plus one dip' is a fair schematic, and it is labelled SCHEMATIC. (This assumes the single row is the man, as in Fig. 3.)"
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "45 kg cell biomass, skeletal myocytes 'about half' (21.5 kg = 48%; SI 'slightly less than 22 kg'). A half fill with '≈' is within drawing precision."
     },
     {
       "n": 45,
-      "claim": "Three stacked rows \"MAN\", \"WOMAN\", \"CHILD, 10\" titled \"WEIGHT IN EACH CLASS · LOG SCALE · SCHEMATIC\": level bars, the dip shallower in each row down, drawn for only the first 25 of the 26 classes",
-      "where": "on-screen: man / woman / child rows",
-      "verdict": "fix",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Fig. 4 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "The shallower dip in each row follows the paper's text ('less prominent in the reference female ... even less evident in the 10-y-old reference child'). Leaving off the 26th class is the problem. In Fig. 4B that class holds about 0.2 kg (man), about 0.05 kg (woman) and about 0.05 kg (child), against row means of about 1.7, 1.5 and 0.8 kg. For the woman and child it falls about as low as the dip floor (about 0.05 kg) itself. So the rows that compare the dip across bodies leave out the one other class as deep as the dip, and the dip looks like the only feature. The SOURCES block gives the steep fall as the reason for the cut, which makes this a curated visual (A6/A3). Also, the paper's female/child comparison is made on linear axes (Fig. 4B); on a log scale the dip floors read about equal in all three rows, so the difference is mainly in the peak heights. Change: draw all 26 classes in each row and let the last class drop as in Fig. 4B. Or, if the rows stay cut, say so on screen (e.g. 'LARGEST CLASS NOT SHOWN'). Either way, don't draw the woman's dip shallower than the man's beyond what the rows' own scale shows; drawing the rows on a linear scale, like Fig. 4B, is the simplest faithful option."
+      "claim": "Bar extends with \"NOT CELLS · 25 KG\", label \"70 KG MAN\" and \"WATER · PROTEIN · MINERALS\"; lengths drawn 45:25",
+      "where": "on-screen: body-mass bar, stage 2",
+      "verdict": "confirmed",
+      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML; PNAS SI Appendix",
+      "note": "Fig. 2 caption '~25 kg' extracellular water, protein and minerals; SI water 18-19 kg + protein ~3.7 kg + minerals ~3.3 kg; 45 + 25 = 70 kg reference male. Proportional lengths, so no scale distortion."
     },
     {
       "n": 46,
-      "claim": "Grid of 250 × 200 dots captioned \"50,000 CELLS WITH A NUCLEUS · FEWER THAN 1 MUSCLE FIBRE\", one dot ringed",
-      "where": "on-screen: dot grid",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "250 x 200 = 50,000. '<0.002% of the nucleated cell count' means fewer than 1 fibre per 50,000; Dataset S1 gives 0.83 per 50,000. The ringed dot shows the upper bound, and the caption says 'fewer than 1', so the drawing does not overstate."
-    },
-    {
-      "n": 47,
-      "claim": "Bar \"ALL HIS CELLS · 45 KG\", half filled, labelled \"MUSCLE FIBRES ≈ HALF\"",
-      "where": "on-screen: mass bar",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); Dataset S1 via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "'about half of all 45 kg of cell biomass'; Dataset S1 21.5 / 44.3 kg = 48.6%, so a half fill drawn with '≈' is right."
-    },
-    {
-      "n": 48,
-      "claim": "Bar extends with \"NOT CELLS · 25 KG\", label \"70 KG MAN\", \"WATER · PROTEIN · MINERALS\"; lengths drawn 45:25",
-      "where": "on-screen: mass bar",
-      "verdict": "confirmed",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/fullTextXML (doi:10.1073/pnas.2303077120); SI Appendix via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10523466/supplementaryFiles",
-      "note": "Fig. 2 caption '~25 kg' of extracellular water, protein and minerals; SI breakdown 18-19 + 3.7 + 3.3 kg; reference male 70 kg. Drawn in proportion, 45:25, as the numbers require."
-    },
-    {
-      "n": 49,
-      "claim": "Ocean card: axis \"SIZE OF SEA LIFE, BACTERIA TO WHALES · LOG SCALE\", level bars titled \"BEFORE INDUSTRIAL FISHING · SCHEMATIC\", the first two bars higher and the last two lower",
+      "claim": "Ocean card: axis \"SIZE OF SEA LIFE, BACTERIA TO WHALES · LOG SCALE\", level bars titled \"BEFORE INDUSTRIAL FISHING · SCHEMATIC\"; first three bars higher, last two lower",
       "where": "on-screen: ocean card",
-      "verdict": "fix",
-      "source_checked": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML (doi:10.1126/sciadv.abh3732); Fig. 2 image via https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/supplementaryFiles",
-      "note": "Axis, title and shape are right: 'Total estimated historic ocean biomass in each order of magnitude size class is approximately 1 Gt ... with exceptions at either extreme'; pristine = pre-1850, 'before industrial-scale fishing and whaling'. But Fig. 2 has three raised bins at the small end, not two: the bacteria-dominated classes read about 2.5, 2.5 and 1.9 Gt in the upper 200 m (about 6.8, 7.0 and 4.6 Gt over the full depth), against a plateau of about 1 Gt. At the large end, the last two classes, the mammal ones at about 0.12 and 0.06 Gt, are the low ones, so 'last two lower' holds. Change: raise the first three bars, not two. A further option, not required: the mid-size fish bump (about 0.01-1 g at full depth) is one the authors 'hesitate to draw a strong conclusion about', so leaving it out of a schematic is fine."
+      "verdict": "confirmed",
+      "source_checked": "Fig. 2 image (sciadv.abh3732-f2.jpg) from https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/supplementaryFiles; https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8580314/fullTextXML",
+      "note": "Fig. 2B (upper 200 m, linear) read directly: the first three bins stand at about 2.5, 2.5 and 1.9 Gt, the middle bins near 1 Gt (fish ~0.8), and the last two (mammal) bins near 0.1 Gt or below, so 'first three higher, last two lower' matches. Axis is log body mass (g) in the paper, from bacteria to whales; 'pristine ... (pre-1850)' matches the title. For the record: this is the paper's upper-200 m spectrum; over the full depth the bacterial bins and a mesopelagic-fish hump rise further, and the card does not say which. Covered by 'SCHEMATIC' and by the paper's headline framing."
     }
   ]
 }
