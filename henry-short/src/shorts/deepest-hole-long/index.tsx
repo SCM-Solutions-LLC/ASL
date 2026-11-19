@@ -673,7 +673,7 @@ const Deck: React.FC = () => (
       from={cut(7)}
       to={cut(8)}
       word="BACK TO 7 KM"
-      sub="4.4 MI"
+      sub="4.3 MI"
       at={at(7, "start")}
       sheet={CREAM}
     >
