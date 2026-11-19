@@ -212,11 +212,13 @@ const Ruler: React.FC<{
         const x = xOf(g);
         const anchor = m === "rbc" ? "start" : m === "muscle" ? "end" : "middle";
         const lx = m === "rbc" ? x - 10 : m === "muscle" ? x + 40 : x;
+        // Fat and muscle sit two decades apart, so the muscle label goes a row higher.
+        const ly = AXIS - (m === "muscle" ? 480 : 390);
         return (
           <g key={m}>
-            <line x1={x} y1={AXIS - 330} x2={x} y2={AXIS} stroke={INK} strokeWidth={5} strokeDasharray="14 12" />
-            <T x={lx} y={AXIS - 390} text={label} size={36} anchor={anchor} />
-            <T x={lx} y={AXIS - 350} text={sub} size={28} anchor={anchor} />
+            <line x1={x} y1={ly + 60} x2={x} y2={AXIS} stroke={INK} strokeWidth={5} strokeDasharray="14 12" />
+            <T x={lx} y={ly} text={label} size={36} anchor={anchor} />
+            <T x={lx} y={ly + 40} text={sub} size={28} anchor={anchor} />
           </g>
         );
       })}
@@ -341,7 +343,7 @@ const Deck: React.FC = () => (
     <Card from={cut(6)} to={cut(7)} word="THEY CANCEL OUT" at={at(6, "cancel")} sheet={MINT}>
       <Ruler bins="full" counts="full" dimCounts weights={[at(6, "cancel"), end(6)]} />
     </Card>
-    <Card from={cut(7)} to={cut(8)} word="SAME WEIGHT, EACH CLASS" at={at(7, "same")} sheet={CREAM}>
+    <Card from={cut(7)} to={cut(8)} word="SAME WEIGHT" at={at(7, "same")} sheet={CREAM}>
       <Ruler bins="full" weights="full" />
     </Card>
     <Card from={cut(8)} to={cut(9)} word="ONE DIP" at={at(8, "dip,")} sheet={PINK}>
@@ -356,7 +358,7 @@ const Deck: React.FC = () => (
     <Card from={cut(11)} to={cut(12)} word="1 IN 50,000" at={at(11, "fifty")} sheet={CREAM}>
       <Crowd ring={at(11, "one")} />
     </Card>
-    <Card from={cut(12)} to={cut(13)} word="ABOUT HALF THE WEIGHT" at={at(12, "half")} sheet={PINK}>
+    <Card from={cut(12)} to={cut(13)} word="ABOUT HALF" at={at(12, "half")} sheet={PINK}>
       <Body from={at(12, "half")} show="muscle" />
     </Card>
     <Card from={cut(13)} to={cut(14)} word="45 KG" sub="99 LB" at={at(13, "forty-five")} sheet={CREAM}>

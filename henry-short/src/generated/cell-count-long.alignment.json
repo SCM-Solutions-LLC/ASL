@@ -1,0 +1,1283 @@
+{
+ "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "script": "script/cell-count-long.txt",
+ "audio": "public/vo/cell-count-long.wav",
+ "sha256": "1e6be9e7069d038c71fa7355ed3e757d56af312a8e72a61c2e41b606e67ff4e5",
+ "words": [
+  {
+   "text": "Sort",
+   "start": 0.0,
+   "end": 0.308
+  },
+  {
+   "text": "every",
+   "start": 0.308,
+   "end": 0.644
+  },
+  {
+   "text": "cell",
+   "start": 0.644,
+   "end": 0.952
+  },
+  {
+   "text": "in",
+   "start": 0.952,
+   "end": 1.206
+  },
+  {
+   "text": "your",
+   "start": 1.206,
+   "end": 1.514
+  },
+  {
+   "text": "body",
+   "start": 1.514,
+   "end": 1.823
+  },
+  {
+   "text": "by",
+   "start": 1.823,
+   "end": 2.076
+  },
+  {
+   "text": "size,",
+   "start": 2.076,
+   "end": 2.385
+  },
+  {
+   "text": "and",
+   "start": 2.385,
+   "end": 2.666
+  },
+  {
+   "text": "something",
+   "start": 2.666,
+   "end": 3.11
+  },
+  {
+   "text": "odd",
+   "start": 3.11,
+   "end": 3.391
+  },
+  {
+   "text": "turns",
+   "start": 3.391,
+   "end": 3.727
+  },
+  {
+   "text": "up:",
+   "start": 3.727,
+   "end": 3.981
+  },
+  {
+   "text": "each",
+   "start": 3.981,
+   "end": 4.289
+  },
+  {
+   "text": "size",
+   "start": 4.289,
+   "end": 4.597
+  },
+  {
+   "text": "class",
+   "start": 4.597,
+   "end": 4.933
+  },
+  {
+   "text": "weighs",
+   "start": 4.933,
+   "end": 5.295
+  },
+  {
+   "text": "roughly",
+   "start": 5.295,
+   "end": 5.685
+  },
+  {
+   "text": "the",
+   "start": 5.685,
+   "end": 5.966
+  },
+  {
+   "text": "same.",
+   "start": 5.966,
+   "end": 6.275
+  },
+  {
+   "text": "A",
+   "start": 6.935,
+   "end": 7.172
+  },
+  {
+   "text": "twenty",
+   "start": 7.172,
+   "end": 7.551
+  },
+  {
+   "text": "twenty-three",
+   "start": 7.551,
+   "end": 8.042
+  },
+  {
+   "text": "study",
+   "start": 8.042,
+   "end": 8.392
+  },
+  {
+   "text": "counted",
+   "start": 8.392,
+   "end": 8.8
+  },
+  {
+   "text": "the",
+   "start": 8.8,
+   "end": 9.094
+  },
+  {
+   "text": "cells",
+   "start": 9.094,
+   "end": 9.445
+  },
+  {
+   "text": "of",
+   "start": 9.445,
+   "end": 9.711
+  },
+  {
+   "text": "the",
+   "start": 9.711,
+   "end": 10.005
+  },
+  {
+   "text": "human",
+   "start": 10.005,
+   "end": 10.355
+  },
+  {
+   "text": "body,",
+   "start": 10.355,
+   "end": 10.678
+  },
+  {
+   "text": "type",
+   "start": 10.678,
+   "end": 11.0
+  },
+  {
+   "text": "by",
+   "start": 11.0,
+   "end": 11.266
+  },
+  {
+   "text": "type,",
+   "start": 11.266,
+   "end": 11.588
+  },
+  {
+   "text": "and",
+   "start": 11.588,
+   "end": 11.882
+  },
+  {
+   "text": "sorted",
+   "start": 11.882,
+   "end": 12.261
+  },
+  {
+   "text": "them",
+   "start": 12.261,
+   "end": 12.584
+  },
+  {
+   "text": "by",
+   "start": 12.584,
+   "end": 12.849
+  },
+  {
+   "text": "size.",
+   "start": 12.849,
+   "end": 13.172
+  },
+  {
+   "text": "The",
+   "start": 13.795,
+   "end": 14.068
+  },
+  {
+   "text": "smallest",
+   "start": 14.068,
+   "end": 14.473
+  },
+  {
+   "text": "cells",
+   "start": 14.473,
+   "end": 14.799
+  },
+  {
+   "text": "it",
+   "start": 14.799,
+   "end": 15.046
+  },
+  {
+   "text": "sorted",
+   "start": 15.046,
+   "end": 15.398
+  },
+  {
+   "text": "are",
+   "start": 15.398,
+   "end": 15.671
+  },
+  {
+   "text": "red",
+   "start": 15.671,
+   "end": 15.944
+  },
+  {
+   "text": "blood",
+   "start": 15.944,
+   "end": 16.27
+  },
+  {
+   "text": "cells.",
+   "start": 16.27,
+   "end": 16.596
+  },
+  {
+   "text": "The",
+   "start": 17.23,
+   "end": 17.516
+  },
+  {
+   "text": "biggest",
+   "start": 17.516,
+   "end": 17.913
+  },
+  {
+   "text": "are",
+   "start": 17.913,
+   "end": 18.198
+  },
+  {
+   "text": "muscle",
+   "start": 18.198,
+   "end": 18.567
+  },
+  {
+   "text": "fibres,",
+   "start": 18.567,
+   "end": 18.936
+  },
+  {
+   "text": "more",
+   "start": 18.936,
+   "end": 19.25
+  },
+  {
+   "text": "than",
+   "start": 19.25,
+   "end": 19.563
+  },
+  {
+   "text": "a",
+   "start": 19.563,
+   "end": 19.794
+  },
+  {
+   "text": "million",
+   "start": 19.794,
+   "end": 20.191
+  },
+  {
+   "text": "times",
+   "start": 20.191,
+   "end": 20.532
+  },
+  {
+   "text": "heavier.",
+   "start": 20.532,
+   "end": 20.928
+  },
+  {
+   "text": "Now",
+   "start": 21.615,
+   "end": 21.884
+  },
+  {
+   "text": "put",
+   "start": 21.884,
+   "end": 22.153
+  },
+  {
+   "text": "every",
+   "start": 22.153,
+   "end": 22.474
+  },
+  {
+   "text": "cell",
+   "start": 22.474,
+   "end": 22.77
+  },
+  {
+   "text": "into",
+   "start": 22.77,
+   "end": 23.065
+  },
+  {
+   "text": "a",
+   "start": 23.065,
+   "end": 23.282
+  },
+  {
+   "text": "size",
+   "start": 23.282,
+   "end": 23.577
+  },
+  {
+   "text": "class,",
+   "start": 23.577,
+   "end": 23.898
+  },
+  {
+   "text": "each",
+   "start": 23.898,
+   "end": 24.193
+  },
+  {
+   "text": "class",
+   "start": 24.193,
+   "end": 24.514
+  },
+  {
+   "text": "twice",
+   "start": 24.514,
+   "end": 24.835
+  },
+  {
+   "text": "as",
+   "start": 24.835,
+   "end": 25.079
+  },
+  {
+   "text": "heavy",
+   "start": 25.079,
+   "end": 25.4
+  },
+  {
+   "text": "as",
+   "start": 25.4,
+   "end": 25.643
+  },
+  {
+   "text": "the",
+   "start": 25.643,
+   "end": 25.912
+  },
+  {
+   "text": "one",
+   "start": 25.912,
+   "end": 26.181
+  },
+  {
+   "text": "before.",
+   "start": 26.181,
+   "end": 26.528
+  },
+  {
+   "text": "Each",
+   "start": 27.2,
+   "end": 27.508
+  },
+  {
+   "text": "time",
+   "start": 27.508,
+   "end": 27.815
+  },
+  {
+   "text": "the",
+   "start": 27.815,
+   "end": 28.095
+  },
+  {
+   "text": "size",
+   "start": 28.095,
+   "end": 28.403
+  },
+  {
+   "text": "doubles,",
+   "start": 28.403,
+   "end": 28.792
+  },
+  {
+   "text": "there",
+   "start": 28.792,
+   "end": 29.126
+  },
+  {
+   "text": "are,",
+   "start": 29.126,
+   "end": 29.407
+  },
+  {
+   "text": "on",
+   "start": 29.407,
+   "end": 29.66
+  },
+  {
+   "text": "average,",
+   "start": 29.66,
+   "end": 30.049
+  },
+  {
+   "text": "about",
+   "start": 30.049,
+   "end": 30.384
+  },
+  {
+   "text": "half",
+   "start": 30.384,
+   "end": 30.691
+  },
+  {
+   "text": "as",
+   "start": 30.691,
+   "end": 30.944
+  },
+  {
+   "text": "many",
+   "start": 30.944,
+   "end": 31.252
+  },
+  {
+   "text": "cells.",
+   "start": 31.252,
+   "end": 31.587
+  },
+  {
+   "text": "So",
+   "start": 32.21,
+   "end": 32.456
+  },
+  {
+   "text": "the",
+   "start": 32.456,
+   "end": 32.728
+  },
+  {
+   "text": "small",
+   "start": 32.728,
+   "end": 33.053
+  },
+  {
+   "text": "cells",
+   "start": 33.053,
+   "end": 33.378
+  },
+  {
+   "text": "win",
+   "start": 33.378,
+   "end": 33.65
+  },
+  {
+   "text": "on",
+   "start": 33.65,
+   "end": 33.896
+  },
+  {
+   "text": "numbers,",
+   "start": 33.896,
+   "end": 34.273
+  },
+  {
+   "text": "the",
+   "start": 34.273,
+   "end": 34.545
+  },
+  {
+   "text": "big",
+   "start": 34.545,
+   "end": 34.817
+  },
+  {
+   "text": "cells",
+   "start": 34.817,
+   "end": 35.142
+  },
+  {
+   "text": "win",
+   "start": 35.142,
+   "end": 35.414
+  },
+  {
+   "text": "on",
+   "start": 35.414,
+   "end": 35.66
+  },
+  {
+   "text": "size,",
+   "start": 35.66,
+   "end": 35.959
+  },
+  {
+   "text": "and",
+   "start": 35.959,
+   "end": 36.231
+  },
+  {
+   "text": "the",
+   "start": 36.231,
+   "end": 36.503
+  },
+  {
+   "text": "two",
+   "start": 36.503,
+   "end": 36.775
+  },
+  {
+   "text": "cancel",
+   "start": 36.775,
+   "end": 37.126
+  },
+  {
+   "text": "out.",
+   "start": 37.126,
+   "end": 37.399
+  },
+  {
+   "text": "Every",
+   "start": 38.07,
+   "end": 38.39
+  },
+  {
+   "text": "class",
+   "start": 38.39,
+   "end": 38.711
+  },
+  {
+   "text": "ends",
+   "start": 38.711,
+   "end": 39.005
+  },
+  {
+   "text": "up",
+   "start": 39.005,
+   "end": 39.248
+  },
+  {
+   "text": "holding",
+   "start": 39.248,
+   "end": 39.62
+  },
+  {
+   "text": "roughly",
+   "start": 39.62,
+   "end": 39.992
+  },
+  {
+   "text": "the",
+   "start": 39.992,
+   "end": 40.26
+  },
+  {
+   "text": "same",
+   "start": 40.26,
+   "end": 40.555
+  },
+  {
+   "text": "weight.",
+   "start": 40.555,
+   "end": 40.901
+  },
+  {
+   "text": "With",
+   "start": 41.53,
+   "end": 41.865
+  },
+  {
+   "text": "one",
+   "start": 41.865,
+   "end": 42.17
+  },
+  {
+   "text": "exception:",
+   "start": 42.17,
+   "end": 42.653
+  },
+  {
+   "text": "a",
+   "start": 42.653,
+   "end": 42.899
+  },
+  {
+   "text": "dip,",
+   "start": 42.899,
+   "end": 43.205
+  },
+  {
+   "text": "between",
+   "start": 43.205,
+   "end": 43.628
+  },
+  {
+   "text": "the",
+   "start": 43.628,
+   "end": 43.933
+  },
+  {
+   "text": "fat",
+   "start": 43.933,
+   "end": 44.239
+  },
+  {
+   "text": "cells",
+   "start": 44.239,
+   "end": 44.603
+  },
+  {
+   "text": "and",
+   "start": 44.603,
+   "end": 44.909
+  },
+  {
+   "text": "the",
+   "start": 44.909,
+   "end": 45.214
+  },
+  {
+   "text": "muscle",
+   "start": 45.214,
+   "end": 45.608
+  },
+  {
+   "text": "fibres.",
+   "start": 45.608,
+   "end": 46.002
+  },
+  {
+   "text": "In",
+   "start": 46.615,
+   "end": 46.858
+  },
+  {
+   "text": "women",
+   "start": 46.858,
+   "end": 47.18
+  },
+  {
+   "text": "the",
+   "start": 47.18,
+   "end": 47.449
+  },
+  {
+   "text": "dip",
+   "start": 47.449,
+   "end": 47.718
+  },
+  {
+   "text": "is",
+   "start": 47.718,
+   "end": 47.962
+  },
+  {
+   "text": "smaller,",
+   "start": 47.962,
+   "end": 48.335
+  },
+  {
+   "text": "and",
+   "start": 48.335,
+   "end": 48.605
+  },
+  {
+   "text": "in",
+   "start": 48.605,
+   "end": 48.848
+  },
+  {
+   "text": "a",
+   "start": 48.848,
+   "end": 49.065
+  },
+  {
+   "text": "ten-year-old",
+   "start": 49.065,
+   "end": 49.514
+  },
+  {
+   "text": "it",
+   "start": 49.514,
+   "end": 49.758
+  },
+  {
+   "text": "is",
+   "start": 49.758,
+   "end": 50.001
+  },
+  {
+   "text": "fainter",
+   "start": 50.001,
+   "end": 50.375
+  },
+  {
+   "text": "still.",
+   "start": 50.375,
+   "end": 50.696
+  },
+  {
+   "text": "Take",
+   "start": 51.4,
+   "end": 51.76
+  },
+  {
+   "text": "a",
+   "start": 51.76,
+   "end": 52.025
+  },
+  {
+   "text": "typical",
+   "start": 52.025,
+   "end": 52.481
+  },
+  {
+   "text": "man.",
+   "start": 52.481,
+   "end": 52.809
+  },
+  {
+   "text": "His",
+   "start": 53.435,
+   "end": 53.711
+  },
+  {
+   "text": "muscle",
+   "start": 53.711,
+   "end": 54.067
+  },
+  {
+   "text": "fibres",
+   "start": 54.067,
+   "end": 54.423
+  },
+  {
+   "text": "are",
+   "start": 54.423,
+   "end": 54.699
+  },
+  {
+   "text": "fewer",
+   "start": 54.699,
+   "end": 55.029
+  },
+  {
+   "text": "than",
+   "start": 55.029,
+   "end": 55.332
+  },
+  {
+   "text": "one",
+   "start": 55.332,
+   "end": 55.608
+  },
+  {
+   "text": "in",
+   "start": 55.608,
+   "end": 55.857
+  },
+  {
+   "text": "fifty",
+   "start": 55.857,
+   "end": 56.186
+  },
+  {
+   "text": "thousand",
+   "start": 56.186,
+   "end": 56.596
+  },
+  {
+   "text": "of",
+   "start": 56.596,
+   "end": 56.845
+  },
+  {
+   "text": "his",
+   "start": 56.845,
+   "end": 57.121
+  },
+  {
+   "text": "cells",
+   "start": 57.121,
+   "end": 57.451
+  },
+  {
+   "text": "with",
+   "start": 57.451,
+   "end": 57.754
+  },
+  {
+   "text": "a",
+   "start": 57.754,
+   "end": 57.976
+  },
+  {
+   "text": "nucleus.",
+   "start": 57.976,
+   "end": 58.359
+  },
+  {
+   "text": "Yet",
+   "start": 58.995,
+   "end": 59.209
+  },
+  {
+   "text": "they",
+   "start": 59.209,
+   "end": 59.445
+  },
+  {
+   "text": "make",
+   "start": 59.445,
+   "end": 59.68
+  },
+  {
+   "text": "up",
+   "start": 59.68,
+   "end": 59.873
+  },
+  {
+   "text": "about",
+   "start": 59.873,
+   "end": 60.129
+  },
+  {
+   "text": "half",
+   "start": 60.129,
+   "end": 60.364
+  },
+  {
+   "text": "the",
+   "start": 60.364,
+   "end": 60.579
+  },
+  {
+   "text": "weight",
+   "start": 60.579,
+   "end": 60.856
+  },
+  {
+   "text": "of",
+   "start": 60.856,
+   "end": 61.049
+  },
+  {
+   "text": "all",
+   "start": 61.049,
+   "end": 61.264
+  },
+  {
+   "text": "his",
+   "start": 61.264,
+   "end": 61.478
+  },
+  {
+   "text": "cells.",
+   "start": 61.478,
+   "end": 61.734
+  },
+  {
+   "text": "And",
+   "start": 62.355,
+   "end": 62.678
+  },
+  {
+   "text": "all",
+   "start": 62.678,
+   "end": 63.002
+  },
+  {
+   "text": "his",
+   "start": 63.002,
+   "end": 63.325
+  },
+  {
+   "text": "cells",
+   "start": 63.325,
+   "end": 63.711
+  },
+  {
+   "text": "together",
+   "start": 63.711,
+   "end": 64.191
+  },
+  {
+   "text": "weigh",
+   "start": 64.191,
+   "end": 64.576
+  },
+  {
+   "text": "about",
+   "start": 64.576,
+   "end": 64.962
+  },
+  {
+   "text": "forty-five",
+   "start": 64.962,
+   "end": 65.473
+  },
+  {
+   "text": "kilograms.",
+   "start": 65.473,
+   "end": 65.984
+  },
+  {
+   "text": "The",
+   "start": 66.615,
+   "end": 66.875
+  },
+  {
+   "text": "other",
+   "start": 66.875,
+   "end": 67.185
+  },
+  {
+   "text": "twenty-five",
+   "start": 67.185,
+   "end": 67.619
+  },
+  {
+   "text": "of",
+   "start": 67.619,
+   "end": 67.854
+  },
+  {
+   "text": "his",
+   "start": 67.854,
+   "end": 68.114
+  },
+  {
+   "text": "seventy",
+   "start": 68.114,
+   "end": 68.475
+  },
+  {
+   "text": "are",
+   "start": 68.475,
+   "end": 68.735
+  },
+  {
+   "text": "not",
+   "start": 68.735,
+   "end": 68.995
+  },
+  {
+   "text": "cells",
+   "start": 68.995,
+   "end": 69.305
+  },
+  {
+   "text": "at",
+   "start": 69.305,
+   "end": 69.54
+  },
+  {
+   "text": "all.",
+   "start": 69.54,
+   "end": 69.8
+  },
+  {
+   "text": "They",
+   "start": 70.475,
+   "end": 70.778
+  },
+  {
+   "text": "are",
+   "start": 70.778,
+   "end": 71.055
+  },
+  {
+   "text": "the",
+   "start": 71.055,
+   "end": 71.332
+  },
+  {
+   "text": "water,",
+   "start": 71.332,
+   "end": 71.662
+  },
+  {
+   "text": "protein",
+   "start": 71.662,
+   "end": 72.045
+  },
+  {
+   "text": "and",
+   "start": 72.045,
+   "end": 72.322
+  },
+  {
+   "text": "minerals",
+   "start": 72.322,
+   "end": 72.732
+  },
+  {
+   "text": "between",
+   "start": 72.732,
+   "end": 73.116
+  },
+  {
+   "text": "them.",
+   "start": 73.116,
+   "end": 73.419
+  },
+  {
+   "text": "Sort",
+   "start": 74.11,
+   "end": 74.388
+  },
+  {
+   "text": "the",
+   "start": 74.388,
+   "end": 74.641
+  },
+  {
+   "text": "life",
+   "start": 74.641,
+   "end": 74.919
+  },
+  {
+   "text": "in",
+   "start": 74.919,
+   "end": 75.148
+  },
+  {
+   "text": "the",
+   "start": 75.148,
+   "end": 75.401
+  },
+  {
+   "text": "ocean",
+   "start": 75.401,
+   "end": 75.703
+  },
+  {
+   "text": "by",
+   "start": 75.703,
+   "end": 75.932
+  },
+  {
+   "text": "size,",
+   "start": 75.932,
+   "end": 76.21
+  },
+  {
+   "text": "and",
+   "start": 76.21,
+   "end": 76.463
+  },
+  {
+   "text": "most",
+   "start": 76.463,
+   "end": 76.741
+  },
+  {
+   "text": "size",
+   "start": 76.741,
+   "end": 77.019
+  },
+  {
+   "text": "classes",
+   "start": 77.019,
+   "end": 77.37
+  },
+  {
+   "text": "hold",
+   "start": 77.37,
+   "end": 77.648
+  },
+  {
+   "text": "about",
+   "start": 77.648,
+   "end": 77.951
+  },
+  {
+   "text": "the",
+   "start": 77.951,
+   "end": 78.204
+  },
+  {
+   "text": "same",
+   "start": 78.204,
+   "end": 78.482
+  },
+  {
+   "text": "weight",
+   "start": 78.482,
+   "end": 78.809
+  },
+  {
+   "text": "too.",
+   "start": 78.809,
+   "end": 79.062
+  },
+  {
+   "text": "But",
+   "start": 79.77,
+   "end": 80.045
+  },
+  {
+   "text": "in",
+   "start": 80.045,
+   "end": 80.292
+  },
+  {
+   "text": "your",
+   "start": 80.292,
+   "end": 80.594
+  },
+  {
+   "text": "body,",
+   "start": 80.594,
+   "end": 80.895
+  },
+  {
+   "text": "nobody",
+   "start": 80.895,
+   "end": 81.249
+  },
+  {
+   "text": "knows",
+   "start": 81.249,
+   "end": 81.576
+  },
+  {
+   "text": "why.",
+   "start": 81.576,
+   "end": 81.851
+  },
+  {
+   "text": "The",
+   "start": 82.555,
+   "end": 82.825
+  },
+  {
+   "text": "authors",
+   "start": 82.825,
+   "end": 83.199
+  },
+  {
+   "text": "know",
+   "start": 83.199,
+   "end": 83.495
+  },
+  {
+   "text": "of",
+   "start": 83.495,
+   "end": 83.739
+  },
+  {
+   "text": "no",
+   "start": 83.739,
+   "end": 83.983
+  },
+  {
+   "text": "process",
+   "start": 83.983,
+   "end": 84.357
+  },
+  {
+   "text": "that",
+   "start": 84.357,
+   "end": 84.654
+  },
+  {
+   "text": "explains",
+   "start": 84.654,
+   "end": 85.054
+  },
+  {
+   "text": "it.",
+   "start": 85.054,
+   "end": 85.298
+  },
+  {
+   "text": "Trillions",
+   "start": 86.015,
+   "end": 86.514
+  },
+  {
+   "text": "of",
+   "start": 86.514,
+   "end": 86.799
+  },
+  {
+   "text": "tiny",
+   "start": 86.799,
+   "end": 87.145
+  },
+  {
+   "text": "cells,",
+   "start": 87.145,
+   "end": 87.522
+  },
+  {
+   "text": "far",
+   "start": 87.522,
+   "end": 87.838
+  },
+  {
+   "text": "fewer",
+   "start": 87.838,
+   "end": 88.215
+  },
+  {
+   "text": "giant",
+   "start": 88.215,
+   "end": 88.592
+  },
+  {
+   "text": "ones,",
+   "start": 88.592,
+   "end": 88.938
+  },
+  {
+   "text": "and",
+   "start": 88.938,
+   "end": 89.254
+  },
+  {
+   "text": "roughly",
+   "start": 89.254,
+   "end": 89.691
+  },
+  {
+   "text": "the",
+   "start": 89.691,
+   "end": 90.007
+  },
+  {
+   "text": "same",
+   "start": 90.007,
+   "end": 90.353
+  },
+  {
+   "text": "weight",
+   "start": 90.353,
+   "end": 90.761
+  },
+  {
+   "text": "at",
+   "start": 90.761,
+   "end": 91.046
+  },
+  {
+   "text": "every",
+   "start": 91.046,
+   "end": 91.423
+  },
+  {
+   "text": "size.",
+   "start": 91.423,
+   "end": 91.769
+  }
+ ]
+}
