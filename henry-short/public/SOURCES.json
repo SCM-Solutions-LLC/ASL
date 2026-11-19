@@ -293,17 +293,5 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "The Open Goldberg Variations recording was released CC0 by the performer. Bed for the cell-count card deck, chosen by ear from two candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`) from Commons' Ogg rendition. Licence read on the file's page on 2026-11-10."
- },
- "public/img/pompeii-street-1853.jpg": {
-  "source": "Firmin-Eugène Le Dien, \"Pompeii, Pompey's Lane, Tomb Monument of Mamia\", ca. 1853, The Metropolitan Museum of Art, object 629811 (https://www.metmuseum.org/art/collection/search/629811), primary image DP319714.jpg; mount border cropped, toned sepia, scaled to 2000 px",
-  "licence": "cc0",
-  "ship": true,
-  "note": "Met Open Access: the API reports isPublicDomain true (checked 2026-11-19). No credit required; the pompeii-casts short credits it on screen anyway and captions it as a c. 1853 view of Pompeii, not the houses named in the script (A6)."
- },
- "public/img/pompeii-jupiter-1851.jpg": {
-  "source": "Alfred-Nicolas Normand, \"Temple of Jupiter, Pompeii\", 1851, The Metropolitan Museum of Art, object 785777 (https://www.metmuseum.org/art/collection/search/785777), primary image DP-19675-001.jpg; mount border cropped, toned sepia, scaled to 2000 px",
-  "licence": "cc0",
-  "ship": true,
-  "note": "Met Open Access: the API reports isPublicDomain true (checked 2026-11-19). Credited on screen in pompeii-casts."
  }
 }
