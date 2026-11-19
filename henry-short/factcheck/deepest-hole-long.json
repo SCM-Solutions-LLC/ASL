@@ -1,0 +1,183 @@
+{
+  "script": "script/deepest-hole-long.txt",
+  "sha256": "0d57fa841d5ffc0a6502b18d107a49db8ada0e10fe2c6415fe197a54f2010e02",
+  "checked": "2026-11-19",
+  "claims": [
+    {
+      "n": 1,
+      "claim": "The deepest hole humans have ever dug",
+      "where": "spoken + on-screen: DEEPEST HOLE",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov, Chicherov & Sharov 2021, doi:10.37482/issn2221-2698.2021.44.267 (doi.org -> arcticandnorth.ru); journal PDFs read in full: Russian https://arcticandnorth.ru/upload/iblock/df4/267_284.pdf and English https://arcticandnorth.ru/upload/iblock/61f/44_224_239.pdf; Zhu & Huang 2026, doi:10.1038/s43247-026-03246-z, full text at nature.com (published 3 Feb 2026)",
+      "note": "Lobanov p. 231: \"In 1990, the maximum depth was reached - 12262 m, which has not been surpassed so far.\" Zhu & Huang: SG-3 \"remains the deepest vertical borehole ever attempted\". True in vertical depth (extended-reach wells are longer, not deeper). 'Dug' for 'drilled' is ordinary English framing, not a factual change."
+    },
+    {
+      "n": 2,
+      "claim": "Hook at second two: a viewer who swipes after \"The deepest hole humans have ever dug was finished with a bit narrower than a dinner plate\" (card: DEEPEST HOLE) leaves believing the deepest hole ever made was finished with a bit narrower than a dinner plate",
+      "where": "spoken + on-screen: hook (A4)",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 (English PDF p. 231: \"a 46 m long multistage turbine at the bottom with a 214 mm drill bit\"; Fig. 5c, Russian PDF p. 10, image extracted and viewed: open hole d 215.9 mm to 12262 m); USGS OFR 86-517 https://pubs.usgs.gov/of/1986/0517/report.pdf (coring bit ISM-214.3/60T); Met Museum API object 201074 https://collectionapi.metmuseum.org/public/collection/v1/objects/201074",
+      "note": "The hook is true as stated and does not carry the popular myth that the whole hole is ~23 cm wide: it says the hole was finished with the narrow bit, and line 3 gives the 72 cm top. 21.4 cm bit < 25.6 cm Met dinner plate (51.86.100)."
+    },
+    {
+      "n": 3,
+      "claim": "finished with a bit narrower than a dinner plate",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF p. 231 and Fig. 5c; Met API object 201074 (accession 51.86.100, 'Dinner plate', 'Diameter: 10 1/16 in. (25.6 cm)')",
+      "note": "214 mm bit; final open-hole section 215.9 mm to 12,262 m (Fig. 5c). Both narrower than the 25.6 cm plate."
+    },
+    {
+      "n": 4,
+      "claim": "The Soviet Union started drilling it in May nineteen seventy, on the Kola Peninsula.",
+      "where": "spoken + on-screen: MAY 1970",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 228 (Russian original checked too)",
+      "note": "\"Drilling was started on May 24, 1970\"; \"SG-3 was started in the northwestern part of the Kola Peninsula\"; drilled by the USSR Ministry of Geology."
+    },
+    {
+      "n": 5,
+      "claim": "At the top, the hole was seventy-two centimetres wide.",
+      "where": "spoken + on-screen: 72 CM AT THE TOP",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 Fig. 5c 'actual design of the well' (Russian PDF p. 10, embedded image extracted, enlarged and viewed)",
+      "note": "Fig. 5c: \"d 720 мм, 40 м\" at the top. That is the diameter of the top casing (колонна); the bore around it is at least that, so '72 cm wide' at the top is fair."
+    },
+    {
+      "n": 6,
+      "claim": "It was drilled in steps, each narrower than the last, down to a bit just twenty-one centimetres across.",
+      "where": "spoken + on-screen: 21 CM BIT; DOWN TO 21 CM",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 Fig. 5c and English PDF p. 231; USGS OFR 86-517 (ISM-214.3/60T coring bit)",
+      "note": "Fig. 5c: 720 mm to 40 m, 325 mm to 2000 m, 245 mm to 8770 m, open hole 215.9 mm to 12262 m: each step narrower. Bit 214 mm = 21.4 cm, said as 21: acceptable rounding. Lobanov notes the bore went oval with caverns below 7 km, so '21 cm' is right only for the bit, which is what the line says."
+    },
+    {
+      "n": 7,
+      "claim": "By nineteen seventy-five, it was over seven kilometres deep.",
+      "where": "spoken + on-screen: OVER 7 KM",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF p. 230",
+      "note": "\"The first stage of drilling was completed in May 1975, when the well reached a depth of 7263 m.\""
+    },
+    {
+      "n": 8,
+      "claim": "In nineteen seventy-nine, at nine and a half kilometres, it beat the American record.",
+      "where": "spoken + on-screen: AMERICAN RECORD",
+      "verdict": "fix",
+      "source_checked": "Lobanov 2021 English PDF p. 230; Zhu & Huang 2026 (Bertha Rogers 9583 m)",
+      "note": "Source: \"In June 1979, the well broke the record of 9583 meters held by the US well, reaching a depth of 9584 meters.\" Year and record are right, but the depth is wrong as spoken: the record was beaten by 1 m, so 'at nine and a half kilometres' (9,500 m) is a depth at which it had NOT yet beaten the 9,583 m record, and it contradicts the chart's own US RECORD line at 9.583 km. Change to 'at almost nine point six kilometres' (or 'just under nine point six'). The AMERICAN RECORD card is fine."
+    },
+    {
+      "n": 9,
+      "claim": "By the end of nineteen eighty-three, it had reached twelve kilometres.",
+      "where": "spoken + on-screen: 12 KM",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF p. 230",
+      "note": "\"On December 27, 1983, the well depth reached 12000 m.\""
+    },
+    {
+      "n": 10,
+      "claim": "Then, in nineteen eighty-four, the drill string broke, and they had to start again from seven kilometres down.",
+      "where": "spoken + on-screen: BACK TO 7 KM",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 232-233 (Russian p. 448 of text, '27 сентября 1984')",
+      "note": "\"On September 27, 1984, drilling of SG-3 was continued. Another 9-meter interval was drilled, but the drill string broke off at a depth of more than 12 km ... Only 7 months later, drilling was resumed from a depth of 7000 m.\" The record branch \"started at a depth of 7010 m, ended at 12 262 m\"."
+    },
+    {
+      "n": 11,
+      "claim": "By nineteen ninety, the new branch had reached twelve thousand, two hundred and sixty-two metres.",
+      "where": "spoken + on-screen: 12,262 M",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 230-233; Zhu & Huang 2026",
+      "note": "Lobanov: the third shaft, from 7010 m, \"ended at 12 262 m\"; \"In 1990, the maximum depth was reached - 12262 m\". Zhu & Huang say \"between 1970 and 1989\". 'By 1990' is true on either date."
+    },
+    {
+      "n": 12,
+      "claim": "No hole has gone deeper since.",
+      "where": "spoken + on-screen: STILL THE DEEPEST",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 p. 231; Zhu & Huang 2026 (Feb 2026); plus a web search on 2026-11-19 to try to break it (not a source)",
+      "note": "Lobanov: \"has not been surpassed so far\"; Zhu & Huang (Feb 2026): \"remains the deepest vertical borehole\", deepest rivals SDTK-1 10,910 m and X-1. The search found nothing deeper completed by Nov 2026: Shenditake-1 stopped at 10,910 m, and 15 km wells are plans only. Longer extended-reach wells (e.g. 12,289 m measured depth) are not deeper."
+    },
+    {
+      "n": 13,
+      "claim": "The rock at the bottom was expected to be around a hundred and twenty degrees.",
+      "where": "spoken + on-screen: EXPECTED: 120 °C; thermometer dashed mark at 120",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 235 and 237; Russian original (\"вместо ожидаемых 120°С\")",
+      "note": "\"at a depth of about 12 km, the temperature values reached 212°C, instead of the assumed 120°C\". The 120 °C is the expectation at the ~12 km bottom. Unit is only on screen (°C), which is fine."
+    },
+    {
+      "n": 14,
+      "claim": "At ten kilometres, it was already a hundred and eighty.",
+      "where": "spoken + on-screen: 180 °C AT 10 KM; thermometer mercury to 180",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 235, 237; Zhu & Huang 2026",
+      "note": "\"the real temperature in the borehole at a depth of 10 km reached 180°C\". (Zhu & Huang cite an unrelated magma paper for it, but Lobanov stands alone.)"
+    },
+    {
+      "n": 15,
+      "claim": "At the bottom, it was over two hundred.",
+      "where": "spoken + on-screen: 212 °C; thermometer mercury to 212",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 235, 237; Zhu & Huang 2026",
+      "note": "212 °C at about 12 km. The mercury going past the top 200 label to 212 is proportional to the scale."
+    },
+    {
+      "n": 16,
+      "claim": "Drilling stopped in nineteen ninety-two, when its funding was cut.",
+      "where": "spoken + on-screen: 1992: FUNDING CUT",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF p. 231 (Russian: \"резкое сокращение финансирования не позволило продолжить работы\")",
+      "note": "\"a drastic reduction in funding made it impossible to continue the work. Drilling was stopped in 1992.\" The source does not date the cut itself, but it ties the 1992 stop to it, which is all the line and card say."
+    },
+    {
+      "n": 17,
+      "claim": "The plan had been to go on to thirteen kilometres.",
+      "where": "spoken + on-screen: PLAN: 13 KM; chart dashed line at 13 km labelled PLAN",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF p. 233 and p. 228",
+      "note": "\"In 1992, a unique operation was carried out to install a casing in the SG-3 borehole to continue drilling the well to a depth of 13 km. However, despite this, further drilling was abandoned.\" Also \"supposed to reach a depth of 13 km by 1990\". The design depth was 15 km (Lobanov; Zhu & Huang), but 'the plan' in this 1992 context is 13 km."
+    },
+    {
+      "n": 18,
+      "claim": "One recent paper adds that the heat made the rock flow and close up the hole.",
+      "where": "spoken + on-screen: ONE PAPER: HEAT; cross-section of a hole whose walls bulge inward",
+      "verdict": "fix",
+      "source_checked": "Zhu & Huang 2026 full text and reference list (nature.com); Lobanov 2021 English and Russian PDFs, read in full",
+      "note": "The paraphrase of Zhu & Huang is accurate (\"Drilling was abandoned in 1992 when unexpectedly high bottom-hole temperatures of 212 °C induced plastic rock flow that repeatedly sealed the hole\"), but the claim does not hold up: (a) that sentence carries no citation, and the reference on the sentence before it (ref. 29) is Lobanov 2021, which never mentions plastic flow (no 'пластич' in the Russian text) and gives funding as the reason drilling stopped; (b) Lobanov describes the deep bore going elliptical with caverns and wall collapse, i.e. widening, and a 1992 casing run to carry on to 13 km, so the hole was not sealed shut; (c) the same review cites an unrelated paper (Huppert & Sparks 1988, magma genesis) for its Kola temperatures, so its Kola sourcing is unreliable. 'Adds' presents a conflicting cause as an extra fact, and the inward-bulging walls draw it as fact (A3, A5, A6). Change: cut the line, the ONE PAPER: HEAT card and the bulging-wall figure. Or replace them with what Lobanov supports, e.g. 'Below seven kilometres, the walls kept caving in' with a figure of an oval, caverned bore. If the claim is kept, mark it as disputed ('one review claims ... ; the drillers' own account blames the money') and record the disagreement in SOURCES (A3)."
+    },
+    {
+      "n": 19,
+      "claim": "And for all that, it never made it through the crust: it got about a third of the way.",
+      "where": "spoken + on-screen: STILL IN THE CRUST; cross-section of crust over mantle with the hole one third of the way down",
+      "verdict": "confirmed",
+      "source_checked": "USGS Open-File Report 86-517 (Clarke et al. 1986, summary of Kozlovskiy 1984), https://pubs.usgs.gov/of/1986/0517/report.pdf, section 'Results of deep geophysical studies in the area of corehole SD-3'",
+      "note": "\"Crustal thickness in the vicinity of the corehole was shown to be about 40 km.\" (Kola Moho average 37 km, range 28-40 km.) 12.262/40 = 31%, 12.262/37 = 33%: 'about a third'. Lobanov confirms the hole stayed in the 'granite' layer. The figure at one third matches."
+    },
+    {
+      "n": 20,
+      "claim": "Twelve kilometres down. The centre of the Earth is over six thousand more.",
+      "where": "spoken + on-screen: 12 KM DOWN; 6,000+ KM MORE",
+      "verdict": "confirmed",
+      "source_checked": "NASA NSSDC Earth Fact Sheet https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "note": "Volumetric mean radius 6371.000 km (polar 6356.752): 6371 - 12.262 = 6359 km, 'over six thousand more'."
+    },
+    {
+      "n": 21,
+      "claim": "Chart of depth against year: dots (1970.39, 0), (1975.37, 7.263), (1979.45, 9.584), (1983.99, 12.0); dashed to (1984.5, 12.066); solid back up to (1984.5, 7.01); dashed to a 12.262 km bar spanning 1989-1990; US RECORD line at 9.583 km; PLAN line at 13 km",
+      "where": "on-screen: depth-year chart",
+      "verdict": "confirmed",
+      "source_checked": "Lobanov 2021 English PDF pp. 228-233 and Fig. 5b (well trajectories labelled 1970, 1975, 1983, 1984, 1990, viewed); Zhu & Huang 2026",
+      "note": "Dots match 24 May 1970, May 1975 (7263 m), June 1979 (9584 m), 27 Dec 1983 (12000 m). Break-and-restart: 12,066 m reached before the 1984 suspension, sidetrack from 7010 m (Fig. 5b labels it 1984). The 1989-1990 bar spans the two sources' dates. US RECORD 9583 m and PLAN 13 km per Lobanov. Small offset, not visible against decade ticks: the string broke on 27 Sep 1984 (about 1984.74), not 1984.5. Moving the drop there is optional."
+    },
+    {
+      "n": 22,
+      "claim": "Photo of a dinner plate (25.6 cm across) with circles to the same scale: 21 cm and 72 cm",
+      "where": "on-screen: plate figure",
+      "verdict": "confirmed",
+      "source_checked": "Met Museum API object 201074 (accession 51.86.100, 'Dinner plate', 25.6 cm; additionalImages includes 150793.jpg, the Commons file named in public/SOURCES.json); Lobanov Fig. 5c",
+      "note": "The plate is 25.6 cm per the museum's own record, and the photo is that object's catalogue image. The 21 cm circle (bit 21.4 cm) and the 72 cm circle (720 mm top) are to scale against it."
+    }
+  ]
+}
