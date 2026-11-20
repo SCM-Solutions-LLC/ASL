@@ -1,10 +1,11 @@
 import React from "react";
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
 import { Scene } from "./Scene";
 import { SHEET, Sheet } from "./chars/kit/Sheet";
 import { STYLES } from "./chars/kit/styles";
 import { SHORTS } from "./shorts";
 import type { Short } from "./shorts/types";
+import { THUMBS } from "./thumbnails";
 
 // 9:16 is what gets posted; 16:9 is the same staged scene framed wider, for the monthly long-form.
 const FORMATS = [
@@ -46,6 +47,9 @@ export const RemotionRoot: React.FC = () => (
         height={SHEET.height}
         defaultProps={{ styleId: s.id }}
       />
+    ))}
+    {THUMBS.map((t) => (
+      <Still key={t.id} id={t.id} component={t.component} width={1080} height={1920} />
     ))}
     {ENTRIES.map((e) => (
       <Composition
