@@ -147,7 +147,7 @@ const OUTLINE = {
 
 const Cut = makeCut("cleopatra", PICS);
 
-const Year: React.FC<{ x: number; y: number; text: string; at: number; size?: number }> = ({
+export const Year: React.FC<{ x: number; y: number; text: string; at: number; size?: number }> = ({
   x,
   y,
   text,
