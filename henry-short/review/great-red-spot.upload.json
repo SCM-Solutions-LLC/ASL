@@ -1,0 +1,12 @@
+{
+  "slug": "great-red-spot",
+  "videoId": "nphfBsClC2M",
+  "mp4_sha256": "8d0077e9336a739c27f4219fe746a8c1d3a7e327959a28e99b834ea9bf91ee9a",
+  "meta_sha256": "65f66c98146c52206cdd660df129b00e91cc1adc0cdcf2321965d0259a03a35a",
+  "status": {
+    "privacyStatus": "private"
+  },
+  "uploadedAt": "2026-11-20T01:15:25.479Z",
+  "uploadedVia": "Upload short, run 44626059344",
+  "notes": "Reconstructed from that run log; the full YouTube status object is in its great-red-spot-upload-record artifact until 2027-02-18."
+}
