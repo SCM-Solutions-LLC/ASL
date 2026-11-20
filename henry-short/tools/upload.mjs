@@ -61,12 +61,22 @@ export function videoResource(meta, approval) {
 async function accessToken() {
   const path = process.env.YT_CREDENTIALS || `${homedir()}/.config/henry-short/youtube.json`;
   if (!existsSync(path)) throw new Error(`No credentials at ${path} (see the header of this file).`);
-  const { client_id, client_secret, refresh_token } = JSON.parse(readFileSync(path, "utf8"));
+  const creds = JSON.parse(readFileSync(path, "utf8"));
+  // Pasted secrets often carry a trailing newline or space, which Google rejects.
+  const [client_id, client_secret, refresh_token] = ["client_id", "client_secret", "refresh_token"].map((k) => {
+    const v = (creds[k] ?? "").trim();
+    if (!v) throw new Error(`Credentials file has no ${k}.`);
+    return v;
+  });
   const res = await fetch("https://oauth2.googleapis.com/token", {
     method: "POST",
     body: new URLSearchParams({ client_id, client_secret, refresh_token, grant_type: "refresh_token" }),
   });
-  if (!res.ok) throw new Error(`Token refresh failed: HTTP ${res.status}.`); // body may echo secrets
+  if (!res.ok) {
+    // Print only Google's error code and description (e.g. invalid_grant), never the raw body.
+    const { error, error_description } = await res.json().catch(() => ({}));
+    throw new Error(`Token refresh failed: HTTP ${res.status} ${error ?? ""}${error_description ? ` (${error_description})` : ""}.`);
+  }
   return (await res.json()).access_token;
 }
 
