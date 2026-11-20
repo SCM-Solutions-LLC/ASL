@@ -1,0 +1,12 @@
+{
+  "slug": "deepest-hole-long",
+  "videoId": "ibNjmPjsMYE",
+  "mp4_sha256": "573d46dca162accf4bb6514ba3fa240e60a6339f39fa68d5fa14e8ca4de3b54d",
+  "meta_sha256": "87b043bb512de2bfd9b658e24349e37b3a7bee6af2a9480e391553942ca3511b",
+  "status": {
+    "privacyStatus": "private"
+  },
+  "uploadedAt": "2026-11-20T01:15:02.414Z",
+  "uploadedVia": "Upload short, run 44626052062",
+  "notes": "Reconstructed from that run log; the full YouTube status object is in its deepest-hole-long-upload-record artifact until 2027-02-18."
+}
