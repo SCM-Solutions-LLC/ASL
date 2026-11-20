@@ -31,3 +31,4 @@ bed cells   "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Kimi
 # The long shorts run 90-100 s, so their beds are taken at 110 s and never loop.
 bed gravity-turn "https://opengameart.org/sites/default/files/gravity_turn_action_1.mp3" "" 0 110
 bed discovery    "https://opengameart.org/sites/default/files/discovery.mp3" "" 0 110
+bed playful "https://opengameart.org/sites/default/files/Of%20Far%20Different%20Nature%20-%20Recorder%20Jam%20%28CC0%29_0.mp3"

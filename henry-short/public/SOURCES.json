@@ -96,6 +96,12 @@
   "ship": true,
   "note": "Listed CC0 by its author; the pack's own read-me says the songs are free to use with no licence restriction. Bed for the Cleopatra card-deck short, chosen by ear from four candidates. First 45 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-10."
  },
+ "public/music/playful.mp3": {
+  "source": "\"Recorder Jam\" by Of Far Different Nature, https://opengameart.org/content/recorder-jam",
+  "licence": "cc0-1.0",
+  "ship": true,
+  "note": "Listed CC0 by its author, and the file name carries (CC0). Bed for the Cleopatra doodle deck. The source is 32 s, all of it used, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-20."
+ },
  "public/cutout/cleopatra/cleopatra.jpg": {
   "source": "\"Cleopatra\", John William Waterhouse, 1888 — https://commons.wikimedia.org/wiki/File:Cleopatra_-_John_William_Waterhouse.jpg",
   "licence": "public-domain",
