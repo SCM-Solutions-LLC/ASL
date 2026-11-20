@@ -1,0 +1,12 @@
+{
+  "slug": "age-of-sunlight-long",
+  "videoId": "S9wlyq-m-lQ",
+  "mp4_sha256": "9e4ad034c995ed0eff1ad26e4b065296b8404676404bb0bf74093277b6263941",
+  "meta_sha256": "ad2950da40a2b75cdf49ca006427ef8669a65ce608e0e3348d8206af179a20d7",
+  "status": {
+    "privacyStatus": "private"
+  },
+  "uploadedAt": "2026-11-20T01:08:34.181Z",
+  "uploadedVia": "Upload short, run 44647080342",
+  "notes": "Reconstructed from that run log; the full YouTube status object is in its age-of-sunlight-long-upload-record artifact until 2027-02-18."
+}
