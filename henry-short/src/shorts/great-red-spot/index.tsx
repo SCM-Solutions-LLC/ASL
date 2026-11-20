@@ -35,7 +35,6 @@ const F = {
   drawings: edit.at("drawings"),
   y1831: edit.at("1831"),
   third: edit.at("third"),
-  y1879: edit.at("1879"),
   same: edit.at("same"),
   growing: edit.at("growing"),
   unseen: edit.at("unseen"),
@@ -66,8 +65,9 @@ const yearAt = (f: number) => {
     [F.y1713, 1713],
     [F.then, 1713],
     [F.nobody + 30, 1831],
-    [F.third - 6, 1831],
-    [F.y1879, 1879],
+    // 1831 -> 1879 runs during the lengths panel's fade-in, so the counter never contradicts its "1879" label (A6).
+    [F.third - 10, 1831],
+    [F.third + 6, 1879],
     [F.record - 6, 1879],
     [F.nearly + 20, NOW],
   ];
