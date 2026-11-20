@@ -75,7 +75,21 @@ const GreatRedSpot: React.FC = () => {
   );
 };
 
+// Stonehenge: the open question (source and route) over the CC BY photo the short uses, credited as the licence asks.
+const AltarStone: React.FC = () => {
+  const k = 1.6;
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <Img src={staticFile("img/stonehenge-red-sky.jpg")} style={{ position: "absolute", left: 540 - 1000 * k, top: 1400 - 1170 * k, width: 1920 * k, height: 1440 * k }} />
+      <div style={{ ...word(190), top: 330 }}>6 TONNES</div>
+      <div style={{ ...word(190, GOLD), top: 560 }}>700+ KM?</div>
+      <div style={{ ...word(26, "#bbb"), top: 1860, textTransform: "none", fontWeight: 400 }}>Photo: Stonehenge Stone Circle (Flickr), CC BY 2.0</div>
+    </AbsoluteFill>
+  );
+};
+
 export const THUMBS = [
+  { id: "thumb-altar-stone", component: AltarStone },
   { id: "thumb-deepest-hole-long", component: DeepestHole },
   { id: "thumb-age-of-sunlight-long", component: NeutrinosSun },
   { id: "thumb-great-red-spot", component: GreatRedSpot },

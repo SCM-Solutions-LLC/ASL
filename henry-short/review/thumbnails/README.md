@@ -13,6 +13,7 @@ Thumbnails are 2160×3840 JPEGs (YouTube's recommended Shorts size). To re-rende
 | `deepest-hole-long` (ibNjmPjsMYE) | Earth's deepest hole was finished with a bit this small | 55 | `deepest-hole-long.jpg`: "12 KM DOWN", the 21 cm bit drawn to scale on the 25.6 cm museum plate |
 | `age-of-sunlight-long` (S9wlyq-m-lQ) | Sunlight is old news. Neutrinos aren't. | 39 | `age-of-sunlight-long.jpg`: SDO Sun, "SUNLIGHT 40,000+ YEARS" vs "NEUTRINOS 8 MINUTES" |
 | `great-red-spot` (xFyCvJBFMbc) | Was the Great Red Spot really seen in 1665? | 43 | `great-red-spot.jpg`: Cassini-map Jupiter, today's GRS ringed, "SEEN SINCE 1665?", "RECORD STARTS 1831" |
+| `altar-stone` (eY8_wJqBbJ8, public) | How did a 6-tonne stone reach Stonehenge? | 41 | `altar-stone.jpg`: the CC BY Stonehenge sunrise photo, "6 TONNES", "700+ KM?", credit line at the foot |
 
 ## Why these (research, Nov 2026)
 
@@ -39,3 +40,8 @@ Thumbnails are 2160×3840 JPEGs (YouTube's recommended Shorts size). To re-rende
   marks today's GRS on the unaltered NASA map. Cassini's 1665 oval is neither shown nor labelled,
   as `factcheck/great-red-spot.json` claim 2 requires. "Record starts 1831" is the script's
   "first shows up in drawings in 1831".
+- **Altar Stone:** a question, because the short's answer is that nobody knows yet. The source and
+  route are both unsettled (Pirrie et al. 2026). "700+ KM?" carries the script's "if so … more than
+  seven hundred kilometres" as a question. The photo is CC BY 2.0, and its credit is on the thumbnail
+  as well as in the description. This short is already public with a title the owner chose in
+  Studio. Swapping titles on a live video resets nothing, but compare CTR before and after.
