@@ -311,5 +311,11 @@
   "licence": "cc0-1.0",
   "ship": true,
   "note": "Listed CC0 by its author. Bed for the long deepest-hole short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
+ },
+ "public/img/kheops-pyramid.jpg": {
+  "source": "\"Kheops-Pyramid.jpg\", photograph by Nina (no.wikipedia User:Nina), March 2005 — https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg",
+  "licence": "cc-by-2.5",
+  "ship": true,
+  "note": "CC BY 2.5: credited on screen while the photo shows (\"Photo: Nina, Wikimedia Commons, CC BY 2.5\"). Original 1581x971. Visitors at the base are a few pixels tall and not identifiable (C4). Fetched from Wikimedia Commons on 2026-11-22; licence as stated by the Commons API that day."
  }
 }
