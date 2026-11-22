@@ -223,8 +223,8 @@ export const Papyrus: React.FC<{ x: number; y: number; w: number; h: number; o: 
   );
 };
 
-// Onion, radish, leek: vegetables the Egyptians grew (Herodotus 2.125.6 names radishes, onions and
-// leeks for this same account). The script says only "vegetables"; the picture adds no number.
+// Onion, radish, leek as generic "vegetables": Diodorus 1.64.3 names none, so no label names a kind
+// (A7 pass 2). The picture adds no number.
 export const Vegetables: React.FC<{ x: number; y: number; o: number; pop: number[] }> = ({ x, y, o, pop }) =>
   o <= 0 ? null : (
     <svg width={1920} height={1080} style={{ ...svgBox, opacity: o }}>
