@@ -19,10 +19,10 @@ import { Balance, Boat, Book, Counter, DARK, DIM, Disc, Fine, GOLD, INK, Jar, La
 const edit = makeEdit({
   alignment,
   keyPhrases: [
-    ["closer"], ["Moon"], ["Great", "Pyramid."], ["Not", "this."], ["polished"], ["Diodorus,"], ["girl."], ["still", "in", "place."],
+    ["Great", "Pyramid"], ["Not", "this."], ["closer"], ["Moon"], ["polished"], ["Diodorus,"], ["girl."], ["still", "in", "place."],
     ["three", "hundred", "and", "sixty", "thousand"], ["twenty", "years"], ["inscription"], ["laxatives"], ["sixteen", "hundred", "talents."],
     ["2013,"], ["Red", "Sea,"], ["found", "papyri"], ["Khufu."], ["oldest"], ["logbook"], ["Merer's"], ["limestone"], ["seventeen", "kilometres"],
-    ["buried"], ["four", "and", "a", "half", "thousand", "years."], ["ancient", "history."], ["work", "log"], ["leaving", "behind"], ["four", "thousand", "years"],
+    ["buried"], ["four", "and", "a", "half", "thousand", "years."], ["ancient", "history."], ["work", "log"], ["you", "leave", "behind"], ["four", "thousand", "years"],
   ],
   // Short pages, one highlighted keyword each. "?" does not end a page on its own.
   breakAfter: ["closer", "landing", "building", "pyramid", "day?", "smooth,", "Diodorus,", "Egypt", "stones", "told", "men", "inscription", "workers'", "2013,", "harbour", "Sea,", "papyri", "king,", "logbook", "crew,", "limestone", "quarry", "away", "buried", "read", "log", "behind"],
@@ -30,12 +30,10 @@ const edit = makeEdit({
 });
 
 const F = {
+  not: edit.at("not"),
+  cleo0: edit.at("cleopatra", 0), // "Cleopatra's" in line 1 cleans to a different word
   moon: edit.at("moon"),
   building: edit.at("building"),
-  great: edit.at("great"),
-  so: edit.at("so"),
-  day: edit.at("day?"),
-  not: edit.at("not"),
   it: edit.at("it"),
   still: edit.at("still"),
   smooth: edit.at("smooth,"),
@@ -73,7 +71,7 @@ const F = {
   quarry: edit.at("quarry"),
   seventeen: edit.at("seventeen"),
   away: edit.at("away"),
-  pyramid2: edit.at("pyramid.", 2),
+  pyramid2: edit.at("pyramid", 1),
   they: edit.at("they"),
   buried: edit.at("buried"),
   four: edit.at("four"),
@@ -83,8 +81,8 @@ const F = {
   we: edit.at("we"),
   read: edit.at("read"),
   build: edit.at("build"),
-  so2: edit.at("so", 1),
-  leaving: edit.at("leaving"),
+  so2: edit.at("what", 2), // the closing question starts
+  leaving: edit.at("leave"),
   four2: edit.at("four", 1),
   now: edit.at("now?"),
   end: edit.duration,
@@ -97,10 +95,10 @@ const yearLabel = (y: number) => (y > 0 ? `${Math.round(y)}` : `${fmt(1 - y)} BC
 
 // Shot windows, each fading over 8 frames at both ends.
 const SHOTS = {
-  shaftA: [-10, F.so - 2],
-  day: [F.so - 6, F.not - 2],
-  photo: [F.not - 6, F.it - 2],
-  casing: [F.it - 6, F.greek - 2],
+  // The hook opens on the real photo: it is on screen from the first frame.
+  photo: [-10, F.it - 2],
+  casing: [F.it - 6, F.cleo0 - 2],
+  shaftA: [F.cleo0 - 6, F.greek - 2],
   diodorus: [F.greek - 6, F.he0 - 2],
   stones: [F.he0 - 6, F.he1 - 2],
   men: [F.he1 - 6, F.he2 - 2],
@@ -135,7 +133,7 @@ const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) =
   const shift = future * 4000 * S.k;
   const y = (astro: number) => depth(S, astro) + shift;
   const bottom = S.top + 4800 * S.k + shift;
-  const showA = f < SHOTS.shaftA[1] + 10;
+  const showA = f >= SHOTS.shaftA[0] - 10 && f < SHOTS.shaftA[1] + 10;
   const B = f >= SHOTS.shaftB[0];
 
   // Markers, each popping in on its spoken word. Dates: cleopatra-timeline SOURCES 1-5 (hook).
@@ -211,10 +209,10 @@ const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) =
 
       {/* A: the hook. Three dates on one scale; the brackets carry the two spans. */}
       {showA ? mark(moonY, "1969", "Moon landing", markA(F.moon), false) : null}
-      {mark(cleoY, "69 BC", "Cleopatra born", markA(-10), showA || ancient > 0)}
-      {mark(pyrY, "c. 2600 BC", B ? "pyramid built · Merer's papyri" : "Great Pyramid built", markA(F.great), false)}
+      {mark(cleoY, "69 BC", "Cleopatra born", markA(F.cleo0 - 6), showA || ancient > 0)}
+      {mark(pyrY, "c. 2600 BC", B ? "pyramid built · Merer's papyri" : "Great Pyramid built", markA(F.building), false)}
       {showA ? bracket(cleoY, moonY, ramp(f, F.moon, F.moon + 14), "2,037 yrs", 60) : null}
-      {showA ? bracket(cleoY, pyrY, ramp(f, F.building, F.great + 10), "2,531 yrs", 60) : null}
+      {showA ? bracket(cleoY, pyrY, ramp(f, F.building - 4, F.building + 16), "2,531 yrs", 60) : null}
 
       {/* The dig and the papyri at the bottom. SOURCES 6 and 8. */}
       {!B && dig > 0 ? <Label x={S.tag} y={todayY + 18} o={ramp(f, F.y2013, F.y2013 + 8)} title="2013 · dig" size={30} align="left" color={GOLD} /> : null}
@@ -232,7 +230,7 @@ const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) =
             <Disc x={S.x0 + 120} y={todayY + 38} s={0.55} />
             <Book x={S.x0 + 185} y={todayY + 36} s={0.6} rot={12} />
           </svg>
-          <Label x={S.tag} y={todayY - 30} o={future} title="Us · today" sub="what will they read?" size={30} align="left" color={GOLD} />
+          <Label x={S.tag} y={todayY - 30} o={future} title="Us · today" sub="what would you leave?" size={30} align="left" color={GOLD} />
           {bracket(todayY - shift, todayY, ramp(f, F.four2, F.now + 8), "?", 60)}
         </>
       ) : null}
@@ -247,11 +245,11 @@ const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) =
 // During the hook the playhead visits each date as it is spoken: Cleopatra, the Moon, the pyramid.
 const hookYear = (f: number) => {
   const keys: [number, number][] = [
-    [0, YEAR.cleopatra],
+    [F.cleo0, YEAR.cleopatra],
     [F.moon - 4, YEAR.cleopatra],
     [F.moon + 10, YEAR.apollo],
-    [F.building - 2, YEAR.apollo],
-    [F.great + 8, YEAR.pyramid],
+    [F.building - 6, YEAR.apollo],
+    [F.building + 12, YEAR.pyramid],
   ];
   const i = keys.findIndex(([k]) => k > f);
   if (i === 0) return keys[0][1];
@@ -265,10 +263,10 @@ const hookPlayhead = (f: number, S: Shaft) => depth(S, hookYear(f));
 // Counters: one big number per beat, each the number being spoken (A6: on screen while it is said).
 const counterAt = (f: number): { value: string; unit?: string; o: number } | null => {
   const win = (a: number, b: number) => Math.min(clamp01((f - a) / 6), clamp01((b - f) / 6));
-  if (f < SHOTS.shaftA[1]) {
+  if (f >= SHOTS.shaftA[0] && f < SHOTS.shaftA[1]) {
     // Only the date being spoken, never a year the playhead is passing through.
     const label = f >= F.building - 2 ? "c. 2600 BC" : f >= F.moon - 4 ? yearLabel(YEAR.apollo) : yearLabel(YEAR.cleopatra);
-    return { value: label, o: win(-10, SHOTS.shaftA[1]) };
+    return { value: label, o: win(SHOTS.shaftA[0], SHOTS.shaftA[1]) };
   }
   if (f >= SHOTS.diodorus[0] && f < SHOTS.diodorus[1]) return { value: "60–56 BC", unit: "Diodorus in Egypt", o: win(SHOTS.diodorus[0], SHOTS.diodorus[1]) };
   if (f >= F.three && f < F.twenty - 2) {
@@ -330,24 +328,15 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
 
       <ShaftView L={L} f={f} o={shaftO} />
 
-      {/* "So what did the pyramid look like in her day?" A dashed outline and a question. */}
-      {o("day") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("day") }}>
-          <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-            <path d={`M${pyr.x - pyr.w / 2} ${pyr.base} L${pyr.x - 6} ${pyr.base - pyr.w * 0.62} L${pyr.x + 6} ${pyr.base - pyr.w * 0.62} L${pyr.x + pyr.w / 2} ${pyr.base} Z`} fill="rgba(201,162,106,0.12)" stroke={INK} strokeWidth={6} strokeDasharray="22 16" />
-          </svg>
-          <div style={{ position: "absolute", left: pyr.x, top: pyr.base - pyr.w * 0.34, translate: "-50% -50%", fontFamily: SANS, fontWeight: 900, fontSize: 260, color: GOLD, scale: `${0.6 + 0.4 * ease(ramp(f, F.so, F.so + 10))}`, textShadow: SHADOW }}>?</div>
-          <Label x={pyr.x} y={at(L, 40, 60)} o={ramp(f, F.day - 6, F.day + 4)} title="In her day" sub="Cleopatra, born 69 BC" size={46} />
-        </div>
-      ) : null}
-
       {/* "Not this." The real photo: the pyramid today, casing gone, stepped core showing. */}
       {o("photo") > 0 ? (
         <>
-          <PhotoCard src="img/kheops-pyramid.jpg" {...at(L, { x: 505, y: -215, w: 910, h: 1225 }, { x: -10, y: -10, w: 1940, h: 1100 })} o={o("photo")} zoom={1 + 0.06 * ramp(f, F.not - 6, F.it)} fx={0.5} fy={0.45} />
+          <PhotoCard src="img/kheops-pyramid.jpg" {...at(L, { x: 505, y: -215, w: 910, h: 1225 }, { x: -10, y: -10, w: 1940, h: 1100 })} o={o("photo")} zoom={1 + 0.08 * ramp(f, 0, F.it)} fx={0.5} fy={0.45} />
+          <Label x={cx} y={at(L, -140, 60)} o={1 - ramp(f, F.not - 4, F.not + 2)} title="In Cleopatra's day?" size={v ? 64 : 56} color={GOLD} />
           <Stamp x={cx} y={at(L, 120, 170)} t={ramp(f, F.not, F.not + 8)} text="NOT THIS" />
           <Label x={cx} y={at(L, 860, 900)} o={o("photo") * ramp(f, F.not + 6, F.not + 14)} title="Today" sub="stepped core showing" size={44} />
-          <Fine x={at(L, 1395, 1900)} y={at(L, 960, 1040)} o={o("photo")} text="Photo: Nina, Wikimedia Commons, CC BY 2.5" align="right" />
+          {/* CC BY 2.5 needs the credit on screen while the photo is; kept clear of the captions. */}
+          <Fine x={at(L, 532, 20)} y={at(L, -200, 14)} o={o("photo")} text="Photo: Nina, Wikimedia Commons, CC BY 2.5" />
         </>
       ) : null}
 
@@ -356,7 +345,7 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
         <div style={{ position: "absolute", inset: 0, opacity: o("casing") }}>
           <Pyramid x={pyr.x} base={pyr.base} w={pyr.w} casing={ramp(f, F.still, F.casing + 6)} sheen={-0.2 + 1.4 * ramp(f, F.polished, F.casing + 16)} />
           <Label x={cx} y={at(L, 40, 50)} o={ramp(f, F.smooth - 4, F.smooth + 6)} title="Outer casing" sub="smooth, polished stone" size={46} />
-          <Label x={pyr.x + pyr.w * 0.3} y={pyr.base - pyr.w * 0.42} o={1 - ramp(f, F.still, F.still + 10)} title="Stepped core" size={30} align="left" color={DIM} />
+          <Label x={pyr.x} y={pyr.base - pyr.w * 0.62 - 64} o={1 - ramp(f, F.still, F.still + 10)} title="Stepped core" size={30} color={DIM} />
           <Fine x={cx} y={pyr.base + 30} o={1} text="illustration · in antiquity" align="center" />
         </div>
       ) : null}
@@ -601,7 +590,8 @@ const River: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.hauling - 6, F.hauling + 4) }}>
         <path d={`M${xW - 140} ${ry - 80} L${xW} ${ry - 260} L${xW + 140} ${ry - 80} Z`} fill="#c9a26a" stroke="#6f5130" strokeWidth={4} />
       </svg>
-      <Label x={xW - 40} y={ry - 380} o={ramp(f, F.pyramid2 - 6, F.pyramid2 + 4)} title="Giza" sub="the Great Pyramid" size={34} align="left" />
+      {/* 16:9: under the bank, clear of the counter in the top-left corner. */}
+      <Label x={v ? xW - 40 : xW} y={v ? ry - 380 : ry + 100} o={ramp(f, F.pyramid2 - 6, F.pyramid2 + 4)} title="Giza" sub="the Great Pyramid" size={34} align={v ? "left" : "center"} />
       <Boat x={bx} y={ry + 20} o={1} s={0.75} bob={f / 7} dir={-1} />
       <Label x={bx} y={ry - 170} o={ramp(f, F.limestone - 4, F.limestone + 6) * (1 - ramp(f, F.pyramid2, F.pyramid2 + 8))} title="Limestone" size={30} color={GOLD} />
       <Fine x={960} y={ry + 140} o={1} text={"Nile and canals · not to scale\nillustration"} align="center" />

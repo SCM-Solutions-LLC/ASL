@@ -1,14 +1,13 @@
-Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.
-So what did the pyramid look like in her day? Not this.
+What did the Great Pyramid look like in Cleopatra's day? Not this.
 It still wore its smooth, polished outer casing.
+Cleopatra lived closer to the Moon landing than to its building.
 A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl. He wrote that its stones were still in place.
 He was told three hundred and sixty thousand men spent twenty years building it. He wrote that an inscription listed what the workers' vegetables and laxatives cost: over sixteen hundred talents.
 Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyri from the reign of the pyramid's own king, Khufu. The oldest papyri with writing ever found in Egypt.
 Among them was the logbook of Merer's boat crew, hauling limestone from a quarry seventeen kilometres away to the pyramid.
 They lay buried for about four and a half thousand years.
 To Cleopatra, the pyramid was ancient history. We can read the work log of a crew that helped build it.
-So what are we leaving behind that someone will read four thousand years from now?
-
+What would you leave behind for someone to read four thousand years from now?
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
@@ -30,34 +29,33 @@ Sources:
   via Tallet & Marouard 2016 n. 2 and Sheisha 2022.
 - Sheisha et al., PNAS 119(37): e2202530119 (2022), doi:10.1073/pnas.2202530119
   (PMC9477388). Full text.
-- PBS NOVA, "Who Built the Pyramids?", interviews with Mark Lehner and Zahi
-  Hawass (pbs.org/wgbh/nova/pyramid/explore/builders.html). Secondary: the
-  excavators' own words in interview, not a paper (see 3).
-- The hook (line 1) and its dates: script/cleopatra-timeline.txt SOURCES 1-5
+- The Moon-landing line (line 3) and its dates: script/cleopatra-timeline.txt SOURCES 1-5
   and factcheck/cleopatra-timeline.json (Sheisha 2022; Erdil et al. 2025;
   Rosso 2021; NASA).
 
-1. "Cleopatra lived closer to the Moon landing than to the building of the
-   Great Pyramid."
-   Unchanged from cleopatra-timeline line 1; see its SOURCES 1-5: about 2,531
-   years back to c. 2600 BC against 2,037 forward to AD 1969 from her birth in
-   69 BC. Holds on every published chronology for Khufu.
+1. "What did the Great Pyramid look like in Cleopatra's day? Not this."
+   "Not this" is said over a photograph of the pyramid as it is today, with its
+   stepped core showing. The difference is lines 2 and 4: in antiquity the
+   outside was polished, fitted stone. Says "in Cleopatra's day", never that she
+   saw it: there is no record that Cleopatra visited Giza (A5). Hook (A4): a
+   viewer who swipes after this line leaves knowing only that the pyramid looked
+   different then, which lines 2 and 4 source.
 
-2. "So what did the pyramid look like in her day? Not this."
-   "Not this" is said over a picture of the pyramid as it is today, with its
-   stepped core showing. The difference is lines 3-4: in antiquity the outside
-   was polished, fitted stone. Says "in her day", never that she saw it: there
-   is no record that Cleopatra visited Giza (A5).
-
-3. "It still wore its smooth, polished outer casing."
+2. "It still wore its smooth, polished outer casing."
    Herodotus 2.124.5 (5th c. BC): "the whole is of stone polished and most
    exactly fitted". Diodorus 1.63.5 (line 4): "the stones remain to this day
    still preserving their original position and the entire structure
-   undecayed". "Casing": Hawass (NOVA) "the casing stones that came from Tura";
-   Lehner (NOVA) "the casing stones which were custom cut and set, one to
-   another". Not said: "white" (only in Lehner's NOVA interview) and the
-   original height (146.6 m is from Lehner 1997 via Wikipedia, unread; Petrie
-   1883 unreachable from this session). Add either only once read.
+   undecayed". "Casing": Tallet & Marouard 2014, p. 10: blocks from the Tura
+   quarries "were probably used for the external casing of the Great Pyramid,
+   made of fine limestone". Not said: "white" and the original height (146.6 m
+   is from Lehner 1997 via Wikipedia, unread; Petrie 1883 unreachable from this
+   session). Add either only once read.
+
+3. "Cleopatra lived closer to the Moon landing than to its building."
+   "Its" is the Great Pyramid of line 1. Same claim as cleopatra-timeline line
+   1; see its SOURCES 1-5: about 2,531 years back to c. 2600 BC against 2,037
+   forward to AD 1969 from her birth in 69 BC. Holds on every published
+   chronology for Khufu.
 
 4. "A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl. He
    wrote that its stones were still in place."
@@ -66,7 +64,7 @@ Sources:
    the name of The New Dionysus". The 180th Olympiad is 60/59-57/56 BC; born in
    69 BC (Rosso 2021), Cleopatra was about 9 to 13. Ptolemy XII was her father
    (Rosso 2021: "born at 69 BC from an illegitimate union of Ptolemy XII").
-   "Still in place": 1.63.5, quoted in 3. "Its" is the largest pyramid,
+   "Still in place": 1.63.5, quoted in 2. "Its" is the largest pyramid,
    "constructed" by "Chemmis" (1.63.2), i.e. the Great Pyramid.
 
 5. "He was told three hundred and sixty thousand men spent twenty years
@@ -100,7 +98,7 @@ Sources:
 
 7. "Among them was the logbook of Merer's boat crew, hauling limestone from a
    quarry seventeen kilometres away to the pyramid."
-   Tallet & Marouard 2014, pp. 8-9: "a personal logbook that records every day
+   Tallet & Marouard 2014, pp. 8-10: "a personal logbook that records every day
    activities of a team led by ... the inspector Merer", "a team of about 200
    men"; it describes "the transportation, on the Nile and connected canals,
    of stone blocks, which had been extracted from the northern and southern
@@ -125,7 +123,7 @@ Sources:
     shipped limestone to "the construction site of the Great Pyramid of Khufu"
     (Sheisha 2022). No claim about what Cleopatra knew or could read.
 
-10. "So what are we leaving behind that someone will read four thousand years
+10. "What would you leave behind for someone to read four thousand years
     from now?"
     A question to the viewer, not a claim. Not engagement bait (E2): it asks
     for no action and follows from 8-9.

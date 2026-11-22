@@ -2,927 +2,902 @@
  "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
  "script": "script/cleopatra-pyramid.txt",
  "audio": "public/vo/cleopatra-pyramid.wav",
- "sha256": "79576975e1130d23b3991ae3d47fc3607ebd8fd1fc1bc81e3a74606050ed70df",
+ "sha256": "abb43547af01d09f362a532e1a87400603d610617eec5f0740941305a94e63f5",
  "words": [
   {
-   "text": "Cleopatra",
+   "text": "What",
    "start": 0.0,
-   "end": 0.434
-  },
-  {
-   "text": "lived",
-   "start": 0.434,
-   "end": 0.762
-  },
-  {
-   "text": "closer",
-   "start": 0.762,
-   "end": 1.117
-  },
-  {
-   "text": "to",
-   "start": 1.117,
-   "end": 1.365
-  },
-  {
-   "text": "the",
-   "start": 1.365,
-   "end": 1.64
-  },
-  {
-   "text": "Moon",
-   "start": 1.64,
-   "end": 1.941
-  },
-  {
-   "text": "landing",
-   "start": 1.941,
-   "end": 2.322
-  },
-  {
-   "text": "than",
-   "start": 2.322,
-   "end": 2.623
-  },
-  {
-   "text": "to",
-   "start": 2.623,
-   "end": 2.872
-  },
-  {
-   "text": "the",
-   "start": 2.872,
-   "end": 3.146
-  },
-  {
-   "text": "building",
-   "start": 3.146,
-   "end": 3.554
-  },
-  {
-   "text": "of",
-   "start": 3.554,
-   "end": 3.802
-  },
-  {
-   "text": "the",
-   "start": 3.802,
-   "end": 4.077
-  },
-  {
-   "text": "Great",
-   "start": 4.077,
-   "end": 4.405
-  },
-  {
-   "text": "Pyramid.",
-   "start": 4.405,
-   "end": 4.786
-  },
-  {
-   "text": "So",
-   "start": 5.485,
-   "end": 5.687
-  },
-  {
-   "text": "what",
-   "start": 5.687,
-   "end": 5.933
+   "end": 0.292
   },
   {
    "text": "did",
-   "start": 5.933,
-   "end": 6.157
+   "start": 0.292,
+   "end": 0.557
   },
   {
    "text": "the",
-   "start": 6.157,
-   "end": 6.381
+   "start": 0.557,
+   "end": 0.823
   },
   {
-   "text": "pyramid",
-   "start": 6.381,
-   "end": 6.692
+   "text": "Great",
+   "start": 0.823,
+   "end": 1.14
+  },
+  {
+   "text": "Pyramid",
+   "start": 1.14,
+   "end": 1.509
   },
   {
    "text": "look",
-   "start": 6.692,
-   "end": 6.938
+   "start": 1.509,
+   "end": 1.8
   },
   {
    "text": "like",
-   "start": 6.938,
-   "end": 7.183
+   "start": 1.8,
+   "end": 2.092
   },
   {
    "text": "in",
-   "start": 7.183,
-   "end": 7.386
+   "start": 2.092,
+   "end": 2.332
   },
   {
-   "text": "her",
-   "start": 7.386,
-   "end": 7.61
+   "text": "Cleopatra's",
+   "start": 2.332,
+   "end": 2.775
   },
   {
    "text": "day?",
-   "start": 7.61,
-   "end": 7.834
+   "start": 2.775,
+   "end": 3.041
   },
   {
    "text": "Not",
-   "start": 8.52,
-   "end": 9.01
+   "start": 3.735,
+   "end": 4.226
   },
   {
    "text": "this.",
-   "start": 9.01,
-   "end": 9.548
+   "start": 4.226,
+   "end": 4.765
   },
   {
    "text": "It",
-   "start": 10.205,
-   "end": 10.471
+   "start": 5.42,
+   "end": 5.686
   },
   {
    "text": "still",
-   "start": 10.471,
-   "end": 10.823
+   "start": 5.686,
+   "end": 6.038
   },
   {
    "text": "wore",
-   "start": 10.823,
-   "end": 11.147
+   "start": 6.038,
+   "end": 6.362
   },
   {
    "text": "its",
-   "start": 11.147,
-   "end": 11.442
+   "start": 6.362,
+   "end": 6.657
   },
   {
    "text": "smooth,",
-   "start": 11.442,
-   "end": 11.822
+   "start": 6.657,
+   "end": 7.037
   },
   {
    "text": "polished",
-   "start": 11.822,
-   "end": 12.26
+   "start": 7.037,
+   "end": 7.475
   },
   {
    "text": "outer",
-   "start": 12.26,
-   "end": 12.612
+   "start": 7.475,
+   "end": 7.827
   },
   {
    "text": "casing.",
-   "start": 12.612,
-   "end": 12.992
-  },
-  {
-   "text": "A",
-   "start": 13.665,
-   "end": 13.943
-  },
-  {
-   "text": "Greek",
-   "start": 13.943,
-   "end": 14.355
-  },
-  {
-   "text": "historian,",
-   "start": 14.355,
-   "end": 14.9
-  },
-  {
-   "text": "Diodorus,",
-   "start": 14.9,
-   "end": 15.412
-  },
-  {
-   "text": "visited",
-   "start": 15.412,
-   "end": 15.891
-  },
-  {
-   "text": "Egypt",
-   "start": 15.891,
-   "end": 16.303
-  },
-  {
-   "text": "when",
-   "start": 16.303,
-   "end": 16.681
+   "start": 7.827,
+   "end": 8.207
   },
   {
    "text": "Cleopatra",
-   "start": 16.681,
-   "end": 17.226
+   "start": 8.88,
+   "end": 9.35
   },
   {
-   "text": "was",
-   "start": 17.226,
-   "end": 17.572
+   "text": "lived",
+   "start": 9.35,
+   "end": 9.704
   },
   {
-   "text": "a",
-   "start": 17.572,
-   "end": 17.85
-  },
-  {
-   "text": "girl.",
-   "start": 17.85,
-   "end": 18.228
-  },
-  {
-   "text": "He",
-   "start": 18.925,
-   "end": 19.118
-  },
-  {
-   "text": "wrote",
-   "start": 19.118,
-   "end": 19.374
-  },
-  {
-   "text": "that",
-   "start": 19.374,
-   "end": 19.608
-  },
-  {
-   "text": "its",
-   "start": 19.608,
-   "end": 19.823
-  },
-  {
-   "text": "stones",
-   "start": 19.823,
-   "end": 20.099
-  },
-  {
-   "text": "were",
-   "start": 20.099,
-   "end": 20.333
-  },
-  {
-   "text": "still",
-   "start": 20.333,
-   "end": 20.589
-  },
-  {
-   "text": "in",
-   "start": 20.589,
-   "end": 20.782
-  },
-  {
-   "text": "place.",
-   "start": 20.782,
-   "end": 21.038
-  },
-  {
-   "text": "He",
-   "start": 21.66,
-   "end": 21.909
-  },
-  {
-   "text": "was",
-   "start": 21.909,
-   "end": 22.185
-  },
-  {
-   "text": "told",
-   "start": 22.185,
-   "end": 22.488
-  },
-  {
-   "text": "three",
-   "start": 22.488,
-   "end": 22.817
-  },
-  {
-   "text": "hundred",
-   "start": 22.817,
-   "end": 23.199
-  },
-  {
-   "text": "and",
-   "start": 23.199,
-   "end": 23.475
-  },
-  {
-   "text": "sixty",
-   "start": 23.475,
-   "end": 23.804
-  },
-  {
-   "text": "thousand",
-   "start": 23.804,
-   "end": 24.214
-  },
-  {
-   "text": "men",
-   "start": 24.214,
-   "end": 24.489
-  },
-  {
-   "text": "spent",
-   "start": 24.489,
-   "end": 24.819
-  },
-  {
-   "text": "twenty",
-   "start": 24.819,
-   "end": 25.175
-  },
-  {
-   "text": "years",
-   "start": 25.175,
-   "end": 25.504
-  },
-  {
-   "text": "building",
-   "start": 25.504,
-   "end": 25.913
-  },
-  {
-   "text": "it.",
-   "start": 25.913,
-   "end": 26.162
-  },
-  {
-   "text": "He",
-   "start": 26.92,
-   "end": 27.194
-  },
-  {
-   "text": "wrote",
-   "start": 27.194,
-   "end": 27.556
-  },
-  {
-   "text": "that",
-   "start": 27.556,
-   "end": 27.888
-  },
-  {
-   "text": "an",
-   "start": 27.888,
-   "end": 28.162
-  },
-  {
-   "text": "inscription",
-   "start": 28.162,
-   "end": 28.667
-  },
-  {
-   "text": "listed",
-   "start": 28.667,
-   "end": 29.058
-  },
-  {
-   "text": "what",
-   "start": 29.058,
-   "end": 29.391
-  },
-  {
-   "text": "the",
-   "start": 29.391,
-   "end": 29.694
-  },
-  {
-   "text": "workers'",
-   "start": 29.694,
-   "end": 30.144
-  },
-  {
-   "text": "vegetables",
-   "start": 30.144,
-   "end": 30.649
-  },
-  {
-   "text": "and",
-   "start": 30.649,
-   "end": 30.952
-  },
-  {
-   "text": "laxatives",
-   "start": 30.952,
-   "end": 31.431
-  },
-  {
-   "text": "cost:",
-   "start": 31.431,
-   "end": 31.764
-  },
-  {
-   "text": "over",
-   "start": 31.764,
-   "end": 32.096
-  },
-  {
-   "text": "sixteen",
-   "start": 32.096,
-   "end": 32.517
-  },
-  {
-   "text": "hundred",
-   "start": 32.517,
-   "end": 32.937
-  },
-  {
-   "text": "talents.",
-   "start": 32.937,
-   "end": 33.358
-  },
-  {
-   "text": "Then,",
-   "start": 34.005,
-   "end": 34.36
-  },
-  {
-   "text": "in",
-   "start": 34.36,
-   "end": 34.652
-  },
-  {
-   "text": "2013,",
-   "start": 34.652,
-   "end": 35.007
-  },
-  {
-   "text": "at",
-   "start": 35.007,
-   "end": 35.3
-  },
-  {
-   "text": "an",
-   "start": 35.3,
-   "end": 35.592
-  },
-  {
-   "text": "ancient",
-   "start": 35.592,
-   "end": 36.041
-  },
-  {
-   "text": "harbour",
-   "start": 36.041,
-   "end": 36.49
-  },
-  {
-   "text": "on",
-   "start": 36.49,
-   "end": 36.782
-  },
-  {
-   "text": "the",
-   "start": 36.782,
-   "end": 37.106
-  },
-  {
-   "text": "Red",
-   "start": 37.106,
-   "end": 37.429
-  },
-  {
-   "text": "Sea,",
-   "start": 37.429,
-   "end": 37.753
-  },
-  {
-   "text": "archaeologists",
-   "start": 37.753,
-   "end": 38.292
-  },
-  {
-   "text": "found",
-   "start": 38.292,
-   "end": 38.679
-  },
-  {
-   "text": "papyri",
-   "start": 38.679,
-   "end": 39.096
-  },
-  {
-   "text": "from",
-   "start": 39.096,
-   "end": 39.451
-  },
-  {
-   "text": "the",
-   "start": 39.451,
-   "end": 39.775
-  },
-  {
-   "text": "reign",
-   "start": 39.775,
-   "end": 40.161
-  },
-  {
-   "text": "of",
-   "start": 40.161,
-   "end": 40.453
-  },
-  {
-   "text": "the",
-   "start": 40.453,
-   "end": 40.777
-  },
-  {
-   "text": "pyramid's",
-   "start": 40.777,
-   "end": 41.288
-  },
-  {
-   "text": "own",
-   "start": 41.288,
-   "end": 41.612
-  },
-  {
-   "text": "king,",
-   "start": 41.612,
-   "end": 41.967
-  },
-  {
-   "text": "Khufu.",
-   "start": 41.967,
-   "end": 42.353
-  },
-  {
-   "text": "The",
-   "start": 43.065,
-   "end": 43.35
-  },
-  {
-   "text": "oldest",
-   "start": 43.35,
-   "end": 43.718
-  },
-  {
-   "text": "papyri",
-   "start": 43.718,
-   "end": 44.086
-  },
-  {
-   "text": "with",
-   "start": 44.086,
-   "end": 44.399
-  },
-  {
-   "text": "writing",
-   "start": 44.399,
-   "end": 44.794
-  },
-  {
-   "text": "ever",
-   "start": 44.794,
-   "end": 45.107
-  },
-  {
-   "text": "found",
-   "start": 45.107,
-   "end": 45.447
-  },
-  {
-   "text": "in",
-   "start": 45.447,
-   "end": 45.705
-  },
-  {
-   "text": "Egypt.",
-   "start": 45.705,
-   "end": 46.045
-  },
-  {
-   "text": "Among",
-   "start": 46.675,
-   "end": 47.049
-  },
-  {
-   "text": "them",
-   "start": 47.049,
-   "end": 47.393
-  },
-  {
-   "text": "was",
-   "start": 47.393,
-   "end": 47.707
-  },
-  {
-   "text": "the",
-   "start": 47.707,
-   "end": 48.02
-  },
-  {
-   "text": "logbook",
-   "start": 48.02,
-   "end": 48.455
-  },
-  {
-   "text": "of",
-   "start": 48.455,
-   "end": 48.738
-  },
-  {
-   "text": "Merer's",
-   "start": 48.738,
-   "end": 49.173
-  },
-  {
-   "text": "boat",
-   "start": 49.173,
-   "end": 49.517
-  },
-  {
-   "text": "crew,",
-   "start": 49.517,
-   "end": 49.861
-  },
-  {
-   "text": "hauling",
-   "start": 49.861,
-   "end": 50.296
-  },
-  {
-   "text": "limestone",
-   "start": 50.296,
-   "end": 50.791
-  },
-  {
-   "text": "from",
-   "start": 50.791,
-   "end": 51.135
-  },
-  {
-   "text": "a",
-   "start": 51.135,
-   "end": 51.388
-  },
-  {
-   "text": "quarry",
-   "start": 51.388,
-   "end": 51.792
-  },
-  {
-   "text": "seventeen",
-   "start": 51.792,
-   "end": 52.288
-  },
-  {
-   "text": "kilometres",
-   "start": 52.288,
-   "end": 52.811
-  },
-  {
-   "text": "away",
-   "start": 52.811,
-   "end": 53.154
+   "text": "closer",
+   "start": 9.704,
+   "end": 10.088
   },
   {
    "text": "to",
-   "start": 53.154,
-   "end": 53.438
+   "start": 10.088,
+   "end": 10.356
   },
   {
    "text": "the",
-   "start": 53.438,
-   "end": 53.751
+   "start": 10.356,
+   "end": 10.654
   },
   {
-   "text": "pyramid.",
-   "start": 53.751,
-   "end": 54.186
+   "text": "Moon",
+   "start": 10.654,
+   "end": 10.98
   },
   {
-   "text": "They",
-   "start": 54.885,
-   "end": 55.143
+   "text": "landing",
+   "start": 10.98,
+   "end": 11.392
   },
   {
-   "text": "lay",
-   "start": 55.143,
-   "end": 55.378
+   "text": "than",
+   "start": 11.392,
+   "end": 11.718
   },
   {
-   "text": "buried",
-   "start": 55.378,
-   "end": 55.681
+   "text": "to",
+   "start": 11.718,
+   "end": 11.986
   },
   {
-   "text": "for",
-   "start": 55.681,
-   "end": 55.915
+   "text": "its",
+   "start": 11.986,
+   "end": 12.283
   },
   {
-   "text": "about",
-   "start": 55.915,
-   "end": 56.196
+   "text": "building.",
+   "start": 12.283,
+   "end": 12.724
   },
   {
-   "text": "four",
-   "start": 56.196,
-   "end": 56.453
+   "text": "A",
+   "start": 13.44,
+   "end": 13.718
   },
   {
-   "text": "and",
-   "start": 56.453,
-   "end": 56.688
+   "text": "Greek",
+   "start": 13.718,
+   "end": 14.131
   },
   {
-   "text": "a",
-   "start": 56.688,
-   "end": 56.878
+   "text": "historian,",
+   "start": 14.131,
+   "end": 14.676
   },
   {
-   "text": "half",
-   "start": 56.878,
-   "end": 57.135
+   "text": "Diodorus,",
+   "start": 14.676,
+   "end": 15.188
   },
   {
-   "text": "thousand",
-   "start": 57.135,
-   "end": 57.484
+   "text": "visited",
+   "start": 15.188,
+   "end": 15.667
   },
   {
-   "text": "years.",
-   "start": 57.484,
-   "end": 57.764
+   "text": "Egypt",
+   "start": 15.667,
+   "end": 16.079
   },
   {
-   "text": "To",
-   "start": 58.395,
-   "end": 58.715
+   "text": "when",
+   "start": 16.079,
+   "end": 16.458
   },
   {
-   "text": "Cleopatra,",
-   "start": 58.715,
-   "end": 59.276
-  },
-  {
-   "text": "the",
-   "start": 59.276,
-   "end": 59.63
-  },
-  {
-   "text": "pyramid",
-   "start": 59.63,
-   "end": 60.122
+   "text": "Cleopatra",
+   "start": 16.458,
+   "end": 17.003
   },
   {
    "text": "was",
-   "start": 60.122,
-   "end": 60.477
-  },
-  {
-   "text": "ancient",
-   "start": 60.477,
-   "end": 60.968
-  },
-  {
-   "text": "history.",
-   "start": 60.968,
-   "end": 61.46
-  },
-  {
-   "text": "We",
-   "start": 62.13,
-   "end": 62.327
-  },
-  {
-   "text": "can",
-   "start": 62.327,
-   "end": 62.544
-  },
-  {
-   "text": "read",
-   "start": 62.544,
-   "end": 62.783
-  },
-  {
-   "text": "the",
-   "start": 62.783,
-   "end": 63.001
-  },
-  {
-   "text": "work",
-   "start": 63.001,
-   "end": 63.239
-  },
-  {
-   "text": "log",
-   "start": 63.239,
-   "end": 63.457
-  },
-  {
-   "text": "of",
-   "start": 63.457,
-   "end": 63.654
+   "start": 17.003,
+   "end": 17.349
   },
   {
    "text": "a",
-   "start": 63.654,
-   "end": 63.829
+   "start": 17.349,
+   "end": 17.627
   },
   {
-   "text": "crew",
-   "start": 63.829,
-   "end": 64.068
+   "text": "girl.",
+   "start": 17.627,
+   "end": 18.006
   },
   {
-   "text": "that",
-   "start": 64.068,
-   "end": 64.307
+   "text": "He",
+   "start": 18.7,
+   "end": 18.893
   },
   {
-   "text": "helped",
-   "start": 64.307,
-   "end": 64.587
-  },
-  {
-   "text": "build",
-   "start": 64.587,
-   "end": 64.847
-  },
-  {
-   "text": "it.",
-   "start": 64.847,
-   "end": 65.044
-  },
-  {
-   "text": "So",
-   "start": 65.69,
-   "end": 65.913
-  },
-  {
-   "text": "what",
-   "start": 65.913,
-   "end": 66.183
-  },
-  {
-   "text": "are",
-   "start": 66.183,
-   "end": 66.43
-  },
-  {
-   "text": "we",
-   "start": 66.43,
-   "end": 66.653
-  },
-  {
-   "text": "leaving",
-   "start": 66.653,
-   "end": 66.995
-  },
-  {
-   "text": "behind",
-   "start": 66.995,
-   "end": 67.313
+   "text": "wrote",
+   "start": 18.893,
+   "end": 19.149
   },
   {
    "text": "that",
-   "start": 67.313,
-   "end": 67.584
+   "start": 19.149,
+   "end": 19.383
   },
   {
-   "text": "someone",
-   "start": 67.584,
-   "end": 67.926
+   "text": "its",
+   "start": 19.383,
+   "end": 19.598
   },
   {
-   "text": "will",
-   "start": 67.926,
-   "end": 68.197
+   "text": "stones",
+   "start": 19.598,
+   "end": 19.874
   },
   {
-   "text": "read",
-   "start": 68.197,
-   "end": 68.467
+   "text": "were",
+   "start": 19.874,
+   "end": 20.108
   },
   {
-   "text": "four",
-   "start": 68.467,
-   "end": 68.738
+   "text": "still",
+   "start": 20.108,
+   "end": 20.364
+  },
+  {
+   "text": "in",
+   "start": 20.364,
+   "end": 20.557
+  },
+  {
+   "text": "place.",
+   "start": 20.557,
+   "end": 20.813
+  },
+  {
+   "text": "He",
+   "start": 21.435,
+   "end": 21.684
+  },
+  {
+   "text": "was",
+   "start": 21.684,
+   "end": 21.96
+  },
+  {
+   "text": "told",
+   "start": 21.96,
+   "end": 22.262
+  },
+  {
+   "text": "three",
+   "start": 22.262,
+   "end": 22.591
+  },
+  {
+   "text": "hundred",
+   "start": 22.591,
+   "end": 22.974
+  },
+  {
+   "text": "and",
+   "start": 22.974,
+   "end": 23.25
+  },
+  {
+   "text": "sixty",
+   "start": 23.25,
+   "end": 23.579
   },
   {
    "text": "thousand",
-   "start": 68.738,
-   "end": 69.104
+   "start": 23.579,
+   "end": 23.988
+  },
+  {
+   "text": "men",
+   "start": 23.988,
+   "end": 24.264
+  },
+  {
+   "text": "spent",
+   "start": 24.264,
+   "end": 24.593
+  },
+  {
+   "text": "twenty",
+   "start": 24.593,
+   "end": 24.949
   },
   {
    "text": "years",
-   "start": 69.104,
-   "end": 69.398
+   "start": 24.949,
+   "end": 25.278
+  },
+  {
+   "text": "building",
+   "start": 25.278,
+   "end": 25.687
+  },
+  {
+   "text": "it.",
+   "start": 25.687,
+   "end": 25.936
+  },
+  {
+   "text": "He",
+   "start": 26.695,
+   "end": 26.969
+  },
+  {
+   "text": "wrote",
+   "start": 26.969,
+   "end": 27.331
+  },
+  {
+   "text": "that",
+   "start": 27.331,
+   "end": 27.663
+  },
+  {
+   "text": "an",
+   "start": 27.663,
+   "end": 27.937
+  },
+  {
+   "text": "inscription",
+   "start": 27.937,
+   "end": 28.442
+  },
+  {
+   "text": "listed",
+   "start": 28.442,
+   "end": 28.833
+  },
+  {
+   "text": "what",
+   "start": 28.833,
+   "end": 29.166
+  },
+  {
+   "text": "the",
+   "start": 29.166,
+   "end": 29.469
+  },
+  {
+   "text": "workers'",
+   "start": 29.469,
+   "end": 29.918
+  },
+  {
+   "text": "vegetables",
+   "start": 29.918,
+   "end": 30.424
+  },
+  {
+   "text": "and",
+   "start": 30.424,
+   "end": 30.727
+  },
+  {
+   "text": "laxatives",
+   "start": 30.727,
+   "end": 31.206
+  },
+  {
+   "text": "cost:",
+   "start": 31.206,
+   "end": 31.538
+  },
+  {
+   "text": "over",
+   "start": 31.538,
+   "end": 31.871
+  },
+  {
+   "text": "sixteen",
+   "start": 31.871,
+   "end": 32.291
+  },
+  {
+   "text": "hundred",
+   "start": 32.291,
+   "end": 32.711
+  },
+  {
+   "text": "talents.",
+   "start": 32.711,
+   "end": 33.132
+  },
+  {
+   "text": "Then,",
+   "start": 33.78,
+   "end": 34.136
+  },
+  {
+   "text": "in",
+   "start": 34.136,
+   "end": 34.428
+  },
+  {
+   "text": "2013,",
+   "start": 34.428,
+   "end": 34.784
+  },
+  {
+   "text": "at",
+   "start": 34.784,
+   "end": 35.077
+  },
+  {
+   "text": "an",
+   "start": 35.077,
+   "end": 35.37
+  },
+  {
+   "text": "ancient",
+   "start": 35.37,
+   "end": 35.819
+  },
+  {
+   "text": "harbour",
+   "start": 35.819,
+   "end": 36.269
+  },
+  {
+   "text": "on",
+   "start": 36.269,
+   "end": 36.562
+  },
+  {
+   "text": "the",
+   "start": 36.562,
+   "end": 36.886
+  },
+  {
+   "text": "Red",
+   "start": 36.886,
+   "end": 37.21
+  },
+  {
+   "text": "Sea,",
+   "start": 37.21,
+   "end": 37.535
+  },
+  {
+   "text": "archaeologists",
+   "start": 37.535,
+   "end": 38.075
+  },
+  {
+   "text": "found",
+   "start": 38.075,
+   "end": 38.462
+  },
+  {
+   "text": "papyri",
+   "start": 38.462,
+   "end": 38.88
   },
   {
    "text": "from",
-   "start": 69.398,
-   "end": 69.669
+   "start": 38.88,
+   "end": 39.236
+  },
+  {
+   "text": "the",
+   "start": 39.236,
+   "end": 39.56
+  },
+  {
+   "text": "reign",
+   "start": 39.56,
+   "end": 39.947
+  },
+  {
+   "text": "of",
+   "start": 39.947,
+   "end": 40.24
+  },
+  {
+   "text": "the",
+   "start": 40.24,
+   "end": 40.564
+  },
+  {
+   "text": "pyramid's",
+   "start": 40.564,
+   "end": 41.076
+  },
+  {
+   "text": "own",
+   "start": 41.076,
+   "end": 41.401
+  },
+  {
+   "text": "king,",
+   "start": 41.401,
+   "end": 41.756
+  },
+  {
+   "text": "Khufu.",
+   "start": 41.756,
+   "end": 42.143
+  },
+  {
+   "text": "The",
+   "start": 42.84,
+   "end": 43.125
+  },
+  {
+   "text": "oldest",
+   "start": 43.125,
+   "end": 43.493
+  },
+  {
+   "text": "papyri",
+   "start": 43.493,
+   "end": 43.861
+  },
+  {
+   "text": "with",
+   "start": 43.861,
+   "end": 44.174
+  },
+  {
+   "text": "writing",
+   "start": 44.174,
+   "end": 44.569
+  },
+  {
+   "text": "ever",
+   "start": 44.569,
+   "end": 44.882
+  },
+  {
+   "text": "found",
+   "start": 44.882,
+   "end": 45.222
+  },
+  {
+   "text": "in",
+   "start": 45.222,
+   "end": 45.48
+  },
+  {
+   "text": "Egypt.",
+   "start": 45.48,
+   "end": 45.82
+  },
+  {
+   "text": "Among",
+   "start": 46.45,
+   "end": 46.824
+  },
+  {
+   "text": "them",
+   "start": 46.824,
+   "end": 47.168
+  },
+  {
+   "text": "was",
+   "start": 47.168,
+   "end": 47.482
+  },
+  {
+   "text": "the",
+   "start": 47.482,
+   "end": 47.795
+  },
+  {
+   "text": "logbook",
+   "start": 47.795,
+   "end": 48.23
+  },
+  {
+   "text": "of",
+   "start": 48.23,
+   "end": 48.513
+  },
+  {
+   "text": "Merer's",
+   "start": 48.513,
+   "end": 48.948
+  },
+  {
+   "text": "boat",
+   "start": 48.948,
+   "end": 49.292
+  },
+  {
+   "text": "crew,",
+   "start": 49.292,
+   "end": 49.636
+  },
+  {
+   "text": "hauling",
+   "start": 49.636,
+   "end": 50.071
+  },
+  {
+   "text": "limestone",
+   "start": 50.071,
+   "end": 50.566
+  },
+  {
+   "text": "from",
+   "start": 50.566,
+   "end": 50.91
+  },
+  {
+   "text": "a",
+   "start": 50.91,
+   "end": 51.163
+  },
+  {
+   "text": "quarry",
+   "start": 51.163,
+   "end": 51.567
+  },
+  {
+   "text": "seventeen",
+   "start": 51.567,
+   "end": 52.063
+  },
+  {
+   "text": "kilometres",
+   "start": 52.063,
+   "end": 52.585
+  },
+  {
+   "text": "away",
+   "start": 52.585,
+   "end": 52.929
+  },
+  {
+   "text": "to",
+   "start": 52.929,
+   "end": 53.213
+  },
+  {
+   "text": "the",
+   "start": 53.213,
+   "end": 53.526
+  },
+  {
+   "text": "pyramid.",
+   "start": 53.526,
+   "end": 53.961
+  },
+  {
+   "text": "They",
+   "start": 54.66,
+   "end": 54.918
+  },
+  {
+   "text": "lay",
+   "start": 54.918,
+   "end": 55.153
+  },
+  {
+   "text": "buried",
+   "start": 55.153,
+   "end": 55.456
+  },
+  {
+   "text": "for",
+   "start": 55.456,
+   "end": 55.69
+  },
+  {
+   "text": "about",
+   "start": 55.69,
+   "end": 55.971
+  },
+  {
+   "text": "four",
+   "start": 55.971,
+   "end": 56.228
+  },
+  {
+   "text": "and",
+   "start": 56.228,
+   "end": 56.463
+  },
+  {
+   "text": "a",
+   "start": 56.463,
+   "end": 56.653
+  },
+  {
+   "text": "half",
+   "start": 56.653,
+   "end": 56.91
+  },
+  {
+   "text": "thousand",
+   "start": 56.91,
+   "end": 57.259
+  },
+  {
+   "text": "years.",
+   "start": 57.259,
+   "end": 57.539
+  },
+  {
+   "text": "To",
+   "start": 58.17,
+   "end": 58.49
+  },
+  {
+   "text": "Cleopatra,",
+   "start": 58.49,
+   "end": 59.051
+  },
+  {
+   "text": "the",
+   "start": 59.051,
+   "end": 59.405
+  },
+  {
+   "text": "pyramid",
+   "start": 59.405,
+   "end": 59.897
+  },
+  {
+   "text": "was",
+   "start": 59.897,
+   "end": 60.252
+  },
+  {
+   "text": "ancient",
+   "start": 60.252,
+   "end": 60.743
+  },
+  {
+   "text": "history.",
+   "start": 60.743,
+   "end": 61.235
+  },
+  {
+   "text": "We",
+   "start": 61.905,
+   "end": 62.102
+  },
+  {
+   "text": "can",
+   "start": 62.102,
+   "end": 62.319
+  },
+  {
+   "text": "read",
+   "start": 62.319,
+   "end": 62.558
+  },
+  {
+   "text": "the",
+   "start": 62.558,
+   "end": 62.776
+  },
+  {
+   "text": "work",
+   "start": 62.776,
+   "end": 63.014
+  },
+  {
+   "text": "log",
+   "start": 63.014,
+   "end": 63.232
+  },
+  {
+   "text": "of",
+   "start": 63.232,
+   "end": 63.429
+  },
+  {
+   "text": "a",
+   "start": 63.429,
+   "end": 63.604
+  },
+  {
+   "text": "crew",
+   "start": 63.604,
+   "end": 63.843
+  },
+  {
+   "text": "that",
+   "start": 63.843,
+   "end": 64.082
+  },
+  {
+   "text": "helped",
+   "start": 64.082,
+   "end": 64.362
+  },
+  {
+   "text": "build",
+   "start": 64.362,
+   "end": 64.622
+  },
+  {
+   "text": "it.",
+   "start": 64.622,
+   "end": 64.819
+  },
+  {
+   "text": "What",
+   "start": 65.465,
+   "end": 65.731
+  },
+  {
+   "text": "would",
+   "start": 65.731,
+   "end": 66.02
+  },
+  {
+   "text": "you",
+   "start": 66.02,
+   "end": 66.262
+  },
+  {
+   "text": "leave",
+   "start": 66.262,
+   "end": 66.551
+  },
+  {
+   "text": "behind",
+   "start": 66.551,
+   "end": 66.863
+  },
+  {
+   "text": "for",
+   "start": 66.863,
+   "end": 67.105
+  },
+  {
+   "text": "someone",
+   "start": 67.105,
+   "end": 67.441
+  },
+  {
+   "text": "to",
+   "start": 67.441,
+   "end": 67.66
+  },
+  {
+   "text": "read",
+   "start": 67.66,
+   "end": 67.926
+  },
+  {
+   "text": "four",
+   "start": 67.926,
+   "end": 68.191
+  },
+  {
+   "text": "thousand",
+   "start": 68.191,
+   "end": 68.55
+  },
+  {
+   "text": "years",
+   "start": 68.55,
+   "end": 68.839
+  },
+  {
+   "text": "from",
+   "start": 68.839,
+   "end": 69.105
   },
   {
    "text": "now?",
-   "start": 69.669,
-   "end": 69.915
+   "start": 69.105,
+   "end": 69.347
   }
  ]
 }
