@@ -212,13 +212,13 @@ const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) =
       {mark(cleoY, "69 BC", "Cleopatra born", markA(F.cleo0 - 6), showA || ancient > 0)}
       {mark(pyrY, "c. 2600 BC", B ? "pyramid built · Merer's papyri" : "Great Pyramid built", markA(F.building), false)}
       {showA ? bracket(cleoY, moonY, ramp(f, F.moon, F.moon + 14), "2,037 yrs", 60) : null}
-      {showA ? bracket(cleoY, pyrY, ramp(f, F.building - 4, F.building + 16), "2,531 yrs", 60) : null}
+      {showA ? bracket(cleoY, pyrY, ramp(f, F.building - 4, F.building + 16), "~2,500 yrs", 60) : null}
 
       {/* The dig and the papyri at the bottom. SOURCES 6 and 8. */}
       {!B && dig > 0 ? <Label x={S.tag} y={todayY + 18} o={ramp(f, F.y2013, F.y2013 + 8)} title="2013 · dig" size={30} align="left" color={GOLD} /> : null}
       <Papyrus x={(S.x0 + S.x1) / 2 - 70} y={papY - 40} w={140} h={80} o={papO} rot={-6} />
       {B ? bracket(todayY, pyrY - 40, sand * (1 - ancient) * (1 - rise), "~4,500 yrs\nburied", 30, 0.75) : null}
-      {B && ancient > 0 ? bracket(cleoY, pyrY, ancient, "2,531 yrs", 60) : null}
+      {B && ancient > 0 ? bracket(cleoY, pyrY, ancient, "~2,500 yrs", 60) : null}
       {B ? <Label x={S.tag} y={cleoY + 70} o={ancient} title="To her:" sub="already ancient history" size={30} align="left" color={GOLD} /> : null}
       {B ? <Label x={S.tag} y={todayY + 18} o={ramp(f, F.read, F.read + 8) * (1 - ramp(f, F.so2 - 8, F.so2))} title="We can read it" sub="the crew's work log" size={30} align="left" color={GOLD} /> : null}
 
@@ -268,7 +268,7 @@ const counterAt = (f: number): { value: string; unit?: string; o: number } | nul
     const label = f >= F.building - 2 ? "c. 2600 BC" : f >= F.moon - 4 ? yearLabel(YEAR.apollo) : yearLabel(YEAR.cleopatra);
     return { value: label, o: win(SHOTS.shaftA[0], SHOTS.shaftA[1]) };
   }
-  if (f >= SHOTS.diodorus[0] && f < SHOTS.diodorus[1]) return { value: "60–56 BC", unit: "Diodorus in Egypt", o: win(SHOTS.diodorus[0], SHOTS.diodorus[1]) };
+  if (f >= SHOTS.diodorus[0] && f < SHOTS.diodorus[1]) return { value: "60–56 BC", unit: "when Diodorus visited", o: win(SHOTS.diodorus[0], SHOTS.diodorus[1]) };
   if (f >= F.three && f < F.twenty - 2) {
     return { value: "360,000", unit: "men · as he was told", o: win(F.three, F.twenty - 2) };
   }
@@ -421,7 +421,8 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
   );
 };
 
-// Cleopatra born 69 BC; Diodorus in Egypt in the 180th Olympiad, 60/59-57/56 BC; she is about 9 to 13.
+// Cleopatra born 69 BC; Diodorus visited during the 180th Olympiad, 60/59-57/56 BC. The band is the window
+// his visit falls in, not the length of his stay (Oldfather: the length is uncertain); so she is "about" 9-13.
 const DiodorusCard: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
   const v = L.vertical;
   const x0 = v ? 600 : 780;
@@ -453,12 +454,12 @@ const DiodorusCard: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
             <text x={yr(bc)} y={y + 50} textAnchor="middle" fontFamily={SANS} fontWeight={700} fontSize={28} fill={DIM}>{`${bc} BC`}</text>
           </g>
         ))}
-        <rect x={yr(60)} y={y - 30} width={yr(56) - yr(60)} height={60} rx={10} fill="rgba(241,199,79,0.35)" stroke={GOLD} strokeWidth={4} />
+        <rect x={yr(60)} y={y - 30} width={yr(56) - yr(60)} height={60} rx={10} fill="rgba(241,199,79,0.18)" stroke={GOLD} strokeWidth={4} strokeDasharray="12 8" />
         <circle cx={yr(69)} cy={y} r={16} fill={INK} />
       </svg>
       <Label x={yr(69)} y={y - 120} o={t2} title="69 BC" sub="Cleopatra born" size={30} align="left" />
-      <Label x={yr(58)} y={y + 80} o={t2} title="In Egypt" sub="60–56 BC" size={30} />
-      <Label x={960} y={v ? 760 : 780} o={t3} title="Cleopatra: age 9–13" size={44} color={GOLD} />
+      <Label x={yr(58)} y={y + 80} o={t2} title="Visited Egypt" sub="sometime in 60–56 BC" size={30} />
+      <Label x={960} y={v ? 760 : 780} o={t3} title="Cleopatra: about 9–13" size={44} color={GOLD} />
     </>
   );
 };
@@ -544,7 +545,14 @@ const Harbour: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
       <Waves x0={v ? 1060 : 1160} x1={2520} y={sandTop + 14} h={v ? 200 : 220} o={1} t={f} />
       <Label x={v ? 1240 : 1500} y={sandTop + 240} o={sea} title="Red Sea" size={40} color="#9fd3f2" />
       <Label x={960} y={v ? 60 : 50} o={ramp(f, F.harbour - 6, F.harbour + 4)} title="An ancient harbour" sub="Wadi al-Jarf" size={46} />
-      {/* The papyri in the sand, swept clear. */}
+      {/* Inland: storage galleries cut into the rock, where the papyri lay; the sea is off to the side (not to scale). */}
+      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
+        <path d={`M-600 ${sandTop + 4} L${v ? 520 : 300} ${sandTop + 4} L${v ? 560 : 340} ${sandTop - 120} L${v ? 1020 : 1100} ${sandTop - 150} L${v ? 1050 : 1140} ${sandTop + 4} Z`} fill="#a98756" stroke="#6f5130" strokeWidth={4} />
+        {[0, 1, 2].map((i) => (
+          <path key={i} d={`M${(v ? 620 : 440) + i * (v ? 130 : 220)} ${sandTop + 4} v-60 a34 34 0 0 1 68 0 v60 Z`} fill="#2a1d12" />
+        ))}
+      </svg>
+      {/* The papyri, swept clear. */}
       <Papyrus x={820} y={sandTop + 120} w={150} h={100} o={dig} rot={-8} ink={dig} />
       <Papyrus x={990} y={sandTop + 150} w={120} h={90} o={dig} rot={10} ink={dig} />
       <Papyrus x={890} y={sandTop + 250} w={170} h={90} o={dig} rot={3} ink={dig} />
@@ -562,39 +570,43 @@ const Harbour: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
         <div style={{ fontFamily: SANS, fontWeight: 900, fontSize: 64, color: GOLD, letterSpacing: "0.08em" }}>KHUFU</div>
         <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 24, color: INK, letterSpacing: "0.06em", textTransform: "uppercase" }}>from his reign</div>
       </div>
-      <Fine x={960} y={v ? 900 : 1030} o={1} text="illustration" align="center" />
+      <Fine x={960} y={v ? 945 : 1030} o={1} text="illustration · not to scale" align="center" />
     </>
   );
 };
 
-// The river run: Tura quarry on the east bank (right), Giza on the west (left). Not to scale.
+// The river run, side-on: the Tura quarry on the far bank, Giza on the near one (the quarries were on
+// "the opposite bank of the Nile", Tallet & Marouard 2014). Not to scale.
 const River: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
   const v = L.vertical;
-  const xW = v ? 700 : 560; // Giza
-  const xE = v ? 1180 : 1560; // Tura
-  const ry = v ? 560 : 520;
+  const xW = v ? 700 : 560; // Giza, near bank
+  const xE = v ? 1180 : 1560; // Tura, far bank
+  const ry = v ? 470 : 440;
   const t = ease(ramp(f, F.hauling, F.pyramid2 + 6));
-  const bx = xE - 120 - t * (xE - xW - 240);
+  const bx = xE - 120 - t * (xE - xW - 120);
   return (
     <>
       <Waves x0={-600} x1={2520} y={ry - 70} h={160} o={1} t={f} color="#3a6f8f" />
-      {/* Tura: a cliff with blocks cut out of it. */}
+      {/* Near bank. */}
+      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
+        <rect x={-600} y={ry + 90} width={3120} height={600} fill="#b8925c" />
+      </svg>
+      {/* Tura: a cliff with blocks cut out of it, across the water. */}
       <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.quarry - 6, F.quarry + 4) }}>
-        <path d={`M${xE - 60} ${ry - 80} L${xE - 20} ${ry - 260} L${xE + 200} ${ry - 300} L${xE + 200} ${ry - 80} Z`} fill="#d8c8a0" stroke="#8b7a56" strokeWidth={4} />
+        <path d={`M${xE - 60} ${ry - 70} L${xE - 20} ${ry - 250} L${xE + 200} ${ry - 290} L${xE + 200} ${ry - 70} Z`} fill="#d8c8a0" stroke="#8b7a56" strokeWidth={4} />
         {[0, 1, 2].map((i) => (
-          <rect key={i} x={xE - 4 + i * 54} y={ry - 210 + (i % 2) * 40} width={44} height={36} fill="#b7a67f" stroke="#8b7a56" strokeWidth={3} />
+          <rect key={i} x={xE - 4 + i * 54} y={ry - 200 + (i % 2) * 40} width={44} height={36} fill="#b7a67f" stroke="#8b7a56" strokeWidth={3} />
         ))}
       </svg>
-      <Label x={xE + 40} y={ry - 380} o={ramp(f, F.quarry - 4, F.quarry + 6)} title="Tura quarry" size={34} align="right" />
-      {/* Giza: the pyramid going up. */}
+      <Label x={xE + 40} y={ry - 370} o={ramp(f, F.quarry - 4, F.quarry + 6)} title="Tura quarry" size={34} align="right" />
+      {/* Giza: the pyramid on this side of the river. */}
       <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.hauling - 6, F.hauling + 4) }}>
-        <path d={`M${xW - 140} ${ry - 80} L${xW} ${ry - 260} L${xW + 140} ${ry - 80} Z`} fill="#c9a26a" stroke="#6f5130" strokeWidth={4} />
+        <path d={`M${xW - 150} ${ry + 330} L${xW} ${ry + 140} L${xW + 150} ${ry + 330} Z`} fill="#c9a26a" stroke="#6f5130" strokeWidth={4} />
       </svg>
-      {/* 16:9: under the bank, clear of the counter in the top-left corner. */}
-      <Label x={v ? xW - 40 : xW} y={v ? ry - 380 : ry + 100} o={ramp(f, F.pyramid2 - 6, F.pyramid2 + 4)} title="Giza" sub="the Great Pyramid" size={34} align={v ? "left" : "center"} />
+      <Label x={xW + 170} y={ry + 200} o={ramp(f, F.pyramid2 - 6, F.pyramid2 + 4)} title="Giza" sub="the Great Pyramid" size={34} align="left" />
       <Boat x={bx} y={ry + 20} o={1} s={0.75} bob={f / 7} dir={-1} />
-      <Label x={bx} y={ry - 170} o={ramp(f, F.limestone - 4, F.limestone + 6) * (1 - ramp(f, F.pyramid2, F.pyramid2 + 8))} title="Limestone" size={30} color={GOLD} />
-      <Fine x={960} y={ry + 140} o={1} text={"Nile and canals · not to scale\nillustration"} align="center" />
+      <Label x={bx} y={ry - 170} o={ramp(f, F.limestone - 4, F.limestone + 6) * (1 - ramp(f, F.seventeen - 8, F.seventeen))} title="Limestone" size={30} color={GOLD} />
+      <Fine x={v ? 1395 : 1880} y={ry + 380} o={1} text={"Nile and canals · not to scale\nillustration"} align="right" />
     </>
   );
 };
