@@ -20,7 +20,9 @@ Sources:
   117 (1920); read on Perseus (perseus.tufts.edu, Perseus:text:1999.01.0126).
 - Tallet & Marouard, "The Harbor of Khufu on the Red Sea Coast at Wadi
   al-Jarf, Egypt", Near Eastern Archaeology 77(1): 4-14 (2014),
-  doi:10.5615/neareastarch.77.1.0004. Abstract only read.
+  doi:10.5615/neareastarch.77.1.0004. Full text read, archive.org scan:
+  archive.org/stream/theharborofkhufuontheredseacoastatwadialjarfegypt
+  (the _djvu.txt full-text file).
 - Tallet & Marouard, "The Harbor Facilities of King Khufu on the Red Sea
   Shore: The Wadi al-Jarf/Tell Ras Budran System", JARCE 52 (2016). Full text.
 - Tallet, Les papyrus de la mer Rouge I: Le « Journal de Merer » (Papyrus Jarf
@@ -87,14 +89,24 @@ Sources:
    fragments of papyrus, the oldest inscribed papyri ever unearthed in Egypt,
    confirmed the early date of this site and revealed a final closure of this
    installation at the end of the reign of Khufu"; title: "The Harbor of Khufu
-   on the Red Sea Coast at Wadi al-Jarf". Tallet & Marouard 2016: papyri that
+   on the Red Sea Coast at Wadi al-Jarf". Full text (p. 8): "the 2013 campaign
+   has led to an even more remarkable discovery ... several hundreds of
+   papyrus fragments"; dated to "Khufu's regnal Year 27", which "makes these
+   documents the oldest inscribed papyri that have ever been discovered in
+   Egypt". Tallet & Marouard 2016: papyri that
    "name King Khufu", terminus "year 26-27". "The pyramid's own king": Sheisha
    2022, "the Great Pyramid of Giza (Khufu Pyramid)". "Ever found in Egypt"
    keeps the source's scope, as of 2014.
 
 7. "Among them was the logbook of Merer's boat crew, hauling limestone from a
    quarry seventeen kilometres away to the pyramid."
-   Tallet & Marouard 2016 n. 2: "logs from a team of sailors shipping blocks of
+   Tallet & Marouard 2014, pp. 8-9: "a personal logbook that records every day
+   activities of a team led by ... the inspector Merer", "a team of about 200
+   men"; it describes "the transportation, on the Nile and connected canals,
+   of stone blocks, which had been extracted from the northern and southern
+   quarries of Tura", "delivered within four days at the pyramid construction
+   site", and "many operations related to the construction of the Great
+   Pyramid". Tallet & Marouard 2016 n. 2: "logs from a team of sailors shipping blocks of
    limestone from Tura to Giza", published as "Le « Journal de Merer »".
    Sheisha 2022: "The Journal of Merer, a large corpus of these papyri,
    describes the transport of limestone from Toura, ∼17 km from the Giza
