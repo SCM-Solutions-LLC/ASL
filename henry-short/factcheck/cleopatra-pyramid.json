@@ -1,0 +1,127 @@
+{
+  "script": "script/cleopatra-pyramid.txt",
+  "sha256": "fe211cd152a699e058857e3b180ce12e05303ac00fd73a746d8c8146a5c53d66",
+  "checked": "2026-11-23",
+  "claims": [
+    {
+      "n": 1,
+      "claim": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, doi:10.1016/j.toxrep.2021.03.004, full text via ebi.ac.uk/europepmc/webservices/rest/PMC8042289/fullTextXML; images-api.nasa.gov nasa_id=as11-40-5903; Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML; archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522)",
+      "note": "Rosso: 'Cleopatra VII was born at 69 BC'; 'The queen committed suicide in August 30 BC'. NASA: 'AS11-40-5903 (20 July 1969) --- Astronaut Edwin E. Aldrin Jr. ... walks on the surface of the moon'. Built for Khufu: Sheisha 'the Great Pyramid of Khufu'; Lehner 'the 4th Dynasty papyri records of building the Khufu Pyramid'. Sheisha: Khufu's accession 2613-2577 BCE (14C, 1 sigma) down to 2480 +/- 5 (Spence); Khafre's accession as late as 2448 +/- 5, so Khufu's pyramid was begun no later than that. Forward from her birth 2,037 years; back at least about 2,379 on the lowest chronology quoted (2,418 against 1,998 from her death). True on every date the cited sources give and across her whole life."
+    },
+    {
+      "n": 2,
+      "claim": "Hook at second two: a viewer who swipes away has heard roughly 'Cleopatra lived closer to the Moon landing...'",
+      "where": "spoken: hook (A4)",
+      "verdict": "confirmed",
+      "source_checked": "As claim 1; no alignment or on-screen text exists yet (no short cut from this VO)",
+      "note": "The fragment plants nothing false and the completed sentence is true (claim 1); the popular form of this fact is the true form, so no correction is needed. On-screen hook visuals cannot be checked until a short is cut (A6)."
+    },
+    {
+      "n": 3,
+      "claim": "So what did the pyramid look like in her day? Not this. (said over the pyramid as it is today)",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), note to 1.63.4; archive.org/stream/in.ernet.dli.2015.30896 (OCR text of Godley, Herodotus I, Loeb 1920), 2.124-125 and Godley's note",
+      "note": "Oldfather's note to 1.63.4: 'Including the facing, which has now almost entirely disappeared, the Great Pyramid was originally about 768 feet broad on the base and 482 feet high.' Godley's note to 2.125: the last stones placed were those 'to fill up the angles of the steps, and make the side of the pyramid a smooth inclined plane'. So the exterior has changed since antiquity. The line does not say Cleopatra saw it."
+    },
+    {
+      "n": 4,
+      "claim": "It still wore its smooth, polished outer casing.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/in.ernet.dli.2015.30896 (OCR text of Godley, Herodotus I, Loeb 1920), 2.124.5 and note to 2.125; archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), 1.63.4-5 and note",
+      "note": "Herodotus 2.124: 'the whole is of stone polished and most exactly fitted'; Godley's note: casing stones made 'the side of the pyramid a smooth inclined plane'. 'Still' in her day: Diodorus, who was in Egypt in 59 BC, writes in his own voice that 'to our lifetime ... the stones remain to this day still preserving their original position and the entire structure undecayed' (1.63.5). Oldfather's note calls it 'the facing'. Caveat, not blocking: Oldfather's intro says Book 1 draws 'primarily upon Hecataeus of Abdera' and upon Herodotus, so this description may be older than Diodorus. The script itself attributes only 'he wrote' to Diodorus (claim 7)."
+    },
+    {
+      "n": 5,
+      "claim": "A Greek historian, Diodorus",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), Introduction pp. vii-viii",
+      "note": "Oldfather: born at 'Agyrium in Sicily'; Jerome calls him 'a writer of Greek history' ('Graecae scriptor historiae'); the Library is written in Greek. Calling him a Greek historian is the standard description of a Sicilian Greek writing in Greek."
+    },
+    {
+      "n": 6,
+      "claim": "[Diodorus] visited Egypt when Cleopatra was a girl.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), 1.44.1 and Introduction p. viii; Rosso 2021, doi:10.1016/j.toxrep.2021.03.004, full text via ebi.ac.uk/europepmc/webservices/rest/PMC8042289/fullTextXML",
+      "note": "1.44.1: 'down to the One Hundred and Eightieth Olympiad, the time when we visited Egypt and the king was Ptolemy, who took the name of The New Dionysus'. Oldfather's note: this Ptolemy was 'the father of the famous Cleopatra'. Oldfather's intro dates the visit: '180th Olympiad (60/59-57/6 B.C.)', and the cat incident (1.83.8) 'clearly shows that Diodorus was in Egypt in the year 59 B.C.' With a birth in 69 BC (Rosso) she was about 10 (9-13 across the Olympiad)."
+    },
+    {
+      "n": 7,
+      "claim": "He wrote that its stones were still in place.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), 1.63.2-5",
+      "note": "1.63.5: 'the stones remain to this day still preserving their original position and the entire structure undecayed'. 'Its' is the largest pyramid, built by 'Chemmis' (1.63.2), which Oldfather's note identifies as 'the Cheops of Herodotus (2. 124), the Khufu of the monuments'."
+    },
+    {
+      "n": 8,
+      "claim": "He was told three hundred and sixty thousand men spent twenty years building it",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), 1.63.9 (Greek and English)",
+      "note": "1.63.9: 'three hundred and sixty thousand men, as they say, were employed on the undertaking, and the whole structure was scarcely completed in twenty years'. Greek 'τριάκοντα μὲν γὰρ καὶ ἕξ μυριάδες ἀνδρῶν, ὥς φασι' ('as they say') carries 'he was told'."
+    },
+    {
+      "n": 9,
+      "claim": "and that an inscription listed what the workers' vegetables and laxatives cost: over sixteen hundred talents.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (OCR text of Oldfather, Diodorus of Sicily I, LCL 279), 1.64.3 (Greek and English); archive.org/stream/in.ernet.dli.2015.30896 (OCR text of Godley, Herodotus I, Loeb 1920), 2.125.6 for comparison",
+      "note": "1.64.3: 'an inscription on the larger pyramid gives the sum of money expended on it, since the writing sets forth that on vegetables and purgatives for the workmen there were paid out over sixteen hundred talents' (Greek λάχανα καὶ συρμαίαν; πλείω τῶν χιλίων καὶ ἑξακοσίων). 'The larger' is Chemmis's (the following sentence: 'The smaller bears no inscription'). Figure and wording match. Nuance, not blocking: Diodorus states the inscription in his own voice, without 'as they say'. 'He was told' is a hedge, not an overstatement, and it fits A5 since the story goes back to Herodotus's interpreter (2.125.6). 'He wrote that an inscription...' would follow the text more literally. 'Of silver' was correctly left out (it is Herodotus's version)."
+    },
+    {
+      "n": 10,
+      "claim": "Archaeologists today put the workforce at a tenth of that, or less.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522), pp. 471-472 and n. 197",
+      "note": "Lehner 2015: 'on a low estimate of 2,000 total workers required even for the gigantic pyramids'; 'Verner accepts the estimate of Borchardt and Croon for the total numbers required to build the early large 4th Dynasty pyramids, from 10,000 (Meidum) to 36,000 (Khufu)'. 36,000 is exactly a tenth of 360,000 and the low estimate is less, so the line matches the range Lehner reviews. Lehner also quotes Eyre that recruitment 'is a matter of guesswork', so these are estimates, as 'put the workforce at' implies."
+    },
+    {
+      "n": 11,
+      "claim": "But at an ancient port on the Red Sea, archaeologists have found papyri from the time of the pyramid's own king, Khufu.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML; archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522), p. 471",
+      "note": "Sheisha: 'the Wadi el-Jarf Papyri, discovered at a Khufu-age port on the Red Sea coast'; 'the Great Pyramid of Khufu'. Lehner: 'the Wadi el-Jarf Papyri, found in the last two years at a Red Sea port of Khufu ... The papyri all relate to building the Khufu pyramid at Giza'. So they date from his reign."
+    },
+    {
+      "n": 12,
+      "claim": "Among them is the Journal of Merer, describing limestone moved from a quarry about seventeen kilometres away to the pyramid.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML; archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522), n. 154 and p. 471",
+      "note": "Sheisha: 'The Journal of Merer, a large corpus of these papyri, describes the transport of limestone from Toura, ~17 km from the Giza Plateau, to the construction site of the Great Pyramid of Khufu.' Sheisha does not use the word 'quarry'. Lehner 2015 does: 'bring limestone blocks on boats from the eastern quarries at Tura to the pyramid, Akhet Khufu'; n. 154: 'fine limestone from the eastern quarries at Turah to the pyramid of Khufu documented in ... the journal of the Inspector Merer'. Confirmed by the two sources together. Bookkeeping (A1, not blocking the wording): SOURCES says Sheisha is 'the only source used for lines 7-10', so entry 8 should also cite Lehner 2015 for 'quarry'."
+    },
+    {
+      "n": 13,
+      "claim": "Those papyri are about four and a half thousand years old.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML; archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522)",
+      "note": "They date from Khufu's reign (claim 11). Sheisha: Khufu's accession from 2613-2577 BCE (14C) down to 2480 +/- 5 BCE (Spence), and Khafre's accession no later than 2448 +/- 5 BCE, which caps the end of the reign. That puts them about 4,470-4,640 years before AD 2026, and 'about four and a half thousand' covers the range."
+    },
+    {
+      "n": 14,
+      "claim": "To Cleopatra, the pyramid was ancient history.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, doi:10.1016/j.toxrep.2021.03.004, full text via ebi.ac.uk/europepmc/webservices/rest/PMC8042289/fullTextXML; Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML",
+      "note": "An interpretive line resting on dates: at least about 2,379 years separated the pyramid from her birth on the lowest chronology quoted (claim 1). It claims nothing about what she knew."
+    },
+    {
+      "n": 15,
+      "claim": "We can read a journal from the time it was being built.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022, doi:10.1073/pnas.2202530119, full text via ebi.ac.uk/europepmc/webservices/rest/PMC9477388/fullTextXML (text and ref. list); archive.org/stream/piotr-steinkeller-michael-hudson-labor-in-the-ancient-world-islet-verlag-2015 (OCR text of Steinkeller & Hudson eds., Labor in the Ancient World, ISLET 2015; Lehner chapter pp. 397-522)",
+      "note": "Sheisha: the Journal describes limestone going 'to the construction site of the Great Pyramid of Khufu'. Lehner: 'the Wadi el-Jarf Papyri document specifically the construction of the Khufu Pyramid'. It is published: Sheisha's reference list includes Tallet, 'Les Papyrus de la Mer Rouge I: Journal de Merer (Papyrus Jarf A et B)' (IFAO, 2017). So 'we can read' it."
+    }
+  ]
+}
