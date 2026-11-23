@@ -1,37 +1,42 @@
 import React from "react";
-import { OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
+import { Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { makeEdit } from "../../edit";
 import { SANS } from "../../fonts";
 import type { Layout } from "../../layout";
 import alignment from "../../generated/cleopatra-pyramid.alignment.json";
+import world from "../../generated/cleopatra-world.anchors.json";
 import { clamp01, ease, ramp } from "../altar-stone/shots";
 import { YEAR } from "../cleopatra-timeline";
 import type { Short } from "../types";
-import { Balance, Boat, Book, Counter, DARK, DIM, Disc, Fine, GOLD, INK, Jar, Label, Papyrus, Person, Phone, PhotoCard, Pyramid, RED, SHADOW, Vegetables, Waves } from "./draw";
+import { Counter, DIM, Fine, GOLD, INK, Label, RED, SHADOW } from "./draw";
 
-// Format B: one cutaway that grows across the story (a shaft dug down through time, depth = years
-// ago), counters, a real-photo reveal ("Not this": the pyramid today, stepped core showing), and a
-// twist that turns the shaft upward into the future.
+// One continuous 3D world (tools/blender/cleopatra_world.py → public/3d/cleopatra-world.mp4): the
+// real photo for the hook, then a single camera move through Giza, the Nile, Tura and the Red Sea
+// harbour, and along a timeline paved on the desert floor (distance = years, seen from straight
+// above when two spans are compared). Labels, counters and brackets are overlays that follow the
+// 3D objects through src/generated/cleopatra-world.anchors.json, which Blender writes from the
+// same camera.
 //
 // The voice-over is Kokoro (`npm run tts -- cleopatra-pyramid`) from script/cleopatra-pyramid.txt,
 // fact-checked in factcheck/cleopatra-pyramid.json. Every label and number on screen is a claim
-// (A6): each one below names the SOURCES item it rests on.
+// (A6): review/cleopatra-pyramid.a6.md names the SOURCES item each rests on.
 const edit = makeEdit({
   alignment,
   keyPhrases: [
     ["Great", "Pyramid"], ["Not", "this."], ["closer"], ["Moon"], ["polished"], ["Diodorus,"], ["girl."], ["still", "in", "place."],
-    ["three", "hundred", "and", "sixty", "thousand"], ["twenty", "years"], ["inscription"], ["laxatives"], ["sixteen", "hundred", "talents."],
-    ["2013,"], ["Red", "Sea,"], ["found", "papyri"], ["Khufu."], ["oldest"], ["logbook"], ["Merer's"], ["limestone"], ["seventeen", "kilometres"],
+    ["three", "hundred", "and", "sixty", "thousand"], ["twenty", "years"],
+    ["2013,"], ["Red", "Sea,"], ["papyrus", "documents"], ["Khufu."], ["oldest"], ["logbook"], ["Merer."], ["limestone"], ["seventeen", "kilometres"],
     ["buried"], ["four", "and", "a", "half", "thousand", "years."], ["ancient", "history."], ["work", "log"], ["you", "leave", "behind"], ["four", "thousand", "years"],
   ],
   // Short pages, one highlighted keyword each. "?" does not end a page on its own.
-  breakAfter: ["closer", "landing", "building", "pyramid", "day?", "smooth,", "Diodorus,", "Egypt", "stones", "told", "men", "inscription", "workers'", "2013,", "harbour", "Sea,", "papyri", "king,", "logbook", "crew,", "limestone", "quarry", "away", "buried", "read", "log", "behind"],
+  breakAfter: ["closer", "landing", "building", "pyramid", "day?", "smooth,", "Diodorus,", "Egypt", "stones", "told", "men", "2013,", "harbour", "Sea,", "documents", "papyri", "king,", "logbook", "Merer.", "limestone", "quarry", "away", "buried", "read", "log", "behind"],
   tail: 1.6,
 });
 
 const F = {
   not: edit.at("not"),
   cleo0: edit.at("cleopatra", 0), // "Cleopatra's" in line 1 cleans to a different word
+  closer: edit.at("closer"),
   moon: edit.at("moon"),
   building: edit.at("building"),
   it: edit.at("it"),
@@ -50,23 +55,19 @@ const F = {
   three: edit.at("three"),
   men: edit.at("men"),
   twenty: edit.at("twenty"),
-  he2: edit.at("he", 2),
-  inscription: edit.at("inscription"),
-  vegetables: edit.at("vegetables"),
-  laxatives: edit.at("laxatives"),
-  sixteen: edit.at("sixteen"),
   then: edit.at("then,"),
   y2013: edit.at("2013,"),
   harbour: edit.at("harbour"),
   red: edit.at("red"),
   archaeologists: edit.at("archaeologists"),
+  found: edit.at("found"),
   reign: edit.at("reign"),
   khufu: edit.at("khufu."),
   oldest: edit.at("oldest"),
   among: edit.at("among"),
   logbook: edit.at("logbook"),
   boat: edit.at("boat"),
-  hauling: edit.at("hauling"),
+  his: edit.at("his"), // "His boat crew hauled limestone": the river shot starts here
   limestone: edit.at("limestone"),
   quarry: edit.at("quarry"),
   seventeen: edit.at("seventeen"),
@@ -81,209 +82,112 @@ const F = {
   we: edit.at("we"),
   read: edit.at("read"),
   build: edit.at("build"),
-  so2: edit.at("what", 2), // the closing question starts
+  so2: edit.at("what", 1), // the closing question starts
   leaving: edit.at("leave"),
   four2: edit.at("four", 1),
   now: edit.at("now?"),
   end: edit.duration,
 };
 
-const at = <T,>(L: Layout, v: T, w: T) => (L.vertical ? v : w);
 const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
 // Astronomical year to a label: 1969, 69 BC.
 const yearLabel = (y: number) => (y > 0 ? `${Math.round(y)}` : `${fmt(1 - y)} BC`);
+const win = (f: number, a: number, b: number, fade = 6) => Math.min(clamp01((f - a) / fade), clamp01((b - f) / fade));
 
-// Shot windows, each fading over 8 frames at both ends.
-const SHOTS = {
-  // The hook opens on the real photo: it is on screen from the first frame.
-  photo: [-10, F.it - 2],
-  casing: [F.it - 6, F.cleo0 - 2],
-  shaftA: [F.cleo0 - 6, F.greek - 2],
-  diodorus: [F.greek - 6, F.he0 - 2],
-  stones: [F.he0 - 6, F.he1 - 2],
-  men: [F.he1 - 6, F.he2 - 2],
-  inscription: [F.he2 - 6, F.then - 2],
-  dig: [F.then - 6, F.harbour - 4],
-  harbour: [F.harbour - 8, F.oldest - 2],
-  oldest: [F.oldest - 6, F.among - 2],
-  logbook: [F.among - 6, F.hauling - 4],
-  boat: [F.hauling - 8, F.they - 2],
-  shaftB: [F.they - 6, F.end + 10],
-} as const;
-type ShotId = keyof typeof SHOTS;
-const vis = (f: number, id: ShotId) => {
-  const [a, b] = SHOTS[id];
-  return Math.min(clamp01((f - a) / 8), clamp01((b - f) / 8));
+// Where the 3D render sits in each format: full frame at 9:16; pillarboxed at 16:9 (the world is
+// framed for the vertical short only). `s` scales overlay type with it.
+type Box = { x: number; y: number; w: number; h: number; s: number };
+const box = (L: Layout): Box => (L.vertical ? { x: 0, y: 0, w: 1080, h: 1920, s: 1 } : { x: 656, y: 0, w: 608, h: 1080, s: 608 / 1080 });
+
+// A named 3D point on screen at frame f, or null when it is behind the camera or off the frame.
+type Anchor = { f0: number; pts: number[][] };
+const ANCHORS = world.anchors as Record<string, Anchor>;
+const pt = (B: Box, name: string, f: number) => {
+  const a = ANCHORS[name];
+  const p = a.pts[Math.max(0, Math.min(a.pts.length - 1, Math.round(f) - a.f0))];
+  const on = p[2] === 1 && p[0] > -0.05 && p[0] < 1.05 && p[1] > -0.05 && p[1] < 1.05;
+  return on ? { x: B.x + p[0] * B.w, y: B.y + p[1] * B.h } : null;
 };
 
-// The cutaway. Depth is years before today, drawn to one linear scale per format; the screen says
-// "depth = time" so nobody reads it as a burial depth (A6).
-const NOW = 2026;
-type Shaft = { x0: number; x1: number; top: number; k: number; tag: number };
-const shaftGeo = (L: Layout): Shaft => at(L, { x0: 700, x1: 930, top: 20, k: 860 / 4800, tag: 950 }, { x0: 760, x1: 990, top: 110, k: 780 / 4800, tag: 1010 });
-const depth = (S: Shaft, astro: number) => S.top + (NOW - astro) * S.k;
+// 16:9 fill: the 9:16 picture scaled to cover a 1920x1080 frame, centred.
+const FILL: React.CSSProperties = { position: "absolute", left: 0, top: (1080 - (1920 * 16) / 9) / 2, width: 1920, height: (1920 * 16) / 9 };
 
-const LAYERS = ["#5b4430", "#664c35", "#55402d", "#6a5038", "#5e4732", "#4f3c2a"];
+// The photo covers the start; the render begins underneath it (frame `world.start`).
+// Each cut in the 3D clip is softened into a dissolve this many frames either side of it. The
+// main clip cuts DISSOLVE frames late, the "-b" clip DISSOLVE frames early (tools/blender/cleopatra_world.py).
+const DISSOLVE = 7;
+const CUTS = (world as { cuts?: number[] }).cuts ?? [];
+const PHOTO_END = F.it - 2;
 
-const ShaftView: React.FC<{ L: Layout; f: number; o: number }> = ({ L, f, o }) => {
-  if (o <= 0) return null;
-  const S = shaftGeo(L);
-  // Late story: the shaft slides down to make room for 4,000 years above today.
-  const future = ease(ramp(f, F.so2, F.leaving + 12));
-  const shift = future * 4000 * S.k;
-  const y = (astro: number) => depth(S, astro) + shift;
-  const bottom = S.top + 4800 * S.k + shift;
-  const showA = f >= SHOTS.shaftA[0] - 10 && f < SHOTS.shaftA[1] + 10;
-  const B = f >= SHOTS.shaftB[0];
+// No source read says how white the casing still was in Cleopatra's day (script SOURCES 2).
+const ESTIMATE = "illustration · colour is an estimate";
+// Her portrait holds from her name to just before "Moon landing", about 1.5 s.
+const PORTRAIT_END = F.moon - 8;
 
-  // Markers, each popping in on its spoken word. Dates: cleopatra-timeline SOURCES 1-5 (hook).
-  const cleoY = y(YEAR.cleopatra);
-  const moonY = y(YEAR.apollo);
-  const pyrY = y(YEAR.pyramid);
-  const markA = (w: number) => (showA ? ramp(f, w, w + 8) : 1);
-  const mark = (yy: number, title: string, sub: string, t: number, hot = false, color = INK) =>
-    t <= 0 ? null : (
-      <>
-        <div style={{ position: "absolute", left: S.x0 - 6, top: yy - 3, width: S.x1 - S.x0 + 12 + (S.tag - S.x1) - 10, height: 6, background: hot ? GOLD : INK, opacity: 0.85 * t, borderRadius: 3 }} />
-        <Label x={S.tag} y={yy - (sub ? 34 : 22)} o={t} title={title} sub={sub} size={34} align="left" color={hot ? GOLD : color} />
-      </>
-    );
-
-  // Brackets inside the shaft: Cleopatra to the Moon landing, Cleopatra to the pyramid.
-  const bracket = (a: number, b: number, t: number, text: string, xOff: number, at = 0.5) => {
-    if (t <= 0) return null;
-    const x = S.x0 + xOff;
-    const yb = a + (b - a) * ease(t);
-    return (
-      <>
-        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <line x1={x} y1={a} x2={x} y2={yb} stroke={GOLD} strokeWidth={6} strokeLinecap="round" />
-          <line x1={x - 16} y1={a} x2={x + 16} y2={a} stroke={GOLD} strokeWidth={6} />
-          {t >= 1 ? <line x1={x - 16} y1={b} x2={x + 16} y2={b} stroke={GOLD} strokeWidth={6} /> : null}
-        </svg>
-        <div style={{ position: "absolute", left: x + 22, top: a + (b - a) * at - 22, fontFamily: SANS, fontWeight: 900, fontSize: 36, color: GOLD, opacity: ramp(t, 0.6, 1), textShadow: SHADOW, whiteSpace: "pre" }}>{text}</div>
-      </>
-    );
-  };
-
-  // B: buried, ancient history, read today, then the future.
-  const sand = ramp(f, F.buried - 4, F.years2 + 6);
-  const ancient = ramp(f, F.cleo2 - 4, F.cleo2 + 8) * (1 - ramp(f, F.we - 6, F.we + 4));
-  const rise = ease(ramp(f, F.read - 6, F.build + 6));
-  const papY = pyrY - 40 - rise * (pyrY - 40 - (y(NOW) - 70));
-  const papO = B ? ramp(f, SHOTS.shaftB[0], SHOTS.shaftB[0] + 8) : ramp(f, F.y2013 + 6, F.y2013 + 14);
-  const dig = !B ? ease(ramp(f, F.then, F.y2013 + 10)) : 0;
-  const todayY = y(NOW);
-
-  // Ticks every thousand years, on the left wall.
-  const ticks = [1000, 2000, 3000, 4000];
-
+// A label pinned to a 3D point, drawn above it with a short leader line.
+const Pin: React.FC<{ B: Box; f: number; name: string; o: number; title: string; sub?: string; color?: string; lift?: number; dx?: number }> = ({ B, f, name, o, title, sub, color, lift = 90, dx = 0 }) => {
+  const p = pt(B, name, f);
+  if (!p || o <= 0) return null;
+  const h = lift * B.s; // negative: the label hangs below the point
+  const labelY = h >= 0 ? p.y - h - 50 * B.s * (sub ? 1.7 : 1) : p.y - h;
   return (
-    <div style={{ position: "absolute", inset: 0, opacity: o }}>
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-        {/* Future layers above today, drawn only once the shaft slides down. */}
-        {future > 0 ? <rect x={S.x0} y={todayY - shift} width={S.x1 - S.x0} height={shift} fill="#2c2433" opacity={future} /> : null}
-        {LAYERS.map((c, i) => {
-          const h = (4800 * S.k) / LAYERS.length;
-          return <rect key={c + i} x={S.x0} y={todayY + i * h} width={S.x1 - S.x0} height={h + 1} fill={c} />;
-        })}
-        <rect x={S.x0} y={todayY} width={S.x1 - S.x0} height={bottom - todayY} fill="none" stroke="#2a1d12" strokeWidth={6} />
-        {/* Sand settling over the papyri while "buried" is spoken. */}
-        {sand > 0 ? <rect x={S.x0 + 3} y={pyrY - 60 * sand} width={S.x1 - S.x0 - 6} height={60 * sand} fill="#a88a5c" opacity={0.55 * (1 - rise)} /> : null}
-        {/* The 2013 dig: a trench down from the surface. */}
-        {dig > 0 ? <line x1={(S.x0 + S.x1) / 2} y1={todayY} x2={(S.x0 + S.x1) / 2} y2={todayY + (pyrY - 40 - todayY) * dig} stroke={GOLD} strokeWidth={8} strokeDasharray="16 10" /> : null}
-        {/* Surface. */}
-        <rect x={S.x0 - 120} y={todayY - 8} width={S.x1 - S.x0 + 240} height={10} rx={5} fill="#c9a26a" />
-        {future > 0 ? <rect x={S.x0 - 120} y={todayY - shift - 8} width={S.x1 - S.x0 + 240} height={10} rx={5} fill="#c9a26a" opacity={future} /> : null}
-        {ticks.map((t) => (
-          <line key={t} x1={S.x0 - 14} y1={todayY + t * S.k} x2={S.x0} y2={todayY + t * S.k} stroke={DIM} strokeWidth={4} />
-        ))}
+    <>
+      <svg width={1920} height={1920} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: o }}>
+        <line x1={p.x} y1={p.y} x2={p.x + dx * B.s} y2={p.y - h + (h >= 0 ? 8 : -6) * B.s} stroke={INK} strokeWidth={3 * B.s} />
+        <circle cx={p.x} cy={p.y} r={7 * B.s} fill={GOLD} stroke="#1d1208" strokeWidth={2 * B.s} />
       </svg>
-      {ticks.map((t) => (
-        <div key={t} style={{ position: "absolute", left: S.x0 - 22, top: todayY + t * S.k - 16, translate: "-100% 0", fontFamily: SANS, fontWeight: 700, fontSize: 26, color: DIM, whiteSpace: "pre", textShadow: SHADOW }}>
-          {`${fmt(t)} yrs`}
-        </div>
-      ))}
-      <Label x={S.x0 - 22} y={todayY - 70} o={1 - future} title="Today" size={30} align="right" color={INK} />
-      <Fine x={S.x0 - 22} y={todayY + 4800 * S.k - 40} o={1} text={"depth = time\nyears ago"} align="right" />
+      <Label x={p.x + dx * B.s} y={labelY} o={o} title={title} sub={sub} size={40 * B.s} color={color} />
+    </>
+  );
+};
 
-      {/* A: the hook. Three dates on one scale; the brackets carry the two spans. */}
-      {showA ? mark(moonY, "1969", "Moon landing", markA(F.moon), false) : null}
-      {mark(cleoY, "69 BC", "Cleopatra born", markA(F.cleo0 - 6), showA || ancient > 0)}
-      {mark(pyrY, "c. 2600 BC", B ? "pyramid built · Merer's papyri" : "Great Pyramid built", markA(F.building), false)}
-      {showA ? bracket(cleoY, moonY, ramp(f, F.moon, F.moon + 14), "2,037 yrs", 60) : null}
-      {showA ? bracket(cleoY, pyrY, ramp(f, F.building - 4, F.building + 16), "~2,500 yrs", 60) : null}
+// A bracket between two pinned points on the cut face, with its span written beside it.
+const Bracket: React.FC<{ B: Box; f: number; a: string; b: string; o: number; text: string; sub?: string; side?: 1 | -1 }> = ({ B, f, a, b, o, text, sub, side = -1 }) => {
+  const p = pt(B, a, f);
+  const q = pt(B, b, f);
+  if (!p || !q || o <= 0) return null;
+  const x = Math.min(p.x, q.x) + side * 40 * B.s;
+  const tick = 22 * B.s * -side;
+  return (
+    <>
+      <svg width={1920} height={1920} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: o }}>
+        <path d={`M${x + tick} ${p.y} H${x} V${q.y} H${x + tick}`} fill="none" stroke={GOLD} strokeWidth={5 * B.s} />
+      </svg>
+      <Label x={x + side * 16 * B.s} y={(p.y + q.y) / 2 - 30 * B.s} o={o} title={text} sub={sub} size={44 * B.s} color={GOLD} align={side < 0 ? "right" : "left"} />
+    </>
+  );
+};
 
-      {/* The dig and the papyri at the bottom. SOURCES 6 and 8. */}
-      {!B && dig > 0 ? <Label x={S.tag} y={todayY + 18} o={ramp(f, F.y2013, F.y2013 + 8)} title="2013 · dig" size={30} align="left" color={GOLD} /> : null}
-      <Papyrus x={(S.x0 + S.x1) / 2 - 70} y={papY - 40} w={140} h={80} o={papO} rot={-6} />
-      {B ? bracket(todayY, pyrY - 40, sand * (1 - ancient) * (1 - rise), "~4,500 yrs\nburied", 30, 0.75) : null}
-      {B && ancient > 0 ? bracket(cleoY, pyrY, ancient, "~2,500 yrs", 60) : null}
-      {B ? <Label x={S.tag} y={cleoY + 70} o={ancient} title="To her:" sub="already ancient history" size={30} align="left" color={GOLD} /> : null}
-      {B ? <Label x={S.tag} y={todayY + 18} o={ramp(f, F.read, F.read + 8) * (1 - ramp(f, F.so2 - 8, F.so2))} title="We can read it" sub="the crew's work log" size={30} align="left" color={GOLD} /> : null}
+// The paved line is pale stone on pale sand: a drawn line over it keeps the scale readable.
+const Track: React.FC<{ B: Box; f: number; a: string; b: string; o: number }> = ({ B, f, a, b, o }) => {
+  const p = pt(B, a, f);
+  const q = pt(B, b, f);
+  if (!p || !q || o <= 0) return null;
+  return (
+    <svg width={1920} height={1920} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: o * 0.85 }}>
+      <line x1={p.x} y1={p.y} x2={q.x} y2={q.y} stroke={GOLD} strokeWidth={5 * B.s} strokeLinecap="round" />
+    </svg>
+  );
+};
 
-      {/* The twist: today becomes a layer, 4,000 years down from someone else's surface. */}
-      {future > 0 ? (
-        <>
-          <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.leaving, F.leaving + 10) }}>
-            <Phone x={S.x0 + 50} y={todayY + 34} s={0.6} rot={-20} />
-            <Disc x={S.x0 + 120} y={todayY + 38} s={0.55} />
-            <Book x={S.x0 + 185} y={todayY + 36} s={0.6} rot={12} />
-          </svg>
-          <Label x={S.tag} y={todayY - 30} o={future} title="Us · today" sub="what would you leave?" size={30} align="left" color={GOLD} />
-          {bracket(todayY - shift, todayY, ramp(f, F.four2, F.now + 8), "?", 60)}
-        </>
-      ) : null}
-      {/* The year playhead during the hook. */}
-      {showA ? (
-        <div style={{ position: "absolute", left: S.x0 - 30, top: hookPlayhead(f, S) - 3, width: S.x1 - S.x0 + 60, height: 6, background: GOLD, opacity: 0.9, boxShadow: "0 0 14px rgba(241,199,79,0.8)" }} />
-      ) : null}
+// The Berlin marble portrait of Cleopatra VII, a real photo (public/SOURCES.json). The whole head
+// is shown, uncropped, over a blurred copy of itself: close enough to meet her, not so close that
+// the frame is all face (owner, 2026-11-23).
+const Portrait: React.FC<{ B: Box; o: number; zoom: number }> = ({ B, o, zoom }) => {
+  if (o <= 0) return null;
+  const w = B.w * 0.76;
+  return (
+    <div style={{ position: "absolute", left: B.x, top: B.y, width: B.w, height: B.h, overflow: "hidden", opacity: o, background: "#120d16" }}>
+      <Img src={staticFile("img/cleopatra-berlin.jpg")} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(36px) brightness(0.5)", scale: "1.15" }} />
+      <Img
+        src={staticFile("img/cleopatra-berlin.jpg")}
+        style={{ position: "absolute", left: (B.w - w) / 2, top: B.h * 0.145, width: w, height: (w * 1523) / 1149, borderRadius: w * 0.02, boxShadow: "0 18px 60px rgba(0,0,0,0.6)", scale: `${1 + 0.03 * zoom}` }}
+      />
     </div>
   );
 };
 
-// During the hook the playhead visits each date as it is spoken: Cleopatra, the Moon, the pyramid.
-const hookYear = (f: number) => {
-  const keys: [number, number][] = [
-    [F.cleo0, YEAR.cleopatra],
-    [F.moon - 4, YEAR.cleopatra],
-    [F.moon + 10, YEAR.apollo],
-    [F.building - 6, YEAR.apollo],
-    [F.building + 12, YEAR.pyramid],
-  ];
-  const i = keys.findIndex(([k]) => k > f);
-  if (i === 0) return keys[0][1];
-  if (i < 0) return keys[keys.length - 1][1];
-  const [a, ya] = keys[i - 1];
-  const [b, yb] = keys[i];
-  return ya + (yb - ya) * ease(clamp01((f - a) / (b - a)));
-};
-const hookPlayhead = (f: number, S: Shaft) => depth(S, hookYear(f));
-
-// Counters: one big number per beat, each the number being spoken (A6: on screen while it is said).
-const counterAt = (f: number): { value: string; unit?: string; o: number } | null => {
-  const win = (a: number, b: number) => Math.min(clamp01((f - a) / 6), clamp01((b - f) / 6));
-  if (f >= SHOTS.shaftA[0] && f < SHOTS.shaftA[1]) {
-    // Only the date being spoken, never a year the playhead is passing through.
-    const label = f >= F.building - 2 ? "c. 2600 BC" : f >= F.moon - 4 ? yearLabel(YEAR.apollo) : yearLabel(YEAR.cleopatra);
-    return { value: label, o: win(SHOTS.shaftA[0], SHOTS.shaftA[1]) };
-  }
-  if (f >= SHOTS.diodorus[0] && f < SHOTS.diodorus[1]) return { value: "60–56 BC", unit: "when Diodorus visited", o: win(SHOTS.diodorus[0], SHOTS.diodorus[1]) };
-  if (f >= F.three && f < F.twenty - 2) {
-    return { value: "360,000", unit: "men · as he was told", o: win(F.three, F.twenty - 2) };
-  }
-  if (f >= F.twenty && f < SHOTS.men[1]) return { value: "20", unit: "years", o: win(F.twenty, SHOTS.men[1]) };
-  if (f >= F.sixteen && f < SHOTS.inscription[1]) {
-    return { value: "1,600+", unit: "talents", o: win(F.sixteen, SHOTS.inscription[1]) };
-  }
-  if (f >= F.y2013 && f < SHOTS.harbour[1]) return { value: "2013", o: win(F.y2013, SHOTS.harbour[1]) };
-  if (f >= F.seventeen && f < SHOTS.boat[1]) return { value: "17 km", unit: "Tura quarry → Giza", o: win(F.seventeen, SHOTS.boat[1]) };
-  if (f >= F.four && f < F.cleo2 - 2) return { value: "~4,500", unit: "years buried", o: win(F.four, F.cleo2 - 2) };
-  if (f >= F.four2) return { value: "+4,000", unit: "years from now", o: win(F.four2, F.end + 30) };
-  return null;
-};
-
-const Stamp: React.FC<{ x: number; y: number; t: number; text: string }> = ({ x, y, t, text }) =>
+const Stamp: React.FC<{ x: number; y: number; t: number; s: number; text: string }> = ({ x, y, t, s, text }) =>
   t <= 0 ? null : (
     <div
       style={{
@@ -292,7 +196,7 @@ const Stamp: React.FC<{ x: number; y: number; t: number; text: string }> = ({ x,
         top: y,
         translate: "-50% -50%",
         rotate: "-8deg",
-        scale: `${1.6 - 0.6 * ease(t)}`,
+        scale: `${(1.6 - 0.6 * ease(t)) * s}`,
         opacity: clamp01(t * 2),
         border: `10px solid ${RED}`,
         borderRadius: 18,
@@ -310,307 +214,182 @@ const Stamp: React.FC<{ x: number; y: number; t: number; text: string }> = ({ x,
     </div>
   );
 
-const Scene: React.FC<{ L: Layout }> = ({ L }) => {
-  const f = useCurrentFrame();
-  const v = L.vertical;
-  const o = (id: ShotId) => vis(f, id);
-  const cx = 960;
-  const hud = at(L, { x: 960, y: -190 }, { x: 330, y: 110 });
-  const c = counterAt(f);
-  const shaftO = Math.max(o("shaftA"), o("dig"), o("shaftB"));
+// Counters: one big number per beat, each the number being spoken (A6: on screen while it is said).
+const counterAt = (f: number): { value: string; unit?: string; o: number } | null => {
+  if (f >= PORTRAIT_END && f < F.greek - 4) {
+    // Only the date being spoken, never a year in between. It waits for the timeline: "69 BC" over
+    // the figure at the casing would label that figure as Cleopatra (A5).
+    const label = f >= F.building - 2 ? "c. 2600 BC" : f >= F.moon - 4 ? yearLabel(YEAR.apollo) : yearLabel(YEAR.cleopatra);
+    return { value: label, o: win(f, PORTRAIT_END, F.greek - 4) };
+  }
+  if (f >= F.visited && f < F.he0 - 2) return { value: "60–56 BC", unit: "visited Egypt · sometime in these years", o: win(f, F.visited, F.he0 - 2) };
+  if (f >= F.three && f < F.twenty - 2) return { value: "360,000", unit: "men · as he was told", o: win(f, F.three, F.twenty - 2) };
+  if (f >= F.twenty && f < F.then - 2) return { value: "20", unit: "years", o: win(f, F.twenty, F.then - 2) };
+  if (f >= F.y2013 && f < F.harbour + 20) return { value: "2013", o: win(f, F.y2013, F.harbour + 20) };
+  if (f >= F.seventeen && f < F.they - 2) return { value: "~17 km", unit: "Tura quarry → Giza", o: win(f, F.seventeen, F.they - 2) };
+  if (f >= F.four && f < F.cleo2 - 2) return { value: "~4,500", unit: "years buried", o: win(f, F.four, F.cleo2 - 2) };
+  if (f >= F.four2) return { value: "+4,000", unit: "years from now", o: win(f, F.four2, F.end + 30) };
+  return null;
+};
 
-  // Shared stage for the drawn pyramid shots.
-  const pyr = at(L, { x: cx, base: 820, w: 760 }, { x: cx, base: 880, w: 900 });
+const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
+  const f = useCurrentFrame();
+  const B = box(L);
+  const s = B.s;
+  const cx = B.x + B.w / 2;
+  const top = B.y + (L.vertical ? 150 : 40);
+  const fine = B.y + B.h * (L.vertical ? 0.735 : 0.86); // small print sits just above the captions
+  const photo = 1 - ramp(f, PHOTO_END - 8, PHOTO_END);
+  const c = counterAt(f);
+  const between = (a: number, b: number) => f >= a && f < b;
+  const cut = CUTS.find((c) => Math.abs(f - c) <= DISSOLVE);
+  const mix = cut === undefined ? 0 : clamp01((f - (cut - DISSOLVE)) / (2 * DISSOLVE));
 
   return (
     <>
-      <div style={{ position: "absolute", left: -600, top: -700, width: 3120, height: 2600, background: "radial-gradient(ellipse at 50% 40%, #3a2a3e 0%, #1e1624 55%, #120d16 100%)" }} />
-
-      <ShaftView L={L} f={f} o={shaftO} />
+      <div style={{ position: "absolute", inset: 0, background: "#120d16" }} />
+      {/* 16:9 only: the sides of the vertical picture are filled with a blurred, darkened copy of it. */}
+      {L.vertical ? null : (
+        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+          <div style={{ ...FILL, filter: "blur(36px) brightness(0.5)" }}>
+            <Sequence from={world.start} layout="none">
+              <OffthreadVideo muted src={staticFile("3d/cleopatra-world.mp4")} style={{ width: "100%", height: "100%" }} />
+            </Sequence>
+            {photo > 0 ? <Img src={staticFile("img/kheops-pyramid.jpg")} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 45%", opacity: photo }} /> : null}
+          </div>
+        </div>
+      )}
+      <Sequence from={world.start} layout="none">
+        <OffthreadVideo muted src={staticFile("3d/cleopatra-world.mp4")} style={{ position: "absolute", left: B.x, top: B.y, width: B.w, height: B.h }} />
+      </Sequence>
+      {/* Cross-dissolves: around each cut a second clip holds the incoming shot, faded in over the
+          outgoing one. Hard cuts read as choppy; flights between places as rushed (owner, 2026-11-23). */}
+      {mix > 0 ? (
+        <Sequence from={world.start} layout="none">
+          <OffthreadVideo muted src={staticFile("3d/cleopatra-world-b.mp4")} style={{ position: "absolute", left: B.x, top: B.y, width: B.w, height: B.h, opacity: mix }} />
+        </Sequence>
+      ) : null}
 
       {/* "Not this." The real photo: the pyramid today, casing gone, stepped core showing. */}
-      {o("photo") > 0 ? (
-        <>
-          <PhotoCard src="img/kheops-pyramid.jpg" {...at(L, { x: 505, y: -215, w: 910, h: 1225 }, { x: -10, y: -10, w: 1940, h: 1100 })} o={o("photo")} zoom={1 + 0.08 * ramp(f, 0, F.it)} fx={0.5} fy={0.45} />
-          <Label x={cx} y={at(L, -140, 60)} o={1 - ramp(f, F.not - 4, F.not + 2)} title="In Cleopatra's day?" size={v ? 64 : 56} color={GOLD} />
-          <Stamp x={cx} y={at(L, 120, 170)} t={ramp(f, F.not, F.not + 8)} text="NOT THIS" />
-          <Label x={cx} y={at(L, 860, 900)} o={o("photo") * ramp(f, F.not + 6, F.not + 14)} title="Today" sub="stepped core showing" size={44} />
+      {photo > 0 ? (
+        <div style={{ position: "absolute", left: B.x, top: B.y, width: B.w, height: B.h, overflow: "hidden", opacity: photo }}>
+          <Img src={staticFile("img/kheops-pyramid.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 45%", scale: `${1 + 0.08 * ramp(f, 0, F.it)}` }} />
+          <Label x={B.w / 2} y={L.vertical ? 170 : 60} o={1 - ramp(f, F.not - 4, F.not + 2)} title="In Cleopatra's day?" size={64 * s} color={GOLD} />
+          <Stamp x={B.w / 2} y={B.h * 0.3} t={ramp(f, F.not, F.not + 8)} s={s} text="NOT THIS" />
+          <Label x={B.w / 2} y={B.h * 0.62} o={ramp(f, F.not + 6, F.not + 14)} title="Today" sub="stepped core showing" size={44 * s} />
           {/* CC BY 2.5 needs the credit on screen while the photo is; kept clear of the captions. */}
-          <Fine x={at(L, 532, 20)} y={at(L, -200, 14)} o={o("photo")} text="Photo: Nina, Wikimedia Commons, CC BY 2.5" />
+          <Fine x={24 * s} y={B.h * 0.7} o={1} size={26 * s} text="Photo: Nina Aldin Thune, Wikimedia Commons, CC BY 2.5" />
+        </div>
+      ) : null}
+
+      {/* Casing: wiped on top-down over the stepped core; one person at its foot for scale. */}
+      {between(F.it - 8, F.cleo0) ? (
+        <>
+          <Label x={cx} y={top} o={win(f, F.smooth - 4, F.cleo0, 8)} title="Outer casing" sub="smooth, polished stone" size={50 * s} />
+          <Pin B={B} f={f} name="casing" o={win(f, F.it - 4, F.still + 10)} title="Stepped core" color={DIM} />
+          <Pin B={B} f={f} name="person" o={win(f, F.polished + 2, F.cleo0 - 5, 5)} title="One person" sub="for scale" lift={70} />
+          <Fine x={cx} y={fine} o={win(f, F.it, F.cleo0)} size={26 * s} text="illustration · in antiquity · colour is an estimate" align="center" />
         </>
       ) : null}
 
-      {/* "It still wore its smooth, polished outer casing." */}
-      {o("casing") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("casing") }}>
-          {/* The 3D test shot: rendered in Blender by tools/blender/cleopatra_casing.py, 9:16, 112 frames.
-              Its reveal runs from local frame 14 to 78, which is "still" to "casing." in this VO. */}
-          <Sequence from={SHOTS.casing[0]} durationInFrames={112} layout="none">
-            <OffthreadVideo muted src={staticFile("3d/cleopatra-casing.mp4")} style={{ position: "absolute", ...at(L, { left: 510, top: -215, width: 900, height: 1600 }, { left: 656, top: 0, width: 608, height: 1080 }) }} />
-          </Sequence>
-          <Label x={cx} y={at(L, 40, 50)} o={ramp(f, F.smooth - 4, F.smooth + 6)} title="Outer casing" sub="smooth, polished stone" size={46} />
-          <Label x={pyr.x} y={pyr.base - pyr.w * 0.62 - 64} o={1 - ramp(f, F.still, F.still + 10)} title="Stepped core" size={30} color={DIM} />
-          <Fine x={cx} y={pyr.base + 30} o={1} text="illustration · in antiquity" align="center" />
-        </div>
+      {/* The timeline from straight above: distance = years, one scale. Dates: cleopatra-timeline SOURCES 1-5. */}
+      {between(F.cleo0 - 3, F.greek) ? (
+        <>
+          <Track B={B} f={f} a="tl_built" b="tl_found" o={win(f, F.closer, F.greek - 2)} />
+          <Pin B={B} f={f} name="tl_cleo" o={win(f, F.closer, F.greek - 2)} title="69 BC" sub="Cleopatra born" lift={30} dx={-180} />
+          <Pin B={B} f={f} name="tl_moon" o={win(f, F.moon, F.greek - 2)} title="1969" sub="Moon landing" lift={-24} dx={-180} />
+          <Pin B={B} f={f} name="tl_built" o={win(f, F.building, F.greek - 2)} title="c. 2600 BC" sub="Great Pyramid built" lift={30} dx={-200} />
+          <Bracket B={B} f={f} a="tl_moon" b="tl_cleo" o={win(f, F.moon + 8, F.greek - 2)} text="2,037 yrs" side={1} />
+          <Bracket B={B} f={f} a="tl_cleo" b="tl_built" o={win(f, F.building + 8, F.greek - 2)} text="~2,500 yrs" side={1} />
+          {/* Her portrait fills the frame while she is named; then the timeline. */}
+          <Portrait B={B} o={win(f, F.cleo0 - 3, PORTRAIT_END + 4, 8)} zoom={ramp(f, F.cleo0 - 3, PORTRAIT_END)} />
+          <Label x={cx} y={B.y + B.h * 0.05} o={win(f, F.cleo0, PORTRAIT_END, 8)} title="Cleopatra VII" sub="marble portrait, 1st century BC · Berlin" size={50 * s} />
+          <Fine x={cx} y={fine} o={win(f, F.cleo0 - 3, PORTRAIT_END, 4)} size={26 * s} text="Photo: Louis le Grand, Wikimedia Commons, public domain" align="center" />
+          <Fine x={cx} y={fine} o={win(f, PORTRAIT_END, F.greek)} size={26 * s} text="distance = time · one scale · colours are estimates · illustration" align="center" />
+        </>
       ) : null}
 
-      {/* "A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl." SOURCES 4. */}
-      {o("diodorus") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("diodorus") }}>
-          <DiodorusCard L={L} f={f} />
-        </div>
+      {/* Diodorus: only his hands, his pen and the page, by the Nile; no face (A5), and not at the
+          pyramid (no source read puts him there). Then a cut to the casing, top to bottom. */}
+      {between(F.greek, F.he1) ? (
+        <>
+          <Label x={cx} y={top + 190 * s} o={win(f, F.diodorus - 4, F.stones - 4)} title="Diodorus" sub="Greek historian" size={50 * s} />
+          <Label x={cx} y={top + 340 * s} o={win(f, F.girl - 4, F.he0 - 2)} title="Cleopatra: about 9–13" size={44 * s} color={GOLD} />
+          <Label x={cx} y={top + 230 * s} o={win(f, F.stones - 2, F.he1)} title="✓ Its stones still in place" sub="as Diodorus wrote" size={46 * s} color={GOLD} />
+          <Fine x={cx} y={fine} o={win(f, F.greek, F.stones - 2, 3)} size={26 * s} text="illustration" align="center" />
+          <Fine x={cx} y={fine} o={win(f, F.stones - 2, F.he1 + 3, 3)} size={26 * s} text={ESTIMATE} align="center" />
+        </>
       ) : null}
 
-      {/* "He wrote that its stones were still in place." SOURCES 3-4 (Diodorus 1.63.5). */}
-      {o("stones") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("stones") }}>
-          <Pyramid x={pyr.x} base={pyr.base} w={pyr.w} casing={1} sheen={-0.2 + 1.4 * ramp(f, F.place - 6, F.place + 20)} />
-          <Label x={cx} y={at(L, 40, 50)} o={ramp(f, F.stones - 4, F.stones + 6)} title="Diodorus:" sub="its stones still in place" size={46} />
-          <div style={{ position: "absolute", left: pyr.x, top: pyr.base - pyr.w * 0.3, translate: "-50% -50%", fontSize: 160, color: "#7fd18b", fontFamily: SANS, fontWeight: 900, scale: `${ease(ramp(f, F.place - 4, F.place + 6))}`, textShadow: SHADOW }}>✓</div>
-          <Fine x={cx} y={pyr.base + 30} o={1} text="illustration" align="center" />
-        </div>
+      {/* The workforce Diodorus was told of: every one of the 360,000 figures is drawn. */}
+      {between(F.he1, F.then) ? (
+        <>
+          <Fine x={cx} y={fine} o={win(f, F.he1, F.three + 4, 3)} size={26 * s} text={ESTIMATE} align="center" />
+          <Fine x={cx} y={fine} o={win(f, F.three + 4, F.twenty, 3)} size={26 * s} text={"360,000 figures modelled · colour is an estimate · illustration"} align="center" />
+          {/* From above the farmland, the river and the quarry cliff are in frame, far closer than they are. */}
+          <Fine x={cx} y={fine} o={win(f, F.twenty, F.then + 2, 2)} size={26 * s} text={"360,000 figures modelled · colour is an estimate · landscape not to scale"} align="center" />
+        </>
       ) : null}
 
-      {/* "He was told three hundred and sixty thousand men spent twenty years building it." SOURCES 5. */}
-      {o("men") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("men") }}>
-          <Workforce L={L} f={f} />
-        </div>
+      {/* The harbour and the papyri: Tallet & Marouard 2014. */}
+      {between(F.then, F.among) ? (
+        <>
+          <Label x={cx} y={top + 160 * s} o={win(f, F.harbour - 2, F.found)} title="An ancient harbour" sub="Wadi al-Jarf" size={46 * s} />
+          {/* Fixed on screen over the water: the camera flies on too fast for a pin to hold. */}
+          <Label x={cx} y={B.y + B.h * 0.6} o={win(f, F.red - 2, F.found - 14, 8)} title="Red Sea" size={44 * s} />
+          <Pin B={B} f={f} name="papyri" o={win(f, F.archaeologists + 6, F.oldest - 2)} title="Papyri" lift={80} />
+          {/* Khufu, in a cartouche-shaped frame with his name in our letters. */}
+          <div style={{ position: "absolute", left: cx, top: top + 120 * s, translate: "-50% 0", padding: `${10 * s}px ${44 * s}px ${14 * s}px`, border: `${6 * s}px solid ${GOLD}`, borderRadius: 60 * s, background: "rgba(20,12,8,0.55)", opacity: win(f, F.reign - 4, F.oldest - 2), scale: `${0.8 + 0.2 * ease(ramp(f, F.khufu - 4, F.khufu + 6))}`, textAlign: "center", textShadow: SHADOW }}>
+            <div style={{ fontFamily: SANS, fontWeight: 900, fontSize: 64 * s, color: GOLD, letterSpacing: "0.08em" }}>KHUFU</div>
+            <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 24 * s, color: INK, letterSpacing: "0.06em", textTransform: "uppercase" }}>from his reign</div>
+          </div>
+          <Label x={cx} y={top + 120 * s} o={win(f, F.oldest, F.among)} title="OLDEST" sub={"papyri with writing ever found in Egypt\n(as of 2014)"} size={70 * s} color={GOLD} />
+          <Fine x={cx} y={fine} o={win(f, F.then, F.among)} size={26 * s} text="illustration · not to scale" align="center" />
+        </>
       ) : null}
 
-      {/* The inscription, the vegetables and laxatives, the 1,600 talents. SOURCES 5 (Diodorus 1.64.3). */}
-      {o("inscription") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("inscription") }}>
-          <Inscription L={L} f={f} />
-        </div>
+      {/* Merer's logbook (T&M 2014 pp. 8-10): ruled columns, squiggles for writing. */}
+      {between(F.among - 8, F.his) ? (
+        <>
+          <Pin B={B} f={f} name="logbook" o={win(f, F.logbook - 2, F.his - 2)} title="Merer's logbook" sub={"his boat crew's daily work\nfound in fragments"} lift={90} />
+          <Fine x={cx} y={fine} o={win(f, F.among, F.his)} size={26 * s} text="illustration" align="center" />
+        </>
       ) : null}
 
-      {/* The 2013 harbour on the Red Sea. SOURCES 6. */}
-      {o("harbour") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("harbour") }}>
-          <Harbour L={L} f={f} />
-        </div>
+      {/* The river run: Tura on the far (east) bank, Giza on the near one; ~17 km (Sheisha 2022). */}
+      {between(F.his - 8, F.they) ? (
+        <>
+          <Pin B={B} f={f} name="boat" o={win(f, F.limestone - 4, F.seventeen)} title="Limestone" lift={80} color={GOLD} />
+          <Pin B={B} f={f} name="tura" o={win(f, F.quarry, F.they - 2)} title="Tura quarry" lift={70} dx={-110} />
+          <Pin B={B} f={f} name="giza" o={win(f, F.seventeen, F.they - 2)} title="Giza" sub="the Great Pyramid" lift={70} />
+          <Fine x={cx} y={fine} o={win(f, F.his, F.they + 2, 2)} size={26 * s} text={"Nile and canals · not to scale · colours are estimates · illustration"} align="center" />
+        </>
       ) : null}
 
-      {/* "The oldest papyri with writing ever found in Egypt." SOURCES 6. */}
-      {o("oldest") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("oldest") }}>
-          <Papyrus x={cx - 300} y={at(L, 250, 260)} w={600} h={420} o={1} ink={ramp(f, F.oldest - 6, F.oldest + 30)} rot={-3} />
-          <div style={{ position: "absolute", left: cx, top: at(L, 120, 140), translate: "-50% 0", padding: "8px 34px 12px", background: GOLD, borderRadius: 16, fontFamily: SANS, fontWeight: 900, fontSize: 80, letterSpacing: "0.06em", color: DARK, scale: `${ease(ramp(f, F.oldest, F.oldest + 8))}` }}>OLDEST</div>
-          <Label x={cx} y={at(L, 720, 720)} o={ramp(f, F.oldest + 4, F.oldest + 14)} title="Papyri with writing" sub="ever found in Egypt (as of 2014)" size={42} />
-          <Fine x={cx} y={at(L, 870, 860)} o={1} text="illustration" align="center" />
-        </div>
+      {/* The timeline again: written c. 2600 BC, found 2013; then how old it already was to her. */}
+      {between(F.they - 8, F.we) ? (
+        <>
+          <Track B={B} f={f} a="tl_built" b="tl_found" o={win(f, F.they, F.we - 6)} />
+          <Pin B={B} f={f} name="tl_built" o={win(f, F.buried + 6, F.we - 6)} title="c. 2600 BC" sub="Merer's papyri written" lift={30} dx={-200} />
+          <Pin B={B} f={f} name="tl_found" o={win(f, F.four - 4, F.cleo2 - 2)} title="2013" sub="found" lift={-24} dx={-170} />
+          <Bracket B={B} f={f} a="tl_found" b="tl_built" o={win(f, F.four, F.cleo2 - 2)} text="~4,500 yrs" side={1} />
+          <Pin B={B} f={f} name="tl_cleo" o={win(f, F.cleo2 - 2, F.we - 6)} title="69 BC" sub="Cleopatra" lift={30} dx={-170} />
+          <Bracket B={B} f={f} a="tl_cleo" b="tl_built" o={win(f, F.cleo2 + 4, F.we - 6)} text="~2,500 yrs" sub={"to her: already\nancient history"} side={1} />
+          <Fine x={cx} y={fine} o={win(f, F.they, F.we, 3)} size={26 * s} text="distance = time · one scale · colours are estimates · illustration" align="center" />
+        </>
       ) : null}
 
-      {/* "Among them was the logbook of Merer's boat crew" SOURCES 7. */}
-      {o("logbook") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("logbook") }}>
-          <Papyrus x={cx - 330} y={at(L, 230, 240)} w={660} h={440} o={1} grid ink={ramp(f, F.logbook - 8, F.boat + 10)} torn={false} />
-          <Label x={cx} y={at(L, 40, 60)} o={ramp(f, F.logbook - 4, F.logbook + 6)} title="Merer's logbook" sub="his boat crew's daily work" size={46} />
-          <Boat x={cx} y={at(L, 800, 780)} o={ramp(f, F.boat - 4, F.boat + 6)} s={0.6} bob={f / 8} dir={-1} />
-          <Fine x={cx} y={at(L, 880, 870)} o={1} text="illustration" align="center" />
-        </div>
+      {/* Today, at the end of the paving: the log we can read, then what we might leave. */}
+      {f >= F.we ? (
+        <>
+          <Label x={cx} y={top + 150 * s} o={win(f, F.read + 2, F.so2 - 2, 8)} title="We can read it" sub="the crew's work log" size={50 * s} />
+          <Label x={cx} y={top + 150 * s} o={win(f, F.so2 + 2, F.four2 - 2, 8)} title="Us · today" sub="what would you leave?" size={50 * s} />
+          <Fine x={cx} y={fine} o={win(f, F.we, F.four2, 3)} size={26 * s} text="illustration" align="center" />
+          <Fine x={cx} y={fine} o={win(f, F.four2, F.end + 30)} size={26 * s} text="distance = time · illustration" align="center" />
+        </>
       ) : null}
 
-      {/* "hauling limestone from a quarry seventeen kilometres away to the pyramid." SOURCES 7. */}
-      {o("boat") > 0 ? (
-        <div style={{ position: "absolute", inset: 0, opacity: o("boat") }}>
-          <River L={L} f={f} />
-        </div>
-      ) : null}
-
-      {/* The one number of the moment. */}
-      {c ? <Counter x={hud.x} y={hud.y} o={c.o} value={c.value} unit={c.unit} size={v ? 120 : 110} /> : null}
-    </>
-  );
-};
-
-// Cleopatra born 69 BC; Diodorus visited during the 180th Olympiad, 60/59-57/56 BC. The band is the window
-// his visit falls in, not the length of his stay (Oldfather: the length is uncertain); so she is "about" 9-13.
-const DiodorusCard: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const v = L.vertical;
-  const x0 = v ? 600 : 780;
-  const x1 = v ? 1320 : 1480;
-  const yr = (bc: number) => x0 + ((70 - bc) / 20) * (x1 - x0); // a ruler from 70 BC to 50 BC
-  const y = v ? 520 : 520;
-  const t1 = ramp(f, F.greek - 4, F.greek + 8);
-  const t2 = ramp(f, F.visited - 4, F.visited + 8);
-  const t3 = ramp(f, F.girl - 8, F.girl + 4);
-  return (
-    <>
-      <Label x={960} y={v ? 60 : 60} o={t1} title="Diodorus" sub="Greek historian" size={50} />
-      {/* A scroll for the historian. */}
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: t1 }}>
-        <g transform={`translate(960 ${v ? 290 : 280}) scale(${0.8 + 0.2 * ease(t1)})`}>
-          <rect x={-120} y={-60} width={240} height={120} fill="#e8d6aa" stroke="#9c7a45" strokeWidth={4} />
-          <rect x={-150} y={-72} width={34} height={144} rx={16} fill="#b98e4f" />
-          <rect x={116} y={-72} width={34} height={144} rx={16} fill="#b98e4f" />
-          {[-30, 0, 30].map((yy) => (
-            <path key={yy} d={`M-90 ${yy} q20 -8 40 0 t40 0 t40 0 t40 0`} stroke="#2b1a0e" strokeWidth={4} fill="none" opacity={0.7} />
-          ))}
-        </g>
-      </svg>
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: t2 }}>
-        <line x1={x0} y1={y} x2={x1} y2={y} stroke={DIM} strokeWidth={6} strokeLinecap="round" />
-        {[70, 65, 60, 55, 50].map((bc) => (
-          <g key={bc}>
-            <line x1={yr(bc)} y1={y - 12} x2={yr(bc)} y2={y + 12} stroke={DIM} strokeWidth={4} />
-            <text x={yr(bc)} y={y + 50} textAnchor="middle" fontFamily={SANS} fontWeight={700} fontSize={28} fill={DIM}>{`${bc} BC`}</text>
-          </g>
-        ))}
-        <rect x={yr(60)} y={y - 30} width={yr(56) - yr(60)} height={60} rx={10} fill="rgba(241,199,79,0.18)" stroke={GOLD} strokeWidth={4} strokeDasharray="12 8" />
-        <circle cx={yr(69)} cy={y} r={16} fill={INK} />
-      </svg>
-      <Label x={yr(69)} y={y - 120} o={t2} title="69 BC" sub="Cleopatra born" size={30} align="left" />
-      <Label x={yr(58)} y={y + 80} o={t2} title="Visited Egypt" sub="sometime in 60–56 BC" size={30} />
-      <Label x={960} y={v ? 760 : 780} o={t3} title="Cleopatra: about 9–13" size={44} color={GOLD} />
-    </>
-  );
-};
-
-// 360 figures, one per thousand men, filling as the number is spoken; then twenty years.
-const Workforce: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const v = L.vertical;
-  const cols = v ? 20 : 24;
-  const rows = 360 / cols;
-  const cell = v ? 38 : 30;
-  const gx = v ? 960 : 1060; // 16:9: clear of the counter on the left
-  const x0 = gx - (cols * cell) / 2 + cell / 2;
-  const y0 = v ? 140 : 150;
-  const fill = ease(ramp(f, F.three, F.men + 6));
-  const n = Math.round(360 * fill);
-  const yrs = Math.round(20 * ease(ramp(f, F.twenty, F.twenty + 12)));
-  const yRow = y0 + rows * cell + 50;
-  return (
-    <>
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-        {Array.from({ length: 360 }, (_, i) => (
-          <Person key={i} x={x0 + (i % cols) * cell} y={y0 + Math.floor(i / cols) * cell} s={cell / 32} color={i < n ? "#e8c27a" : "rgba(244,236,216,0.12)"} />
-        ))}
-        {/* Twenty years: one mark per year. */}
-        {Array.from({ length: 20 }, (_, i) => {
-          const w = (v ? 760 : 900) / 20;
-          const x = 960 - (20 * w) / 2 + i * w;
-          return <rect key={i} x={x + 3} y={yRow} width={w - 6} height={40} rx={6} fill={i < yrs ? GOLD : "rgba(244,236,216,0.12)"} />;
-        })}
-      </svg>
-      <Fine x={gx} y={y0 - 70} o={1} text="each figure = 1,000 men · as Diodorus was told" align="center" />
-      <Label x={960} y={yRow + 56} o={ramp(f, F.twenty - 2, F.twenty + 8)} title="20 years" sub="one bar per year" size={34} />
-    </>
-  );
-};
-
-// An inscription (as Diodorus reported it), then what it listed, then the total.
-const Inscription: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const v = L.vertical;
-  const slab = ramp(f, F.he2 - 2, F.he2 + 8);
-  const vegO = ramp(f, F.vegetables - 6, F.vegetables);
-  const pops = [0, 1, 2].map((i) => ramp(f, F.vegetables + i * 4, F.vegetables + i * 4 + 8));
-  const jar = ramp(f, F.laxatives - 2, F.laxatives + 8);
-  const bal = ramp(f, F.sixteen - 6, F.sixteen + 4);
-  const sy = v ? 60 : 40;
-  return (
-    <>
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: slab }}>
-        <rect x={960 - 260} y={sy} width={520} height={230} rx={10} fill="#bfa070" stroke="#6f5130" strokeWidth={6} />
-        {[0, 1, 2, 3].map((r) => (
-          <g key={r}>
-            {Array.from({ length: 9 }, (_, i) => (
-              <rect key={i} x={960 - 220 + i * 50} y={sy + 30 + r * 48} width={30 + ((i * 7 + r * 3) % 3) * 4} height={30} rx={r % 2 ? 15 : 4} fill="none" stroke="#5a3f22" strokeWidth={4} />
-            ))}
-          </g>
-        ))}
-      </svg>
-      <Label x={960} y={sy + 240} o={slab} title="An inscription" sub="as Diodorus reported it" size={36} />
-      <Vegetables x={v ? 900 : 860} y={v ? 560 : 560} o={vegO} pop={pops} />
-      <Jar x={v ? 1250 : 1190} y={v ? 560 : 560} o={jar} s={jar} />
-      <Label x={v ? 900 : 860} y={v ? 670 : 660} o={vegO} title="Vegetables" size={30} />
-      <Label x={v ? 1250 : 1190} y={v ? 670 : 660} o={jar} title="Laxatives" size={30} />
-      <Fine x={960} y={v ? 940 : 1030} o={slab} text="illustration" align="center" />
-      <Balance x={v ? 960 : 1560} y={v ? 880 : 560} o={bal} tilt={-6 + 6 * ease(ramp(f, F.sixteen, F.sixteen + 18))} />
-    </>
-  );
-};
-
-// Wadi al-Jarf: the harbour, the sea, the papyri coming out of the sand.
-const Harbour: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const v = L.vertical;
-  const sea = ramp(f, F.red - 6, F.red + 4);
-  const dig = ramp(f, F.archaeologists - 4, F.archaeologists + 20);
-  const sandTop = v ? 520 : 500;
-  const brushX = 960 - 150 + 300 * ((Math.sin(f / 4) + 1) / 2);
-  return (
-    <>
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-        <rect x={-600} y={sandTop} width={3120} height={900} fill="#c9a26a" />
-        {/* Stone jetty out into the water. */}
-        <rect x={v ? 1080 : 1180} y={sandTop - 30} width={v ? 330 : 500} height={44} rx={6} fill="#8b7d6b" stroke="#5b4f42" strokeWidth={4} />
-      </svg>
-      <Waves x0={v ? 1060 : 1160} x1={2520} y={sandTop + 14} h={v ? 200 : 220} o={1} t={f} />
-      <Label x={v ? 1240 : 1500} y={sandTop + 240} o={sea} title="Red Sea" size={40} color="#9fd3f2" />
-      <Label x={960} y={v ? 60 : 50} o={ramp(f, F.harbour - 6, F.harbour + 4)} title="An ancient harbour" sub="Wadi al-Jarf" size={46} />
-      {/* Inland: storage galleries cut into the rock, where the papyri lay; the sea is off to the side (not to scale). */}
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-        <path d={`M-600 ${sandTop + 4} L${v ? 520 : 300} ${sandTop + 4} L${v ? 560 : 340} ${sandTop - 120} L${v ? 1020 : 1100} ${sandTop - 150} L${v ? 1050 : 1140} ${sandTop + 4} Z`} fill="#a98756" stroke="#6f5130" strokeWidth={4} />
-        {[0, 1, 2].map((i) => (
-          <path key={i} d={`M${(v ? 620 : 440) + i * (v ? 130 : 220)} ${sandTop + 4} v-60 a34 34 0 0 1 68 0 v60 Z`} fill="#2a1d12" />
-        ))}
-      </svg>
-      {/* The papyri, swept clear. */}
-      <Papyrus x={820} y={sandTop + 120} w={150} h={100} o={dig} rot={-8} ink={dig} />
-      <Papyrus x={990} y={sandTop + 150} w={120} h={90} o={dig} rot={10} ink={dig} />
-      <Papyrus x={890} y={sandTop + 250} w={170} h={90} o={dig} rot={3} ink={dig} />
-      {dig > 0 && dig < 1 ? (
-        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-          <g transform={`translate(${brushX} ${sandTop + 110}) rotate(-30)`}>
-            <rect x={-8} y={-110} width={16} height={100} rx={6} fill="#7a4f2a" />
-            <rect x={-24} y={-14} width={48} height={34} rx={6} fill="#3b2a1a" />
-          </g>
-        </svg>
-      ) : null}
-      <Label x={960} y={sandTop + 360} o={ramp(f, F.archaeologists + 6, F.archaeologists + 16)} title="Papyri" size={36} />
-      {/* Khufu, in a cartouche-shaped frame with his name in our letters. */}
-      <div style={{ position: "absolute", left: 960, top: v ? 300 : 260, translate: "-50% 0", padding: "10px 44px 14px", border: `6px solid ${GOLD}`, borderRadius: 60, background: "rgba(20,12,8,0.55)", opacity: ramp(f, F.reign - 4, F.reign + 6), scale: `${0.8 + 0.2 * ease(ramp(f, F.khufu - 4, F.khufu + 6))}`, textAlign: "center", textShadow: SHADOW }}>
-        <div style={{ fontFamily: SANS, fontWeight: 900, fontSize: 64, color: GOLD, letterSpacing: "0.08em" }}>KHUFU</div>
-        <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 24, color: INK, letterSpacing: "0.06em", textTransform: "uppercase" }}>from his reign</div>
-      </div>
-      <Fine x={960} y={v ? 945 : 1030} o={1} text="illustration · not to scale" align="center" />
-    </>
-  );
-};
-
-// The river run, side-on: the Tura quarry on the far bank, Giza on the near one (the quarries were on
-// "the opposite bank of the Nile", Tallet & Marouard 2014). Not to scale.
-const River: React.FC<{ L: Layout; f: number }> = ({ L, f }) => {
-  const v = L.vertical;
-  const xW = v ? 700 : 560; // Giza, near bank
-  const xE = v ? 1180 : 1560; // Tura, far bank
-  const ry = v ? 470 : 440;
-  const t = ease(ramp(f, F.hauling, F.pyramid2 + 6));
-  const bx = xE - 120 - t * (xE - xW - 120);
-  return (
-    <>
-      <Waves x0={-600} x1={2520} y={ry - 70} h={160} o={1} t={f} color="#3a6f8f" />
-      {/* Near bank. */}
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-        <rect x={-600} y={ry + 90} width={3120} height={600} fill="#b8925c" />
-      </svg>
-      {/* Tura: a cliff with blocks cut out of it, across the water. */}
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.quarry - 6, F.quarry + 4) }}>
-        <path d={`M${xE - 60} ${ry - 70} L${xE - 20} ${ry - 250} L${xE + 200} ${ry - 290} L${xE + 200} ${ry - 70} Z`} fill="#d8c8a0" stroke="#8b7a56" strokeWidth={4} />
-        {[0, 1, 2].map((i) => (
-          <rect key={i} x={xE - 4 + i * 54} y={ry - 200 + (i % 2) * 40} width={44} height={36} fill="#b7a67f" stroke="#8b7a56" strokeWidth={3} />
-        ))}
-      </svg>
-      <Label x={xE + 40} y={ry - 370} o={ramp(f, F.quarry - 4, F.quarry + 6)} title="Tura quarry" size={34} align="right" />
-      {/* Giza: the pyramid on this side of the river. */}
-      <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: ramp(f, F.hauling - 6, F.hauling + 4) }}>
-        <path d={`M${xW - 150} ${ry + 330} L${xW} ${ry + 140} L${xW + 150} ${ry + 330} Z`} fill="#c9a26a" stroke="#6f5130" strokeWidth={4} />
-      </svg>
-      <Label x={xW + 170} y={ry + 200} o={ramp(f, F.pyramid2 - 6, F.pyramid2 + 4)} title="Giza" sub="the Great Pyramid" size={34} align="left" />
-      <Boat x={bx} y={ry + 20} o={1} s={0.75} bob={f / 7} dir={-1} />
-      <Label x={bx} y={ry - 170} o={ramp(f, F.limestone - 4, F.limestone + 6) * (1 - ramp(f, F.seventeen - 8, F.seventeen))} title="Limestone" size={30} color={GOLD} />
-      <Fine x={v ? 1395 : 1880} y={ry + 380} o={1} text={"Nile and canals · not to scale\nillustration"} align="right" />
+      {c ? <Counter x={cx} y={L.vertical ? top + (c.unit ? -40 : -20) : top} o={c.o} value={c.value} unit={c.unit} size={120 * s} /> : null}
     </>
   );
 };
@@ -620,17 +399,16 @@ export const cleopatraPyramid: Short = {
   title: "What the Great Pyramid looked like in Cleopatra's day",
   edit,
   looks: [{ id: "Illustrated", Set: () => null, cast: () => [] }],
-  props: (L) => <Scene L={L} />,
+  ui: (L) => <Overlay L={L} />,
   music: "egypt",
   sfx: [
     { at: F.not, name: "thud", volume: 0.35 },
     { at: F.polished, name: "sparkle", volume: 0.3 },
     { at: F.three, name: "whoosh", volume: 0.2 },
-    { at: F.sixteen, name: "pop", volume: 0.3 },
-    { at: F.then, name: "dirt", volume: 0.3 },
+    { at: F.then, name: "whoosh", volume: 0.2 },
     { at: F.oldest, name: "pop", volume: 0.3 },
-    { at: F.hauling, name: "whoosh", volume: 0.2 },
-    { at: F.buried, name: "dirt", volume: 0.3 },
-    { at: F.so2, name: "rumble", volume: 0.3 },
+    { at: F.his, name: "whoosh", volume: 0.2 },
+    { at: F.buried, name: "whoosh", volume: 0.2 },
+    { at: F.so2 + 14, name: "pop", volume: 0.3 },
   ],
 };

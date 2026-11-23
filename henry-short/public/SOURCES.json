@@ -313,15 +313,27 @@
   "note": "Listed CC0 by its author. Bed for the long deepest-hole short, chosen by the owner by ear from four candidates. First 110 s, levelled to -26 LUFS and re-encoded by tools/music.sh (`npm run music`). Licence read on the track's page on 2026-11-19."
  },
  "public/img/kheops-pyramid.jpg": {
-  "source": "\"Kheops-Pyramid.jpg\", photograph by Nina (no.wikipedia User:Nina), March 2005 — https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg",
+  "source": "\"Kheops-Pyramid.jpg\", photograph by Nina Aldin Thune (Commons User:Nina-no), March 2005; the version used is the one straightened and cropped by Dicklyon, 2007 — https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg",
   "licence": "cc-by-2.5",
   "ship": true,
-  "note": "CC BY 2.5: credited on screen while the photo shows (\"Photo: Nina, Wikimedia Commons, CC BY 2.5\"). Original 1581x971. Visitors at the base are a few pixels tall and not identifiable (C4). Fetched from Wikimedia Commons on 2026-11-22; licence as stated by the Commons API that day."
+  "note": "CC BY 2.5: credited on screen while the photo shows (\"Photo: Nina Aldin Thune, Wikimedia Commons, CC BY 2.5\": the photographer's Commons template asks for that name beside the image). File as used: 1581x971. Visitors at the base are small (about 90 px tall on screen), faces unresolved, not identifiable (C4). Fetched from Wikimedia Commons on 2026-11-22; licence as stated by the Commons API that day."
  },
- "public/3d/cleopatra-casing.mp4": {
-  "source": "Own work: rendered with Blender 5.3 (Cycles) by tools/blender/cleopatra_casing.py; every shape, material and the sky are procedural, with no downloaded models or textures.",
+ "public/3d/cleopatra-world.mp4": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/cleopatra_world.py. Shapes are procedural. Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: aerial_beach_01 and sandstone_blocks_05 (Rob Tuytel), dense_sand (Dimitrios Savva), sandy_gravel_02 (Dario Barresi), rock_face_03 (Dario Barresi, Rico Cilliers), rough_linen (colormass, Rico Cilliers). The people are MakeHuman bodies, skins and eyes (MakeHuman system assets, CC0, makehumancommunity.org), shaped, posed and dressed by tools/blender/make_people.py with the MPFB 2.0.18 add-on; their clothes are modelled in that script.",
   "licence": "own-work",
   "ship": true,
-  "note": "Blender is GPL; the GPL covers the program, not the images it renders, which belong to whoever made them (see blender.org/about/license). 720x1280, 32 samples, 112 frames, 2026-11-23."
+  "note": "Blender and MPFB are GPL; the GPL covers the programs, not the images they render, which belong to whoever made them (see blender.org/about/license). Poly Haven and MakeHuman system assets are CC0: no credit required, given anyway. No other downloaded models. Frames 150-1994 of the cleopatra-pyramid edit, 30 fps."
+ },
+ "public/img/cleopatra-berlin.jpg": {
+  "source": "Marble portrait head of Cleopatra VII, 1st century BC, Antikensammlung Berlin, inv. 1976.10 (shown in the Altes Museum), the 'Berlin Cleopatra'; photograph by Louis le Grand — https://commons.wikimedia.org/wiki/File:Kleopatra-VII.-Altes-Museum-Berlin1.jpg",
+  "licence": "public-domain",
+  "ship": true,
+  "note": "The photographer released the photo into the public domain on Commons; the sculpture is ancient. The file used is the current Commons revision, a 2012 noise-reduction and contrast overwrite of the 2007 photo by Commons user Arbeiterreserve, on the same public-domain page. Dating disagrees between sources: the museum's catalogue record (recherche.smb.museum/detail/677025) gives the third quarter of the 1st century BC, 'um 50 – 38 v. Chr.' (as read by A7 pass 6); the Commons description gives ca. 40-30 BC. On screen it says only '1st century BC', which both support. Credited on screen anyway. Downloaded 2026-11-23, sha1 ffb3e8857d8f2c31e415cd27eb383852615fc81e."
+ },
+ "public/3d/cleopatra-world-b.mp4": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/cleopatra_world.py. Shapes are procedural. Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: aerial_beach_01 and sandstone_blocks_05 (Rob Tuytel), dense_sand (Dimitrios Savva), sandy_gravel_02 (Dario Barresi), rock_face_03 (Dario Barresi, Rico Cilliers), rough_linen (colormass, Rico Cilliers). The people are MakeHuman bodies, skins and eyes (MakeHuman system assets, CC0, makehumancommunity.org), shaped, posed and dressed by tools/blender/make_people.py with the MPFB 2.0.18 add-on; their clothes are modelled in that script.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "The incoming shot around each cut of public/3d/cleopatra-world.mp4, for cross-dissolves: same scene, same assets and same script (tools/blender/cleopatra_world.py --cut-shift), so the same sources and licences apply. Blender and MPFB are GPL; the GPL covers the programs, not the images they render, which belong to whoever made them (see blender.org/about/license). Poly Haven and MakeHuman system assets are CC0: no credit required, given anyway. No other downloaded models. Frames 150-1994 of the cleopatra-pyramid edit, 30 fps."
  }
 }

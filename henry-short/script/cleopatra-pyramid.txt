@@ -2,9 +2,9 @@ What did the Great Pyramid look like in Cleopatra's day? Not this.
 It still wore its smooth, polished outer casing.
 Cleopatra lived closer to the Moon landing than to its building.
 A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl. He wrote that its stones were still in place.
-He was told three hundred and sixty thousand men spent twenty years building it. He wrote that an inscription listed what the workers' vegetables and laxatives cost: over sixteen hundred talents.
-Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyri from the reign of the pyramid's own king, Khufu. The oldest papyri with writing ever found in Egypt.
-Among them was the logbook of Merer's boat crew, hauling limestone from a quarry seventeen kilometres away to the pyramid.
+He was told three hundred and sixty thousand men spent twenty years building it.
+Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyrus documents from the reign of the pyramid's own king, Khufu. The oldest papyri with writing ever found in Egypt.
+Among them was the logbook of an inspector named Merer. His boat crew hauled limestone from a quarry seventeen kilometres away to the pyramid.
 They lay buried for about four and a half thousand years.
 To Cleopatra, the pyramid was ancient history. We can read the work log of a crew that helped build it.
 What would you leave behind for someone to read four thousand years from now?
@@ -48,8 +48,14 @@ Sources:
    undecayed". "Casing": Tallet & Marouard 2014, p. 10: blocks from the Tura
    quarries "were probably used for the external casing of the Great Pyramid,
    made of fine limestone". Not said: "white" and the original height (146.6 m
-   is from Lehner 1997 via Wikipedia, unread; Petrie 1883 unreachable from this
-   session). Add either only once read.
+   is from Lehner 1997 via Wikipedia, unread). Colour, for the picture only:
+   Petrie, The Pyramids and Temples of Gizeh (1883), read 2026-11-23 in the
+   transcription at ronaldbirdsall.com/gizeh/petrie: ch. 18, the North Pyramid
+   at Dahshur is like the Great Pyramid in "the fineness and whiteness of its
+   casing"; ch. 6, fine Mokattam limestone weathers "very quickly to the brown
+   tint, proper to the fine Mokattam limestone". No source read says how white
+   the casing still was in Cleopatra's day, so it is drawn weathered off-white
+   and the screen says the colour is an estimate.
 
 3. "Cleopatra lived closer to the Moon landing than to its building."
    "Its" is the Great Pyramid of line 1. Same claim as cleopatra-timeline line
@@ -68,21 +74,18 @@ Sources:
    "constructed" by "Chemmis" (1.63.2), i.e. the Great Pyramid.
 
 5. "He was told three hundred and sixty thousand men spent twenty years
-   building it. He wrote that an inscription listed what the workers'
-   vegetables and laxatives cost: over sixteen hundred talents."
+   building it."
    Diodorus 1.63.9: "three hundred and sixty thousand men, as they say, were
    employed on the undertaking, and the whole structure was scarcely completed
-   in twenty years" ("as they say" = "he was told"). 1.64.3: "an inscription on
-   the larger pyramid gives the sum of money expended on it, since the writing
-   sets forth that on vegetables and purgatives for the workmen there were paid
-   out over sixteen hundred talents" ("purgatives" = laxatives). "He wrote":
-   this is Diodorus's report of the inscription, not a surviving find. No "of
-   silver": that is Herodotus 2.125.6, whose telling differs (fact-check
-   2026-11-22). The modern workforce comparison was cut: no A2 source read.
+   in twenty years" ("as they say" = "he was told"). Cut on 2026-11-23 (owner:
+   off the topic, and "talents" meant nothing to a first-time viewer): the
+   sentence on the inscription at 1.64.3 listing what the workmen's vegetables
+   and purgatives cost. The modern workforce comparison was cut earlier: no A2
+   source read.
 
 6. "Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found
-   papyri from the reign of the pyramid's own king, Khufu. The oldest papyri
-   with writing ever found in Egypt."
+   papyrus documents from the reign of the pyramid's own king, Khufu. The
+   oldest papyri with writing ever found in Egypt."
    Tallet & Marouard 2014 (abstract): "In 2013 the discovery of several dozen
    fragments of papyrus, the oldest inscribed papyri ever unearthed in Egypt,
    confirmed the early date of this site and revealed a final closure of this
@@ -96,8 +99,8 @@ Sources:
    2022, "the Great Pyramid of Giza (Khufu Pyramid)". "Ever found in Egypt"
    keeps the source's scope, as of 2014.
 
-7. "Among them was the logbook of Merer's boat crew, hauling limestone from a
-   quarry seventeen kilometres away to the pyramid."
+7. "Among them was the logbook of an inspector named Merer. His boat crew
+   hauled limestone from a quarry seventeen kilometres away to the pyramid."
    Tallet & Marouard 2014, pp. 8-10: "a personal logbook that records every day
    activities of a team led by ... the inspector Merer", "a team of about 200
    men"; it describes "the transportation, on the Nile and connected canals,

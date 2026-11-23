@@ -11,3 +11,6 @@ __pycache__
 
 # Local Python virtualenv for tools/
 .venv
+
+# Scanned textures for the Blender scenes: fetched by tools/blender/fetch_assets.sh
+tools/blender/assets
