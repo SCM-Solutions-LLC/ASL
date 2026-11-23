@@ -1,5 +1,5 @@
 import React from "react";
-import { useCurrentFrame } from "remotion";
+import { OffthreadVideo, Sequence, staticFile, useCurrentFrame } from "remotion";
 import { makeEdit } from "../../edit";
 import { SANS } from "../../fonts";
 import type { Layout } from "../../layout";
@@ -343,7 +343,11 @@ const Scene: React.FC<{ L: Layout }> = ({ L }) => {
       {/* "It still wore its smooth, polished outer casing." */}
       {o("casing") > 0 ? (
         <div style={{ position: "absolute", inset: 0, opacity: o("casing") }}>
-          <Pyramid x={pyr.x} base={pyr.base} w={pyr.w} casing={ramp(f, F.still, F.casing + 6)} sheen={-0.2 + 1.4 * ramp(f, F.polished, F.casing + 16)} />
+          {/* The 3D test shot: rendered in Blender by tools/blender/cleopatra_casing.py, 9:16, 112 frames.
+              Its reveal runs from local frame 14 to 78, which is "still" to "casing." in this VO. */}
+          <Sequence from={SHOTS.casing[0]} durationInFrames={112} layout="none">
+            <OffthreadVideo muted src={staticFile("3d/cleopatra-casing.mp4")} style={{ position: "absolute", ...at(L, { left: 510, top: -215, width: 900, height: 1600 }, { left: 656, top: 0, width: 608, height: 1080 }) }} />
+          </Sequence>
           <Label x={cx} y={at(L, 40, 50)} o={ramp(f, F.smooth - 4, F.smooth + 6)} title="Outer casing" sub="smooth, polished stone" size={46} />
           <Label x={pyr.x} y={pyr.base - pyr.w * 0.62 - 64} o={1 - ramp(f, F.still, F.still + 10)} title="Stepped core" size={30} color={DIM} />
           <Fine x={cx} y={pyr.base + 30} o={1} text="illustration · in antiquity" align="center" />

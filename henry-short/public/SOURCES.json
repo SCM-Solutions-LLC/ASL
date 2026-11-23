@@ -317,5 +317,11 @@
   "licence": "cc-by-2.5",
   "ship": true,
   "note": "CC BY 2.5: credited on screen while the photo shows (\"Photo: Nina, Wikimedia Commons, CC BY 2.5\"). Original 1581x971. Visitors at the base are a few pixels tall and not identifiable (C4). Fetched from Wikimedia Commons on 2026-11-22; licence as stated by the Commons API that day."
+ },
+ "public/3d/cleopatra-casing.mp4": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles) by tools/blender/cleopatra_casing.py; every shape, material and the sky are procedural, with no downloaded models or textures.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "Blender is GPL; the GPL covers the program, not the images it renders, which belong to whoever made them (see blender.org/about/license). 720x1280, 32 samples, 112 frames, 2026-11-23."
  }
 }
