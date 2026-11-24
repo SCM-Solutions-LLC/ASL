@@ -5,12 +5,13 @@
   "meta_sha256": "a056b8625a590fdb0ab9b6adefae594f456a8673968e74146cc8b2be3bd4dc7a",
   "status": {
     "uploadStatus": "uploaded",
-    "privacyStatus": "private",
+    "privacyStatus": "public",
     "license": "youtube",
     "embeddable": true,
     "publicStatsViewable": true,
     "selfDeclaredMadeForKids": false,
     "containsSyntheticMedia": true
   },
-  "uploadedAt": "2026-11-24T01:37:59.377Z"
+  "uploadedAt": "2026-11-24T01:37:59.377Z",
+  "notes": "2026-11-23: owner made the video public in Studio (F2); the title is unchanged, as of that day. TikTok: posted by the owner from this same MP4 (sha256 3455481c...) under @huhnestly, https://www.tiktok.com/@huhnestly/video/7711564853638434062, with the long caption in review/thumbnails/README.md and TikTok's AI-generated content label."
 }
