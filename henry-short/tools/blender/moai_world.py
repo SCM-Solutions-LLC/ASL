@@ -1,0 +1,1109 @@
+"""The moai-reshaped short as one 3D world: Rano Raraku and its roads, the statues lying along them,
+a statue walked by ropes, the concrete test replica and its crew, and a platform (ahu) on the coast.
+
+Not part of `npm run setup`: run it with an installed Blender 5.3.
+  tools/blender/fetch_assets.sh                      # once: the CC0 texture scans
+  blender -b --factory-startup --python tools/blender/moai_world.py -- --out /tmp/moai --width 540
+  ffmpeg -framerate 30 -i /tmp/moai/%04d.png -c:v libx264 -crf 18 -pix_fmt yuv420p public/3d/moai-world.mp4
+  # cross-dissolves: the incoming shot around each cut (black elsewhere), as for cleopatra_world.py
+  blender -b --factory-startup --python tools/blender/moai_world.py -- --out /tmp/moai-b --width 540 --cut-shift -7 --around-cuts 7 --no-anchors
+It also writes src/generated/moai-world.anchors.json: where each labelled point lands on screen, frame
+by frame, so the Remotion overlays (width bars, lean lines, pins) stick to the 3D statues.
+
+Shapes are procedural (own work); surfaces use CC0 scans from Poly Haven, credited in
+public/SOURCES.json (D1). Every beat hangs off a spoken word in
+src/generated/moai-reshaped.alignment.json. What the world may show is set by
+script/moai-reshaped.txt SOURCES and review/moai-reshaped.a6.md (A6):
+- The statues are generic moai, not portraits of any one statue (C6). Proportions follow LH25
+  qualitatively: road statues have a base about as wide as the shoulders and lean forward; platform
+  statues stand upright with a base narrower than the shoulders. The exact ratios are NOT drawn to
+  the corrected Zenodo means (not verified by A7).
+- Eye sockets: on platform statues only, never on road statues (LH25 1.1).
+- Walking: rocked side to side on ropes, each rock a step forward (LH25 1.1, Fig. 1). The ancient
+  walk shows ropes only, no people: nothing read says who pulled or how many.
+- The test: a concrete replica, 4 people on each side rope and 10 on the rear rope (LH25 1.4). LH25
+  does not give its size; it is sized from its mass (4.35 t) at an assumed concrete density.
+- The island is compressed and the statues on the roads are spaced for legibility: not to scale.
+- "Some think many road statues were set up there on purpose": gold ghosts standing where the
+  fallen ones lie, a reading, not a reconstruction. Gold ghosts are never stone.
+"""
+import argparse
+import json
+import math
+import random
+import sys
+from pathlib import Path
+
+import bmesh
+import bpy
+import numpy as np
+from bpy_extras.object_utils import world_to_camera_view
+from mathutils import Matrix, Vector
+from mathutils.bvhtree import BVHTree
+
+p = argparse.ArgumentParser()
+p.add_argument("--out", required=True)
+p.add_argument("--width", type=int, default=540)
+p.add_argument("--samples", type=int, default=24)
+p.add_argument("--start", type=int)
+p.add_argument("--end", type=int)
+p.add_argument("--only", type=int, nargs="*", help="render just these frames (stills for checking)")
+p.add_argument("--cpu", action="store_true")
+p.add_argument("--no-anchors", action="store_true")
+p.add_argument("--save", help="also save the .blend here")
+p.add_argument("--cut-shift", type=int, default=0, help="move every cut this many frames (cross-dissolves: render the frames around each cut again at -H)")
+p.add_argument("--around-cuts", type=int, default=0, help="render only the frames within this many frames of a cut")
+p.add_argument("--build-only", action="store_true")
+args = p.parse_args(sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else None)
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+ASSETS = HERE / "assets"
+FPS = 30
+WORDS = json.load(open(ROOT / "src/generated/moai-reshaped.alignment.json"))["words"]
+TAU = math.tau
+SHIFT = args.cut_shift  # every cut, and what switches with it, moves together
+
+
+def T(word, n=0):
+    """Frame at which the n-th occurrence of a spoken word starts (punctuation ignored)."""
+    word = word.lower().strip(".,?:;!")
+    hits = [w["start"] for w in WORDS if w["text"].lower().strip(".,?:;!") == word]
+    return round(hits[n] * FPS)
+
+
+END = round(WORDS[-1]["end"] * FPS) + round(1.6 * FPS)  # the edit's 1.6 s tail
+OUTRO = 24  # the edit's outro after that: the picture holds on the last shot
+random.seed(11)
+rng = np.random.default_rng(11)
+
+# ---------------------------------------------------------------- helpers
+bpy.ops.wm.read_factory_settings(use_empty=True)
+scene = bpy.context.scene
+scene.render.fps = FPS
+
+
+def V3(*c):
+    return Vector(c)
+
+
+def link(o):
+    scene.collection.objects.link(o)
+    return o
+
+
+def mesh_obj(name, verts, faces, mat=None, linked=True):
+    me = bpy.data.meshes.new(name)
+    me.from_pydata([tuple(v) for v in verts], [], [tuple(f) for f in faces])
+    me.update()
+    o = bpy.data.objects.new(name, me)
+    if linked:
+        link(o)
+    if mat:
+        me.materials.append(mat)
+    return o
+
+
+def box_geo(x0, y0, z0, x1, y1, z1, n=0):
+    v = [(x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0), (x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)]
+    f = [(n, n + 1, n + 5, n + 4), (n + 1, n + 2, n + 6, n + 5), (n + 2, n + 3, n + 7, n + 6), (n + 3, n, n + 4, n + 7), (n + 4, n + 5, n + 6, n + 7), (n + 3, n + 2, n + 1, n)]
+    return v, f
+
+
+def boxes_mesh(name, boxes, mat):
+    verts, faces = [], []
+    for b in boxes:
+        v, f = box_geo(*b, n=len(verts))
+        verts += v
+        faces += f
+    return mesh_obj(name, verts, faces, mat)
+
+
+def visible(o, *windows):
+    """Show an object only inside these (first, last) frame windows."""
+    o.hide_render = True
+    o.keyframe_insert("hide_render", frame=0)
+    for a, b in windows:
+        o.hide_render = False
+        o.keyframe_insert("hide_render", frame=a)
+        o.hide_render = True
+        o.keyframe_insert("hide_render", frame=b)
+
+
+def linear_keys(idblock):
+    for layer in idblock.animation_data.action.layers:
+        for strip in layer.strips:
+            for bag in strip.channelbags:
+                for fc in bag.fcurves:
+                    for kp in fc.keyframe_points:
+                        kp.interpolation = "LINEAR"
+
+
+def smooth(t):
+    t = min(max(t, 0.0), 1.0)
+    return t * t * (3 - 2 * t)
+
+
+# ---------------------------------------------------------------- materials
+class N:
+    """A tiny node-graph builder: N(tree).new("ShaderNodeTexNoise", Scale=3)."""
+
+    def __init__(self, tree):
+        self.t = tree
+
+    def new(self, kind, **inputs):
+        n = self.t.nodes.new(kind)
+        for k, v in inputs.items():
+            if hasattr(n, k) and not k[0].isupper():
+                setattr(n, k, v)
+            else:
+                n.inputs[k.replace("_", " ")].default_value = v
+        return n
+
+    def link(self, a, b):
+        self.t.links.new(a, b)
+
+    def math(self, op, a, b=None, clamp=False):
+        n = self.t.nodes.new("ShaderNodeMath")
+        n.operation = op
+        n.use_clamp = clamp
+        for i, v in enumerate((a, b)):
+            if v is None:
+                continue
+            if isinstance(v, (int, float)):
+                n.inputs[i].default_value = v
+            else:
+                self.link(v, n.inputs[i])
+        return n.outputs[0]
+
+    def ramp(self, fac, stops):
+        r = self.t.nodes.new("ShaderNodeValToRGB")
+        els = r.color_ramp.elements
+        (p0, c0), (p1, c1) = stops[0], stops[-1]
+        els[0].position, els[0].color = p0, (*c0, 1)
+        els[1].position, els[1].color = p1, (*c1, 1)
+        for pos, col in stops[1:-1]:
+            els.new(pos).color = (*col, 1)
+        self.link(fac, r.inputs["Fac"])
+        return r.outputs["Color"]
+
+    def mix(self, fac, a, b):
+        m = self.t.nodes.new("ShaderNodeMix")
+        m.data_type = "RGBA"
+        if isinstance(fac, (int, float)):
+            m.inputs["Factor"].default_value = fac
+        else:
+            self.link(fac, m.inputs["Factor"])
+        for sock, v in ((m.inputs[6], a), (m.inputs[7], b)):
+            if isinstance(v, tuple):
+                sock.default_value = (*v, 1)
+            else:
+                self.link(v, sock)
+        return m.outputs[2]
+
+    def bump(self, height, strength, dist=0.1, normal=None):
+        b = self.new("ShaderNodeBump", Strength=strength, Distance=dist)
+        self.link(height, b.inputs["Height"])
+        if normal is not None:
+            self.link(normal, b.inputs["Normal"])
+        return b.outputs["Normal"]
+
+    def coord(self, kind="Object"):
+        return self.new("ShaderNodeTexCoord").outputs[kind]
+
+    def scan(self, asset, kind, tile, vector=None, blend=0.25):
+        """A Poly Haven scan, box-projected; `tile` is its repeat in metres."""
+        path = ASSETS / asset / f"{asset}_{kind}_2k.jpg"
+        img = bpy.data.images.load(str(path), check_existing=True)
+        if kind != "diff":
+            img.colorspace_settings.name = "Non-Color"
+        tex = self.t.nodes.new("ShaderNodeTexImage")
+        tex.image = img
+        tex.projection = "BOX"
+        tex.projection_blend = blend
+        mp = self.t.nodes.new("ShaderNodeMapping")
+        mp.inputs["Scale"].default_value = (1 / tile,) * 3
+        self.link(vector if vector is not None else self.coord(), mp.inputs["Vector"])
+        self.link(mp.outputs[0], tex.inputs["Vector"])
+        return tex.outputs["Color"]
+
+    def lum(self, color):
+        n = self.t.nodes.new("ShaderNodeRGBToBW")
+        self.link(color, n.inputs[0])
+        return n.outputs[0]
+
+    def attr(self, name):
+        return self.new("ShaderNodeAttribute", attribute_name=name).outputs["Fac"]
+
+    def near(self, dist):
+        """1 at the camera, 0 beyond `dist` metres."""
+        cd = self.new("ShaderNodeCameraData")
+        return self.math("SUBTRACT", 1, self.math("DIVIDE", cd.outputs["View Distance"], dist), clamp=True)
+
+
+HAZE = (0.62, 0.70, 0.80)
+
+
+def make_mat(name, build, haze=True):
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    g = N(nt)
+    bsdf = nt.nodes["Principled BSDF"]
+    out = nt.nodes["Material Output"]
+    build(g, bsdf)
+    if haze:  # aerial perspective: distant land fades toward the sky colour
+        cd = g.new("ShaderNodeCameraData")
+        d = g.math("DIVIDE", cd.outputs["View Distance"], -9000)
+        f = g.math("SUBTRACT", 1, g.math("EXPONENT", d), clamp=True)
+        em = g.new("ShaderNodeEmission", Color=(*HAZE, 1), Strength=0.6)
+        mx = g.new("ShaderNodeMixShader")
+        g.link(f, mx.inputs["Fac"])
+        g.link(bsdf.outputs[0], mx.inputs[1])
+        g.link(em.outputs[0], mx.inputs[2])
+        g.link(mx.outputs[0], out.inputs["Surface"])
+    return m
+
+
+GRASS = [(0.15, (0.16, 0.17, 0.06)), (0.45, (0.40, 0.38, 0.14)), (0.7, (0.58, 0.52, 0.25)), (0.9, (0.66, 0.58, 0.36))]
+SOIL = [(0.2, (0.22, 0.15, 0.09)), (0.55, (0.38, 0.29, 0.19)), (0.85, (0.50, 0.41, 0.29))]
+TUFF = [(0.15, (0.25, 0.21, 0.17)), (0.5, (0.46, 0.40, 0.32)), (0.85, (0.64, 0.58, 0.47))]  # grey-brown volcanic tuff
+BASALT = [(0.15, (0.08, 0.08, 0.08)), (0.5, (0.20, 0.19, 0.18)), (0.85, (0.36, 0.34, 0.31))]
+CONCRETE = [(0.2, (0.36, 0.36, 0.35)), (0.5, (0.55, 0.55, 0.53)), (0.85, (0.70, 0.70, 0.68))]
+
+
+def ground_build(g, bsdf):
+    """Grassland: scanned grass up close, an aerial grass scan at range, bare tuff on steep ground and
+    on the quarried flank; tone from a ramp so both scans read as the same dry grass."""
+    co = g.coord()
+    near = g.near(90)
+    big = g.new("ShaderNodeTexNoise", Scale=0.003, Detail=6.0, Roughness=0.6)
+    g.link(co, big.inputs["Vector"])
+    far = g.mix(big.outputs["Fac"], g.scan("aerial_grass_rock", "diff", 37), g.scan("aerial_grass_rock", "diff", 61))
+    fine = g.scan("grass_ground", "diff", 2.2)
+    lum = g.lum(g.mix(near, far, fine))
+    mid = g.new("ShaderNodeTexNoise", Scale=0.03, Detail=4.0)
+    g.link(co, mid.inputs["Vector"])
+    lum = g.math("ADD", lum, g.math("MULTIPLY", g.math("SUBTRACT", big.outputs["Fac"], 0.5), 0.7))
+    lum = g.math("ADD", lum, g.math("MULTIPLY", g.math("SUBTRACT", mid.outputs["Fac"], 0.5), 0.35))
+    tone = g.ramp(lum, GRASS)
+    rock = g.scan("rock_boulder_dry", "diff", 6.0)
+    tone = g.mix(g.attr("rock"), tone, g.ramp(g.lum(rock), TUFF))
+    g.link(tone, bsdf.inputs["Base Color"])
+    n1 = g.bump(g.scan("aerial_grass_rock", "disp", 37), 0.4, 0.5)
+    n2 = g.bump(g.math("MULTIPLY", g.lum(g.scan("grass_ground", "disp", 2.2)), near), 0.7, 0.04, n1)
+    n3 = g.bump(g.math("MULTIPLY", g.lum(g.scan("rock_boulder_dry", "disp", 6.0)), g.attr("rock")), 0.8, 0.6, n2)
+    g.link(n3, bsdf.inputs["Normal"])
+    bsdf.inputs["Roughness"].default_value = 0.95
+
+
+def stone_build(asset, tile, palette, bump, rough, dist=0.06):
+    def build(g, bsdf):
+        c = g.scan(asset, "diff", tile)
+        n = g.new("ShaderNodeTexNoise", Scale=0.4, Detail=4.0)
+        g.link(g.coord(), n.inputs["Vector"])
+        l_ = g.math("ADD", g.lum(c), g.math("MULTIPLY", g.math("SUBTRACT", n.outputs["Fac"], 0.5), 0.35))
+        g.link(g.ramp(l_, palette), bsdf.inputs["Base Color"])
+        g.link(g.bump(g.lum(g.scan(asset, "disp", tile)), bump, dist), bsdf.inputs["Normal"])
+        bsdf.inputs["Roughness"].default_value = rough
+
+    return build
+
+
+def road_build(g, bsdf):
+    """Packed reddish soil, faded out at both edges (UV x runs 0..1 across the road)."""
+    c = g.scan("dry_ground_01", "diff", 3.0)
+    g.link(g.ramp(g.lum(c), SOIL), bsdf.inputs["Base Color"])
+    g.link(g.bump(g.lum(g.scan("dry_ground_01", "disp", 3.0)), 0.6, 0.05), bsdf.inputs["Normal"])
+    bsdf.inputs["Roughness"].default_value = 0.95
+    uv = g.new("ShaderNodeSeparateXYZ")
+    g.link(g.coord("UV"), uv.inputs[0])
+    edge = g.math("MULTIPLY", g.math("SUBTRACT", 0.5, g.math("ABSOLUTE", g.math("SUBTRACT", uv.outputs["X"], 0.5))), 4.0)
+    n = g.new("ShaderNodeTexNoise", Scale=0.8, Detail=3.0)
+    g.link(g.coord(), n.inputs["Vector"])
+    g.link(g.math("MULTIPLY", g.math("MINIMUM", edge, 1.0), g.math("ADD", 0.05, g.math("MULTIPLY", n.outputs["Fac"], 0.55))), bsdf.inputs["Alpha"])
+
+
+def plain(col, rough=0.8):
+    def build(g, bsdf):
+        bsdf.inputs["Base Color"].default_value = (*col, 1)
+        bsdf.inputs["Roughness"].default_value = rough
+
+    return build
+
+
+def water_build(g, bsdf):
+    w = g.new("ShaderNodeValue")
+    n = g.new("ShaderNodeTexNoise", Scale=0.02, Detail=5.0, Roughness=0.55)
+    n.noise_dimensions = "4D"
+    g.link(g.coord(), n.inputs["Vector"])
+    g.link(w.outputs[0], n.inputs["W"])
+    n2 = g.new("ShaderNodeTexNoise", Scale=0.2, Detail=3.0)
+    n2.noise_dimensions = "4D"
+    g.link(g.coord(), n2.inputs["Vector"])
+    g.link(w.outputs[0], n2.inputs["W"])
+    bsdf.inputs["Base Color"].default_value = (0.02, 0.07, 0.12, 1)
+    bsdf.inputs["Roughness"].default_value = 0.06
+    g.link(g.bump(n2.outputs["Fac"], 0.12, 0.1, g.bump(n.outputs["Fac"], 0.25, 0.6)), bsdf.inputs["Normal"])
+    for frame, v in ((0, 0.0), (END, END / FPS * 0.25)):
+        w.outputs[0].default_value = v
+        w.outputs[0].keyframe_insert("default_value", frame=frame)
+
+
+def ghost_mat(name, windows):
+    """Gold, see-through, unlit: a 'before' or a reading, never stone. Fades in and out over each
+    (first, last) window."""
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    nt.nodes.remove(nt.nodes["Principled BSDF"])
+    g = N(nt)
+    em = g.new("ShaderNodeEmission", Color=(1.0, 0.72, 0.22, 1), Strength=2.2)
+    tr = g.new("ShaderNodeBsdfTransparent")
+    lw = g.new("ShaderNodeLayerWeight", Blend=0.35)
+    fac = g.new("ShaderNodeValue")
+    rim = g.math("POWER", lw.outputs["Facing"], 3.0)  # an outline: bright at the silhouette, clear in the middle
+    a = g.math("MULTIPLY", g.math("ADD", 0.03, g.math("MULTIPLY", rim, 0.9)), fac.outputs[0])
+    mx = g.new("ShaderNodeMixShader")
+    g.link(a, mx.inputs["Fac"])
+    g.link(tr.outputs[0], mx.inputs[1])
+    g.link(em.outputs[0], mx.inputs[2])
+    g.link(mx.outputs[0], nt.nodes["Material Output"].inputs["Surface"])
+    keys = [(0, 0.0)]
+    for f0, f1 in windows:
+        keys += [(f0, 0.0), (f0 + 10, 1.0), (f1 - 10, 1.0), (f1, 0.0)]
+    for frame, v in keys:
+        fac.outputs[0].default_value = v
+        fac.outputs[0].keyframe_insert("default_value", frame=frame)
+    return m
+
+
+M = {
+    "ground": make_mat("ground", ground_build),
+    "road": make_mat("road", road_build),
+    "tuff": make_mat("tuff", stone_build("rock_boulder_dry", 2.2, TUFF, 0.55, 0.92)),
+    "ahu": make_mat("ahu", stone_build("stacked_stone_wall", 3.0, BASALT, 0.8, 0.85, 0.08)),
+    "concrete": make_mat("concrete", stone_build("concrete", 1.6, CONCRETE, 0.25, 0.8, 0.02)),
+    "sea": make_mat("sea", water_build),
+    "lawn": make_mat("lawn", ground_build),
+    "rope": make_mat("rope", plain((0.42, 0.33, 0.20), 0.9), haze=False),
+    "stake": make_mat("stake", plain((0.85, 0.82, 0.75), 0.6), haze=False),
+}
+
+# ---------------------------------------------------------------- the moai
+# A generic moai lofted from rounded-box sections up its height. Unit S is half the shoulder width;
+# LH25's road moai 12-220-01 is 7.35 m tall and 2.83 m wide, so S = 0.1925 H.
+ROWS_T = np.concatenate([np.linspace(0, 0.5, 34, endpoint=False), np.linspace(0.5, 0.93, 86, endpoint=False), np.linspace(0.93, 1.0, 10)])
+SHOULDER_T = 0.40
+ROAD_BASE, PLAT_BASE, LEAN = 0.99, 0.84, 9.0  # LH25: road ratio ~1.0, lean 6-15 deg; platform base narrower (illustrative, not a measured ratio)
+
+
+def gauss(x, mu, sig):
+    return np.exp(-(((x - mu) / sig) ** 2))
+
+
+def band(x, a, b, soft):
+    return np.clip((x - a) / soft + 0.5, 0, 1) * np.clip((b - x) / soft + 0.5, 0, 1)
+
+
+def moai_verts(H, cols, base, lean_deg, sockets, platform):
+    """Vertex positions (rows x cols, then the top and bottom centres) for one shape of the statue.
+    Front is -y; base centre at the origin."""
+    S = 0.1925 * H
+    t = ROWS_T[:, None]
+    phi = np.linspace(0, TAU, cols, endpoint=False)[None, :]
+    s, c = np.sin(phi), np.cos(phi)
+    e = 2.8  # superellipse: rounded box sections
+    sx = np.sign(s) * np.abs(s) ** (2 / e)
+    cy = np.sign(c) * np.abs(c) ** (2 / e)
+    # half width: base, out to the shoulders, in at the neck, the long head, a rounded top
+    low = base + (1.0 - base) * np.clip(t / SHOULDER_T, 0, 1) ** 1.6
+    hw = np.where(t < SHOULDER_T, low, np.interp(t, [SHOULDER_T, 0.47, 0.53, 0.60, 0.86, 0.95, 0.99, 1.0], [1.0, 0.95, 0.78, 0.82, 0.80, 0.74, 0.58, 0.05]))
+    hw = hw + 0.07 * band(t, 0.64, 0.90, 0.03) * np.clip(np.abs(s) * 1.4 - 0.6, 0, 1) * (c < 0.2)  # long ears
+    df = 1.35 * np.interp(t, [0.0, 0.25, 0.40, 0.50, 0.54, 0.60, 0.90, 0.97, 1.0], [0.50, 0.55, 0.48, 0.40, 0.46, 0.46, 0.48, 0.34, 0.05])
+    db = 1.35 * np.interp(t, [0.0, 0.45, 0.52, 0.60, 0.92, 0.98, 1.0], [0.42, 0.45, 0.38, 0.50, 0.50, 0.30, 0.05])
+    if platform:  # LH25 1.1: "Carvers removed material from the front of the base"
+        df = df * (1 - 0.16 * np.clip(1 - t / 0.22, 0, 1))
+    u = sx  # lateral position across the front, -1..1
+    face = np.zeros_like(t * u)
+    face += 0.17 * gauss(t, 0.858, 0.017) * band(u, -0.78, 0.78, 0.15)  # the brow
+    k = np.clip((0.845 - t) / 0.18, 0, 1)  # the long nose
+    nose_w = 0.09 + 0.13 * k**2
+    face += (0.05 + 0.30 * k**1.3) * np.exp(-((u / nose_w) ** 4)) * band(t, 0.655, 0.86, 0.012)
+    face += 0.12 * gauss(t, 0.636, 0.010) * band(u, -0.30, 0.30, 0.10)  # pouting lips
+    face += 0.09 * gauss(t, 0.614, 0.010) * band(u, -0.26, 0.26, 0.10)
+    face -= 0.05 * gauss(t, 0.625, 0.004) * band(u, -0.30, 0.30, 0.06)
+    face += 0.09 * gauss(t, 0.573, 0.020) * band(u, -0.45, 0.45, 0.15)  # the chin
+    fingers = 0.75 + 0.25 * np.cos(u * 46)
+    face += 0.05 * gauss(t, 0.165, 0.030) * (band(u, 0.18, 0.86, 0.08) + band(u, -0.86, -0.18, 0.08)) * fingers  # hands on the belly
+    face += 0.035 * band(t, 0.18, 0.40, 0.04) * (band(u, 0.80, 1.05, 0.06) + band(u, -1.05, -0.80, 0.06))  # arms down the sides
+    if sockets:  # carved only once a statue stood on its platform (LH25 1.1)
+        face -= 0.17 * gauss(t, 0.805, 0.022) * (gauss(u, 0.36, 0.13) + gauss(u, -0.36, 0.13))
+    front = np.clip((c - 0.15) / 0.6, 0, 1)
+    x = hw * sx * S
+    y = np.where(c > 0, -df * cy * S - face * front * S, -db * cy * S)
+    z = t * H + 0 * phi
+    y = y - z * math.tan(math.radians(lean_deg))  # the forward lean
+    v = np.stack([x, y, z], -1).reshape(-1, 3)
+    top = [0.0, -H * math.tan(math.radians(lean_deg)), H]
+    return np.concatenate([v, [top, [0.0, 0.0, 0.0]]])
+
+
+def moai_faces(cols):
+    n = len(ROWS_T)
+    f = []
+    for i in range(n - 1):
+        for j in range(cols):
+            a, b = i * cols + j, i * cols + (j + 1) % cols
+            f.append((a, b, b + cols, a + cols))
+    top, bot = n * cols, n * cols + 1
+    f += [((n - 1) * cols + j, (n - 1) * cols + (j + 1) % cols, top) for j in range(cols)]
+    f += [((j + 1) % cols, j, bot) for j in range(cols)]
+    return f
+
+
+def moai(name, H, mat, cols=96, kind="road", keys=False):
+    """kind 'road': wide base, forward lean, no eye sockets; 'platform': narrow base, upright,
+    sockets. keys=True: a road-shaped basis with shape keys 'platform' and 'sockets'."""
+    plat = kind == "platform"
+    basis = moai_verts(H, cols, PLAT_BASE if plat else ROAD_BASE, 0 if plat else LEAN, plat, plat)
+    o = mesh_obj(name, basis, moai_faces(cols), mat)
+    o.data.shade_smooth()
+    if keys:
+        o.shape_key_add(name="Basis")
+        for kname, v in (("platform", moai_verts(H, cols, PLAT_BASE, 0, False, True)), ("sockets", moai_verts(H, cols, ROAD_BASE, LEAN, True, False))):
+            kb = o.shape_key_add(name=kname, from_mix=False)
+            kb.data.foreach_set("co", v.astype(np.float32).ravel())
+    return o
+
+
+def shape_key(o, name, pairs):
+    kb = o.data.shape_keys.key_blocks[name]
+    for frame, v in pairs:
+        kb.value = v
+        kb.keyframe_insert("value", frame=frame)
+
+
+def edge_pt(H, t, u, base=ROAD_BASE, lean=LEAN):
+    """The statue's side edge at height fraction t (u = +1 or -1), in its own frame."""
+    S = 0.1925 * H
+    hw = base + (1 - base) * min(t / SHOULDER_T, 1) ** 1.6 if t < SHOULDER_T else 1.0
+    return V3(u * hw * S, -t * H * math.tan(math.radians(lean)), t * H)
+
+
+def pin(name, parent, co):
+    """A named point for the overlays, carried by `parent` if given."""
+    e = link(bpy.data.objects.new(name, None))
+    e.parent = parent
+    e.location = co
+    return e
+
+
+# ---------------------------------------------------------------- the island (compressed: not to scale)
+X0, X1, Y0, Y1 = -6000.0, 6000.0, -6000.0, 6000.0
+Q = V3(0.0, 1400.0, 0.0)  # Rano Raraku, the quarry
+AHU = V3(300.0, -3700.0, 0.0)  # a platform on the south coast; its statues face inland (+y)
+SEA_Y = -3790.0
+ROADS = {  # old roads radiating from the quarry (LH25 1.1), as control points
+    "w": [(-520, 1180), (-1100, 820), (-1700, 300), (-2300, -150), (-3000, -420)],
+    "s": [(-60, 700), (-30, 0), (120, -900), (260, -1900), (300, -2800), (300, -3620)],
+    "sw": [(-420, 900), (-900, 200), (-1400, -700), (-1900, -1600), (-2400, -2500)],
+}
+WALK = V3(-1700.0, 300.0, 0.0)  # the walked statue, on the west road
+FLAT = [((WALK.x, WALK.y), 260), ((AHU.x, AHU.y), 260), ((-2380, -180), 300), ((-30, -200), 200)]
+
+
+def keep_flat(x, y):
+    w = np.ones_like(x)
+    for (px, py), r in FLAT:
+        w = np.minimum(w, np.clip((np.hypot(x - px, y - py) - r * 0.4) / r, 0, 1))
+    return w
+
+
+def height(x, y):
+    th = np.arctan2(y, x)
+    rad = 4300 + 260 * np.sin(3 * th + 1.0) + 180 * np.sin(5 * th + 2.0)
+    land = np.clip((rad - np.hypot(x, y * 1.05)) / 420, 0, 1)
+    near_ahu = np.clip(1 - np.hypot(x - AHU.x, (y - AHU.y) * 1.6) / 1400, 0, 1)  # a low shore just behind the platform
+    land = near_ahu * np.minimum(land, np.clip((y - SEA_Y) / 60, 0, 1)) + (1 - near_ahu) * land
+    hills = 14 * np.sin(x / 640 + 0.4) * np.cos(y / 820) + 9 * np.sin((x + y) / 310)
+    r = np.hypot(x - Q.x, y - Q.y)
+    s1, s2 = np.clip((760 - r) / 420, 0, 1), np.clip((300 - r) / 120, 0, 1)
+    cone = 150 * s1 * s1 * (3 - 2 * s1) - 80 * s2 * s2 * (3 - 2 * s2)  # a steep cone with a crater
+    z = 32 + hills * keep_flat(x, y) + cone
+    return z * land - 30 * (1 - land)
+
+
+STEP = 12.0
+xs = np.linspace(X0, X1, int((X1 - X0) / STEP) + 1)
+ys = np.linspace(Y0, Y1, int((Y1 - Y0) / STEP) + 1)
+NXG = len(xs)
+GX, GY = np.meshgrid(xs, ys)
+GZ = height(GX, GY)
+slope = np.hypot(*np.gradient(GZ, STEP, STEP))
+rq = np.hypot(GX - Q.x, GY - Q.y)
+quarry_face = band(np.arctan2(GY - Q.y, GX - Q.x), -2.55, -2.05, 0.15) * band(rq, 460, 660, 50)  # the quarried south-west flank
+rock = np.clip(np.clip((slope - 0.6) * 2.5, 0, 1) + quarry_face, 0, 1)
+ii, jj = np.meshgrid(np.arange(NXG - 1), np.arange(len(ys) - 1))
+a = (jj * NXG + ii).ravel()
+QD = np.stack([a, a + 1, a + 1 + NXG, a + NXG], 1)
+me = bpy.data.meshes.new("ground")
+me.vertices.add(GX.size)
+me.vertices.foreach_set("co", np.stack([GX.ravel(), GY.ravel(), GZ.ravel()], 1).astype(np.float32).ravel())
+me.loops.add(QD.size)
+me.loops.foreach_set("vertex_index", QD.astype(np.int32).ravel())
+me.polygons.add(len(QD))
+me.polygons.foreach_set("loop_start", (np.arange(len(QD)) * 4).astype(np.int32))
+me.update()
+me.validate()
+me.attributes.new("rock", "FLOAT", "POINT").data.foreach_set("value", rock.ravel().astype(np.float32))
+me.materials.append(M["ground"])
+me.shade_smooth()
+ground = link(bpy.data.objects.new("ground", me))
+sea = boxes_mesh("sea", [(X0 - 30000, Y0 - 30000, -40, X1 + 30000, Y1 + 30000, 0.0)], M["sea"])
+bpy.context.view_layer.update()
+BVH = BVHTree.FromObject(ground, bpy.context.evaluated_depsgraph_get())
+
+
+def gz(x, y):
+    """Height of the ground mesh itself (not the formula): exact under its triangles."""
+    hit = BVH.ray_cast(V3(x, y, 2000), V3(0, 0, -1))
+    return hit[0].z if hit[0] else float(height(np.array(x), np.array(y)))
+
+
+# ---------------------------------------------------------------- roads: ribbons laid on the ground mesh
+def road_path(pts, step=3.0):
+    pts = np.array(pts, float)
+    seg = np.hypot(*np.diff(pts, axis=0).T)
+    s = np.concatenate([[0], np.cumsum(seg)])
+    ss = np.arange(0, s[-1], step)
+    x = np.interp(ss, s, pts[:, 0])
+    y = np.interp(ss, s, pts[:, 1])
+    k = 15  # soften the corners
+    x = np.convolve(np.pad(x, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
+    y = np.convolve(np.pad(y, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
+    return np.stack([x, y], 1)
+
+
+PATHS = {k: road_path(v) for k, v in ROADS.items()}
+for name, path in PATHS.items():
+    d = np.gradient(path, axis=0)
+    nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
+    verts = []
+    for (x, y), (nx, ny) in zip(path, nrm):
+        for k_ in (-3.0, -1.5, 0.0, 1.5, 3.0):
+            px, py = x + nx * k_, y + ny * k_
+            verts.append((px, py, gz(px, py) + 0.06))
+    faces = [(i * 5 + j, i * 5 + j + 1, (i + 1) * 5 + j + 1, (i + 1) * 5 + j) for i in range(len(path) - 1) for j in range(4)]
+    o = mesh_obj("road_" + name, verts, faces, M["road"])
+    uv = o.data.uv_layers.new(name="UVMap")
+    for poly in o.data.polygons:
+        for li in poly.loop_indices:
+            vi = o.data.loops[li].vertex_index
+            uv.data[li].uv = ((vi % 5) / 4, vi // 5 * 0.01)
+    o.data.shade_smooth()
+
+
+def along(name, frac, side=0.0):
+    """A point on the ground a fraction along a road (offset `side` metres to its left), and the
+    direction of travel there (away from the quarry)."""
+    path = PATHS[name]
+    i = min(int(frac * (len(path) - 1)), len(path) - 2)
+    d = path[i + 1] - path[i]
+    yaw = math.atan2(d[1], d[0])
+    x, y = path[i][0] - math.sin(yaw) * side, path[i][1] + math.cos(yaw) * side
+    return V3(x, y, gz(x, y)), yaw
+
+
+# ---------------------------------------------------------------- statues lying along the roads: "dozens"
+def lying(name, H, at, yaw, face_up, cols=48):
+    """On its back or its front, head away from the quarry, settled a little into the ground. The
+    tilt also takes out the forward lean, so the statue lies flat."""
+    o = moai(name, H, M["tuff"], cols=cols)
+    S = 0.1925 * H
+    tilt = -(90 + LEAN) if face_up else 90 - LEAN
+    o.matrix_world = Matrix.Translation(at + V3(0, 0, 0.45 * S - 0.25)) @ Matrix.Rotation(yaw - math.pi / 2, 4, "Z") @ Matrix.Rotation(math.radians(tilt), 4, "X")
+    return o
+
+
+FALLEN = []
+for name, n in (("w", 16), ("s", 18), ("sw", 14)):
+    for i in range(n):
+        f = (i + 0.5 + rng.uniform(-0.3, 0.3)) / n * 0.9 + 0.05
+        at, yaw = along(name, f, float(rng.uniform(-2, 2)))
+        if (at - WALK).length < 40 or (name == "w" and 0.5 < f < 0.6):
+            continue
+        FALLEN.append(lying(f"fallen_{name}{i}", float(rng.uniform(4.0, 8.5)), at, yaw + float(rng.uniform(-0.5, 0.5)), bool(rng.uniform() < 0.4)))
+# A run of them close together on the west road, for the last shot.
+RUN = []
+for i, (frac, side) in enumerate(((0.534, 3.5), (0.539, -4.0), (0.5455, 2.5), (0.552, -3.0), (0.56, 4.0))):
+    at, yaw = along("w", frac, side)
+    H_ = float(rng.uniform(5.0, 7.0))
+    o = lying(f"fallen_run{i}", H_, at, yaw + float(rng.uniform(-0.4, 0.4)), i % 2 == 0, cols=80)
+    FALLEN.append(o)
+    RUN.append((at, yaw, H_))
+# The one the camera finds for "none of the road statues have them": face up, beside the south road.
+FU_AT, FU_YAW = along("s", 0.16, 4.5)
+FU_H = 6.4
+fu = lying("fallen_faceup", FU_H, FU_AT, FU_YAW, True, cols=112)
+FALLEN.append(fu)
+fu_face = pin("fu_face", fu, V3(0, -(0.62 * 0.1925 * FU_H + 0.80 * FU_H * math.tan(math.radians(LEAN))), 0.80 * FU_H))
+
+# ---------------------------------------------------------------- the platform (ahu) and its statues
+AHU_L, AHU_D, AHU_H = 34.0, 4.6, 1.7
+AHU.z = gz(AHU.x, AHU.y)
+blocks = []
+x = AHU.x - AHU_L / 2
+while x < AHU.x + AHU_L / 2 - 0.3:  # the inland face: fitted slabs of uneven width (generic; no particular ahu)
+    w_ = min(float(rng.uniform(0.9, 2.2)), AHU.x + AHU_L / 2 - x)
+    z = AHU.z - 0.3
+    while z < AHU.z + AHU_H - 0.05:
+        h_ = min(float(rng.uniform(0.5, 0.95)), AHU.z + AHU_H - z)
+        blocks.append((x + 0.02, AHU.y + AHU_D / 2 - 0.05, z + 0.02, x + w_ - 0.02, AHU.y + AHU_D / 2 + 0.06, z + h_ - 0.02))
+        z += h_
+    x += w_
+blocks.append((AHU.x - AHU_L / 2, AHU.y - AHU_D / 2, AHU.z - 0.3, AHU.x + AHU_L / 2, AHU.y + AHU_D / 2, AHU.z + AHU_H))
+boxes_mesh("ahu", blocks, M["ahu"])
+TOP = AHU.z + AHU_H
+AH = 5.6  # platform statue height (generic)
+PLAT = []
+for i, dx in enumerate((-12.0, -6.0, 0.0, 6.0, 12.0)):
+    hero_ = dx == 0
+    o = moai(f"ahu_{i}", AH * float(rng.uniform(0.92, 1.06)) if abs(dx) == 6 else AH, M["tuff"], cols=112 if abs(dx) != 6 else 80, kind="road" if hero_ else "platform", keys=hero_)
+    o.location = V3(AHU.x + dx, AHU.y, TOP)
+    o.rotation_euler = (0, 0, math.pi)  # facing inland (+y)
+    PLAT.append(o)
+hero = PLAT[2]  # A: platform shape throughout; its eye sockets are carved on "carved" (line 6)
+shape_key(hero, "platform", [(0, 1.0)])
+shape_key(hero, "sockets", [(0, 0.0), (T("carved") + 4, 0.0), (T("platform", 1) + 6, 1.0)])
+pin("a_top", hero, V3(0, 0, AH))
+pin("a_eye", hero, V3(0.36 * 0.8 * 0.1925 * AH, -0.5 * 0.1925 * AH, 0.805 * AH))
+END_E = PLAT[4]  # E: the east end of the row, clear to the side, for "stand straight" and the widths
+for nm, t_, u_ in (("e_sh_l", SHOULDER_T, 1), ("e_sh_r", SHOULDER_T, -1), ("e_base_l", 0.02, 1), ("e_base_r", 0.02, -1)):
+    pin(nm, END_E, edge_pt(AH, t_, u_, PLAT_BASE, 0))
+pin("e_top", END_E, V3(0, 0, AH))
+pin("e_bot", END_E, V3(0, 0, 0))
+# The hook: the road-shaped statue A was, as a gold ghost over it (LH25: reshaped after arrival).
+GHOST_A = (T("reshaped") - 6, T("dozens") + 4)
+ghost_a = moai("ghost_a", AH, ghost_mat("ghost_a", [GHOST_A]), cols=96)
+ghost_a.location = hero.location + V3(0, 0, 0.002)
+ghost_a.rotation_euler = hero.rotation_euler
+ghost_a.scale = (1.004, 1.004, 1.0)
+visible(ghost_a, GHOST_A)
+
+# B: arrives road-shaped; then the front of its base is carved away and the lean goes. Seen only in
+# its own shot, in place of the west end statue.
+B_AT = PLAT[0].location.copy()
+B_WIN = (T("so,") + SHIFT, T("other") + SHIFT)
+visible(PLAT[0], (0, B_WIN[0]), (B_WIN[1], END + 1))
+hero_b = moai("ahu_b", AH, M["tuff"], cols=112, keys=True)
+hero_b.location = B_AT
+hero_b.rotation_euler = (0, 0, math.pi)
+visible(hero_b, B_WIN)
+TRIM = (T("carved", 1), T("journey.") + 2)
+shape_key(hero_b, "platform", [(0, 0.0), (TRIM[0], 0.0), (TRIM[1], 1.0)])
+ghost_b = moai("ghost_b", AH, ghost_mat("ghost_b", [(TRIM[0] - 2, T("other") + 12)]), cols=96)
+ghost_b.location = B_AT + V3(0, 0, 0.002)
+ghost_b.rotation_euler = hero_b.rotation_euler
+ghost_b.scale = (1.003, 1.003, 1.0)
+visible(ghost_b, (TRIM[0] - 2 + SHIFT, B_WIN[1]))
+pin("b_trim", hero_b, V3(0, -0.55 * 0.1925 * AH, 0.08 * AH))
+pin("b_top", hero_b, V3(0, -AH * math.tan(math.radians(LEAN)), AH))
+pin("b_bot", hero_b, V3(0, 0, 0))
+for i in range(40):  # chips of tuff falling from the front of the base (+y on the platform)
+    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1, radius=float(rng.uniform(0.03, 0.09)))
+    c_ = bpy.context.object
+    c_.data.materials.append(M["tuff"])
+    c_.name = f"chip{i}"
+    t0 = TRIM[0] + int(rng.uniform(0, TRIM[1] - TRIM[0] - 4))
+    start = B_AT + V3(float(rng.uniform(-0.9, 0.9)), 0.6 + float(rng.uniform(0, 0.3)), float(rng.uniform(0.05, 0.9)))
+    vel = V3(float(rng.uniform(-0.6, 0.6)), float(rng.uniform(0.6, 1.6)), float(rng.uniform(0.2, 1.2)))
+    for k_ in range(0, 40, 2):
+        tt = k_ / FPS
+        pos = start + vel * tt + V3(0, 0, -4.9 * tt * tt)
+        floor = TOP if pos.y < AHU.y + AHU_D / 2 else gz(pos.x, pos.y)
+        pos.z = max(pos.z, floor + 0.03)
+        c_.location = pos
+        c_.keyframe_insert("location", frame=t0 + k_)
+    visible(c_, (t0, B_WIN[1]))
+
+
+# ---------------------------------------------------------------- walking: rocked side to side, a step each rock
+def walk_matrix(frame, f0, start, heading, hb, period=60, roll=6.0, yaw=9.0):
+    """LH25 Fig. 1: it tips onto one edge of its base, swings the other edge forward around it, comes
+    down; then the other side. `heading` turns its front (-y) to face the way it walks."""
+    psi = heading - math.radians(yaw) / 2
+    if frame <= f0:
+        return Matrix.Translation(start) @ Matrix.Rotation(psi, 4, "Z")
+    half = period / 2
+    k_ = int((frame - f0) // half)
+    u = ((frame - f0) % half) / half
+    pos = Vector(start)
+    for i in range(k_ + 1):
+        s = 1 if i % 2 == 0 else -1
+        piv = pos + Matrix.Rotation(psi, 4, "Z") @ V3(s * hb, 0, 0)
+        uu = 1.0 if i < k_ else u
+        ph = s * math.radians(yaw) * smooth(uu)
+        ro = s * math.radians(roll) * math.sin(math.pi * uu)
+        m = Matrix.Translation(piv) @ Matrix.Rotation(psi + ph, 4, "Z") @ Matrix.Rotation(ro, 4, "Y") @ Matrix.Translation(V3(-s * hb, 0, 0))
+        if i < k_:
+            pos = m @ V3(0, 0, 0)
+            pos.z = start.z
+            psi = psi + ph
+    return m
+
+
+def key_matrix(o, frames, fn):
+    for f in frames:
+        o.matrix_world = fn(f)
+        o.keyframe_insert("location", frame=f)
+        o.keyframe_insert("rotation_euler", frame=f)
+
+
+def rope(name, fn, f0, f1, r=0.03):
+    """A straight rope between two moving points fn(frame) -> (a, b), re-keyed each frame."""
+    bpy.ops.mesh.primitive_cylinder_add(vertices=8, radius=r, depth=1.0)
+    o = bpy.context.object
+    o.name = name
+    o.data.transform(Matrix.Translation(V3(0, 0, 0.5)))
+    o.data.materials.append(M["rope"])
+    for f in range(f0, f1 + 1):
+        a_, b_ = fn(f)
+        d = b_ - a_
+        o.location = a_
+        o.rotation_euler = d.to_track_quat("Z", "Y").to_euler()
+        o.scale = (1, 1, d.length)
+        for path in ("location", "rotation_euler", "scale"):
+            o.keyframe_insert(path, frame=f)
+    visible(o, (f0, f1))
+    return o
+
+
+def head_pt(H, side):
+    """Where a rope is tied round the head: at the side (side = +-1) or the back (0)."""
+    S = 0.1925 * H
+    return V3(side * 0.62 * S, (0.4 if side == 0 else 0.0) * S - 0.76 * H * math.tan(math.radians(LEAN)), 0.76 * H)
+
+
+WH = 6.0
+walker = moai("walker", WH, M["tuff"], cols=112)
+WS = 0.1925 * WH
+W0, W_YAW = along("w", 0.45)
+W_HEAD = W_YAW + math.pi / 2  # its front faces down the road, away from the quarry
+WALK_F0 = T("rocked") + 6
+key_matrix(walker, range(0, END + 1), lambda f: walk_matrix(f, WALK_F0, W0, W_HEAD, ROAD_BASE * WS))
+for nm, t_, u_ in (("w_sh_l", SHOULDER_T, 1), ("w_sh_r", SHOULDER_T, -1), ("w_base_l", 0.02, 1), ("w_base_r", 0.02, -1)):
+    pin(nm, walker, edge_pt(WH, t_, u_))
+pin("w_top", walker, V3(0, -WH * math.tan(math.radians(LEAN)), WH))
+pin("w_bot", walker, V3(0, 0, 0))
+pin("w_up", walker, V3(0, 0, WH))  # straight above the base: the vertical the lean is measured from
+ROPE_WIN = (T("rocked") - 2 + SHIFT, T("in") + SHIFT)
+WF = Matrix.Rotation(W_HEAD, 4, "Z")
+for side in (-1, 1, 0):  # ropes only, running out of frame: nothing read says who pulled them
+    far = W0 + WF @ V3(side * 16, 12 if side == 0 else -3, 1.0)
+    rope(f"rope_w{side}", lambda f, s=side, far=far: (walk_matrix(f, WALK_F0, W0, W_HEAD, ROAD_BASE * WS) @ head_pt(WH, s), far), *ROPE_WIN)
+
+# ---------------------------------------------------------------- the test: a concrete replica and its crew of 18
+TEST = V3(40000.0, 0.0, 0.0)  # a field of its own; the place is not shown
+TEST_WIN = (T("in") + SHIFT, T("the", 3) + SHIFT)  # "In a test ... forty minutes."
+lawn = boxes_mesh("lawn", [(TEST.x - 3000, TEST.y - 3000, -2, TEST.x + 3000, TEST.y + 3000, 0.0)], M["lawn"])
+visible(lawn, TEST_WIN)
+visible(sea, (0, TEST_WIN[0]), (TEST_WIN[1], END + 1))
+visible(ground, (0, TEST_WIN[0]), (TEST_WIN[1], END + 1))
+# LH25 1.4: 4.35 t. Its size is not given: scaled from this statue shape at an assumed 2.3 t/m3.
+_tmp = moai("tmp", 1.0, None, cols=48)
+_bm = bmesh.new()
+_bm.from_mesh(_tmp.data)
+RH = (4.35 / 2.3 / _bm.calc_volume()) ** (1 / 3)
+print(f"replica height {RH:.2f} m")
+_bm.free()
+bpy.data.objects.remove(_tmp)
+replica = moai("replica", RH, M["concrete"], cols=96)
+RS = 0.1925 * RH
+R_HEAD = math.pi / 2  # its front faces +x, down the marked track
+TEST_F0 = T("in") + 4
+
+
+def replica_at(f):
+    return walk_matrix(f, TEST_F0, TEST, R_HEAD, ROAD_BASE * RS, period=50, roll=7.0, yaw=10.0)
+
+
+FR = range(TEST_WIN[0] - 2, TEST_WIN[1] + 2)
+key_matrix(replica, FR, replica_at)
+visible(replica, TEST_WIN)
+pin("replica", replica, V3(0, -RH * math.tan(math.radians(LEAN)), RH * 1.06))
+stakes = boxes_mesh("stakes", [(TEST.x + 10 * i - 0.06, -3.26, 0, TEST.x + 10 * i + 0.06, -3.14, 1.2 if i % 5 == 0 else 0.8) for i in range(11)], M["stake"])
+visible(stakes, TEST_WIN)
+pin("t_start", None, TEST + V3(0, -3.2, 0.05))
+pin("t_end", None, TEST + V3(100, -3.2, 0.05))
+
+# People: plain mannequins in work clothes, no faces; generic, not anyone.
+SKIN = [(0.36, 0.22, 0.14), (0.52, 0.34, 0.22), (0.24, 0.15, 0.10), (0.62, 0.45, 0.32)]
+SHIRT = [(0.12, 0.20, 0.32), (0.55, 0.12, 0.10), (0.75, 0.72, 0.65), (0.20, 0.32, 0.18), (0.80, 0.55, 0.18), (0.30, 0.30, 0.34)]
+PANTS = [(0.10, 0.10, 0.12), (0.22, 0.20, 0.17), (0.12, 0.16, 0.24)]
+MATS = {}
+
+
+def pmat(col):
+    if col not in MATS:
+        MATS[col] = make_mat(f"cloth{len(MATS)}", plain(col, 0.85), haze=False)
+    return MATS[col]
+
+
+def limb(vf, a_, b_, r):
+    """A tapered tube from a_ to b_, appended to vf = (verts, faces)."""
+    verts, faces = vf
+    q = (b_ - a_).to_track_quat("Z", "Y")
+    n0 = len(verts)
+    for p_, rr in ((a_, r), (b_, r * 0.85)):
+        for j in range(8):
+            ang = TAU * j / 8
+            verts.append(p_ + q @ V3(math.cos(ang) * rr, math.sin(ang) * rr, 0))
+    faces += [(n0 + j, n0 + (j + 1) % 8, n0 + 8 + (j + 1) % 8, n0 + 8 + j) for j in range(8)]
+    faces += [tuple(n0 + j for j in range(8))[::-1], tuple(n0 + 8 + j for j in range(8))]
+
+
+def person(name, seed, lean_back):
+    """A figure facing +y, hands out to a rope ahead, leaning back; feet at the origin. Returns the
+    object and where its hands are, in its own frame."""
+    r = random.Random(seed)
+    h = r.uniform(1.62, 1.86)
+    parts = {"skin": ([], []), "shirt": ([], []), "pants": ([], [])}
+    rot = Matrix.Rotation(lean_back, 3, "X")  # tips the top toward -y: leaning back from the rope
+
+    def P(x, y, z):
+        return rot @ V3(x, y, z)
+
+    hip, sh = 0.53 * h, 0.82 * h
+    hands = P(0, 0.42, sh - 0.22)
+    for sx in (-1, 1):
+        limb(parts["pants"], V3(sx * 0.10, 0.12, 0.04), P(sx * 0.10, 0, hip), 0.07)  # feet braced ahead
+        limb(parts["skin"], P(sx * 0.19, 0, sh - 0.02), P(sx * 0.05, 0.42, sh - 0.22), 0.045)
+    limb(parts["pants"], P(0, 0, hip - 0.03), P(0, 0, hip + 0.10), 0.16)
+    limb(parts["shirt"], P(0, 0, hip + 0.05), P(0, 0, sh + 0.02), 0.17)
+    limb(parts["shirt"], P(-0.2, 0, sh - 0.02), P(0.2, 0, sh - 0.02), 0.07)
+    limb(parts["skin"], P(0, 0, sh + 0.02), P(0, 0, sh + 0.08), 0.05)
+    hv, hf = parts["skin"]
+    head_c = P(0, 0.01, 0.93 * h)
+    n0 = len(hv)
+    for i in range(7):
+        for j in range(10):
+            th, ph = math.pi * (i + 0.5) / 7, TAU * j / 10
+            hv.append(head_c + V3(math.sin(th) * math.cos(ph) * 0.1, math.sin(th) * math.sin(ph) * 0.11, math.cos(th) * 0.12))
+    hf += [(n0 + i * 10 + j, n0 + i * 10 + (j + 1) % 10, n0 + (i + 1) * 10 + (j + 1) % 10, n0 + (i + 1) * 10 + j) for i in range(6) for j in range(10)]
+    cols_ = {"skin": SKIN[r.randrange(len(SKIN))], "shirt": SHIRT[r.randrange(len(SHIRT))], "pants": PANTS[r.randrange(len(PANTS))]}
+    verts, faces, mi = [], [], []
+    me_ = bpy.data.meshes.new(name)
+    for k_, (kname, (v, f)) in enumerate(parts.items()):
+        n0 = len(verts)
+        verts += v
+        faces += [tuple(i + n0 for i in ff) for ff in f]
+        mi += [k_] * len(f)
+        me_.materials.append(pmat(cols_[kname]))
+    me_.from_pydata([tuple(v) for v in verts], [], faces)
+    me_.polygons.foreach_set("material_index", mi)
+    me_.update()
+    me_.shade_smooth()
+    return link(bpy.data.objects.new(name, me_)), hands
+
+
+# LH25 1.4: "four on each lateral rope and ten on the rear rope"
+TEAMS = {"left": (1, 4), "right": (-1, 4), "rear": (0, 10)}
+CREW = {}
+
+
+def crew_matrix(team, i, f):
+    side, _ = TEAMS[team]
+    out = V3(0.45, side * 1.0, 0).normalized() if side else V3(-1, 0, 0)
+    at0 = TEST + (V3(4.0, side * 8.0, 0) if side else V3(-8.0, 0, 0)) + out * (1.1 * i)
+    if not side:
+        at0 += V3(0, 0.35 if i % 2 else -0.35, 0)
+    m = replica_at(f)
+    drift = V3((m @ V3(0, 0, 0)).x - TEST.x, 0, 0)  # they walk along with it
+    pull = 0.0
+    if side and f > TEST_F0:  # the side teams pull in turn, in time with the rocking
+        k_ = int((f - TEST_F0) // 25)
+        u = ((f - TEST_F0) % 25) / 25
+        pull = 0.35 * math.sin(math.pi * u) * (1 if (1 if k_ % 2 == 0 else -1) == side else 0)
+    face = -out  # facing the statue
+    return Matrix.Translation(at0 + drift + out * pull) @ Matrix.Rotation(math.atan2(face.y, face.x) - math.pi / 2, 4, "Z")
+
+
+for team, (side, n) in TEAMS.items():
+    for i in range(n):
+        o, hands = person(f"crew_{team}{i}", hash((team, i)) % 9973, 0.3 if side else 0.2)
+        key_matrix(o, FR, lambda f, team=team, i=i: crew_matrix(team, i, f))
+        visible(o, TEST_WIN)
+        CREW[(team, i)] = hands
+    # the rope: from the statue's head to the first pair of hands, then along the team
+    rope(f"rope_{team}_a", lambda f, team=team, side=side: (replica_at(f) @ head_pt(RH, side), crew_matrix(team, 0, f) @ CREW[(team, 0)]), *TEST_WIN)
+    rope(f"rope_{team}_b", lambda f, team=team, n=n: (crew_matrix(team, 0, f) @ CREW[(team, 0)], crew_matrix(team, n - 1, f) @ (CREW[(team, n - 1)] + V3(0, -0.6, 0))), *TEST_WIN)
+for team, i in (("rear", 5), ("left", 2), ("right", 2)):
+    e = pin(f"crew_{team}", None, V3(0, 0, 0))
+    key_matrix(e, FR, lambda f, team=team, i=i: Matrix.Translation(crew_matrix(team, i, f) @ V3(0, 0, 2.0)))
+
+# ---------------------------------------------------------------- "set up there on purpose": gold ghosts, standing
+GHOST_WIN = (T("some") - 4 + SHIFT, END + 1)
+gm = ghost_mat("ghost_up", [(T("some") - 4, END + 40)])
+for i, (at, yaw, H_) in enumerate(RUN):
+    g_ = moai(f"upright_{i}", H_, gm, cols=64)
+    g_.location = at
+    g_.rotation_euler = (0, 0, yaw + math.pi / 2 + float(rng.uniform(-0.4, 0.4)))
+    visible(g_, GHOST_WIN)
+    if i == 2:
+        pin("upright", g_, V3(0, 0, H_ + 0.4))
+DROP_O = FALLEN[min(range(len(FALLEN)), key=lambda j: (FALLEN[j].location - along("w", 0.30)[0]).length)]
+DROP = DROP_O.location.copy()
+pin("fallen_w", DROP_O, V3(0, 0, 0))
+pin("quarry", None, Q + V3(-380, -330, 95))
+pin("road_s", None, along("s", 0.18)[0] + V3(0, 0, 2))
+
+# ---------------------------------------------------------------- sky
+world = bpy.data.worlds.new("sky")
+world.use_nodes = True
+scene.world = world
+sky = world.node_tree.nodes.new("ShaderNodeTexSky")
+for kind in ("MULTIPLE_SCATTERING", "SINGLE_SCATTERING", "NISHITA"):
+    try:
+        sky.sky_type = kind
+        break
+    except TypeError:
+        continue
+sky.sun_rotation = math.radians(60)  # the north-west: the statues on the platform face inland, lit
+sky.sun_elevation = math.radians(32)
+W = N(world.node_tree)
+wdir = W.new("ShaderNodeSeparateXYZ")
+W.link(W.new("ShaderNodeTexCoord").outputs["Generated"], wdir.inputs[0])
+under = W.math("MINIMUM", W.math("MAXIMUM", W.math("DIVIDE", wdir.outputs["Z"], -0.01), 0.0), 1.0)
+W.link(W.mix(under, sky.outputs["Color"], (2.0, 3.0, 4.5)), world.node_tree.nodes["Background"].inputs["Color"])
+world.node_tree.nodes["Background"].inputs["Strength"].default_value = 0.05  # the sky model is physical: far too bright at 1
+
+# ---------------------------------------------------------------- camera: shots keyed to words
+cam = link(bpy.data.objects.new("cam", bpy.data.cameras.new("cam")))
+scene.camera = cam
+cam.data.clip_start = 0.05
+cam.data.clip_end = 60000
+aim = link(bpy.data.objects.new("aim", None))
+cam.constraints.new("TRACK_TO").target = aim
+bpy.context.view_layer.update()
+
+HA = hero.location.copy()  # A, mid-platform, facing +y
+HE = END_E.location.copy()  # E, the east end
+FU_FACE = fu_face.matrix_world.translation.copy()
+w_front = WF @ V3(0, -1, 0)
+w_side = WF @ V3(1, 0, 0)
+WM = W0 + V3(0, 0, WH * 0.48)
+R_LOOK, R_YAW = along("w", 0.527)
+r_dir = V3(math.cos(R_YAW), math.sin(R_YAW), 0)
+r_left = V3(-r_dir.y, r_dir.x, 0)
+SHOTS = [
+    # frame, camera, aim, lens
+    (0, HA + V3(-8, 27, 1.6), HA + V3(0, 0, AH * 0.62), 30),  # the platform from inland, the sea behind
+    (T("dozens") - 1, HA + V3(-3, 15, 2.2), HA + V3(0, 0, AH * 0.62), 30),
+    (T("dozens"), Q + V3(-850, -1050, 230), Q + V3(-150, -150, 70), 24),  # cut: the quarry and its roads from the air
+    (T("apparently") - 1, Q + V3(-790, -980, 215), Q + V3(-150, -150, 70), 24),
+    (T("apparently"), DROP + V3(-26, -18, 11), DROP + V3(0, 0, 0.5), 30),  # cut: low over a statue on the west road
+    (T("on", 1) - 1, DROP + V3(-18, -24, 9), DROP + V3(0, 0, 0.5), 30),
+    (T("on", 1), WM + w_front * 20 + w_side * 3 + V3(0, 0, 0.4), WM, 32),  # cut: a road statue, front on
+    (T("they", 1) - 1, WM + w_front * 18 + w_side * 2.5 + V3(0, 0, 0.4), WM, 32),
+    (T("they", 1), WM + w_side * 21 + w_front * 1.5 + V3(0, 0, 0.3), WM, 32),  # cut: side on, the lean
+    (T("rocked") - 1, WM + w_side * 19.5 + w_front * 1.5 + V3(0, 0, 0.3), WM, 32),
+    (T("rocked"), WM + w_front * 16 - w_side * 9 + V3(0, 0, 3.5), WM, 26),  # cut: rocked on ropes
+    (T("in") - 1, WM + w_front * 12 - w_side * 7 + V3(0, 0, 3.0), WM + w_front * 1.0, 26),
+    (T("in"), TEST + V3(15, -17, 11), TEST + V3(-3, 1, 0.5), 22),  # cut: the test: replica and all 18 of the crew
+    (T("hundred") - 1, TEST + V3(16, -16, 10.5), TEST + V3(-2, 1, 0.5), 22),
+    (T("hundred"), TEST + V3(-22, -9, 9), TEST + V3(40, 0, 0), 24),  # behind them, down the 100 m
+    (T("the", 3) - 1, TEST + V3(-20, -8, 8.5), TEST + V3(42, 0, 0), 24),
+    (T("the", 3), HE + V3(15.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: the end statue side on: straight
+    (T("on", 3) - 1, HE + V3(14.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),
+    (T("on", 3), HE + V3(0, 16.5, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: front on: shoulders and base
+    (T("eye") - 1, HE + V3(0, 15.5, 2.6), HE + V3(0, 0, AH * 0.48), 34),
+    (T("eye"), HA + V3(1.6, 5.4, AH * 0.86 + 0.5), HA + V3(0, 0, AH * 0.78), 40),  # cut: A's face: the sockets carved
+    (T("none") - 1, HA + V3(1.2, 4.6, AH * 0.84 + 0.4), HA + V3(0, 0, AH * 0.78), 40),
+    (T("none"), FU_FACE + V3(1.5, -2.2, 3.4), FU_FACE, 36),  # cut: a road statue's face: no sockets
+    (T("so,") - 1, FU_FACE + V3(1.2, -1.8, 3.0), FU_FACE, 36),
+    (T("so,"), B_AT + V3(-15.5, 1.5, 2.6), B_AT + V3(0, 0.5, AH * 0.45), 34),  # cut: B side on, as it is trimmed
+    (T("other") - 1, B_AT + V3(-14.5, 1.5, 2.6), B_AT + V3(0, 0.5, AH * 0.45), 34),
+    (T("other"), R_LOOK + V3(0, 0, 1.7) + r_left * 6, R_LOOK + r_dir * 120 + V3(0, 0, 2.0), 28),  # cut: down the west road, the run of fallen statues
+    (END, R_LOOK + V3(0, 0, 2.1) + r_left * 6 + r_dir * 6, R_LOOK + r_dir * 120 + V3(0, 0, 2.2), 28),
+]
+CUTS = [SHOTS[i + 1][0] for i in range(len(SHOTS) - 1) if SHOTS[i + 1][0] - SHOTS[i][0] == 1]
+SHOTS = [(f + SHIFT if (f in CUTS or f + 1 in CUTS) else f, c, a_, lens) for f, c, a_, lens in SHOTS]
+for frame, c, a_, lens in SHOTS:
+    cam.location = c
+    aim.location = a_
+    cam.data.lens = lens
+    cam.keyframe_insert("location", frame=frame)
+    aim.keyframe_insert("location", frame=frame)
+    cam.data.keyframe_insert("lens", frame=frame)
+for block in (cam, aim, cam.data):  # steady drifts, and cuts that do not ease into each other
+    linear_keys(block)
+
+# ---------------------------------------------------------------- anchors for the overlays
+SHOT_OF = {  # empty: (first frame, last frame) it is tracked over
+    "a_top": (0, T("dozens")),
+    "quarry": (T("dozens"), T("apparently")),
+    "road_s": (T("dozens"), T("apparently")),
+    "fallen_w": (T("apparently"), T("on", 1)),
+    **{k: (T("on", 1), T("in")) for k in ("w_sh_l", "w_sh_r", "w_base_l", "w_base_r", "w_top", "w_bot", "w_up")},
+    **{k: (T("in"), T("the", 3)) for k in ("replica", "t_start", "t_end", "crew_rear", "crew_left", "crew_right")},
+    **{k: (T("the", 3), T("eye")) for k in ("e_sh_l", "e_sh_r", "e_base_l", "e_base_r", "e_top", "e_bot")},
+    "a_eye": (T("eye"), T("none")),
+    "fu_face": (T("none"), T("so,")),
+    **{k: (T("so,"), T("other")) for k in ("b_trim", "b_top", "b_bot")},
+    "upright": (T("other"), END),
+}
+scene.render.resolution_x = args.width
+scene.render.resolution_y = args.width * 16 // 9
+if not args.no_anchors:
+    span = {k: (max(a - 8, 0), min(b + 8, END)) for k, (a, b) in SHOT_OF.items()}
+    out = {"fps": FPS, "start": 0, "end": END, "cuts": CUTS, "anchors": {k: {"f0": v[0], "pts": []} for k, v in span.items()}}
+    for f in range(0, END + 1):
+        scene.frame_set(f)
+        dg = bpy.context.evaluated_depsgraph_get()
+        for name, (f0, f1) in span.items():
+            if f0 <= f <= f1:
+                w = bpy.data.objects[name].evaluated_get(dg).matrix_world.translation
+                c = world_to_camera_view(scene, cam.evaluated_get(dg), w)
+                out["anchors"][name]["pts"].append([round(c.x, 4), round(1 - c.y, 4), 1 if c.z > 0 else 0])
+    (ROOT / "src/generated/moai-world.anchors.json").write_text(json.dumps(out, separators=(",", ":")))
+
+# ---------------------------------------------------------------- render
+scene.render.engine = "CYCLES"
+if not args.cpu:
+    prefs = bpy.context.preferences.addons["cycles"].preferences
+    prefs.compute_device_type = "METAL"
+    prefs.refresh_devices()
+    for d in prefs.devices:
+        d.use = d.type == "METAL"
+    scene.cycles.device = "GPU"
+scene.cycles.samples = args.samples
+scene.cycles.use_denoising = True
+scene.cycles.max_bounces = 4
+scene.cycles.transparent_max_bounces = 12  # ghosts, and the road's faded edges
+scene.cycles.use_auto_tile = False
+scene.render.use_persistent_data = True
+try:
+    scene.view_settings.view_transform = "AgX"
+    scene.view_settings.look = "AgX - Punchy"
+except TypeError:
+    pass
+scene.render.image_settings.file_format = "PNG"
+scene.render.image_settings.color_mode = "RGB"
+if args.save:
+    bpy.ops.wm.save_as_mainfile(filepath=args.save)
+only = args.only
+if args.around_cuts:  # the second half of each cross-dissolve
+    only = sorted({f for c in CUTS for f in range(c - args.around_cuts, c + args.around_cuts) if (args.start or 0) <= f <= (args.end or END)})
+if args.build_only:
+    pass
+elif only:
+    for f in only:
+        scene.frame_set(f)
+        scene.render.filepath = f"{args.out}/{f:04d}.png"
+        bpy.ops.render.render(write_still=True)
+else:
+    scene.frame_start = args.start or 0
+    scene.frame_end = args.end or END + OUTRO
+    scene.render.filepath = f"{args.out}/"
+    bpy.ops.render.render(animation=True)

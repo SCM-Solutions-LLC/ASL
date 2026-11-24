@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 # What the Blender scenes read and git does not hold (tools/blender/assets/ is ignored); run this once.
 # Texture scans: Poly Haven, CC0 (polyhaven.com/license), 2K JPG, about 59 MB in all.
-# Each set is credited in public/SOURCES.json under public/3d/cleopatra-world.mp4 (D1).
+# Each set is credited in public/SOURCES.json under the clip that uses it (D1): cleopatra-world.mp4
+# for the first six, moai-world.mp4 for the last six.
 set -euo pipefail
 cd "$(dirname "$0")"
-for id in aerial_beach_01 dense_sand sandy_gravel_02 sandstone_blocks_05 rock_face_03 rough_linen; do
+for id in aerial_beach_01 dense_sand sandy_gravel_02 sandstone_blocks_05 rock_face_03 rough_linen \
+  rock_boulder_dry aerial_grass_rock grass_ground dry_ground_01 stacked_stone_wall concrete; do
   mkdir -p "assets/$id"
   for map in diff nor_gl rough disp; do
     f="assets/$id/${id}_${map}_2k.jpg"
