@@ -335,5 +335,17 @@
   "licence": "own-work",
   "ship": true,
   "note": "The incoming shot around each cut of public/3d/cleopatra-world.mp4, for cross-dissolves: same scene, same assets and same script (tools/blender/cleopatra_world.py --cut-shift), so the same sources and licences apply. Blender and MPFB are GPL; the GPL covers the programs, not the images they render, which belong to whoever made them (see blender.org/about/license). Poly Haven and MakeHuman system assets are CC0: no credit required, given anyway. No other downloaded models. Frames 150-1994 of the cleopatra-pyramid edit, 30 fps."
+ },
+ "public/img/cleopatra-thumb-core.jpg": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/cleopatra_world.py. Shapes are procedural. Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: aerial_beach_01 and sandstone_blocks_05 (Rob Tuytel), dense_sand (Dimitrios Savva), sandy_gravel_02 (Dario Barresi), rock_face_03 (Dario Barresi, Rico Cilliers), rough_linen (colormass, Rico Cilliers). The people are MakeHuman bodies, skins and eyes (MakeHuman system assets, CC0, makehumancommunity.org), shaped, posed and dressed by tools/blender/make_people.py with the MPFB 2.0.18 add-on; their clothes are modelled in that script.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "Still for the thumbnail: the stepped core, casing removed, seen square on to the south face (tools/blender/cleopatra_world.py scene, 2160x3840), with contrast lifted on the stone only so the courses read at feed size. Same scene, sources and licences as public/3d/cleopatra-world.mp4."
+ },
+ "public/img/cleopatra-thumb-cased.jpg": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/cleopatra_world.py. Shapes are procedural. Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: aerial_beach_01 and sandstone_blocks_05 (Rob Tuytel), dense_sand (Dimitrios Savva), sandy_gravel_02 (Dario Barresi), rock_face_03 (Dario Barresi, Rico Cilliers), rough_linen (colormass, Rico Cilliers). The people are MakeHuman bodies, skins and eyes (MakeHuman system assets, CC0, makehumancommunity.org), shaped, posed and dressed by tools/blender/make_people.py with the MPFB 2.0.18 add-on; their clothes are modelled in that script.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "Still for the thumbnail: the same view with the casing, unedited. Same scene, sources and licences as public/3d/cleopatra-world.mp4."
  }
 }

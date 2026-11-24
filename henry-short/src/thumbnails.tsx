@@ -88,9 +88,39 @@ const AltarStone: React.FC = () => {
   );
 };
 
+// Great Pyramid: one face seen straight on, split down the apex. Left, the stepped core as it stands
+// today; right, the same face cased, as in the short, with Cleopatra's portrait (the Berlin marble
+// head the short shows, public domain). Both halves are our own 3D renders from one camera
+// (tools/blender/cleopatra_world.py), so the split lines up. Title it as a pair: the title names
+// "Cleopatra's day"; the picture shows which pyramid that was.
+const CleopatraPyramid: React.FC = () => {
+  const split = 540; // the apex: the camera faces the south face square on
+  const half = (clip: string): React.CSSProperties => ({ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, clipPath: clip });
+  const chip = (bg: string, color: string, size: number): React.CSSProperties => ({ ...word(size, color), position: "absolute", width: "auto", padding: "14px 28px 18px", borderRadius: 18, background: bg, textShadow: "none", whiteSpace: "nowrap", translate: "-50% 0" });
+  const d = 280; // the portrait's diameter
+  const [mx, my] = [810, 1215];
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <Img src={staticFile("img/cleopatra-thumb-core.jpg")} style={half(`inset(0 ${1080 - split}px 0 0)`)} />
+      <Img src={staticFile("img/cleopatra-thumb-cased.jpg")} style={half(`inset(0 0 0 ${split}px)`)} />
+      <div style={{ position: "absolute", left: split - 5, top: 560, width: 10, height: 770, background: GOLD, boxShadow: "0 0 18px rgba(0,0,0,0.8)" }} />
+      {/* The script's opening question. "In" her day, not "to" her: no source says she saw it. */}
+      <div style={{ ...word(78), top: 300, whiteSpace: "nowrap" }}>WHAT DID IT LOOK LIKE</div>
+      <div style={{ ...word(90, GOLD), top: 395, whiteSpace: "nowrap" }}>IN CLEOPATRA&apos;S DAY?</div>
+      <div style={{ ...chip("rgba(15,12,10,0.82)", "#fff", 84), left: 270, top: 1360 }}>TODAY</div>
+      <div style={{ position: "absolute", left: mx - d / 2, top: my, width: d, height: d, borderRadius: "50%", overflow: "hidden", border: `12px solid ${GOLD}`, boxSizing: "border-box", boxShadow: "0 10px 40px rgba(0,0,0,0.75)", background: "#a8afb1" }}>
+        {/* The whole head, centred: hair to chin, bun to nose. */}
+        <Img src={staticFile("img/cleopatra-berlin.jpg")} style={{ position: "absolute", width: d * 1.15, left: -d * 0.098, top: -d * 0.098 }} />
+      </div>
+      <div style={{ ...chip(GOLD, "#1d1208", 60), left: mx, top: my + d + 8 }}>CLEOPATRA</div>
+    </AbsoluteFill>
+  );
+};
+
 export const THUMBS = [
   { id: "thumb-altar-stone", component: AltarStone },
   { id: "thumb-deepest-hole-long", component: DeepestHole },
   { id: "thumb-age-of-sunlight-long", component: NeutrinosSun },
   { id: "thumb-great-red-spot", component: GreatRedSpot },
+  { id: "thumb-cleopatra-pyramid", component: CleopatraPyramid },
 ];
