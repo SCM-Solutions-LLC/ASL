@@ -1,0 +1,145 @@
+Two archaeologists say Easter Island's platform statues were reshaped after they arrived.
+Dozens lie along the old roads from the quarry, apparently dropped on the way.
+On average, those statues have bases almost as wide as their shoulders, and they lean forward.
+Rocked side to side with ropes, a statue like that steps forward.
+In a test, eighteen people walked a scaled-down copy weighing over four tonnes a hundred meters in forty minutes.
+The statues on the platforms stand straight, and on average their bases are narrower than their shoulders.
+Eye sockets were carved only once a statue stood on its platform. None of the road statues have them.
+So, they argue, the shape built for walking was carved away at the end of the journey.
+Other archaeologists reject this. Some think many road statues were set up there on purpose.
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Topic chosen by the owner on 2026-11-24 after a B2 check: the plain "the moai
+walked, not rolled on logs" fills the first page of search results, so this
+short leads with the less-told consequence (the statues were reshaped on
+arrival). C6: Rapa Nui heritage. The script attributes the reading, names the
+disagreement (entry 9) and mocks no one.
+
+Primary paper, full text read on 2026-11-24 (the publisher's PDF as hosted by
+newswise.com, fetched through the Firecrawl scraper because this sandbox cannot
+reach it directly): Lipo & Hunt, "The walking moai hypothesis: Archaeological
+evidence, experimental validation, and response to critics", Journal of
+Archaeological Science 183, 106383 (2025), doi:10.1016/j.jas.2025.106383.
+Called "LH25" below. The authors are the main proponents of walking transport;
+entry 9 records the published opposition, which LH25 itself lists.
+
+1. "Two archaeologists say Easter Island's platform statues were reshaped after
+   they arrived."
+   LH25 1.1: on road moai the base nearly equals the shoulder width; "platform
+   statues show ratios consistently exceeding 1.0, with shoulders wider than
+   bases ... This modification occurred after transport, when carvers reduced
+   the base width". And: "Platform moai, once they reached their destinations,
+   were substantially modified through base reshaping to eliminate this lean.
+   Carvers removed material from the front of the base". 2.4: "These statues
+   were later modified to stand erect on ceremonial platforms". The hook
+   attributes this to the two authors ("two archaeologists say"), because it is
+   their reading and entry 9 records the opposition. It says "platform statues",
+   not every standing statue: the standing statues on the slopes of Rano Raraku
+   never left the quarry, and LH25 claims reshaping only for ahu moai. The
+   paper's only direct physical evidence for the trimming is "Tailings of Rano
+   Raraku volcanic tuff from moai and found in ahu platforms" (S. Rapu, personal
+   communication, 2011); the rest is the base-ratio and lean comparison in
+   entries 3 and 7. LH25 Conclusion notes small moai (under 2 m) may have been
+   moved differently; the script makes no claim about them.
+
+2. "Dozens lie along the old roads from the quarry, apparently dropped on the
+   way."
+   LH25 abstract and 1.1: "62 statues documented along ancient transport roads,
+   abandoned where they fell at various points of their journey from the Rano
+   Raraku quarry"; roads "radiate from Rano Raraku". The count differs inside
+   LH25: 62 in the abstract and text, "84 road moai" in the Fig. 12 caption. The
+   script says "dozens", which both numbers satisfy (A3). "Apparently dropped"
+   marks the transport-failure reading as the authors', not a settled fact
+   (entry 9).
+
+3. "On average, those statues have bases almost as wide as their shoulders, and
+   they lean forward."
+   "On average": the authors' corrected figures (entry 7) give road moai a
+   shoulder/base ratio of 1.025 ± 0.155 (n = 47), so individual statues vary.
+   LH25 1.1: "road statues exhibit a shoulder-to-base width ratio approaching
+   1.0, meaning the base width nearly equals the shoulder width"; "road moai
+   exhibit a pronounced and consistent forward lean, typically ranging from 6°
+   to 15° from vertical". The script gives no angle, because LH25 also gives
+   5–15° (Fig. 1) and ~5–14° (Fig. 5).
+
+4. Cut after the first fact-check: "A statue like that can't stand up on its
+   own." LH25 1.1 says the lean "renders independent standing impossible without
+   support", but its own Fig. 4 shows the centre of mass of moai 12-220-01 (the
+   statue the test replica copies) "projected within the base footprint". The
+   source contradicts itself, so the script makes no claim either way.
+
+5. "Rocked side to side with ropes, a statue like that steps forward."
+   LH25 1.1: "Each lateral rocking motion thus produces a forward 'step'";
+   Fig. 1: "alternating lateral rope pulls ... A restraining rope prevents
+   forward toppling as side ropes create a controlled rocking motion that
+   advances the statue with each oscillation."
+
+6. "In a test, eighteen people walked a scaled-down copy weighing over four
+   tonnes a hundred meters in forty minutes."
+   "Scaled-down": LH25 1.4, the original road moai 12-220-01 "stands 7.35 m tall
+   and 2.83 m wide. Our concrete replica, scaled for practical experimentation,
+   weighed 4.35 metric tons". Without it, a viewer would take 4 t and 18 people
+   as what a full-size statue needed.
+   LH25 abstract: "a precisely scaled 4.35 metric ton replica based on road moai
+   morphology ... covering 100 m in 40 min with a team of 18 people". 1.4:
+   "With a minimum crew of 18 individuals, four on each lateral rope and ten on
+   the rear rope". 4.35 t = "over four tonnes". The script gives no year: Fig. 8
+   dates the demonstration to 2012, but the text does not tie the 100 m figure
+   to a single dated trial.
+
+7. "The statues on the platforms stand straight, and on average their bases are
+   narrower than their shoulders."
+   The published Fig. 2 is wrong, and the authors say so. Their data deposit
+   (Lipo & Hunt, Zenodo v2, 7 Oct 2025, doi:10.5281/zenodo.17329904, record page
+   read 2026-11-24) carries "Figure 2 Correction (October 2025): The original
+   Figure 2 published in the paper contained errors in location coding and
+   ratio interpretation. The statistical significance remains robust (p =
+   0.002) ... Road moai ... (mean ratio = 1.025 ± 0.155, n = 47), while ahu moai
+   have been reshaped with narrower bases, resulting in broader shoulders
+   relative to base width (mean ratio = 1.132 ± 0.216, n = 76)." No journal
+   corrigendum was found. So the script uses the corrected numbers, not
+   Fig. 2's (t = 2.474, p = 0.0153). It says "on average" because with that
+   spread a fair share of platform statues have bases as wide as their
+   shoulders; LH25 1.1's "consistently exceeding 1.0" overstates the corrected
+   data. "Stand straight": LH25 2.4, "ahu moai ... stand vertically upright
+   (bases flattened) with their center of mass positioned stably over their
+   base".
+
+8. "Eye sockets were carved only once a statue stood on its platform. None of
+   the road statues have them."
+   "Road statues", not "stranded": whether they were stranded is the disputed
+   point (entry 9). LH25 gives no citation for the eye-socket sentence beyond
+   "Ethnographic accounts and archaeological evidence".
+   LH25 1.1: "Ethnographic accounts and archaeological evidence confirm that
+   eyes were carved only as a final step after the statue's successful erection
+   on the platform"; "The complete absence of eye sockets on all 62 documented
+   road moai confirms these statues never reached the ritual completion stage."
+   The script does not say every platform statue has eye sockets; LH25 does not
+   claim that.
+
+9. "So, they argue, the shape built for walking was carved away at the end of
+   the journey. Other archaeologists reject this. Some think many road statues
+   were set up there on purpose."
+   LH25 2.4: "Once the statues reached their destinations, these transport
+   features were carved away to create stable, upright monuments." "They argue"
+   keeps it the authors' conclusion, including the "built for walking" premise.
+   "Other archaeologists reject this" covers the scholars LH25 1 says "continue
+   to reject the walking hypothesis"; "Some think" is the narrower ritual-path
+   reading below, held by only some of them.
+   The disagreement, as LH25 2.5 reports it: "Richards et al. (2011), Seager
+   Thomas et al. (2023), and Cauwe and De Dapper (2022, 2015) ... [argue] that
+   these statues were deliberately positioned along ceremonial paths leading to
+   the 'sacred center' of Rano Raraku rather than representing transport
+   failures"; Routledge (1919) and Heyerdahl (1989) held a similar view. LH25
+   1: "some scholars continue to reject the walking hypothesis" and names
+   "Bahn, Flenley, Van Tilburg, Diamond, Velasco, Richards, Cauwe, and De
+   Dapper". These critics were read only as LH25 quotes them (A2), so the line
+   states only their position, not their evidence. "Many road statues" rather
+   than "all": Cauwe and De Dapper speak of "isolated" moai, and LH25 does not
+   say every critic holds the view for every statue.
+
+Not used: oral tradition that the moai "walked" (LH25 cites it via Métraux
+1940; not read at source, and it is the top-result framing); the Pavel 1986
+experiment; transport-rate and workforce models; the deforestation argument
+(a second claim, B1).
