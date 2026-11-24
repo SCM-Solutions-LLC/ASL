@@ -1,10 +1,10 @@
 Two archaeologists say Easter Island's platform statues were reshaped after they arrived.
 Dozens lie along the old roads from the quarry, apparently dropped on the way.
-Those statues have bases almost as wide as their shoulders, and they lean forward.
+On average, those statues have bases almost as wide as their shoulders, and they lean forward.
 Rocked side to side with ropes, a statue like that steps forward.
 In a test, eighteen people walked a scaled-down copy weighing over four tonnes a hundred meters in forty minutes.
-The statues on the platforms stand straight, on bases narrower than their shoulders.
-Eye sockets were carved only once a statue stood on its platform. None of the stranded ones have them.
+The statues on the platforms stand straight, and on average their bases are narrower than their shoulders.
+Eye sockets were carved only once a statue stood on its platform. None of the road statues have them.
 So, they argue, the shape built for walking was carved away at the end of the journey.
 Other archaeologists reject this. Some think many road statues were set up there on purpose.
 ---
@@ -53,8 +53,10 @@ entry 9 records the published opposition, which LH25 itself lists.
    marks the transport-failure reading as the authors', not a settled fact
    (entry 9).
 
-3. "Those statues have bases almost as wide as their shoulders, and they lean
-   forward."
+3. "On average, those statues have bases almost as wide as their shoulders, and
+   they lean forward."
+   "On average": the authors' corrected figures (entry 7) give road moai a
+   shoulder/base ratio of 1.025 ± 0.155 (n = 47), so individual statues vary.
    LH25 1.1: "road statues exhibit a shoulder-to-base width ratio approaching
    1.0, meaning the base width nearly equals the shoulder width"; "road moai
    exhibit a pronounced and consistent forward lean, typically ranging from 6°
@@ -86,17 +88,29 @@ entry 9 records the published opposition, which LH25 itself lists.
    dates the demonstration to 2012, but the text does not tie the 100 m figure
    to a single dated trial.
 
-7. "The statues on the platforms stand straight, on bases narrower than their
-   shoulders."
-   LH25 1.1: platform statues show shoulder-to-base ratios "consistently
-   exceeding 1.0, with shoulders wider than bases"; Fig. 2: the ahu and road
-   ratios are "statistically distinctive (t = 2.474, df = 86.0, p = 0.0153)",
-   from Van Tilburg's (1986) measurements. 2.4: "ahu moai ... stand vertically
-   upright (bases flattened) with their center of mass positioned stably over
-   their base".
+7. "The statues on the platforms stand straight, and on average their bases are
+   narrower than their shoulders."
+   The published Fig. 2 is wrong, and the authors say so. Their data deposit
+   (Lipo & Hunt, Zenodo v2, 7 Oct 2025, doi:10.5281/zenodo.17329904, record page
+   read 2026-11-24) carries "Figure 2 Correction (October 2025): The original
+   Figure 2 published in the paper contained errors in location coding and
+   ratio interpretation. The statistical significance remains robust (p =
+   0.002) ... Road moai ... (mean ratio = 1.025 ± 0.155, n = 47), while ahu moai
+   have been reshaped with narrower bases, resulting in broader shoulders
+   relative to base width (mean ratio = 1.132 ± 0.216, n = 76)." No journal
+   corrigendum was found. So the script uses the corrected numbers, not
+   Fig. 2's (t = 2.474, p = 0.0153). It says "on average" because with that
+   spread a fair share of platform statues have bases as wide as their
+   shoulders; LH25 1.1's "consistently exceeding 1.0" overstates the corrected
+   data. "Stand straight": LH25 2.4, "ahu moai ... stand vertically upright
+   (bases flattened) with their center of mass positioned stably over their
+   base".
 
 8. "Eye sockets were carved only once a statue stood on its platform. None of
-   the stranded ones have them."
+   the road statues have them."
+   "Road statues", not "stranded": whether they were stranded is the disputed
+   point (entry 9). LH25 gives no citation for the eye-socket sentence beyond
+   "Ethnographic accounts and archaeological evidence".
    LH25 1.1: "Ethnographic accounts and archaeological evidence confirm that
    eyes were carved only as a final step after the statue's successful erection
    on the platform"; "The complete absence of eye sockets on all 62 documented
