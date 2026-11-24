@@ -4,9 +4,9 @@
   "mp4_sha256": "9930650546a733fa8823ac77e85c359fae8a3b7e330b9bc8a18526f8c9b41492",
   "meta_sha256": "6f492590464dca30e5bb06a2e80234ec49ab4cfafcc9c7c545b9cea90d9ad3a5",
   "status": {
-    "privacyStatus": "private"
+    "privacyStatus": "public"
   },
   "uploadedAt": "2026-11-20T02:41:11.669Z",
   "uploadedVia": "Upload short, run 44662493890",
-  "notes": "Reconstructed from that run log; the full YouTube status object is in its great-red-spot-upload-record artifact until 2027-02-18. Replaces nphfBsClC2M (run 44626059344, mp4 8d0077e9…), which had the old year counter and is to be deleted in Studio."
+  "notes": "Reconstructed from that run log; the full YouTube status object is in its great-red-spot-upload-record artifact until 2027-02-18. Replaces nphfBsClC2M (run 44626059344, mp4 8d0077e9…), which had the old year counter and is to be deleted in Studio. 2026-11-22: owner confirmed the video is public (changed in Studio, F2)."
 }

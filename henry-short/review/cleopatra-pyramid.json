@@ -1,0 +1,22 @@
+{
+ "slug": "cleopatra-pyramid",
+ "file": "out/release/cleopatra-pyramid.mp4",
+ "mp4_sha256": "3455481cdf6003759bf05e3feb8a3986143285d45291a53448e4c082ff02c2a9",
+ "title": "What the Great Pyramid looked like in Cleopatra's day",
+ "description": "What did the Great Pyramid look like in Cleopatra's day? Not like today: it still wore its smooth, polished outer casing. Cleopatra, born in 69 BC, lived closer to the Moon landing than to the pyramid's building. The Greek historian Diodorus, who visited Egypt when she was a girl, wrote that its stones were still in place, and was told that 360,000 men had spent twenty years building it. Then, in 2013, at Wadi al-Jarf, an ancient harbour on the Red Sea, archaeologists found papyrus documents from the reign of Khufu, the pyramid's own king: the oldest papyri with writing found in Egypt as of 2014. Among them was the logbook of an inspector named Merer, whose boat crew hauled limestone from the Tura quarries, about 17 km away, to the pyramid. They had lain buried for about four and a half thousand years.\n\nSources:\n- Diodorus Siculus, Library of History 1.44 and 1.63, tr. C. H. Oldfather, Loeb Classical Library 279 (1933).\n- Herodotus, Histories 2.124, tr. A. D. Godley, Loeb Classical Library 117 (1920).\n- Tallet & Marouard 2014, \"The Harbor of Khufu on the Red Sea Coast at Wadi al-Jarf, Egypt\", Near Eastern Archaeology 77(1), 4-14. doi:10.5615/neareastarch.77.1.0004\n- Tallet & Marouard 2016, \"The Harbor Facilities of King Khufu on the Red Sea Shore\", Journal of the American Research Center in Egypt 52.\n- Sheisha et al. 2022, PNAS 119(37), e2202530119. doi:10.1073/pnas.2202530119\n- Erdil et al. 2025, PLOS ONE. doi:10.1371/journal.pone.0314612\n- Rosso 2021, Toxicology Reports. doi:10.1016/j.toxrep.2021.03.004\n- NASA Image and Video Library, Apollo 11 (AS11-40-5903).\n\nImages: Great Pyramid photo by Nina Aldin Thune, Wikimedia Commons, CC BY 2.5 (https://creativecommons.org/licenses/by/2.5/), cropped: https://commons.wikimedia.org/wiki/File:Kheops-Pyramid.jpg. Marble portrait of Cleopatra VII, 1st century BC, Antikensammlung Berlin (inv. 1976.10): photo by Louis le Grand, Wikimedia Commons, public domain. 3D surfaces: Poly Haven (CC0). Figures: MakeHuman (CC0). Music: \"Desert Mystic 2\" by PolygonDan (CC0).\n\nNarration: Kokoro-82M synthetic voice. The 3D scenes are an illustration, not footage: the casing's colour is an estimate, the landscape is not to scale, and the people, the boat and the papyri are drawn.\n\n#shorts #ancientegypt #pyramids #history",
+ "tags": [
+  "great pyramid",
+  "cleopatra",
+  "ancient egypt",
+  "khufu",
+  "diary of merer",
+  "wadi al-jarf",
+  "archaeology",
+  "history"
+ ],
+ "categoryId": "27",
+ "selfDeclaredMadeForKids": false,
+ "privacyStatus": "private",
+ "alteredOrSyntheticContent": true,
+ "notes": "privacyStatus and schedule are the owner's call at approval (F2). mp4_sha256 is from Render short run 45304997786 on commit 015f873. E3: a 3D reconstruction of a real place as it is not today, with a stock synthetic narrator; every 3D shot is labelled \"illustration\" on screen, but it is realistic enough that the flag is set to true; re-check YouTube's rule at upload. E5: 67.3 s, over the 60 s target; the owner accepts or rejects the length at approval. E4: the CC BY 2.5 photo's licence and file URLs are in the description. A6: review/cleopatra-pyramid.a6.md; A7: factcheck/cleopatra-pyramid.json, pass 12, 82 confirmed."
+}

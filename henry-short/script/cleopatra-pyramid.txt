@@ -1,0 +1,132 @@
+What did the Great Pyramid look like in Cleopatra's day? Not this.
+It still wore its smooth, polished outer casing.
+Cleopatra lived closer to the Moon landing than to its building.
+A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl. He wrote that its stones were still in place.
+He was told three hundred and sixty thousand men spent twenty years building it.
+Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyrus documents from the reign of the pyramid's own king, Khufu. The oldest papyri with writing ever found in Egypt.
+Among them was the logbook of an inspector named Merer. His boat crew hauled limestone from a quarry seventeen kilometres away to the pyramid.
+They lay buried for about four and a half thousand years.
+To Cleopatra, the pyramid was ancient history. We can read the work log of a crew that helped build it.
+What would you leave behind for someone to read four thousand years from now?
+---
+SOURCES (for approval — every claim in the script, with the number behind it)
+
+Sources:
+- Diodorus Siculus, Library of History, Book 1, tr. C. H. Oldfather, Loeb
+  Classical Library 279 (1933); read on LacusCurtius
+  (penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html).
+- Herodotus, Histories 2.124-125, tr. A. D. Godley, Loeb Classical Library
+  117 (1920); read on Perseus (perseus.tufts.edu, Perseus:text:1999.01.0126).
+- Tallet & Marouard, "The Harbor of Khufu on the Red Sea Coast at Wadi
+  al-Jarf, Egypt", Near Eastern Archaeology 77(1): 4-14 (2014),
+  doi:10.5615/neareastarch.77.1.0004. Full text read, archive.org scan:
+  archive.org/stream/theharborofkhufuontheredseacoastatwadialjarfegypt
+  (the _djvu.txt full-text file).
+- Tallet & Marouard, "The Harbor Facilities of King Khufu on the Red Sea
+  Shore: The Wadi al-Jarf/Tell Ras Budran System", JARCE 52 (2016). Full text.
+- Tallet, Les papyrus de la mer Rouge I: Le « Journal de Merer » (Papyrus Jarf
+  A et B), MIFAO 136, IFAO, Cairo (2017). Not read; cited for the name only,
+  via Tallet & Marouard 2016 n. 2 and Sheisha 2022.
+- Sheisha et al., PNAS 119(37): e2202530119 (2022), doi:10.1073/pnas.2202530119
+  (PMC9477388). Full text.
+- The Moon-landing line (line 3) and its dates: script/cleopatra-timeline.txt SOURCES 1-5
+  and factcheck/cleopatra-timeline.json (Sheisha 2022; Erdil et al. 2025;
+  Rosso 2021; NASA).
+
+1. "What did the Great Pyramid look like in Cleopatra's day? Not this."
+   "Not this" is said over a photograph of the pyramid as it is today, with its
+   stepped core showing. The difference is lines 2 and 4: in antiquity the
+   outside was polished, fitted stone. Says "in Cleopatra's day", never that she
+   saw it: there is no record that Cleopatra visited Giza (A5). Hook (A4): a
+   viewer who swipes after this line leaves knowing only that the pyramid looked
+   different then, which lines 2 and 4 source.
+
+2. "It still wore its smooth, polished outer casing."
+   Herodotus 2.124.5 (5th c. BC): "the whole is of stone polished and most
+   exactly fitted". Diodorus 1.63.5 (line 4): "the stones remain to this day
+   still preserving their original position and the entire structure
+   undecayed". "Casing": Tallet & Marouard 2014, p. 10: blocks from the Tura
+   quarries "were probably used for the external casing of the Great Pyramid,
+   made of fine limestone". Not said: "white" and the original height (146.6 m
+   is from Lehner 1997 via Wikipedia, unread). Colour, for the picture only:
+   Petrie, The Pyramids and Temples of Gizeh (1883), read 2026-11-23 in the
+   transcription at ronaldbirdsall.com/gizeh/petrie: ch. 18, the North Pyramid
+   at Dahshur is like the Great Pyramid in "the fineness and whiteness of its
+   casing"; ch. 6, fine Mokattam limestone weathers "very quickly to the brown
+   tint, proper to the fine Mokattam limestone". No source read says how white
+   the casing still was in Cleopatra's day, so it is drawn weathered off-white
+   and the screen says the colour is an estimate.
+
+3. "Cleopatra lived closer to the Moon landing than to its building."
+   "Its" is the Great Pyramid of line 1. Same claim as cleopatra-timeline line
+   1; see its SOURCES 1-5: about 2,531 years back to c. 2600 BC against 2,037
+   forward to AD 1969 from her birth in 69 BC. Holds on every published
+   chronology for Khufu.
+
+4. "A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl. He
+   wrote that its stones were still in place."
+   Diodorus 1.44.1: kings ruled "down to the One Hundred and Eightieth
+   Olympiad, the time when we visited Egypt and the king was Ptolemy, who took
+   the name of The New Dionysus". The 180th Olympiad is 60/59-57/56 BC; born in
+   69 BC (Rosso 2021), Cleopatra was about 9 to 13. Ptolemy XII was her father
+   (Rosso 2021: "born at 69 BC from an illegitimate union of Ptolemy XII").
+   "Still in place": 1.63.5, quoted in 2. "Its" is the largest pyramid,
+   "constructed" by "Chemmis" (1.63.2), i.e. the Great Pyramid.
+
+5. "He was told three hundred and sixty thousand men spent twenty years
+   building it."
+   Diodorus 1.63.9: "three hundred and sixty thousand men, as they say, were
+   employed on the undertaking, and the whole structure was scarcely completed
+   in twenty years" ("as they say" = "he was told"). Cut on 2026-11-23 (owner:
+   off the topic, and "talents" meant nothing to a first-time viewer): the
+   sentence on the inscription at 1.64.3 listing what the workmen's vegetables
+   and purgatives cost. The modern workforce comparison was cut earlier: no A2
+   source read.
+
+6. "Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found
+   papyrus documents from the reign of the pyramid's own king, Khufu. The
+   oldest papyri with writing ever found in Egypt."
+   Tallet & Marouard 2014 (abstract): "In 2013 the discovery of several dozen
+   fragments of papyrus, the oldest inscribed papyri ever unearthed in Egypt,
+   confirmed the early date of this site and revealed a final closure of this
+   installation at the end of the reign of Khufu"; title: "The Harbor of Khufu
+   on the Red Sea Coast at Wadi al-Jarf". Full text (p. 8): "the 2013 campaign
+   has led to an even more remarkable discovery ... several hundreds of
+   papyrus fragments"; dated to "Khufu's regnal Year 27", which "makes these
+   documents the oldest inscribed papyri that have ever been discovered in
+   Egypt". Tallet & Marouard 2016: papyri that
+   "name King Khufu", terminus "year 26-27". "The pyramid's own king": Sheisha
+   2022, "the Great Pyramid of Giza (Khufu Pyramid)". "Ever found in Egypt"
+   keeps the source's scope, as of 2014.
+
+7. "Among them was the logbook of an inspector named Merer. His boat crew
+   hauled limestone from a quarry seventeen kilometres away to the pyramid."
+   Tallet & Marouard 2014, pp. 8-10: "a personal logbook that records every day
+   activities of a team led by ... the inspector Merer", "a team of about 200
+   men"; it describes "the transportation, on the Nile and connected canals,
+   of stone blocks, which had been extracted from the northern and southern
+   quarries of Tura", "delivered within four days at the pyramid construction
+   site", and "many operations related to the construction of the Great
+   Pyramid". Tallet & Marouard 2016 n. 2: "logs from a team of sailors shipping blocks of
+   limestone from Tura to Giza", published as "Le « Journal de Merer »".
+   Sheisha 2022: "The Journal of Merer, a large corpus of these papyri,
+   describes the transport of limestone from Toura, ∼17 km from the Giza
+   Plateau, to the construction site of the Great Pyramid of Khufu."
+
+8. "They lay buried for about four and a half thousand years."
+   "Unearthed" in 2013 (Tallet & Marouard 2014); the harbour closed at the end
+   of Khufu's reign (same). End of his reign: median 2565-2603 BC in Erdil
+   2025's models, so 4,577-4,615 years to AD 2013; about 4,470 on Spence's low
+   dates (cleopatra-timeline SOURCES 1). "About four and a half thousand"
+   covers both.
+
+9. "To Cleopatra, the pyramid was ancient history. We can read the work log
+    of a crew that helped build it."
+    First sentence: cleopatra-timeline SOURCES 6. Second: 6-7; Merer's crew
+    shipped limestone to "the construction site of the Great Pyramid of Khufu"
+    (Sheisha 2022). No claim about what Cleopatra knew or could read.
+
+10. "What would you leave behind for someone to read four thousand years
+    from now?"
+    A question to the viewer, not a claim. Not engagement bait (E2): it asks
+    for no action and follows from 8-9.
