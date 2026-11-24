@@ -242,7 +242,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
   const photo = 1 - ramp(f, PHOTO_END - 8, PHOTO_END);
   const c = counterAt(f);
   const between = (a: number, b: number) => f >= a && f < b;
-  const cut = CUTS.find((c) => Math.abs(f - c) <= DISSOLVE);
+  const cut = CUTS.find((c) => f >= c - DISSOLVE && f < c + DISSOLVE); // the "-b" clip is black outside these frames
   const mix = cut === undefined ? 0 : clamp01((f - (cut - DISSOLVE)) / (2 * DISSOLVE));
 
   return (
