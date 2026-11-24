@@ -12,7 +12,6 @@ import world from "../../generated/moai-world.anchors.json";
 import { clamp01 } from "../altar-stone/shots";
 import {
   Counter,
-  DIM,
   Fine,
   GOLD,
   INK,
@@ -488,7 +487,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             y={fine}
             o={win(f, F.dozens, F.onAvg)}
             size={26 * s}
-            text="illustration · island not to scale"
+            text="illustration · island simplified, not to scale"
             align="center"
           />
         </>
@@ -710,7 +709,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             title="Road statue"
             sub="no eye sockets"
             lift={200}
-            color={DIM}
           />
           <Fine
             x={cx}

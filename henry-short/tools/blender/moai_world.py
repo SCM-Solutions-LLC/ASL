@@ -395,7 +395,7 @@ M = {
 # LH25's road moai 12-220-01 is 7.35 m tall and 2.83 m wide, so S = 0.1925 H.
 ROWS_T = np.concatenate([np.linspace(0, 0.5, 34, endpoint=False), np.linspace(0.5, 0.93, 86, endpoint=False), np.linspace(0.93, 1.0, 10)])
 SHOULDER_T = 0.40
-ROAD_BASE, PLAT_BASE, LEAN = 0.99, 0.84, 9.0  # LH25: road ratio ~1.0, lean 6-15 deg; platform base narrower (illustrative, not a measured ratio)
+ROAD_BASE, PLAT_BASE, LEAN = 0.99, 0.88, 9.0  # LH25: road ratio ~1.0, lean 6-15 deg; platform base narrower (illustrative, not a measured ratio)
 
 
 def gauss(x, mu, sig):
@@ -471,7 +471,11 @@ def moai(name, H, mat, cols=96, kind="road", keys=False):
     o.data.shade_smooth()
     if keys:
         o.shape_key_add(name="Basis")
-        for kname, v in (("platform", moai_verts(H, cols, PLAT_BASE, 0, False, True)), ("sockets", moai_verts(H, cols, ROAD_BASE, LEAN, True, False))):
+        for kname, v in (
+            ("platform", moai_verts(H, cols, PLAT_BASE, 0, False, True)),
+            ("trim", moai_verts(H, cols, PLAT_BASE, LEAN, False, True)),  # base cut back, still leaning
+            ("sockets", moai_verts(H, cols, ROAD_BASE, LEAN, True, False)),
+        ):
             kb = o.shape_key_add(name=kname, from_mix=False)
             kb.data.foreach_set("co", v.astype(np.float32).ravel())
     return o
@@ -591,9 +595,9 @@ for name, path in PATHS.items():
     nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
     verts = []
     for (x, y), (nx, ny) in zip(path, nrm):
-        for k_ in (-3.0, -1.5, 0.0, 1.5, 3.0):
+        for k_ in (-2.25, -1.125, 0.0, 1.125, 2.25):  # LH25 1.3: about 4.5 m wide, concave in section
             px, py = x + nx * k_, y + ny * k_
-            verts.append((px, py, gz(px, py) + 0.06))
+            verts.append((px, py, gz(px, py) + 0.06 + 0.14 * (k_ / 2.25) ** 2))
     faces = [(i * 5 + j, i * 5 + j + 1, (i + 1) * 5 + j + 1, (i + 1) * 5 + j) for i in range(len(path) - 1) for j in range(4)]
     o = mesh_obj("road_" + name, verts, faces, M["road"])
     uv = o.data.uv_layers.new(name="UVMap")
@@ -617,12 +621,14 @@ def along(name, frac, side=0.0):
 
 # ---------------------------------------------------------------- statues lying along the roads: "dozens"
 def lying(name, H, at, yaw, face_up, cols=48):
-    """On its back or its front, head away from the quarry, settled a little into the ground. The
-    tilt also takes out the forward lean, so the statue lies flat."""
+    """A statue that was facing outward (away from the quarry, LH25 2.5) and fell: forward onto its
+    face, head outward, or back onto its back, head toward the quarry. Settled a little into the
+    ground; the tilt also takes out the forward lean, so the statue lies flat. (A7 pass 1: the
+    first version had both the wrong way round.)"""
     o = moai(name, H, M["tuff"], cols=cols)
     S = 0.1925 * H
     tilt = -(90 + LEAN) if face_up else 90 - LEAN
-    o.matrix_world = Matrix.Translation(at + V3(0, 0, 0.45 * S - 0.25)) @ Matrix.Rotation(yaw - math.pi / 2, 4, "Z") @ Matrix.Rotation(math.radians(tilt), 4, "X")
+    o.matrix_world = Matrix.Translation(at + V3(0, 0, 0.45 * S - 0.25)) @ Matrix.Rotation(yaw + math.pi / 2, 4, "Z") @ Matrix.Rotation(math.radians(tilt), 4, "X")
     return o
 
 
@@ -700,13 +706,18 @@ hero_b = moai("ahu_b", AH, M["tuff"], cols=112, keys=True)
 hero_b.location = B_AT
 hero_b.rotation_euler = (0, 0, math.pi)
 visible(hero_b, B_WIN)
-TRIM = (T("carved", 1), T("journey.") + 2)
-shape_key(hero_b, "platform", [(0, 0.0), (TRIM[0], 0.0), (TRIM[1], 1.0)])
-ghost_b = moai("ghost_b", AH, ghost_mat("ghost_b", [(TRIM[0] - 2, T("other") + 12)]), cols=96)
+# First the base is cut back inside the gold road shape; the gold goes; then the statue is set
+# upright. Straightening moves the head back past the old outline, so the outline must be gone by
+# then: carving cannot add stone (A7 pass 1).
+TRIM = (T("carved", 1), T("end"))
+UPRIGHT = (T("end") + 4, T("journey.") + 2)
+shape_key(hero_b, "trim", [(0, 0.0), (TRIM[0], 0.0), (TRIM[1], 1.0), (UPRIGHT[0], 1.0), (UPRIGHT[1], 0.0)])
+shape_key(hero_b, "platform", [(0, 0.0), (UPRIGHT[0], 0.0), (UPRIGHT[1], 1.0)])
+ghost_b = moai("ghost_b", AH, ghost_mat("ghost_b", [(TRIM[0] - 2, UPRIGHT[0])]), cols=96)
 ghost_b.location = B_AT + V3(0, 0, 0.002)
 ghost_b.rotation_euler = hero_b.rotation_euler
 ghost_b.scale = (1.003, 1.003, 1.0)
-visible(ghost_b, (TRIM[0] - 2 + SHIFT, B_WIN[1]))
+visible(ghost_b, (TRIM[0] - 2 + SHIFT, UPRIGHT[0] + SHIFT))
 pin("b_trim", hero_b, V3(0, -0.55 * 0.1925 * AH, 0.08 * AH))
 pin("b_top", hero_b, V3(0, -AH * math.tan(math.radians(LEAN)), AH))
 pin("b_bot", hero_b, V3(0, 0, 0))
@@ -970,7 +981,14 @@ for kind in ("MULTIPLE_SCATTERING", "SINGLE_SCATTERING", "NISHITA"):
     except TypeError:
         continue
 sky.sun_rotation = math.radians(60)  # the north-west: the statues on the platform face inland, lit
-sky.sun_elevation = math.radians(32)
+# High sun over the face-up road statue only: at 32 deg its brow threw shadows that read as eye
+# sockets under the label "no eye sockets" (A7 pass 1). The shot is cut in and out, so it can jump.
+for frame, deg in ((0, 32), (T("none") - 1 + SHIFT, 32), (T("none") + SHIFT, 72), (T("so,") - 1 + SHIFT, 72), (T("so,") + SHIFT, 32)):
+    sky.sun_elevation = math.radians(deg)
+    sky.keyframe_insert("sun_elevation", frame=frame)
+for fc in world.node_tree.animation_data.action.layers[0].strips[0].channelbags[0].fcurves:
+    for kp in fc.keyframe_points:
+        kp.interpolation = "CONSTANT"
 W = N(world.node_tree)
 wdir = W.new("ShaderNodeSeparateXYZ")
 W.link(W.new("ShaderNodeTexCoord").outputs["Generated"], wdir.inputs[0])
