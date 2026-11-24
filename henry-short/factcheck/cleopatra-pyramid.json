@@ -1,111 +1,663 @@
 {
   "script": "script/cleopatra-pyramid.txt",
-  "sha256": "881d2e46eea28a65b46b72f7e24565705181e328feabed23b8b5bbe8a0bec8a2",
-  "checked": "2026-11-22",
+  "sha256": "5e7989c918353fcbbef478e204da598465f98d8e7ecd007f2c2cff0e510f79fc",
+  "checked": "2026-11-23",
   "claims": [
     {
       "n": 1,
-      "claim": "Cleopatra lived closer to the Moon landing than to the building of the Great Pyramid.",
+      "claim": "What did the Great Pyramid look like in Cleopatra's day? Not this. (said over a photograph of the pyramid as it is now)",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Rosso, Toxicology Reports 8 (2021), PMC8042289 (pmc.ncbi.nlm.nih.gov/articles/PMC8042289/); Sheisha et al., PNAS 119(37) (2022), PMC9477388 (pmc.ncbi.nlm.nih.gov/articles/PMC9477388/); NASA images-api.nasa.gov record as11-40-5903",
-      "note": "Rosso: 'Cleopatra VII was born at 69 BC'; 'committed suicide in August 30 BC'. NASA AS11-40-5903: Aldrin on the lunar surface, 20 July 1969. Sheisha: the Great Pyramid is the 'Khufu Pyramid'; his accession 'ranges from 2613 to 2577 BCE (1 sigma)' (14C), or 2589, 2554, or 2480 +/- 5 BCE. Even on the lowest date (Spence, reign ending c. 2453 with Year 27), the pyramid is >= 2,384 years before her birth against 2,037 years from 69 BC to AD 1969; from her death, >= 2,423 against 1,998. True as stated at second two, on every chronology given. Erdil 2025 not opened; not needed for this claim."
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.63.5); Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 (2.124.5); frames 0-160 in out/review/factcheck12/ (2 fps full-size frames in full/, every frame around each cut in trans/)",
+      "note": "Hook (A4). The line asserts only that it looked different; that rests on Herodotus 'the whole is of stone polished and most exactly fitted' and Diodorus 'the stones remain to this day still preserving their original position and the entire structure undecayed', both read. 'In Cleopatra's day', not 'Cleopatra saw' (A5). SOURCES 1 quotes the line exactly. Unsure point, not a fault: for the first 3.7 s the present-day photo sits under the label 'In Cleopatra's day?' and the 'Today' label only arrives at about 3.9 s; it is a question, so nothing false is asserted, but 'Today' from frame 0 would be safer for a viewer who swipes at 2 s."
     },
     {
       "n": 2,
-      "claim": "So what did the pyramid look like in her day? Not this.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Diodorus 1.63.5, Oldfather Loeb 279 (1933), archive.org/stream/diodorus-of-sicily-in-twelve-volumes.-vol.-1-loeb-279 (djvu full text); Tallet & Marouard 2014 (see 3)",
-      "note": "Implied claim: in the 1st c. BC the pyramid looked different from today's stepped core. Supported by claim 3's sources (casing then in place; Oldfather's note: 'the facing, which has now almost entirely disappeared'). Visual 'this' not yet cut; when it is, the picture must show the present-day pyramid with exposed core (A6). No claim Cleopatra saw it."
-    },
-    {
-      "n": 3,
       "claim": "It still wore its smooth, polished outer casing.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Herodotus 2.124-125, tr. Godley, Loeb 117, archive.org/stream/herodotus01hero (djvu full text); Diodorus 1.63.5 + Oldfather n. 1 p. 217, Loeb 279 (archive.org, as in 2); Tallet & Marouard, Near Eastern Archaeology 77(1) 2014, p. 9, archive.org/stream/theharborofkhufuontheredseacoastatwadialjarfegypt",
-      "note": "Herodotus 2.124: 'the whole is of stone polished and most exactly fitted'; Godley's note at 2.125: the filling stones 'make the side of the pyramid a smooth inclined plane'. 'Still' in her day: Diodorus (visit 60-56 BC) 'the stones remain to this day still preserving their original position and the entire structure undecayed'. 'Casing': T&M 2014 p. 9, Tura blocks 'probably used for the external casing of the Great Pyramid, made of fine limestone'; Oldfather: 'Including the facing, which has now almost entirely disappeared'. Non-blocking: SOURCES entry 3 rests 'casing' on the NOVA interviews (not A2); replace that citation with T&M 2014 p. 9 and Oldfather's note, which both say it."
+      "source_checked": "Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 (2.124.5); Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.63.4-5 and Loeb n. 53); Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 10",
+      "note": "Herodotus (5th c. BC): 'of stone polished and most exactly fitted'. Diodorus, who visited in 60-56 BC: 'the stones remain to this day still preserving their original position and the entire structure undecayed', and the pyramid 'tapers to the top, where each side is six cubits long'. Tallet & Marouard: Tura blocks 'were probably used for the external casing of the Great Pyramid, made of fine limestone'. All three quotations in SOURCES 2 are in the sources as quoted. Unsure point: no 1st-century-BC source read uses the word 'polished'; 'still polished' is an inference from Herodotus plus Diodorus's 'undecayed'. I accept it under A3 because the line describes the casing that was polished as still being worn, which Diodorus supports."
+    },
+    {
+      "n": 3,
+      "claim": "Cleopatra lived closer to the Moon landing than to its building.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); NASA Image Library record AS11-40-5903, https://images-api.nasa.gov/search?q=AS11-40-5903; Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API); script/cleopatra-timeline.txt SOURCES 1-5",
+      "note": "Rosso: 'Cleopatra VII was born at 69 BC'. NASA: AS11-40-5903 dated 20 July 1969. 69 BC to AD 1969 = 2,037 years (no year zero). Erdil S2 Table: Djedefra's accession (end of Khufu's reign) median 2565, 2577, 2586, 2603, 2603 BC across the five models, so 2,496-2,534 years before 69 BC. Sheisha lists Khufu's accession as 2613-2577, 2589, 2554 or 2480 +/- 5 BCE: even on the lowest the pyramid is about 2,390 years before her birth, more than 2,037. Holds on every chronology read."
     },
     {
       "n": 4,
       "claim": "A Greek historian, Diodorus, visited Egypt when Cleopatra was a girl.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Diodorus 1.44.1 and 1.4.4, Oldfather intro and notes, Loeb 279 (archive.org, as in 2); Rosso 2021 PMC8042289",
-      "note": "1.44.1: 'down to the One Hundred and Eightieth Olympiad, the time when we visited Egypt and the king was Ptolemy, who took the name of The New Dionysus'; Oldfather n. 2: Auletes, 'father of the famous Cleopatra' (Loeb numbers him XI; Rosso: Ptolemy XII Auletes, father of Cleopatra VII; script gives no number). 180th Olympiad = 60/59-57/56 BC; born 69 BC, she was about 9-13. 'Greek historian': 1.4.4 city of origin Agyrium in Sicily; Jerome via Oldfather, 'a writer of Greek history'."
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.44.1 and Loeb n. 5); Oldfather's Loeb Introduction, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/Introduction*.html; Rosso 2021, PMC8042289 full text (NCBI BioC API); SMB catalogue record, https://recherche.smb.museum/detail/677025",
+      "note": "1.44.1: 'down to the One Hundred and Eightieth Olympiad, the time when we visited Egypt and the king was Ptolemy, who took the name of The New Dionysus' (quoted exactly in SOURCES 4). Loeb introduction: 'the 180th Olympiad (60/59-57/6 B.C.), in the course of which he visited Egypt (1.44.1)'. Loeb n. 5: that Ptolemy is 'the father of the famous Cleopatra'. Born 69 BC (Rosso; the Berlin museum record also says 'im Jahr 69 v. Chr. ... geboren'), so she was about 9 to 13."
     },
     {
       "n": 5,
       "claim": "He wrote that its stones were still in place.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Diodorus 1.63.2-5 + Oldfather n. 1 p. 215, Loeb 279 (archive.org, as in 2)",
-      "note": "1.63.5: 'the stones remain to this day still preserving their original position'. 'Its' = the largest pyramid, built by Chemmis; Oldfather: 'Chemmis is the Cheops of Herodotus (2. 124), the Khufu of the monuments', i.e. the Great Pyramid."
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.63.2, 1.63.5, Loeb n. 52)",
+      "note": "1.63.5: 'the stones remain to this day still preserving their original position'. 'Its' is 'the largest of the three pyramids', built by 'Chemmis' (1.63.2); Loeb n. 52: 'Chemmis is the Cheops of Herodotus (2.124), the Khufu of the monuments'. The statement is Diodorus's own, not hearsay ('as they say' attaches only to the count of years)."
     },
     {
       "n": 6,
       "claim": "He was told three hundred and sixty thousand men spent twenty years building it.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Diodorus 1.63.9, Loeb 279 p. 219 (archive.org, as in 2)",
-      "note": "'three hundred and sixty thousand men, as they say, were employed on the undertaking, and the whole structure was scarcely completed in twenty years'. 'He was told' matches 'as they say' and marks it as report, not record (A5)."
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.63.9; 1.64.3 for the cut sentence)",
+      "note": "1.63.9: 'three hundred and sixty thousand men, as they say, were employed on the undertaking, and the whole structure was scarcely completed in twenty years', exactly as quoted in SOURCES 5. 'He was told' carries 'as they say' (A5). The cut inscription sentence is at 1.64.3 as SOURCES says."
     },
     {
       "n": 7,
-      "claim": "He wrote that an inscription listed what the workers' vegetables and laxatives cost: over sixteen hundred talents.",
+      "claim": "Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyrus documents from the reign of the pyramid's own king, Khufu.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Diodorus 1.64.3, Loeb 279 p. 219 (archive.org, as in 2)",
-      "note": "'an inscription on the larger pyramid gives the sum of money expended on it, since the writing sets forth that on vegetables and purgatives for the workmen there were paid out over sixteen hundred talents'. 'Laxatives' = Oldfather's 'purgatives'. Framed as Diodorus's report ('He wrote'), not as a surviving inscription; no 'of silver' (that is Herodotus 2.125)."
+      "source_checked": "Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004; Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf abstract and p. 157; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API)",
+      "note": "Abstract: 'In 2013 the discovery of several dozen fragments of papyrus, the oldest inscribed papyri ever unearthed in Egypt, confirmed the early date of this site and revealed a final closure of this installation at the end of the reign of Khufu' (exactly as quoted). Full text p. 8: 'the 2013 campaign has led to an even more remarkable discovery in front of galleries G1 and G2, where a large concentration of several hundreds of papyrus fragments has been found'; 'Khufu's regnal Year 27'. 2016: papyri, 'some of them name King Khufu'; '(ca. year 26-27)'. Sheisha: 'the Great Pyramid of Giza (Khufu Pyramid)'. Title: 'The Harbor of Khufu on the Red Sea Coast at Wadi al-Jarf'."
     },
     {
       "n": 8,
-      "claim": "Then, in 2013, at an ancient harbour on the Red Sea, archaeologists found papyri from the reign of the pyramid's own king, Khufu.",
-      "where": "spoken",
-      "verdict": "confirmed",
-      "source_checked": "Tallet & Marouard, 'The Harbor of Khufu on the Red Sea Coast at Wadi al-Jarf, Egypt', NEA 77(1): 4-14 (2014), doi:10.5615/neareastarch.77.1.0004, full scan archive.org/stream/theharborofkhufuontheredseacoastatwadialjarfegypt",
-      "note": "p. 8: 'the 2013 campaign has led to an even more remarkable discovery ... several hundreds of papyrus fragments', 'very well dated to the end of Khufu's reign', 'Khufu's regnal Year 27'. Title and p. 6: harbour/port complex on the Red Sea coast, 'ca. 2600-2550 b.c.e.'. Khufu = the Great Pyramid's king (Sheisha 2022; Oldfather on Diodorus)."
-    },
-    {
-      "n": 9,
       "claim": "The oldest papyri with writing ever found in Egypt.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Tallet & Marouard 2014, p. 8 (archive.org scan, as in 8)",
-      "note": "'This information makes these documents the oldest inscribed papyri that have ever been discovered in Egypt.' 'With writing' = 'inscribed' (older blank papyrus exists, so the qualifier must stay). The scope is the source's, as of 2014; I found no later source contradicting it but did not search for one."
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf p. 135; web search 2026-11-23 for any older inscribed papyrus found since",
+      "note": "2014: 'This information makes these documents the oldest inscribed papyri that have ever been discovered in Egypt.' 2016: 'a papyrus archive from the time of King Khufu - the oldest found in Egypt so far'. 'With writing' keeps 'inscribed' (older blank papyrus exists). The screen adds '(as of 2014)'. A search today found no report of an older inscribed papyrus; that is absence of evidence, so the on-screen date qualifier matters and should stay."
+    },
+    {
+      "n": 9,
+      "claim": "Among them was the logbook of an inspector named Merer.",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8",
+      "note": "'It is a personal logbook that records every day activities of a team led by a Memphis official, the inspector Merer (shd Mrr), who was in charge of a team of about 200 men.' The quotation in SOURCES 7 matches (with its ellipsis)."
     },
     {
       "n": 10,
-      "claim": "Among them was the logbook of Merer's boat crew, hauling limestone from a quarry seventeen kilometres away to the pyramid.",
+      "claim": "His boat crew hauled limestone from a quarry seventeen kilometres away to the pyramid.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Tallet & Marouard 2014, pp. 8-9 (archive.org scan, as in 8); Sheisha et al. 2022, PMC9477388",
-      "note": "T&M: 'a personal logbook that records every day activities of a team led by ... the inspector Merer', 'about 200 men'; 'transportation, on the Nile and connected canals, of stone blocks, which had been extracted from the northern and southern quarries of Tura', 'delivered within four days at the pyramid construction site'. Sheisha: 'The Journal of Merer ... describes the transport of limestone from Toura, ~17 km from the Giza Plateau, to the construction site of the Great Pyramid of Khufu.' 'Boat crew' fits transport by river; T&M also call them quarrymen, which the script does not contradict."
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 9-10; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf n. 2; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API)",
+      "note": "2014: 'the transportation, on the Nile and connected canals, of stone blocks, which had been extracted from the northern and southern quarries of Tura'; 'delivered within four days at the pyramid construction site'. 2016 n. 2: 'logs from a team of sailors shipping blocks of limestone from Tura to Giza'. Sheisha: 'the transport of limestone from Toura, ~17 km from the Giza Plateau, to the construction site of the Great Pyramid of Khufu'. All as quoted in SOURCES 7. The source's '~17' is spoken as 'seventeen' and shown as '~17 km': rounding within A3. 'A quarry' simplifies 'the northern and southern quarries of Tura'."
     },
     {
       "n": 11,
       "claim": "They lay buried for about four and a half thousand years.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Tallet & Marouard 2014, pp. 8, 11-12 (archive.org scan, as in 8); Sheisha et al. 2022, PMC9477388",
-      "note": "T&M: papyri 'deposited between the blocking stones during the last phase of occupation', found in 'the rubble filling' at gallery G1, site closed 'at the end of the reign of Khufu, ca. Year 27'; found 2013. Khufu's accession (Sheisha) 2613-2577 BCE (14C), 2589, 2554 or 2480 BCE; + 27 years gives deposit c. 2586-2453 BC, i.e. about 4,465-4,598 years before AD 2013. 'About four and a half thousand' covers all. Erdil 2025 not opened; not needed."
+      "source_checked": "Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004; Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 3, 8, 11; Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "Found 2013; deposited 'between the blocking stones during the last phase of occupation of the site', a closure 'at the very end of the reign, around Year 27'. End of Khufu's reign: Erdil medians 2565-2603 BC, so 4,577-4,615 years to 2013; on Tallet & Marouard's own dates for Khufu (ca. 2580-2550 BCE) about 4,560. 'About four and a half thousand' covers the range."
     },
     {
       "n": 12,
       "claim": "To Cleopatra, the pyramid was ancient history.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "As claim 1 (Rosso PMC8042289; Sheisha PMC9477388)",
-      "note": "About 2,400-2,550 years separated the building from her birth on the published chronologies. Characterisation, not a claim about what she knew."
+      "source_checked": "Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005; Rosso 2021, PMC8042289 full text (NCBI BioC API); script/cleopatra-timeline.txt SOURCES 6",
+      "note": "About 2,500 years separate the end of Khufu's reign (2565-2603 BC) from her birth (69 BC). A characterisation of that span, not a claim about what she knew; SOURCES 9 says so."
     },
     {
       "n": 13,
       "claim": "We can read the work log of a crew that helped build it.",
       "where": "spoken",
       "verdict": "confirmed",
-      "source_checked": "Tallet & Marouard 2014, pp. 8-11 (archive.org scan, as in 8); Sheisha et al. 2022, PMC9477388",
-      "note": "T&M: the logbook reports 'many operations related to the construction of the Great Pyramid of Khufu at Giza', blocks 'probably used for the external casing'; Sheisha: transport 'to the construction site of the Great Pyramid of Khufu'. 'We can read': the text is read and quoted by its excavators (T&M 2014, Fig. 14b and pp. 8-11)."
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 8-10; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf n. 2; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API) (reference list: Tallet 2017)",
+      "note": "The logbook is 'in hieratic' and its content is reported in detail by its excavators (daily operations, Tura, 'Horizon of Khufu', Ankhhaf); the edition is Tallet 2017, 'Les papyrus de la mer Rouge I: Le Journal de Merer', which SOURCES honestly marks as not read and cites through T&M 2016 n. 2 and Sheisha's reference list, where I found it (A2). 'Helped build': the blocks went to 'the pyramid construction site' and 'were probably used for the external casing'."
+    },
+    {
+      "n": 14,
+      "claim": "What would you leave behind for someone to read four thousand years from now?",
+      "where": "spoken",
+      "verdict": "confirmed",
+      "source_checked": "script/cleopatra-pyramid.txt SOURCES 10; GUARDRAILS E2",
+      "note": "A question, no factual claim. It asks for no action, so not engagement bait."
+    },
+    {
+      "n": 15,
+      "claim": "Every spoken sentence has a numbered SOURCES entry quoting it exactly; the burned-in captions are the script word for word",
+      "where": "on-screen: burned-in captions (whole video)",
+      "verdict": "confirmed",
+      "source_checked": "script/cleopatra-pyramid.txt; src/generated/cleopatra-pyramid.alignment.json; public/vo/cleopatra-pyramid.wav",
+      "note": "Checked by program: each of the ten script lines appears verbatim (whitespace-normalised) in the SOURCES block; the alignment's word list equals the script text above '---'; the alignment's sha256 (4d27ab32...) is the sha256 of the WAV. Captions read in the frames match. Script sha256 is 5e7989c9... as required."
+    },
+    {
+      "n": 16,
+      "claim": "SOURCES 2 quotes Petrie: the North Pyramid at Dahshur is like the Great Pyramid in 'the fineness and whiteness of its casing'; fine Mokattam limestone weathers 'very quickly to the brown tint, proper to the fine Mokattam limestone'",
+      "where": "SOURCES block (basis for the drawn colour)",
+      "verdict": "confirmed",
+      "source_checked": "Petrie 1883 ch. 18, https://www.ronaldbirdsall.com/gizeh/petrie/c18.html; Petrie 1883 ch. 6, https://www.ronaldbirdsall.com/gizeh/petrie/c6.html",
+      "note": "Both passages are there as quoted. Note for the owner: the ch. 6 passage says such stone darkens 'completely in about twenty years', which is a reason the casing may have looked browner than drawn after 2,500 years; no source read settles it, and the screen says 'colour is an estimate' on every shot of the casing, so no viewer is left with an unsupported colour as fact."
+    },
+    {
+      "n": 17,
+      "claim": "SOURCES 4 quotes Rosso: 'born at 69 BC from an illegitimate union of Ptolemy XII'; SOURCES 6 quotes T&M 2016: papyri that 'name King Khufu', 'year 26-27'; SOURCES 8 cites Erdil's median 2565-2603 BC",
+      "where": "SOURCES block",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf; Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "Rosso: 'Cleopatra VII was born at 69 BC from an illegitimate union of Ptolemy XII'. T&M 2016: 'some of them name King Khufu'; '(ca. year 26-27)' (the source prints an en dash). Erdil S2: Djedefra accession medians 2565/2577/2586/2603/2603 BC. All present."
+    },
+    {
+      "n": 18,
+      "claim": "Picture: photograph of the Great Pyramid as it is now, stepped core showing",
+      "where": "on-screen: photo, 0-5.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Commons API record for File:Kheops-Pyramid.jpg (imageinfo, extmetadata, wikitext) and User:Nina-no/Ninabilde; public/img/kheops-pyramid.jpg; frames in out/review/factcheck12/ (2 fps full-size frames in full/, every frame around each cut in trans/)",
+      "note": "The file is Commons' 'Kheops pyramid' by Nina, March 2005; the local file's sha1 (32e40e87...) is the current Commons revision. It shows Khufu's pyramid (no casing cap at the summit, unlike Khafre's). The visitors at the base are small and not identifiable (C4)."
+    },
+    {
+      "n": 19,
+      "claim": "Label: 'In Cleopatra's day?'",
+      "where": "on-screen: photo, 0-3.7 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h000-h007",
+      "note": "A question, repeating the spoken line; asserts nothing. See claim 1 for the one reservation (no 'Today' label until 3.9 s)."
+    },
+    {
+      "n": 20,
+      "claim": "Stamp: 'NOT THIS'",
+      "where": "on-screen: photo, 3.7-5.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html (1.63.5); Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 (2.124.5)",
+      "note": "Same claim as spoken line 1, sourced there."
+    },
+    {
+      "n": 21,
+      "claim": "Label: 'Today' / 'stepped core showing'",
+      "where": "on-screen: photo, 3.9-5.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Commons API record for File:Kheops-Pyramid.jpg (imageinfo, extmetadata, wikitext) and User:Nina-no/Ninabilde; Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html Loeb n. 53",
+      "note": "The photo is from March 2005, not this year; the pyramid's condition is the same, and the Loeb note read says the facing 'has now almost entirely disappeared'. 'Today' is fair."
+    },
+    {
+      "n": 22,
+      "claim": "Credit: 'Photo: Nina Aldin Thune, Wikimedia Commons, CC BY 2.5'",
+      "where": "on-screen: photo, 0-5.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Commons API record for File:Kheops-Pyramid.jpg (imageinfo, extmetadata, wikitext) and User:Nina-no/Ninabilde",
+      "note": "Commons: LicenseShortName 'CC BY 2.5' ({{cc-by-2.5}} on the file page, beside a GFDL tag). The photographer's template: 'Please credit this photo Nina Aldin Thune in the immediate vicinity of the image.' The credit is on the picture for as long as the photo shows and fades with it. Read at full size: legible."
+    },
+    {
+      "n": 23,
+      "claim": "Picture: the 3D pyramid first as a stepped core, then an off-white casing wiped on from the top down",
+      "where": "on-screen: 3D, 5.3-7.1 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py (BASE 230.35, HEIGHT 146.6, TOP 4.0, 200 courses); Petrie 1883 ch. 6, https://www.ronaldbirdsall.com/gizeh/petrie/c6.html (sec. 25: mean base 9068.8 in, height 5776.0 +/- 7.0 in); Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 2.125.5; Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.63.4",
+      "note": "Proportions: 9068.8 in = 230.35 m and 5776 in = 146.7 m in Petrie, as modelled. The 4 m flat top is close to Diodorus's 'six cubits'. A top-down wipe is not a building sequence, and Herodotus in any case says 'the upper part of the pyramid was finished off first'. Small print 'illustration - in antiquity - colour is an estimate' is up within about 5 frames of the 3D picture appearing."
+    },
+    {
+      "n": 24,
+      "claim": "Pin: 'Stepped core'",
+      "where": "on-screen: 3D, 5.4-6.0 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; Petrie 1883 ch. 6, https://www.ronaldbirdsall.com/gizeh/petrie/c6.html",
+      "note": "Labels the masonry under the casing, shown for under a second before the casing covers it. Petrie: 'the casing courses were on the same levels as the present core courses'."
+    },
+    {
+      "n": 25,
+      "claim": "Label: 'Outer casing' / 'smooth, polished stone'",
+      "where": "on-screen: 3D, 6.6-8.9 s",
+      "verdict": "confirmed",
+      "source_checked": "Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 (2.124.5); Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 10",
+      "note": "'Polished and most exactly fitted' (Herodotus); 'external casing ... made of fine limestone' (T&M). Same claim as spoken line 2."
+    },
+    {
+      "n": 26,
+      "claim": "Picture: the casing close up, with fine joints in regular courses and one man standing at its foot",
+      "where": "on-screen: 3D, 7.1-8.9 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py (BASE_COURSE 1.5 m, COURSE_H 0.73 m, person 1.6-1.8 m, 5 m from the face); Petrie 1883 ch. 6, https://www.ronaldbirdsall.com/gizeh/petrie/c6.html (1st course 57.6-58.9 in; joints mean 1/50 in; '75 inches up the face'); frame full/h016.jpg",
+      "note": "Measured in the frame: the man is about 215 px tall and the base course behind him about 125 px, which is right for a 1.5 m course 5 m further from the camera. Petrie's first course is about 58 in = 1.48 m. Simplifications, all inside 'illustration': the upper courses are one even height (the real ones vary), the block width (1.6 m) is not from a source, and the joints are drawn about 1 cm wide where Petrie measured 1/50 inch, so the real face would have shown almost no joints at this distance. None of this leaves a false belief the labels do not cover."
+    },
+    {
+      "n": 27,
+      "claim": "Pin: 'One person' / 'for scale'",
+      "where": "on-screen: 3D, 7.1-8.7 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py; tools/blender/make_people.py; trans/t0268.jpg",
+      "note": "A generic man in a kilt, back to camera. He is hidden 5 frames before the word 'Cleopatra' and is gone before her portrait or any date appears (checked frame by frame), so he cannot be read as her (A5)."
+    },
+    {
+      "n": 28,
+      "claim": "Small print: 'illustration · in antiquity · colour is an estimate'",
+      "where": "on-screen: 3D, 5.4-8.9 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; Petrie 1883 ch. 18, https://www.ronaldbirdsall.com/gizeh/petrie/c18.html; Petrie 1883 ch. 6, https://www.ronaldbirdsall.com/gizeh/petrie/c6.html",
+      "note": "Read at full size: legible. It is on every frame of the casing shots except the first few of the dissolve. It honestly covers the colour (no source read says how white the casing still was)."
+    },
+    {
+      "n": 29,
+      "claim": "Picture: marble portrait head",
+      "where": "on-screen: photo, 8.8-10.5 s",
+      "verdict": "confirmed",
+      "source_checked": "SMB catalogue record, https://recherche.smb.museum/detail/677025; Commons API record for File:Kleopatra-VII.-Altes-Museum-Berlin1.jpg (imageinfo, extmetadata, wikitext); public/img/cleopatra-berlin.jpg",
+      "note": "Local sha1 ffb3e885... is the current Commons revision (the 2012 noise-reduction overwrite by Arbeiterreserve of Louis le Grand's 2007 photo), as SOURCES.json says. The museum titles the object 'Portraetkopf der Kleopatra VII.' and says it matches her coins. Shown whole, uncropped."
+    },
+    {
+      "n": 30,
+      "claim": "Label: 'Cleopatra VII' / 'marble portrait, 1st century BC · Berlin'",
+      "where": "on-screen: photo, 8.9-10.4 s",
+      "verdict": "confirmed",
+      "source_checked": "SMB catalogue record, https://recherche.smb.museum/detail/677025",
+      "note": "Museum record: Ident. Nr. 1976.10, Antikensammlung (Staatliche Museen zu Berlin); 'Marmor'; 'Datierung 3. Viertel 1. Jh.v.Chr. ... Genauer: um 50 - 38 v.Chr.' '1st century BC' is what both the museum and Commons (40-30 BC) support."
+    },
+    {
+      "n": 31,
+      "claim": "Credit: 'Photo: Louis le Grand, Wikimedia Commons, public domain'",
+      "where": "on-screen: photo, 8.8-10.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Commons API record for File:Kleopatra-VII.-Altes-Museum-Berlin1.jpg (imageinfo, extmetadata, wikitext)",
+      "note": "Commons: Author 'Louis le Grand', Permission {{PD-self}}, LicenseShortName 'Public domain', AttributionRequired false. Credit given anyway."
+    },
+    {
+      "n": 32,
+      "claim": "Picture: the timeline seen from above, the pyramid at one end, with distances standing for years",
+      "where": "on-screen: 3D, 10.4-13.4 s and 50.2-57.4 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py (K = 0.25 m per year; years -2599, -68, 1969, 2013; camera 4 degrees off vertical); src/generated/cleopatra-world.anchors.json",
+      "note": "The model is linear. On screen (from the anchors) the 2600 BC-69 BC span is 1.269 times the 69 BC-1969 span against a true 2,531/2,037 = 1.2425, and 2600 BC-2013 is 1.804 times 2600 BC-69 BC against a true 1.822: a perspective error of 1-2 %, invisible, and it does not change which span is longer. 'One scale' stands."
+    },
+    {
+      "n": 33,
+      "claim": "Small print: 'distance = time · one scale · colours are estimates · illustration'",
+      "where": "on-screen: 3D, 10.4-13.4 s and 50.2-57.4 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; anchors as in the previous claim",
+      "note": "True of the picture to within 2 % (previous claim). Legible at full size."
+    },
+    {
+      "n": 34,
+      "claim": "Counter: '69 BC', then '1969', then 'c. 2600 BC'",
+      "where": "on-screen: counter, 10.4-13.6 s",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); NASA Image Library record AS11-40-5903, https://images-api.nasa.gov/search?q=AS11-40-5903; Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "Each is the date being spoken. '69 BC' is on for only about 4 frames, over Cleopatra's own fading portrait, never over the scale figure. 'c.' is on the pyramid date."
+    },
+    {
+      "n": 35,
+      "claim": "Pin: '69 BC' / 'Cleopatra born'",
+      "where": "on-screen: timeline, 10.4-13.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); SMB catalogue record, https://recherche.smb.museum/detail/677025",
+      "note": "'Cleopatra VII was born at 69 BC' (Rosso); 'im Jahr 69 v. Chr. in Alexandria geboren' (museum record)."
+    },
+    {
+      "n": 36,
+      "claim": "Pin: '1969' / 'Moon landing'",
+      "where": "on-screen: timeline, 10.7-13.4 s",
+      "verdict": "confirmed",
+      "source_checked": "NASA Image Library record AS11-40-5903, https://images-api.nasa.gov/search?q=AS11-40-5903",
+      "note": "'AS11-40-5903 (20 July 1969) --- Astronaut Edwin E. Aldrin Jr. ... walks on the surface of the moon'."
+    },
+    {
+      "n": 37,
+      "claim": "Pin: 'c. 2600 BC' / 'Great Pyramid built'",
+      "where": "on-screen: timeline, 12.3-13.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API); Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 3, 10",
+      "note": "End of Khufu's reign: medians 2565-2603 BC (Erdil); T&M: 'the pyramid was clearly at a final stage of the construction project at the very end of the Khufu's reign'. 'c. 2600' is the top of that range and about 50 years earlier than T&M's own 'ca. 2580-2550 b.c.e.' for Khufu; the 'c.' carries it and the comparison holds on every date."
+    },
+    {
+      "n": 38,
+      "claim": "Bracket: '2,037 yrs' (69 BC to 1969)",
+      "where": "on-screen: timeline, 10.9-13.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); NASA Image Library record AS11-40-5903, https://images-api.nasa.gov/search?q=AS11-40-5903",
+      "note": "68 + 1,969 = 2,037: there is no year zero. Exact."
+    },
+    {
+      "n": 39,
+      "claim": "Bracket: '~2,500 yrs' (c. 2600 BC to 69 BC)",
+      "where": "on-screen: timeline, 12.5-13.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "2,496-2,534 on Erdil's medians; 2,531 from the round 2600. '~' is on it."
+    },
+    {
+      "n": 40,
+      "claim": "Picture: a hand writing with a reed pen on a sheet, no face",
+      "where": "on-screen: 3D, 13.7-19.5 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py; tools/blender/make_people.py; frame full/h034.jpg",
+      "note": "Only a hand, a pen and a page; the marks are strokes, not letters, so no invented text is shown as his (A5). He is not placed at the pyramid. Labelled 'illustration'. It could suggest he wrote the passage in Egypt, which no source says, but nothing on screen states it."
+    },
+    {
+      "n": 41,
+      "claim": "Label: 'Diodorus' / 'Greek historian'",
+      "where": "on-screen: 3D, 14.6-19.5 s",
+      "verdict": "confirmed",
+      "source_checked": "Oldfather's Loeb Introduction, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/Introduction*.html; Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html",
+      "note": "Diodorus of Agyrium in Sicily, who wrote in Greek 'The Library of History'."
+    },
+    {
+      "n": 42,
+      "claim": "Counter: '60–56 BC' / 'visited Egypt · sometime in these years'",
+      "where": "on-screen: counter, 15.2-18.6 s",
+      "verdict": "confirmed",
+      "source_checked": "Oldfather's Loeb Introduction, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/Introduction*.html; Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.44.1",
+      "note": "'the 180th Olympiad (60/59-57/6 B.C.), in the course of which he visited Egypt'. 'Sometime in these years' is the honest reading."
+    },
+    {
+      "n": 43,
+      "claim": "Label: 'Cleopatra: about 9–13'",
+      "where": "on-screen: 3D, 17.5-18.6 s",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); SMB catalogue record, https://recherche.smb.museum/detail/677025; Oldfather's Loeb Introduction, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/Introduction*.html",
+      "note": "Born 69 BC; 60 to 56 BC is 9 to 13 years later ('about', since neither her birthday nor his dates are known to the month)."
+    },
+    {
+      "n": 44,
+      "claim": "Small print: 'illustration' (Diodorus shot)",
+      "where": "on-screen: 3D, 13.7-19.5 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h028-h038",
+      "note": "Present throughout the shot; legible at full size."
+    },
+    {
+      "n": 45,
+      "claim": "Picture: the whole pyramid in its casing, intact",
+      "where": "on-screen: 3D, 19.5-22.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.63.4-5; tools/blender/cleopatra_world.py",
+      "note": "'the entire structure undecayed'; smooth to a small flat top, as Diodorus describes. Colour marked as an estimate."
+    },
+    {
+      "n": 46,
+      "claim": "Label: '✓ Its stones still in place' / 'as Diodorus wrote'",
+      "where": "on-screen: 3D, 19.5-21.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.63.5",
+      "note": "'the stones remain to this day still preserving their original position'. The tick is tied to 'as Diodorus wrote', so it reads as his report, which it is."
+    },
+    {
+      "n": 47,
+      "claim": "Small print: 'illustration · colour is an estimate' (casing and first crowd frames)",
+      "where": "on-screen: 3D, 19.5-22.4 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h039-h044",
+      "note": "Present and legible."
+    },
+    {
+      "n": 48,
+      "claim": "Counter: '360,000' / 'men · as he was told'",
+      "where": "on-screen: counter, 22.3-24.5 s",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.63.9",
+      "note": "'three hundred and sixty thousand men, as they say'. The hearsay is marked on screen (A5)."
+    },
+    {
+      "n": 49,
+      "claim": "Picture: a crowd of men in kilts on the plateau round the cased pyramid, from ground level and then from above as a ring",
+      "where": "on-screen: 3D, 22.3-26.7 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py (NMEN = 360_000, assert len(men) == NMEN; ring from 175 m to 407 m radius, 1.18 m2 per figure; figures 1.6-1.8 m); frames h045-h053",
+      "note": "The script instances exactly 360,000 figures at real size beside a real-size pyramid, and the whole ring is inside the frame in the overhead shot, so 'every one is drawn' is true of the picture. It is a picture of a number, not of a building site (the pyramid is finished and cased); the counter and 'as he was told' make that plain."
+    },
+    {
+      "n": 50,
+      "claim": "Small print: '360,000 figures modelled · colour is an estimate · illustration'",
+      "where": "on-screen: 3D, 22.4-24.6 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py; frame full/h047.jpg",
+      "note": "True of the model (previous claim). Legible, though it runs across the crowd."
+    },
+    {
+      "n": 51,
+      "claim": "Counter: '20' / 'years'",
+      "where": "on-screen: counter, 24.6-26.6 s",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html 1.63.9; Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124 2.124.5",
+      "note": "'scarcely completed in twenty years' (Diodorus); Herodotus independently: 'The pyramid itself was twenty years in the making.' The counter itself does not repeat 'as he was told', but it comes up mid-sentence, straight after the 360,000 counter that does, while the voice is still inside 'He was told ...'. I accept it; adding 'as he was told' under the 20 as well would remove any doubt."
+    },
+    {
+      "n": 52,
+      "claim": "Small print: '360,000 figures modelled · colour is an estimate · landscape not to scale'",
+      "where": "on-screen: 3D, 24.6-26.7 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py; frames h049-h053",
+      "note": "From above, the farmland and river are in frame about 1 km from the pyramid; the real valley edge and the Nile are much further. The screen says so."
+    },
+    {
+      "n": 53,
+      "claim": "Counter: '2013'",
+      "where": "on-screen: counter, 27.4-29.4 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004",
+      "note": "'In 2013 the discovery of several dozen fragments of papyrus'."
+    },
+    {
+      "n": 54,
+      "claim": "Picture: a coast with a stone jetty running into the sea and turning, and a cliff with gallery mouths behind the beach",
+      "where": "on-screen: 3D, 26.7-31.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 4-6; tools/blender/cleopatra_world.py (jetty: 95 stones out then 55 at a right angle; 7 galleries)",
+      "note": "T&M: 'an L-shaped pier ... extends underwater to the east over a length of about 160 m, then turns southeast for about 120 m'; storage galleries cut in limestone, each 'narrowed by a series of large blocks of limestone and sealed'. The real installations 'cover an area of ca. 6 km from west to east', so the galleries are drawn far too near the sea, and the pier is drawn above water where today it 'is immersed for the most part': both are covered by 'illustration - not to scale'."
+    },
+    {
+      "n": 55,
+      "claim": "Label: 'An ancient harbour' / 'Wadi al-Jarf'",
+      "where": "on-screen: 3D, 28.7-31.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) title and p. 3",
+      "note": "'The Harbor of Khufu on the Red Sea Coast at Wadi al-Jarf, Egypt'; 'a new harbor complex from the Old Kingdom at Wadi al-Jarf'."
+    },
+    {
+      "n": 56,
+      "claim": "Label: 'Red Sea'",
+      "where": "on-screen: 3D, 29.8-30.6 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 3",
+      "note": "'located on the western coast of the Gulf of Suez', 'the Egyptian shore of the Red Sea'."
+    },
+    {
+      "n": 57,
+      "claim": "Picture: a gallery mouth closed by large stone blocks, papyrus sheets on the sand in front of it; Pin: 'Papyri'",
+      "where": "on-screen: 3D, 31.0-36.7 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; tools/blender/cleopatra_world.py",
+      "note": "'in front of galleries G1 and G2 ... several hundreds of papyrus fragments ... deposited between the blocking stones'. Drawn as a few whole sheets rather than hundreds of fragments; the next shot's label says 'found in fragments'."
+    },
+    {
+      "n": 58,
+      "claim": "Cartouche-shaped label: 'KHUFU' / 'from his reign'",
+      "where": "on-screen: 3D, 33.0-36.7 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf",
+      "note": "'very well dated to the end of Khufu's reign'; 'Khufu's regnal Year 27'; papyri 'name King Khufu'. His name is in Latin letters in an oval frame; no invented hieroglyphs."
+    },
+    {
+      "n": 59,
+      "claim": "Label: 'OLDEST' / 'papyri with writing ever found in Egypt (as of 2014)'",
+      "where": "on-screen: 3D, 36.7-40.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf",
+      "note": "'the oldest inscribed papyri that have ever been discovered in Egypt' (2014). The date qualifier keeps the source's scope."
+    },
+    {
+      "n": 60,
+      "claim": "Small print: 'illustration · not to scale' (harbour and papyri shots)",
+      "where": "on-screen: 3D, 26.7-40.0 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h054-h080",
+      "note": "Present throughout and legible."
+    },
+    {
+      "n": 61,
+      "claim": "Picture: a papyrus sheet with ruled columns and rows of strokes, lying on a flat stone",
+      "where": "on-screen: 3D, 40.0-44.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 9; tools/blender/cleopatra_world.py (papyrus_build(grid=True); roll hidden)",
+      "note": "T&M: the logbook reports 'in form of a timetable with two columns per day'. The strokes are not real signs, so no fake hieratic is passed off as text. The sheet is drawn whole; the label beside it says 'found in fragments'. No scroll is shown."
+    },
+    {
+      "n": 62,
+      "claim": "Pin: 'Merer's logbook' / 'his boat crew's daily work' / 'found in fragments'",
+      "where": "on-screen: 3D, 41.2-44.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf n. 2",
+      "note": "'more than a hundred fragments of varying sizes'; 'a personal logbook that records every day activities of a team led by ... the inspector Merer'; 'a team of sailors'."
+    },
+    {
+      "n": 63,
+      "claim": "Small print: 'illustration' (logbook shot)",
+      "where": "on-screen: 3D, 40.0-44.0 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h081-h088",
+      "note": "Present and legible."
+    },
+    {
+      "n": 64,
+      "claim": "Picture: a wooden boat with a mast, rowers and four stone blocks on a river, a quarried cliff and palms on the far bank",
+      "where": "on-screen: 3D, 44.0-48.3 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 9-10; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf n. 2; tools/blender/cleopatra_world.py (boat 30 m; rowers scaled 1.5; boat runs from the east bank toward the west)",
+      "note": "T&M: blocks moved 'on the Nile and connected canals' from Tura 'on the opposite bank of the Nile' to Giza, by 'a team of sailors'. The boat travels from the Tura side toward the Giza side. Its build, the twelve rowers (the team was 'about 200 men'), the block sizes and the enlarged crew are not from a source; the screen says 'not to scale - colours are estimates - illustration' and states no number of men or boats."
+    },
+    {
+      "n": 65,
+      "claim": "Pin: 'Limestone'",
+      "where": "on-screen: 3D, 45.4-47.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 10; Tallet & Marouard 2016 (JARCE 52) full-text PDF, https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/RedSea/WadiJarf-Tallet2016.pdf n. 2",
+      "note": "'blocks of limestone from Tura'; 'fine limestone'."
+    },
+    {
+      "n": 66,
+      "claim": "Counter: '~17 km' / 'Tura quarry → Giza'",
+      "where": "on-screen: counter, 47.0-50.1 s",
+      "verdict": "confirmed",
+      "source_checked": "Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API)",
+      "note": "'from Toura, ~17 km from the Giza Plateau'. The tilde is kept."
+    },
+    {
+      "n": 67,
+      "claim": "Picture: the Nile from high up, the pyramid on the left bank and the quarry on the right; Pins: 'Giza' / 'the Great Pyramid' and 'Tura quarry'",
+      "where": "on-screen: 3D, 48.3-50.2 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 9; Sheisha et al. 2022, PMC9477388 full text (NCBI BioC API); tools/blender/cleopatra_world.py (camera looks north from the south; Giza at x = 0, Tura cliff at x = 1,660 m)",
+      "note": "Looking north, west is on the left: Giza on the west bank and Tura on the east is correct ('the limestone quarries on the opposite bank of the Nile'). The two are drawn 1.7 km apart and directly opposite each other, where the real distance is about 17 km; the small print says 'not to scale' and the counter gives the real figure."
+    },
+    {
+      "n": 68,
+      "claim": "Small print: 'Nile and canals · not to scale · colours are estimates · illustration'",
+      "where": "on-screen: 3D, 44.0-50.2 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 9; frames h088-h100",
+      "note": "'on the Nile and connected canals'. Present throughout both river shots and legible."
+    },
+    {
+      "n": 69,
+      "claim": "Pin: 'c. 2600 BC' / 'Merer's papyri written'",
+      "where": "on-screen: timeline, 50.9-57.2 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 8; Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "Dated to 'Khufu's regnal Year 27', the end of his reign: 2565-2603 BC on Erdil's medians. Same reservation as claim 37: 'c. 2600' is the early end, and the 'c.' is doing real work."
+    },
+    {
+      "n": 70,
+      "claim": "Pin: '2013' / 'found'",
+      "where": "on-screen: timeline, 51.4-53.9 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 abstract as indexed by OpenAlex, https://api.openalex.org/works/doi:10.5615/neareastarch.77.1.0004",
+      "note": "As claim 7."
+    },
+    {
+      "n": 71,
+      "claim": "Bracket: '~4,500 yrs'; Counter: '~4,500' / 'years buried'",
+      "where": "on-screen: timeline and counter, 51.5-53.9 s",
+      "verdict": "confirmed",
+      "source_checked": "Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005; Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) p. 3",
+      "note": "The sources give about 4,560 (T&M's dates) to 4,615 (Erdil's highest median); '~4,500' is 'about four and a half thousand' and within A3's rounding. A pedant will note that the two pins on screen, c. 2600 BC and 2013, are 4,612 years apart, nearer 4,600; both carry 'c.'/'~', and the claim a viewer takes away (about four and a half thousand years) is what the sources support."
+    },
+    {
+      "n": 72,
+      "claim": "Pin: '69 BC' / 'Cleopatra'; Bracket: '~2,500 yrs' / 'to her: already ancient history'",
+      "where": "on-screen: timeline, 54.0-57.2 s",
+      "verdict": "confirmed",
+      "source_checked": "Rosso 2021, PMC8042289 full text (NCBI BioC API); Erdil et al. 2025 S2 Table, https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0314612.s005",
+      "note": "As claims 35 and 39. 'Already ancient history' is the spoken line's characterisation of a 2,500-year gap, not a claim about her knowledge."
+    },
+    {
+      "n": 73,
+      "claim": "Picture: the ruled papyrus on a stone plinth; Label: 'We can read it' / 'the crew's work log'",
+      "where": "on-screen: 3D, 57.4-61.0 s",
+      "verdict": "confirmed",
+      "source_checked": "Tallet & Marouard 2014 full text, https://archive.org/download/theharborofkhufuontheredseacoastatwadialjarfegypt/ (the _djvu.txt file) pp. 8-10; tools/blender/cleopatra_world.py",
+      "note": "The text has been read and reported by its excavators (claim 13). The sheet is the same illustration as before, marked 'illustration'."
+    },
+    {
+      "n": 74,
+      "claim": "Picture: a phone, a disc and a book on the plinth; Label: 'Us · today' / 'what would you leave?'",
+      "where": "on-screen: 3D, 61.0-63.4 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py",
+      "note": "Generic modern objects with no brand or text; a question, not a claim."
+    },
+    {
+      "n": 75,
+      "claim": "Counter: '+4,000' / 'years from now'; Picture: unpaved ground staked out with posts into the distance",
+      "where": "on-screen: 3D, 63.4-67.3 s",
+      "verdict": "confirmed",
+      "source_checked": "tools/blender/cleopatra_world.py (posts every 100 years to 6026; NOW_Y = 2026)",
+      "note": "The number in the closing question. The posts follow the same 0.25 m per year, but the shot is a low perspective view, so the small print here drops 'one scale' and says only 'distance = time - illustration': correct."
+    },
+    {
+      "n": 76,
+      "claim": "Small print: 'illustration' (plinth shots) and 'distance = time · illustration' (closing shot)",
+      "where": "on-screen: 3D, 57.4-67.3 s",
+      "verdict": "confirmed",
+      "source_checked": "src/shorts/cleopatra-pyramid/index.tsx; frames h115-h134",
+      "note": "Present and legible."
+    },
+    {
+      "n": 77,
+      "claim": "Title: 'What the Great Pyramid looked like in Cleopatra's day'",
+      "where": "on-screen: title (metadata in index.tsx)",
+      "verdict": "confirmed",
+      "source_checked": "Diodorus 1 (Oldfather, Loeb vol. I, 1933) on LacusCurtius, https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html; Herodotus 2.124-125 (Godley 1920) on Perseus, https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0126%3Abook%3D2%3Achapter%3D124",
+      "note": "Describes what the short shows and claims (E2); rests on claims 1-2."
+    },
+    {
+      "n": 78,
+      "claim": "Cross-dissolves: no label, date or disclaimer lands on the wrong picture",
+      "where": "on-screen: all 14 cuts, the photo-to-3D fade and the portrait fades",
+      "verdict": "confirmed",
+      "source_checked": "out/review/factcheck12/trans/ (every frame for half a second either side of each transition, all 16 sheets read)",
+      "note": "Checked frame by frame. Labels fade with their own shot; the scale figure is gone before the portrait; 'one scale' never sits over a not-to-scale shot; each incoming shot has its small print within a few frames. Faint remnants of timeline labels overlap the incoming hand for about 5 frames at under 30 % opacity: not readable as a caption for it."
+    },
+    {
+      "n": 79,
+      "claim": "public/img/kheops-pyramid.jpg: SOURCES.json says photograph by Nina Aldin Thune (User:Nina-no), March 2005, the version straightened and cropped by Dicklyon in 2007, CC BY 2.5, 1581x971",
+      "where": "asset: public/SOURCES.json",
+      "verdict": "confirmed",
+      "source_checked": "Commons API record for File:Kheops-Pyramid.jpg (imageinfo, extmetadata, wikitext) and User:Nina-no/Ninabilde",
+      "note": "All confirmed: Date 2005-03; '(c) 2005 Nina Aldin Thune' in the original upload note; Dicklyon's 2007 revision ('straighten, enhance, crop') restored in 2010 and current, sha1 32e40e87... equal to the local file; 1581x971; CC BY 2.5. Credit wording matches what her template asks."
+    },
+    {
+      "n": 80,
+      "claim": "public/img/cleopatra-berlin.jpg: SOURCES.json says marble portrait head of Cleopatra VII, Antikensammlung Berlin inv. 1976.10 (Altes Museum), museum dating third quarter of the 1st century BC 'um 50 – 38 v. Chr.', Commons dating ca. 40-30 BC, photo by Louis le Grand, public domain, sha1 ffb3e885...",
+      "where": "asset: public/SOURCES.json",
+      "verdict": "confirmed",
+      "source_checked": "SMB catalogue record, https://recherche.smb.museum/detail/677025; Commons API record for File:Kleopatra-VII.-Altes-Museum-Berlin1.jpg (imageinfo, extmetadata, wikitext)",
+      "note": "All confirmed against the museum's own record (Ident. Nr. 1976.10; '3. Viertel 1. Jh.v.Chr.'; 'Genauer: um 50 - 38 v.Chr.'; 'Marmor') and the Commons page (PD-self; 'ca. 40-30 BC'; 'Altes Museum Berlin'; current revision by Arbeiterreserve, 2012, sha1 as stated and equal to the local file)."
+    },
+    {
+      "n": 81,
+      "claim": "public/3d/cleopatra-world.mp4 and cleopatra-world-b.mp4: own work rendered by tools/blender/cleopatra_world.py with six Poly Haven CC0 scans (named authors) and MakeHuman CC0 bodies; GPL of Blender/MPFB does not cover the renders",
+      "where": "asset: public/SOURCES.json",
+      "verdict": "confirmed",
+      "source_checked": "Poly Haven API https://api.polyhaven.com/info/<id> for all six; https://polyhaven.com/license; https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html; blender.org/about/license (2026 Wayback copy; the live page refused the fetch); tools/blender/fetch_assets.sh; ffprobe of both clips",
+      "note": "Authors match exactly: aerial_beach_01 and sandstone_blocks_05 Rob Tuytel; dense_sand Dimitrios Savva; sandy_gravel_02 Dario Barresi; rock_face_03 Dario Barresi and Rico Cilliers; rough_linen colormass and Rico Cilliers. Poly Haven: 'Our assets are all licensed as CC0'. MakeHuman system assets: every listed asset CC0. Blender: 'What you create with Blender is your sole property. All your artwork - images or movie files ...'. Installed Blender is 5.3.0. One error in the note, not a licence matter and not seen by viewers: it says 'Frames 150-2128'; both clips hold 1,845 frames, i.e. 150-1994 of the current edit (the range is left over from the longer script). Correct the note when SOURCES.json is next touched. MPFB's version number (2.0.18) I did not verify."
+    },
+    {
+      "n": 82,
+      "claim": "public/vo/cleopatra-pyramid.wav: synthesised locally with Kokoro-82M, Apache-2.0",
+      "where": "asset: public/SOURCES.json",
+      "verdict": "confirmed",
+      "source_checked": "https://huggingface.co/api/models/hexgrad/Kokoro-82M; src/generated/cleopatra-pyramid.alignment.json",
+      "note": "Hugging Face lists hexgrad/Kokoro-82M as license: apache-2.0. The alignment records 'tools/tts.py --voice af_heart --speed 1.0 --seed 0' and a sha256 equal to the WAV's. A stock voice, not a clone (D3). I did not listen to the audio; the words are checked through the alignment."
     }
   ]
 }
