@@ -1,0 +1,623 @@
+{
+ "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "script": "script/pompeii-casts.txt",
+ "audio": "public/vo/pompeii-casts.wav",
+ "sha256": "d9990c46f1bf79e7cc5bea540d5240defbe7a38d105bb5b4f403a566ced4ac89",
+ "words": [
+  {
+   "text": "Pompeii's",
+   "start": 0.0,
+   "end": 0.555
+  },
+  {
+   "text": "\"mother",
+   "start": 0.555,
+   "end": 1.009
+  },
+  {
+   "text": "and",
+   "start": 1.009,
+   "end": 1.361
+  },
+  {
+   "text": "child\"?",
+   "start": 1.361,
+   "end": 1.78
+  },
+  {
+   "text": "Ancient",
+   "start": 2.46,
+   "end": 2.885
+  },
+  {
+   "text": "DNA",
+   "start": 2.885,
+   "end": 3.191
+  },
+  {
+   "text": "says",
+   "start": 3.191,
+   "end": 3.527
+  },
+  {
+   "text": "the",
+   "start": 3.527,
+   "end": 3.833
+  },
+  {
+   "text": "adult",
+   "start": 3.833,
+   "end": 4.198
+  },
+  {
+   "text": "was",
+   "start": 4.198,
+   "end": 4.505
+  },
+  {
+   "text": "a",
+   "start": 4.505,
+   "end": 4.751
+  },
+  {
+   "text": "man.",
+   "start": 4.751,
+   "end": 5.058
+  },
+  {
+   "text": "Found",
+   "start": 5.745,
+   "end": 6.161
+  },
+  {
+   "text": "in",
+   "start": 6.161,
+   "end": 6.476
+  },
+  {
+   "text": "1974",
+   "start": 6.476,
+   "end": 6.859
+  },
+  {
+   "text": "wearing",
+   "start": 6.859,
+   "end": 7.343
+  },
+  {
+   "text": "a",
+   "start": 7.343,
+   "end": 7.624
+  },
+  {
+   "text": "gold",
+   "start": 7.624,
+   "end": 8.007
+  },
+  {
+   "text": "bracelet,",
+   "start": 8.007,
+   "end": 8.524
+  },
+  {
+   "text": "beside",
+   "start": 8.524,
+   "end": 8.975
+  },
+  {
+   "text": "a",
+   "start": 8.975,
+   "end": 9.256
+  },
+  {
+   "text": "small",
+   "start": 9.256,
+   "end": 9.672
+  },
+  {
+   "text": "child,",
+   "start": 9.672,
+   "end": 10.089
+  },
+  {
+   "text": "he",
+   "start": 10.089,
+   "end": 10.404
+  },
+  {
+   "text": "was",
+   "start": 10.404,
+   "end": 10.753
+  },
+  {
+   "text": "long",
+   "start": 10.753,
+   "end": 11.135
+  },
+  {
+   "text": "described",
+   "start": 11.135,
+   "end": 11.687
+  },
+  {
+   "text": "as",
+   "start": 11.687,
+   "end": 12.002
+  },
+  {
+   "text": "a",
+   "start": 12.002,
+   "end": 12.283
+  },
+  {
+   "text": "mother.",
+   "start": 12.283,
+   "end": 12.733
+  },
+  {
+   "text": "And",
+   "start": 13.455,
+   "end": 13.725
+  },
+  {
+   "text": "the",
+   "start": 13.725,
+   "end": 13.994
+  },
+  {
+   "text": "DNA",
+   "start": 13.994,
+   "end": 14.264
+  },
+  {
+   "text": "found",
+   "start": 14.264,
+   "end": 14.585
+  },
+  {
+   "text": "no",
+   "start": 14.585,
+   "end": 14.829
+  },
+  {
+   "text": "sign",
+   "start": 14.829,
+   "end": 15.125
+  },
+  {
+   "text": "he",
+   "start": 15.125,
+   "end": 15.368
+  },
+  {
+   "text": "was",
+   "start": 15.368,
+   "end": 15.638
+  },
+  {
+   "text": "related",
+   "start": 15.638,
+   "end": 16.011
+  },
+  {
+   "text": "to",
+   "start": 16.011,
+   "end": 16.255
+  },
+  {
+   "text": "the",
+   "start": 16.255,
+   "end": 16.524
+  },
+  {
+   "text": "child.",
+   "start": 16.524,
+   "end": 16.846
+  },
+  {
+   "text": "Two",
+   "start": 17.49,
+   "end": 17.793
+  },
+  {
+   "text": "victims",
+   "start": 17.793,
+   "end": 18.214
+  },
+  {
+   "text": "found",
+   "start": 18.214,
+   "end": 18.576
+  },
+  {
+   "text": "close",
+   "start": 18.576,
+   "end": 18.938
+  },
+  {
+   "text": "together,",
+   "start": 18.938,
+   "end": 19.387
+  },
+  {
+   "text": "read",
+   "start": 19.387,
+   "end": 19.72
+  },
+  {
+   "text": "as",
+   "start": 19.72,
+   "end": 19.994
+  },
+  {
+   "text": "an",
+   "start": 19.994,
+   "end": 20.268
+  },
+  {
+   "text": "embrace,",
+   "start": 20.268,
+   "end": 20.688
+  },
+  {
+   "text": "were",
+   "start": 20.688,
+   "end": 21.021
+  },
+  {
+   "text": "imagined",
+   "start": 21.021,
+   "end": 21.471
+  },
+  {
+   "text": "as",
+   "start": 21.471,
+   "end": 21.745
+  },
+  {
+   "text": "sisters,",
+   "start": 21.745,
+   "end": 22.165
+  },
+  {
+   "text": "or",
+   "start": 22.165,
+   "end": 22.439
+  },
+  {
+   "text": "a",
+   "start": 22.439,
+   "end": 22.684
+  },
+  {
+   "text": "mother",
+   "start": 22.684,
+   "end": 23.075
+  },
+  {
+   "text": "and",
+   "start": 23.075,
+   "end": 23.378
+  },
+  {
+   "text": "daughter.",
+   "start": 23.378,
+   "end": 23.828
+  },
+  {
+   "text": "One",
+   "start": 24.55,
+   "end": 24.859
+  },
+  {
+   "text": "of",
+   "start": 24.859,
+   "end": 25.137
+  },
+  {
+   "text": "them",
+   "start": 25.137,
+   "end": 25.476
+  },
+  {
+   "text": "was",
+   "start": 25.476,
+   "end": 25.784
+  },
+  {
+   "text": "genetically",
+   "start": 25.784,
+   "end": 26.299
+  },
+  {
+   "text": "male.",
+   "start": 26.299,
+   "end": 26.637
+  },
+  {
+   "text": "The",
+   "start": 27.285,
+   "end": 27.587
+  },
+  {
+   "text": "casts",
+   "start": 27.587,
+   "end": 27.948
+  },
+  {
+   "text": "were",
+   "start": 27.948,
+   "end": 28.28
+  },
+  {
+   "text": "made",
+   "start": 28.28,
+   "end": 28.612
+  },
+  {
+   "text": "from",
+   "start": 28.612,
+   "end": 28.944
+  },
+  {
+   "text": "1863",
+   "start": 28.944,
+   "end": 29.275
+  },
+  {
+   "text": "on,",
+   "start": 29.275,
+   "end": 29.549
+  },
+  {
+   "text": "by",
+   "start": 29.549,
+   "end": 29.822
+  },
+  {
+   "text": "pouring",
+   "start": 29.822,
+   "end": 30.241
+  },
+  {
+   "text": "plaster",
+   "start": 30.241,
+   "end": 30.661
+  },
+  {
+   "text": "into",
+   "start": 30.661,
+   "end": 30.993
+  },
+  {
+   "text": "the",
+   "start": 30.993,
+   "end": 31.295
+  },
+  {
+   "text": "hollows",
+   "start": 31.295,
+   "end": 31.715
+  },
+  {
+   "text": "the",
+   "start": 31.715,
+   "end": 32.017
+  },
+  {
+   "text": "bodies",
+   "start": 32.017,
+   "end": 32.407
+  },
+  {
+   "text": "left",
+   "start": 32.407,
+   "end": 32.739
+  },
+  {
+   "text": "in",
+   "start": 32.739,
+   "end": 33.012
+  },
+  {
+   "text": "the",
+   "start": 33.012,
+   "end": 33.315
+  },
+  {
+   "text": "ash.",
+   "start": 33.315,
+   "end": 33.617
+  },
+  {
+   "text": "Over",
+   "start": 34.245,
+   "end": 34.567
+  },
+  {
+   "text": "the",
+   "start": 34.567,
+   "end": 34.86
+  },
+  {
+   "text": "years,",
+   "start": 34.86,
+   "end": 35.21
+  },
+  {
+   "text": "restorers",
+   "start": 35.21,
+   "end": 35.674
+  },
+  {
+   "text": "reworked",
+   "start": 35.674,
+   "end": 36.109
+  },
+  {
+   "text": "some",
+   "start": 36.109,
+   "end": 36.431
+  },
+  {
+   "text": "casts,",
+   "start": 36.431,
+   "end": 36.781
+  },
+  {
+   "text": "possibly",
+   "start": 36.781,
+   "end": 37.216
+  },
+  {
+   "text": "to",
+   "start": 37.216,
+   "end": 37.481
+  },
+  {
+   "text": "make",
+   "start": 37.481,
+   "end": 37.803
+  },
+  {
+   "text": "them",
+   "start": 37.803,
+   "end": 38.125
+  },
+  {
+   "text": "tell",
+   "start": 38.125,
+   "end": 38.447
+  },
+  {
+   "text": "a",
+   "start": 38.447,
+   "end": 38.683
+  },
+  {
+   "text": "story.",
+   "start": 38.683,
+   "end": 39.033
+  },
+  {
+   "text": "The",
+   "start": 39.705,
+   "end": 39.956
+  },
+  {
+   "text": "DNA",
+   "start": 39.956,
+   "end": 40.207
+  },
+  {
+   "text": "does",
+   "start": 40.207,
+   "end": 40.483
+  },
+  {
+   "text": "not",
+   "start": 40.483,
+   "end": 40.734
+  },
+  {
+   "text": "tell",
+   "start": 40.734,
+   "end": 41.009
+  },
+  {
+   "text": "us",
+   "start": 41.009,
+   "end": 41.236
+  },
+  {
+   "text": "who",
+   "start": 41.236,
+   "end": 41.488
+  },
+  {
+   "text": "these",
+   "start": 41.488,
+   "end": 41.787
+  },
+  {
+   "text": "people",
+   "start": 41.787,
+   "end": 42.111
+  },
+  {
+   "text": "were.",
+   "start": 42.111,
+   "end": 42.387
+  },
+  {
+   "text": "It",
+   "start": 43.065,
+   "end": 43.295
+  },
+  {
+   "text": "tells",
+   "start": 43.295,
+   "end": 43.599
+  },
+  {
+   "text": "us",
+   "start": 43.599,
+   "end": 43.83
+  },
+  {
+   "text": "the",
+   "start": 43.83,
+   "end": 44.084
+  },
+  {
+   "text": "old",
+   "start": 44.084,
+   "end": 44.339
+  },
+  {
+   "text": "stories",
+   "start": 44.339,
+   "end": 44.693
+  },
+  {
+   "text": "were",
+   "start": 44.693,
+   "end": 44.972
+  },
+  {
+   "text": "guesses.",
+   "start": 44.972,
+   "end": 45.326
+  },
+  {
+   "text": "Had",
+   "start": 45.975,
+   "end": 46.268
+  },
+  {
+   "text": "you",
+   "start": 46.268,
+   "end": 46.561
+  },
+  {
+   "text": "heard",
+   "start": 46.561,
+   "end": 46.911
+  },
+  {
+   "text": "the",
+   "start": 46.911,
+   "end": 47.204
+  },
+  {
+   "text": "mother-and-child",
+   "start": 47.204,
+   "end": 47.693
+  },
+  {
+   "text": "story?",
+   "start": 47.693,
+   "end": 48.043
+  }
+ ]
+}

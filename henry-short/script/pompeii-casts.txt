@@ -1,11 +1,12 @@
-In Pompeii, a victim found wearing a gold bracelet, beside a small child, was long described as a mother.
-Ancient DNA says it was a man, with no sign he was related to the child.
+Pompeii's "mother and child"? Ancient DNA says the adult was a man.
+Found in 1974 wearing a gold bracelet, beside a small child, he was long described as a mother.
+And the DNA found no sign he was related to the child.
 Two victims found close together, read as an embrace, were imagined as sisters, or a mother and daughter.
 One of them was genetically male.
 The casts were made from 1863 on, by pouring plaster into the hollows the bodies left in the ash.
 Over the years, restorers reworked some casts, possibly to make them tell a story.
 The DNA does not tell us who these people were. It tells us the old stories were guesses.
-
+Had you heard the mother-and-child story?
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
@@ -22,8 +23,15 @@ Kennett, George, Krigbaum, Rohland, Mallick, Caramelli, Reich & Mittnik,
 casts", Current Biology 34(22), 5307-5318.e7 (2024),
 doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
 
-1. "In Pompeii, a victim found wearing a gold bracelet, beside a small child, was
-   long described as a mother."
+0. Hook: "Pompeii's "mother and child"? Ancient DNA says the adult was a man."
+   The hook only restates entries 1 and 2: the "mother and child" is the
+   traditional reading of Individuals 52 and 51 (entry 1), put in quotation
+   marks because it is a reading, not a fact, and "the adult was a man" is
+   Individual 52 sexed "genetically male" (entry 2). True as stated at second
+   two (A4): a viewer who swipes away leaves knowing only the correction.
+
+1. "Found in 1974 wearing a gold bracelet, beside a small child, he was long
+   described as a mother."
    Pilli, House of the Golden Bracelet: in 1974 "two adults (Individuals 50 and
    52) and a young child (Individual 51), apparently standing on Individual
    52's hip" were found. "Individual 52 was traditionally interpreted as a
@@ -35,7 +43,8 @@ doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
    interpretations were "spread through museal exhibitions and educational and
    publicity materials".
 
-2. "Ancient DNA says it was a man, with no sign he was related to the child."
+2. "And the DNA found no sign he was related to the child." (with the hook's
+   "the adult was a man")
    Pilli: "All individuals were sexed as genetically male, including the
    presumed female adult (Individual 52)." And: "both the mitochondrial DNA and
    whole genome data found no evidence of biological relatedness, at least up to
@@ -88,6 +97,10 @@ doi:10.1016/j.cub.2024.10.007. Called "Pilli" below.
    warn against "establishing new narratives that might also misrepresent these
    people's lived experiences", which is why the script ends without offering a
    new story.
+
+8. "Had you heard the mother-and-child story?"
+   A question to the viewer, not a claim. It names the old reading, not a new
+   one, in line with the authors' warning quoted in entry 7.
 
 Not used: the ancestry finding (mostly recent eastern Mediterranean descent).
 It is a second claim, and B1 asks for one core claim per short.
