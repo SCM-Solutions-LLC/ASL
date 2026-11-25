@@ -1,14 +1,119 @@
-{"script":"script/moai-reshaped.txt","sha256":"bf01f88bf2141b9e8e1839e4f39814201e22b85ed163505e04a9c75f2297e845","checked":"2026-11-24","claims":[
-{"n":1,"claim":"Two archaeologists say Easter Island's platform statues were reshaped after they arrived.","where":"spoken","verdict":"confirmed","source_checked":"Lipo & Hunt 2025, J. Archaeol. Sci. 183, 106383, doi:10.1016/j.jas.2025.106383: publisher's 18-page PDF as Firecrawl markdown (scratchpad lh25/lh25.md), read in full","note":"Two authors (Lipo, Binghamton anthropology; Hunt, Arizona School of Anthropology), writing archaeology in JAS. 1.1: platform shoulder/base ratios exceed 1.0; 'This modification occurred after transport, when carvers reduced the base width'; 'Platform moai, once they reached their destinations, were substantially modified through base reshaping'. 2.4: 'later modified to stand erect on ceremonial platforms'. 'Say' correctly attributes a reading whose only direct physical evidence in LH25 is a personal communication (S. Rapu 2011). Scope (platform statues) matches."},
-{"n":2,"claim":"Dozens lie along the old roads from the quarry, apparently dropped on the way.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, abstract, 1.1, 1.3, Fig. 7, Fig. 12 caption, 2.5","note":"1.1: '62 statues documented along ancient transport roads, abandoned where they fell at various points of their journey from the Rano Raraku quarry'; roads 'radiate from Rano Raraku'. Fig. 12 says 84; 'dozens' fits both. 'Apparently' marks the transport-failure reading, which 2.5 records as disputed. Two (Fig. 7) are partly buried at an angle after re-erection attempts, not standing, so 'lie' holds."},
-{"n":3,"claim":"On average, those statues have bases almost as wide as their shoulders, and they lean forward.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, 1.4, Figs. 1, 4, 5. NOT opened: doi:10.5281/zenodo.17329904 (Firecrawl credits exhausted; zenodo.org blocked by this sandbox's network)","note":"1.1: road statues 'exhibit a shoulder-to-base width ratio approaching 1.0, meaning the base width nearly equals the shoulder width'; 'pronounced and consistent forward lean, typically ranging from 6 to 15 degrees'. 'On average' is narrower than the paper's text, so it passes A3 on LH25 alone. The corrected figures quoted in SOURCES entries 3 and 7 (1.025 +/- 0.155, n = 47) were not verified by this pass; do not put them on screen until someone opens the Zenodo record."},
-{"n":4,"claim":"Rocked side to side with ropes, a statue like that steps forward.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, 1.4, 2.4, Figs. 1, 8, 9","note":"1.1: 'Each lateral rocking motion thus produces a forward \"step\"'; Fig. 1: 'As moai is rocked side to side, it takes a step forward'; Fig. 9 same. Shown experimentally with a replica of road moai 12-220-01 that 'retained the same proportions and mass distribution' (1.4). Omitting the rear restraining rope does not make the line false."},
-{"n":5,"claim":"In a test, eighteen people walked a scaled-down copy weighing over four tonnes a hundred meters in forty minutes.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, abstract, 1.4, 1.5.1, 1.6.3, 2.1, 2.2, 2.4, Fig. 8","note":"Abstract: 'precisely scaled 4.35 metric ton replica ... covering 100 m in 40 min with a team of 18 people'; 1.4: 'minimum crew of 18 individuals ... in one continuous effort, we achieved sustained forward movement of 100 m in just 40 min'; 1.6.3: '18 people were able to walk our replica moai a distance of 100 m in 40 min'. Scaled down: 1.4 original 'stands 7.35 m tall ... Our concrete replica, scaled for practical experimentation, weighed 4.35 metric tons'; 2.1 'a precise (scaled) copy'. 4.35 t = over four tonnes."},
-{"n":6,"claim":"The statues on the platforms stand straight, and on average their bases are narrower than their shoulders.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, 2.4, Fig. 2. NOT opened: doi:10.5281/zenodo.17329904 (unreachable, see claim 3)","note":"2.4: ahu moai 'stand vertically upright (bases flattened) with their center of mass positioned stably over their base'. 1.1: 'platform statues show ratios consistently exceeding 1.0, with shoulders wider than bases'; Fig. 2 reports the difference as significant. 'On average' is narrower than 'consistently', so the wording is supported by LH25 alone. SOURCES entry 7 says the published Fig. 2 is wrong per the authors' Zenodo note; this pass could not open that note, so the corrected numbers and the claim that the direction survives the correction are unverified here. Advisory, not a source failure: many platform statues were toppled and only some re-erected (not in LH25); a pedant may object to present-tense 'stand straight'. 'Were made to stand straight' would avoid that."},
-{"n":7,"claim":"Eye sockets were carved only once a statue stood on its platform.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1","note":"1.1: 'Ethnographic accounts and archaeological evidence confirm that eyes were carved only as a final step after the statue's successful erection on the platform'; 'only successful erection triggered the final transformation'. Matches as spoken. LH25 gives no citation for it, and those underlying accounts were not opened."},
-{"n":8,"claim":"None of the road statues have them.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, Fig. 12 caption","note":"1.1: 'road moai uniformly lack carved eye sockets'; 'The complete absence of eye sockets on all 62 documented road moai'. The explicit count is for 62, and Fig. 12 counts 84, but 'uniformly' covers road moai in general. 'Road statues' is the neutral label, consistent with line 2's hedge."},
-{"n":9,"claim":"So, they argue, the shape built for walking was carved away at the end of the journey.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, 2.4","note":"2.4: 'ancestral engineers intentionally designed statues for walking'; 'Once the statues reached their destinations, these transport features were carved away to create stable, upright monuments'. 'They argue' attributes both the premise and the conclusion to the authors."},
-{"n":10,"claim":"Other archaeologists reject this.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1 (Introduction), 2.1-2.3, 2.5","note":"1: 'some scholars continue to reject the walking hypothesis'; critics named (Bahn, Flenley, Van Tilburg, Diamond, Velasco, Richards, Cauwe, De Dapper) are called 'established voices in Pacific archaeology'. Several are archaeologists (not Diamond or Flenley), so 'other archaeologists' holds. LH25 records no critic addressing the trimming claim itself; 'this' holds only because rejecting walking entails rejecting 'the shape built for walking'. Critics read only as LH25 reports them (disclosed in SOURCES, A2)."},
-{"n":11,"claim":"Some think many road statues were set up there on purpose.","where":"spoken","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 2.5, 2.5.2, 2.5.3, refs (Seager Thomas et al. 2023 title)","note":"2.5: Richards et al. 2011, Seager Thomas et al. 2023, Cauwe & De Dapper 2015/2022 argue the statues 'were deliberately positioned along ceremonial paths ... rather than representing transport failures'; 2.5.2: Routledge/Heyerdahl 'positioned upright along a ceremonial pathway'; 2.5.3: Cauwe & De Dapper say 'isolated' moai were 'voluntary acts' that 'stood for perhaps centuries'. 'Set up' (upright), 'some' and 'many' (not all) fit. Their position as reported by their opponents, disclosed in SOURCES."},
-{"n":12,"claim":"Hook (A4): what a viewer who swipes away at second two takes from line 1","where":"spoken (hook, A4)","verdict":"confirmed","source_checked":"doi:10.1016/j.jas.2025.106383, 1.1, 2.4","note":"At about 2 s the viewer has heard 'Two archaeologists say Easter Island's...': the attribution comes first, so nothing is asserted as settled fact. The full sentence is attributed, limited to platform statues, and matches LH25 1.1 and 2.4. No false takeaway."}
-]}
+{
+ "script": "script/moai-reshaped.txt",
+ "sha256": "2876ae9a41ab72003eab35107646a328453f97c339908ab63f8bffe9aff8f131",
+ "checked": "2026-11-24",
+ "claims": [
+  {
+   "n": 1,
+   "claim": "These statues may have walked here.",
+   "where": "spoken (hook, over statues standing on a platform)",
+   "verdict": "confirmed",
+   "source_checked": "Lipo & Hunt 2025, J. Archaeol. Sci. 183, 106383, doi:10.1016/j.jas.2025.106383: text extracted from the publisher's PDF (scratchpad lh25dl/flat.txt), read: abstract, 1 (Introduction), 1.1, 2.4, 3 (Conclusion)",
+   "note": "LH25 1: 'In 2013, we published ... evidence demonstrating that Rapa Nui's massive stone statues \"walked\" from their quarry to ceremonial platforms'; abstract: 'designed for transport vertically in a controlled \"walking\" motion'. So the authors' claim covers platform statues, the ones pictured. 'May have' is the right hedge: LH25 1 itself says 'some scholars continue to reject the walking hypothesis', and its Conclusion allows that small moai (under 2 m) may have been moved horizontally. 'Walked' is the paper's own term, and line 5 says what it means (rocked on ropes). Spoken unattributed, but hedged, and the on-screen label 'Lipo & Hunt · 2025 / two archaeologists' is up from frame 0 (index.tsx hook block). CONDITION, not a source failure: SOURCES entry 1 says 'the place is named on screen (\"Rapa Nui · Easter Island\")', but no such string exists in src/shorts/moai-reshaped/index.tsx or tools/ (the hook shows only 'Lipo & Hunt · 2025 / two archaeologists', 'As it arrived? / their reading' and the small print), and review/moai-reshaped.a6.md lists none. With 'Easter Island' gone from the spoken script, the island is now named nowhere in the short except the upload title. The words stay true without it (generic illustrated moai on an ahu; nothing false is implied), but the label must be added to the hook overlay as SOURCES describes, and checked under A6, before approval."
+  },
+  {
+   "n": 2,
+   "claim": "Two archaeologists say that once they arrived, they were reshaped to stand still.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "Lipo & Hunt 2025, J. Archaeol. Sci. 183, 106383, doi:10.1016/j.jas.2025.106383: text extracted from the publisher's PDF (scratchpad lh25dl/flat.txt), read: author block, 1.1, the Pavel passage (section on earlier experiments), 2.4",
+   "note": "Authors: Lipo (Dept. of Anthropology, Binghamton) and Hunt (School of Anthropology, Arizona), writing experimental archaeology in JAS. 1.1: 'Platform moai, once they reached their destinations, were substantially modified through base reshaping to eliminate this lean ... to achieve stable upright positioning'; 'This modification occurred after transport'. 'To stand still' is almost the paper's own phrase, in a passage SOURCES does not cite: Pavel 'was trying to walk a statue specifically engineered to stand still. The modifications made to moai upon reaching an ahu ... were precisely designed for stability, not mobility.' Also 2.4: 'later modified to stand erect on ceremonial platforms'. 'They' = the pictured platform statues, matching LH25's scope (ahu moai only). Attribution is needed and present: LH25's only direct physical evidence for the trimming is a personal communication (S. Rapu 2011), and the authors' own corrected ratios (SOURCES 7, not opened by this pass) leave many platform statues with bases about as wide as their shoulders."
+  },
+  {
+   "n": 3,
+   "claim": "Dozens lie along the old roads from the quarry, apparently dropped on the way.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, abstract, 1.1, 1.3, Fig. 7, Fig. 12 caption, 2.5",
+   "note": "1.1: '62 statues documented along ancient transport roads, abandoned where they fell at various points of their journey from the Rano Raraku quarry'; roads 'radiate from Rano Raraku'. Fig. 12 says 84; 'dozens' fits both. 'Apparently' marks the transport-failure reading, which 2.5 records as disputed. Two (Fig. 7) are partly buried at an angle after re-erection attempts, not standing, so 'lie' holds. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 4,
+   "claim": "On average, those statues have bases almost as wide as their shoulders, and they lean forward.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1, 1.4, Figs. 1, 4, 5. NOT opened: doi:10.5281/zenodo.17329904 (Firecrawl credits exhausted; zenodo.org blocked by this sandbox's network)",
+   "note": "1.1: road statues 'exhibit a shoulder-to-base width ratio approaching 1.0, meaning the base width nearly equals the shoulder width'; 'pronounced and consistent forward lean, typically ranging from 6 to 15 degrees'. 'On average' is narrower than the paper's text, so it passes A3 on LH25 alone. The corrected figures quoted in SOURCES entries 3 and 7 (1.025 +/- 0.155, n = 47) were not verified by this pass; do not put them on screen until someone opens the Zenodo record. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 5,
+   "claim": "Rocked side to side with ropes, a statue like that steps forward.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1, 1.4, 2.4, Figs. 1, 8, 9",
+   "note": "1.1: 'Each lateral rocking motion thus produces a forward \"step\"'; Fig. 1: 'As moai is rocked side to side, it takes a step forward'; Fig. 9 same. Shown experimentally with a replica of road moai 12-220-01 that 'retained the same proportions and mass distribution' (1.4). Omitting the rear restraining rope does not make the line false. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 6,
+   "claim": "In a test, eighteen people walked a scaled-down copy weighing over four tonnes a hundred meters in forty minutes.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, abstract, 1.4, 1.5.1, 1.6.3, 2.1, 2.2, 2.4, Fig. 8",
+   "note": "Abstract: 'precisely scaled 4.35 metric ton replica ... covering 100 m in 40 min with a team of 18 people'; 1.4: 'minimum crew of 18 individuals ... in one continuous effort, we achieved sustained forward movement of 100 m in just 40 min'; 1.6.3: '18 people were able to walk our replica moai a distance of 100 m in 40 min'. Scaled down: 1.4 original 'stands 7.35 m tall ... Our concrete replica, scaled for practical experimentation, weighed 4.35 metric tons'; 2.1 'a precise (scaled) copy'. 4.35 t = over four tonnes. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 7,
+   "claim": "The statues on the platforms stand straight, and on average their bases are narrower than their shoulders.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1, 2.4, Fig. 2. NOT opened: doi:10.5281/zenodo.17329904 (unreachable, see claim 3)",
+   "note": "2.4: ahu moai 'stand vertically upright (bases flattened) with their center of mass positioned stably over their base'. 1.1: 'platform statues show ratios consistently exceeding 1.0, with shoulders wider than bases'; Fig. 2 reports the difference as significant. 'On average' is narrower than 'consistently', so the wording is supported by LH25 alone. SOURCES entry 7 says the published Fig. 2 is wrong per the authors' Zenodo note; this pass could not open that note, so the corrected numbers and the claim that the direction survives the correction are unverified here. Advisory, not a source failure: many platform statues were toppled and only some re-erected (not in LH25); a pedant may object to present-tense 'stand straight'. 'Were made to stand straight' would avoid that. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 8,
+   "claim": "Eye sockets were carved only once a statue stood on its platform.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1",
+   "note": "1.1: 'Ethnographic accounts and archaeological evidence confirm that eyes were carved only as a final step after the statue's successful erection on the platform'; 'only successful erection triggered the final transformation'. Matches as spoken. LH25 gives no citation for it, and those underlying accounts were not opened. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 9,
+   "claim": "None of the road statues have them.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1, Fig. 12 caption",
+   "note": "1.1: 'road moai uniformly lack carved eye sockets'; 'The complete absence of eye sockets on all 62 documented road moai'. The explicit count is for 62, and Fig. 12 counts 84, but 'uniformly' covers road moai in general. 'Road statues' is the neutral label, consistent with line 2's hedge. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 10,
+   "claim": "So, they argue, the shape built for walking was carved away at the end of the journey.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1.1, 2.4",
+   "note": "2.4: 'ancestral engineers intentionally designed statues for walking'; 'Once the statues reached their destinations, these transport features were carved away to create stable, upright monuments'. 'They argue' attributes both the premise and the conclusion to the authors. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 11,
+   "claim": "Other archaeologists reject this.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 1 (Introduction), 2.1-2.3, 2.5",
+   "note": "1: 'some scholars continue to reject the walking hypothesis'; critics named (Bahn, Flenley, Van Tilburg, Diamond, Velasco, Richards, Cauwe, De Dapper) are called 'established voices in Pacific archaeology'. Several are archaeologists (not Diamond or Flenley), so 'other archaeologists' holds. LH25 records no critic addressing the trimming claim itself; 'this' holds only because rejecting walking entails rejecting 'the shape built for walking'. Critics read only as LH25 reports them (disclosed in SOURCES, A2). Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 12,
+   "claim": "Some think many road statues were set up there on purpose.",
+   "where": "spoken",
+   "verdict": "confirmed",
+   "source_checked": "doi:10.1016/j.jas.2025.106383, 2.5, 2.5.2, 2.5.3, refs (Seager Thomas et al. 2023 title)",
+   "note": "2.5: Richards et al. 2011, Seager Thomas et al. 2023, Cauwe & De Dapper 2015/2022 argue the statues 'were deliberately positioned along ceremonial paths ... rather than representing transport failures'; 2.5.2: Routledge/Heyerdahl 'positioned upright along a ceremonial pathway'; 2.5.3: Cauwe & De Dapper say 'isolated' moai were 'voluntary acts' that 'stood for perhaps centuries'. 'Set up' (upright), 'some' and 'many' (not all) fit. Their position as reported by their opponents, disclosed in SOURCES. Carried forward from the 2026-11-24 report on the previous script version: wording verified identical, cited passages re-found in the publisher's PDF text."
+  },
+  {
+   "n": 13,
+   "claim": "Dropped on the way, or set up there on purpose: which do you think?",
+   "where": "spoken (closing question; not a factual claim)",
+   "verdict": "confirmed",
+   "source_checked": "Lipo & Hunt 2025, J. Archaeol. Sci. 183, 106383, doi:10.1016/j.jas.2025.106383: text extracted from the publisher's PDF (scratchpad lh25dl/flat.txt), read: abstract, 1, 1.1, 2.5; GUARDRAILS E2",
+   "note": "A question, so the test is E2 and whether it implies anything false. The two options are the two readings the script has already attributed: 'apparently dropped on the way' (LH25 1.1: 'abandoned where they fell') and 'set up there on purpose' (LH25 2.5: critics say road moai were 'deliberately positioned along ceremonial paths ... rather than representing transport failures'). The binary is the literature's own framing: LH25 abstract, 'consistent with transport failure ... rather than deliberate ceremonial placement'. Presenting it as open is true: LH25 1 says critics 'continue to reject the walking hypothesis'. E2: it asks for an opinion on the dispute the short has just shown, with no keyword to comment, no incentive and no promised payoff, so it is not 'comment X' bait. Advisory only: the short gives the authors' evidence but only the critics' position (disclosed in SOURCES 9), so the viewer weighs a one-sided case; 'Other archaeologists reject this' flags that another case exists."
+  },
+  {
+   "n": 14,
+   "claim": "Hook (A4): what a viewer who swipes away at second two takes from it",
+   "where": "spoken (hook, A4) + on-screen",
+   "verdict": "confirmed",
+   "source_checked": "Lipo & Hunt 2025, J. Archaeol. Sci. 183, 106383, doi:10.1016/j.jas.2025.106383: text extracted from the publisher's PDF (scratchpad lh25dl/flat.txt), read: 1, 1.1, 2.4; src/generated/moai-reshaped.alignment.json (word timings); src/shorts/moai-reshaped/index.tsx (hook overlay)",
+   "note": "The regenerated VO ends 'here.' at 1.852 s; 'Two' starts at 2.51 s. So the swipe-at-2-s viewer has heard exactly 'These statues may have walked here.' over statues on a platform, with 'Lipo & Hunt · 2025 / two archaeologists' on screen. Takeaway: these statues possibly walked here. That is a hedged statement of a peer-reviewed, explicitly contested hypothesis whose authors apply it to platform statues; it is not false. Unlike the popular form ('the moai walked', stated as settled), it carries the hedge. The reshaping claim arrives at 2.5-6.9 s, attributed. Holds without the place label; see claim 1 for the missing 'Rapa Nui · Easter Island' label, which SOURCES says is on screen and is not."
+  }
+ ]
+}

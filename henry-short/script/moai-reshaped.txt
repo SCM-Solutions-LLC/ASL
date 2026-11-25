@@ -1,4 +1,5 @@
-Two archaeologists say Easter Island's platform statues were reshaped after they arrived.
+These statues may have walked here.
+Two archaeologists say that once they arrived, they were reshaped to stand still.
 Dozens lie along the old roads from the quarry, apparently dropped on the way.
 On average, those statues have bases almost as wide as their shoulders, and they lean forward.
 Rocked side to side with ropes, a statue like that steps forward.
@@ -7,6 +8,7 @@ The statues on the platforms stand straight, and on average their bases are narr
 Eye sockets were carved only once a statue stood on its platform. None of the road statues have them.
 So, they argue, the shape built for walking was carved away at the end of the journey.
 Other archaeologists reject this. Some think many road statues were set up there on purpose.
+Dropped on the way, or set up there on purpose: which do you think?
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
@@ -24,8 +26,19 @@ Archaeological Science 183, 106383 (2025), doi:10.1016/j.jas.2025.106383.
 Called "LH25" below. The authors are the main proponents of walking transport;
 entry 9 records the published opposition, which LH25 itself lists.
 
-1. "Two archaeologists say Easter Island's platform statues were reshaped after
-   they arrived."
+1. "These statues may have walked here. Two archaeologists say that once they
+   arrived, they were reshaped to stand still." (New hook, owner's choice,
+   2026-11-24; it replaces "Two archaeologists say Easter Island's platform
+   statues were reshaped after they arrived.")
+   "These statues ... here": said over the statues on a platform (ahu), so the
+   scope stays platform statues, as below; the place is named on screen ("Rapa
+   Nui · Easter Island"). "May have walked" is the walking hypothesis, hedged:
+   LH25's title and abstract argue it, and entry 9 records that others reject
+   it. A viewer who leaves after the first sentence has heard a possibility,
+   not a fact (A4). "To stand still": LH25 2.4, "modified to stand erect on
+   ceremonial platforms", "stand vertically upright (bases flattened) with
+   their center of mass positioned stably over their base"; reshaped so they
+   stood stably instead of rocking.
    LH25 1.1: on road moai the base nearly equals the shoulder width; "platform
    statues show ratios consistently exceeding 1.0, with shoulders wider than
    bases ... This modification occurred after transport, when carvers reduced
@@ -138,6 +151,13 @@ entry 9 records the published opposition, which LH25 itself lists.
    states only their position, not their evidence. "Many road statues" rather
    than "all": Cauwe and De Dapper speak of "isolated" moai, and LH25 does not
    say every critic holds the view for every statue.
+
+10. "Dropped on the way, or set up there on purpose: which do you think?"
+   A question, not a claim (added 2026-11-24, owner's choice). The two options
+   are the two readings the script has already attributed: "apparently
+   dropped on the way" (entry 2, LH25) and "set up there on purpose" (entry 9,
+   the critics as LH25 reports them). It asks for an opinion on the evidence
+   shown, not for a comment as such (E2).
 
 Not used: oral tradition that the moai "walked" (LH25 cites it via Métraux
 1940; not read at source, and it is the top-result framing); the Pavel 1986
