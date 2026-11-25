@@ -360,16 +360,10 @@
   "ship": true,
   "note": "The incoming shot around each cut of public/3d/moai-world.mp4, for cross-dissolves: same scene, same assets and same script (tools/blender/moai_world.py --cut-shift), so the same sources and licences apply. Black outside the frames around each cut. Frames 0-2344 of the moai-reshaped edit, 30 fps, 1080x1920."
  },
- "public/img/moai-thumb-road.jpg": {
-  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py --cover, the same scene, assets and licences as public/3d/moai-world.mp4 (Poly Haven CC0 scans, credited there).",
+ "public/img/moai-thumb-rope.jpg": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py --cover --width 2160, the same scene, assets and licences as public/3d/moai-world.mp4 (Poly Haven CC0 scans, credited there).",
   "licence": "own-work",
   "ship": true,
-  "note": "Cover still, left half: statue B on the platform in the road shape it arrived in (leaning, wide base), cropped to 1080x3840 from a 2160x3840 render. Used by src/thumbnails.tsx (thumb-moai-reshaped)."
- },
- "public/img/moai-thumb-platform.jpg": {
-  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py --cover, the same scene, assets and licences as public/3d/moai-world.mp4 (Poly Haven CC0 scans, credited there).",
-  "licence": "own-work",
-  "ship": true,
-  "note": "Cover still, right half: the same statue from the same camera after the trimming (upright, narrower base), cropped to 1080x3840. Used by src/thumbnails.tsx (thumb-moai-reshaped)."
+  "note": "Cover still: the hook's statue mid-rock on its ropes, islander crews pulling, 2160x3840. Used by src/thumbnails.tsx (thumb-moai-reshaped)."
  }
 }
