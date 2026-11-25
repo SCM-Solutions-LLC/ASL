@@ -486,7 +486,8 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             o={win(f, F.roads, F.apparently - 2)}
             title="Old roads"
             color={GOLD}
-            lift={90}
+            lift={60}
+            dx={-110}
           />
           <Label
             x={cx}

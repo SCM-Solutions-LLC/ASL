@@ -707,6 +707,7 @@ for name, path in PATHS.items():
             verts.append((px, py, gz(px, py) + 0.06 + 0.14 * (k_ / 2.25) ** 2))
     faces = [(i * 5 + j, i * 5 + j + 1, (i + 1) * 5 + j + 1, (i + 1) * 5 + j) for i in range(len(path) - 1) for j in range(4)]
     o = mesh_obj("road_" + name, verts, faces, M["road"])
+    visible(o, (0, MAP_WIN[0]), (MAP_WIN[1], END + 1))  # it showed through the map island as a thin line
     uv = o.data.uv_layers.new(name="UVMap")
     for poly in o.data.polygons:
         for li in poly.loop_indices:
@@ -1145,14 +1146,17 @@ visible(bpy.context.object, (0, MAP_WIN[0]), (MAP_WIN[1], END + 1))
 
 # ---------------------------------------------------------------- the map: its own island, traced closer to the real one
 # The ground-level world is drawn on a simplified outline; the map beat, seen from 40 km, shows this
-# one instead: corners and volcanoes placed from OpenStreetMap's coastline and peaks projected about
-# Rano Raraku (A7 pass 4: real area 163.5 km^2), freehand-simplified, the east end kept as the main
-# world has it. Visible only during the map; the main island is hidden then.
-MAP_COAST = np.array([(-9700, -6200), (-9200, -7600), (-6900, -8200), (-4400, -5100), (200, -4700), (3000, -2000), (7800, -900), (10600, 400), (11400, 2000), (9500, 3400), (5300, 3700), (3600, 5800), (600, 7000), (-3300, 7300), (-6700, 1800), (-7400, -2200), (-8800, -3200)], float)
-MAP_VOLC = [(-2800, 4000, 470, 4200, 0, 0), (-8200, -7200, 300, 1700, 800, 210), (9600, 1900, 330, 1900, 0, 0)]  # Terevaka, Rano Kau (crater lake), Poike
+# one instead, traced from public-domain NASA imagery by tools/blender/trace_rapa_nui.py (GIBS: the
+# SRTM land mask and the Landsat WELD 2000 composite) into rapa_nui_trace.json: the coastline (108
+# points, 120 m tolerance), Terevaka and Poike at the SRTM highs, Rano Kau's crater lake from the
+# Landsat image, and the islets. Visible only during the map; the main island is hidden then.
+TRACE = json.load(open(HERE / "rapa_nui_trace.json"))
+MAP_COAST = np.array(TRACE["coast"], float)
+_tk, _po, _kl = TRACE["peaks"]["terevaka"], TRACE["peaks"]["poike"], TRACE["lakes"]["rano_kau"]
+MAP_VOLC = [(_tk[0], _tk[1], 470, 4200, 0, 0), (_kl[0], _kl[1], 300, 1700, 800, 210), (_po[0], _po[1], 330, 1900, 0, 0)]  # Terevaka, Rano Kau (crater lake), Poike
 MAP_ROADS = {  # the south-coast road kept near the coast; the north road to the coast (A7 pass 4)
     "w": ROADS["w"],
-    "s": [(6000, -350), (4500, -1200), (3000, -1600), (1500, -2900), (-1500, -4100), (-4500, -4500), (-7500, -3500)],  # at least 300 m inland all the way (A7 pass 5)
+    "s": [(6000, -350), (4500, -898), (3000, -1181), (1500, -2024), (0, -3880), (-1500, -4205), (-3000, -4008), (-4500, -4431), (-6200, -4300)],  # ~650 m inside the traced south coast
     "n": ROADS["n"][:-1] + [(3500, 5200)],
 }
 MAP_PATHS = {k: road_path(v) for k, v in MAP_ROADS.items()}
@@ -1164,7 +1168,7 @@ def hm(x, y):
     return float(height(np.array([x]), np.array([y]), MAP_COAST, MAP_VOLC)[0])
 
 
-MSTEP = 60.0
+MSTEP = 30.0
 mx_ = np.arange(-11500, 13500, MSTEP)
 my_ = np.arange(-9800, 8800, MSTEP)
 MX, MY = np.meshgrid(mx_, my_)
@@ -1186,7 +1190,11 @@ mme.materials.append(M["ground"])
 mme.shade_smooth()
 visible(link(bpy.data.objects.new("map_ground", mme)), MAP_WIN)
 _rk = MAP_VOLC[1]
-for nm, (cx_, cy_, r_, z_) in {"map_lake_raraku": (Q.x, Q.y, 215, hm(Q.x, Q.y) + 2.5), "map_lake_kau": (_rk[0], _rk[1], 620, hm(_rk[0], _rk[1]) + 4), "motu_nui": (-10030, -8780, 150, 8), "motu_iti": (-9950, -8575, 80, 6)}.items():
+# Rano Kau's lake: the dark water the trace found measures ~350 m in radius; the reed-covered lake is
+# wider, so it is drawn at 480 m, inside the 800 m crater.
+_lakes = {"map_lake_raraku": (Q.x, Q.y, 215, hm(Q.x, Q.y) + 2.5), "map_lake_kau": (_rk[0], _rk[1], 480, hm(_rk[0], _rk[1]) + 4)}
+_lakes.update({f"islet{i}": (x, y, r, 8) for i, (x, y, r) in enumerate(TRACE["islets"])})
+for nm, (cx_, cy_, r_, z_) in _lakes.items():
     bpy.ops.mesh.primitive_circle_add(vertices=48, radius=r_, fill_type="NGON", location=(cx_, cy_, z_))
     bpy.context.object.name = nm
     bpy.context.object.data.materials.append(M["sea"] if nm.startswith("map_lake") else M["ground"])
@@ -1222,8 +1230,10 @@ for name, pts in MAP_PATHS.items():  # the old roads, drawn wide enough to read 
     nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
     verts = [(x + nx * k_, y + ny * k_, hm(x, y) + 30) for (x, y), (nx, ny) in zip(pts, nrm) for k_ in (-45, 45)]
     faces = [(2 * i, 2 * i + 1, 2 * i + 3, 2 * i + 2) for i in range(len(pts) - 1)]
-    visible(mesh_obj("map_road_" + name, verts, faces, M["map_road"]), (T("roads", 1) + SHIFT, MAP_WIN[1]))
-pin("map_road_pin", None, map_along("w", 0.18) + V3(0, 0, 30))  # on the drawn road, which floats 30 m up
+    mr = mesh_obj("map_road_" + name, verts, faces, M["map_road"])
+    mr.visible_shadow = False  # map graphics, not objects in the sun
+    visible(mr, (T("roads", 1) + SHIFT, MAP_WIN[1]))
+pin("map_road_pin", None, map_along("w", 0.45) + V3(0, 0, 30))  # on the drawn road, which floats 30 m up
 # The road statues as icons, placed by distance from the quarry as LH25 Fig. 12 has them: "65.5 %
 # within 2 km and 42.9 % within just 1 km", 2.5: "79.8 % ... within 3.5 km", and only 8.7 % beyond
 # 4.5 km (A7 passes 3 and 4: evenly spaced icons drew the critics' pattern, not the data). 62 icons,
@@ -1240,6 +1250,7 @@ for i in range(62):
     ic = moai(f"map_icon{i}", 260, M["map_icon"], cols=24, kind="platform")
     ic.location = at
     ic.rotation_euler = (0, 0, math.pi)
+    ic.visible_shadow = False
     visible(ic, (T("dozens") + SHIFT, MAP_WIN[1]))
 
 
