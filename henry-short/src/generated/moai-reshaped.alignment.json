@@ -1,818 +1,958 @@
 {
- "generated_by": "tools/tts.py --voice af_heart --speed 1.0 --seed 0",
+ "generated_by": "tools/tts.py --voice af_heart --speed 0.95 --seed 0 --gap 0.45",
  "script": "script/moai-reshaped.txt",
  "audio": "public/vo/moai-reshaped.wav",
- "sha256": "ffb730a021737e8fc0970823b1c94d47c0413b1c161eec6812e6256d7fec2811",
+ "sha256": "2546e2cc3483399694fe53a9e4830ace39bad0fe83751afeb56ad4d67b1865db",
  "words": [
   {
-   "text": "These",
+   "text": "Easter",
    "start": 0.0,
-   "end": 0.313
+   "end": 0.394
+  },
+  {
+   "text": "Island's",
+   "start": 0.394,
+   "end": 0.847
   },
   {
    "text": "statues",
-   "start": 0.313,
-   "end": 0.676
+   "start": 0.847,
+   "end": 1.27
   },
   {
    "text": "may",
-   "start": 0.676,
-   "end": 0.939
+   "start": 1.27,
+   "end": 1.575
   },
   {
    "text": "have",
-   "start": 0.939,
-   "end": 1.226
+   "start": 1.575,
+   "end": 1.91
   },
   {
    "text": "walked",
-   "start": 1.226,
-   "end": 1.564
+   "start": 1.91,
+   "end": 2.304
   },
   {
-   "text": "here.",
-   "start": 1.564,
-   "end": 1.852
+   "text": "to",
+   "start": 2.304,
+   "end": 2.58
   },
   {
-   "text": "Two",
-   "start": 2.51,
-   "end": 2.797
+   "text": "their",
+   "start": 2.58,
+   "end": 2.944
   },
   {
-   "text": "archaeologists",
-   "start": 2.797,
-   "end": 3.274
+   "text": "platforms.",
+   "start": 2.944,
+   "end": 3.427
   },
   {
-   "text": "say",
-   "start": 3.274,
-   "end": 3.561
+   "text": "And",
+   "start": 4.375,
+   "end": 4.668
   },
   {
-   "text": "that",
-   "start": 3.561,
-   "end": 3.875
-  },
-  {
-   "text": "once",
-   "start": 3.875,
-   "end": 4.19
+   "text": "when",
+   "start": 4.668,
+   "end": 4.99
   },
   {
    "text": "they",
-   "start": 4.19,
-   "end": 4.504
+   "start": 4.99,
+   "end": 5.311
   },
   {
    "text": "arrived,",
-   "start": 4.504,
-   "end": 4.901
+   "start": 5.311,
+   "end": 5.718
   },
   {
-   "text": "they",
-   "start": 4.901,
-   "end": 5.216
-  },
-  {
-   "text": "were",
-   "start": 5.216,
-   "end": 5.53
-  },
-  {
-   "text": "reshaped",
-   "start": 5.53,
-   "end": 5.955
-  },
-  {
-   "text": "to",
-   "start": 5.955,
-   "end": 6.214
-  },
-  {
-   "text": "stand",
-   "start": 6.214,
-   "end": 6.556
-  },
-  {
-   "text": "still.",
-   "start": 6.556,
-   "end": 6.898
-  },
-  {
-   "text": "Dozens",
-   "start": 7.595,
-   "end": 7.945
-  },
-  {
-   "text": "lie",
-   "start": 7.945,
-   "end": 8.217
-  },
-  {
-   "text": "along",
-   "start": 8.217,
-   "end": 8.541
-  },
-  {
-   "text": "the",
-   "start": 8.541,
-   "end": 8.812
-  },
-  {
-   "text": "old",
-   "start": 8.812,
-   "end": 9.084
-  },
-  {
-   "text": "roads",
-   "start": 9.084,
-   "end": 9.408
-  },
-  {
-   "text": "from",
-   "start": 9.408,
-   "end": 9.706
-  },
-  {
-   "text": "the",
-   "start": 9.706,
-   "end": 9.977
-  },
-  {
-   "text": "quarry,",
-   "start": 9.977,
-   "end": 10.327
-  },
-  {
-   "text": "apparently",
-   "start": 10.327,
-   "end": 10.78
-  },
-  {
-   "text": "dropped",
-   "start": 10.78,
-   "end": 11.157
-  },
-  {
-   "text": "on",
-   "start": 11.157,
-   "end": 11.402
-  },
-  {
-   "text": "the",
-   "start": 11.402,
-   "end": 11.673
-  },
-  {
-   "text": "way.",
-   "start": 11.673,
-   "end": 11.945
-  },
-  {
-   "text": "On",
-   "start": 12.68,
-   "end": 12.952
-  },
-  {
-   "text": "average,",
-   "start": 12.952,
-   "end": 13.37
-  },
-  {
-   "text": "those",
-   "start": 13.37,
-   "end": 13.73
-  },
-  {
-   "text": "statues",
-   "start": 13.73,
-   "end": 14.148
-  },
-  {
-   "text": "have",
-   "start": 14.148,
-   "end": 14.479
-  },
-  {
-   "text": "bases",
-   "start": 14.479,
-   "end": 14.838
-  },
-  {
-   "text": "almost",
-   "start": 14.838,
-   "end": 15.227
-  },
-  {
-   "text": "as",
-   "start": 15.227,
-   "end": 15.499
-  },
-  {
-   "text": "wide",
-   "start": 15.499,
-   "end": 15.83
-  },
-  {
-   "text": "as",
-   "start": 15.83,
-   "end": 16.102
-  },
-  {
-   "text": "their",
-   "start": 16.102,
-   "end": 16.462
-  },
-  {
-   "text": "shoulders,",
-   "start": 16.462,
-   "end": 16.938
-  },
-  {
-   "text": "and",
-   "start": 16.938,
-   "end": 17.24
-  },
-  {
-   "text": "they",
-   "start": 17.24,
-   "end": 17.57
-  },
-  {
-   "text": "lean",
-   "start": 17.57,
-   "end": 17.901
-  },
-  {
-   "text": "forward.",
-   "start": 17.901,
-   "end": 18.319
-  },
-  {
-   "text": "Rocked",
-   "start": 18.99,
-   "end": 19.348
-  },
-  {
-   "text": "side",
-   "start": 19.348,
-   "end": 19.652
-  },
-  {
-   "text": "to",
-   "start": 19.652,
-   "end": 19.903
-  },
-  {
-   "text": "side",
-   "start": 19.903,
-   "end": 20.208
-  },
-  {
-   "text": "with",
-   "start": 20.208,
-   "end": 20.512
-  },
-  {
-   "text": "ropes,",
-   "start": 20.512,
-   "end": 20.843
-  },
-  {
-   "text": "a",
-   "start": 20.843,
-   "end": 21.067
-  },
-  {
-   "text": "statue",
-   "start": 21.067,
-   "end": 21.425
-  },
-  {
-   "text": "like",
-   "start": 21.425,
-   "end": 21.729
-  },
-  {
-   "text": "that",
-   "start": 21.729,
-   "end": 22.034
-  },
-  {
-   "text": "steps",
-   "start": 22.034,
-   "end": 22.365
-  },
-  {
-   "text": "forward.",
-   "start": 22.365,
-   "end": 22.75
-  },
-  {
-   "text": "In",
-   "start": 23.4,
-   "end": 23.674
-  },
-  {
-   "text": "a",
-   "start": 23.674,
-   "end": 23.918
-  },
-  {
-   "text": "test,",
-   "start": 23.918,
-   "end": 24.25
-  },
-  {
-   "text": "eighteen",
-   "start": 24.25,
-   "end": 24.699
-  },
-  {
-   "text": "people",
-   "start": 24.699,
-   "end": 25.09
-  },
-  {
-   "text": "walked",
-   "start": 25.09,
-   "end": 25.48
-  },
-  {
-   "text": "a",
-   "start": 25.48,
-   "end": 25.725
-  },
-  {
-   "text": "scaled-down",
-   "start": 25.725,
-   "end": 26.23
-  },
-  {
-   "text": "copy",
-   "start": 26.23,
-   "end": 26.562
-  },
-  {
-   "text": "weighing",
-   "start": 26.562,
-   "end": 27.011
-  },
-  {
-   "text": "over",
-   "start": 27.011,
-   "end": 27.343
-  },
-  {
-   "text": "four",
-   "start": 27.343,
-   "end": 27.675
-  },
-  {
-   "text": "tonnes",
-   "start": 27.675,
-   "end": 28.066
-  },
-  {
-   "text": "a",
-   "start": 28.066,
-   "end": 28.31
-  },
-  {
-   "text": "hundred",
-   "start": 28.31,
-   "end": 28.73
-  },
-  {
-   "text": "meters",
-   "start": 28.73,
-   "end": 29.121
-  },
-  {
-   "text": "in",
-   "start": 29.121,
-   "end": 29.394
-  },
-  {
-   "text": "forty",
-   "start": 29.394,
-   "end": 29.756
-  },
-  {
-   "text": "minutes.",
-   "start": 29.756,
-   "end": 30.176
-  },
-  {
-   "text": "The",
-   "start": 30.81,
-   "end": 31.092
-  },
-  {
-   "text": "statues",
-   "start": 31.092,
-   "end": 31.483
-  },
-  {
-   "text": "on",
-   "start": 31.483,
-   "end": 31.738
-  },
-  {
-   "text": "the",
-   "start": 31.738,
-   "end": 32.02
-  },
-  {
-   "text": "platforms",
-   "start": 32.02,
-   "end": 32.465
-  },
-  {
-   "text": "stand",
-   "start": 32.465,
-   "end": 32.802
-  },
-  {
-   "text": "straight,",
-   "start": 32.802,
-   "end": 33.22
-  },
-  {
-   "text": "and",
-   "start": 33.22,
-   "end": 33.502
-  },
-  {
-   "text": "on",
-   "start": 33.502,
-   "end": 33.756
-  },
-  {
-   "text": "average",
-   "start": 33.756,
-   "end": 34.147
-  },
-  {
-   "text": "their",
-   "start": 34.147,
-   "end": 34.484
-  },
-  {
-   "text": "bases",
-   "start": 34.484,
-   "end": 34.82
-  },
-  {
-   "text": "are",
-   "start": 34.82,
-   "end": 35.102
-  },
-  {
-   "text": "narrower",
-   "start": 35.102,
-   "end": 35.52
-  },
-  {
-   "text": "than",
-   "start": 35.52,
-   "end": 35.83
-  },
-  {
-   "text": "their",
-   "start": 35.83,
-   "end": 36.166
-  },
-  {
-   "text": "shoulders.",
-   "start": 36.166,
-   "end": 36.612
-  },
-  {
-   "text": "Eye",
-   "start": 37.245,
-   "end": 37.531
-  },
-  {
-   "text": "sockets",
-   "start": 37.531,
-   "end": 37.929
-  },
-  {
-   "text": "were",
-   "start": 37.929,
-   "end": 38.243
-  },
-  {
-   "text": "carved",
-   "start": 38.243,
-   "end": 38.612
-  },
-  {
-   "text": "only",
-   "start": 38.612,
-   "end": 38.927
-  },
-  {
-   "text": "once",
-   "start": 38.927,
-   "end": 39.241
-  },
-  {
-   "text": "a",
-   "start": 39.241,
-   "end": 39.472
-  },
-  {
-   "text": "statue",
-   "start": 39.472,
-   "end": 39.841
-  },
-  {
-   "text": "stood",
-   "start": 39.841,
-   "end": 40.183
-  },
-  {
-   "text": "on",
-   "start": 40.183,
-   "end": 40.442
-  },
-  {
-   "text": "its",
-   "start": 40.442,
-   "end": 40.729
-  },
-  {
-   "text": "platform.",
-   "start": 40.729,
-   "end": 41.154
-  },
-  {
-   "text": "None",
-   "start": 41.805,
-   "end": 42.074
-  },
-  {
-   "text": "of",
-   "start": 42.074,
-   "end": 42.296
-  },
-  {
-   "text": "the",
-   "start": 42.296,
-   "end": 42.541
-  },
-  {
-   "text": "road",
-   "start": 42.541,
-   "end": 42.81
-  },
-  {
-   "text": "statues",
-   "start": 42.81,
-   "end": 43.151
-  },
-  {
-   "text": "have",
-   "start": 43.151,
-   "end": 43.42
-  },
-  {
-   "text": "them.",
-   "start": 43.42,
-   "end": 43.689
-  },
-  {
-   "text": "So,",
-   "start": 44.34,
-   "end": 44.563
-  },
-  {
-   "text": "they",
-   "start": 44.563,
-   "end": 44.833
-  },
-  {
-   "text": "argue,",
-   "start": 44.833,
-   "end": 45.127
-  },
-  {
-   "text": "the",
-   "start": 45.127,
-   "end": 45.374
-  },
-  {
-   "text": "shape",
-   "start": 45.374,
-   "end": 45.668
-  },
-  {
-   "text": "built",
-   "start": 45.668,
-   "end": 45.962
-  },
-  {
-   "text": "for",
-   "start": 45.962,
-   "end": 46.209
-  },
-  {
-   "text": "walking",
-   "start": 46.209,
-   "end": 46.551
-  },
-  {
-   "text": "was",
-   "start": 46.551,
-   "end": 46.797
-  },
-  {
-   "text": "carved",
-   "start": 46.797,
-   "end": 47.116
-  },
-  {
-   "text": "away",
-   "start": 47.116,
-   "end": 47.386
-  },
-  {
-   "text": "at",
-   "start": 47.386,
-   "end": 47.609
-  },
-  {
-   "text": "the",
-   "start": 47.609,
-   "end": 47.855
-  },
-  {
-   "text": "end",
-   "start": 47.855,
-   "end": 48.102
-  },
-  {
-   "text": "of",
-   "start": 48.102,
-   "end": 48.325
-  },
-  {
-   "text": "the",
-   "start": 48.325,
-   "end": 48.571
-  },
-  {
-   "text": "journey.",
-   "start": 48.571,
-   "end": 48.913
-  },
-  {
-   "text": "Other",
-   "start": 49.625,
-   "end": 50.096
+   "text": "two",
+   "start": 5.718,
+   "end": 6.011
   },
   {
    "text": "archaeologists",
-   "start": 50.096,
-   "end": 50.754
+   "start": 6.011,
+   "end": 6.5
   },
   {
-   "text": "reject",
-   "start": 50.754,
-   "end": 51.264
+   "text": "say,",
+   "start": 6.5,
+   "end": 6.794
   },
   {
-   "text": "this.",
-   "start": 51.264,
-   "end": 51.697
-  },
-  {
-   "text": "Some",
-   "start": 52.285,
-   "end": 52.587
-  },
-  {
-   "text": "think",
-   "start": 52.587,
-   "end": 52.916
-  },
-  {
-   "text": "many",
-   "start": 52.916,
-   "end": 53.218
-  },
-  {
-   "text": "road",
-   "start": 53.218,
-   "end": 53.52
-  },
-  {
-   "text": "statues",
-   "start": 53.52,
-   "end": 53.902
+   "text": "they",
+   "start": 6.794,
+   "end": 7.115
   },
   {
    "text": "were",
-   "start": 53.902,
-   "end": 54.204
+   "start": 7.115,
+   "end": 7.437
   },
   {
-   "text": "set",
-   "start": 54.204,
-   "end": 54.479
+   "text": "reshaped",
+   "start": 7.437,
+   "end": 7.872
   },
   {
-   "text": "up",
-   "start": 54.479,
-   "end": 54.728
+   "text": "to",
+   "start": 7.872,
+   "end": 8.137
   },
   {
-   "text": "there",
-   "start": 54.728,
-   "end": 55.057
+   "text": "stand",
+   "start": 8.137,
+   "end": 8.487
   },
   {
-   "text": "on",
-   "start": 55.057,
-   "end": 55.306
+   "text": "still.",
+   "start": 8.487,
+   "end": 8.837
   },
   {
-   "text": "purpose.",
-   "start": 55.306,
-   "end": 55.688
+   "text": "The",
+   "start": 9.825,
+   "end": 10.059
   },
   {
-   "text": "Dropped",
-   "start": 56.32,
-   "end": 56.641
+   "text": "clues",
+   "start": 10.059,
+   "end": 10.339
   },
   {
-   "text": "on",
-   "start": 56.641,
-   "end": 56.849
+   "text": "are",
+   "start": 10.339,
+   "end": 10.573
+  },
+  {
+   "text": "in",
+   "start": 10.573,
+   "end": 10.785
   },
   {
    "text": "the",
-   "start": 56.849,
-   "end": 57.081
+   "start": 10.785,
+   "end": 11.019
   },
   {
-   "text": "way,",
-   "start": 57.081,
-   "end": 57.312
+   "text": "statues",
+   "start": 11.019,
+   "end": 11.344
   },
   {
-   "text": "or",
-   "start": 57.312,
-   "end": 57.52
-  },
-  {
-   "text": "set",
-   "start": 57.52,
-   "end": 57.752
-  },
-  {
-   "text": "up",
-   "start": 57.752,
-   "end": 57.96
-  },
-  {
-   "text": "there",
-   "start": 57.96,
-   "end": 58.236
+   "text": "out",
+   "start": 11.344,
+   "end": 11.578
   },
   {
    "text": "on",
-   "start": 58.236,
-   "end": 58.445
+   "start": 11.578,
+   "end": 11.79
   },
   {
-   "text": "purpose:",
-   "start": 58.445,
-   "end": 58.766
+   "text": "the",
+   "start": 11.79,
+   "end": 12.024
   },
   {
-   "text": "which",
-   "start": 58.766,
-   "end": 59.041
+   "text": "roads.",
+   "start": 12.024,
+   "end": 12.304
+  },
+  {
+   "text": "Dozens",
+   "start": 13.225,
+   "end": 13.591
+  },
+  {
+   "text": "lie",
+   "start": 13.591,
+   "end": 13.874
+  },
+  {
+   "text": "along",
+   "start": 13.874,
+   "end": 14.213
+  },
+  {
+   "text": "the",
+   "start": 14.213,
+   "end": 14.497
+  },
+  {
+   "text": "old",
+   "start": 14.497,
+   "end": 14.78
+  },
+  {
+   "text": "roads",
+   "start": 14.78,
+   "end": 15.119
+  },
+  {
+   "text": "from",
+   "start": 15.119,
+   "end": 15.43
+  },
+  {
+   "text": "the",
+   "start": 15.43,
+   "end": 15.713
+  },
+  {
+   "text": "quarry,",
+   "start": 15.713,
+   "end": 16.079
+  },
+  {
+   "text": "apparently",
+   "start": 16.079,
+   "end": 16.552
+  },
+  {
+   "text": "dropped",
+   "start": 16.552,
+   "end": 16.945
+  },
+  {
+   "text": "on",
+   "start": 16.945,
+   "end": 17.201
+  },
+  {
+   "text": "the",
+   "start": 17.201,
+   "end": 17.485
+  },
+  {
+   "text": "way.",
+   "start": 17.485,
+   "end": 17.769
+  },
+  {
+   "text": "On",
+   "start": 18.825,
+   "end": 19.093
+  },
+  {
+   "text": "average,",
+   "start": 19.093,
+   "end": 19.504
+  },
+  {
+   "text": "their",
+   "start": 19.504,
+   "end": 19.858
+  },
+  {
+   "text": "bases",
+   "start": 19.858,
+   "end": 20.212
+  },
+  {
+   "text": "are",
+   "start": 20.212,
+   "end": 20.509
+  },
+  {
+   "text": "almost",
+   "start": 20.509,
+   "end": 20.892
+  },
+  {
+   "text": "as",
+   "start": 20.892,
+   "end": 21.159
+  },
+  {
+   "text": "wide",
+   "start": 21.159,
+   "end": 21.485
+  },
+  {
+   "text": "as",
+   "start": 21.485,
+   "end": 21.753
+  },
+  {
+   "text": "their",
+   "start": 21.753,
+   "end": 22.107
+  },
+  {
+   "text": "shoulders,",
+   "start": 22.107,
+   "end": 22.575
+  },
+  {
+   "text": "and",
+   "start": 22.575,
+   "end": 22.872
+  },
+  {
+   "text": "they",
+   "start": 22.872,
+   "end": 23.197
+  },
+  {
+   "text": "lean",
+   "start": 23.197,
+   "end": 23.523
+  },
+  {
+   "text": "forward.",
+   "start": 23.523,
+   "end": 23.934
+  },
+  {
+   "text": "Rock",
+   "start": 24.925,
+   "end": 25.22
+  },
+  {
+   "text": "a",
+   "start": 25.22,
+   "end": 25.438
+  },
+  {
+   "text": "statue",
+   "start": 25.438,
+   "end": 25.785
+  },
+  {
+   "text": "like",
+   "start": 25.785,
+   "end": 26.081
+  },
+  {
+   "text": "that",
+   "start": 26.081,
+   "end": 26.376
+  },
+  {
+   "text": "side",
+   "start": 26.376,
+   "end": 26.671
+  },
+  {
+   "text": "to",
+   "start": 26.671,
+   "end": 26.915
+  },
+  {
+   "text": "side",
+   "start": 26.915,
+   "end": 27.21
+  },
+  {
+   "text": "with",
+   "start": 27.21,
+   "end": 27.506
+  },
+  {
+   "text": "ropes,",
+   "start": 27.506,
+   "end": 27.827
+  },
+  {
+   "text": "and",
+   "start": 27.827,
+   "end": 28.097
+  },
+  {
+   "text": "it",
+   "start": 28.097,
+   "end": 28.34
+  },
+  {
+   "text": "steps",
+   "start": 28.34,
+   "end": 28.661
+  },
+  {
+   "text": "forward.",
+   "start": 28.661,
+   "end": 29.035
+  },
+  {
+   "text": "In",
+   "start": 30.025,
+   "end": 30.319
+  },
+  {
+   "text": "a",
+   "start": 30.319,
+   "end": 30.582
+  },
+  {
+   "text": "test,",
+   "start": 30.582,
+   "end": 30.94
+  },
+  {
+   "text": "eighteen",
+   "start": 30.94,
+   "end": 31.423
+  },
+  {
+   "text": "people",
+   "start": 31.423,
+   "end": 31.844
+  },
+  {
+   "text": "walked",
+   "start": 31.844,
+   "end": 32.264
+  },
+  {
+   "text": "a",
+   "start": 32.264,
+   "end": 32.527
+  },
+  {
+   "text": "scaled-down",
+   "start": 32.527,
+   "end": 33.071
+  },
+  {
+   "text": "copy,",
+   "start": 33.071,
+   "end": 33.428
+  },
+  {
+   "text": "over",
+   "start": 33.428,
+   "end": 33.786
+  },
+  {
+   "text": "four",
+   "start": 33.786,
+   "end": 34.143
+  },
+  {
+   "text": "tonnes,",
+   "start": 34.143,
+   "end": 34.564
+  },
+  {
+   "text": "a",
+   "start": 34.564,
+   "end": 34.826
+  },
+  {
+   "text": "hundred",
+   "start": 34.826,
+   "end": 35.278
+  },
+  {
+   "text": "meters",
+   "start": 35.278,
+   "end": 35.699
+  },
+  {
+   "text": "in",
+   "start": 35.699,
+   "end": 35.993
+  },
+  {
+   "text": "forty",
+   "start": 35.993,
+   "end": 36.382
+  },
+  {
+   "text": "minutes.",
+   "start": 36.382,
+   "end": 36.834
+  },
+  {
+   "text": "The",
+   "start": 37.775,
+   "end": 38.055
+  },
+  {
+   "text": "statues",
+   "start": 38.055,
+   "end": 38.444
+  },
+  {
+   "text": "on",
+   "start": 38.444,
+   "end": 38.697
+  },
+  {
+   "text": "the",
+   "start": 38.697,
+   "end": 38.978
+  },
+  {
+   "text": "platforms",
+   "start": 38.978,
+   "end": 39.421
+  },
+  {
+   "text": "are",
+   "start": 39.421,
+   "end": 39.701
+  },
+  {
+   "text": "different.",
+   "start": 39.701,
+   "end": 40.144
+  },
+  {
+   "text": "They",
+   "start": 41.1,
+   "end": 41.39
+  },
+  {
+   "text": "were",
+   "start": 41.39,
+   "end": 41.681
+  },
+  {
+   "text": "made",
+   "start": 41.681,
+   "end": 41.971
+  },
+  {
+   "text": "to",
+   "start": 41.971,
+   "end": 42.21
+  },
+  {
+   "text": "stand",
+   "start": 42.21,
+   "end": 42.526
+  },
+  {
+   "text": "straight,",
+   "start": 42.526,
+   "end": 42.919
+  },
+  {
+   "text": "and",
+   "start": 42.919,
+   "end": 43.184
+  },
+  {
+   "text": "on",
+   "start": 43.184,
+   "end": 43.423
+  },
+  {
+   "text": "average",
+   "start": 43.423,
+   "end": 43.79
+  },
+  {
+   "text": "their",
+   "start": 43.79,
+   "end": 44.106
+  },
+  {
+   "text": "bases",
+   "start": 44.106,
+   "end": 44.422
+  },
+  {
+   "text": "are",
+   "start": 44.422,
+   "end": 44.687
+  },
+  {
+   "text": "narrower",
+   "start": 44.687,
+   "end": 45.079
+  },
+  {
+   "text": "than",
+   "start": 45.079,
+   "end": 45.37
+  },
+  {
+   "text": "their",
+   "start": 45.37,
+   "end": 45.686
+  },
+  {
+   "text": "shoulders.",
+   "start": 45.686,
+   "end": 46.104
+  },
+  {
+   "text": "Their",
+   "start": 47.05,
+   "end": 47.383
+  },
+  {
+   "text": "eye",
+   "start": 47.383,
+   "end": 47.662
+  },
+  {
+   "text": "sockets",
+   "start": 47.662,
+   "end": 48.049
+  },
+  {
+   "text": "were",
+   "start": 48.049,
+   "end": 48.355
+  },
+  {
+   "text": "carved",
+   "start": 48.355,
+   "end": 48.716
+  },
+  {
+   "text": "only",
+   "start": 48.716,
+   "end": 49.022
+  },
+  {
+   "text": "once",
+   "start": 49.022,
+   "end": 49.328
+  },
+  {
+   "text": "they",
+   "start": 49.328,
+   "end": 49.634
+  },
+  {
+   "text": "stood",
+   "start": 49.634,
+   "end": 49.967
+  },
+  {
+   "text": "there.",
+   "start": 49.967,
+   "end": 50.3
+  },
+  {
+   "text": "None",
+   "start": 51.275,
+   "end": 51.555
+  },
+  {
+   "text": "of",
+   "start": 51.555,
+   "end": 51.785
+  },
+  {
+   "text": "the",
+   "start": 51.785,
+   "end": 52.041
+  },
+  {
+   "text": "road",
+   "start": 52.041,
+   "end": 52.32
+  },
+  {
+   "text": "statues",
+   "start": 52.32,
+   "end": 52.674
+  },
+  {
+   "text": "have",
+   "start": 52.674,
+   "end": 52.954
+  },
+  {
+   "text": "them.",
+   "start": 52.954,
+   "end": 53.234
+  },
+  {
+   "text": "So,",
+   "start": 54.2,
+   "end": 54.43
+  },
+  {
+   "text": "the",
+   "start": 54.43,
+   "end": 54.685
+  },
+  {
+   "text": "two",
+   "start": 54.685,
+   "end": 54.94
+  },
+  {
+   "text": "argue,",
+   "start": 54.94,
+   "end": 55.244
+  },
+  {
+   "text": "the",
+   "start": 55.244,
+   "end": 55.499
+  },
+  {
+   "text": "shape",
+   "start": 55.499,
+   "end": 55.804
+  },
+  {
+   "text": "built",
+   "start": 55.804,
+   "end": 56.108
+  },
+  {
+   "text": "for",
+   "start": 56.108,
+   "end": 56.363
+  },
+  {
+   "text": "walking",
+   "start": 56.363,
+   "end": 56.716
+  },
+  {
+   "text": "was",
+   "start": 56.716,
+   "end": 56.971
+  },
+  {
+   "text": "carved",
+   "start": 56.971,
+   "end": 57.3
+  },
+  {
+   "text": "away",
+   "start": 57.3,
+   "end": 57.58
+  },
+  {
+   "text": "at",
+   "start": 57.58,
+   "end": 57.81
+  },
+  {
+   "text": "the",
+   "start": 57.81,
+   "end": 58.065
+  },
+  {
+   "text": "end",
+   "start": 58.065,
+   "end": 58.32
+  },
+  {
+   "text": "of",
+   "start": 58.32,
+   "end": 58.551
+  },
+  {
+   "text": "the",
+   "start": 58.551,
+   "end": 58.805
+  },
+  {
+   "text": "journey.",
+   "start": 58.805,
+   "end": 59.159
+  },
+  {
+   "text": "Not",
+   "start": 60.15,
+   "end": 60.569
+  },
+  {
+   "text": "everyone",
+   "start": 60.569,
+   "end": 61.19
+  },
+  {
+   "text": "agrees.",
+   "start": 61.19,
+   "end": 61.73
+  },
+  {
+   "text": "Other",
+   "start": 62.65,
+   "end": 63.028
+  },
+  {
+   "text": "archaeologists",
+   "start": 63.028,
+   "end": 63.556
+  },
+  {
+   "text": "think",
+   "start": 63.556,
+   "end": 63.933
+  },
+  {
+   "text": "many",
+   "start": 63.933,
+   "end": 64.281
+  },
+  {
+   "text": "road",
+   "start": 64.281,
+   "end": 64.628
+  },
+  {
+   "text": "statues",
+   "start": 64.628,
+   "end": 65.067
+  },
+  {
+   "text": "weren't",
+   "start": 65.067,
+   "end": 65.506
+  },
+  {
+   "text": "dropped",
+   "start": 65.506,
+   "end": 65.945
+  },
+  {
+   "text": "at",
+   "start": 65.945,
+   "end": 66.231
+  },
+  {
+   "text": "all,",
+   "start": 66.231,
+   "end": 66.547
+  },
+  {
+   "text": "but",
+   "start": 66.547,
+   "end": 66.864
+  },
+  {
+   "text": "set",
+   "start": 66.864,
+   "end": 67.181
+  },
+  {
+   "text": "up",
+   "start": 67.181,
+   "end": 67.467
+  },
+  {
+   "text": "along",
+   "start": 67.467,
+   "end": 67.844
+  },
+  {
+   "text": "the",
+   "start": 67.844,
+   "end": 68.161
+  },
+  {
+   "text": "roads",
+   "start": 68.161,
+   "end": 68.539
+  },
+  {
+   "text": "on",
+   "start": 68.539,
+   "end": 68.825
+  },
+  {
+   "text": "purpose.",
+   "start": 68.825,
+   "end": 69.264
+  },
+  {
+   "text": "So",
+   "start": 70.2,
+   "end": 70.411
+  },
+  {
+   "text": "were",
+   "start": 70.411,
+   "end": 70.666
+  },
+  {
+   "text": "they",
+   "start": 70.666,
+   "end": 70.922
+  },
+  {
+   "text": "abandoned",
+   "start": 70.922,
+   "end": 71.291
+  },
+  {
+   "text": "on",
+   "start": 71.291,
+   "end": 71.501
+  },
+  {
+   "text": "the",
+   "start": 71.501,
+   "end": 71.734
+  },
+  {
+   "text": "way,",
+   "start": 71.734,
+   "end": 71.968
+  },
+  {
+   "text": "or",
+   "start": 71.968,
+   "end": 72.178
+  },
+  {
+   "text": "meant",
+   "start": 72.178,
+   "end": 72.457
+  },
+  {
+   "text": "to",
+   "start": 72.457,
+   "end": 72.667
+  },
+  {
+   "text": "be",
+   "start": 72.667,
+   "end": 72.878
+  },
+  {
+   "text": "there",
+   "start": 72.878,
+   "end": 73.156
+  },
+  {
+   "text": "all",
+   "start": 73.156,
+   "end": 73.389
+  },
+  {
+   "text": "along?",
+   "start": 73.389,
+   "end": 73.668
+  },
+  {
+   "text": "What",
+   "start": 74.7,
+   "end": 74.982
   },
   {
    "text": "do",
-   "start": 59.041,
-   "end": 59.25
+   "start": 74.982,
+   "end": 75.214
   },
   {
    "text": "you",
-   "start": 59.25,
-   "end": 59.481
+   "start": 75.214,
+   "end": 75.471
   },
   {
    "text": "think?",
-   "start": 59.481,
-   "end": 59.757
+   "start": 75.471,
+   "end": 75.778
   }
  ]
 }

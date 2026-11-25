@@ -1,14 +1,15 @@
-These statues may have walked here.
-Two archaeologists say that once they arrived, they were reshaped to stand still.
+Easter Island's statues may have walked to their platforms.
+And when they arrived, two archaeologists say, they were reshaped to stand still.
+The clues are in the statues out on the roads.
 Dozens lie along the old roads from the quarry, apparently dropped on the way.
-On average, those statues have bases almost as wide as their shoulders, and they lean forward.
-Rocked side to side with ropes, a statue like that steps forward.
-In a test, eighteen people walked a scaled-down copy weighing over four tonnes a hundred meters in forty minutes.
-The statues on the platforms stand straight, and on average their bases are narrower than their shoulders.
-Eye sockets were carved only once a statue stood on its platform. None of the road statues have them.
-So, they argue, the shape built for walking was carved away at the end of the journey.
-Other archaeologists reject this. Some think many road statues were set up there on purpose.
-Dropped on the way, or set up there on purpose: which do you think?
+On average, their bases are almost as wide as their shoulders, and they lean forward.
+Rock a statue like that side to side with ropes, and it steps forward.
+In a test, eighteen people walked a scaled-down copy, over four tonnes, a hundred meters in forty minutes.
+The statues on the platforms are different. They were made to stand straight, and on average their bases are narrower than their shoulders.
+Their eye sockets were carved only once they stood there. None of the road statues have them.
+So, the two argue, the shape built for walking was carved away at the end of the journey.
+Not everyone agrees. Other archaeologists think many road statues weren't dropped at all, but set up along the roads on purpose.
+So were they abandoned on the way, or meant to be there all along? What do you think?
 ---
 SOURCES (for approval — every claim in the script, with the number behind it)
 
@@ -26,13 +27,19 @@ Archaeological Science 183, 106383 (2025), doi:10.1016/j.jas.2025.106383.
 Called "LH25" below. The authors are the main proponents of walking transport;
 entry 9 records the published opposition, which LH25 itself lists.
 
-1. "These statues may have walked here. Two archaeologists say that once they
-   arrived, they were reshaped to stand still." (New hook, owner's choice,
-   2026-11-24; it replaces "Two archaeologists say Easter Island's platform
-   statues were reshaped after they arrived.")
-   "These statues ... here": said over the statues on a platform (ahu), so the
-   scope stays platform statues, as below; the place is named on screen ("Rapa
-   Nui · Easter Island"). "May have walked" is the walking hypothesis, hedged:
+1. "Easter Island's statues may have walked to their platforms. And when they
+   arrived, two archaeologists say, they were reshaped to stand still. The
+   clues are in the statues out on the roads." (Hook rewritten for flow,
+   owner's choice, 2026-11-24; it replaces "These statues may have walked
+   here. Two archaeologists say that once they arrived, they were reshaped to
+   stand still.", itself a replacement of the first hook.)
+   "To their platforms": the scope is platform statues, as below; LH25 1 says
+   the statues "walked" from the quarry to the ceremonial platforms. "The
+   statues out on the roads": the road statues of entry 2, with no claim about
+   why they are there (entry 9 is the dispute; A7 pass 3 struck the first
+   wording, "the statues that never arrived", for asserting the
+   transport-failure reading); the authors' case rests on them (entries 3 and
+   8). "May have walked" is the walking hypothesis, hedged:
    LH25's title and abstract argue it, and entry 9 records that others reject
    it. A viewer who leaves after the first sentence has heard a possibility,
    not a fact (A4). "To stand still": LH25 2.4, "modified to stand erect on
@@ -66,8 +73,8 @@ entry 9 records the published opposition, which LH25 itself lists.
    marks the transport-failure reading as the authors', not a settled fact
    (entry 9).
 
-3. "On average, those statues have bases almost as wide as their shoulders, and
-   they lean forward."
+3. "On average, their bases are almost as wide as their shoulders, and they
+   lean forward." ("Their": the road statues of entry 2.)
    "On average": the authors' corrected figures (entry 7) give road moai a
    shoulder/base ratio of 1.025 ± 0.155 (n = 47), so individual statues vary.
    LH25 1.1: "road statues exhibit a shoulder-to-base width ratio approaching
@@ -82,14 +89,14 @@ entry 9 records the published opposition, which LH25 itself lists.
    statue the test replica copies) "projected within the base footprint". The
    source contradicts itself, so the script makes no claim either way.
 
-5. "Rocked side to side with ropes, a statue like that steps forward."
+5. "Rock a statue like that side to side with ropes, and it steps forward."
    LH25 1.1: "Each lateral rocking motion thus produces a forward 'step'";
    Fig. 1: "alternating lateral rope pulls ... A restraining rope prevents
    forward toppling as side ropes create a controlled rocking motion that
    advances the statue with each oscillation."
 
-6. "In a test, eighteen people walked a scaled-down copy weighing over four
-   tonnes a hundred meters in forty minutes."
+6. "In a test, eighteen people walked a scaled-down copy, over four tonnes, a
+   hundred meters in forty minutes."
    "Scaled-down": LH25 1.4, the original road moai 12-220-01 "stands 7.35 m tall
    and 2.83 m wide. Our concrete replica, scaled for practical experimentation,
    weighed 4.35 metric tons". Without it, a viewer would take 4 t and 18 people
@@ -101,8 +108,11 @@ entry 9 records the published opposition, which LH25 itself lists.
    dates the demonstration to 2012, but the text does not tie the 100 m figure
    to a single dated trial.
 
-7. "The statues on the platforms stand straight, and on average their bases are
-   narrower than their shoulders."
+7. "The statues on the platforms are different. They were made to stand
+   straight, and on average their bases are narrower than their shoulders."
+   ("Were made to": many platform statues were later toppled and only some
+   re-erected, so the present tense "stand" invited a correction; A7 advisory.) ("Different": in the
+   two respects the sentence then names.)
    The published Fig. 2 is wrong, and the authors say so. Their data deposit
    (Lipo & Hunt, Zenodo v2, 7 Oct 2025, doi:10.5281/zenodo.17329904, record page
    read 2026-11-24) carries "Figure 2 Correction (October 2025): The original
@@ -119,8 +129,9 @@ entry 9 records the published opposition, which LH25 itself lists.
    (bases flattened) with their center of mass positioned stably over their
    base".
 
-8. "Eye sockets were carved only once a statue stood on its platform. None of
-   the road statues have them."
+8. "Their eye sockets were carved only once they stood there. None of the road
+   statues have them." ("Their ... they ... there": the platform statues, on
+   their platforms, from entry 7.)
    "Road statues", not "stranded": whether they were stranded is the disputed
    point (entry 9). LH25 gives no citation for the eye-socket sentence beyond
    "Ethnographic accounts and archaeological evidence".
@@ -131,15 +142,17 @@ entry 9 records the published opposition, which LH25 itself lists.
    The script does not say every platform statue has eye sockets; LH25 does not
    claim that.
 
-9. "So, they argue, the shape built for walking was carved away at the end of
-   the journey. Other archaeologists reject this. Some think many road statues
-   were set up there on purpose."
+9. "So, the two argue, the shape built for walking was carved away at the end
+   of the journey. Not everyone agrees. Other archaeologists think many road
+   statues weren't dropped at all, but set up along the roads on purpose."
    LH25 2.4: "Once the statues reached their destinations, these transport
-   features were carved away to create stable, upright monuments." "They argue"
-   keeps it the authors' conclusion, including the "built for walking" premise.
-   "Other archaeologists reject this" covers the scholars LH25 1 says "continue
-   to reject the walking hypothesis"; "Some think" is the narrower ritual-path
-   reading below, held by only some of them.
+   features were carved away to create stable, upright monuments." "The two
+   argue" keeps it the authors' conclusion, including the "built for walking"
+   premise. "Not everyone agrees" covers the scholars LH25 1 says "continue to
+   reject the walking hypothesis". "Other archaeologists think" is the
+   ritual-path reading below, held by some of them; "weren't dropped at all":
+   LH25 2.5 reports it as "rather than representing transport failures";
+   "along the roads": "deliberately positioned along ceremonial paths".
    The disagreement, as LH25 2.5 reports it: "Richards et al. (2011), Seager
    Thomas et al. (2023), and Cauwe and De Dapper (2022, 2015) ... [argue] that
    these statues were deliberately positioned along ceremonial paths leading to
@@ -152,12 +165,14 @@ entry 9 records the published opposition, which LH25 itself lists.
    than "all": Cauwe and De Dapper speak of "isolated" moai, and LH25 does not
    say every critic holds the view for every statue.
 
-10. "Dropped on the way, or set up there on purpose: which do you think?"
-   A question, not a claim (added 2026-11-24, owner's choice). The two options
-   are the two readings the script has already attributed: "apparently
-   dropped on the way" (entry 2, LH25) and "set up there on purpose" (entry 9,
-   the critics as LH25 reports them). It asks for an opinion on the evidence
-   shown, not for a comment as such (E2).
+10. "So were they abandoned on the way, or meant to be there all along? What do
+   you think?"
+   A question, not a claim (added 2026-11-24 and reworded the same day for flow,
+   owner's choice). "They": the road statues of the sentence before. The two
+   options are the two readings the script has already attributed: abandoned
+   on the way (entry 2; LH25's own word, "abandoned where they fell") and set
+   up there on purpose (entry 9, the critics as LH25 reports them). It asks for
+   an opinion on the evidence shown, not for a comment as such (E2).
 
 Not used: oral tradition that the moai "walked" (LH25 cites it via Métraux
 1940; not read at source, and it is the top-result framing); the Pavel 1986

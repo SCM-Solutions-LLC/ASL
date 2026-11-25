@@ -25,15 +25,15 @@ import type { Short } from "../types";
 const edit = makeEdit({
   alignment,
   keyPhrases: [
-    ["walked", "here."],
+    ["walked", "to", "their", "platforms."],
     ["reshaped"],
     ["stand", "still."],
-    ["which", "do", "you", "think?"],
+    ["out", "on", "the", "roads."],
     ["Dozens"],
     ["lean", "forward."],
     ["steps", "forward."],
     ["eighteen"],
-    ["four", "tonnes"],
+    ["four", "tonnes,"],
     ["hundred", "meters"],
     ["forty", "minutes."],
     ["stand", "straight,"],
@@ -41,59 +41,47 @@ const edit = makeEdit({
     ["Eye", "sockets"],
     ["None"],
     ["carved", "away"],
-    ["reject"],
-    ["on", "purpose."],
+    ["Not", "everyone", "agrees."],
+    ["What", "do", "you", "think?"],
   ],
-  breakAfter: [
-    "reshaped",
-    "roads",
-    "wide",
-    "ropes,",
-    "test,",
-    "copy",
-    "tonnes",
-    "straight,",
-    "carved",
-    "platform.",
-    "argue,",
-    "walking",
-    "think",
-    "there",
-  ],
+  breakAfter: ["arrived,", "say,", "quarry,", "wide", "ropes,", "test,", "copy,", "tonnes,", "straight,", "carved", "argue,", "walking", "all,", "way,"],
   tail: 1.6,
 });
 
 const F = {
-  here: edit.at("here"),
+  and0: edit.at("and", 0),
   two: edit.at("two"),
   reshaped: edit.at("reshaped"),
+  clues: edit.at("clues"),
   dozens: edit.at("dozens"),
+  roads: edit.at("roads", 1),
   apparently: edit.at("apparently"),
-  onAvg: edit.at("on", 1),
+  onAvg: edit.at("on", 2),
   shoulders: edit.at("shoulders", 0),
   they1: edit.at("they", 2),
-  rocked: edit.at("rocked"),
+  rocked: edit.at("rock"),
   steps: edit.at("steps"),
-  test: edit.at("in", 0),
+  test: edit.at("in", 1),
   eighteen: edit.at("eighteen"),
   scaled: edit.at("scaled-down"),
   four: edit.at("four"),
   hundred: edit.at("hundred"),
   forty: edit.at("forty"),
-  the3: edit.at("the", 3),
+  the3: edit.at("the", 6),
   straight: edit.at("straight"),
-  onAvg2: edit.at("on", 3),
+  onAvg2: edit.at("on", 4),
   narrower: edit.at("narrower"),
   eye: edit.at("eye"),
   carved: edit.at("carved", 0),
   none: edit.at("none"),
   so: edit.at("so"),
   carved2: edit.at("carved", 1),
-  other: edit.at("other"),
-  some: edit.at("some"),
-  dropped1: edit.at("dropped", 1),
-  set1: edit.at("set", 1),
-  which: edit.at("which"),
+  endW: edit.at("end"),
+  not: edit.at("not"),
+  set0: edit.at("set"),
+  abandoned: edit.at("abandoned"),
+  meant: edit.at("meant"),
+  what: edit.at("what"),
   end: edit.duration,
 };
 
@@ -170,13 +158,15 @@ const Pin: React.FC<{
   if (!p || o <= 0) return null;
   const h = lift * B.s;
   const labelY = h >= 0 ? p.y - h - 50 * B.s * (sub ? 1.7 : 1) : p.y - h;
+  // Keep the label inside the frame, even when the point it marks is at the edge.
+  const lx = Math.min(Math.max(p.x + dx * B.s, B.x + 150 * B.s), B.x + B.w - 150 * B.s);
   return (
     <>
       <Svg o={o}>
         <line
           x1={p.x}
           y1={p.y}
-          x2={p.x + dx * B.s}
+          x2={lx}
           y2={p.y - h + (h >= 0 ? 8 : -6) * B.s}
           stroke={INK}
           strokeWidth={3 * B.s}
@@ -191,7 +181,7 @@ const Pin: React.FC<{
         />
       </Svg>
       <Label
-        x={p.x + dx * B.s}
+        x={lx}
         y={labelY}
         o={o}
         title={title}
@@ -425,22 +415,22 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
         </Sequence>
       ) : null}
 
-      {/* Hook: a road statue rocking toward us on its ropes; on "here", the platform, and the road
-          shape it arrived in as a gold ghost (their reading). */}
-      {between(0, F.dozens) ? (
+      {/* Hook: a road statue rocking toward us on its ropes, islanders pulling; on "And when they
+          arrived", the platform, and the road shape it arrived in as a gold ghost (their reading). */}
+      {between(0, F.clues) ? (
         <>
           <Label
             x={cx}
             y={top}
             o={win(f, 0, F.two - 2, 3)}
             title="Rapa Nui · Easter Island"
-            sub="walked here?"
+            sub="walked to their platforms?"
             size={54 * s}
           />
           <Label
             x={cx}
             y={top}
-            o={win(f, F.two, F.dozens - 2, 4)}
+            o={win(f, F.two, F.clues - 2, 4)}
             title="Lipo & Hunt · 2025"
             sub="two archaeologists"
             size={50 * s}
@@ -449,7 +439,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             B={B}
             f={f}
             name="a_top"
-            o={win(f, F.reshaped + 4, F.dozens - 2)}
+            o={win(f, F.reshaped + 4, F.clues - 2)}
             title="As it arrived?"
             sub="their reading"
             color={GOLD}
@@ -458,15 +448,23 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
           <Fine
             x={cx}
             y={fine}
-            o={win(f, 0, F.here, 3)}
+            o={win(f, 0, F.and0, 3)}
             size={26 * s}
-            text="illustration · as Lipo & Hunt describe it"
+            text="illustration · as Lipo & Hunt describe it · crew size illustrative"
             align="center"
           />
           <Fine
             x={cx}
             y={fine}
-            o={win(f, F.here, F.dozens)}
+            o={win(f, F.and0, F.reshaped - 4, 3)}
+            size={26 * s}
+            text="illustration"
+            align="center"
+          />
+          <Fine
+            x={cx}
+            y={fine}
+            o={win(f, F.reshaped - 4, F.clues)}
             size={26 * s}
             text="illustration · gold: the shape before, as they argue"
             align="center"
@@ -474,25 +472,35 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
         </>
       ) : null}
 
-      {/* Rano Raraku, the roads, and a statue lying on one. */}
-      {between(F.dozens - 4, F.onAvg) ? (
+      {/* The map: the island from high above; the statues on the roads as icons ("Dozens"), the
+          roads drawn ("roads"); then low over one of them. */}
+      {between(F.clues - 4, F.onAvg) ? (
         <>
           <Pin
             B={B}
             f={f}
             name="quarry"
-            o={win(f, F.dozens + 4, F.apparently - 2)}
+            o={win(f, F.clues + 6, F.apparently - 2)}
             title="Rano Raraku"
             sub="the quarry"
-            lift={80}
+            lift={150}
           />
           <Pin
             B={B}
             f={f}
             name="road_s"
-            o={win(f, F.dozens + 10, F.apparently - 2)}
-            title="An old road"
-            lift={70}
+            o={win(f, F.roads, F.apparently - 2)}
+            title="Old roads"
+            color={GOLD}
+            lift={90}
+          />
+          <Label
+            x={cx}
+            y={top + 120 * s}
+            o={win(f, F.dozens, F.apparently - 2)}
+            title="Statues on the roads"
+            sub="positions illustrative"
+            size={44 * s}
           />
           <Pin
             B={B}
@@ -506,9 +514,17 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
           <Fine
             x={cx}
             y={fine}
-            o={win(f, F.dozens, F.onAvg)}
+            o={win(f, F.clues, F.apparently, 3)}
             size={26 * s}
-            text="illustration · island simplified, not to scale"
+            text="map simplified, not to scale · main roads only"
+            align="center"
+          />
+          <Fine
+            x={cx}
+            y={fine}
+            o={win(f, F.apparently, F.onAvg)}
+            size={26 * s}
+            text="illustration"
             align="center"
           />
         </>
@@ -587,7 +603,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             y={fine}
             o={win(f, F.rocked, F.test)}
             size={26 * s}
-            text="illustration · as Lipo & Hunt describe it"
+            text="illustration · as Lipo & Hunt describe it · crew size illustrative"
             align="center"
           />
         </>
@@ -639,7 +655,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             title="4"
             sub="side rope"
             lift={60}
-            dx={-180}
+            dx={-270}
           />
           <Span
             B={B}
@@ -760,12 +776,12 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
       ) : null}
 
       {/* Their conclusion: the walking shape carved away on arrival. Gold = the road shape. */}
-      {between(F.so, F.other) ? (
+      {between(F.so, F.not) ? (
         <>
           <Label
             x={cx}
             y={top}
-            o={win(f, F.so + 2, F.other - 2)}
+            o={win(f, F.so + 2, F.not - 2)}
             title="They argue"
             sub="the walking shape, carved away on arrival"
             size={50 * s}
@@ -774,7 +790,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             B={B}
             f={f}
             name="b_trim"
-            o={win(f, F.carved2 + 4, F.other - 2)}
+            o={win(f, F.carved2 + 4, F.not - 2)}
             title="Carved away"
             sub="front of the base"
             color={GOLD}
@@ -784,38 +800,54 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
           <Fine
             x={cx}
             y={fine}
-            o={win(f, F.so, F.other)}
+            o={win(f, F.so, F.carved2 - 2, 3)}
+            size={26 * s}
+            text="illustration"
+            align="center"
+          />
+          <Fine
+            x={cx}
+            y={fine}
+            o={win(f, F.carved2 - 2, F.endW + 6, 3)}
             size={26 * s}
             text="illustration · gold: the road shape"
+            align="center"
+          />
+          <Fine
+            x={cx}
+            y={fine}
+            o={win(f, F.endW + 6, F.not, 3)}
+            size={26 * s}
+            text="illustration"
             align="center"
           />
         </>
       ) : null}
 
       {/* The disagreement: statues set up along the roads on purpose, as gold ghosts over the fallen ones. */}
-      {f >= F.other ? (
+      {f >= F.not ? (
         <>
           <Label
             x={cx}
             y={top}
-            o={win(f, F.other + 2, F.some - 2)}
-            title="Other archaeologists"
-            sub="reject this"
+            o={win(f, F.not + 2, F.set0 - 2)}
+            title="Not everyone agrees"
+            sub="other archaeologists"
             size={50 * s}
           />
           <Label
             x={cx}
             y={top}
-            o={win(f, F.some + 2, F.dropped1 - 2)}
+            o={win(f, F.set0 + 2, F.abandoned - 2)}
             title="Another reading"
-            sub="road statues set up there on purpose"
+            sub="road statues set up along the roads on purpose"
             size={50 * s}
             color={GOLD}
           />
           <Fine
             x={cx}
             y={fine}
-            o={win(f, F.other, F.end + 30)}
+            o={win(f, F.not, F.end + 30)}
             size={26 * s}
             text="illustration · gold: a reading, not a reconstruction"
             align="center"
@@ -825,28 +857,28 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
 
       {/* The closing question: each option on screen as it is said, the picture switching with it
           (Blender: the gold ghosts go for "dropped", come back for "set up"), then the question. */}
-      {f >= F.dropped1 - 2 ? (
+      {f >= F.abandoned - 2 ? (
         <>
           <Label
             x={cx}
             y={top - 10 * s}
-            o={win(f, F.dropped1, F.end + 30)}
-            title="Dropped on the way?"
+            o={win(f, F.abandoned, F.end + 30)}
+            title="Abandoned on the way?"
             size={58 * s}
           />
           <Label
             x={cx}
             y={top + 80 * s}
-            o={win(f, F.set1, F.end + 30)}
-            title="Or set up on purpose?"
+            o={win(f, F.meant, F.end + 30)}
+            title="Or meant to be there?"
             size={58 * s}
             color={GOLD}
           />
           <Label
             x={cx}
             y={top + 190 * s}
-            o={win(f, F.which, F.end + 30)}
-            title="Which do you think?"
+            o={win(f, F.what, F.end + 30)}
+            title="What do you think?"
             size={50 * s}
           />
         </>
@@ -869,18 +901,18 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
 export const moaiReshaped: Short = {
   slug: "moai-reshaped",
   title:
-    "Easter Island's platform statues may have walked there, then been reshaped, two archaeologists say",
+    "Easter Island's statues may have walked to their platforms, then been reshaped, two archaeologists say",
   edit,
   looks: [{ id: "Illustrated", Set: () => null, cast: () => [] }],
   ui: (L) => <Overlay L={L} />,
   music: "history",
   sfx: [
-    { at: F.here, name: "whoosh", volume: 0.2 },
+    { at: F.and0, name: "whoosh", volume: 0.2 },
     { at: F.reshaped, name: "sparkle", volume: 0.25 },
     { at: F.dozens, name: "whoosh", volume: 0.2 },
     { at: F.test, name: "whoosh", volume: 0.2 },
     { at: F.carved2, name: "thud", volume: 0.3 },
-    { at: F.some, name: "sparkle", volume: 0.25 },
-    { at: F.which, name: "pop", volume: 0.3 },
+    { at: F.set0, name: "sparkle", volume: 0.25 },
+    { at: F.what, name: "pop", volume: 0.3 },
   ],
 };

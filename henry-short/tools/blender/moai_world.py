@@ -20,7 +20,8 @@ script/moai-reshaped.txt SOURCES and review/moai-reshaped.a6.md (A6):
   the corrected Zenodo means (not verified by A7).
 - Eye sockets: on platform statues only, never on road statues (LH25 1.1).
 - Walking: rocked side to side on ropes, each rock a step forward (LH25 1.1, Fig. 1). The ancient
-  walk shows ropes only, no people: nothing read says who pulled or how many.
+  walk has islanders on two side ropes and a rear rope, 22 for a 6 m statue: inside LH25 1.5's
+  model (20-35 people to start a 4-6 m statue, 5-10 on the rear); "crew size illustrative".
 - The test: a concrete replica, 4 people on each side rope and 10 on the rear rope (LH25 1.4). LH25
   does not give its size; it is sized from its mass (4.35 t) at an assumed concrete density.
 - The island is compressed and the statues on the roads are spaced for legibility: not to scale.
@@ -33,6 +34,8 @@ import math
 import random
 import sys
 from pathlib import Path
+
+import zlib
 
 import bmesh
 import bpy
@@ -242,6 +245,7 @@ class N:
 
 
 HAZE = (0.62, 0.70, 0.80)
+MAP_WIN = (T("the") + SHIFT, T("apparently") + SHIFT)  # "The clues are in the statues that never arrived. Dozens lie along the old roads from the quarry,"
 
 
 def make_mat(name, build, haze=True):
@@ -252,9 +256,17 @@ def make_mat(name, build, haze=True):
     bsdf = nt.nodes["Principled BSDF"]
     out = nt.nodes["Material Output"]
     build(g, bsdf)
-    if haze:  # aerial perspective: distant land fades toward the sky colour
+    if haze:  # aerial perspective: distant land fades toward the sky colour (off for the map, seen from 40 km)
         cd = g.new("ShaderNodeCameraData")
-        d = g.math("DIVIDE", cd.outputs["View Distance"], -9000)
+        hz = g.new("ShaderNodeValue")
+        for frame, v in ((0, 9000.0), (MAP_WIN[0], 1e9), (MAP_WIN[1], 9000.0)):
+            hz.outputs[0].default_value = v
+            hz.outputs[0].keyframe_insert("default_value", frame=frame)
+        for fc in nt.animation_data.action.layers[0].strips[0].channelbags[0].fcurves:
+            if f'nodes["{hz.name}"]' in fc.data_path:  # only the haze switch; the water's clock stays linear
+                for kp in fc.keyframe_points:
+                    kp.interpolation = "CONSTANT"
+        d = g.math("DIVIDE", cd.outputs["View Distance"], g.math("MULTIPLY", hz.outputs[0], -1))
         f = g.math("SUBTRACT", 1, g.math("EXPONENT", d), clamp=True)
         em = g.new("ShaderNodeEmission", Color=(*HAZE, 1), Strength=0.6)
         mx = g.new("ShaderNodeMixShader")
@@ -265,9 +277,9 @@ def make_mat(name, build, haze=True):
     return m
 
 
-GRASS = [(0.15, (0.16, 0.17, 0.06)), (0.45, (0.40, 0.38, 0.14)), (0.7, (0.58, 0.52, 0.25)), (0.9, (0.66, 0.58, 0.36))]
-SOIL = [(0.2, (0.22, 0.15, 0.09)), (0.55, (0.38, 0.29, 0.19)), (0.85, (0.50, 0.41, 0.29))]
-TUFF = [(0.15, (0.25, 0.21, 0.17)), (0.5, (0.46, 0.40, 0.32)), (0.85, (0.64, 0.58, 0.47))]  # grey-brown volcanic tuff
+GRASS = [(0.15, (0.07, 0.17, 0.03)), (0.45, (0.17, 0.33, 0.06)), (0.7, (0.30, 0.45, 0.10)), (0.9, (0.45, 0.52, 0.20))]  # lush island grass
+SOIL = [(0.2, (0.22, 0.09, 0.05)), (0.55, (0.40, 0.19, 0.10)), (0.85, (0.55, 0.32, 0.20))]  # reddish volcanic soil
+TUFF = [(0.15, (0.28, 0.20, 0.12)), (0.5, (0.55, 0.43, 0.29)), (0.85, (0.76, 0.64, 0.46))]  # golden-brown volcanic tuff
 BASALT = [(0.15, (0.08, 0.08, 0.08)), (0.5, (0.20, 0.19, 0.18)), (0.85, (0.36, 0.34, 0.31))]
 CONCRETE = [(0.2, (0.36, 0.36, 0.35)), (0.5, (0.55, 0.55, 0.53)), (0.85, (0.70, 0.70, 0.68))]
 
@@ -286,6 +298,9 @@ def ground_build(g, bsdf):
     g.link(co, mid.inputs["Vector"])
     lum = g.math("ADD", lum, g.math("MULTIPLY", g.math("SUBTRACT", big.outputs["Fac"], 0.5), 0.7))
     lum = g.math("ADD", lum, g.math("MULTIPLY", g.math("SUBTRACT", mid.outputs["Fac"], 0.5), 0.35))
+    huge = g.new("ShaderNodeTexNoise", Scale=0.00025, Detail=4.0)  # kilometre-scale patches, so the island reads from the air
+    g.link(co, huge.inputs["Vector"])
+    lum = g.math("ADD", lum, g.math("MULTIPLY", g.math("SUBTRACT", huge.outputs["Fac"], 0.5), 0.8))
     tone = g.ramp(lum, GRASS)
     rock = g.mix(big.outputs["Fac"], g.scan("rock_boulder_dry", "diff", 23.0), g.scan("rock_boulder_dry", "diff", 41.0))  # large tiles, swapped by noise: no visible repeat from the air
     tone = g.mix(g.attr("rock"), tone, g.ramp(g.lum(rock), TUFF))
@@ -551,18 +566,50 @@ def pin(name, parent, co):
     return e
 
 
-# ---------------------------------------------------------------- the island (compressed: not to scale)
-X0, X1, Y0, Y1 = -6000.0, 6000.0, -6000.0, 6000.0
-Q = V3(0.0, 1400.0, 0.0)  # Rano Raraku, the quarry
-AHU = V3(300.0, -3700.0, 0.0)  # a platform on the south coast; its statues face inland (+y)
-SEA_Y = -3790.0
-ROADS = {  # old roads radiating from the quarry (LH25 1.1), as control points
-    "w": [(-520, 1180), (-1100, 820), (-1700, 300), (-2300, -150), (-3000, -420)],
-    "s": [(-60, 700), (-30, 0), (120, -900), (260, -1900), (300, -2800), (300, -3620)],
-    "sw": [(-420, 900), (-900, 200), (-1400, -700), (-1900, -1600), (-2400, -2500)],
+# ---------------------------------------------------------------- the island: Rapa Nui, simplified
+# A triangle about 24 km across: Rano Kau at the south-west tip, Terevaka in the north, Poike at the
+# east tip, and Rano Raraku, the quarry, just inland of the south-east coast (UCLA newsroom: "the Rano
+# Raraku quarry on the eastern side"; A7 pass 1). The coast is drawn freehand, simplified: the map
+# says so on screen.
+X0, X1, Y0, Y1 = -14000.0, 14000.0, -10000.0, 10000.0
+COAST = np.array([(-10200, -4400), (-9000, -5200), (-3000, -3600), (3000, -2000), (7800, -900), (10600, 400), (11400, 2000), (9500, 3400), (3500, 4900), (-1000, 5600), (-3800, 6200), (-6500, 3500), (-8800, 0), (-9600, -2600)], float)
+Q = V3(6300.0, 0.0, 0.0)  # Rano Raraku, the quarry
+AHU = V3(7550.0, -800.0, 0.0)  # a platform near the south-east coast; its statues face inland (+y)
+ROADS = {  # old roads radiating from the quarry (LH25 1.1: roads "radiate from Rano Raraku"), as control points
+    "w": [(5900, 250), (4800, 700), (2500, 1300), (0, 1200), (-3000, 300), (-6000, -1200)],
+    "s": [(6000, -350), (4500, -1100), (2000, -1750), (-1500, -2500), (-5000, -3200), (-8000, -3700)],
+    "n": [(6400, 350), (5800, 1800), (4800, 3000), (3800, 4300)],
 }
-WALK = V3(-1700.0, 300.0, 0.0)  # the walked statue, on the west road
-FLAT = [((WALK.x, WALK.y), 260), ((AHU.x, AHU.y), 260), ((-2380, -180), 300), ((-30, -200), 200)]
+VOLCANOES = [  # (x, y, height, radius, crater radius, crater depth)
+    (-4000, 3300, 470, 4200, 0, 0),  # Terevaka
+    (-8900, -4500, 300, 1700, 800, 210),  # Rano Kau, with its crater lake
+    (10300, 1900, 330, 1900, 0, 0),  # Poike
+]
+
+
+def road_path(pts, step=3.0):
+    pts = np.array(pts, float)
+    seg = np.hypot(*np.diff(pts, axis=0).T)
+    s_ = np.concatenate([[0], np.cumsum(seg)])
+    ss = np.arange(0, s_[-1], step)
+    x = np.interp(ss, s_, pts[:, 0])
+    y = np.interp(ss, s_, pts[:, 1])
+    k = 60  # soften the corners
+    x = np.convolve(np.pad(x, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
+    y = np.convolve(np.pad(y, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
+    return np.stack([x, y], 1)
+
+
+PATHS = {k: road_path(v) for k, v in ROADS.items()}
+
+
+def frac_xy(name, frac, dm=0.0):
+    path = PATHS[name]
+    i = int(min(max(frac * (len(path) - 1) + dm / 3.0, 0), len(path) - 2))
+    return path[i], path[i + 1] - path[i]
+
+
+FLAT = [((AHU.x, AHU.y), 300)] + [((frac_xy(r, f)[0][0], frac_xy(r, f)[0][1]), 260) for r, f in (("w", 0.12), ("w", 0.16), ("w", 0.22), ("w", 0.30), ("s", 0.10))]
 
 
 def keep_flat(x, y):
@@ -572,21 +619,45 @@ def keep_flat(x, y):
     return w
 
 
+def coast_distance(x, y):
+    """Signed distance to the coast: positive inland."""
+    d = np.full(x.shape, np.inf)
+    inside = np.zeros(x.shape, bool)
+    for (ax, ay), (bx, by) in zip(COAST, np.roll(COAST, -1, axis=0)):
+        ex, ey = bx - ax, by - ay
+        t = np.clip(((x - ax) * ex + (y - ay) * ey) / (ex * ex + ey * ey), 0, 1)
+        d = np.minimum(d, np.hypot(x - ax - t * ex, y - ay - t * ey))
+        inside ^= ((ay > y) != (by > y)) & (x < (bx - ax) * (y - ay) / (by - ay + 1e-9) + ax)
+    return np.where(inside, d, -d)
+
+
+def smoothstep(e0, e1, v):
+    t = np.clip((v - e0) / (e1 - e0), 0, 1)
+    return t * t * (3 - 2 * t)
+
+
 def height(x, y):
-    th = np.arctan2(y, x)
-    rad = 4300 + 260 * np.sin(3 * th + 1.0) + 180 * np.sin(5 * th + 2.0)
-    land = np.clip((rad - np.hypot(x, y * 1.05)) / 420, 0, 1)
-    near_ahu = np.clip(1 - np.hypot(x - AHU.x, (y - AHU.y) * 1.6) / 1400, 0, 1)  # a low shore just behind the platform
-    land = near_ahu * np.minimum(land, np.clip((y - SEA_Y) / 60, 0, 1)) + (1 - near_ahu) * land
-    hills = 14 * np.sin(x / 640 + 0.4) * np.cos(y / 820) + 9 * np.sin((x + y) / 310)
+    dc = coast_distance(x, y)
+    near_ahu = np.clip(1 - np.hypot(x - AHU.x, y - AHU.y) / 1100, 0, 1)
+    land = smoothstep(0, 260, dc)  # coastal cliffs...
+    shore = smoothstep(-40, 160, dc)  # ...except a low shore behind the platform
+    base = (34 * land) * (1 - near_ahu) + (6 * shore) * near_ahu
+    hills = 12 * np.sin(x / 700 + 0.4) * np.cos(y / 900) + 7 * np.sin((x + y) / 330)
+    z = base + hills * keep_flat(x, y) * land * (1 - near_ahu)
+    for vx, vy, vh, vr, cr, cd in VOLCANOES:
+        r = np.hypot(x - vx, y - vy)
+        z = z + vh * smoothstep(vr, 0, r) ** 1.3 - (cd * smoothstep(cr, cr * 0.6, r) if cr else 0)
+    # Rano Raraku: a cone with a crater, its south-west flank quarried into a cliff
     r = np.hypot(x - Q.x, y - Q.y)
-    s1, s2 = np.clip((760 - r) / 420, 0, 1), np.clip((300 - r) / 120, 0, 1)
-    cone = 150 * s1 * s1 * (3 - 2 * s1) - 80 * s2 * s2 * (3 - 2 * s2)  # a steep cone with a crater
-    z = 32 + hills * keep_flat(x, y) + cone
-    return z * land - 30 * (1 - land)
+    ang = np.arctan2(y - Q.y, x - Q.x)
+    sector = np.clip(1 - np.abs(ang + 2.2) / 0.5, 0, 1)
+    gentle = smoothstep(780, 300, r)
+    cliff = smoothstep(560, 430, r)
+    z = z + 155 * (gentle * (1 - sector) + cliff * sector) - 85 * smoothstep(300, 180, r)
+    return np.where(dc > -400, z, -40.0) * smoothstep(-400, 0, dc) - 40 * (1 - smoothstep(-400, 0, dc))
 
 
-STEP = 12.0
+STEP = 20.0
 xs = np.linspace(X0, X1, int((X1 - X0) / STEP) + 1)
 ys = np.linspace(Y0, Y1, int((Y1 - Y0) / STEP) + 1)
 NXG = len(xs)
@@ -594,8 +665,8 @@ GX, GY = np.meshgrid(xs, ys)
 GZ = height(GX, GY)
 slope = np.hypot(*np.gradient(GZ, STEP, STEP))
 rq = np.hypot(GX - Q.x, GY - Q.y)
-quarry_face = band(np.arctan2(GY - Q.y, GX - Q.x), -2.45, -2.15, 0.12) * band(rq, 480, 640, 40)  # the quarried south-west flank
-rock = np.clip(np.clip((slope - 0.6) * 2.5, 0, 1) + quarry_face, 0, 1)
+quarry_face = band(np.arctan2(GY - Q.y, GX - Q.x), -2.6, -1.8, 0.15) * band(rq, 400, 580, 40)  # the quarried cliff
+rock = np.clip(np.clip((slope - 0.55) * 2.5, 0, 1) + quarry_face, 0, 1)
 ii, jj = np.meshgrid(np.arange(NXG - 1), np.arange(len(ys) - 1))
 a = (jj * NXG + ii).ravel()
 QD = np.stack([a, a + 1, a + 1 + NXG, a + NXG], 1)
@@ -612,7 +683,7 @@ me.attributes.new("rock", "FLOAT", "POINT").data.foreach_set("value", rock.ravel
 me.materials.append(M["ground"])
 me.shade_smooth()
 ground = link(bpy.data.objects.new("ground", me))
-sea = boxes_mesh("sea", [(X0 - 30000, Y0 - 30000, -40, X1 + 30000, Y1 + 30000, 0.0)], M["sea"])
+sea = boxes_mesh("sea", [(X0 - 40000, Y0 - 40000, -60, X1 + 40000, Y1 + 40000, 0.0)], M["sea"])
 bpy.context.view_layer.update()
 BVH = BVHTree.FromObject(ground, bpy.context.evaluated_depsgraph_get())
 
@@ -624,20 +695,6 @@ def gz(x, y):
 
 
 # ---------------------------------------------------------------- roads: ribbons laid on the ground mesh
-def road_path(pts, step=3.0):
-    pts = np.array(pts, float)
-    seg = np.hypot(*np.diff(pts, axis=0).T)
-    s = np.concatenate([[0], np.cumsum(seg)])
-    ss = np.arange(0, s[-1], step)
-    x = np.interp(ss, s, pts[:, 0])
-    y = np.interp(ss, s, pts[:, 1])
-    k = 15  # soften the corners
-    x = np.convolve(np.pad(x, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
-    y = np.convolve(np.pad(y, k, mode="edge"), np.ones(2 * k + 1) / (2 * k + 1), "valid")
-    return np.stack([x, y], 1)
-
-
-PATHS = {k: road_path(v) for k, v in ROADS.items()}
 for name, path in PATHS.items():
     d = np.gradient(path, axis=0)
     nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
@@ -656,14 +713,12 @@ for name, path in PATHS.items():
     o.data.shade_smooth()
 
 
-def along(name, frac, side=0.0):
-    """A point on the ground a fraction along a road (offset `side` metres to its left), and the
-    direction of travel there (away from the quarry)."""
-    path = PATHS[name]
-    i = min(int(frac * (len(path) - 1)), len(path) - 2)
-    d = path[i + 1] - path[i]
+def along(name, frac, side=0.0, dm=0.0):
+    """A point on the ground a fraction along a road, plus `dm` metres further, offset `side`
+    metres to its left; and the direction of travel there (away from the quarry)."""
+    (px, py), d = frac_xy(name, frac, dm)
     yaw = math.atan2(d[1], d[0])
-    x, y = path[i][0] - math.sin(yaw) * side, path[i][1] + math.cos(yaw) * side
+    x, y = px - math.sin(yaw) * side, py + math.cos(yaw) * side
     return V3(x, y, gz(x, y)), yaw
 
 
@@ -681,23 +736,25 @@ def lying(name, H, at, yaw, face_up, cols=48):
 
 
 FALLEN = []
-for name, n in (("w", 16), ("s", 18), ("sw", 14)):
+for name, n in (("w", 18), ("s", 20), ("n", 10)):
     for i in range(n):
         f = (i + 0.5 + rng.uniform(-0.3, 0.3)) / n * 0.9 + 0.05
         at, yaw = along(name, f, float(rng.uniform(-2, 2)))
-        if (at - WALK).length < 40 or (name == "w" and 0.5 < f < 0.6):
+        if name == "w" and (0.09 < f < 0.19 or 0.20 < f < 0.24 or 0.28 < f < 0.33):  # the close-shot sites
+            continue
+        if name == "s" and 0.08 < f < 0.12:
             continue
         FALLEN.append(lying(f"fallen_{name}{i}", float(rng.uniform(4.0, 8.5)), at, yaw + float(rng.uniform(-0.5, 0.5)), bool(rng.uniform() < 0.4)))
 # A run of them close together on the west road, for the last shot.
 RUN = []
-for i, (frac, side) in enumerate(((0.534, 3.5), (0.539, -4.0), (0.5455, 2.5), (0.552, -3.0), (0.56, 4.0))):
-    at, yaw = along("w", frac, side)
+for i, (dm, side) in enumerate(((0, 3.5), (6, -4.0), (13, 2.5), (20, -3.0), (28, 4.0))):
+    at, yaw = along("w", 0.30, side, dm)
     H_ = float(rng.uniform(5.0, 7.0))
     o = lying(f"fallen_run{i}", H_, at, yaw + float(rng.uniform(-0.4, 0.4)), i % 2 == 0, cols=80)
     FALLEN.append(o)
     RUN.append((at, yaw, H_))
 # The one the camera finds for "none of the road statues have them": face up, beside the south road.
-FU_AT, FU_YAW = along("s", 0.16, 4.5)
+FU_AT, FU_YAW = along("s", 0.10, 4.5)
 FU_H = 6.4
 fu = lying("fallen_faceup", FU_H, FU_AT, FU_YAW, True, cols=112)
 FALLEN.append(fu)
@@ -728,7 +785,7 @@ for i, dx in enumerate((-12.0, -6.0, 0.0, 6.0, 12.0)):
     o.rotation_euler = (0, 0, math.pi)  # facing inland (+y)
     PLAT.append(o)
 hero = PLAT[2]  # A: platform shape throughout; its eye sockets are carved on "carved" (line 7)
-CARVE = (T("carved") + 4, T("platform") + 6)  # "carved only once a statue stood on its platform."
+CARVE = (T("carved") + 4, T("there") + 6)  # "carved only once they stood there."
 shape_key(hero, "platform", [(0, 1.0)])
 shape_key(hero, "sockets", [(0, 0.0), (CARVE[0], 0.0), (CARVE[1], 1.0)])
 pin("a_top", hero, V3(0, 0, AH))
@@ -758,7 +815,7 @@ for nm, t_, u_ in (("e_sh_l", SHOULDER_T, 1), ("e_sh_r", SHOULDER_T, -1), ("e_ba
 pin("e_top", END_E, V3(0, 0, AH))
 pin("e_bot", END_E, V3(0, 0, 0))
 # The hook: the road-shaped statue A was, as a gold ghost over it (LH25: reshaped after arrival).
-GHOST_A = (T("reshaped") - 6, T("dozens") + 4)
+GHOST_A = (T("reshaped") - 6, T("the") + 4)
 ghost_a = moai("ghost_a", AH, ghost_mat("ghost_a", [GHOST_A]), cols=96)
 ghost_a.location = hero.location + V3(0, 0, 0.002)
 ghost_a.rotation_euler = hero.rotation_euler
@@ -768,7 +825,7 @@ visible(ghost_a, GHOST_A)
 # B: arrives road-shaped; then the front of its base is carved away and the lean goes. Seen only in
 # its own shot, in place of the west end statue.
 B_AT = PLAT[0].location.copy()
-B_WIN = (T("so,") + SHIFT, T("other") + SHIFT)
+B_WIN = (T("so,") + SHIFT, T("not") + SHIFT)
 visible(PLAT[0], (0, B_WIN[0]), (B_WIN[1], END + 1))
 hero_b = moai("ahu_b", AH, M["tuff"], cols=112, keys=True)
 hero_b.location = B_AT
@@ -867,25 +924,22 @@ def head_pt(H, side):
 WH = 6.0
 walker = moai("walker", WH, M["tuff"], cols=112)
 WS = 0.1925 * WH
-W0, W_YAW = along("w", 0.45)
+W0, W_YAW = along("w", 0.16)
 W_HEAD = W_YAW + math.pi / 2  # its front faces down the road, away from the quarry
-WALK_F0 = T("rocked") + 6
+WALK_F0 = T("rock") + 6
 key_matrix(walker, range(0, END + 1), lambda f: walk_matrix(f, WALK_F0, W0, W_HEAD, ROAD_BASE * WS))
 for nm, t_, u_ in (("w_sh_l", SHOULDER_T, 1), ("w_sh_r", SHOULDER_T, -1), ("w_base_l", 0.02, 1), ("w_base_r", 0.02, -1)):
     pin(nm, walker, edge_pt(WH, t_, u_))
 pin("w_top", walker, V3(0, -WH * math.tan(math.radians(LEAN)), WH))
 pin("w_bot", walker, V3(0, 0, 0))
 pin("w_up", walker, V3(0, 0, WH))  # straight above the base: the vertical the lean is measured from
-ROPE_WIN = (T("rocked") - 2 + SHIFT, T("in") + SHIFT)
+ROPE_WIN = (T("rock") - 2 + SHIFT, T("in", 1) + SHIFT)
 WF = Matrix.Rotation(W_HEAD, 4, "Z")
-for side in (-1, 1, 0):  # ropes only, running out of frame: nothing read says who pulled them
-    far = W0 + WF @ V3(side * 16, 12 if side == 0 else -3, 1.0)
-    rope(f"rope_w{side}", lambda f, s=side, far=far: (walk_matrix(f, WALK_F0, W0, W_HEAD, ROAD_BASE * WS) @ head_pt(WH, s), far), *ROPE_WIN)
 
-# The hook, "These statues may have walked here": another road statue, already rocking forward on its
+# The hook, "Easter Island's statues may have walked to their platforms": another road statue, already rocking forward on its
 # ropes when the short opens. Seen only in the first shot.
-HOOK_WIN = (0, T("here") + SHIFT)
-H0, H_YAW = along("w", 0.40)
+HOOK_WIN = (0, T("and") + SHIFT)
+H0, H_YAW = along("w", 0.12)
 H_HEAD = H_YAW + math.pi / 2
 HF = Matrix.Rotation(H_HEAD, 4, "Z")
 walker_h = moai("walker_hook", WH, M["tuff"], cols=112)
@@ -896,15 +950,12 @@ def hook_at(f):
     return walk_matrix(f, HOOK_F0, H0, H_HEAD, ROAD_BASE * WS, period=44, roll=7.0, yaw=10.0)
 
 
-key_matrix(walker_h, range(0, T("here") + 12), hook_at)
+key_matrix(walker_h, range(0, T("and") + 12), hook_at)
 visible(walker_h, HOOK_WIN)
-for side in (-1, 1, 0):
-    far = H0 + HF @ V3(side * 16, 12 if side == 0 else -3, 1.0)
-    rope(f"rope_h{side}", lambda f, s=side, far=far: (hook_at(f) @ head_pt(WH, s), far), *HOOK_WIN)
 
 # ---------------------------------------------------------------- the test: a concrete replica and its crew of 18
 TEST = V3(40000.0, 0.0, 0.0)  # a field of its own; the place is not shown
-TEST_WIN = (T("in") + SHIFT, T("the", 3) + SHIFT)  # "In a test ... forty minutes."
+TEST_WIN = (T("in", 1) + SHIFT, T("the", 6) + SHIFT)  # "In a test ... forty minutes."
 lawn = boxes_mesh("lawn", [(TEST.x - 3000, TEST.y - 3000, -2, TEST.x + 3000, TEST.y + 3000, 0.0)], M["lawn"])
 visible(lawn, TEST_WIN)
 visible(sea, (0, TEST_WIN[0]), (TEST_WIN[1], END + 1))
@@ -920,7 +971,7 @@ bpy.data.objects.remove(_tmp)
 replica = moai("replica", RH, M["concrete"], cols=96)
 RS = 0.1925 * RH
 R_HEAD = math.pi / 2  # its front faces +x, down the marked track
-TEST_F0 = T("in") + 4
+TEST_F0 = T("in", 1) + 4
 
 
 def replica_at(f):
@@ -963,9 +1014,14 @@ def limb(vf, a_, b_, r):
     faces += [tuple(n0 + j for j in range(8))[::-1], tuple(n0 + 8 + j for j in range(8))]
 
 
-def person(name, seed, lean_back):
+TAPA = [(0.78, 0.68, 0.50), (0.70, 0.58, 0.40), (0.82, 0.74, 0.58)]  # bark cloth, undyed
+
+
+def person(name, seed, lean_back, islander=False):
     """A figure facing +y, hands out to a rope ahead, leaning back; feet at the origin. Returns the
-    object and where its hands are, in its own frame."""
+    object and where its hands are, in its own frame. `islander`: bare-chested, a plain bark-cloth
+    wrap at the waist; generic, no faces, no tattoos or ornaments (C6: nothing is claimed about
+    dress)."""
     r = random.Random(seed)
     h = r.uniform(1.62, 1.86)
     parts = {"skin": ([], []), "shirt": ([], []), "pants": ([], [])}
@@ -977,7 +1033,7 @@ def person(name, seed, lean_back):
     hip, sh = 0.53 * h, 0.82 * h
     hands = P(0, 0.42, sh - 0.22)
     for sx in (-1, 1):
-        limb(parts["pants"], V3(sx * 0.10, 0.12, 0.04), P(sx * 0.10, 0, hip), 0.07)  # feet braced ahead
+        limb(parts["skin" if islander else "pants"], V3(sx * 0.10, 0.12, 0.04), P(sx * 0.10, 0, hip), 0.07)  # feet braced ahead
         limb(parts["skin"], P(sx * 0.19, 0, sh - 0.02), P(sx * 0.05, 0.42, sh - 0.22), 0.045)
     limb(parts["pants"], P(0, 0, hip - 0.03), P(0, 0, hip + 0.10), 0.16)
     limb(parts["shirt"], P(0, 0, hip + 0.05), P(0, 0, sh + 0.02), 0.17)
@@ -992,6 +1048,9 @@ def person(name, seed, lean_back):
             hv.append(head_c + V3(math.sin(th) * math.cos(ph) * 0.1, math.sin(th) * math.sin(ph) * 0.11, math.cos(th) * 0.12))
     hf += [(n0 + i * 10 + j, n0 + i * 10 + (j + 1) % 10, n0 + (i + 1) * 10 + (j + 1) % 10, n0 + (i + 1) * 10 + j) for i in range(6) for j in range(10)]
     cols_ = {"skin": SKIN[r.randrange(len(SKIN))], "shirt": SHIRT[r.randrange(len(SHIRT))], "pants": PANTS[r.randrange(len(PANTS))]}
+    if islander:
+        cols_["shirt"] = cols_["skin"]
+        cols_["pants"] = TAPA[r.randrange(len(TAPA))]
     verts, faces, mi = [], [], []
     me_ = bpy.data.meshes.new(name)
     for k_, (kname, (v, f)) in enumerate(parts.items()):
@@ -1007,47 +1066,58 @@ def person(name, seed, lean_back):
     return link(bpy.data.objects.new(name, me_)), hands
 
 
+def crew(prefix, origin, heading, statue_fn, H, f0, half, frames, win, teams, islander=False, scale=1.0, pins=()):
+    """People on the ropes of a walking statue: teams ahead and to each side, and behind it, each
+    holding a rope that runs from the statue's head through their hands. The side teams pull in
+    turn, in time with the rocking; everyone drifts forward with the statue. `teams`: {name:
+    (side, count)}, side = +1 / -1 / 0 (rear)."""
+    Rz = Matrix.Rotation(heading, 4, "Z")
+    fwd, lat = (Rz @ V3(0, -1, 0)).normalized(), (Rz @ V3(1, 0, 0)).normalized()
+    hands_of = {}
+
+    def place(team, i, f):
+        side, _ = teams[team]
+        out = (fwd * 0.45 + lat * side).normalized() if side else -fwd
+        at0 = origin + ((fwd * 4.0 + lat * side * 8.0) if side else -fwd * 8.0) * scale + out * (1.1 * i)
+        if not side:
+            at0 += lat * (0.35 if i % 2 else -0.35)
+        m = statue_fn(f)
+        drift = fwd * (m @ V3(0, 0, 0) - origin).dot(fwd)
+        pull = 0.0
+        if side and f > f0:
+            k_ = int((f - f0) // half)
+            u = ((f - f0) % half) / half
+            pull = 0.35 * math.sin(math.pi * u) * (1 if (1 if k_ % 2 == 0 else -1) == side else 0)
+        face = -out
+        return Matrix.Translation(at0 + drift + out * pull) @ Matrix.Rotation(math.atan2(face.y, face.x) - math.pi / 2, 4, "Z")
+
+    for team, (side, n) in teams.items():
+        for i in range(n):
+            o, hands = person(f"{prefix}_{team}{i}", zlib.crc32(f"{prefix}{team}{i}".encode()) % 9973, 0.3 if side else 0.2, islander)
+            key_matrix(o, frames, lambda f, team=team, i=i: place(team, i, f))
+            visible(o, win)
+            hands_of[(team, i)] = hands
+        rope(f"{prefix}_rope_{team}_a", lambda f, team=team, side=side: (statue_fn(f) @ head_pt(H, side), place(team, 0, f) @ hands_of[(team, 0)]), *win)
+        rope(f"{prefix}_rope_{team}_b", lambda f, team=team, n=n: (place(team, 0, f) @ hands_of[(team, 0)], place(team, n - 1, f) @ (hands_of[(team, n - 1)] + V3(0, -0.6, 0))), *win)
+    for name, team, i in pins:
+        e = pin(name, None, V3(0, 0, 0))
+        key_matrix(e, frames, lambda f, team=team, i=i: Matrix.Translation(place(team, i, f) @ V3(0, 0, 2.0)))
+
+
 # LH25 1.4: "four on each lateral rope and ten on the rear rope"
-TEAMS = {"left": (1, 4), "right": (-1, 4), "rear": (0, 10)}
-CREW = {}
-
-
-def crew_matrix(team, i, f):
-    side, _ = TEAMS[team]
-    out = V3(0.45, side * 1.0, 0).normalized() if side else V3(-1, 0, 0)
-    at0 = TEST + (V3(4.0, side * 8.0, 0) if side else V3(-8.0, 0, 0)) + out * (1.1 * i)
-    if not side:
-        at0 += V3(0, 0.35 if i % 2 else -0.35, 0)
-    m = replica_at(f)
-    drift = V3((m @ V3(0, 0, 0)).x - TEST.x, 0, 0)  # they walk along with it
-    pull = 0.0
-    if side and f > TEST_F0:  # the side teams pull in turn, in time with the rocking
-        k_ = int((f - TEST_F0) // 25)
-        u = ((f - TEST_F0) % 25) / 25
-        pull = 0.35 * math.sin(math.pi * u) * (1 if (1 if k_ % 2 == 0 else -1) == side else 0)
-    face = -out  # facing the statue
-    return Matrix.Translation(at0 + drift + out * pull) @ Matrix.Rotation(math.atan2(face.y, face.x) - math.pi / 2, 4, "Z")
-
-
-for team, (side, n) in TEAMS.items():
-    for i in range(n):
-        o, hands = person(f"crew_{team}{i}", hash((team, i)) % 9973, 0.3 if side else 0.2)
-        key_matrix(o, FR, lambda f, team=team, i=i: crew_matrix(team, i, f))
-        visible(o, TEST_WIN)
-        CREW[(team, i)] = hands
-    # the rope: from the statue's head to the first pair of hands, then along the team
-    rope(f"rope_{team}_a", lambda f, team=team, side=side: (replica_at(f) @ head_pt(RH, side), crew_matrix(team, 0, f) @ CREW[(team, 0)]), *TEST_WIN)
-    rope(f"rope_{team}_b", lambda f, team=team, n=n: (crew_matrix(team, 0, f) @ CREW[(team, 0)], crew_matrix(team, n - 1, f) @ (CREW[(team, n - 1)] + V3(0, -0.6, 0))), *TEST_WIN)
-for team, i in (("rear", 5), ("left", 2), ("right", 2)):
-    e = pin(f"crew_{team}", None, V3(0, 0, 0))
-    key_matrix(e, FR, lambda f, team=team, i=i: Matrix.Translation(crew_matrix(team, i, f) @ V3(0, 0, 2.0)))
+crew("crew", TEST, R_HEAD, replica_at, RH, TEST_F0, 25, FR, TEST_WIN, {"left": (1, 4), "right": (-1, 4), "rear": (0, 10)}, pins=(("crew_rear", "rear", 5), ("crew_left", "left", 2), ("crew_right", "right", 2)))
+# The ancient walk, as Lipo & Hunt describe it: islanders on side ropes and a rear rope. How many
+# pulled is not known; these crews are illustrative and the small print says so.
+ISLE_TEAMS = {"left": (1, 7), "right": (-1, 7), "rear": (0, 8)}
+crew("isle_w", W0, W_HEAD, lambda f: walk_matrix(f, WALK_F0, W0, W_HEAD, ROAD_BASE * WS), WH, WALK_F0, 30, range(ROPE_WIN[0] - 2, ROPE_WIN[1] + 2), ROPE_WIN, ISLE_TEAMS, islander=True, scale=0.8)
+crew("isle_h", H0, H_HEAD, hook_at, WH, HOOK_F0, 22, range(0, HOOK_WIN[1] + 2), HOOK_WIN, ISLE_TEAMS, islander=True, scale=0.6)
 
 # ---------------------------------------------------------------- "set up there on purpose": gold ghosts, standing
-GHOST_WIN = (T("some") - 4 + SHIFT, END + 1)
-# The closing question: "Dropped on the way" (ghosts go, the fallen statues alone), "or set up there
-# on purpose" (ghosts back), "which do you think?" (both stay).
-D1, S1 = T("dropped", 1), T("set", 1)
-gm = ghost_mat("ghost_up", [], keys=[(0, 0.0), (T("some") - 4, 0.0), (T("some") + 6, 1.0), (D1 - 2, 1.0), (D1 + 8, 0.0), (S1 - 2, 0.0), (S1 + 8, 1.0), (END + 40, 1.0)])
+GHOST_WIN = (T("set") - 4 + SHIFT, END + 1)
+# The closing question: "abandoned on the way" (ghosts go, the fallen statues alone), "or meant to be
+# there all along" (ghosts back), "What do you think?" (both stay).
+D1, S1 = T("abandoned"), T("meant")
+gm = ghost_mat("ghost_up", [], keys=[(0, 0.0), (T("set") - 4, 0.0), (T("set") + 6, 1.0), (D1 - 2, 1.0), (D1 + 8, 0.0), (S1 - 2, 0.0), (S1 + 8, 1.0), (T("what") - 2, 1.0), (T("what") + 10, 0.4), (END + 40, 0.4)])  # both readings on screen for the question
 for i, (at, yaw, H_) in enumerate(RUN):
     g_ = moai(f"upright_{i}", H_, gm, cols=64)
     g_.location = at
@@ -1055,17 +1125,68 @@ for i, (at, yaw, H_) in enumerate(RUN):
     visible(g_, GHOST_WIN)
     if i == 2:
         pin("upright", g_, V3(0, 0, H_ + 0.4))
-DROP_O = FALLEN[min(range(len(FALLEN)), key=lambda j: (FALLEN[j].location - along("w", 0.30)[0]).length)]
+_at, _yaw = along("w", 0.22, 2.0)
+DROP_O = lying("fallen_drop", 6.8, _at, _yaw + 0.25, False, cols=96)  # face down: fell forward
+FALLEN.append(DROP_O)
 DROP = DROP_O.location.copy()
 pin("fallen_w", DROP_O, V3(0, 0, 0))
-pin("quarry", None, Q + V3(-380, -330, 95))
-pin("road_s", None, along("s", 0.18)[0] + V3(0, 0, 2))
+_qx, _qy = Q.x - 300, Q.y - 400  # on the quarried cliff
+pin("quarry", None, V3(_qx, _qy, gz(_qx, _qy) + 30))
+pin("road_s", None, along("w", 0.18)[0] + V3(0, 0, 30))  # on the drawn map road, which floats 30 m up
 
 # Rano Raraku's crater holds a lake (USGS / PLoS ONE 2021, cited in the A6 file).
 LAKE_Z = gz(Q.x, Q.y) + 2.5
 bpy.ops.mesh.primitive_circle_add(vertices=64, radius=215, fill_type="NGON", location=(Q.x, Q.y, LAKE_Z))
 bpy.context.object.name = "crater_lake"
 bpy.context.object.data.materials.append(M["sea"])
+
+
+# Rano Kau's crater lake, for the map
+_rk = VOLCANOES[1]
+bpy.ops.mesh.primitive_circle_add(vertices=64, radius=620, fill_type="NGON", location=(_rk[0], _rk[1], gz(_rk[0], _rk[1]) + 4))
+bpy.context.object.name = "rano_kau_lake"
+bpy.context.object.data.materials.append(M["sea"])
+
+
+# ---------------------------------------------------------------- the map: the island from high above, roads and statues marked
+def glow(name, col, strength):
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    nt.nodes.remove(nt.nodes["Principled BSDF"])
+    em = nt.nodes.new("ShaderNodeEmission")
+    em.inputs["Color"].default_value = (*col, 1)
+    em.inputs["Strength"].default_value = strength
+    nt.links.new(em.outputs[0], nt.nodes["Material Output"].inputs["Surface"])
+    return m
+
+
+M["map_road"] = glow("map_road", (1.0, 0.55, 0.12), 3.0)
+M["map_icon"] = glow("map_icon", (1.0, 1.0, 1.0), 2.5)
+for name, path in PATHS.items():  # the old roads, drawn wide enough to read from 40 km
+    pts = path[::40]
+    d = np.gradient(pts, axis=0)
+    nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
+    verts = [(x + nx * k_, y + ny * k_, gz(x, y) + 30) for (x, y), (nx, ny) in zip(pts, nrm) for k_ in (-45, 45)]
+    faces = [(2 * i, 2 * i + 1, 2 * i + 3, 2 * i + 2) for i in range(len(pts) - 1)]
+    visible(mesh_obj("map_road_" + name, verts, faces, M["map_road"]), (T("roads", 1) + SHIFT, MAP_WIN[1]))
+# The road statues as icons, placed by distance from the quarry as LH25 Fig. 12 has them: "65.5 %
+# within 2 km and 42.9 % within just 1 km", 2.5: "79.8 % ... within 3.5 km", a thin tail beyond (A7
+# pass 3: evenly spaced icons drew the critics' pattern, not the data). 62 icons, LH25's count. Their
+# own random stream, so the rest of the world (grass, stones) is unchanged.
+_irng = np.random.default_rng(62)
+_lens = {k: len(v) * 3.0 for k, v in PATHS.items()}
+for i in range(62):
+    u = _irng.uniform()
+    d = _irng.uniform(80, 1000) if u < 0.43 else _irng.uniform(1000, 2000) if u < 0.65 else _irng.uniform(2000, 3500) if u < 0.80 else _irng.uniform(3500, 11000)
+    road = _irng.choice(["w", "s", "n"], p=[0.4, 0.4, 0.2])
+    while d > _lens[road] - 100:
+        road = _irng.choice(["w", "s"])
+    at, _ = along(road, d / _lens[road], float(_irng.uniform(-40, 40)))
+    ic = moai(f"map_icon{i}", 260, M["map_icon"], cols=24, kind="platform")
+    ic.location = at
+    ic.rotation_euler = (0, 0, math.pi)
+    visible(ic, (T("dozens") + SHIFT, MAP_WIN[1]))
 
 
 # ---------------------------------------------------------------- grass and stones where the camera comes close
@@ -1112,9 +1233,9 @@ def blade_build(g, bsdf):
     r = g.new("ShaderNodeObjectInfo").outputs["Random"]
     uv = g.new("ShaderNodeSeparateXYZ")
     g.link(g.coord("Generated"), uv.inputs[0])
-    col = g.ramp(r, [(0.0, (0.16, 0.20, 0.05)), (0.45, (0.34, 0.36, 0.10)), (0.75, (0.55, 0.50, 0.22)), (1.0, (0.66, 0.58, 0.34))])
+    col = g.ramp(r, [(0.0, (0.08, 0.20, 0.03)), (0.45, (0.16, 0.34, 0.05)), (0.8, (0.30, 0.44, 0.10)), (1.0, (0.55, 0.52, 0.24))])
     tip = g.math("MULTIPLY", uv.outputs["Z"], 0.5)  # paler toward the tips
-    g.link(g.mix(tip, col, (0.72, 0.66, 0.44)), bsdf.inputs["Base Color"])
+    g.link(g.mix(tip, col, (0.50, 0.56, 0.26)), bsdf.inputs["Base Color"])
     bsdf.inputs["Roughness"].default_value = 0.7
 
 
@@ -1176,7 +1297,7 @@ def disc(cx, cy, r0, dense, r1, sparse):
     return out
 
 
-SITES = [(H0, 20, 60), (W0, 22, 70), (V3(AHU.x, AHU.y + 14, 0), 26, 60), (FU_AT, 18, 45), (DROP, 18, 50), (along("w", 0.545)[0], 30, 70)]
+SITES = [(H0, 20, 60), (W0, 22, 70), (V3(AHU.x, AHU.y + 14, 0), 26, 60), (FU_AT, 18, 45), (DROP, 18, 50), (along("w", 0.30, 0, 14)[0], 30, 70)]
 grass_pts, stone_pts = [], []
 for c, r0, r1 in SITES:
     grass_pts += disc(c.x, c.y, r0, 26.0, r1, 5.0)  # many small tufts, so it reads as a sward, not planted clumps
@@ -1203,12 +1324,12 @@ sky.sun_rotation = math.radians(60)  # the north-west: the statues on the platfo
 # Per shot, cut in and out so it can jump: a low raking sun while the eye sockets are carved, so they
 # fill with shadow; a high sun over the face-up road statue, whose brow otherwise threw shadows that
 # read as eye sockets under "no eye sockets" (A7 pass 1).
-for frame, deg in ((0, 32), (T("eye") - 1 + SHIFT, 32), (T("eye") + SHIFT, 18), (T("none") - 1 + SHIFT, 18), (T("none") + SHIFT, 72), (T("so,") - 1 + SHIFT, 72), (T("so,") + SHIFT, 32)):
+for frame, deg in ((0, 40), (T("eye") - 1 + SHIFT, 40), (T("eye") + SHIFT, 18), (T("none") - 1 + SHIFT, 18), (T("none") + SHIFT, 72), (T("so,") - 1 + SHIFT, 72), (T("so,") + SHIFT, 40)):
     sky.sun_elevation = math.radians(deg)
     sky.keyframe_insert("sun_elevation", frame=frame)
 # The hook looks at a statue walking toward us, into the sun: swing the sun round behind the camera
 # for that one shot, so the face is lit.
-for frame, deg in ((0, 240), (T("here") - 1 + SHIFT, 240), (T("here") + SHIFT, 60)):
+for frame, deg in ((0, 240), (T("and") - 1 + SHIFT, 240), (T("and") + SHIFT, 60)):
     sky.sun_rotation = math.radians(deg)
     sky.keyframe_insert("sun_rotation", frame=frame)
 for fc in world.node_tree.animation_data.action.layers[0].strips[0].channelbags[0].fcurves:
@@ -1224,10 +1345,10 @@ zc = W.math("MAXIMUM", wdir.outputs["Z"], 0.03)
 deck = W.new("ShaderNodeCombineXYZ")
 W.link(W.math("DIVIDE", wdir.outputs["X"], zc), deck.inputs["X"])
 W.link(W.math("DIVIDE", wdir.outputs["Y"], zc), deck.inputs["Y"])
-cl = W.new("ShaderNodeTexNoise", Scale=0.9, Detail=7.0, Roughness=0.62)
+cl = W.new("ShaderNodeTexNoise", Scale=0.45, Detail=8.0, Roughness=0.66)  # big fair-weather cumulus
 W.link(deck.outputs[0], cl.inputs["Vector"])
-mask = W.math("MULTIPLY", W.math("MULTIPLY", W.math("SUBTRACT", cl.outputs["Fac"], 0.52), 3.2, clamp=True), W.math("MULTIPLY", W.math("SUBTRACT", wdir.outputs["Z"], 0.02), 6.0, clamp=True))
-grey = W.math("MULTIPLY", W.lum(sky.outputs["Color"]), 1.35)
+mask = W.math("MULTIPLY", W.math("MULTIPLY", W.math("SUBTRACT", cl.outputs["Fac"], 0.50), 4.5, clamp=True), W.math("MULTIPLY", W.math("SUBTRACT", wdir.outputs["Z"], 0.02), 6.0, clamp=True))
+grey = W.math("MULTIPLY", W.lum(sky.outputs["Color"]), 1.9)
 cloud = W.new("ShaderNodeCombineColor")
 for k_ in ("Red", "Green", "Blue"):
     W.link(grey, cloud.inputs[k_])
@@ -1250,42 +1371,43 @@ FU_FACE = fu_face.matrix_world.translation.copy()
 w_front = WF @ V3(0, -1, 0)
 w_side = WF @ V3(1, 0, 0)
 WM = W0 + V3(0, 0, WH * 0.48)
-R_LOOK, R_YAW = along("w", 0.529)
+R_LOOK, R_YAW = along("w", 0.30, 0, -9)
 r_dir = V3(math.cos(R_YAW), math.sin(R_YAW), 0)
 r_left = V3(-r_dir.y, r_dir.x, 0)
 HM = H0 + V3(0, 0, WH * 0.5)
+MAP_C, MAP_Q = V3(500, 300, 0), V3(2500, 300, 0)  # the island's middle; the quarry and its roads
 h_front, h_side = HF @ V3(0, -1, 0), HF @ V3(1, 0, 0)
 SHOTS = [
     # frame, camera, aim, lens
-    (0, HM + h_front * 9 + h_side * 1.2 + V3(0, 0, -1.6), HM + V3(0, 0, 0.6), 22),  # the hook: a statue rocking toward us, from low
-    (T("here") - 1, HM + h_front * 10.5 + h_side * 1.4 + V3(0, 0, -1.6), HM + V3(0, 0, 0.6), 22),
-    (T("here"), HA + V3(-8, 27, 1.6), HA + V3(0, 0, AH * 0.62), 30),  # cut, on "here": the platform from inland, the sea behind
-    (T("dozens") - 1, HA + V3(-3, 15, 2.2), HA + V3(0, 0, AH * 0.62), 30),
-    (T("dozens"), Q + V3(-520, -640, 330), Q + V3(-20, -20, 70), 24),  # cut: the quarry, its crater lake and its roads from the air
-    (T("apparently") - 1, Q + V3(-480, -600, 310), Q + V3(-20, -20, 70), 24),
-    (T("apparently"), DROP + V3(-14, -10, 5), DROP + V3(0, 0, 0.5), 30),  # cut: low over a statue on the west road
-    (T("on", 1) - 1, DROP + V3(-10, -13, 4.5), DROP + V3(0, 0, 0.5), 30),
-    (T("on", 1), WM + w_front * 20 + w_side * 3 + V3(0, 0, 0.4), WM, 32),  # cut: a road statue, front on
+    (0, HM + h_front * 25 + h_side * 1.0 + V3(0, 0, -0.9), HM + V3(0, 0, -0.4), 32),  # the hook: a statue rocking toward us, islanders on its ropes
+    (T("and") - 1, HM + h_front * 28 + h_side * 1.4 + V3(0, 0, -0.7), HM + V3(0, 0, -0.4), 32),
+    (T("and"), HA + V3(-8, 27, 1.6), HA + V3(0, 0, AH * 0.62), 30),  # cut, on "And when they arrived": the platform from inland, the sea behind
+    (T("the") - 1, HA + V3(-2, 13, 2.3), HA + V3(0, 0, AH * 0.62), 30),
+    (T("the"), MAP_C + V3(0, -15000, 38000), MAP_C, 30),  # cut: the island from high above; icons on "dozens", roads on "roads"
+    (T("apparently") - 1, MAP_Q + V3(0, -7000, 19000), MAP_Q, 30),
+    (T("apparently"), DROP + V3(-9, -7, 3.2), DROP + V3(0, 0, 0.6), 30),  # cut: low over a statue on the west road
+    (T("on", 2) - 1, DROP + V3(-6.5, -8.5, 2.8), DROP + V3(0, 0, 0.6), 30),
+    (T("on", 2), WM + w_front * 20 + w_side * 3 + V3(0, 0, 0.4), WM, 32),  # cut: a road statue, front on
     (T("they", 2) - 1, WM + w_front * 18 + w_side * 2.5 + V3(0, 0, 0.4), WM, 32),
     (T("they", 2), WM + w_side * 21 + w_front * 1.5 + V3(0, 0, 0.3), WM, 32),  # cut: side on, the lean
-    (T("rocked") - 1, WM + w_side * 19.5 + w_front * 1.5 + V3(0, 0, 0.3), WM, 32),
-    (T("rocked"), WM + w_front * 16 - w_side * 9 + V3(0, 0, 3.5), WM, 26),  # cut: rocked on ropes
-    (T("in") - 1, WM + w_front * 12 - w_side * 7 + V3(0, 0, 3.0), WM + w_front * 1.0, 26),
-    (T("in"), TEST + V3(15, -17, 11), TEST + V3(-3, 1, 0.5), 22),  # cut: the test: replica and all 18 of the crew
+    (T("rock") - 1, WM + w_side * 19.5 + w_front * 1.5 + V3(0, 0, 0.3), WM, 32),
+    (T("rock"), WM + w_front * 24 - w_side * 7 + V3(0, 0, 5.0), WM + V3(0, 0, -1.0), 22),  # cut: rocked on ropes, the crews in frame
+    (T("in", 1) - 1, WM + w_front * 20 - w_side * 5 + V3(0, 0, 4.2), WM + w_front * 1.0 + V3(0, 0, -1.0), 22),
+    (T("in", 1), TEST + V3(15, -17, 11), TEST + V3(-3, 1, 0.5), 22),  # cut: the test: replica and all 18 of the crew
     (T("hundred") - 1, TEST + V3(16, -16, 10.5), TEST + V3(-2, 1, 0.5), 22),
     (T("hundred"), TEST + V3(-16, -26, 18), TEST + V3(48, 0, 0), 22),  # higher, behind them: the taped 100 m
-    (T("the", 3) - 1, TEST + V3(-14, -25, 17), TEST + V3(50, 0, 0), 22),
-    (T("the", 3), HE + V3(15.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: the end statue side on: straight
-    (T("on", 3) - 1, HE + V3(14.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),
-    (T("on", 3), HE + V3(0, 16.5, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: front on: shoulders and base
+    (T("the", 6) - 1, TEST + V3(-14, -25, 17), TEST + V3(50, 0, 0), 22),
+    (T("the", 6), HE + V3(15.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: the end statue side on: straight
+    (T("on", 4) - 1, HE + V3(14.5, 0.6, 2.6), HE + V3(0, 0, AH * 0.48), 34),
+    (T("on", 4), HE + V3(0, 16.5, 2.6), HE + V3(0, 0, AH * 0.48), 34),  # cut: front on: shoulders and base
     (T("eye") - 1, HE + V3(0, 15.5, 2.6), HE + V3(0, 0, AH * 0.48), 34),
     (T("eye"), HA + V3(2.4, 4.6, AH * 0.84 + 0.3), HA + V3(0, 0, AH * 0.79), 45),  # cut: A's face, three-quarter, as the sockets are cut
     (T("none") - 1, HA + V3(1.8, 3.8, AH * 0.82 + 0.25), HA + V3(0, 0, AH * 0.79), 45),
-    (T("none"), FU_FACE + V3(1.5, -2.2, 3.4), FU_FACE, 36),  # cut: a road statue's face: no sockets
-    (T("so,") - 1, FU_FACE + V3(1.2, -1.8, 3.0), FU_FACE, 36),
+    (T("none"), FU_FACE + V3(0.9, -1.4, 4.4), FU_FACE, 36),  # cut: a road statue's face, from above so brow and nose read: no sockets
+    (T("so,") - 1, FU_FACE + V3(0.7, -1.1, 4.0), FU_FACE, 36),
     (T("so,"), B_AT + V3(-15.5, 1.5, 2.6), B_AT + V3(0, 0.5, AH * 0.45), 34),  # cut: B side on, as it is trimmed
-    (T("other") - 1, B_AT + V3(-14.5, 1.5, 2.6), B_AT + V3(0, 0.5, AH * 0.45), 34),
-    (T("other"), R_LOOK + V3(0, 0, 2.2) + r_left * 5, R_LOOK + r_dir * 70 + V3(0, 0, 1.6), 26),  # cut: down the west road, the run of fallen statues
+    (T("not") - 1, B_AT + V3(-14.5, 1.5, 2.6), B_AT + V3(0, 0.5, AH * 0.45), 34),
+    (T("not"), R_LOOK + V3(0, 0, 2.2) + r_left * 5, R_LOOK + r_dir * 70 + V3(0, 0, 1.6), 26),  # cut: down the west road, the run of fallen statues
     (END, R_LOOK + V3(0, 0, 2.6) + r_left * 5 + r_dir * 5, R_LOOK + r_dir * 70 + V3(0, 0, 1.8), 26),
 ]
 CUTS = [SHOTS[i + 1][0] for i in range(len(SHOTS) - 1) if SHOTS[i + 1][0] - SHOTS[i][0] == 1]
@@ -1302,18 +1424,18 @@ for block in (cam, aim, cam.data):  # steady drifts, and cuts that do not ease i
 
 # ---------------------------------------------------------------- anchors for the overlays
 SHOT_OF = {  # empty: (first frame, last frame) it is tracked over
-    "a_top": (0, T("dozens")),
-    "quarry": (T("dozens"), T("apparently")),
-    "road_s": (T("dozens"), T("apparently")),
-    "fallen_w": (T("apparently"), T("on", 1)),
-    **{k: (T("on", 1), T("in")) for k in ("w_sh_l", "w_sh_r", "w_base_l", "w_base_r", "w_top", "w_bot", "w_up")},
-    **{k: (T("in"), T("the", 3)) for k in ("replica", "t_start", "t_end", "crew_rear", "crew_left", "crew_right")},
-    **{k: (T("the", 3), T("eye")) for k in ("e_sh_l", "e_sh_r", "e_base_l", "e_base_r", "e_top", "e_bot")},
+    "a_top": (0, T("the")),
+    "quarry": (T("the"), T("apparently")),
+    "road_s": (T("the"), T("apparently")),
+    "fallen_w": (T("apparently"), T("on", 2)),
+    **{k: (T("on", 2), T("in", 1)) for k in ("w_sh_l", "w_sh_r", "w_base_l", "w_base_r", "w_top", "w_bot", "w_up")},
+    **{k: (T("in", 1), T("the", 6)) for k in ("replica", "t_start", "t_end", "crew_rear", "crew_left", "crew_right")},
+    **{k: (T("the", 6), T("eye")) for k in ("e_sh_l", "e_sh_r", "e_base_l", "e_base_r", "e_top", "e_bot")},
     "a_eye": (T("eye"), T("none")),
     "a_eye_r": (T("eye"), T("none")),
     "fu_face": (T("none"), T("so,")),
-    **{k: (T("so,"), T("other")) for k in ("b_trim", "b_top", "b_bot")},
-    "upright": (T("other"), END),
+    **{k: (T("so,"), T("not")) for k in ("b_trim", "b_top", "b_bot")},
+    "upright": (T("not"), END),
 }
 scene.render.resolution_x = args.width
 scene.render.resolution_y = args.width * 16 // 9
