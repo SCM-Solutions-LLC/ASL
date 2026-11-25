@@ -347,5 +347,23 @@
   "licence": "own-work",
   "ship": true,
   "note": "Still for the thumbnail: the same view with the casing, unedited. Same scene, sources and licences as public/3d/cleopatra-world.mp4."
+ },
+ "public/3d/moai-world.mp4": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py. Shapes are procedural, including the statues, the grass, the stones and the people (plain mannequins). Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: rock_boulder_dry (Dimitrios Savva, Rico Cilliers), aerial_grass_rock (Rob Tuytel), grass_ground (Charlotte Baglioni), dry_ground_01 (Rob Tuytel), stacked_stone_wall (Dimitrios Savva), concrete (Rob Tuytel). The map beat's island outline, peaks, crater lake and islets are traced from NASA GIBS imagery (public domain: SRTM_Color_Index and the Landsat WELD 2000 annual composite) by tools/blender/trace_rapa_nui.py; no image from it is in the render.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "Blender is GPL; the GPL covers the program, not the images it renders, which belong to whoever made them (see blender.org/about/license). Poly Haven assets are CC0: no credit required, given anyway. No downloaded models. Frames 0-2344 of the moai-reshaped edit, 30 fps, 1080x1920."
+ },
+ "public/3d/moai-world-b.mp4": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py. Shapes are procedural, including the statues, the grass, the stones and the people (plain mannequins). Surfaces use six CC0 texture scans from Poly Haven (polyhaven.com), fetched by tools/blender/fetch_assets.sh: rock_boulder_dry (Dimitrios Savva, Rico Cilliers), aerial_grass_rock (Rob Tuytel), grass_ground (Charlotte Baglioni), dry_ground_01 (Rob Tuytel), stacked_stone_wall (Dimitrios Savva), concrete (Rob Tuytel). The map beat's island outline, peaks, crater lake and islets are traced from NASA GIBS imagery (public domain: SRTM_Color_Index and the Landsat WELD 2000 annual composite) by tools/blender/trace_rapa_nui.py; no image from it is in the render.",
+  "licence": "own-work",
+  "ship": true,
+  "note": "The incoming shot around each cut of public/3d/moai-world.mp4, for cross-dissolves: same scene, same assets and same script (tools/blender/moai_world.py --cut-shift), so the same sources and licences apply. Black outside the frames around each cut. Frames 0-2344 of the moai-reshaped edit, 30 fps, 1080x1920."
+ },
+ "public/img/moai-thumb-rope.jpg": {
+  "source": "Own work: rendered with Blender 5.3 (Cycles, Metal GPU) by tools/blender/moai_world.py --cover --width 2160, the same scene, assets and licences as public/3d/moai-world.mp4 (Poly Haven CC0 scans, credited there).",
+  "licence": "own-work",
+  "ship": true,
+  "note": "Cover still: the hook's statue mid-rock on its ropes, islander crews pulling, 2160x3840. Used by src/thumbnails.tsx (thumb-moai-reshaped)."
  }
 }

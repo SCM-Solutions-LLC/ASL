@@ -81,7 +81,7 @@ def voiced_end(audio):
     return int(loud[-1]) + 1 if loud.size else len(audio)
 
 
-def assemble(chunks):
+def assemble(chunks, gap=GAP):
     """Concatenate synthesised sentences and place every word against the measured audio."""
     audio, words, cursor = [], [], 0
     for text, samples in chunks:
@@ -89,8 +89,8 @@ def assemble(chunks):
         spoken = voiced_end(samples) / SR
         words += spread(text.split(), start, start + spoken)
         audio.append(samples)
-        audio.append(np.zeros(int(GAP * SR), dtype=np.float32))
-        cursor += len(samples) + int(GAP * SR)
+        audio.append(np.zeros(int(gap * SR), dtype=np.float32))
+        cursor += len(samples) + int(gap * SR)
     return np.concatenate(audio) if audio else np.zeros(0, dtype=np.float32), words
 
 
@@ -180,6 +180,7 @@ def main():
     p.add_argument("--voice", default="af_heart", help="Kokoro voice id (default: af_heart)")
     p.add_argument("--speed", type=float, default=1.0)
     p.add_argument("--seed", type=int, default=0, help="pins Kokoro's sampling so a re-run is identical")
+    p.add_argument("--gap", type=float, default=GAP, help=f"seconds of silence between sentences (default: {GAP})")
     p.add_argument("--self-test", action="store_true", help="check the timing and WAV code with no model")
     args = p.parse_args()
 
@@ -192,14 +193,14 @@ def main():
     if not script.exists():
         sys.exit(f"{script} does not exist. Write the script first.")
     lines = sentences(read_script(script))
-    audio, words = assemble(synthesise(lines, args.voice, args.speed, args.seed))
+    audio, words = assemble(synthesise(lines, args.voice, args.speed, args.seed), args.gap)
     write_wav(audio_path, audio)
 
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(
         json.dumps(
             {
-                "generated_by": f"tools/tts.py --voice {args.voice} --speed {args.speed} --seed {args.seed}",
+                "generated_by": f"tools/tts.py --voice {args.voice} --speed {args.speed} --seed {args.seed}" + (f" --gap {args.gap}" if args.gap != GAP else ""),
                 "script": str(script),
                 "audio": str(audio_path),
                 "sha256": sha256(audio_path),

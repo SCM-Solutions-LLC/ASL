@@ -79,8 +79,8 @@ every short teaches one true thing a viewer did not know, and survives a pedant 
   for a real person, place or event. Illustrated animation with a stock synthetic narrator is not
   that, but re-check YouTube's current rule at upload time and disclose when in doubt.
 - **E4** — Description carries a short source list (the SOURCES block, condensed).
-- **E5** — Format: 9:16, burned-in captions, under 60 s unless the topic needs more (hard limit
-  3 min), and the hook lands in the first sentence.
+- **E5** — Format: 9:16, burned-in captions, at most 3 min (the platform's Shorts limit; the
+  60 s target was dropped by the owner on 2026-11-24), and the hook lands in the first sentence.
 
 ## F. Approval and publishing
 
