@@ -287,9 +287,16 @@ const CleopatraPyramid: React.FC = () => {
 // everything inside the 3:4 grid crop. A question, not a claim: walking is Lipo & Hunt's reading.
 const MoaiReshaped: React.FC = () => (
   <AbsoluteFill style={{ background: "#000" }}>
-    <Img src={staticFile("img/moai-thumb-rope.jpg")} style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }} />
-    <div style={{ ...word(120), top: 262, whiteSpace: "nowrap" }}>DID THESE</div>
-    <div style={{ ...word(150, GOLD), top: 378, whiteSpace: "nowrap" }}>WALK?</div>
+    <Img
+      src={staticFile("img/moai-thumb-rope.jpg")}
+      style={{ position: "absolute", inset: 0, width: 1080, height: 1920 }}
+    />
+    <div style={{ ...word(120), top: 262, whiteSpace: "nowrap" }}>
+      DID THESE
+    </div>
+    <div style={{ ...word(150, GOLD), top: 378, whiteSpace: "nowrap" }}>
+      WALK?
+    </div>
   </AbsoluteFill>
 );
 
