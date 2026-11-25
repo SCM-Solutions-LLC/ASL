@@ -10,7 +10,7 @@ import type { Layout } from "../../layout";
 import alignment from "../../generated/moai-reshaped.alignment.json";
 import world from "../../generated/moai-world.anchors.json";
 import { clamp01 } from "../altar-stone/shots";
-import { Counter, Fine, GOLD, INK, Label } from "../cleopatra-pyramid/draw";
+import { Counter, GOLD, INK, Label } from "../cleopatra-pyramid/draw";
 import type { Short } from "../types";
 
 // One 3D world (tools/blender/moai_world.py → public/3d/moai-world.mp4): a platform on the coast,
@@ -44,7 +44,22 @@ const edit = makeEdit({
     ["Not", "everyone", "agrees."],
     ["What", "do", "you", "think?"],
   ],
-  breakAfter: ["arrived,", "say,", "quarry,", "wide", "ropes,", "test,", "copy,", "tonnes,", "straight,", "carved", "argue,", "walking", "all,", "way,"],
+  breakAfter: [
+    "arrived,",
+    "say,",
+    "quarry,",
+    "wide",
+    "ropes,",
+    "test,",
+    "copy,",
+    "tonnes,",
+    "straight,",
+    "carved",
+    "argue,",
+    "walking",
+    "all,",
+    "way,",
+  ],
   tail: 1.6,
 });
 
@@ -53,6 +68,7 @@ const F = {
   two: edit.at("two"),
   reshaped: edit.at("reshaped"),
   clues: edit.at("clues"),
+  the0: edit.at("the", 0),
   dozens: edit.at("dozens"),
   roads: edit.at("roads", 1),
   apparently: edit.at("apparently"),
@@ -159,7 +175,10 @@ const Pin: React.FC<{
   const h = lift * B.s;
   const labelY = h >= 0 ? p.y - h - 50 * B.s * (sub ? 1.7 : 1) : p.y - h;
   // Keep the label inside the frame, even when the point it marks is at the edge.
-  const lx = Math.min(Math.max(p.x + dx * B.s, B.x + 150 * B.s), B.x + B.w - 150 * B.s);
+  const lx = Math.min(
+    Math.max(p.x + dx * B.s, B.x + 150 * B.s),
+    B.x + B.w - 150 * B.s,
+  );
   return (
     <>
       <Svg o={o}>
@@ -365,7 +384,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
   const s = B.s;
   const cx = B.x + B.w / 2;
   const top = B.y + (L.vertical ? 150 : 40);
-  const fine = B.y + B.h * (L.vertical ? 0.735 : 0.86); // small print sits just above the captions
   const c = counterAt(f);
   const between = (a: number, b: number) => f >= a && f < b;
   const cut = CUTS.find((k) => f >= k - DISSOLVE && f < k + DISSOLVE); // the "-b" clip is black outside these frames
@@ -417,7 +435,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
 
       {/* Hook: a road statue rocking toward us on its ropes, islanders pulling; on "And when they
           arrived", the platform, and the road shape it arrived in as a gold ghost (their reading). */}
-      {between(0, F.clues) ? (
+      {between(0, F.the0) ? (
         <>
           <Label
             x={cx}
@@ -430,7 +448,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
           <Label
             x={cx}
             y={top}
-            o={win(f, F.two, F.clues - 2, 4)}
+            o={win(f, F.two, F.the0 - 1, 4)}
             title="Lipo & Hunt · 2025"
             sub="two archaeologists"
             size={50 * s}
@@ -439,56 +457,32 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             B={B}
             f={f}
             name="a_top"
-            o={win(f, F.reshaped + 4, F.clues - 2)}
+            o={win(f, F.reshaped + 4, F.the0 - 1)}
             title="As it arrived?"
             sub="their reading"
             color={GOLD}
             lift={70}
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, 0, F.and0, 3)}
-            size={26 * s}
-            text="illustration · as Lipo & Hunt describe it · crew size illustrative"
-            align="center"
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.and0, F.reshaped - 4, 3)}
-            size={26 * s}
-            text="illustration"
-            align="center"
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.reshaped - 4, F.clues)}
-            size={26 * s}
-            text="illustration · gold: the shape before, as they argue"
-            align="center"
           />
         </>
       ) : null}
 
       {/* The map: the island from high above; the statues on the roads as icons ("Dozens"), the
           roads drawn ("roads"); then low over one of them. */}
-      {between(F.clues - 4, F.onAvg) ? (
+      {between(F.the0, F.onAvg) ? (
         <>
           <Pin
             B={B}
             f={f}
             name="quarry"
-            o={win(f, F.clues + 6, F.apparently - 2)}
+            o={win(f, F.the0 + 4, F.apparently - 2)}
             title="Rano Raraku"
-            sub="the quarry"
+            sub="the quarry · map not to scale"
             lift={150}
           />
           <Pin
             B={B}
             f={f}
-            name="road_s"
+            name="map_road_pin"
             o={win(f, F.roads, F.apparently - 2)}
             title="Old roads"
             color={GOLD}
@@ -499,7 +493,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             y={top + 120 * s}
             o={win(f, F.dozens, F.apparently - 2)}
             title="Statues on the roads"
-            sub="positions illustrative"
+            sub="positions illustrative · map simplified"
             size={44 * s}
           />
           <Pin
@@ -510,22 +504,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             title="A road statue"
             sub="apparently dropped on the way"
             lift={150}
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.clues, F.apparently, 3)}
-            size={26 * s}
-            text="map simplified, not to scale · main roads only"
-            align="center"
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.apparently, F.onAvg)}
-            size={26 * s}
-            text="illustration"
-            align="center"
           />
         </>
       ) : null}
@@ -568,14 +546,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             text="Leans forward"
             sub="road statues"
           />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.onAvg, F.rocked)}
-            size={26 * s}
-            text="illustration · proportions not to a measured ratio"
-            align="center"
-          />
         </>
       ) : null}
 
@@ -598,14 +568,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             size={50 * s}
             color={GOLD}
           />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.rocked, F.test)}
-            size={26 * s}
-            text="illustration · as Lipo & Hunt describe it · crew size illustrative"
-            align="center"
-          />
         </>
       ) : null}
 
@@ -623,7 +585,7 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
           <Pin
             B={B}
             f={f}
-            name="replica"
+            name="replica_pin"
             o={win(f, F.scaled, F.hundred - 2)}
             title="Replica"
             sub="concrete"
@@ -665,14 +627,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             o={win(f, F.hundred + 2, F.the3 - 2)}
             text="100 m"
           />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.test, F.the3)}
-            size={26 * s}
-            text="illustration · replica's size estimated from its weight"
-            align="center"
-          />
         </>
       ) : null}
 
@@ -713,14 +667,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             title="Base < shoulders"
             sub="platform statues, on average"
             size={50 * s}
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.the3, F.eye)}
-            size={26 * s}
-            text="illustration · proportions not to a measured ratio"
-            align="center"
           />
         </>
       ) : null}
@@ -764,14 +710,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             sub="no eye sockets"
             lift={200}
           />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.eye, F.so)}
-            size={26 * s}
-            text="illustration"
-            align="center"
-          />
         </>
       ) : null}
 
@@ -797,30 +735,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             lift={240}
             dx={-200}
           />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.so, F.carved2 - 2, 3)}
-            size={26 * s}
-            text="illustration"
-            align="center"
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.carved2 - 2, F.endW + 6, 3)}
-            size={26 * s}
-            text="illustration · gold: the road shape"
-            align="center"
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.endW + 6, F.not, 3)}
-            size={26 * s}
-            text="illustration"
-            align="center"
-          />
         </>
       ) : null}
 
@@ -843,14 +757,6 @@ const Overlay: React.FC<{ L: Layout }> = ({ L }) => {
             sub="road statues set up along the roads on purpose"
             size={50 * s}
             color={GOLD}
-          />
-          <Fine
-            x={cx}
-            y={fine}
-            o={win(f, F.not, F.end + 30)}
-            size={26 * s}
-            text="illustration · gold: a reading, not a reconstruction"
-            align="center"
           />
         </>
       ) : null}

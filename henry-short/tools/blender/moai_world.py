@@ -560,6 +560,8 @@ def edge_pt(H, t, u, base=ROAD_BASE, lean=LEAN):
 
 def pin(name, parent, co):
     """A named point for the overlays, carried by `parent` if given."""
+    # A clash makes Blender rename the pin, and the anchor bake then tracks the other object (A7 pass 5).
+    assert name not in bpy.data.objects, f"pin name {name!r} is already an object"
     e = link(bpy.data.objects.new(name, None))
     e.parent = parent
     e.location = co
@@ -619,11 +621,11 @@ def keep_flat(x, y):
     return w
 
 
-def coast_distance(x, y):
+def coast_distance(x, y, coast=COAST):
     """Signed distance to the coast: positive inland."""
     d = np.full(x.shape, np.inf)
     inside = np.zeros(x.shape, bool)
-    for (ax, ay), (bx, by) in zip(COAST, np.roll(COAST, -1, axis=0)):
+    for (ax, ay), (bx, by) in zip(coast, np.roll(coast, -1, axis=0)):
         ex, ey = bx - ax, by - ay
         t = np.clip(((x - ax) * ex + (y - ay) * ey) / (ex * ex + ey * ey), 0, 1)
         d = np.minimum(d, np.hypot(x - ax - t * ex, y - ay - t * ey))
@@ -636,15 +638,15 @@ def smoothstep(e0, e1, v):
     return t * t * (3 - 2 * t)
 
 
-def height(x, y):
-    dc = coast_distance(x, y)
+def height(x, y, coast=COAST, volcanoes=VOLCANOES):
+    dc = coast_distance(x, y, coast)
     near_ahu = np.clip(1 - np.hypot(x - AHU.x, y - AHU.y) / 1100, 0, 1)
     land = smoothstep(0, 260, dc)  # coastal cliffs...
     shore = smoothstep(-40, 160, dc)  # ...except a low shore behind the platform
     base = (34 * land) * (1 - near_ahu) + (6 * shore) * near_ahu
     hills = 12 * np.sin(x / 700 + 0.4) * np.cos(y / 900) + 7 * np.sin((x + y) / 330)
     z = base + hills * keep_flat(x, y) * land * (1 - near_ahu)
-    for vx, vy, vh, vr, cr, cd in VOLCANOES:
+    for vx, vy, vh, vr, cr, cd in volcanoes:
         r = np.hypot(x - vx, y - vy)
         z = z + vh * smoothstep(vr, 0, r) ** 1.3 - (cd * smoothstep(cr, cr * 0.6, r) if cr else 0)
     # Rano Raraku: a cone with a crater, its south-west flank quarried into a cliff
@@ -959,7 +961,7 @@ TEST_WIN = (T("in", 1) + SHIFT, T("the", 6) + SHIFT)  # "In a test ... forty min
 lawn = boxes_mesh("lawn", [(TEST.x - 3000, TEST.y - 3000, -2, TEST.x + 3000, TEST.y + 3000, 0.0)], M["lawn"])
 visible(lawn, TEST_WIN)
 visible(sea, (0, TEST_WIN[0]), (TEST_WIN[1], END + 1))
-visible(ground, (0, TEST_WIN[0]), (TEST_WIN[1], END + 1))
+visible(ground, (0, MAP_WIN[0]), (MAP_WIN[1], TEST_WIN[0]), (TEST_WIN[1], END + 1))  # the map has its own island
 # LH25 1.4: 4.35 t. Its size is not given: scaled from this statue shape at an assumed 2.3 t/m3.
 _tmp = moai("tmp", 1.0, None, cols=48)
 _bm = bmesh.new()
@@ -981,7 +983,7 @@ def replica_at(f):
 FR = range(TEST_WIN[0] - 2, TEST_WIN[1] + 2)
 key_matrix(replica, FR, replica_at)
 visible(replica, TEST_WIN)
-pin("replica", replica, V3(0, -RH * math.tan(math.radians(LEAN)), RH * 1.06))
+pin("replica_pin", replica, V3(0, -RH * math.tan(math.radians(LEAN)), RH * 1.06))
 # 100 m marked out: a stake every 10 m and a white tape between them, so the distance reads from afar
 stakes = boxes_mesh("stakes", [(TEST.x + 10 * i - 0.08, -3.28, 0, TEST.x + 10 * i + 0.08, -3.12, 1.4 if i % 5 == 0 else 0.9) for i in range(11)] + [(TEST.x, -3.24, 0.0, TEST.x + 100, -3.16, 0.05)], M["stake"])
 visible(stakes, TEST_WIN)
@@ -1132,23 +1134,74 @@ DROP = DROP_O.location.copy()
 pin("fallen_w", DROP_O, V3(0, 0, 0))
 _qx, _qy = Q.x - 300, Q.y - 400  # on the quarried cliff
 pin("quarry", None, V3(_qx, _qy, gz(_qx, _qy) + 30))
-pin("road_s", None, along("w", 0.18)[0] + V3(0, 0, 30))  # on the drawn map road, which floats 30 m up
 
 # Rano Raraku's crater holds a lake (USGS / PLoS ONE 2021, cited in the A6 file).
 LAKE_Z = gz(Q.x, Q.y) + 2.5
 bpy.ops.mesh.primitive_circle_add(vertices=64, radius=215, fill_type="NGON", location=(Q.x, Q.y, LAKE_Z))
 bpy.context.object.name = "crater_lake"
 bpy.context.object.data.materials.append(M["sea"])
+visible(bpy.context.object, (0, MAP_WIN[0]), (MAP_WIN[1], END + 1))
 
 
-# Rano Kau's crater lake, for the map
-_rk = VOLCANOES[1]
-bpy.ops.mesh.primitive_circle_add(vertices=64, radius=620, fill_type="NGON", location=(_rk[0], _rk[1], gz(_rk[0], _rk[1]) + 4))
-bpy.context.object.name = "rano_kau_lake"
-bpy.context.object.data.materials.append(M["sea"])
+# ---------------------------------------------------------------- the map: its own island, traced closer to the real one
+# The ground-level world is drawn on a simplified outline; the map beat, seen from 40 km, shows this
+# one instead: corners and volcanoes placed from OpenStreetMap's coastline and peaks projected about
+# Rano Raraku (A7 pass 4: real area 163.5 km^2), freehand-simplified, the east end kept as the main
+# world has it. Visible only during the map; the main island is hidden then.
+MAP_COAST = np.array([(-9700, -6200), (-9200, -7600), (-6900, -8200), (-4400, -5100), (200, -4700), (3000, -2000), (7800, -900), (10600, 400), (11400, 2000), (9500, 3400), (5300, 3700), (3600, 5800), (600, 7000), (-3300, 7300), (-6700, 1800), (-7400, -2200), (-8800, -3200)], float)
+MAP_VOLC = [(-2800, 4000, 470, 4200, 0, 0), (-8200, -7200, 300, 1700, 800, 210), (9600, 1900, 330, 1900, 0, 0)]  # Terevaka, Rano Kau (crater lake), Poike
+MAP_ROADS = {  # the south-coast road kept near the coast; the north road to the coast (A7 pass 4)
+    "w": ROADS["w"],
+    "s": [(6000, -350), (4500, -1200), (3000, -1600), (1500, -2900), (-1500, -4100), (-4500, -4500), (-7500, -3500)],  # at least 300 m inland all the way (A7 pass 5)
+    "n": ROADS["n"][:-1] + [(3500, 5200)],
+}
+MAP_PATHS = {k: road_path(v) for k, v in MAP_ROADS.items()}
+for _k, _p in MAP_PATHS.items():  # every map road stays on land
+    assert coast_distance(_p[:, 0], _p[:, 1], MAP_COAST).min() > 150, f"map road {_k} runs into the sea"
 
 
-# ---------------------------------------------------------------- the map: the island from high above, roads and statues marked
+def hm(x, y):
+    return float(height(np.array([x]), np.array([y]), MAP_COAST, MAP_VOLC)[0])
+
+
+MSTEP = 60.0
+mx_ = np.arange(-11500, 13500, MSTEP)
+my_ = np.arange(-9800, 8800, MSTEP)
+MX, MY = np.meshgrid(mx_, my_)
+MZ = height(MX, MY, MAP_COAST, MAP_VOLC)
+_n = len(mx_)
+_ii, _jj = np.meshgrid(np.arange(_n - 1), np.arange(len(my_) - 1))
+_a = (_jj * _n + _ii).ravel()
+_q = np.stack([_a, _a + 1, _a + 1 + _n, _a + _n], 1)
+mme = bpy.data.meshes.new("map_ground")
+mme.vertices.add(MX.size)
+mme.vertices.foreach_set("co", np.stack([MX.ravel(), MY.ravel(), MZ.ravel()], 1).astype(np.float32).ravel())
+mme.loops.add(_q.size)
+mme.loops.foreach_set("vertex_index", _q.astype(np.int32).ravel())
+mme.polygons.add(len(_q))
+mme.polygons.foreach_set("loop_start", (np.arange(len(_q)) * 4).astype(np.int32))
+mme.update()
+mme.validate()
+mme.materials.append(M["ground"])
+mme.shade_smooth()
+visible(link(bpy.data.objects.new("map_ground", mme)), MAP_WIN)
+_rk = MAP_VOLC[1]
+for nm, (cx_, cy_, r_, z_) in {"map_lake_raraku": (Q.x, Q.y, 215, hm(Q.x, Q.y) + 2.5), "map_lake_kau": (_rk[0], _rk[1], 620, hm(_rk[0], _rk[1]) + 4), "motu_nui": (-10030, -8780, 150, 8), "motu_iti": (-9950, -8575, 80, 6)}.items():
+    bpy.ops.mesh.primitive_circle_add(vertices=48, radius=r_, fill_type="NGON", location=(cx_, cy_, z_))
+    bpy.context.object.name = nm
+    bpy.context.object.data.materials.append(M["sea"] if nm.startswith("map_lake") else M["ground"])
+    visible(bpy.context.object, MAP_WIN)
+
+
+def map_along(name, frac, side=0.0):
+    path = MAP_PATHS[name]
+    i = int(min(max(frac * (len(path) - 1), 0), len(path) - 2))
+    dx_, dy_ = path[i + 1] - path[i]
+    yaw = math.atan2(dy_, dx_)
+    x, y = path[i][0] - math.sin(yaw) * side, path[i][1] + math.cos(yaw) * side
+    return V3(x, y, hm(x, y))
+
+
 def glow(name, col, strength):
     m = bpy.data.materials.new(name)
     m.use_nodes = True
@@ -1163,26 +1216,27 @@ def glow(name, col, strength):
 
 M["map_road"] = glow("map_road", (1.0, 0.55, 0.12), 3.0)
 M["map_icon"] = glow("map_icon", (1.0, 1.0, 1.0), 2.5)
-for name, path in PATHS.items():  # the old roads, drawn wide enough to read from 40 km
-    pts = path[::40]
+for name, pts in MAP_PATHS.items():  # the old roads, drawn wide enough to read from 40 km
+    pts = pts[::40]
     d = np.gradient(pts, axis=0)
     nrm = np.stack([-d[:, 1], d[:, 0]], 1) / np.hypot(d[:, 0], d[:, 1])[:, None]
-    verts = [(x + nx * k_, y + ny * k_, gz(x, y) + 30) for (x, y), (nx, ny) in zip(pts, nrm) for k_ in (-45, 45)]
+    verts = [(x + nx * k_, y + ny * k_, hm(x, y) + 30) for (x, y), (nx, ny) in zip(pts, nrm) for k_ in (-45, 45)]
     faces = [(2 * i, 2 * i + 1, 2 * i + 3, 2 * i + 2) for i in range(len(pts) - 1)]
     visible(mesh_obj("map_road_" + name, verts, faces, M["map_road"]), (T("roads", 1) + SHIFT, MAP_WIN[1]))
+pin("map_road_pin", None, map_along("w", 0.18) + V3(0, 0, 30))  # on the drawn road, which floats 30 m up
 # The road statues as icons, placed by distance from the quarry as LH25 Fig. 12 has them: "65.5 %
-# within 2 km and 42.9 % within just 1 km", 2.5: "79.8 % ... within 3.5 km", a thin tail beyond (A7
-# pass 3: evenly spaced icons drew the critics' pattern, not the data). 62 icons, LH25's count. Their
-# own random stream, so the rest of the world (grass, stones) is unchanged.
+# within 2 km and 42.9 % within just 1 km", 2.5: "79.8 % ... within 3.5 km", and only 8.7 % beyond
+# 4.5 km (A7 passes 3 and 4: evenly spaced icons drew the critics' pattern, not the data). 62 icons,
+# LH25's count. Their own random stream, so the rest of the world (grass, stones) is unchanged.
 _irng = np.random.default_rng(62)
-_lens = {k: len(v) * 3.0 for k, v in PATHS.items()}
+_lens = {k: len(v) * 3.0 for k, v in MAP_PATHS.items()}
 for i in range(62):
     u = _irng.uniform()
-    d = _irng.uniform(80, 1000) if u < 0.43 else _irng.uniform(1000, 2000) if u < 0.65 else _irng.uniform(2000, 3500) if u < 0.80 else _irng.uniform(3500, 11000)
-    road = _irng.choice(["w", "s", "n"], p=[0.4, 0.4, 0.2])
+    d = _irng.uniform(80, 1000) if u < 0.43 else _irng.uniform(1000, 2000) if u < 0.65 else _irng.uniform(2000, 3000) if u < 0.80 else _irng.uniform(3500, 4500) if u < 0.91 else _irng.uniform(4500, 9000)
+    road = _irng.choice(["w", "s", "n"], p=[0.45, 0.47, 0.08])
     while d > _lens[road] - 100:
         road = _irng.choice(["w", "s"])
-    at, _ = along(road, d / _lens[road], float(_irng.uniform(-40, 40)))
+    at = map_along(road, d / _lens[road], float(_irng.uniform(-40, 40)))
     ic = moai(f"map_icon{i}", 260, M["map_icon"], cols=24, kind="platform")
     ic.location = at
     ic.rotation_euler = (0, 0, math.pi)
@@ -1375,7 +1429,7 @@ R_LOOK, R_YAW = along("w", 0.30, 0, -9)
 r_dir = V3(math.cos(R_YAW), math.sin(R_YAW), 0)
 r_left = V3(-r_dir.y, r_dir.x, 0)
 HM = H0 + V3(0, 0, WH * 0.5)
-MAP_C, MAP_Q = V3(500, 300, 0), V3(2500, 300, 0)  # the island's middle; the quarry and its roads
+MAP_C, MAP_Q = V3(800, -400, 0), V3(3000, -200, 0)  # the island's middle; the quarry and its roads
 h_front, h_side = HF @ V3(0, -1, 0), HF @ V3(1, 0, 0)
 SHOTS = [
     # frame, camera, aim, lens
@@ -1383,8 +1437,9 @@ SHOTS = [
     (T("and") - 1, HM + h_front * 28 + h_side * 1.4 + V3(0, 0, -0.7), HM + V3(0, 0, -0.4), 32),
     (T("and"), HA + V3(-8, 27, 1.6), HA + V3(0, 0, AH * 0.62), 30),  # cut, on "And when they arrived": the platform from inland, the sea behind
     (T("the") - 1, HA + V3(-2, 13, 2.3), HA + V3(0, 0, AH * 0.62), 30),
-    (T("the"), MAP_C + V3(0, -15000, 38000), MAP_C, 30),  # cut: the island from high above; icons on "dozens", roads on "roads"
-    (T("apparently") - 1, MAP_Q + V3(0, -7000, 19000), MAP_Q, 30),
+    (T("the"), MAP_C + V3(0, -15500, 39500), MAP_C, 30),  # cut: the whole island from high above; icons on "dozens", roads on "roads"
+    (T("roads", 1), MAP_C + V3(0, -14800, 37800), MAP_C, 30),
+    (T("apparently") - 1, MAP_Q + V3(0, -8000, 21000), MAP_Q, 30),  # then in toward the quarry
     (T("apparently"), DROP + V3(-9, -7, 3.2), DROP + V3(0, 0, 0.6), 30),  # cut: low over a statue on the west road
     (T("on", 2) - 1, DROP + V3(-6.5, -8.5, 2.8), DROP + V3(0, 0, 0.6), 30),
     (T("on", 2), WM + w_front * 20 + w_side * 3 + V3(0, 0, 0.4), WM, 32),  # cut: a road statue, front on
@@ -1426,10 +1481,10 @@ for block in (cam, aim, cam.data):  # steady drifts, and cuts that do not ease i
 SHOT_OF = {  # empty: (first frame, last frame) it is tracked over
     "a_top": (0, T("the")),
     "quarry": (T("the"), T("apparently")),
-    "road_s": (T("the"), T("apparently")),
+    "map_road_pin": (T("the"), T("apparently")),
     "fallen_w": (T("apparently"), T("on", 2)),
     **{k: (T("on", 2), T("in", 1)) for k in ("w_sh_l", "w_sh_r", "w_base_l", "w_base_r", "w_top", "w_bot", "w_up")},
-    **{k: (T("in", 1), T("the", 6)) for k in ("replica", "t_start", "t_end", "crew_rear", "crew_left", "crew_right")},
+    **{k: (T("in", 1), T("the", 6)) for k in ("replica_pin", "t_start", "t_end", "crew_rear", "crew_left", "crew_right")},
     **{k: (T("the", 6), T("eye")) for k in ("e_sh_l", "e_sh_r", "e_base_l", "e_base_r", "e_top", "e_bot")},
     "a_eye": (T("eye"), T("none")),
     "a_eye_r": (T("eye"), T("none")),
