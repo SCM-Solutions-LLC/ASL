@@ -57,6 +57,7 @@ p.add_argument("--save", help="also save the .blend here")
 p.add_argument("--cut-shift", type=int, default=0, help="move every cut this many frames (cross-dissolves: render the frames around each cut again at -H)")
 p.add_argument("--around-cuts", type=int, default=0, help="render only the frames within this many frames of a cut")
 p.add_argument("--build-only", action="store_true")
+p.add_argument("--cover", action="store_true", help="render the two 2160x3840 cover stills (statue B before and after trimming) instead")
 args = p.parse_args(sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else None)
 
 HERE = Path(__file__).resolve().parent
@@ -1549,6 +1550,21 @@ if args.around_cuts:  # the second half of each cross-dissolve
     only = sorted({f for c in CUTS for f in range(c - args.around_cuts, c + args.around_cuts) if (args.start or 0) <= f <= (args.end or END)})
 if args.build_only:
     pass
+elif args.cover:
+    # The cover: statue B on the platform from one fixed camera, twice: as it arrived (road shape,
+    # leaning, wide base) and after the trimming (upright, narrower base). src/thumbnails.tsx splits
+    # the two down the middle, so they must share the camera exactly.
+    cc = link(bpy.data.objects.new("cover_cam", bpy.data.cameras.new("cover_cam")))
+    cc.data.lens = 30
+    cc.location = B_AT + V3(-8.5, 8.0, 1.0)
+    cc.rotation_euler = ((B_AT + V3(0, 0, AH * 0.66)) - cc.location).to_track_quat("-Z", "Y").to_euler()
+    scene.camera = cc
+    scene.render.resolution_x, scene.render.resolution_y = 2160, 3840
+    scene.cycles.samples = max(args.samples, 64)
+    for tag, f in (("road", B_WIN[0] + 4), ("platform", UPRIGHT[1] + 6)):
+        scene.frame_set(f)
+        scene.render.filepath = f"{args.out}/cover_{tag}.png"
+        bpy.ops.render.render(write_still=True)
 elif only:
     for f in only:
         scene.frame_set(f)

@@ -117,10 +117,30 @@ const CleopatraPyramid: React.FC = () => {
   );
 };
 
+// Moai: the same statue from one camera, before and after (tools/blender/moai_world.py --cover): left,
+// the road shape it arrived in, leaning, base as wide as the shoulders; right, trimmed to stand upright.
+// Questions, not claims: the reading is Lipo & Hunt's and the short attributes it.
+const MoaiReshaped: React.FC = () => {
+  const chip = (bg: string, color: string, size: number): React.CSSProperties => ({ ...word(size, color), position: "absolute", width: "auto", padding: "12px 24px 16px", borderRadius: 16, background: bg, textShadow: "none", whiteSpace: "nowrap", translate: "-50% 0" });
+  const half = (left: number): React.CSSProperties => ({ position: "absolute", left, top: 0, width: 540, height: 1920, objectFit: "cover" });
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <Img src={staticFile("img/moai-thumb-road.jpg")} style={half(0)} />
+      <Img src={staticFile("img/moai-thumb-platform.jpg")} style={half(540)} />
+      <div style={{ position: "absolute", left: 535, top: 560, width: 10, height: 860, background: GOLD, boxShadow: "0 0 18px rgba(0,0,0,0.8)" }} />
+      <div style={{ ...word(112), top: 300, whiteSpace: "nowrap" }}>BUILT TO WALK?</div>
+      <div style={{ ...word(112, GOLD), top: 425, whiteSpace: "nowrap" }}>THEN RESHAPED?</div>
+      <div style={{ ...chip("rgba(15,12,10,0.82)", "#fff", 50), left: 270, top: 1470 }}>ROAD SHAPE</div>
+      <div style={{ ...chip(GOLD, "#1d1208", 50), left: 810, top: 1470 }}>PLATFORM SHAPE</div>
+    </AbsoluteFill>
+  );
+};
+
 export const THUMBS = [
   { id: "thumb-altar-stone", component: AltarStone },
   { id: "thumb-deepest-hole-long", component: DeepestHole },
   { id: "thumb-age-of-sunlight-long", component: NeutrinosSun },
   { id: "thumb-great-red-spot", component: GreatRedSpot },
   { id: "thumb-cleopatra-pyramid", component: CleopatraPyramid },
+  { id: "thumb-moai-reshaped", component: MoaiReshaped },
 ];
